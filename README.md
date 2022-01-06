@@ -1,8 +1,9 @@
-# ciretorres
+# README
 
 ## Project setup
 
-Versión de nodeJS recomendada ""
+Versión de nodeJS recomendada v14.17.5
+
 1. Clonar repositorio
 ```
 git clone https://github.com/ciretorres/ciretorres.github.io.git
@@ -25,7 +26,7 @@ npm install
 5. Hacer una nueva rama (feature-, bugfix-, ...)
 
 ```
-git checkout -b feature-nombre
+git checkout -b feature-nombre-rama
 ```
 
 ### Compiles and hot-reloads for development
