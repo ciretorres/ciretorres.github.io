@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <Inicio msg="En construcción..."/>
+    <Inicio msg="En mantenimiento..."/>
   </div>
 </template>
 
