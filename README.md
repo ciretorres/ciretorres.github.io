@@ -28,6 +28,26 @@ npm install
 ```
 git checkout -b feature-nombre-rama
 ```
+6. Subir cambios a rama
+
+```
+git push origin <feature-nombre-rama>
+```
+7. Mergear rama con develop
+
+```
+git merge <feature-nombre-rama>
+```
+8. Compilar para producción
+
+```
+npm run build
+```
+9. Subir cambios a subrama gh-pages
+
+```
+git subtree push dist origin gh-pages
+```
 
 ### Compiles and hot-reloads for development
 ```
