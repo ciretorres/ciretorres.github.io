@@ -17,9 +17,9 @@
     </p>
     <p>Some of my <span style="color:#20d6d6;font-weight:bolder;">recent personal proyects!</span></p>
     <ul>
-      <li>Visualization <span style="color:#fcffd0;font-weight:bolder;">[Design]</span></li>
-      <li>Web <span style="color:#fcffd0;font-weight:bolder;">[Development]</span></li>
-      <li>Social <span style="color:#fcffd0;font-weight:bolder;">[Marketing]</span></li>
+      <li>Visualization <router-link style="color:#fcffd0;font-weight:bolder;" to="/design">[Design]</router-link></li>      
+      <li>Web <router-link style="color:#fcffd0;font-weight:bolder;" to="/development">[Development]</router-link></li>
+      <li>Social <router-link style="color:#fcffd0;font-weight:bolder;" to="/marketing">[Marketing]</router-link></li>
     </ul>
     <p>Let's chat -> <span style="color:#d33682;font-weight:bolder;">WhatsApp</span></p>
     <p>Or check my code -> <span style="color:#d33682;font-weight:bolder;">Github</span></p>
