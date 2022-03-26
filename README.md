@@ -46,7 +46,7 @@ npm run build
 9. Subir cambios a subrama gh-pages
 
 ```
-git subtree push dist origin gh-pages
+git subtree push --prefix dist origin gh-pages
 ```
 
 ### Compiles and hot-reloads for development
