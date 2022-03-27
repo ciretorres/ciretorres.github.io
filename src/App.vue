@@ -1,16 +1,17 @@
 <template>
   <div id="app">
-    <Inicio msg="En mantenimiento..."/>
+    <!-- <Inicio msg="En mantenimiento..."/> -->
+    <router-view class="view" />
   </div>
 </template>
 
 <script>
-import Inicio from './components/Inicio.vue'
+// import Inicio from './components/Inicio.vue'
 
 export default {
   name: 'App',
   components: {
-    Inicio
+    // Inicio
   }
 }
 </script>
