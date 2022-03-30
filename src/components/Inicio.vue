@@ -12,7 +12,7 @@
     <p>
       Currently, I'm working on my 
       <span style="color:#d33682;font-weight:bolder;">[Master Degree's Information Design & Visualization]</span> 
-      in the beautiful <a href="https://goo.gl/ba2zp3" target="_blank" style="color:#d33682;font-weight:bolder;">México City</a> 
+      in the beautiful <a href="https://goo.gl/ba2zp3" target="_blank" style="color:#d33682;font-weight:bolder;">México City<span class="icon icon-external-link"></span></a> 
       looking for new challengues.
     </p>
     <p>Some of my <span style="color:#20d6d6;font-weight:bolder;">recent personal proyects!</span></p>
@@ -21,9 +21,12 @@
       <li>Web <router-link style="color:#fcffd0;font-weight:bolder;" to="/development">[Development]</router-link></li>
       <li>Social <router-link style="color:#fcffd0;font-weight:bolder;" to="/marketing">[Marketing]</router-link></li>
     </ul>
-    <p>Let's chat -> <span style="color:#d33682;font-weight:bolder;">WhatsApp</span></p>
-    <p>Or check my code -> <span style="color:#d33682;font-weight:bolder;">Github</span></p>
-    <p>And my work -> <span style="color:#d33682;font-weight:bolder;">Behance</span></p>
+    <p>Let's chat -> <span style="color:#d33682;font-weight:bolder;">WhatsApp</span><span class="icon" data-icon="c"></span></p>
+    <p>Or check my code -> <span style="color:#d33682;font-weight:bolder;">Github</span><span class="icon icon-github"></span></p>
+    <p>And my work -> <span style="color:#d33682;font-weight:bolder;">Behance</span><span class="icon" data-icon="b"></span></p>
+    
+    
+    
   </div>
 </template>
 
