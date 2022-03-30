@@ -66,3 +66,6 @@ npm run lint
 
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
+https://app.fontastic.me
+https://fontastic.me/howto
+https://www.youtube.com/watch?v=_u-vkICfNcg
