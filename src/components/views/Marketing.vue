@@ -1,14 +1,22 @@
 <template>
   <div class="marketing">
-    <div class="container" style="padding:40px;">
-      <p style="color:#d33682;font-weight:bolder;">[Social Media Marketing]</p>
+    <div class="container p-3">
+      <p class="color-red">[Social Media Marketing]</p>
       <ul>
-        <li>OXXO México <router-link style="color:#fcffd0;font-weight:bolder;" to="/je">[Clic me!]</router-link></li>      
-        <li>Circuito Exterior Mexiquense <router-link style="color:#fcffd0;font-weight:bolder;" to="/je">[No over here]</router-link></li>
-        <li>Bibiki <router-link style="color:#fcffd0;font-weight:bolder;" to="/je">[hellou!]</router-link></li>
-        <li>Loreto Fish <router-link style="color:#fcffd0;font-weight:bolder;" to="/je">[yei]</router-link></li>
+        <li>
+          OXXO México <router-link class="color-yellow" to="/je">[Clic me!]</router-link>
+        </li>
+        <li>
+          Circuito Exterior Mexiquense <router-link class="color-yellow" to="/je">[No over here]</router-link>
+        </li>
+        <li>
+          Bibiki <router-link class="color-yellow" to="/je">[hellou!]</router-link>
+        </li>
+        <li>
+          Loreto Fish <router-link class="color-yellow" to="/je">[yei]</router-link>
+        </li>
       </ul>
-      <router-link style="color:#d33682;font-weight:bolder;" to="/">[Back]</router-link>
+      <router-link class="color-red" to="/">[Back]</router-link>
     </div>
   </div>
 </template>
@@ -20,16 +28,4 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.container {
-  background: rgba($color: #fff, $alpha: 0.05);
-  // width: calc(100% - #{$gap*2});
-  width: calc(100% - 60px);
-  // max-width: map-get($width, "max-view");
-  max-width: 1024px;
-  max-width: 800px;
-  border: 1px solid rgba($color: #fff, $alpha: 0.1);
-  border-radius: 8px;
-  margin-left: auto;
-  margin-right: auto;
-}
 </style>
