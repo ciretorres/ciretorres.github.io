@@ -46,7 +46,7 @@ npm run build
 9. Subir cambios a subrama gh-pages
 
 ```
-git subtree push dist origin gh-pages
+git subtree push --prefix dist origin gh-pages
 ```
 
 ### Compiles and hot-reloads for development
@@ -66,3 +66,6 @@ npm run lint
 
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
+https://app.fontastic.me
+https://fontastic.me/howto
+https://www.youtube.com/watch?v=_u-vkICfNcg
