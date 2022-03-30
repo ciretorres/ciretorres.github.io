@@ -1,14 +1,22 @@
 <template>
   <div class="development">
-    <div class="container" style="padding:40px;">
-      <p style="color:#d33682;font-weight:bolder;">[Web development]</p>
+    <div class="container p-3">
+      <p class="color-red">[Web development]</p>
       <ul>
-        <li>Luxury Jewelry Imports <router-link style="color:#fcffd0;font-weight:bolder;" to="/je">[Retail]</router-link></li>      
-        <li>Centro Óptico Profesional <router-link style="color:#fcffd0;font-weight:bolder;" to="/je">[Retail]</router-link></li>
-        <li>Expediciones Trotamundos <router-link style="color:#fcffd0;font-weight:bolder;" to="/je">[Travel]</router-link></li>
-        <li>Tulumers <router-link style="color:#fcffd0;font-weight:bolder;" to="/je">[Travel]</router-link></li>
+        <li>
+          Luxury Jewelry Imports <router-link class="color-yellow" to="/je">[Retail]</router-link>
+        </li>
+        <li>
+          Centro Óptico Profesional <router-link class="color-yellow" to="/je">[Retail]</router-link>
+        </li>
+        <li>
+          Expediciones Trotamundos <router-link class="color-yellow" to="/je">[Travel]</router-link>
+        </li>
+        <li>
+          Tulumers <router-link class="color-yellow" to="/je">[Travel]</router-link>
+        </li>
       </ul>
-      <router-link style="color:#d33682;font-weight:bolder;" to="/">[Back]</router-link>
+      <router-link class="color-red" to="/">[Back]</router-link>
     </div>
   </div>
 </template>
@@ -20,16 +28,4 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.container {
-  background: rgba($color: #fff, $alpha: 0.05);
-  // width: calc(100% - #{$gap*2});
-  width: calc(100% - 60px);
-  // max-width: map-get($width, "max-view");
-  max-width: 1024px;
-  max-width: 800px;
-  border: 1px solid rgba($color: #fff, $alpha: 0.1);
-  border-radius: 8px;
-  margin-left: auto;
-  margin-right: auto;
-}
 </style>

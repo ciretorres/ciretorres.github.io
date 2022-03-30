@@ -1,15 +1,25 @@
 <template>
   <div class="design">
-    <div class="container" style="padding:40px;">
-      <p style="color:#d33682;font-weight:bolder;">[Visualization Design]</p>
+    <div class="container p-3">
+      <p class="color-red">[Visualization Design]</p>
       <ul>
-        <li>Interactive-Interface <router-link style="color:#fcffd0;font-weight:bolder;" to="/je">[UAM-A]</router-link></li>      
-        <li>AR-System UNIVERSUM <router-link style="color:#fcffd0;font-weight:bolder;" to="/je">[UIC]</router-link></li>
-        <li>Solid Waste System's Interactive <router-link style="color:#fcffd0;font-weight:bolder;" to="/je">[CDMX]</router-link></li>
-        <li>3D Gamma-Ray Catalogue <router-link style="color:#fcffd0;font-weight:bolder;" to="/je">[HAWC Observatory]</router-link></li>
-        <li>The Gravity Apple Tree <router-link style="color:#fcffd0;font-weight:bolder;" to="/je">[UAM-C]</router-link></li>
+        <li>
+          Interactive-Interface <a href="https://github.com/ciretorres/thesis-project" target="_blank" class="color-yellow">[UAM-A]</a>
+        </li>
+        <li>
+          AR-System UNIVERSUM <a href="https://ciretorres.github.io/AR-System-UNIVERSUM/" target="_blank" class="color-yellow">[UIC]</a>
+        </li>
+        <li>
+          Solid Waste System's Interactive <a href="https://ciretorres.github.io/flujo-de-residuos-solidos-cdmx/" target="_blank" class="color-yellow">[CDMX]</a>
+        </li>
+        <li>
+          3D Gamma-Ray Catalogue <a href="https://github.com/ciretorres/2HAWC" target="_blank" class="color-yellow">[HAWC Observatory]</a>
+        </li>
+        <li>
+          The Gravity Apple Tree <a href="@/assets/imgs/Gravity-Tree_07112018.jpg" target="_blank" class="color-yellow">[UAM-C]</a>
+        </li>
       </ul>
-      <router-link style="color:#d33682;font-weight:bolder;" to="/">[Back]</router-link>
+      <router-link class="color-red" to="/">[Back]</router-link>
     </div>
   </div>
 </template>
@@ -21,16 +31,4 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.container {
-  background: rgba($color: #fff, $alpha: 0.05);
-  // width: calc(100% - #{$gap*2});
-  width: calc(100% - 60px);
-  // max-width: map-get($width, "max-view");
-  max-width: 1024px;
-  max-width: 800px;
-  border: 1px solid rgba($color: #fff, $alpha: 0.1);
-  border-radius: 8px;
-  margin-left: auto;
-  margin-right: auto;
-}
 </style>
