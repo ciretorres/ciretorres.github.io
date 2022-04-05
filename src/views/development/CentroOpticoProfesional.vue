@@ -1,0 +1,58 @@
+<template>
+  <div class="centro-optico-profesional">
+    <div class="portafolio">
+      <a href="http://www.centroopticoprofesional.com/">
+        <img src="@/assets/imgs/portafolio-cop-1.jpg" alt="" class="img-portafolio">
+      </a>
+      <a href="http://www.centroopticoprofesional.com/">
+        <img src="@/assets/imgs/portafolio-cop-2.jpg" alt="" class="img-portafolio">
+      </a>
+      <a href="http://www.centroopticoprofesional.com/">
+        <img src="@/assets/imgs/portafolio-cop-3.jpg" alt="" class="img-portafolio">
+      </a>
+    </div>
+    <div class="navegacion">
+      <router-link class="nav-boton" to="/development/luxji">[previous]</router-link>
+      <router-link class="nav-boton" to="/development/expediciones-trotamundos">[next]</router-link>
+    </div>
+  </div>
+</template>
+
+<script>
+export default {
+  name: 'CentroOpticoProfesional',
+}
+</script>
+
+<style lang="scss">
+.centro-optico-profesional {
+  .portafolio {
+    .img-portafolio {
+      width: 100%;
+      vertical-align: middle;
+      border: 0;
+    }
+  }
+  .navegacion {
+    background: #fff;
+    width: 100%;
+    display: flex;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    justify-content: center;
+    align-items: middle;
+    .nav-boton {
+      font-size: 24px;
+      font-weight: 700;
+      color: #000;
+      padding: 40px;
+      &:hover {
+        background: #000;
+        color: #fff;
+      }
+    }
+  }
+}
+</style>

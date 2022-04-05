@@ -1,6 +1,6 @@
 import Vue from 'vue';
 import VueRouter from 'vue-router';
-import Inicio from '@/components/Inicio.vue';
+import Inicio from '@/views/Inicio.vue';
 
 Vue.use(VueRouter);
 
@@ -13,17 +13,64 @@ const routes = [
   {
     path: '/design',
     name: 'Design',
-    component: () => import('@/components/views/Design.vue'),
+    component: () => import('@/views/Design.vue'),
   },
   {
     path: '/development',
     name: 'Development',
-    component: () => import('@/components/views/Development.vue'),
+    component: () => import('@/views/Development.vue'),
+    children: [
+      // {
+      //   path: '/luxyji',
+      //   name: 'LuxuryJewelryImports',
+      //   component: () => import('@/views/development/LuxuryJewelryImports.vue'),
+      // },
+    ]
+  },
+  {
+    path: '/development/luxji',
+    name: 'LuxuryJewelryImports',
+    component: () => import('@/views/development/LuxuryJewelryImports.vue'),
+  },
+  {
+    path: '/development/centro-optico-profesional',
+    name: 'CentroOpticoProfesional',
+    component: () => import('@/views/development/CentroOpticoProfesional.vue'),
+  },
+  {
+    path: '/development/expediciones-trotamundos',
+    name: 'ExpedicionesTrotamundos',
+    component: () => import('@/views/development/ExpedicionesTrotamundos.vue'),
+  },
+  {
+    path: '/development/tulumers',
+    name: 'Tulumers',
+    component: () => import('@/views/development/Tulumers.vue'),
   },
   {
     path: '/marketing',
     name: 'Marketing',
-    component: () => import('@/components/views/Marketing.vue'),
+    component: () => import('@/views/Marketing.vue'),
+  },
+  {
+    path: '/marketing/oxxo',
+    name: 'Oxxo',
+    component: () => import('@/views/marketing/Oxxo.vue'),
+  },
+  {
+    path: '/marketing/cem',
+    name: 'CircuitoExteriorMexiquense',
+    component: () => import('@/views/marketing/CircuitoExteriorMexiquense.vue'),
+  },
+  {
+    path: '/marketing/bibiki',
+    name: 'Bibiki',
+    component: () => import('@/views/marketing/Bibiki.vue'),
+  },
+  {
+    path: '/marketing/loreto-fish',
+    name: 'LoretoFish',
+    component: () => import('@/views/marketing/LoretoFish.vue'),
   },
   // {
   //   path: '/ayuda',

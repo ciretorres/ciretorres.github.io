@@ -1,6 +1,6 @@
 <template>
   <div class="inicio">
-    <div class="container p-3">
+    <div class="container p-2">
       <!-- {{ msg }} -->
       <p>
         Hello! My name is <span class="color-blue">Eric</span>. 
@@ -27,24 +27,38 @@
         Some of my <span class="color-blue">recent personal proyects!</span>
       </p>
       <ul>
-        <li>
-          Visualization <router-link class="color-yellow" to="/design">[Design]</router-link>
-        </li>
-        <li>
-          Web <router-link class="color-yellow" to="/development">[Development]</router-link>
-        </li>
-        <li>
-          Social <router-link class="color-yellow" to="/marketing">[Marketing]</router-link>
-        </li>
+        <li>Visualization <router-link class="color-yellow" to="/design">[Design]</router-link></li>
+        <li>Web <router-link class="color-yellow" to="/development">[Development]</router-link></li>
+        <li>Social <router-link class="color-yellow" to="/marketing">[Marketing]</router-link></li>
       </ul>
       <p>
-        Let's chat -> <a href="//api.whatsapp.com/send?phone=5547904238" class="color-red">WhatsApp<span class="icon" data-icon="c"></span></a>
+        Let's chat -> 
+        <a 
+          href="//api.whatsapp.com/send?phone=5547904238" 
+          class="color-red"
+          >
+          WhatsApp<span class="icon" data-icon="c"></span>
+        </a>
       </p>
       <p>
-        Or check my code -> <a href="https://github.com/ciretorres/" target="_blank" class="color-red">Github<span class="icon icon-github"></span></a>
+        Or check my code -> 
+        <a 
+          href="https://github.com/ciretorres/" 
+          target="_blank" 
+          class="color-red"
+          >
+          Github<span class="icon icon-github"></span>
+        </a>
       </p>
       <p>
-        And my work -> <a href="https://www.behance.net/ciretorres" target="_blank" class="color-red">Behance<span class="icon" data-icon="b"></span></a>
+        And my work -> 
+        <a 
+          href="https://www.behance.net/ciretorres" 
+          target="_blank" 
+          class="color-red"
+          >
+          Behance<span class="icon" data-icon="b"></span>
+        </a>
       </p>
     </div>
   </div>
