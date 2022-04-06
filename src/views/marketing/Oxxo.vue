@@ -11,19 +11,21 @@
           <router-link class="nav-boton" to="/marketing/cem">[next]</router-link>
         </div>
         <div class="redes-sociales">
-          <div style="display:flex;justify-content:space-between">
-            <span class="icon icon-github"></span>
-            <span class="icon icon-github"></span>
-            <span class="icon icon-github"></span>
+          <div class="flexbox">
+            <a href="https://www.facebook.com/OXXOTiendas/" target="_blank"><span class="icon icon-github"></span></a>
+            <a href="https://twitter.com/Tiendas_OXXO" target="_blank"><span class="icon icon-github"></span></a>
+            <a href="https://www.instagram.com/tiendasoxxo/" target="_blank"><span class="icon icon-github"></span></a>
           </div>
         </div>
-        <!-- <div class="posts">
-
+        <div class="posts">
+          <img src="@/assets/imgs/post-oxxo-1.gif" alt="" class="post-img">
+          <img src="@/assets/imgs/post-oxxo-2.gif" alt="" class="post-img">
+          <img src="@/assets/imgs/post-oxxo-3.gif" alt="" class="post-img">
         </div>
-        <div class="navegacion">
+        <div class="navegacion my-8">
           <router-link class="nav-boton" to="/marketing/loreto-fish">[previous]</router-link>
           <router-link class="nav-boton" to="/marketing/cem">[next]</router-link>
-        </div> -->
+        </div>
       </div>
     </div>
   </div>
@@ -42,7 +44,7 @@ export default {
   .portafolio {
     background: #f5f5f5;
     width: 100%;
-    height: 500px;
+    height: auto;
     .img-portafolio {
       position: absolute;
       width: 100%;
@@ -51,7 +53,7 @@ export default {
     }
     .contenido {
       position: relative;
-      background: red;
+      // background: red;
       max-width: 768px;
       height: 100%;
       margin-top: 0px;
@@ -92,23 +94,62 @@ export default {
         }
       }
       .redes-sociales {
-        width: 60%;
+        width: 80%;
         position: relative;
         display: block;
         margin: auto;
-        top: 60px;
-        background: #000;
-        font-size: 32px;
+        top: 80px;
         @media (min-width:768px) {
           width: 45%;
-          top: 70px;
+          top: 70px;          
+        }
+        .flexbox {
+          display: flex;
+          justify-content: space-between;
+          a {
+            text-decoration: none;
+          }
+          .icon {
+            position: relative;
+            background: red;
+            color: #fff;
+            width: 40px;
+            height: 40px;
+            border-radius: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 32px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+            &:hover {
+              box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            }
+          }
           
         }
       }
-      
+      .posts {
+        width: 100%;
+        position: relative;
+        top: 80px;
+        @media (min-width:768px) {
+          top: 60px;
+        }
+        .post-img {
+          position: relative;
+          width: 80%;
+          display: block;
+          margin: auto;
+          top: 40px;
+          margin-bottom: 24px;
+          box-shadow: 0 0 5px rgba(0, 0, 0, 0.7);
+          @media (min-width:768px) {
+            width: 45%;
+            top: 60px;
+          } 
+        }
+      }
     }
-    
-    
   }
 }
 </style>
