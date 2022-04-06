@@ -1,6 +1,43 @@
 <template>
   <div class="cem">
-    <h1>CircuitoExteriorMexiquense</h1>
+    <div class="portafolio">
+      <img src="@/assets/imgs/header-cem.png" alt="" class="img-portafolio">
+      <div class="container contenido">
+        <div class="contenedor-link">
+          <a href="https://www.circuitoexterior.mx/" class="logo-link">
+            <img src="@/assets/imgs/logo-cem.png" alt="" class="logo-img">
+          </a>
+        </div>
+        <div class="navegacion">
+          <router-link class="nav-boton" to="/marketing/oxxo">[previous]</router-link>
+          <router-link class="nav-boton" to="/marketing/bibiki">[next]</router-link>
+        </div>
+        <div class="redes-sociales">
+          <div class="flexbox">
+            <a href="https://www.facebook.com/ElCircuito.Mx/" target="_blank"><span class="icon icon-github"></span></a>
+            <a href="https://twitter.com/Circuito_mx" target="_blank"><span class="icon icon-github"></span></a>
+            <a href="https://www.youtube.com/user/CircuitoMx" target="_blank"><span class="icon icon-github"></span></a>
+          </div>
+        </div>
+        <div class="posts">
+          <img src="@/assets/imgs/post-cem-1.gif" alt="" class="post-img">
+          <img src="@/assets/imgs/post-cem-2.png" alt="" class="post-img">
+          <img src="@/assets/imgs/post-cem-3.png" alt="" class="post-img">
+          <img src="@/assets/imgs/post-cem-4.png" alt="" class="post-img">
+          <iframe 
+            class="post-video"
+            src="https://www.youtube.com/embed/iGNKk7rRcsU" 
+            frameborder="0" 
+            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
+            allowfullscreen>
+          </iframe>
+        </div>
+        <div class="navegacion my-8">
+          <router-link class="nav-boton" to="/marketing/oxxo">[previous]</router-link>
+          <router-link class="nav-boton" to="/marketing/bibiki">[next]</router-link>
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -11,5 +48,130 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-
+.cem {
+  width: 100%;
+  height: 100%;
+  .portafolio {
+    background: #f5f5f5;
+    width: 100%;
+    height: auto;
+    .img-portafolio {
+      position: absolute;
+      width: 100%;
+      vertical-align: middle;
+      border: 0;
+    }
+    .contenido {
+      position: relative;
+      // background: red;
+      max-width: 768px;
+      height: 100%;
+      margin-top: 0px;
+      .contenedor-link {
+        width: 100%;
+        position: relative;        
+        text-align: center;
+        .logo-link {
+          width: 100%;
+          .logo-img {
+            position: relative;
+            width: 60%;
+            top: 40px;
+            @media (min-width:768px) {
+              width: 45%;
+              top: 60px;
+            }
+          }
+        }
+      }
+      .navegacion {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        top: 60px;
+        .nav-boton {
+          font-size: 24px;
+          font-weight: 700;
+          color: #000;
+          padding: 24px;
+          @media (min-width:768px) {
+            padding: 40px;
+          }
+          &:hover {
+            background: #000;
+            color: #fff;
+          }
+        }
+      }
+      .redes-sociales {
+        width: 80%;
+        position: relative;
+        display: block;
+        margin: auto;
+        top: 80px;
+        @media (min-width:768px) {
+          width: 45%;
+          top: 70px;          
+        }
+        .flexbox {
+          display: flex;
+          justify-content: space-between;
+          a {
+            text-decoration: none;
+          }
+          .icon {
+            position: relative;
+            background: darkblue;
+            color: #fff;
+            width: 40px;
+            height: 40px;
+            border-radius: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 32px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+            &:hover {
+              box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            }
+          }
+          
+        }
+      }
+      .posts {
+        width: 100%;
+        position: relative;
+        top: 80px;
+        @media (min-width:768px) {
+          top: 60px;
+        }
+        .post-img {
+          position: relative;
+          width: 80%;
+          display: block;
+          margin: auto;
+          top: 40px;
+          margin-bottom: 24px;
+          box-shadow: 0 0 5px rgba(0, 0, 0, 0.7);
+          @media (min-width:768px) {
+            width: 45%;
+            top: 60px;
+          } 
+        }
+        .post-video {
+          position: relative;
+          width: 80%;
+          display: block; 
+          margin: auto;
+          top: 40px;
+          @media (min-width:768px) {
+            width: 640px;
+            height: 360px;
+            top: 60px;
+          } 
+        }
+      }
+    }
+  }
+}
 </style>
