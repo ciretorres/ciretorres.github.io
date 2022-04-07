@@ -8,7 +8,7 @@
         <li>Bibiki <router-link class="color-yellow" target="_blank" to="/marketing/bibiki">[hellou!]</router-link></li>
         <li>Loreto Fish <router-link class="color-yellow" target="_blank" to="/marketing/loreto-fish">[yei]</router-link></li>
       </ul>
-      <router-link class="color-red" target="_blank" to="/">[Back]</router-link>
+      <router-link class="color-red" to="/">[Back]</router-link>
     </div>
   </div>
 </template>
