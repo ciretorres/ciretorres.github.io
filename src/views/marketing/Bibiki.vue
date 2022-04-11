@@ -14,9 +14,9 @@
         </div>
         <div class="redes-sociales">
           <div class="flexbox">
-            <a href="https://www.facebook.com/bibikimexico" target="_blank"><span class="icon icon-github"></span></a>
-            <a href="https://twitter.com/bibikimx" target="_blank"><span class="icon icon-github"></span></a>
-            <a href="https://www.instagram.com/bibikimx/" target="_blank"><span class="icon icon-github"></span></a>            
+            <a href="https://www.facebook.com/bibikimexico" target="_blank"><span class="icon icon-facebook"></span></a>
+            <a href="https://twitter.com/bibikimx" target="_blank"><span class="icon icon-twitter"></span></a>
+            <a href="https://www.instagram.com/bibikimx/" target="_blank"><span class="icon icon-instagrem"></span></a>            
           </div>
         </div>
         <div class="posts">
@@ -120,7 +120,7 @@ export default {
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 32px;
+            font-size: 24px;
             box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
             &:hover {
               box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
