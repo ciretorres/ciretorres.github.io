@@ -1,6 +1,6 @@
 <template>
   <div class="design">
-    <div class="container p-3">
+    <div class="container p-2">
       <p class="color-red">[Visualization Design]</p>
       <ul>
         <li>Interactive-Interface <a href="https://github.com/ciretorres/thesis-project" target="_blank" class="color-yellow">[UAM-A]</a></li>

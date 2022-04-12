@@ -1,6 +1,6 @@
 <template>
   <div class="marketing">
-    <div class="container p-3">
+    <div class="container p-2">
       <p class="color-red">[Social Media Marketing]</p>
       <ul>
         <li>OXXO México <router-link class="color-yellow" target="_blank" to="/marketing/oxxo">[Clic me!]</router-link></li>

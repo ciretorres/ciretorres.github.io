@@ -1,6 +1,6 @@
 <template>
   <div class="development">
-    <div class="container p-3">
+    <div class="container p-2">
       <p class="color-red">[Web development]</p>
       <ul>
         <li>Luxury Jewelry Imports <router-link class="color-yellow" target="_blank" to="/development/luxji">[Retail]</router-link></li>
