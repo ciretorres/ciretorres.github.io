@@ -2,10 +2,10 @@
   <div class="visualization">    
     <div class="nav-vis">
       <div class="ml-3">
-        <h1>Visualization</h1>
+        <h1>Vis</h1>
         <ul>
-          <li><router-link class="nav-boton" to="/design/visualization/d3js">d3JS</router-link></li>
-          <li><router-link class="nav-boton" to="/design/visualization/maps">maps</router-link></li>
+          <li><router-link class="nav-boton" to="/design/visualization/eje">d3JS</router-link></li>
+          <li><router-link class="nav-boton" to="/design/visualization/eje">maps</router-link></li>
           <li>Interactive-Interface</li>
           <li>AR-System UNIVERSUM</li>
           <li>Solid Waste System's Interactive</li>
@@ -31,7 +31,7 @@ export default {
 .visualization {
   width: 100%;
   height: auto;
-  height: calc(100vh - 51px);
+  // height: calc(100vh - 51px);
   // height: calc(100vh);
   // height: calc(100vh - 100px);
   display: flex;
