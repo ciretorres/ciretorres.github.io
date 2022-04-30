@@ -4,8 +4,8 @@
       <div class="ml-3">
         <h1>Vis</h1>
         <ul>
-          <li><router-link class="nav-boton" to="/design/visualization/eje">d3JS</router-link></li>
-          <li><router-link class="nav-boton" to="/design/visualization/eje">maps</router-link></li>
+          <li><router-link class="nav-boton" to="/design/visualization/d3js">d3JS</router-link></li>
+          <li><router-link class="nav-boton" to="/design/visualization/maps">maps</router-link></li>
           <li>Interactive-Interface</li>
           <li>AR-System UNIVERSUM</li>
           <li>Solid Waste System's Interactive</li>
@@ -15,7 +15,6 @@
       </div>
     </div>
     <div class="rout">
-      <!-- <p>Router</p> -->
       <router-view class="view" />
     </div>
   </div>

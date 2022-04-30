@@ -2,7 +2,7 @@
   <div class="d3js m-5">    
     <h1>d3JS</h1>
     <div class="contenedor">
-      <!-- <MapaCalor 
+      <MapaCalor 
         id="mapa_calor" 
       />
 
@@ -25,7 +25,7 @@
         titulo_eje_y="Título eje y"
         titulo_leyenda="Título de leyenda"
         color_area="#000" 
-      /> -->
+      />
     </div>
   </div>
 </template>
@@ -37,9 +37,9 @@ import consorcioEvolucionVariantes from '@/assets/datasets/consorcio_evolucion_v
 import dataJSON from '@/assets/data/area/data.json';
 
 
-// import MapaCalor from '@/components/visualizations/heatmap/MapaDeCalor.vue';
-// import Multilinea from '@/components/visualizations/multilinea/Multilinea.vue'
-// import Area from '@/components/visualizations/area/Area.vue'
+import MapaCalor from '@/components/visualizations/heatmap/MapaDeCalor.vue';
+import Multilinea from '@/components/visualizations/multilinea/Multilinea.vue'
+import Area from '@/components/visualizations/area/Area.vue'
 
 const dictValuesVariantes = {
   variante_preocupacion: 'VOC',
@@ -73,9 +73,9 @@ const diccionarioNacional = consorcioEvolucionVariantes;
 export default {
   name: 'D3JS',
   components: {
-    // MapaCalor,
-    // Multilinea,
-    // Area,
+    MapaCalor,
+    Multilinea,
+    Area,
 
   },
   data() {
