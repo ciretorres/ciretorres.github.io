@@ -37,7 +37,7 @@
           href="//api.whatsapp.com/send?phone=5547904238" 
           class="color-red"
           >
-          WhatsApp<span class="icon" data-icon="c"></span>
+          WhatsApp<span class="icon icon-whatsapp"></span>
         </a>
       </p>
       <p>
@@ -57,7 +57,7 @@
           target="_blank" 
           class="color-red"
           >
-          Behance<span class="icon" data-icon="b"></span>
+          Behance<span class="icon icon-behance"></span>
         </a>
       </p>
     </div>
