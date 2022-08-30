@@ -1,6 +1,6 @@
 <template>
   <div>
-    <label for="selector-variante">Variantes</label>
+    <label for="selector-variante">Variables</label>
     <select id="selector-variante" v-model="varianteSeleccionada">
       <option
         v-for="variante in variantes"

@@ -2,31 +2,31 @@
   {
     "orden": 1,
     "clave": "VTODAS",
-    "nombre": "Todas las variantes"
+    "nombre": "Todas las variables"
   },
   {
     "orden": 2,
     "clave": "VOC",
-    "nombre": "Variantes de preocupación"
+    "nombre": "Variable 1"
   },
   {
     "orden": 3,
-    "clave": "VIN",
-    "nombre": "Variantes de interés nacional"
+    "clave": "VOI",
+    "nombre": "Variable 2"
   },
   {
     "orden": 4,
-    "clave": "VOI",
-    "nombre": "Variantes de interés"
+    "clave": "VIN",
+    "nombre": "Variable 3"
   },
   {
     "orden": 5,
     "clave": "VOM",
-    "nombre": "Variantes de monitoreo"
+    "nombre": "Variable 4"
   },
   {
     "orden": 6,
     "clave": "VSIN",
-    "nombre": "Variantes sin clasificación"
+    "nombre": "Variable 5"
   }
 ]
