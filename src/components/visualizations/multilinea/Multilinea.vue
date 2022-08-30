@@ -513,7 +513,7 @@ export default {
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
     border-radius: $border-radius-tarjeta;
-    box-shadow: 0px -5px 5px -1px rgb(221, 221, 221);
+    // box-shadow: 0px -5px 5px -1px rgb(221, 221, 221);
     margin-bottom:10px;
     justify-content: center;
     p.titulo-leyenda{

@@ -13,7 +13,7 @@
         :nombre_variables="{ nombre: 'nombre' }"
         :variables="variablesGrafica"
         :alto_vis="400"
-        titulo_leyenda="Variantes del virus SARS-CoV-2" 
+        titulo_leyenda="leyenda" 
       />
 
       <Area 
