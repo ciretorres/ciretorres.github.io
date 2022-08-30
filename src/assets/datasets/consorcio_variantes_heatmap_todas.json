@@ -1,1122 +1,912 @@
 [
 	{
 		"cve_edo": "01",
-		"abreviatura_ent": "AGU",
-		"estado": "Aguascalientes",
+		"abreviatura_ent": "A",
+		"estado": "a",
 		"tipo_variante": "VOC",
 		"cantidad_muestras": 3
 	},
 	{
 		"cve_edo": "01",
-		"abreviatura_ent": "AGU",
-		"estado": "Aguascalientes",
+		"abreviatura_ent": "A",
+		"estado": "a",
 		"tipo_variante": "VOI",
 		"cantidad_muestras": 0
 	},
 	{
 		"cve_edo": "01",
-		"abreviatura_ent": "AGU",
-		"estado": "Aguascalientes",
+		"abreviatura_ent": "A",
+		"estado": "a",
 		"tipo_variante": "VIN",
 		"cantidad_muestras": 6
 	},
 	{
 		"cve_edo": "01",
-		"abreviatura_ent": "AGU",
-		"estado": "Aguascalientes",
+		"abreviatura_ent": "A",
+		"estado": "a",
 		"tipo_variante": "VUM",
 		"cantidad_muestras": 24
 	},
 	{
 		"cve_edo": "01",
-		"abreviatura_ent": "AGU",
-		"estado": "Aguascalientes",
+		"abreviatura_ent": "A",
+		"estado": "a",
 		"tipo_variante": "VSIN",
 		"cantidad_muestras": 47
 	},
 	{
 		"cve_edo": "02",
-		"abreviatura_ent": "BCN",
-		"estado": "Baja California",
+		"abreviatura_ent": "B",
+		"estado": "b",
 		"tipo_variante": "VOC",
 		"cantidad_muestras": 19
 	},
 	{
 		"cve_edo": "02",
-		"abreviatura_ent": "BCN",
-		"estado": "Baja California",
+		"abreviatura_ent": "B",
+		"estado": "b",
 		"tipo_variante": "VOI",
 		"cantidad_muestras": 0
 	},
 	{
 		"cve_edo": "02",
-		"abreviatura_ent": "BCN",
-		"estado": "Baja California",
+		"abreviatura_ent": "B",
+		"estado": "b",
 		"tipo_variante": "VIN",
 		"cantidad_muestras": 23
 	},
 	{
 		"cve_edo": "02",
-		"abreviatura_ent": "BCN",
-		"estado": "Baja California",
+		"abreviatura_ent": "B",
+		"estado": "b",
 		"tipo_variante": "VUM",
 		"cantidad_muestras": 119
 	},
 	{
 		"cve_edo": "02",
-		"abreviatura_ent": "BCN",
-		"estado": "Baja California",
+		"abreviatura_ent": "B",
+		"estado": "b",
 		"tipo_variante": "VSIN",
 		"cantidad_muestras": 754
 	},
 	{
 		"cve_edo": "03",
-		"abreviatura_ent": "BCS",
-		"estado": "Baja California Sur",
+		"abreviatura_ent": "C",
+		"estado": "c",
 		"tipo_variante": "VOC",
 		"cantidad_muestras": 79
 	},
 	{
 		"cve_edo": "03",
-		"abreviatura_ent": "BCS",
-		"estado": "Baja California Sur",
+		"abreviatura_ent": "C",
+		"estado": "c",
 		"tipo_variante": "VOI",
 		"cantidad_muestras": 0
 	},
 	{
 		"cve_edo": "03",
-		"abreviatura_ent": "BCS",
-		"estado": "Baja California Sur",
+		"abreviatura_ent": "C",
+		"estado": "c",
 		"tipo_variante": "VIN",
 		"cantidad_muestras": 4
 	},
 	{
 		"cve_edo": "03",
-		"abreviatura_ent": "BCS",
-		"estado": "Baja California Sur",
+		"abreviatura_ent": "C",
+		"estado": "c",
 		"tipo_variante": "VUM",
 		"cantidad_muestras": 96
 	},
 	{
 		"cve_edo": "03",
-		"abreviatura_ent": "BCS",
-		"estado": "Baja California Sur",
+		"abreviatura_ent": "C",
+		"estado": "c",
 		"tipo_variante": "VSIN",
 		"cantidad_muestras": 49
 	},
 	{
 		"cve_edo": "04",
-		"abreviatura_ent": "CAM",
-		"estado": "Campeche",
+		"abreviatura_ent": "D",
+		"estado": "d",
 		"tipo_variante": "VOC",
 		"cantidad_muestras": 48
 	},
 	{
 		"cve_edo": "04",
-		"abreviatura_ent": "CAM",
-		"estado": "Campeche",
+		"abreviatura_ent": "D",
+		"estado": "d",
 		"tipo_variante": "VOI",
 		"cantidad_muestras": 4
 	},
 	{
 		"cve_edo": "04",
-		"abreviatura_ent": "CAM",
-		"estado": "Campeche",
+		"abreviatura_ent": "D",
+		"estado": "d",
 		"tipo_variante": "VIN",
 		"cantidad_muestras": 4
 	},
 	{
 		"cve_edo": "04",
-		"abreviatura_ent": "CAM",
-		"estado": "Campeche",
+		"abreviatura_ent": "D",
+		"estado": "d",
 		"tipo_variante": "VUM",
 		"cantidad_muestras": 67
 	},
 	{
 		"cve_edo": "04",
-		"abreviatura_ent": "CAM",
-		"estado": "Campeche",
+		"abreviatura_ent": "D",
+		"estado": "d",
 		"tipo_variante": "VSIN",
 		"cantidad_muestras": 18
 	},
 	{
 		"cve_edo": "05",
-		"abreviatura_ent": "COA",
-		"estado": "Coahuila",
+		"abreviatura_ent": "E",
+		"estado": "e",
 		"tipo_variante": "VOC",
 		"cantidad_muestras": 21
 	},
 	{
 		"cve_edo": "05",
-		"abreviatura_ent": "COA",
-		"estado": "Coahuila",
+		"abreviatura_ent": "E",
+		"estado": "e",
 		"tipo_variante": "VOI",
 		"cantidad_muestras": 0
 	},
 	{
 		"cve_edo": "05",
-		"abreviatura_ent": "COA",
-		"estado": "Coahuila",
+		"abreviatura_ent": "E",
+		"estado": "e",
 		"tipo_variante": "VIN",
 		"cantidad_muestras": 12
 	},
 	{
 		"cve_edo": "05",
-		"abreviatura_ent": "COA",
-		"estado": "Coahuila",
+		"abreviatura_ent": "E",
+		"estado": "e",
 		"tipo_variante": "VUM",
 		"cantidad_muestras": 50
 	},
 	{
 		"cve_edo": "05",
-		"abreviatura_ent": "COA",
-		"estado": "Coahuila",
+		"abreviatura_ent": "E",
+		"estado": "e",
 		"tipo_variante": "VSIN",
 		"cantidad_muestras": 84
 	},
 	{
 		"cve_edo": "06",
-		"abreviatura_ent": "COL",
-		"estado": "Colima",
+		"abreviatura_ent": "F",
+		"estado": "f",
 		"tipo_variante": "VOC",
 		"cantidad_muestras": 13
 	},
 	{
 		"cve_edo": "06",
-		"abreviatura_ent": "COL",
-		"estado": "Colima",
+		"abreviatura_ent": "F",
+		"estado": "f",
 		"tipo_variante": "VOI",
 		"cantidad_muestras": 0
 	},
 	{
 		"cve_edo": "06",
-		"abreviatura_ent": "COL",
-		"estado": "Colima",
+		"abreviatura_ent": "F",
+		"estado": "f",
 		"tipo_variante": "VIN",
 		"cantidad_muestras": 1
 	},
 	{
 		"cve_edo": "06",
-		"abreviatura_ent": "COL",
-		"estado": "Colima",
+		"abreviatura_ent": "F",
+		"estado": "f",
 		"tipo_variante": "VUM",
 		"cantidad_muestras": 26
 	},
 	{
 		"cve_edo": "06",
-		"abreviatura_ent": "COL",
-		"estado": "Colima",
+		"abreviatura_ent": "F",
+		"estado": "f",
 		"tipo_variante": "VSIN",
 		"cantidad_muestras": 20
 	},
 	{
 		"cve_edo": "07",
-		"abreviatura_ent": "CHP",
-		"estado": "Chiapas",
+		"abreviatura_ent": "G",
+		"estado": "g",
 		"tipo_variante": "VOC",
 		"cantidad_muestras": 5
 	},
 	{
 		"cve_edo": "07",
-		"abreviatura_ent": "CHP",
-		"estado": "Chiapas",
+		"abreviatura_ent": "G",
+		"estado": "g",
 		"tipo_variante": "VOI",
 		"cantidad_muestras": 0
 	},
 	{
 		"cve_edo": "07",
-		"abreviatura_ent": "CHP",
-		"estado": "Chiapas",
+		"abreviatura_ent": "G",
+		"estado": "g",
 		"tipo_variante": "VIN",
 		"cantidad_muestras": 1
 	},
 	{
 		"cve_edo": "07",
-		"abreviatura_ent": "CHP",
-		"estado": "Chiapas",
+		"abreviatura_ent": "G",
+		"estado": "g",
 		"tipo_variante": "VUM",
 		"cantidad_muestras": 25
 	},
 	{
 		"cve_edo": "07",
-		"abreviatura_ent": "CHP",
-		"estado": "Chiapas",
+		"abreviatura_ent": "G",
+		"estado": "g",
 		"tipo_variante": "VSIN",
 		"cantidad_muestras": 21
 	},
 	{
 		"cve_edo": "08",
-		"abreviatura_ent": "CHH",
-		"estado": "Chihuahua",
+		"abreviatura_ent": "H",
+		"estado": "h",
 		"tipo_variante": "VOC",
 		"cantidad_muestras": 126
 	},
 	{
 		"cve_edo": "08",
-		"abreviatura_ent": "CHH",
-		"estado": "Chihuahua",
+		"abreviatura_ent": "H",
+		"estado": "h",
 		"tipo_variante": "VOI",
 		"cantidad_muestras": 3
 	},
 	{
 		"cve_edo": "08",
-		"abreviatura_ent": "CHH",
-		"estado": "Chihuahua",
+		"abreviatura_ent": "H",
+		"estado": "h",
 		"tipo_variante": "VIN",
 		"cantidad_muestras": 6
 	},
 	{
 		"cve_edo": "08",
-		"abreviatura_ent": "CHH",
-		"estado": "Chihuahua",
+		"abreviatura_ent": "H",
+		"estado": "h",
 		"tipo_variante": "VUM",
 		"cantidad_muestras": 164
 	},
 	{
 		"cve_edo": "08",
-		"abreviatura_ent": "CHH",
-		"estado": "Chihuahua",
+		"abreviatura_ent": "H",
+		"estado": "h",
 		"tipo_variante": "VSIN",
 		"cantidad_muestras": 51
 	},
 	{
 		"cve_edo": "09",
-		"abreviatura_ent": "CMX",
-		"estado": "Ciudad de México",
+		"abreviatura_ent": "I",
+		"estado": "i",
 		"tipo_variante": "VOC",
 		"cantidad_muestras": 642
 	},
 	{
 		"cve_edo": "09",
-		"abreviatura_ent": "CMX",
-		"estado": "Ciudad de México",
+		"abreviatura_ent": "I",
+		"estado": "i",
 		"tipo_variante": "VOI",
 		"cantidad_muestras": 29
 	},
 	{
 		"cve_edo": "09",
-		"abreviatura_ent": "CMX",
-		"estado": "Ciudad de México",
+		"abreviatura_ent": "I",
+		"estado": "i",
 		"tipo_variante": "VIN",
 		"cantidad_muestras": 257
 	},
 	{
 		"cve_edo": "09",
-		"abreviatura_ent": "CMX",
-		"estado": "Ciudad de México",
+		"abreviatura_ent": "I",
+		"estado": "i",
 		"tipo_variante": "VUM",
 		"cantidad_muestras": 2543
 	},
 	{
 		"cve_edo": "09",
-		"abreviatura_ent": "CMX",
-		"estado": "Ciudad de México",
+		"abreviatura_ent": "I",
+		"estado": "i",
 		"tipo_variante": "VSIN",
 		"cantidad_muestras": 731
 	},
 	{
 		"cve_edo": "10",
-		"abreviatura_ent": "DUR",
-		"estado": "Durango",
+		"abreviatura_ent": "J",
+		"estado": "j",
 		"tipo_variante": "VOC",
 		"cantidad_muestras": 11
 	},
 	{
 		"cve_edo": "10",
-		"abreviatura_ent": "DUR",
-		"estado": "Durango",
+		"abreviatura_ent": "J",
+		"estado": "j",
 		"tipo_variante": "VOI",
 		"cantidad_muestras": 0
 	},
 	{
 		"cve_edo": "10",
-		"abreviatura_ent": "DUR",
-		"estado": "Durango",
+		"abreviatura_ent": "J",
+		"estado": "j",
 		"tipo_variante": "VIN",
 		"cantidad_muestras": 5
 	},
 	{
 		"cve_edo": "10",
-		"abreviatura_ent": "DUR",
-		"estado": "Durango",
+		"abreviatura_ent": "J",
+		"estado": "j",
 		"tipo_variante": "VUM",
 		"cantidad_muestras": 30
 	},
 	{
 		"cve_edo": "10",
-		"abreviatura_ent": "DUR",
-		"estado": "Durango",
+		"abreviatura_ent": "J",
+		"estado": "j",
 		"tipo_variante": "VSIN",
 		"cantidad_muestras": 15
 	},
 	{
 		"cve_edo": "11",
-		"abreviatura_ent": "GUA",
-		"estado": "Guanajuato",
+		"abreviatura_ent": "K",
+		"estado": "k",
 		"tipo_variante": "VOC",
 		"cantidad_muestras": 81
 	},
 	{
 		"cve_edo": "11",
-		"abreviatura_ent": "GUA",
-		"estado": "Guanajuato",
+		"abreviatura_ent": "K",
+		"estado": "k",
 		"tipo_variante": "VOI",
 		"cantidad_muestras": 1
 	},
 	{
 		"cve_edo": "11",
-		"abreviatura_ent": "GUA",
-		"estado": "Guanajuato",
+		"abreviatura_ent": "K",
+		"estado": "k",
 		"tipo_variante": "VIN",
 		"cantidad_muestras": 26
 	},
 	{
 		"cve_edo": "11",
-		"abreviatura_ent": "GUA",
-		"estado": "Guanajuato",
+		"abreviatura_ent": "K",
+		"estado": "k",
 		"tipo_variante": "VUM",
 		"cantidad_muestras": 290
 	},
 	{
 		"cve_edo": "11",
-		"abreviatura_ent": "GUA",
-		"estado": "Guanajuato",
+		"abreviatura_ent": "K",
+		"estado": "k",
 		"tipo_variante": "VSIN",
 		"cantidad_muestras": 85
 	},
 	{
 		"cve_edo": "12",
-		"abreviatura_ent": "GRO",
-		"estado": "Guerrero",
+		"abreviatura_ent": "L",
+		"estado": "l",
 		"tipo_variante": "VOC",
 		"cantidad_muestras": 5
 	},
 	{
 		"cve_edo": "12",
-		"abreviatura_ent": "GRO",
-		"estado": "Guerrero",
+		"abreviatura_ent": "L",
+		"estado": "l",
 		"tipo_variante": "VOI",
 		"cantidad_muestras": 0
 	},
 	{
 		"cve_edo": "12",
-		"abreviatura_ent": "GRO",
-		"estado": "Guerrero",
+		"abreviatura_ent": "L",
+		"estado": "l",
 		"tipo_variante": "VIN",
 		"cantidad_muestras": 13
 	},
 	{
 		"cve_edo": "12",
-		"abreviatura_ent": "GRO",
-		"estado": "Guerrero",
+		"abreviatura_ent": "L",
+		"estado": "l",
 		"tipo_variante": "VUM",
 		"cantidad_muestras": 64
 	},
 	{
 		"cve_edo": "12",
-		"abreviatura_ent": "GRO",
-		"estado": "Guerrero",
+		"abreviatura_ent": "L",
+		"estado": "l",
 		"tipo_variante": "VSIN",
 		"cantidad_muestras": 36
 	},
 	{
 		"cve_edo": "13",
-		"abreviatura_ent": "HID",
-		"estado": "Hidalgo",
+		"abreviatura_ent": "M",
+		"estado": "m",
 		"tipo_variante": "VOC",
 		"cantidad_muestras": 74
 	},
 	{
 		"cve_edo": "13",
-		"abreviatura_ent": "HID",
-		"estado": "Hidalgo",
+		"abreviatura_ent": "M",
+		"estado": "m",
 		"tipo_variante": "VOI",
 		"cantidad_muestras": 1
 	},
 	{
 		"cve_edo": "13",
-		"abreviatura_ent": "HID",
-		"estado": "Hidalgo",
+		"abreviatura_ent": "M",
+		"estado": "m",
 		"tipo_variante": "VIN",
 		"cantidad_muestras": 9
 	},
 	{
 		"cve_edo": "13",
-		"abreviatura_ent": "HID",
-		"estado": "Hidalgo",
+		"abreviatura_ent": "M",
+		"estado": "m",
 		"tipo_variante": "VUM",
 		"cantidad_muestras": 116
 	},
 	{
 		"cve_edo": "13",
-		"abreviatura_ent": "HID",
-		"estado": "Hidalgo",
+		"abreviatura_ent": "M",
+		"estado": "m",
 		"tipo_variante": "VSIN",
 		"cantidad_muestras": 59
 	},
 	{
 		"cve_edo": "14",
-		"abreviatura_ent": "JAL",
-		"estado": "Jalisco",
+		"abreviatura_ent": "N",
+		"estado": "n",
 		"tipo_variante": "VOC",
 		"cantidad_muestras": 52
 	},
 	{
 		"cve_edo": "14",
-		"abreviatura_ent": "JAL",
-		"estado": "Jalisco",
+		"abreviatura_ent": "N",
+		"estado": "n",
 		"tipo_variante": "VOI",
 		"cantidad_muestras": 12
 	},
 	{
 		"cve_edo": "14",
-		"abreviatura_ent": "JAL",
-		"estado": "Jalisco",
+		"abreviatura_ent": "N",
+		"estado": "n",
 		"tipo_variante": "VIN",
 		"cantidad_muestras": 8
 	},
 	{
 		"cve_edo": "14",
-		"abreviatura_ent": "JAL",
-		"estado": "Jalisco",
+		"abreviatura_ent": "N",
+		"estado": "n",
 		"tipo_variante": "VUM",
 		"cantidad_muestras": 259
 	},
 	{
 		"cve_edo": "14",
-		"abreviatura_ent": "JAL",
-		"estado": "Jalisco",
+		"abreviatura_ent": "N",
+		"estado": "n",
 		"tipo_variante": "VSIN",
 		"cantidad_muestras": 71
 	},
 	{
 		"cve_edo": "15",
-		"abreviatura_ent": "MEX",
-		"estado": "Estado de México",
+		"abreviatura_ent": "O",
+		"estado": "o",
 		"tipo_variante": "VOC",
 		"cantidad_muestras": 297
 	},
 	{
 		"cve_edo": "15",
-		"abreviatura_ent": "MEX",
-		"estado": "Estado de México",
+		"abreviatura_ent": "O",
+		"estado": "o",
 		"tipo_variante": "VOI",
 		"cantidad_muestras": 9
 	},
 	{
 		"cve_edo": "15",
-		"abreviatura_ent": "MEX",
-		"estado": "Estado de México",
+		"abreviatura_ent": "O",
+		"estado": "o",
 		"tipo_variante": "VIN",
 		"cantidad_muestras": 27
 	},
 	{
 		"cve_edo": "15",
-		"abreviatura_ent": "MEX",
-		"estado": "Estado de México",
+		"abreviatura_ent": "O",
+		"estado": "o",
 		"tipo_variante": "VUM",
 		"cantidad_muestras": 751
 	},
 	{
 		"cve_edo": "15",
-		"abreviatura_ent": "MEX",
-		"estado": "Estado de México",
+		"abreviatura_ent": "O",
+		"estado": "o",
 		"tipo_variante": "VSIN",
 		"cantidad_muestras": 183
 	},
 	{
 		"cve_edo": "16",
-		"abreviatura_ent": "MIC",
-		"estado": "Michoacán",
+		"abreviatura_ent": "P",
+		"estado": "p",
 		"tipo_variante": "VOC",
 		"cantidad_muestras": 11
 	},
 	{
 		"cve_edo": "16",
-		"abreviatura_ent": "MIC",
-		"estado": "Michoacán",
+		"abreviatura_ent": "P",
+		"estado": "p",
 		"tipo_variante": "VOI",
 		"cantidad_muestras": 0
 	},
 	{
 		"cve_edo": "16",
-		"abreviatura_ent": "MIC",
-		"estado": "Michoacán",
+		"abreviatura_ent": "P",
+		"estado": "p",
 		"tipo_variante": "VIN",
 		"cantidad_muestras": 2
 	},
 	{
 		"cve_edo": "16",
-		"abreviatura_ent": "MIC",
-		"estado": "Michoacán",
+		"abreviatura_ent": "P",
+		"estado": "p",
 		"tipo_variante": "VUM",
 		"cantidad_muestras": 101
 	},
 	{
 		"cve_edo": "16",
-		"abreviatura_ent": "MIC",
-		"estado": "Michoacán",
+		"abreviatura_ent": "P",
+		"estado": "p",
 		"tipo_variante": "VSIN",
 		"cantidad_muestras": 13
 	},
 	{
 		"cve_edo": "17",
-		"abreviatura_ent": "MOR",
-		"estado": "Morelos",
+		"abreviatura_ent": "Q",
+		"estado": "q",
 		"tipo_variante": "VOC",
 		"cantidad_muestras": 6
 	},
 	{
 		"cve_edo": "17",
-		"abreviatura_ent": "MOR",
-		"estado": "Morelos",
+		"abreviatura_ent": "Q",
+		"estado": "q",
 		"tipo_variante": "VOI",
 		"cantidad_muestras": 0
 	},
 	{
 		"cve_edo": "17",
-		"abreviatura_ent": "MOR",
-		"estado": "Morelos",
+		"abreviatura_ent": "Q",
+		"estado": "q",
 		"tipo_variante": "VIN",
 		"cantidad_muestras": 20
 	},
 	{
 		"cve_edo": "17",
-		"abreviatura_ent": "MOR",
-		"estado": "Morelos",
+		"abreviatura_ent": "Q",
+		"estado": "q",
 		"tipo_variante": "VUM",
 		"cantidad_muestras": 221
 	},
 	{
 		"cve_edo": "17",
-		"abreviatura_ent": "MOR",
-		"estado": "Morelos",
+		"abreviatura_ent": "Q",
+		"estado": "q",
 		"tipo_variante": "VSIN",
 		"cantidad_muestras": 49
 	},
 	{
 		"cve_edo": "18",
-		"abreviatura_ent": "NAY",
-		"estado": "Nayarit",
+		"abreviatura_ent": "R",
+		"estado": "r",
 		"tipo_variante": "VOC",
 		"cantidad_muestras": 5
 	},
 	{
 		"cve_edo": "18",
-		"abreviatura_ent": "NAY",
-		"estado": "Nayarit",
+		"abreviatura_ent": "R",
+		"estado": "r",
 		"tipo_variante": "VOI",
 		"cantidad_muestras": 0
 	},
 	{
 		"cve_edo": "18",
-		"abreviatura_ent": "NAY",
-		"estado": "Nayarit",
+		"abreviatura_ent": "R",
+		"estado": "r",
 		"tipo_variante": "VIN",
 		"cantidad_muestras": 0
 	},
 	{
 		"cve_edo": "18",
-		"abreviatura_ent": "NAY",
-		"estado": "Nayarit",
+		"abreviatura_ent": "R",
+		"estado": "r",
 		"tipo_variante": "VUM",
 		"cantidad_muestras": 18
 	},
 	{
 		"cve_edo": "18",
-		"abreviatura_ent": "NAY",
-		"estado": "Nayarit",
+		"abreviatura_ent": "R",
+		"estado": "r",
 		"tipo_variante": "VSIN",
 		"cantidad_muestras": 10
 	},
 	{
 		"cve_edo": "19",
-		"abreviatura_ent": "NLE",
-		"estado": "Nuevo León",
+		"abreviatura_ent": "S",
+		"estado": "s",
 		"tipo_variante": "VOC",
 		"cantidad_muestras": 109
 	},
 	{
 		"cve_edo": "19",
-		"abreviatura_ent": "NLE",
-		"estado": "Nuevo León",
+		"abreviatura_ent": "S",
+		"estado": "s",
 		"tipo_variante": "VOI",
 		"cantidad_muestras": 6
 	},
 	{
 		"cve_edo": "19",
-		"abreviatura_ent": "NLE",
-		"estado": "Nuevo León",
+		"abreviatura_ent": "S",
+		"estado": "s",
 		"tipo_variante": "VIN",
 		"cantidad_muestras": 19
 	},
 	{
 		"cve_edo": "19",
-		"abreviatura_ent": "NLE",
-		"estado": "Nuevo León",
+		"abreviatura_ent": "S",
+		"estado": "s",
 		"tipo_variante": "VUM",
 		"cantidad_muestras": 259
 	},
 	{
 		"cve_edo": "19",
-		"abreviatura_ent": "NLE",
-		"estado": "Nuevo León",
+		"abreviatura_ent": "S",
+		"estado": "s",
 		"tipo_variante": "VSIN",
 		"cantidad_muestras": 324
 	},
 	{
 		"cve_edo": "20",
-		"abreviatura_ent": "OAX",
-		"estado": "Oaxaca",
+		"abreviatura_ent": "T",
+		"estado": "t",
 		"tipo_variante": "VOC",
 		"cantidad_muestras": 20
 	},
 	{
 		"cve_edo": "20",
-		"abreviatura_ent": "OAX",
-		"estado": "Oaxaca",
+		"abreviatura_ent": "T",
+		"estado": "t",
 		"tipo_variante": "VOI",
 		"cantidad_muestras": 0
 	},
 	{
 		"cve_edo": "20",
-		"abreviatura_ent": "OAX",
-		"estado": "Oaxaca",
+		"abreviatura_ent": "T",
+		"estado": "t",
 		"tipo_variante": "VIN",
 		"cantidad_muestras": 9
 	},
 	{
 		"cve_edo": "20",
-		"abreviatura_ent": "OAX",
-		"estado": "Oaxaca",
+		"abreviatura_ent": "T",
+		"estado": "t",
 		"tipo_variante": "VUM",
 		"cantidad_muestras": 53
 	},
 	{
 		"cve_edo": "20",
-		"abreviatura_ent": "OAX",
-		"estado": "Oaxaca",
+		"abreviatura_ent": "T",
+		"estado": "t",
 		"tipo_variante": "VSIN",
 		"cantidad_muestras": 31
 	},
 	{
 		"cve_edo": "21",
-		"abreviatura_ent": "PUE",
-		"estado": "Puebla",
+		"abreviatura_ent": "U",
+		"estado": "u",
 		"tipo_variante": "VOC",
 		"cantidad_muestras": 42
 	},
 	{
 		"cve_edo": "21",
-		"abreviatura_ent": "PUE",
-		"estado": "Puebla",
+		"abreviatura_ent": "U",
+		"estado": "u",
 		"tipo_variante": "VOI",
 		"cantidad_muestras": 1
 	},
 	{
 		"cve_edo": "21",
-		"abreviatura_ent": "PUE",
-		"estado": "Puebla",
+		"abreviatura_ent": "U",
+		"estado": "u",
 		"tipo_variante": "VIN",
 		"cantidad_muestras": 37
 	},
 	{
 		"cve_edo": "21",
-		"abreviatura_ent": "PUE",
-		"estado": "Puebla",
+		"abreviatura_ent": "U",
+		"estado": "u",
 		"tipo_variante": "VUM",
 		"cantidad_muestras": 541
 	},
 	{
 		"cve_edo": "21",
-		"abreviatura_ent": "PUE",
-		"estado": "Puebla",
+		"abreviatura_ent": "U",
+		"estado": "u",
 		"tipo_variante": "VSIN",
 		"cantidad_muestras": 48
 	},
 	{
 		"cve_edo": "22",
-		"abreviatura_ent": "QUE",
-		"estado": "Querétaro",
+		"abreviatura_ent": "V",
+		"estado": "v",
 		"tipo_variante": "VOC",
 		"cantidad_muestras": 48
 	},
 	{
 		"cve_edo": "22",
-		"abreviatura_ent": "QUE",
-		"estado": "Querétaro",
+		"abreviatura_ent": "V",
+		"estado": "v",
 		"tipo_variante": "VOI",
 		"cantidad_muestras": 33
 	},
 	{
 		"cve_edo": "22",
-		"abreviatura_ent": "QUE",
-		"estado": "Querétaro",
+		"abreviatura_ent": "V",
+		"estado": "v",
 		"tipo_variante": "VIN",
 		"cantidad_muestras": 16
 	},
 	{
 		"cve_edo": "22",
-		"abreviatura_ent": "QUE",
-		"estado": "Querétaro",
+		"abreviatura_ent": "V",
+		"estado": "v",
 		"tipo_variante": "VUM",
 		"cantidad_muestras": 301
 	},
 	{
 		"cve_edo": "22",
-		"abreviatura_ent": "QUE",
-		"estado": "Querétaro",
+		"abreviatura_ent": "V",
+		"estado": "v",
 		"tipo_variante": "VSIN",
 		"cantidad_muestras": 59
 	},
 	{
 		"cve_edo": "23",
-		"abreviatura_ent": "ROO",
-		"estado": "Quintana Roo",
+		"abreviatura_ent": "W",
+		"estado": "w",
 		"tipo_variante": "VOC",
 		"cantidad_muestras": 207
 	},
 	{
 		"cve_edo": "23",
-		"abreviatura_ent": "ROO",
-		"estado": "Quintana Roo",
+		"abreviatura_ent": "W",
+		"estado": "w",
 		"tipo_variante": "VOI",
 		"cantidad_muestras": 3
 	},
 	{
 		"cve_edo": "23",
-		"abreviatura_ent": "ROO",
-		"estado": "Quintana Roo",
+		"abreviatura_ent": "W",
+		"estado": "w",
 		"tipo_variante": "VIN",
 		"cantidad_muestras": 2
 	},
 	{
 		"cve_edo": "23",
-		"abreviatura_ent": "ROO",
-		"estado": "Quintana Roo",
+		"abreviatura_ent": "W",
+		"estado": "w",
 		"tipo_variante": "VUM",
 		"cantidad_muestras": 45
 	},
 	{
 		"cve_edo": "23",
-		"abreviatura_ent": "ROO",
-		"estado": "Quintana Roo",
+		"abreviatura_ent": "W",
+		"estado": "w",
 		"tipo_variante": "VSIN",
 		"cantidad_muestras": 119
 	},
 	{
 		"cve_edo": "24",
-		"abreviatura_ent": "SLP",
-		"estado": "San Luis Potosí",
+		"abreviatura_ent": "X",
+		"estado": "x",
 		"tipo_variante": "VOC",
 		"cantidad_muestras": 14
 	},
 	{
 		"cve_edo": "24",
-		"abreviatura_ent": "SLP",
-		"estado": "San Luis Potosí",
+		"abreviatura_ent": "X",
+		"estado": "x",
 		"tipo_variante": "VOI",
 		"cantidad_muestras": 6
 	},
 	{
 		"cve_edo": "24",
-		"abreviatura_ent": "SLP",
-		"estado": "San Luis Potosí",
+		"abreviatura_ent": "X",
+		"estado": "x",
 		"tipo_variante": "VIN",
 		"cantidad_muestras": 7
 	},
 	{
 		"cve_edo": "24",
-		"abreviatura_ent": "SLP",
-		"estado": "San Luis Potosí",
+		"abreviatura_ent": "X",
+		"estado": "x",
 		"tipo_variante": "VUM",
 		"cantidad_muestras": 105
 	},
 	{
 		"cve_edo": "24",
-		"abreviatura_ent": "SLP",
-		"estado": "San Luis Potosí",
+		"abreviatura_ent": "X",
+		"estado": "x",
 		"tipo_variante": "VSIN",
 		"cantidad_muestras": 49
 	},
 	{
 		"cve_edo": "25",
-		"abreviatura_ent": "SIN",
-		"estado": "Sinaloa",
+		"abreviatura_ent": "Y",
+		"estado": "y",
 		"tipo_variante": "VOC",
 		"cantidad_muestras": 99
 	},
 	{
 		"cve_edo": "25",
-		"abreviatura_ent": "SIN",
-		"estado": "Sinaloa",
+		"abreviatura_ent": "Y",
+		"estado": "y",
 		"tipo_variante": "VOI",
 		"cantidad_muestras": 4
 	},
 	{
 		"cve_edo": "25",
-		"abreviatura_ent": "SIN",
-		"estado": "Sinaloa",
+		"abreviatura_ent": "Y",
+		"estado": "y",
 		"tipo_variante": "VIN",
 		"cantidad_muestras": 6
 	},
 	{
 		"cve_edo": "25",
-		"abreviatura_ent": "SIN",
-		"estado": "Sinaloa",
+		"abreviatura_ent": "Y",
+		"estado": "y",
 		"tipo_variante": "VUM",
 		"cantidad_muestras": 163
 	},
 	{
 		"cve_edo": "25",
-		"abreviatura_ent": "SIN",
-		"estado": "Sinaloa",
+		"abreviatura_ent": "Y",
+		"estado": "y",
 		"tipo_variante": "VSIN",
 		"cantidad_muestras": 37
 	},
 	{
 		"cve_edo": "26",
-		"abreviatura_ent": "SON",
-		"estado": "Sonora",
+		"abreviatura_ent": "Z",
+		"estado": "z",
 		"tipo_variante": "VOC",
 		"cantidad_muestras": 18
 	},
 	{
 		"cve_edo": "26",
-		"abreviatura_ent": "SON",
-		"estado": "Sonora",
+		"abreviatura_ent": "Z",
+		"estado": "z",
 		"tipo_variante": "VOI",
 		"cantidad_muestras": 0
 	},
 	{
 		"cve_edo": "26",
-		"abreviatura_ent": "SON",
-		"estado": "Sonora",
+		"abreviatura_ent": "Z",
+		"estado": "z",
 		"tipo_variante": "VIN",
 		"cantidad_muestras": 4
 	},
 	{
 		"cve_edo": "26",
-		"abreviatura_ent": "SON",
-		"estado": "Sonora",
+		"abreviatura_ent": "Z",
+		"estado": "z",
 		"tipo_variante": "VUM",
 		"cantidad_muestras": 29
 	},
 	{
 		"cve_edo": "26",
-		"abreviatura_ent": "SON",
-		"estado": "Sonora",
+		"abreviatura_ent": "Z",
+		"estado": "z",
 		"tipo_variante": "VSIN",
 		"cantidad_muestras": 69
-	},
-	{
-		"cve_edo": "27",
-		"abreviatura_ent": "TAB",
-		"estado": "Tabasco",
-		"tipo_variante": "VOC",
-		"cantidad_muestras": 75
-	},
-	{
-		"cve_edo": "27",
-		"abreviatura_ent": "TAB",
-		"estado": "Tabasco",
-		"tipo_variante": "VOI",
-		"cantidad_muestras": 26
-	},
-	{
-		"cve_edo": "27",
-		"abreviatura_ent": "TAB",
-		"estado": "Tabasco",
-		"tipo_variante": "VIN",
-		"cantidad_muestras": 3
-	},
-	{
-		"cve_edo": "27",
-		"abreviatura_ent": "TAB",
-		"estado": "Tabasco",
-		"tipo_variante": "VUM",
-		"cantidad_muestras": 134
-	},
-	{
-		"cve_edo": "27",
-		"abreviatura_ent": "TAB",
-		"estado": "Tabasco",
-		"tipo_variante": "VSIN",
-		"cantidad_muestras": 50
-	},
-	{
-		"cve_edo": "28",
-		"abreviatura_ent": "TAM",
-		"estado": "Tamaulipas",
-		"tipo_variante": "VOC",
-		"cantidad_muestras": 106
-	},
-	{
-		"cve_edo": "28",
-		"abreviatura_ent": "TAM",
-		"estado": "Tamaulipas",
-		"tipo_variante": "VOI",
-		"cantidad_muestras": 1
-	},
-	{
-		"cve_edo": "28",
-		"abreviatura_ent": "TAM",
-		"estado": "Tamaulipas",
-		"tipo_variante": "VIN",
-		"cantidad_muestras": 13
-	},
-	{
-		"cve_edo": "28",
-		"abreviatura_ent": "TAM",
-		"estado": "Tamaulipas",
-		"tipo_variante": "VUM",
-		"cantidad_muestras": 55
-	},
-	{
-		"cve_edo": "28",
-		"abreviatura_ent": "TAM",
-		"estado": "Tamaulipas",
-		"tipo_variante": "VSIN",
-		"cantidad_muestras": 66
-	},
-	{
-		"cve_edo": "29",
-		"abreviatura_ent": "TLA",
-		"estado": "Tlaxcala",
-		"tipo_variante": "VOC",
-		"cantidad_muestras": 2
-	},
-	{
-		"cve_edo": "29",
-		"abreviatura_ent": "TLA",
-		"estado": "Tlaxcala",
-		"tipo_variante": "VOI",
-		"cantidad_muestras": 0
-	},
-	{
-		"cve_edo": "29",
-		"abreviatura_ent": "TLA",
-		"estado": "Tlaxcala",
-		"tipo_variante": "VIN",
-		"cantidad_muestras": 5
-	},
-	{
-		"cve_edo": "29",
-		"abreviatura_ent": "TLA",
-		"estado": "Tlaxcala",
-		"tipo_variante": "VUM",
-		"cantidad_muestras": 44
-	},
-	{
-		"cve_edo": "29",
-		"abreviatura_ent": "TLA",
-		"estado": "Tlaxcala",
-		"tipo_variante": "VSIN",
-		"cantidad_muestras": 26
-	},
-	{
-		"cve_edo": "30",
-		"abreviatura_ent": "VER",
-		"estado": "Veracruz",
-		"tipo_variante": "VOC",
-		"cantidad_muestras": 69
-	},
-	{
-		"cve_edo": "30",
-		"abreviatura_ent": "VER",
-		"estado": "Veracruz",
-		"tipo_variante": "VOI",
-		"cantidad_muestras": 1
-	},
-	{
-		"cve_edo": "30",
-		"abreviatura_ent": "VER",
-		"estado": "Veracruz",
-		"tipo_variante": "VIN",
-		"cantidad_muestras": 16
-	},
-	{
-		"cve_edo": "30",
-		"abreviatura_ent": "VER",
-		"estado": "Veracruz",
-		"tipo_variante": "VUM",
-		"cantidad_muestras": 287
-	},
-	{
-		"cve_edo": "30",
-		"abreviatura_ent": "VER",
-		"estado": "Veracruz",
-		"tipo_variante": "VSIN",
-		"cantidad_muestras": 87
-	},
-	{
-		"cve_edo": "31",
-		"abreviatura_ent": "YUC",
-		"estado": "Yucatán",
-		"tipo_variante": "VOC",
-		"cantidad_muestras": 317
-	},
-	{
-		"cve_edo": "31",
-		"abreviatura_ent": "YUC",
-		"estado": "Yucatán",
-		"tipo_variante": "VOI",
-		"cantidad_muestras": 2
-	},
-	{
-		"cve_edo": "31",
-		"abreviatura_ent": "YUC",
-		"estado": "Yucatán",
-		"tipo_variante": "VIN",
-		"cantidad_muestras": 14
-	},
-	{
-		"cve_edo": "31",
-		"abreviatura_ent": "YUC",
-		"estado": "Yucatán",
-		"tipo_variante": "VUM",
-		"cantidad_muestras": 199
-	},
-	{
-		"cve_edo": "31",
-		"abreviatura_ent": "YUC",
-		"estado": "Yucatán",
-		"tipo_variante": "VSIN",
-		"cantidad_muestras": 188
-	},
-	{
-		"cve_edo": "32",
-		"abreviatura_ent": "ZAC",
-		"estado": "Zacatecas",
-		"tipo_variante": "VOC",
-		"cantidad_muestras": 35
-	},
-	{
-		"cve_edo": "32",
-		"abreviatura_ent": "ZAC",
-		"estado": "Zacatecas",
-		"tipo_variante": "VOI",
-		"cantidad_muestras": 1
-	},
-	{
-		"cve_edo": "32",
-		"abreviatura_ent": "ZAC",
-		"estado": "Zacatecas",
-		"tipo_variante": "VIN",
-		"cantidad_muestras": 16
-	},
-	{
-		"cve_edo": "32",
-		"abreviatura_ent": "ZAC",
-		"estado": "Zacatecas",
-		"tipo_variante": "VUM",
-		"cantidad_muestras": 240
-	},
-	{
-		"cve_edo": "32",
-		"abreviatura_ent": "ZAC",
-		"estado": "Zacatecas",
-		"tipo_variante": "VSIN",
-		"cantidad_muestras": 83
 	}
 ]

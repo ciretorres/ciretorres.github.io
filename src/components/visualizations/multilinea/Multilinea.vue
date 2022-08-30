@@ -6,9 +6,9 @@
   >
     <div class="lineas-header">
       <h3 class="titulo-visualizacion" v-if="titulo">{{ titulo }}</h3>
-      <p class="fecha-actualizacion" v-if="fecha_actualizacion">
+      <!-- <p class="fecha-actualizacion" v-if="fecha_actualizacion">
         Última actualización: {{ fecha_actualizacion }}
-      </p>
+      </p> -->
     </div>
     <div class="lineas-body">
       <div class="contenedor-svg">
@@ -189,15 +189,15 @@ export default {
       var nuevoObjeto = new Objeto(estadoArray[i], dateArray[i], varianteArray[i], OMSArray[i]);
       dataBase.push(nuevoObjeto);
     }
-    console.log("dataBase",dataBase);
+    // console.log("dataBase",dataBase);
 
     /** 
      * Filtrando baseDatos por fecha_recolección
      * this.fecha_actualización '2021-04-30' -6 en mes
      * */ 
     const dateFiltered = dataBase.filter(d => d.fecha_recoleccion > '2020-12-31');
-    console.log("fecha_actualización",this.fecha_actualizacion);
-    console.log("dateFiltered",dateFiltered);
+    // console.log("fecha_actualización",this.fecha_actualizacion);
+    // console.log("dateFiltered",dateFiltered);
     /** 
      * Función para Parse el tiempo
      * */ 
@@ -262,10 +262,10 @@ export default {
         // keyGroup[nombreGrupo].push([d.fecha_recoleccion, d.tipo_variante]);
         keyGroup2[nombreGrupo].push(d);
       })
-      console.log("keyGroup2",keyGroup2);
+      // console.log("keyGroup2",keyGroup2);
       keysGroupArray.push(keyGroup2);      
     };
-    console.log("ArrayObjetoLineas",keysGroupArray);
+    // console.log("ArrayObjetoLineas",keysGroupArray);
     // console.log("ArrayObjetoLineas",keysGroupArray[0]);    
     // console.log("ArrayObjetoLineas",keysGroupArray[0].VSIN);
     // console.log("ArrayObjetoLineas",keysGroupArray[0].VSIN[0]);
@@ -472,7 +472,7 @@ export default {
     margin: 5px 0;
   }
   div.contenedor-lineas-complejas {
-    font-family: "Montserrat";
+    // font-family: "Montserrat";
     width: 100%;
     // border: solid black 1px;
     // border-radius: $border-radius-tarjeta;

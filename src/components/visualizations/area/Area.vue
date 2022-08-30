@@ -1,14 +1,14 @@
 <template>
   <div class="contenedor-area">
-    <img src="@/assets/imgs/cerrar.svg">
+    <!-- <img src="@/assets/imgs/cerrar.svg"> -->
     <div 
       class="dai-contenedor-area"
       v-bind:id="area_id"
     >
       <div class="dai-titulo">
-        <h3 class="titulo-visualizacion">Título del proyecto</h3>
-        <p class="fecha-actualizacion">Última actualización: {{ fecha_actualizacion }}</p>
-        <p class="texto-instruccional">Texto instruccional Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        <!-- <h3 class="titulo-visualizacion">Título del proyecto</h3> -->
+        <!-- <p class="fecha-actualizacion">Última actualización: {{ fecha_actualizacion }}</p> -->
+        <p class="texto-instruccional">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
       </div>
       <div class="contenedor-vis" id="contenedor_vis">
         <div id="contenedor_svg">
@@ -223,7 +223,7 @@ export default {
       this.xAxisG.selectAll('.domain').remove();
       // Font text
       this.xAxisG.selectAll('.tick text')
-          .style('font-family', 'Montserrat')
+          // .style('font-family', 'Montserrat')
           .style('font-size', '10px')
           .style('text-transform', 'uppercase');
       // Color lines
@@ -241,7 +241,7 @@ export default {
       // Font text
       this.yAxisG
         .selectAll('.tick text')
-            .style('font-family', 'Montserrat')
+            // .style('font-family', 'Montserrat')
             .style('font-size', '10px');
       // Color lines
       this.yAxisG.selectAll('.tick line')
@@ -274,12 +274,14 @@ export default {
           // .attr('class', (d) => `paths-area-${d.date.getDate()+'-'+(+d.date.getMonth()+1)+'-'+d.date.getFullYear()}`)
           .style('fill', this.color_area)
         .on('mouseover', (evento, datum) => {
-          console.log("mousemove", evento, datum);
+          // console.log("mousemove", evento, datum);
+          console.log("bug",);
           this.mostrarTooltip(evento, datum);
         })
         .on('mousemove',(evento,datum) => this.mostrarTooltip(evento, datum))        
         .on('click',(evento,datum) => {
-          console.log("click", evento, datum);
+          // console.log("click", evento, datum);
+          console.log("bug",);
           this.mostrarTooltip(evento, datum);
         });
 
@@ -337,7 +339,7 @@ $border-radius-tarjeta:10px;
 .dai-contenedor-area {
   max-width: 450px;
   padding: 10px;
-  border: 1px solid #000;
+  // border: 1px solid #000;
   border-radius: $border-radius-tarjeta;
 
   display: grid;
