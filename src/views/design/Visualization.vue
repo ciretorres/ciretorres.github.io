@@ -41,12 +41,12 @@ export default {
     flex-direction: row;
   }
   .nav-vis {
-    // width: 35%;
+    width: 30%;
     background: goldenrod;
   }
   .rout {
     // position: relative;
-    width: 100%;
+    width: 70%;
     background: #fff;
     color: #000;
   }
