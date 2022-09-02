@@ -6,29 +6,29 @@
     <div class="encabezado">
       <h3 class="titulo-visualizacion">
         <span v-if="varianteSeleccionada=='VTODAS'">
-          Número de casos relacionados con todas las variantes por estado
-        </span>
-        <span v-if="varianteSeleccionada=='VIN'">
-          Número de casos relacionados con las variantes de interés nacional (VIN) por estado
+          Número de casos relacionados con todas las variables
         </span>
         <span v-if="varianteSeleccionada=='VOC'">
-          Número de casos relacionados con las variantes de preocupación (VOC) por estado
+          Número de casos relacionados con variable 1
         </span>
         <span v-if="varianteSeleccionada=='VOI'">
-          Número de casos relacionados con las variantes de interés (VOI) por estado
+          Número de casos relacionados con variable 2
+        </span>
+        <span v-if="varianteSeleccionada=='VIN'">
+          Número de casos relacionados con variable 3
         </span>
         <span v-if="varianteSeleccionada=='VOM'">
-          Número de casos relacionados con las variantes de monitoreo (VOM) por estado
+          Número de casos relacionados con variable 4
         </span>
         <span v-if="varianteSeleccionada=='VSIN'">
-          Número de casos relacionados con las variantes sin clasificación (VSIN) por estado
+          Número de casos relacionados con variable 5
         </span>
       </h3>
-      <p class="instruccional">Última actualización: 05/07/2021</p>
+      <!-- <p class="instruccional">Última actualización: 05/07/2021</p> -->
     </div>
     <div class="nomenclatura">
       <div class="leyenda-mapa-calor">
-        <p class="titulo-leyenda">Casos relacionados de la muestra</p>
+        <!-- <p class="titulo-leyenda">Casos relacionados de la muestra</p> -->
         <button @click="quitaPon" class="quita-pon">{{status_button}}</button>
       </div>
       <div class="checks">
@@ -41,9 +41,9 @@
           </CheckboxColor>
         </div>
       </div>
-      <div class="aviso">
+      <!-- <div class="aviso">
         AVISO: Visualización en proceso, falta ajustar escala.
-      </div>
+      </div> -->
     </div>
     <div class="contenedor-vis" id="contenedor_vis">
       <!-- svg -->
@@ -88,12 +88,12 @@ const dictValuesRango = {
   Rango_5: '80 o más',
 };
 const dictColorsRango = {
-  Rango_0: '#EAD8D8',
-  Rango_1: '#FEB7C5',
-  Rango_2: '#EB5382',
-  Rango_3: '#E31755',
-  Rango_4: '#A71867',
-  Rango_5: '#7B053B',
+  Rango_0: '#e5f5f9',
+  Rango_1: '#66c2a4',
+  Rango_2: '#41ae76',
+  Rango_3: '#238b45',
+  Rango_4: '#006d2c',
+  Rango_5: '#00441b',
 };
 const variables = Object.entries(dictValuesRango).map((rango) => {
   return {
@@ -303,8 +303,8 @@ export default {
 
         // this.completo = ['Interés nacional', 'Preocupación', 'Monitoreo', 'Sin clasificación', 'Interés'];
         // this.parentesis = ['(VIN)', '(VOC)', '(VOM)', '(VSIN)', '(VOI)'];
-        this.completo = ['Preocupación', 'Interés', 'Interés nacional',  'Monitoreo', 'Sin clasificación'];
-        this.parentesis = ['(VOC)', '(VOI)', '(VIN)', '(VOM)', '(VSIN)'];
+        this.completo = ['Variable 1', 'Variable 2', 'Variable 3',  'Variable 4', 'Variable 5'];
+        this.parentesis = ['', '', '', '', ''];
 
         // Creando un nuevo arreglo de objectos con las claves ya filtradas y sumadas
         const arregloObjectos = [];
@@ -367,7 +367,7 @@ export default {
         if (tipoVariante === 'VSIN') {
           // Variantes sin clasificación // <-- PEDIR AL STORE EL TOP 5
           // this.keyVarianteOMS = ['B.1.551'];
-          this.keyVarianteOMS = ['B.1', 'B.1.243', 'B.1.1', 'B.1.609', 'P.4'];
+          this.keyVarianteOMS = ['5.5', '5.4', '5.3', '5.2', '5.1'];
         } else {
           this.keyVarianteOMS = Object.keys(groupVarianteOMS);
         }
@@ -451,7 +451,7 @@ export default {
         this.eje_x_bottom
           .attr('transform', `translate(33, ${this.height + 20} )`)
           .call(d3.axisBottom(this.x).tickSize(0))
-          .style('font-family', 'Montserrat')
+          // .style('font-family', 'Montserrat')
           .selectAll('text')
           .style('text-anchor', 'end')
           .style('font-size', '10px')
@@ -462,7 +462,7 @@ export default {
         if (this.varianteSeleccionada === 'VTODAS'){
           this.eje_y
             .call(d3.axisLeft(this.y_1).tickSize(0))
-            .style('font-family', 'Montserrat')
+            // .style('font-family', 'Montserrat')
             .attr('transform', 'translate(5, 5)')
             .selectAll('text')
             .style('text-anchor', 'start')
@@ -472,7 +472,7 @@ export default {
             this.eje_y_abr.style('opacity', '1');
           this.eje_y_abr
             .call(d3.axisLeft(this.y_1_p).tickSize(0))
-            .style('font-family', 'Montserrat')
+            // .style('font-family', 'Montserrat')
             .attr('transform', 'translate(5, 20)')
             .selectAll('text')
             .style('text-anchor', 'start')
@@ -482,7 +482,7 @@ export default {
         } else {
           this.eje_y
             .call(d3.axisLeft(this.y).tickSize(0))
-            .style('font-family', 'Montserrat')
+            // .style('font-family', 'Montserrat')
             .attr('transform', 'translate(5, 5)')
             .selectAll('text')
             .style('text-anchor', 'start')
@@ -507,7 +507,7 @@ export default {
         this.eje_x_top
           .attr('transform', 'translate(40, 5)')
           .call(d3.axisBottom(this.x).tickSize(0))
-          .style('font-family', 'Montserrat')
+          // .style('font-family', 'Montserrat')
           .selectAll('text')
           .style('text-anchor', 'middle')
           .style('font-size', '10px');
@@ -516,7 +516,7 @@ export default {
         this.eje_x_bottom
           .attr('transform', `translate(40, ${this.height + 30})`)
           .call(d3.axisBottom(this.x).tickSize(0))
-          .style('font-family', 'Montserrat')
+          // .style('font-family', 'Montserrat')
           .selectAll('text')
           .style('text-anchor', 'middle')
           .style('font-size', '10px');
@@ -524,7 +524,7 @@ export default {
           .remove();
         this.eje_y
           .call(d3.axisLeft(this.y).tickSize(0))
-          .style('font-family', 'Montserrat')
+          // .style('font-family', 'Montserrat')
           .style('text-anchor', 'start')
           .attr('transform', 'translate(10, 25)');
         this.eje_y.select('.domain')
@@ -662,7 +662,7 @@ export default {
     },
     contenidoTooltip(datum) {
       return `${this.varianteSeleccionada==='VTODAS'
-        ? `${datum.variable_completa} (${datum.variable})`
+        ? `${datum.variable_completa}`
         : datum.variable
       } | <b>${datum.value}</b>`
     },

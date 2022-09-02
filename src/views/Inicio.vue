@@ -37,7 +37,7 @@
           href="//api.whatsapp.com/send?phone=5547904238" 
           class="color-red"
           >
-          WhatsApp<span class="icon" data-icon="c"></span>
+          WhatsApp<span class="icon icon-whatsapp"></span>
         </a>
       </p>
       <p>
@@ -51,13 +51,13 @@
         </a>
       </p>
       <p>
-        And my work -> 
+        CV -> 
         <a 
-          href="https://www.behance.net/ciretorres" 
+          href="https://xd.adobe.com/view/6e6a30c0-f541-4cab-a5bb-1e817c9cec5c-3b39/?fullscreen" 
           target="_blank" 
           class="color-red"
           >
-          Behance<span class="icon" data-icon="b"></span>
+          CurriculumVitae
         </a>
       </p>
     </div>

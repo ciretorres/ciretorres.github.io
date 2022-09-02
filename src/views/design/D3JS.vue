@@ -7,13 +7,13 @@
       />
 
       <Multilinea 
-        titulo="Evolución de variantes del virus SARS-CoV-2"
+        titulo="Evolución de variables"
         fecha_actualizacion="dd/mm/aa"
         :datos="datosGrafica"
         :nombre_variables="{ nombre: 'nombre' }"
         :variables="variablesGrafica"
         :alto_vis="400"
-        titulo_leyenda="Variantes del virus SARS-CoV-2" 
+        titulo_leyenda="leyenda" 
       />
 
       <Area 
