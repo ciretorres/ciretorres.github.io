@@ -4,19 +4,22 @@
       <div class="ml-3">
         <h1>Vis</h1>
         <ul>
-          <li><router-link class="nav-boton" to="/visualization/d3js">d3JS</router-link></li>
-          <li><router-link class="nav-boton" to="/visualization/maps">maps</router-link></li>
+          <li><router-link class="nav-boton" to="/design/visualization/d3js">d3JS</router-link></li>
+          <li><router-link class="nav-boton" to="/design/visualization/maps">maps</router-link></li>
           <li>Interactive-Interface</li>
           <li>AR-System UNIVERSUM</li>
           <li>Solid Waste System's Interactive</li>
           <li>3D Gamma-Ray Catalogue</li>
           <li>The Gravity Apple Tree</li>
+          <li><router-link class="color-yellow" to="/design">[Back]</router-link></li>
         </ul>
       </div>
+      
     </div>
     <div class="rout">
       <router-view class="view" />
     </div>
+    
   </div>
 </template>
 

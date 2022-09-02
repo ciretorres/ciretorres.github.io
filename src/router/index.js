@@ -16,17 +16,17 @@ const routes = [
     component: () => import('@/views/Design.vue'),
   },
   {
-    path: '/visualization',
+    path: '/design/visualization',
     name: 'Visualization',
     component: () => import('@/views/design/Visualization.vue'),
     children: [
       {
-        path: '/visualization/d3js',
+        path: '/design/visualization/d3js',
         name: 'D3JS',
         component: () => import('@/views/design/D3JS.vue'),
       },
       {
-        path: '/visualization/maps',
+        path: '/design/visualization/maps',
         name: 'Maps',
         component: () => import('@/views/design/Maps.vue'),
       },

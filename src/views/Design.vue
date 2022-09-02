@@ -10,7 +10,7 @@
         <!-- <li>The Gravity Apple Tree <a href="@/assets/imgs/2018-11-07-gravity-apple-tree.jpg" target="_blank" class="color-yellow">[UAM-C]</a></li> -->
         <!-- <li>The Gravity Apple Tree <a href="imgs/2018-11-07-gravity-apple-tree.jpg" target="_blank" class="color-yellow">[UAM-C]</a></li> -->
         <li>The Gravity Apple Tree <a :href="`${public_path}imgs/2018-11-07-gravity-apple-tree.jpg`" target="_blank" class="color-yellow">[UAM-C]</a></li>
-        <li>Go to <router-link class="color-yellow" to="/visualization/d3js">[Vis]</router-link></li>
+        <li>Go to <router-link class="color-yellow" to="/design/visualization/d3js">[Vis]</router-link></li>
       </ul>
       <router-link class="color-red" to="/">[Back]</router-link>
     </div>
