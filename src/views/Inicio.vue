@@ -1,7 +1,6 @@
 <template>
   <div class="inicio">
     <div class="container p-2">
-      <!-- {{ msg }} -->
       <p>
         Hello! My name is <span class="color-blue">Eric</span>. 
         Visualization designer
@@ -12,24 +11,44 @@
       </p>
       <p>
         Currently, I'm working on my
-        <span class="color-red">[Master Degree's Information Design & Visualization]</span>
-        in the beautiful
+        <span class="color-red">[ Ph.D. Degree's Idea ]</span>
+        in the beautiful city of
         <a
-          href="https://goo.gl/ba2zp3"
+          href="https://goo.gl/maps/FpiCBPnLTAySiMnR8"
           target="_blank"
           class="color-red"
           >
-          México City<span class="icon icon-external-link"></span>
+          Guadalajara<span class="icon icon-external-link"></span>
         </a>
+        in
+        <span
+          class="color-red"
+          >
+          México
+      </span>
         looking for new challengues.
       </p>
       <p>
         Some of my <span class="color-blue">recent personal proyects!</span>
       </p>
       <ul>
-        <li>Visualization <router-link class="color-yellow" to="/design">[Design]</router-link></li>
-        <li>Web <router-link class="color-yellow" to="/development">[Development]</router-link></li>
-        <li>Social <router-link class="color-yellow" to="/marketing">[Marketing]</router-link></li>
+        <li>Developer 
+          <ul>
+            <li><router-link class="color-yellow" to="/">[ Vis ]</router-link></li>
+            <li><router-link class="color-yellow" to="/development">[ Web ]</router-link></li>
+            <li><router-link class="color-yellow" to="/">[ Games ]</router-link></li>
+          </ul>
+        </li>
+        <br>
+        <li>Communication
+          <ul>
+            <li> <router-link class="color-yellow" to="/design">[ Design ]</router-link></li>
+            <li> <router-link class="color-yellow" to="/marketing">[ Marketing ]</router-link></li>
+          </ul>
+        </li>
+        <!-- <li>Visualization <router-link class="color-yellow" to="/design">[Design]</router-link></li> -->
+        <!-- <li>Web <router-link class="color-yellow" to="/development">[Development]</router-link></li>
+        <li>Social <router-link class="color-yellow" to="/marketing">[Marketing]</router-link></li> -->
       </ul>
       <p>
         Let's chat -> 
