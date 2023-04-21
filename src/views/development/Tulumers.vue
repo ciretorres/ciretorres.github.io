@@ -1,16 +1,10 @@
 <template>
   <div class="tulumers">
-    <div class="portafolio">
-      <a href="https://tulumers.com/">
-        <img src="@/assets/imgs/portafolio-tulumers-1.jpg" alt="" class="img-portafolio">
-      </a>
-      <a href="https://tulumers.com/">
-        <img src="@/assets/imgs/portafolio-tulumers-2.jpg" alt="" class="img-portafolio">
-      </a>
-      <a href="https://tulumers.com/">
-        <img src="@/assets/imgs/portafolio-tulumers-3.jpg" alt="" class="img-portafolio">
-      </a>
-    </div>
+    <a href="https://tulumers.com/" target="_blank" class="portafolio">
+      <img src="@/assets/imgs/portafolio-tulumers-1.jpg" alt="" class="img-portafolio">
+      <img src="@/assets/imgs/portafolio-tulumers-2.jpg" alt="" class="img-portafolio">
+      <img src="@/assets/imgs/portafolio-tulumers-3.jpg" alt="" class="img-portafolio">
+    </a>
     <div class="navegacion">
       <router-link class="nav-boton" to="/development/expediciones-trotamundos">[previous]</router-link>
       <router-link class="nav-boton" to="/development/luxji">[next]</router-link>

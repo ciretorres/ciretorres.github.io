@@ -34,7 +34,7 @@
       <ul>
         <li>Developer 
           <ul>
-            <li><router-link class="color-yellow" to="/">[ Vis ]</router-link></li>
+            <li><router-link target="_blank" class="color-yellow" to="/design/visualization/d3js">[ Vis ]</router-link></li>
             <li><router-link class="color-yellow" to="/development">[ Web ]</router-link></li>
             <li><router-link class="color-yellow" to="/">[ Games ]</router-link></li>
           </ul>

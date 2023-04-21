@@ -1,7 +1,24 @@
 $font-stack: Monaco, Roboto, Avenir, Helvetica, Arial, sans-serif;
 // $primary-color: #333;
-$background-color: #0d2f5c;
+// $background-color: #0d2f5c;
+$background-color: #fff;
+
 // $background-color: #fff;
+
+:root {
+    --background-color: #fff;
+    // --background-color: #0d2f5c;
+    --font-color: #000;
+    // --font-color: #fff;
+
+    // --color-blue: #20d6d6;
+    // --color-yellow: #fcffd0;
+    // --color-red: #d33682;
+
+    --color-blue: #00000f;
+    --color-yellow: #00000f;
+    --color-red: #00000f;
+}
 
 $spacing: (
     "0": 0,
