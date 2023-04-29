@@ -412,7 +412,7 @@ export default {
         this.eje_x_bottom
           .attr('transform', `translate(33, ${this.height + 20} )`)
           .call(d3.axisBottom(this.x).tickSize(0))
-          .style('font-family', 'Montserrat')
+          // .style('font-family', 'Montserrat')
           .selectAll('text')
           .style('text-anchor', 'end')
           .style('font-size', '10px')
@@ -421,7 +421,7 @@ export default {
           .remove();
         this.eje_y
           .call(d3.axisLeft(this.y).tickSize(0))
-          .style('font-family', 'Montserrat')
+          // .style('font-family', 'Montserrat')
           .attr('transform', 'translate(25, 10)')
           .selectAll('text')
           .style('text-anchor', 'middle')
@@ -445,7 +445,7 @@ export default {
         this.eje_x_top
           .attr('transform', 'translate(40, 5)')
           .call(d3.axisBottom(this.x).tickSize(0))
-          .style('font-family', 'Montserrat')
+          // .style('font-family', 'Montserrat')
           .selectAll('text')
           .style('text-anchor', 'middle')
           .style('font-size', '10px');
@@ -454,7 +454,7 @@ export default {
         this.eje_x_bottom
           .attr('transform', `translate(40, ${this.height + 30})`)
           .call(d3.axisBottom(this.x).tickSize(0))
-          .style('font-family', 'Montserrat')
+          // .style('font-family', 'Montserrat')
           .selectAll('text')
           .style('text-anchor', 'middle')
           .style('font-size', '10px');
@@ -462,7 +462,7 @@ export default {
           .remove();
         this.eje_y
           .call(d3.axisLeft(this.y).tickSize(0))
-          .style('font-family', 'Montserrat')
+          // .style('font-family', 'Montserrat')
           .style('text-anchor', 'start')
           .attr('transform', 'translate(10, 25)');
         this.eje_y.select('.domain')

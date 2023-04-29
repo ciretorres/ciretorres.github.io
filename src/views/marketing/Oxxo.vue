@@ -26,6 +26,7 @@
           <router-link class="nav-boton" to="/marketing/loreto-fish">[previous]</router-link>
           <router-link class="nav-boton" to="/marketing/cem">[next]</router-link>
         </div>
+        <router-link class="color-red" to="/design">[Back]</router-link>
       </div>
     </div>
   </div>
@@ -38,6 +39,13 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.container {
+  background: transparent;
+  .color-red {
+    display: flex;
+    justify-content: center;
+  }
+}
 .oxxo {
   width: 100%;
   height: 100%;

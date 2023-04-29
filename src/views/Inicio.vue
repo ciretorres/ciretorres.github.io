@@ -10,40 +10,45 @@
         freak world.
       </p>
       <p>
-        Currently, I'm working on my
-        <span class="color-red">[ Ph.D. Degree's Idea ]</span>
-        in the beautiful city of
+        Currently, I'm learning about
+        <span class="color-red">[machine learning & videogames]</span>
+        in the beautiful
         <a
-          href="https://goo.gl/maps/FpiCBPnLTAySiMnR8"
+          href="https://goo.gl/ba2zp3"
           target="_blank"
           class="color-red"
           >
-          Guadalajara<span class="icon icon-external-link"></span>
+          México City<span class="icon icon-external-link"></span>
         </a>
-        in
-        <span
+        looking for new challengues.
+      </p>
+      <!-- <p>
+        Currently, I'm working on my
+        <span class="color-red">[Master Degree's Information Design & Visualization]</span>
+        in the beautiful
+        <a
+          href="https://goo.gl/ba2zp3"
+          target="_blank"
           class="color-red"
           >
-          México
-      </span>
+          México City<span class="icon icon-external-link"></span>
+        </a>
         looking for new challengues.
       </p>
       <p>
         Some of my <span class="color-blue">recent personal proyects!</span>
-      </p>
+      </p> -->
       <ul>
         <li>Developer 
           <ul>
-            <li><router-link target="_blank" class="color-yellow" to="/design/visualization/d3js">[ Vis ]</router-link></li>
-            <li><router-link class="color-yellow" to="/development">[ Web ]</router-link></li>
-            <li><router-link class="color-yellow" to="/">[ Games ]</router-link></li>
+            <li><router-link class="color-yellow" to="/design/visualization/d3js">[ Videogames ]</router-link></li>
+            <li><router-link class="color-yellow" to="/development">[ Other stuff{{period}} ]</router-link></li>
           </ul>
         </li>
         <br>
         <li>Communication
           <ul>
-            <li> <router-link class="color-yellow" to="/design">[ Design ]</router-link></li>
-            <li> <router-link class="color-yellow" to="/marketing">[ Marketing ]</router-link></li>
+            <li> <router-link class="color-yellow" to="/design">[ Marketing & Design ]</router-link></li>
           </ul>
         </li>
         <!-- <li>Visualization <router-link class="color-yellow" to="/design">[Design]</router-link></li> -->
@@ -89,6 +94,21 @@ export default {
   props: {
     msg: String,
   },
+  data(){
+    return {
+      period: '.'
+    }
+  },
+  mounted(){
+    setInterval(() => {
+      if(this.period === '.....'){
+        this.period = ''
+      } else {
+        this.period = this.period+'.'
+      }
+      
+    }, 1000);
+  }
 };
 </script>
 

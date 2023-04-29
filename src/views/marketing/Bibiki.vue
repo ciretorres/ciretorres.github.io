@@ -27,6 +27,7 @@
           <router-link class="nav-boton" to="/marketing/cem">[previous]</router-link>
           <router-link class="nav-boton" to="/marketing/loreto-fish">[next]</router-link>
         </div>
+        <router-link class="color-red" to="/design">[Back]</router-link>
       </div>
     </div>
   </div>
@@ -39,6 +40,13 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.container {
+  background: transparent;
+  .color-red {
+    display: flex;
+    justify-content: center;
+  }
+}
 .bibiki {
   width: 100%;
   height: 100%;

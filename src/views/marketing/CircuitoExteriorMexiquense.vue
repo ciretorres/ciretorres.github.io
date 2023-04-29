@@ -36,6 +36,7 @@
           <router-link class="nav-boton" to="/marketing/oxxo">[previous]</router-link>
           <router-link class="nav-boton" to="/marketing/bibiki">[next]</router-link>
         </div>
+        <router-link class="color-red" to="/design">[Back]</router-link>
       </div>
     </div>
   </div>
@@ -48,6 +49,13 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.container {
+  background: transparent;
+  .color-red {
+    display: flex;
+    justify-content: center;
+  }
+}
 .cem {
   width: 100%;
   height: 100%;
