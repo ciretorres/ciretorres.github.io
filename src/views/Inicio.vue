@@ -34,10 +34,10 @@
           México City<span class="icon icon-external-link"></span>
         </a>
         looking for new challengues.
-      </p>
+      </p> -->
       <p>
         Some of my <span class="color-blue">recent personal proyects!</span>
-      </p> -->
+      </p>
       <ul>
         <li>Developer 
           <ul>
