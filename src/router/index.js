@@ -31,9 +31,9 @@ const routes = [
         component: () => import('@/views/design/Maps.vue'),
       },
       {
-        path: '/design/visualization/gravityAppleTree',
+        path: '/design/visualization/gravity-apple-tree',
         name: 'Maps',
-        component: () => import('@/components/visualizations/gravityAppleTree/GravityAppleTree.vue'),
+        component: () => import('@/components/visualizations/gravity-apple-tree/GravityAppleTree.vue'),
       },
     ]
   },

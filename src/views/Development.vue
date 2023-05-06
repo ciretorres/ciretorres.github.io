@@ -3,7 +3,7 @@
     <div class="container p-2">
       <p class="color-red">[Other stuff...]</p>
       <ul>
-        <li><a @click="descubirSitios()" class="color-white">Frontend <span class="color-yellow">[Conacyt]</span></a></li>
+        <li><a @click="descubirSitios()" style="cursor:pointer;" class="color-white" rel="noopener noreferrer">Frontend <span class="color-yellow">[Conacyt]</span></a></li>
         <ul v-show="mostrar">
           <li><a href="https://eni.conacyt.mx/" class="color-white" target="_blank" rel="noopener noreferrer">Ecosistemas Nacionales Informáticos</a></li>
           <ul>
@@ -46,7 +46,7 @@
         </ul>        
         <li><router-link target="_blank" class="color-white" to="/development/tulumers">Tulumers <span class="color-yellow">[Travel]</span></router-link></li>
         <li><router-link target="_blank" class="color-white" to="/development/luxji">Luxury Jewelry Imports <span class="color-yellow">[Retail]</span></router-link></li>
-        <li><router-link class="color-white" to="/design/visualization/gravityAppleTree">Gravity Apple Tree <span class="color-yellow">[UAM-C]</span></router-link></li>
+        <li><router-link class="color-white" to="/design/visualization/gravity-apple-tree">Gravity Apple Tree <span class="color-yellow">[UAM-C]</span></router-link></li>
         <li><router-link class="color-white" to="/design/visualization/d3js">Go to <span class="color-yellow">[Vis]</span></router-link></li>
       </ul>
       <router-link class="color-red" to="/">[Back]</router-link>
