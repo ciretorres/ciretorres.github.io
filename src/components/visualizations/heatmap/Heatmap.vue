@@ -88,12 +88,12 @@ const dictValuesRango = {
   Rango_5: '80 o más',
 };
 const dictColorsRango = {
-  Rango_0: '#e5f5f9',
-  Rango_1: '#66c2a4',
-  Rango_2: '#41ae76',
-  Rango_3: '#238b45',
-  Rango_4: '#006d2c',
-  Rango_5: '#00441b',
+  Rango_0: '#efefef',
+  Rango_1: '#d9d9d9',
+  Rango_2: '#cccccc',
+  Rango_3: '#b7b7b7',
+  Rango_4: '#999999',
+  Rango_5: '#666666',
 };
 const variables = Object.entries(dictValuesRango).map((rango) => {
   return {

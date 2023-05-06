@@ -52,12 +52,15 @@ export default {
     padding: 6px;
     @media (min-width:768px) {
       max-width: 270px;
+      border-right: 1px solid rgba(255, 255, 255, 0.1);
     }
-    background: goldenrod;
+    // background: goldenrod;
+    background: var(--container-background-color);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     grid-area: nav-vis;
     ;
     .nav-boton {
-      color: #000;
+      color: #fff;
       display: block;
       padding: 8px;
       text-decoration: none;
@@ -69,8 +72,9 @@ export default {
   .rout {
     // position: relative;
     // width: 70%;
-    background: #fff;
-    color: #000;
+    // background: #fff;
+    background: var(--background-color);
+    color: #fff;
     grid-area: rout;
   }
 }

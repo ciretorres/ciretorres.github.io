@@ -64,7 +64,8 @@ export default {
 
 // selectores-fijos
 .selectores-fijos {
-  background: #fff;
+  // background: #fff;
+  background: transparent;
   // position: sticky;
   // top: 77px;
   // z-index: 9997;
