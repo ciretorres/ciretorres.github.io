@@ -136,7 +136,7 @@ export default {
       this.svg
         .attr('width', this.width + this.margin.left + this.margin.right)
         .attr('height', this.height + this.margin.top + this.margin.bottom)
-        // .style('background-color', '#eee'); // <--- comentar
+        .style("background-color", "#efefef")
 
       this.grupo_contenedor
         .attr('transform',
@@ -150,12 +150,12 @@ export default {
         .attr('transform', `translate(${this.width * .5}, ${this.height + 25})`)
         .style('text-anchor', 'middle')
         .style('font-size', '10px')
-        .style('dominant-baseline', 'hanging');      
+        .style('dominant-baseline', 'hanging').style("color", "#000");      
       this.texto_y
         .attr('transform',`translate(${-this.margin.left}, ${this.height * .5}) rotate(-90)`)
         .style('text-anchor', 'middle')
         .style('font-size', '10px')
-        .style('dominant-baseline', 'hanging');      
+        .style('dominant-baseline', 'hanging').style("color", "#000");      
     },
     multiFormat(date) {
       /**
@@ -218,7 +218,7 @@ export default {
       // Call X axis
       this.xAxisG = this.eje_x.append('g')
         .attr('transform', `translate(0, ${this.height})`)
-        .call(this.xAxis);
+        .call(this.xAxis).style("color", "#000");
       // Remove domain line
       this.xAxisG.selectAll('.domain').remove();
       // Font text
@@ -228,7 +228,7 @@ export default {
           .style('text-transform', 'uppercase');
       // Color lines
       this.xAxisG.selectAll('.tick line')
-          .style('stroke', '#C0C0BB');
+          .style('stroke', '#000');
       
       // Add Y axis
       this.yAxis = d3.axisLeft(this.yScale)
@@ -242,10 +242,10 @@ export default {
       this.yAxisG
         .selectAll('.tick text')
             // .style('font-family', 'Montserrat')
-            .style('font-size', '10px');
+            .style('font-size', '10px').style("color", "#000");
       // Color lines
       this.yAxisG.selectAll('.tick line')
-          .style('stroke', '#C0C0BB');
+          .style('stroke', '#000');
       
       // Area generator
       this.areaGenerator = d3.area()
