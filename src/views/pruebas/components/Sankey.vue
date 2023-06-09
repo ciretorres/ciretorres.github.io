@@ -67,6 +67,7 @@ export default {
         .nodePadding(290)
         .extent([[0, 0], [this.width, this.height]]);
         // .size([width, height]);
+      // console.log('this.sankey',this.sankey);
 
       const { nodes, links } = this.sankey(this.data);
 

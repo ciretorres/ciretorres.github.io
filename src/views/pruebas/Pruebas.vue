@@ -1,11 +1,18 @@
 <template>
   <div class="b-pruebas">
+    <div id="my_dataviz"></div>
     <!-- <Controls :data="data" @remove-edge="removeEdge" v-if="data"/> -->
     <Sankey :data="data"/>
   </div>
 </template>
 
 <script>
+// import * as d3 from "d3";
+import { select } from 'd3-selection';
+import { sankey } from "d3-sankey";
+import { sankeyLinkHorizontal } from "d3-sankey";
+// import { linkHorizontal } from "d3";
+
 import Sankey from "./components/Sankey.vue";
 // import Controls from "./components/Controls.vue";
 
@@ -15,6 +22,7 @@ export default {
   components: { Sankey },
   data: () => ({
     data: null,
+    datos: null,
     edgeToRemove: null
   }),
   async mounted() {
@@ -70,10 +78,117 @@ export default {
     }
 
     // this.data = await response.json();
+    this.datos = {
+      "nodes": [
+        {"id": "Alice"},
+        {"id": "Bob"},
+        {"id": "Carol"}
+      ],
+      "links": [
+        {"source": 0, "target": 1}, // Alice → Bob
+        {"source": 1, "target": 2} // Bob → Carol
+      ]
+    }
+  },
+  watch: {
+    datos: {
+      deep: true,
+      immediate: true,
+      handler(data) {
+        if (!data) return;
+        this.actualizarSankey();
+      }
+    }
   },
   methods: {
+    linksMethod(graph) {
+      return graph.links;
+    },
+    actualizarSankey() {
+      console.log('comenzamos')
+      // append the svg object to the body of the page
+      var svg = select("#my_dataviz").append("svg")
+          .attr("width", 450)
+          .attr("height", 480)
+          .style("background", "#fff")
+        .append("g")
+          // .style("background", "#000")
+          .attr("transform", "translate(0,0)");
+      console.log(svg);
+
+      // Color scale used
+      var color = [
+        "#1f77b4",
+        "#aec7e8",
+        "#ff7f0e",
+        "#ffbb78",
+        "#2ca02c",
+        "#98df8a",
+        "#d62728",
+        "#ff9896",
+        "#9467bd",
+        "#c5b0d5",
+        "#8c564b",
+        "#c49c94",
+        "#e377c2",
+        "#f7b6d2",
+        "#7f7f7f",
+        "#c7c7c7",
+        "#bcbd22",
+        "#dbdb8d",
+        "#17becf",
+        "#9edae5"
+      ]
+      console.log(color);
+
+      var path = sankeyLinkHorizontal();
+      console.log('path',path);
+
+      // Set the sankey diagram properties
+      this.sankey = sankey()
+        .nodeWidth(36)
+        .nodePadding(290)
+        // .size([450, 480]);
+        .extent([[0, 0], [450, 480]]);
+      console.log('sankey_vis',this.sankey);
+
+      // Constructs a new Sankey generator with the default settings.
+      this.sankey
+        .nodes(this.datos.nodes)
+        .links(this.datos.links);
+        // .layout(1);
+      // console.log('sankey_vis',this.sankey);
+
+      // console.log('this.sankey.link()', sankeyLinkHorizontal()(this.datos.links))
+      // // add in the links
+      // var link = svg.append("g")
+      //   .selectAll(".link")
+      //   .data(this.datos.links)
+      //   .enter()
+      //   // .append("path")
+      //   //   .attr("class", "link")
+      //     // .attr("d", this.sankey.link )
+      //     // .style("stroke-width", function(d) { 
+      //     //   console.log('d.dy',d.dy);
+      //     //   // return Math.max(1, d.dy); 
+      //     //   return 1;
+      //     // })
+      //     // .style("stroke-width", 1);
+      // console.log('this.sankey.link()', this.linkComputed)
+      // console.log('link',link);
+
+      // var node = svg.append("g");
+      // console.log('node',node);
+
+
+    },
     removeEdge(edge) {
       console.log(edge);
+    }
+  },
+  computed: {
+    linkComputed() {
+      return sankeyLinkHorizontal();
     }
   }
 };
