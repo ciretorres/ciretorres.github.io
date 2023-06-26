@@ -1,30 +1,48 @@
 <template>
-  <div class="loreto-fish">
+  <div class="cem">
     <div class="portafolio">
-      <img src="@/assets/imgs/header-loreto-fish.png" alt="" class="img-portafolio">
+      <img src="@/assets/imgs/header-cem.png" alt="" class="img-portafolio">
       <div class="container contenido">
         <div class="contenedor-link">
-          <a href="https://www.loretofish.com/" class="logo-link">
-            <img src="@/assets/imgs/logo-loreto-fish.png" alt="" class="logo-img">
+          <a href="https://www.circuitoexterior.mx/" class="logo-link">
+            <img src="@/assets/imgs/logo-cem.png" alt="" class="logo-img">
           </a>
         </div>
         <div class="navegacion">
-          <router-link class="nav-boton" to="/marketing/bibiki">[previous]</router-link>
-          <router-link class="nav-boton" to="/marketing/oxxo">[next]</router-link>
+          <router-link 
+          class="nav-boton" 
+          to="/marketing-design/oxxo">[previous]</router-link>
+          <router-link 
+          class="nav-boton" 
+          to="/marketing-design/bibiki">[next]</router-link>
         </div>
         <div class="redes-sociales">
           <div class="flexbox">
-            <a href="https://www.facebook.com/loretofish/" target="_blank"><span class="icon icon-facebook"></span></a>
-            <a href="https://twitter.com/loretofish_" target="_blank"><span class="icon icon-twitter"></span></a>
-            <a href="https://www.instagram.com/loretofish/" target="_blank"><span class="icon icon-instagrem"></span></a>            
+            <a href="https://www.facebook.com/ElCircuito.Mx/" target="_blank"><span class="icon icon-facebook"></span></a>
+            <a href="https://twitter.com/Circuito_mx" target="_blank"><span class="icon icon-twitter"></span></a>
+            <a href="https://www.youtube.com/user/CircuitoMx" target="_blank"><span class="icon icon-youtube-alt"></span></a>
           </div>
         </div>
         <div class="posts">
-          <img src="@/assets/imgs/post-loreto-fish-1.png" alt="" class="post-img">
+          <img src="@/assets/imgs/post-cem-1.gif" alt="" class="post-img">
+          <img src="@/assets/imgs/post-cem-2.png" alt="" class="post-img">
+          <img src="@/assets/imgs/post-cem-3.png" alt="" class="post-img">
+          <img src="@/assets/imgs/post-cem-4.png" alt="" class="post-img">
+          <iframe 
+            class="post-video"
+            src="https://www.youtube.com/embed/iGNKk7rRcsU" 
+            frameborder="0" 
+            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
+            allowfullscreen>
+          </iframe>
         </div>
         <div class="navegacion my-8">
-          <router-link class="nav-boton" to="/marketing/bibiki">[previous]</router-link>
-          <router-link class="nav-boton" to="/marketing/oxxo">[next]</router-link>
+          <router-link 
+          class="nav-boton" 
+          to="/marketing-design/oxxo">[previous]</router-link>
+          <router-link 
+          class="nav-boton" 
+          to="/marketing-design/bibiki">[next]</router-link>
         </div>
         <router-link class="color-red" to="/design">[Back]</router-link>
       </div>
@@ -34,7 +52,7 @@
 
 <script>
 export default {
-  name: 'LoretoFish',
+  name: 'CircuitoExteriorMexiquense',
 }
 </script>
 
@@ -46,7 +64,7 @@ export default {
     justify-content: center;
   }
 }
-.loreto-fish {
+.cem {
   width: 100%;
   height: 100%;
   .portafolio {
@@ -119,7 +137,7 @@ export default {
           }
           .icon {
             position: relative;
-            background: lightseagreen;
+            background: darkblue;
             color: #fff;
             width: 40px;
             height: 40px;
@@ -153,6 +171,18 @@ export default {
           box-shadow: 0 0 5px rgba(0, 0, 0, 0.7);
           @media (min-width:768px) {
             width: 45%;
+            top: 60px;
+          } 
+        }
+        .post-video {
+          position: relative;
+          width: 80%;
+          display: block; 
+          margin: auto;
+          top: 40px;
+          @media (min-width:768px) {
+            width: 640px;
+            height: 360px;
             top: 60px;
           } 
         }

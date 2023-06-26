@@ -6,8 +6,12 @@
       <img src="@/assets/imgs/portafolio-etrota-3.jpg" alt="" class="img-portafolio">
     </a>
     <div class="navegacion">
-      <router-link class="nav-boton" to="/development/centro-optico-profesional">[previous]</router-link>
-      <router-link class="nav-boton" to="/development/tulumers">[next]</router-link>
+      <router-link 
+      class="nav-boton" 
+      to="/marketing-design/centro-optico-profesional">[previous]</router-link>
+      <router-link 
+      class="nav-boton" 
+      to="/marketing-design/tulumers">[next]</router-link>
     </div>
   </div>
 </template>

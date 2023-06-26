@@ -1,25 +1,29 @@
 <template>
-  <div class="centro-optico-profesional">
-    <a href="http://www.centroopticoprofesional.com/" target="_blank" class="portafolio">
-      <img src="@/assets/imgs/portafolio-cop-1.jpg" alt="" class="img-portafolio">
-      <img src="@/assets/imgs/portafolio-cop-2.jpg" alt="" class="img-portafolio">
-      <img src="@/assets/imgs/portafolio-cop-3.jpg" alt="" class="img-portafolio">
+  <div class="tulumers">
+    <a href="https://tulumers.com/" target="_blank" class="portafolio">
+      <img src="@/assets/imgs/portafolio-tulumers-1.jpg" alt="" class="img-portafolio">
+      <img src="@/assets/imgs/portafolio-tulumers-2.jpg" alt="" class="img-portafolio">
+      <img src="@/assets/imgs/portafolio-tulumers-3.jpg" alt="" class="img-portafolio">
     </a>
     <div class="navegacion">
-      <router-link class="nav-boton" to="/development/luxji">[previous]</router-link>
-      <router-link class="nav-boton" to="/development/expediciones-trotamundos">[next]</router-link>
+      <router-link 
+      class="nav-boton" 
+      to="/marketing-design/expediciones-trotamundos">[previous]</router-link>
+      <router-link 
+      class="nav-boton" 
+      to="/marketing-design/luxji">[next]</router-link>
     </div>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'CentroOpticoProfesional',
+  name: 'Tulumers',
 }
 </script>
 
 <style lang="scss">
-.centro-optico-profesional {
+.tulumers {
   .portafolio {
     .img-portafolio {
       width: 100%;

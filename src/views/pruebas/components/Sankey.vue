@@ -51,8 +51,8 @@ export default {
   },
   mixins: [sankeyMixin],
   data: () => ({
-    width: 700,
-    height: 600,
+    width: 1200,
+    height: 700,
     nodes: [],
     links: [],
     sankey: null
@@ -63,9 +63,9 @@ export default {
         .nodeAlign(sankeyJustify)
         // .nodeWidth(10)
         // .nodePadding(10)
-        .nodeWidth(36)
-        .nodePadding(290)
-        .extent([[0, 0], [this.width, this.height]]);
+        .nodeWidth(10)
+        .nodePadding(10)
+        .extent([[10, 10], [this.width, this.height]]);
         // .size([width, height]);
       // console.log('this.sankey',this.sankey);
 

@@ -7,8 +7,12 @@
           <a href="https://www.oxxo.com/" class="logo-link"><img src="@/assets/imgs/logo-oxxo.png" alt="" class="logo-img"></a>
         </div>
         <div class="navegacion">
-          <router-link class="nav-boton" to="/marketing/loreto-fish">[previous]</router-link>
-          <router-link class="nav-boton" to="/marketing/cem">[next]</router-link>
+          <router-link 
+          class="nav-boton" 
+          to="/marketing-design/loreto-fish">[previous]</router-link>
+          <router-link 
+          class="nav-boton" 
+          to="/marketing-design/cem">[next]</router-link>
         </div>
         <div class="redes-sociales">
           <div class="flexbox">
@@ -23,8 +27,12 @@
           <img src="@/assets/imgs/post-oxxo-3.gif" alt="" class="post-img">
         </div>
         <div class="navegacion my-8">
-          <router-link class="nav-boton" to="/marketing/loreto-fish">[previous]</router-link>
-          <router-link class="nav-boton" to="/marketing/cem">[next]</router-link>
+          <router-link 
+          class="nav-boton" 
+          to="/marketing-design/loreto-fish">[previous]</router-link>
+          <router-link 
+          class="nav-boton" 
+          to="/marketing-design/cem">[next]</router-link>
         </div>
         <router-link class="color-red" to="/design">[Back]</router-link>
       </div>

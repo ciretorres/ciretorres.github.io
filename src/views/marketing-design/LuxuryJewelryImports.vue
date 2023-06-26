@@ -1,25 +1,29 @@
 <template>
-  <div class="tulumers">
-    <a href="https://tulumers.com/" target="_blank" class="portafolio">
-      <img src="@/assets/imgs/portafolio-tulumers-1.jpg" alt="" class="img-portafolio">
-      <img src="@/assets/imgs/portafolio-tulumers-2.jpg" alt="" class="img-portafolio">
-      <img src="@/assets/imgs/portafolio-tulumers-3.jpg" alt="" class="img-portafolio">
+  <div class="luxji">
+    <a href="https://luxuryjewelryimports.com/" target="_blank" class="portafolio">
+      <img src="@/assets/imgs/portafolio-luxji-1.jpg" alt="" class="img-portafolio">
+      <img src="@/assets/imgs/portafolio-luxji-2.jpg" alt="" class="img-portafolio">
+      <img src="@/assets/imgs/portafolio-luxji-3.jpg" alt="" class="img-portafolio">
     </a>
     <div class="navegacion">
-      <router-link class="nav-boton" to="/development/expediciones-trotamundos">[previous]</router-link>
-      <router-link class="nav-boton" to="/development/luxji">[next]</router-link>
+      <router-link 
+      class="nav-boton" 
+      to="/marketing-design/tulumers">[previous]</router-link>
+      <router-link 
+      class="nav-boton" 
+      to="/marketing-design/centro-optico-profesional">[next]</router-link>
     </div>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'Tulumers',
+  name: 'LuxuryJewelryImports',
 }
 </script>
 
 <style lang="scss">
-.tulumers {
+.luxji {
   .portafolio {
     .img-portafolio {
       width: 100%;

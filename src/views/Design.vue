@@ -3,13 +3,36 @@
     <div class="container p-2">
       <p class="color-red">[Marketing & Design]</p>
       <ul>        
-        <li><router-link target="_blank" class="color-white" to="/development/centro-optico-profesional">Centro Óptico Profesional <span class="color-yellow">[Retail]</span></router-link></li>
-        <li><router-link target="_blank" class="color-white" to="/development/expediciones-trotamundos">Expediciones Trotamundos <span class="color-yellow">[Travel]</span></router-link></li>
-        <li><router-link class="color-white" to="/marketing/oxxo">OXXO México <span class="color-yellow">{{ arrayMessage.a }}</span></router-link></li>
-        <li><router-link class="color-white" to="/marketing/cem">Circuito Exterior Mexiquense <span class="color-yellow">{{ arrayMessage.b }}</span></router-link></li>
-        <li><router-link class="color-white" to="/marketing/bibiki">Bibiki <span class="color-yellow">{{ arrayMessage.c }}</span></router-link></li>
-        <li><router-link class="color-white" to="/marketing/loreto-fish">Loreto Fish <span class="color-yellow">{{ arrayMessage.d }}</span></router-link></li>
-        <li><router-link class="color-white" to="/design/visualization/d3js">Go to <span class="color-yellow">[Vis]</span></router-link></li>
+        <li><router-link 
+          target="_blank" 
+          class="color-white" 
+          to="/marketing-design/centro-optico-profesional">
+          Centro Óptico Profesional <span class="color-yellow">[Retail]</span></router-link></li>
+        <li><router-link 
+          target="_blank" 
+          class="color-white" 
+          to="/marketing-design/expediciones-trotamundos">
+          Expediciones Trotamundos <span class="color-yellow">[Travel]</span></router-link></li>
+        <li><router-link 
+          class="color-white" 
+          to="/marketing-design/oxxo">
+          OXXO México <span class="color-yellow">{{ arrayMessage.a }}</span></router-link></li>
+        <li><router-link 
+          class="color-white" 
+          to="/marketing-design/cem">
+          Circuito Exterior Mexiquense <span class="color-yellow">{{ arrayMessage.b }}</span></router-link></li>
+        <li><router-link 
+          class="color-white" 
+          to="/marketing-design/bibiki">
+          Bibiki <span class="color-yellow">{{ arrayMessage.c }}</span></router-link></li>
+        <li><router-link 
+          class="color-white" 
+          to="/marketing-design/loreto-fish">
+          Loreto Fish <span class="color-yellow">{{ arrayMessage.d }}</span></router-link></li>
+        <li><router-link 
+          class="color-white" 
+          to="/design/visualization/d3js">
+          Go to <span class="color-yellow">[Vis]</span></router-link></li>
       </ul>
       <router-link class="color-red" to="/">[Back]</router-link>
     </div>

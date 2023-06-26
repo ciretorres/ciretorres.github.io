@@ -3,12 +3,28 @@
     <div class="nav-vis">
       <div class="ml-3">
         <h1>Visz</h1>
-        <router-link class="nav-boton" to="/design/visualization/d3js">d3JS</router-link>
-        <router-link class="nav-boton" to="/design/visualization/maps">maps</router-link>
-        <a href="https://github.com/ciretorres/thesis-project" class="nav-boton" target="_blank">Interactive-Interface <span class="color-yellow">[UAM-A]</span></a>
-        <a href="https://ciretorres.github.io/flujo-de-residuos-solidos-cdmx/" target="_blank" class="nav-boton">Solid Waste System's Interactive <span class="color-yellow">[CDMX]</span></a>
-        <a href="https://ciretorres.github.io/AR-System-UNIVERSUM/" target="_blank" class="nav-boton">AR-System UNIVERSUM <span class="color-yellow">[UIC]</span></a>
-        <a href="https://github.com/ciretorres/2HAWC" target="_blank" class="nav-boton">3D Gamma-Ray Catalogue <span class="color-yellow">[HAWC Observatory]</span></a>
+        <router-link 
+        class="nav-boton" 
+        to="/design/visualization/d3js">d3JS</router-link>
+        <router-link 
+        class="nav-boton" 
+        to="/design/visualization/maps">maps</router-link>
+        <a 
+        href="https://github.com/ciretorres/thesis-project" 
+        class="nav-boton" 
+        target="_blank">Interactive-Interface <span class="color-yellow">[UAM-A]</span></a>
+        <a 
+        href="https://ciretorres.github.io/flujo-de-residuos-solidos-cdmx/" 
+        target="_blank" 
+        class="nav-boton">Solid Waste System's Interactive <span class="color-yellow">[CDMX]</span></a>
+        <a 
+        href="https://ciretorres.github.io/AR-System-UNIVERSUM/" 
+        target="_blank" 
+        class="nav-boton">AR-System UNIVERSUM <span class="color-yellow">[UIC]</span></a>
+        <a 
+        href="https://github.com/ciretorres/2HAWC" 
+        target="_blank" 
+        class="nav-boton">3D Gamma-Ray Catalogue <span class="color-yellow">[HAWC Observatory]</span></a>
         
         <br />
         <router-link class="color-yellow" to="/">[Back]</router-link>

@@ -9,8 +9,12 @@
           </a>
         </div>
         <div class="navegacion">
-          <router-link class="nav-boton" to="/marketing/cem">[previous]</router-link>
-          <router-link class="nav-boton" to="/marketing/loreto-fish">[next]</router-link>
+          <router-link 
+          class="nav-boton" 
+          to="/marketing-design/cem">[previous]</router-link>
+          <router-link 
+          class="nav-boton" 
+          to="/marketing-design/loreto-fish">[next]</router-link>
         </div>
         <div class="redes-sociales">
           <div class="flexbox">
@@ -24,8 +28,12 @@
           <img src="@/assets/imgs/post-bibiki-2.gif" alt="" class="post-img">
         </div>
         <div class="navegacion my-8">
-          <router-link class="nav-boton" to="/marketing/cem">[previous]</router-link>
-          <router-link class="nav-boton" to="/marketing/loreto-fish">[next]</router-link>
+          <router-link 
+          class="nav-boton" 
+          to="/marketing-design/cem">[previous]</router-link>
+          <router-link 
+          class="nav-boton" 
+          to="/marketing-design/loreto-fish">[next]</router-link>
         </div>
         <router-link class="color-red" to="/design">[Back]</router-link>
       </div>
