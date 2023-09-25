@@ -1,41 +1,40 @@
 <template>
-  <div class="cem">
+  <div class="oxxo">
     <div class="portafolio">
-      <img src="@/assets/imgs/header-cem.png" alt="" class="img-portafolio">
+      <img src="@/assets/imgs/header-oxxo.png" alt="" class="img-portafolio">
       <div class="container contenido">
         <div class="contenedor-link">
-          <a href="https://www.circuitoexterior.mx/" class="logo-link">
-            <img src="@/assets/imgs/logo-cem.png" alt="" class="logo-img">
-          </a>
+          <a href="https://www.oxxo.com/" class="logo-link"><img src="@/assets/imgs/logo-oxxo.png" alt="" class="logo-img"></a>
         </div>
         <div class="navegacion">
-          <router-link class="nav-boton" to="/marketing/oxxo">[previous]</router-link>
-          <router-link class="nav-boton" to="/marketing/bibiki">[next]</router-link>
+          <router-link 
+          class="nav-boton" 
+          to="/marketing-design/loreto-fish">[previous]</router-link>
+          <router-link 
+          class="nav-boton" 
+          to="/marketing-design/cem">[next]</router-link>
         </div>
         <div class="redes-sociales">
           <div class="flexbox">
-            <a href="https://www.facebook.com/ElCircuito.Mx/" target="_blank"><span class="icon icon-facebook"></span></a>
-            <a href="https://twitter.com/Circuito_mx" target="_blank"><span class="icon icon-twitter"></span></a>
-            <a href="https://www.youtube.com/user/CircuitoMx" target="_blank"><span class="icon icon-youtube-alt"></span></a>
+            <a href="https://www.facebook.com/OXXOTiendas/" target="_blank"><span class="icon icon-facebook"></span></a>
+            <a href="https://twitter.com/Tiendas_OXXO" target="_blank"><span class="icon icon-twitter"></span></a>
+            <a href="https://www.instagram.com/tiendasoxxo/" target="_blank"><span class="icon icon-instagrem"></span></a>
           </div>
         </div>
         <div class="posts">
-          <img src="@/assets/imgs/post-cem-1.gif" alt="" class="post-img">
-          <img src="@/assets/imgs/post-cem-2.png" alt="" class="post-img">
-          <img src="@/assets/imgs/post-cem-3.png" alt="" class="post-img">
-          <img src="@/assets/imgs/post-cem-4.png" alt="" class="post-img">
-          <iframe 
-            class="post-video"
-            src="https://www.youtube.com/embed/iGNKk7rRcsU" 
-            frameborder="0" 
-            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
-            allowfullscreen>
-          </iframe>
+          <img src="@/assets/imgs/post-oxxo-1.gif" alt="" class="post-img">
+          <img src="@/assets/imgs/post-oxxo-2.gif" alt="" class="post-img">
+          <img src="@/assets/imgs/post-oxxo-3.gif" alt="" class="post-img">
         </div>
         <div class="navegacion my-8">
-          <router-link class="nav-boton" to="/marketing/oxxo">[previous]</router-link>
-          <router-link class="nav-boton" to="/marketing/bibiki">[next]</router-link>
+          <router-link 
+          class="nav-boton" 
+          to="/marketing-design/loreto-fish">[previous]</router-link>
+          <router-link 
+          class="nav-boton" 
+          to="/marketing-design/cem">[next]</router-link>
         </div>
+        <router-link class="color-red" to="/design">[Back]</router-link>
       </div>
     </div>
   </div>
@@ -43,12 +42,19 @@
 
 <script>
 export default {
-  name: 'CircuitoExteriorMexiquense',
+  name: 'Oxxo',
 }
 </script>
 
 <style lang="scss" scoped>
-.cem {
+.container {
+  background: transparent;
+  .color-red {
+    display: flex;
+    justify-content: center;
+  }
+}
+.oxxo {
   width: 100%;
   height: 100%;
   .portafolio {
@@ -121,7 +127,7 @@ export default {
           }
           .icon {
             position: relative;
-            background: darkblue;
+            background: red;
             color: #fff;
             width: 40px;
             height: 40px;
@@ -155,18 +161,6 @@ export default {
           box-shadow: 0 0 5px rgba(0, 0, 0, 0.7);
           @media (min-width:768px) {
             width: 45%;
-            top: 60px;
-          } 
-        }
-        .post-video {
-          position: relative;
-          width: 80%;
-          display: block; 
-          margin: auto;
-          top: 40px;
-          @media (min-width:768px) {
-            width: 640px;
-            height: 360px;
             top: 60px;
           } 
         }

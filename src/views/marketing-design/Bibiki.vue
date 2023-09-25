@@ -1,31 +1,41 @@
 <template>
-  <div class="oxxo">
+  <div class="bibiki">
     <div class="portafolio">
-      <img src="@/assets/imgs/header-oxxo.png" alt="" class="img-portafolio">
+      <img src="@/assets/imgs/header-bibiki.png" alt="" class="img-portafolio">
       <div class="container contenido">
         <div class="contenedor-link">
-          <a href="https://www.oxxo.com/" class="logo-link"><img src="@/assets/imgs/logo-oxxo.png" alt="" class="logo-img"></a>
+          <a href="https://bibiki.myshopify.com/" class="logo-link">
+            <img src="@/assets/imgs/logo-bibiki.png" alt="" class="logo-img">
+          </a>
         </div>
         <div class="navegacion">
-          <router-link class="nav-boton" to="/marketing/loreto-fish">[previous]</router-link>
-          <router-link class="nav-boton" to="/marketing/cem">[next]</router-link>
+          <router-link 
+          class="nav-boton" 
+          to="/marketing-design/cem">[previous]</router-link>
+          <router-link 
+          class="nav-boton" 
+          to="/marketing-design/loreto-fish">[next]</router-link>
         </div>
         <div class="redes-sociales">
           <div class="flexbox">
-            <a href="https://www.facebook.com/OXXOTiendas/" target="_blank"><span class="icon icon-facebook"></span></a>
-            <a href="https://twitter.com/Tiendas_OXXO" target="_blank"><span class="icon icon-twitter"></span></a>
-            <a href="https://www.instagram.com/tiendasoxxo/" target="_blank"><span class="icon icon-instagrem"></span></a>
+            <a href="https://www.facebook.com/bibikimexico" target="_blank"><span class="icon icon-facebook"></span></a>
+            <a href="https://twitter.com/bibikimx" target="_blank"><span class="icon icon-twitter"></span></a>
+            <a href="https://www.instagram.com/bibikimx/" target="_blank"><span class="icon icon-instagrem"></span></a>            
           </div>
         </div>
         <div class="posts">
-          <img src="@/assets/imgs/post-oxxo-1.gif" alt="" class="post-img">
-          <img src="@/assets/imgs/post-oxxo-2.gif" alt="" class="post-img">
-          <img src="@/assets/imgs/post-oxxo-3.gif" alt="" class="post-img">
+          <img src="@/assets/imgs/post-bibiki-1.gif" alt="" class="post-img">
+          <img src="@/assets/imgs/post-bibiki-2.gif" alt="" class="post-img">
         </div>
         <div class="navegacion my-8">
-          <router-link class="nav-boton" to="/marketing/loreto-fish">[previous]</router-link>
-          <router-link class="nav-boton" to="/marketing/cem">[next]</router-link>
+          <router-link 
+          class="nav-boton" 
+          to="/marketing-design/cem">[previous]</router-link>
+          <router-link 
+          class="nav-boton" 
+          to="/marketing-design/loreto-fish">[next]</router-link>
         </div>
+        <router-link class="color-red" to="/design">[Back]</router-link>
       </div>
     </div>
   </div>
@@ -33,12 +43,19 @@
 
 <script>
 export default {
-  name: 'Oxxo',
+  name: 'Bibiki',
 }
 </script>
 
 <style lang="scss" scoped>
-.oxxo {
+.container {
+  background: transparent;
+  .color-red {
+    display: flex;
+    justify-content: center;
+  }
+}
+.bibiki {
   width: 100%;
   height: 100%;
   .portafolio {
@@ -111,7 +128,7 @@ export default {
           }
           .icon {
             position: relative;
-            background: red;
+            background: lightskyblue;
             color: #fff;
             width: 40px;
             height: 40px;

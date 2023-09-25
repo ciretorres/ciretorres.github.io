@@ -16,6 +16,11 @@ const routes = [
     component: () => import('@/views/Design.vue'),
   },
   {
+    path: '/pruebas',
+    name: 'Pruebas',
+    component: () => import('@/views/pruebas/Pruebas.vue'),
+  },
+  {
     path: '/design/visualization',
     name: 'Visualization',
     component: () => import('@/views/design/Visualization.vue'),
@@ -29,6 +34,11 @@ const routes = [
         path: '/design/visualization/maps',
         name: 'Maps',
         component: () => import('@/views/design/Maps.vue'),
+      },
+      {
+        path: '/design/visualization/gravity-apple-tree',
+        name: 'Maps',
+        component: () => import('@/components/visualizations/gravity-apple-tree/GravityAppleTree.vue'),
       },
     ]
   },
@@ -45,49 +55,49 @@ const routes = [
     ]
   },
   {
-    path: '/development/luxji',
+    path: '/marketing-design/luxji',
     name: 'LuxuryJewelryImports',
-    component: () => import('@/views/development/LuxuryJewelryImports.vue'),
+    component: () => import('@/views/marketing-design/LuxuryJewelryImports.vue'),
   },
   {
-    path: '/development/centro-optico-profesional',
+    path: '/marketing-design/centro-optico-profesional',
     name: 'CentroOpticoProfesional',
-    component: () => import('@/views/development/CentroOpticoProfesional.vue'),
+    component: () => import('@/views/marketing-design/CentroOpticoProfesional.vue'),
   },
   {
-    path: '/development/expediciones-trotamundos',
+    path: '/marketing-design/expediciones-trotamundos',
     name: 'ExpedicionesTrotamundos',
-    component: () => import('@/views/development/ExpedicionesTrotamundos.vue'),
+    component: () => import('@/views/marketing-design/ExpedicionesTrotamundos.vue'),
   },
   {
-    path: '/development/tulumers',
+    path: '/marketing-design/tulumers',
     name: 'Tulumers',
-    component: () => import('@/views/development/Tulumers.vue'),
+    component: () => import('@/views/marketing-design/Tulumers.vue'),
   },
+  // {
+  //   path: '/marketing',
+  //   name: 'Marketing',
+  //   component: () => import('@/views/Marketing.vue'),
+  // },
   {
-    path: '/marketing',
-    name: 'Marketing',
-    component: () => import('@/views/Marketing.vue'),
-  },
-  {
-    path: '/marketing/oxxo',
+    path: '/marketing-design/oxxo',
     name: 'Oxxo',
-    component: () => import('@/views/marketing/Oxxo.vue'),
+    component: () => import('@/views/marketing-design/Oxxo.vue'),
   },
   {
-    path: '/marketing/cem',
+    path: '/marketing-design/cem',
     name: 'CircuitoExteriorMexiquense',
-    component: () => import('@/views/marketing/CircuitoExteriorMexiquense.vue'),
+    component: () => import('@/views/marketing-design/CircuitoExteriorMexiquense.vue'),
   },
   {
-    path: '/marketing/bibiki',
+    path: '/marketing-design/bibiki',
     name: 'Bibiki',
-    component: () => import('@/views/marketing/Bibiki.vue'),
+    component: () => import('@/views/marketing-design/Bibiki.vue'),
   },
   {
-    path: '/marketing/loreto-fish',
+    path: '/marketing-design/loreto-fish',
     name: 'LoretoFish',
-    component: () => import('@/views/marketing/LoretoFish.vue'),
+    component: () => import('@/views/marketing-design/LoretoFish.vue'),
   },
   // {
   //   path: '/ayuda',

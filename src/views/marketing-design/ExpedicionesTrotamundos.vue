@@ -1,19 +1,17 @@
 <template>
   <div class="expediciones-trotamundos">
-    <div class="portafolio">
-      <a href="http://etrotamundos.com/">
-        <img src="@/assets/imgs/portafolio-etrota-1.jpg" alt="" class="img-portafolio">
-      </a>
-      <a href="http://etrotamundos.com/">
-        <img src="@/assets/imgs/portafolio-etrota-2.jpg" alt="" class="img-portafolio">
-      </a>
-      <a href="http://etrotamundos.com/">
-        <img src="@/assets/imgs/portafolio-etrota-3.jpg" alt="" class="img-portafolio">
-      </a>
-    </div>
+    <a href="http://etrotamundos.com/" target="_blank" class="portafolio">
+      <img src="@/assets/imgs/portafolio-etrota-1.jpg" alt="" class="img-portafolio">
+      <img src="@/assets/imgs/portafolio-etrota-2.jpg" alt="" class="img-portafolio">
+      <img src="@/assets/imgs/portafolio-etrota-3.jpg" alt="" class="img-portafolio">
+    </a>
     <div class="navegacion">
-      <router-link class="nav-boton" to="/development/centro-optico-profesional">[previous]</router-link>
-      <router-link class="nav-boton" to="/development/tulumers">[next]</router-link>
+      <router-link 
+      class="nav-boton" 
+      to="/marketing-design/centro-optico-profesional">[previous]</router-link>
+      <router-link 
+      class="nav-boton" 
+      to="/marketing-design/tulumers">[next]</router-link>
     </div>
   </div>
 </template>

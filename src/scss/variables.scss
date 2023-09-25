@@ -1,7 +1,29 @@
 $font-stack: Monaco, Roboto, Avenir, Helvetica, Arial, sans-serif;
 // $primary-color: #333;
-$background-color: #0d2f5c;
+// $background-color: #0d2f5c;
+$background-color: #fff;
+
 // $background-color: #fff;
+
+:root {
+    // --background-color: #fff;
+    --background-color: #0f0f0f;
+    // --background-color: #0d2f5c;
+    // --font-color: #000;
+    --font-color: #fff;
+
+    --color-blue: #20d6d6;
+    --color-yellow: #fcffd0;
+    --color-red: #d33682;
+
+    // --color-blue: #f1f1f1;
+    // --color-yellow: #f1f1f1;
+    // --color-red: #f1f1f1;
+
+    // --container-background-color: rgba($color: #fff, $alpha: 0.05);
+    --container-background-color: #272727;
+    // --container-background-color:rgba(0, 0, 0, 0.1);
+}
 
 $spacing: (
     "0": 0,

@@ -1,12 +1,12 @@
 .color-blue {
-  color:#20d6d6;
+  color:var(--color-blue);
   font-weight:bolder;
 }
 .color-yellow {
-  color:#fcffd0;
+  color:var(--color-yellow);
   font-weight:bolder;
 }
 .color-red {
-  color:#d33682;
+  color:var(--color-red);
   font-weight:bolder;
 }

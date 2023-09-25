@@ -1,19 +1,17 @@
 <template>
   <div class="centro-optico-profesional">
-    <div class="portafolio">
-      <a href="http://www.centroopticoprofesional.com/">
-        <img src="@/assets/imgs/portafolio-cop-1.jpg" alt="" class="img-portafolio">
-      </a>
-      <a href="http://www.centroopticoprofesional.com/">
-        <img src="@/assets/imgs/portafolio-cop-2.jpg" alt="" class="img-portafolio">
-      </a>
-      <a href="http://www.centroopticoprofesional.com/">
-        <img src="@/assets/imgs/portafolio-cop-3.jpg" alt="" class="img-portafolio">
-      </a>
-    </div>
+    <a href="http://www.centroopticoprofesional.com/" target="_blank" class="portafolio">
+      <img src="@/assets/imgs/portafolio-cop-1.jpg" alt="" class="img-portafolio">
+      <img src="@/assets/imgs/portafolio-cop-2.jpg" alt="" class="img-portafolio">
+      <img src="@/assets/imgs/portafolio-cop-3.jpg" alt="" class="img-portafolio">
+    </a>
     <div class="navegacion">
-      <router-link class="nav-boton" to="/development/luxji">[previous]</router-link>
-      <router-link class="nav-boton" to="/development/expediciones-trotamundos">[next]</router-link>
+      <router-link 
+      class="nav-boton" 
+      to="/marketing-design/luxji">[previous]</router-link>
+      <router-link 
+      class="nav-boton" 
+      to="/marketing-design/expediciones-trotamundos">[next]</router-link>
     </div>
   </div>
 </template>

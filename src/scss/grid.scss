@@ -1,5 +1,5 @@
 .container {
-  background: rgba($color: #fff, $alpha: 0.05);
+  background: var(--container-background-color);
   width: calc(100% - 60px);
   // max-width: 1024px;
   max-width: 800px;

@@ -1,16 +1,38 @@
 <template>
   <div class="design">
     <div class="container p-2">
-      <p class="color-red">[Visualization Design]</p>
-      <ul>
-        <li>Interactive-Interface <a href="https://github.com/ciretorres/thesis-project" target="_blank" class="color-yellow">[UAM-A]</a></li>
-        <li>AR-System UNIVERSUM <a href="https://ciretorres.github.io/AR-System-UNIVERSUM/" target="_blank" class="color-yellow">[UIC]</a></li>
-        <li>Solid Waste System's Interactive <a href="https://ciretorres.github.io/flujo-de-residuos-solidos-cdmx/" target="_blank" class="color-yellow">[CDMX]</a></li>
-        <li>3D Gamma-Ray Catalogue <a href="https://github.com/ciretorres/2HAWC" target="_blank" class="color-yellow">[HAWC Observatory]</a></li>
-        <!-- <li>The Gravity Apple Tree <a href="@/assets/imgs/2018-11-07-gravity-apple-tree.jpg" target="_blank" class="color-yellow">[UAM-C]</a></li> -->
-        <!-- <li>The Gravity Apple Tree <a href="imgs/2018-11-07-gravity-apple-tree.jpg" target="_blank" class="color-yellow">[UAM-C]</a></li> -->
-        <li>The Gravity Apple Tree <a :href="`${public_path}imgs/2018-11-07-gravity-apple-tree.jpg`" target="_blank" class="color-yellow">[UAM-C]</a></li>
-        <li>Go to <router-link class="color-yellow" to="/design/visualization/d3js">[Vis]</router-link></li>
+      <p class="color-red">[Marketing & Design]</p>
+      <ul>        
+        <li><router-link 
+          target="_blank" 
+          class="color-white" 
+          to="/marketing-design/centro-optico-profesional">
+          Centro Óptico Profesional <span class="color-yellow">[Retail]</span></router-link></li>
+        <li><router-link 
+          target="_blank" 
+          class="color-white" 
+          to="/marketing-design/expediciones-trotamundos">
+          Expediciones Trotamundos <span class="color-yellow">[Travel]</span></router-link></li>
+        <li><router-link 
+          class="color-white" 
+          to="/marketing-design/oxxo">
+          OXXO México <span class="color-yellow">{{ arrayMessage.a }}</span></router-link></li>
+        <li><router-link 
+          class="color-white" 
+          to="/marketing-design/cem">
+          Circuito Exterior Mexiquense <span class="color-yellow">{{ arrayMessage.b }}</span></router-link></li>
+        <li><router-link 
+          class="color-white" 
+          to="/marketing-design/bibiki">
+          Bibiki <span class="color-yellow">{{ arrayMessage.c }}</span></router-link></li>
+        <li><router-link 
+          class="color-white" 
+          to="/marketing-design/loreto-fish">
+          Loreto Fish <span class="color-yellow">{{ arrayMessage.d }}</span></router-link></li>
+        <li><router-link 
+          class="color-white" 
+          to="/design/visualization/d3js">
+          Go to <span class="color-yellow">[Vis]</span></router-link></li>
       </ul>
       <router-link class="color-red" to="/">[Back]</router-link>
     </div>
@@ -22,11 +44,38 @@ export default {
   name: 'Design',
   data() {
     return {
-      public_path: process.env.BASE_URL
+      public_path: process.env.BASE_URL,
+      salutation: ['[Clic me!]', '[No over here]', '[hellou!]', '[yei]'],
+      arrayMessage: {
+        a: ' ',
+        b: ' ',
+        c: ' ',
+        d: ' ',
+        e: ' '
+      }
     }
+  },
+  mounted(){
+    setInterval(() => {
+      const r = ['a', 'b','c','d']
+      let item = r[Math.floor(Math.random() * r.length)]
+      this.arrayMessage = {
+        a: '',
+        b: '',
+        c: '',
+        d: '',
+      }
+      let choose = this.salutation[Math.floor(Math.random() * this.salutation.length)]
+      this.arrayMessage[item] = choose
+
+    }, 1000);
   }
 }
 </script>
 
 <style lang="scss" scoped>
+.color-white {
+  color: #fff;
+  text-decoration: none;
+}
 </style>

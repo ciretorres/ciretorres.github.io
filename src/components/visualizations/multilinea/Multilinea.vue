@@ -312,7 +312,7 @@ export default {
     var svg = d3.select(`div#${ this.lineas_complejas_id } svg.svg-lineas-complejas`)
           .attr("width", width + margin.left + margin.right)
           .attr("height", height + margin.top + margin.bottom)
-          // .style("background-color", "#eee")
+          .style("background-color", "#efefef")
       .append("g")
           .attr("transform",
               "translate(" + margin.left + "," + margin.top + ")");
@@ -323,7 +323,7 @@ export default {
     // y.domain([0, 4000]); // Cambiar máximo
     y.domain([0, 160]); // Cambiar máximo menos 10    
     svg.append("g")
-      .call( d3.axisLeft(y).ticks(5).tickSize(0) );
+      .call( d3.axisLeft(y).ticks(5).tickSize(0) ).style("color", "#000");
     // Draw Y lines
     svg.append("g")         
         .attr("class", "grid")
@@ -331,7 +331,7 @@ export default {
             .tickSize(-width, 0, 0)
             .tickFormat("")
             .ticks(4)
-        ).style("opacity", "0.3");
+        ).style("opacity", "0.3").style("color", "#000");
       
     // Add X axis --> it is a date format
     var x = d3.scaleTime()
@@ -350,7 +350,7 @@ export default {
       // .attr("transform", 
       //         function() { return "rotate(0)"; })
       .attr("transform",
-              "translate(0," + 5 + ")");
+              "translate(0," + 5 + ")").style("color", "#000");
     // Draw X lines
     svg.append("g")         
       .attr("class", "grid")
@@ -360,7 +360,7 @@ export default {
           .tickSize(-height, 0, 0)
           .tickFormat("")
           .ticks(6)
-      ).style("opacity", "0.3");
+      ).style("opacity", "0.3").style("color", "#000");
 
     /**
      * Dibujando líneas
@@ -371,7 +371,7 @@ export default {
       .datum(keysGroupArray[0].VSIN)
       .attr("fill", "none")
       // .attr("stroke", "steelblue")
-      .attr("stroke", "#085373")      
+      .attr("stroke", this.variables[0].color)   
       .attr("stroke-width", 1.5)
       .attr("d", d3.line()
        // .x(function(d) { return x(d.date) })
@@ -385,11 +385,12 @@ export default {
           return y(d[1].length)
         })
       );
+
     // Add the line 1 VIN
     svg.append("path")
       .datum(keysGroupArray[1].VIN)
       .attr("fill", "none")
-      .attr("stroke", "#60802F")      
+      .attr("stroke", this.variables[1].color)      
       .attr("stroke-width", 1.5)
       .attr("d", d3.line()
         .x(function(d) { 
@@ -403,7 +404,7 @@ export default {
     svg.append("path")
       .datum(keysGroupArray[2].VOM)
       .attr("fill", "none")
-      .attr("stroke", "#60802F")      
+      .attr("stroke", this.variables[2].color)      
       .attr("stroke-width", 1.5)
       .attr("d", d3.line()
         .x(function(d) { 
@@ -417,7 +418,7 @@ export default {
     svg.append("path")
       .datum(keysGroupArray[3].VOC)
       .attr("fill", "none")
-      .attr("stroke", "#C45016")      
+      .attr("stroke", this.variables[3].color)      
       .attr("stroke-width", 1.5)
       .attr("d", d3.line()
         .x(function(d) { 
@@ -431,7 +432,7 @@ export default {
     svg.append("path")
       .datum(keysGroupArray[4].VOI)
       .attr("fill", "none")
-      .attr("stroke", "#58508D")      
+      .attr("stroke", this.variables[4].color)      
       .attr("stroke-width", 1.5)
       .attr("d", d3.line()
         .x(function(d) { 

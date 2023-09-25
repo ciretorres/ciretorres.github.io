@@ -9,8 +9,12 @@
           </a>
         </div>
         <div class="navegacion">
-          <router-link class="nav-boton" to="/marketing/bibiki">[previous]</router-link>
-          <router-link class="nav-boton" to="/marketing/oxxo">[next]</router-link>
+          <router-link 
+          class="nav-boton" 
+          to="/marketing-design/bibiki">[previous]</router-link>
+          <router-link 
+          class="nav-boton" 
+          to="/marketing-design/oxxo">[next]</router-link>
         </div>
         <div class="redes-sociales">
           <div class="flexbox">
@@ -23,9 +27,14 @@
           <img src="@/assets/imgs/post-loreto-fish-1.png" alt="" class="post-img">
         </div>
         <div class="navegacion my-8">
-          <router-link class="nav-boton" to="/marketing/bibiki">[previous]</router-link>
-          <router-link class="nav-boton" to="/marketing/oxxo">[next]</router-link>
+          <router-link 
+          class="nav-boton" 
+          to="/marketing-design/bibiki">[previous]</router-link>
+          <router-link 
+          class="nav-boton" 
+          to="/marketing-design/oxxo">[next]</router-link>
         </div>
+        <router-link class="color-red" to="/design">[Back]</router-link>
       </div>
     </div>
   </div>
@@ -38,6 +47,13 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.container {
+  background: transparent;
+  .color-red {
+    display: flex;
+    justify-content: center;
+  }
+}
 .loreto-fish {
   width: 100%;
   height: 100%;

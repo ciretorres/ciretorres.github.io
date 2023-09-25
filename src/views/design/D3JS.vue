@@ -49,11 +49,11 @@ const dictValuesVariantes = {
   variante_sin_clasificacion: 'VSIN',
 };
 const dictColorsVariantes = {
-  variante_preocupacion: '#C45016',
-  variante_interes: '#58508D',
-  variante_interes_nacional: '#60802F',
-  variante_monitoreo: '#128984',
-  variante_sin_clasificacion: '#085373N',
+  variante_preocupacion: '#e66101',
+  variante_interes: '#fdb863',
+  variante_interes_nacional: '#5e3c99',
+  variante_monitoreo: '#b2abd2',
+  variante_sin_clasificacion: '#f7f7f7',
 };
 /* eslint-disable */
 const variables = Object.entries(dictValuesVariantes).map((variante) => {

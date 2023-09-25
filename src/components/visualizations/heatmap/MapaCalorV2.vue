@@ -447,7 +447,7 @@ export default {
         this.eje_x_bottom
           .attr('transform', `translate(33, ${this.height + 20} )`)
           .call(d3.axisBottom(this.x).tickSize(0))
-          .style('font-family', 'Montserrat')
+          // .style('font-family', 'Montserrat')
           .selectAll('text')
           .style('text-anchor', 'end')
           .style('font-size', '10px')
@@ -458,7 +458,7 @@ export default {
         if (this.varianteSeleccionada === 'VTODAS'){
           this.eje_y
             .call(d3.axisLeft(this.y_1).tickSize(0))
-            .style('font-family', 'Montserrat')
+            // .style('font-family', 'Montserrat')
             .attr('transform', 'translate(5, 5)')
             .selectAll('text')
             .style('text-anchor', 'start')
@@ -468,7 +468,7 @@ export default {
             this.eje_y_abr.style('opacity', '1');
           this.eje_y_abr
             .call(d3.axisLeft(this.y_1_p).tickSize(0))
-            .style('font-family', 'Montserrat')
+       s     // .style('font-family', 'Montserrat')
             .attr('transform', 'translate(5, 20)')
             .selectAll('text')
             .style('text-anchor', 'start')
@@ -478,7 +478,7 @@ export default {
         } else {
           this.eje_y
             .call(d3.axisLeft(this.y).tickSize(0))
-            .style('font-family', 'Montserrat')
+            // .style('font-family', 'Montserrat')
             .attr('transform', 'translate(5, 5)')
             .selectAll('text')
             .style('text-anchor', 'start')
@@ -502,7 +502,7 @@ export default {
         this.eje_x_top
           .attr('transform', 'translate(40, 5)')
           .call(d3.axisBottom(this.x).tickSize(0))
-          .style('font-family', 'Montserrat')
+          // .style('font-family', 'Montserrat')
           .selectAll('text')
           .style('text-anchor', 'middle')
           .style('font-size', '10px');
@@ -511,7 +511,7 @@ export default {
         this.eje_x_bottom
           .attr('transform', `translate(40, ${this.height + 30})`)
           .call(d3.axisBottom(this.x).tickSize(0))
-          .style('font-family', 'Montserrat')
+          // .style('font-family', 'Montserrat')
           .selectAll('text')
           .style('text-anchor', 'middle')
           .style('font-size', '10px');
@@ -519,7 +519,7 @@ export default {
           .remove();
         this.eje_y
           .call(d3.axisLeft(this.y).tickSize(0))
-          .style('font-family', 'Montserrat')
+          // .style('font-family', 'Montserrat')
           .style('text-anchor', 'start')
           .attr('transform', 'translate(10, 25)');
         this.eje_y.select('.domain')
