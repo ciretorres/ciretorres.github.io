@@ -1,0 +1,52 @@
+{
+  "name": "ciretorres",
+  "version": "0.1.2",
+  "description": "",
+  "private": true,
+  "scripts": {
+    "deprecated:install": "cd deprecated && npm install",
+    "deprecated:dev": "cd deprecated && npm run dev",
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "test:unit": "vitest",
+    "test:e2e": "start-server-and-test preview http://localhost:4173 'cypress run --e2e'",
+    "test:e2e:dev": "start-server-and-test 'vite dev --port 4173' http://localhost:4173 'cypress open --e2e'",
+    "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs --fix --ignore-path .gitignore",
+    "format": "prettier --write src/",
+    "format-lint": "npm run format && npm run lint",
+    "reinstall": "rm -rf node_modules && rm package-lock.json && npm cache clean -f && npm cache verify && npm i"
+  },
+  "dependencies": {
+    "d3": "^7.8.5",
+    "dai-maps": "git+https://devtemp-invitado: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@github.com/conacyt-dai/dai-maps.git#v0.3.12",
+    "pinia": "^2.1.6",
+    "vue": "^3.3.4",
+    "vue-router": "^4.2.4"
+  },
+  "devDependencies": {
+    "@rushstack/eslint-patch": "^1.3.3",
+    "@vitejs/plugin-vue": "^4.3.4",
+    "@vue/eslint-config-prettier": "^8.0.0",
+    "@vue/test-utils": "^2.4.1",
+    "cypress": "^13.2.0",
+    "eslint": "^8.49.0",
+    "eslint-plugin-cypress": "^2.15.1",
+    "eslint-plugin-vue": "^9.17.0",
+    "jsdom": "^22.1.0",
+    "prettier": "^3.0.3",
+    "sass": "^1.68.0",
+    "sass-loader": "^13.3.2",
+    "start-server-and-test": "^2.0.0",
+    "vite": "^4.4.9",
+    "vitest": "^0.34.4"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ciretorres/ciretorres.github.io"
+  },
+  "bugs": {
+    "url": "https://github.com/ciretorres/ciretorres.github.io/issues"
+  },
+  "homepage": "https://github.com/ciretorres/ciretorres.github.io#readme"
+}
