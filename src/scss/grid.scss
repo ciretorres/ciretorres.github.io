@@ -13,6 +13,13 @@
     background: transparent;
     border: none;
     max-width: 1000px;
+    height: 100%;
+    &.w-inherit {
+      @media (max-width: 768px) {
+        width: inherit;
+        // max-width: 800px;
+      }
+    }
   }
   // padding: 24px;
   @media (min-width: 768px) {

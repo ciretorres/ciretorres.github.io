@@ -1,7 +1,7 @@
 <template>
   <div class="maps">
-
-    <dai-tarjeta-contenedor-mapa class="contenedor-mapa"
+    <div class="container sin-fondo w-inherit">
+      <dai-tarjeta-contenedor-mapa class="contenedor-mapa"
       :permitir-colapso="false"
       :llenar-espacio-disponible-con-mapa="true"
     >
@@ -47,6 +47,7 @@
         
       </ul>
     </div>
+    </div>
   </div>
 </template>
 
@@ -66,13 +67,14 @@ export default {
 <style>
 .maps {
   width: 100%; 
-  height: 100%; 
+  height: 1000px; 
   /* position: absolute; */
   /* top: 0; */
   left: 0;
 }
 .contenedor-mapa {
-  height: 90%;
+  height: 50%;
+  /* height: 1000px; */
 }
 .contenedor-mapa,
 .contenedor-fuentes {
@@ -82,7 +84,9 @@ export default {
   margin: 0 auto;
 }
 .full-screen-height {
-  height: 100%;
+  /* height: 100%; */
+  /* height: 500px; */
+  height: auto;
 }
 .fuentes {
   color: #000;
