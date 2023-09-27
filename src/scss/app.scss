@@ -4,12 +4,14 @@
   --vh: 1px;
 }
 
-@import "variables";
-@import "fonts";
-@import "normalize";
-@import "color";
-@import "spacing";
-// @import "styles";
-@import "grid";
+@import '_variables';
+@import '_normalize';
+@import '_mixins';
 
-// Componentes
+@import 'fonts';
+@import 'color';
+@import 'spacing';
+@import 'grid';
+@import 'navigation';
+
+// // Componentes

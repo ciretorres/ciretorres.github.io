@@ -1,71 +1,32 @@
 # README
 
-## Project setup
+## Customize configuration
 
-Versión de nodeJS recomendada v14.17.5
+* [Node.js](https://nodejs.org/es) versión 16 o superior
+* [Npm](https://docs.npmjs.com/getting-started) versión 8 o superior
+* [Vue.js 2.7.14](https://vuejs.org/)
+* [@vue/cli 4.5.19](https://cli.vuejs.org/guide/installation.html)
 
-1. Clonar repositorio
-```
-git clone https://github.com/ciretorres/ciretorres.github.io.git
-```
-2. Ingresar al folder
+## Project Setup
 
-```
-cd ciretorres.github.io
-```
-3. Cambiar de rama a develop
+```sh
+# Clonar repositorio [Guía](https://docs.github.com/es/repositories/creating-and-managing-repositories/cloning-a-repository)
+$ git clone https://github.com/ciretorres/ciretorres.github.io.git
 
-```
-git checkout develop
-```
-4. Instalar dependencias
+# Instalar las dependencias
+$ npm install
 
-```
-npm install
-```
-5. Hacer una nueva rama (feature-, bugfix-, ...)
+# Levantar el proyecto
+$ npm run dev
 
-```
-git checkout -b feature-nombre-rama
-```
-6. Subir cambios a rama
+# Compilar y minificar el código
+$ npm run build
 
-```
-git push origin <feature-nombre-rama>
-```
-7. Mergear rama con develop
+# Subir cambios a subrama gh-pages
+$ git subtree push --prefix dist origin gh-pages
 
-```
-git merge <feature-nombre-rama>
-```
-8. Compilar para producción
-
-```
-npm run build
-```
-9. Subir cambios a subrama gh-pages
-
-```
-git subtree push --prefix dist origin gh-pages
+# Lint with [ESLint](https://eslint.org/)
+$ npm run lint
 ```
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
-
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
-https://app.fontastic.me
-https://fontastic.me/howto
-https://www.youtube.com/watch?v=_u-vkICfNcg
+See [Fontastic.me](https://app.fontastic.me)
