@@ -5,7 +5,7 @@
     :class="{ 'es-un-estado': esUnEstado }"
   >
     <div class="lineas-header">
-      <h3 class="titulo-visualizacion" v-if="titulo">{{ titulo }}</h3>
+      <h1 class="" v-if="titulo">{{ titulo }}</h1>
       <!-- <p class="fecha-actualizacion" v-if="fecha_actualizacion">
         Última actualización: {{ fecha_actualizacion }}
       </p> -->
@@ -312,7 +312,7 @@ export default {
     var svg = d3.select(`div#${ this.lineas_complejas_id } svg.svg-lineas-complejas`)
           .attr("width", width + margin.left + margin.right)
           .attr("height", height + margin.top + margin.bottom)
-          .style("background-color", "#efefef")
+          // .style("background-color", "#efefef") // Fondo comentar
       .append("g")
           .attr("transform",
               "translate(" + margin.left + "," + margin.top + ")");
@@ -323,7 +323,7 @@ export default {
     // y.domain([0, 4000]); // Cambiar máximo
     y.domain([0, 160]); // Cambiar máximo menos 10    
     svg.append("g")
-      .call( d3.axisLeft(y).ticks(5).tickSize(0) ).style("color", "#000");
+      .call( d3.axisLeft(y).ticks(5).tickSize(0) ).style("color", "#efefef");
     // Draw Y lines
     svg.append("g")         
         .attr("class", "grid")
@@ -331,7 +331,7 @@ export default {
             .tickSize(-width, 0, 0)
             .tickFormat("")
             .ticks(4)
-        ).style("opacity", "0.3").style("color", "#000");
+        ).style("opacity", "0.3").style("color", "#efefef");
       
     // Add X axis --> it is a date format
     var x = d3.scaleTime()
@@ -350,7 +350,7 @@ export default {
       // .attr("transform", 
       //         function() { return "rotate(0)"; })
       .attr("transform",
-              "translate(0," + 5 + ")").style("color", "#000");
+              "translate(0," + 5 + ")").style("color", "#efefef");
     // Draw X lines
     svg.append("g")         
       .attr("class", "grid")
@@ -360,7 +360,7 @@ export default {
           .tickSize(-height, 0, 0)
           .tickFormat("")
           .ticks(6)
-      ).style("opacity", "0.3").style("color", "#000");
+      ).style("opacity", "0.3").style("color", "#efefef");
 
     /**
      * Dibujando líneas

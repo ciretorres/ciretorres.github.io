@@ -10,33 +10,55 @@ const routes = [
     name: 'Inicio',
     component: HomeView
   },
-  // visualization
+  // {
+  //   path: '/pruebas',
+  //   name: 'Pruebas',
+  //   component: () => import('@/views/pruebas/Pruebas.vue'),
+  // },
+
+  /**
+   * visualization
+   */ 
   {
     path: '/development/visualization',
     name: 'Visualization',
-    // route level code-splitting
-    // this generates a separate chunk (About.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
     component: () => import('@/views/development/VisualizationPage.vue'),
     children: [
+      {
+        path: '/development/visualization/intro',
+        name: 'Introduction Visualization',
+        component: () => import('@/views/development/IntroductionPage.vue')
+      },
       {
         path: '/development/visualization/d3js',
         name: 'D3.js',
         component: () => import('@/views/development/D3JS.vue')
       },
       {
+        path: '/development/visualization/multiline',
+        name: 'Multilinea',
+        component: () => import('@/views/development/MultilineView.vue')
+      },
+      {
+        path: '/development/visualization/area',
+        name: 'Área',
+        component: () => import('@/views/development/AreaView.vue')
+      },
+      {
         path: '/development/visualization/maps',
         name: 'Mapas',
         component: () => import('@/views/development/MapsPage.vue')
-      }
-      // {
-      //   path: '/design/visualization/gravity-apple-tree',
-      //   name: 'Maps',
-      //   component: () => import('@/components/visualizations/gravity-apple-tree/GravityAppleTree.vue'),
-      // },
+      },
+      {
+        path: '/development/visualization/gravity-apple-tree',
+        name: 'Gravity Apple Tree',
+        component: () => import('@/components/visualizations/gravity-apple-tree/GravityAppleTree.vue'),
+      },
     ]
   },
-  // development
+  /**
+   * development
+   */ 
   {
     path: '/development',
     name: 'Desarrollo',
@@ -92,11 +114,6 @@ const routes = [
     name: 'Página no encontrada',
     component: () => import('@/views/ErrorViewNotFound.vue')
   }
-  // {
-  //   path: '/pruebas',
-  //   name: 'Pruebas',
-  //   component: () => import('@/views/pruebas/Pruebas.vue'),
-  // },
 ];
 
 const router = new VueRouter({

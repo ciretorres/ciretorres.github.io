@@ -7,6 +7,7 @@ const centroides = centroidesJSON
 <template>
   <div class="maps">
     <div class="container sin-fondo w-inherit">
+      <h1>Maps</h1>
       <dai-tarjeta-contenedor-mapa class="contenedor-mapa"
       :permitir-colapso="false"
       :llenar-espacio-disponible-con-mapa="true"

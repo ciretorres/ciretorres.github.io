@@ -136,7 +136,7 @@ export default {
       this.svg
         .attr('width', this.width + this.margin.left + this.margin.right)
         .attr('height', this.height + this.margin.top + this.margin.bottom)
-        .style("background-color", "#efefef")
+        // .style("background-color", "#efefef") // Comentar fondo
 
       this.grupo_contenedor
         .attr('transform',
@@ -150,12 +150,12 @@ export default {
         .attr('transform', `translate(${this.width * .5}, ${this.height + 25})`)
         .style('text-anchor', 'middle')
         .style('font-size', '10px')
-        .style('dominant-baseline', 'hanging').style("color", "#000");      
+        .style('dominant-baseline', 'hanging').style("color", "#efefef");      
       this.texto_y
         .attr('transform',`translate(${-this.margin.left}, ${this.height * .5}) rotate(-90)`)
         .style('text-anchor', 'middle')
         .style('font-size', '10px')
-        .style('dominant-baseline', 'hanging').style("color", "#000");      
+        .style('dominant-baseline', 'hanging').style("color", "#efefef");      
     },
     multiFormat(date) {
       /**
@@ -218,7 +218,7 @@ export default {
       // Call X axis
       this.xAxisG = this.eje_x.append('g')
         .attr('transform', `translate(0, ${this.height})`)
-        .call(this.xAxis).style("color", "#000");
+        .call(this.xAxis).style("color", "#efefef");
       // Remove domain line
       this.xAxisG.selectAll('.domain').remove();
       // Font text
@@ -228,7 +228,7 @@ export default {
           .style('text-transform', 'uppercase');
       // Color lines
       this.xAxisG.selectAll('.tick line')
-          .style('stroke', '#000');
+          .style('stroke', '#efefef');
       
       // Add Y axis
       this.yAxis = d3.axisLeft(this.yScale)
@@ -242,10 +242,10 @@ export default {
       this.yAxisG
         .selectAll('.tick text')
             // .style('font-family', 'Montserrat')
-            .style('font-size', '10px').style("color", "#000");
+            .style('font-size', '10px').style("color", "#efefef");
       // Color lines
       this.yAxisG.selectAll('.tick line')
-          .style('stroke', '#000');
+          .style('stroke', '#efefef');
       
       // Area generator
       this.areaGenerator = d3.area()
@@ -273,6 +273,7 @@ export default {
           .attr('class', (d) => `${d.date} paths-area`)
           // .attr('class', (d) => `paths-area-${d.date.getDate()+'-'+(+d.date.getMonth()+1)+'-'+d.date.getFullYear()}`)
           .style('fill', this.color_area)
+          .style('opacity', 0.5)
         .on('mouseover', (evento, datum) => {
           // console.log("mousemove", evento, datum);
           console.log("bug",);

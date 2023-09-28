@@ -26,13 +26,33 @@ const menu_abierto = ref(false)
           </div>
           <div id="snna7yrj3uh" class="menu-colapsable" :class="{ abierto: menu_abierto }">
             <div class="menu-max-height">
-              <h2>Visz</h2>
               <ul>
+                <li>
+                  <router-link class="nav-boton" to="/development/visualization/intro"
+                    ><h2>Visz</h2></router-link
+                  >
+                </li>
                 <li>
                   <router-link class="nav-boton" to="/development/visualization/d3js"
                     >d3JS</router-link
                   >
-                  <!-- <router-link class="nav-boton router-link-exact-active router-link-active" to="/development/visualization/d3js">d3JS</router-link> -->
+                  <ul>
+                    <li>
+                      <router-link class="nav-boton ml-5" to="/development/visualization/d3js"
+                        >Heatmap</router-link
+                      > 
+                    </li>
+                    <li>
+                      <router-link class="nav-boton ml-5" to="/development/visualization/multiline"
+                        >Multiline</router-link
+                      > 
+                    </li>
+                    <li>
+                      <router-link class="nav-boton ml-5" to="/development/visualization/area"
+                        >Area</router-link
+                      > 
+                    </li>
+                  </ul>
                 </li>
                 <li>
                   <router-link class="nav-boton" to="/development/visualization/maps"
@@ -73,6 +93,13 @@ const menu_abierto = ref(false)
                     target="_blank"
                     rel="noopener noreferrer"
                     >3D Gamma-Ray Catalogue <span class="color-yellow">[HAWC Observatory]</span></a
+                  >
+                </li>
+                <li>
+                  <router-link
+                    class="nav-boton"
+                    to="/development/visualization/gravity-apple-tree"
+                    >The Gravity Apple Tree <span class="color-yellow">[UAM-C]</span></router-link
                   >
                 </li>
                 <br />
