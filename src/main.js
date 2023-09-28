@@ -3,6 +3,7 @@ import App from './App.vue';
 import router from './router';
 import store from './store';
 
+// Biblioteca de mapas
 import DaiMaps from "dai-maps"
 import "dai-maps/dist/dai-maps.css"
 Vue.use(DaiMaps)

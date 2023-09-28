@@ -5,6 +5,10 @@ import CheckboxColor from '@/components/utils/CheckboxColor.vue'
 
 import { computed, onMounted, ref, watch } from 'vue'
 
+import variantesjson from '@/assets/data/variantes.json';
+const variantes = variantesjson
+const variante = ref('')
+
 import consorcioVariantesHeatmapTodas from '@/assets/datasets/consorcio_variantes_heatmap_todas.json'
 import consorcioHeatmap from '@/assets/datasets/consorcio_heatmap.json'
 
@@ -672,24 +676,10 @@ watch(
   <div class="mapa-calor">
     <div class="encabezado">
       <h3 class="titulo-visualizacion">
-        <span v-if="varianteSeleccionada == 'VTODAS'">
-          Número de casos relacionados con todas las variables
-        </span>
-        <span v-if="varianteSeleccionada == 'VOC'">
-          Número de casos relacionados con variable 1
-        </span>
-        <span v-if="varianteSeleccionada == 'VOI'">
-          Número de casos relacionados con variable 2
-        </span>
-        <span v-if="varianteSeleccionada == 'VIN'">
-          Número de casos relacionados con variable 3
-        </span>
-        <span v-if="varianteSeleccionada == 'VOM'">
-          Número de casos relacionados con variable 4
-        </span>
-        <span v-if="varianteSeleccionada == 'VSIN'">
-          Número de casos relacionados con variable 5
-        </span>
+        Número de casos relacionados con 
+        {{ variantes.find(
+            (variante) => variante.clave === varianteSeleccionada
+            ).nombre.toLowerCase() }}
       </h3>
     </div>
 

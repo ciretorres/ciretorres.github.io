@@ -11,7 +11,6 @@
 </template>
 
 <script>
-/* eslint-disable */
 export default {
     props:["value","color"],
     model:{

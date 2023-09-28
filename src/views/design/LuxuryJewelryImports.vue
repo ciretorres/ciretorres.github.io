@@ -6,24 +6,9 @@
       target="_blank"
       rel="noopener noreferrer"
     >
-      <img
-        class="img-portafolio"
-        src="@/assets/imgs/portafolio-luxji-1.webp"
-        loading="lazy"
-        alt=""
-      />
-      <img
-        class="img-portafolio"
-        src="@/assets/imgs/portafolio-luxji-2.webp"
-        loading="lazy"
-        alt=""
-      />
-      <img
-        class="img-portafolio"
-        src="@/assets/imgs/portafolio-luxji-3.webp"
-        loading="lazy"
-        alt=""
-      />
+      <img class="img-portafolio" src="@/assets/imgs/portafolio-luxji-1.webp" loading="lazy" alt="" />
+      <img class="img-portafolio" src="@/assets/imgs/portafolio-luxji-2.webp" loading="lazy" alt="" />
+      <img class="img-portafolio" src="@/assets/imgs/portafolio-luxji-3.webp" loading="lazy" alt="" />
     </a>
 
     <div class="navegacion">
