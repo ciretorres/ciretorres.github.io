@@ -1,4 +1,4 @@
-<template>
+<!-- <template>
   <rect
     class="node"
     :x="data.x0"
@@ -10,27 +10,27 @@
 </template>
 
 <script>
-import * as d3 from "d3";
+import * as d3 from 'd3'
 
 export default {
-  name: "Node",
+  name: 'Node',
   props: {
     data: Object,
     colors: Function,
     length: Number,
-    width: Number
+    width: Number,
   },
   computed: {
     textStyle() {
       return {
         fill: d3.rgb(this.colors(this.data.index / this.length)).darker(),
-        alignmentBaseline: "middle",
-        textAnchor: this.data.x0 < this.width / 2 ? "start" : "end",
-        fontSize: 9
-      };
-    }
-  }
-};
+        alignmentBaseline: 'middle',
+        textAnchor: this.data.x0 < this.width / 2 ? 'start' : 'end',
+        fontSize: 9,
+      }
+    },
+  },
+}
 </script>
 
 <style>
@@ -38,4 +38,4 @@ export default {
 }
 .node:hover {
 }
-</style>
+</style> -->

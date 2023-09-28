@@ -1,5 +1,6 @@
-<template>
-  <path class="link"
+<!-- <template>
+  <path
+    class="link"
     :d="link(data)"
     :stroke-width="data.width"
     :stroke="`url(#${gradientId})`"
@@ -9,35 +10,35 @@
 </template>
 
 <script>
-import { sankeyLinkHorizontal } from "d3-sankey";
-import sankeyMixin from "../../mixins/sankey-mixin";
+import { sankeyLinkHorizontal } from 'd3-sankey'
+import sankeyMixin from '../../mixins/sankey-mixin'
 
 export default {
-  name: "Link",
+  name: 'Link',
   props: {
     data: Object,
     length: Number,
-    colors: Function
+    colors: Function,
   },
   mixins: [sankeyMixin],
   computed: {
     link() {
-      return sankeyLinkHorizontal();
+      return sankeyLinkHorizontal()
     },
     gradientId() {
-      return this.getGradientId(this.data.source.name, this.data.target.name);
-    }
-  }
-};
+      return this.getGradientId(this.data.source.name, this.data.target.name)
+    },
+  },
+}
 </script>
 
 <style>
 .link {
   fill: none;
   stroke: #fff;
-  stroke-opacity: .2;
+  stroke-opacity: 0.2;
 }
 .link:hover {
-  stroke-opacity: .5;
+  stroke-opacity: 0.5;
 }
-</style>
+</style> -->

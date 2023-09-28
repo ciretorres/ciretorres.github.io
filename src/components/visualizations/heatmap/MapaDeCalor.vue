@@ -1,6 +1,6 @@
 <script setup>
 import SelectorVariantes from '@/components/visualizations/heatmap/SelectorVariantes.vue'
-import Heatmap from '@/components/visualizations/heatmap/Heatmap.vue'
+import Heatmap from '@/components/visualizations/heatmap/HeatmapComponent.vue'
 </script>
 
 <template>

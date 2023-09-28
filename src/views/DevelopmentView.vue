@@ -5,7 +5,10 @@ const mostrar = ref(true)
 </script>
 
 <template>
-  <main id="principal" class="development">
+  <main
+    id="principal"
+    class="development"
+  >
     <div class="container p-2">
       <p class="color-red">[Other stuff...]</p>
       <ul>
@@ -205,12 +208,19 @@ const mostrar = ref(true)
           </ul>
         </ul>
         <li>
-          <router-link class="color-white" to="/development/visualization">
+          <router-link
+            class="color-white"
+            to="/development/visualization"
+          >
             Go to <span class="color-yellow">[Visualization]</span></router-link
           >
         </li>
       </ul>
-      <router-link class="color-red" to="/">[Back]</router-link>
+      <router-link
+        class="color-red"
+        to="/"
+        >[Back]</router-link
+      >
     </div>
   </main>
 </template>

@@ -2,10 +2,10 @@
 
 ## Customize configuration
 
-* [Node.js](https://nodejs.org/es) versión 16 o superior
-* [Npm](https://docs.npmjs.com/getting-started) versión 8 o superior
-* [Vue.js 2.7.14](https://vuejs.org/)
-* [@vue/cli 4.5.19](https://cli.vuejs.org/guide/installation.html)
+- [Node.js](https://nodejs.org/es) versión 16 o superior
+- [Npm](https://docs.npmjs.com/getting-started) versión 8 o superior
+- [Vue.js 2.7.14](https://vuejs.org/)
+- [@vue/cli 4.5.19](https://cli.vuejs.org/guide/installation.html)
 
 ## Project Setup
 

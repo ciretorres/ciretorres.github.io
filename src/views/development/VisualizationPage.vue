@@ -8,13 +8,19 @@ const menu_abierto = ref(false)
   <div class="visualization">
     <div class="flex">
       <div class="columna-4 columna-1-mov menu-fondo">
-        <nav aria-label="Menú secundario" class="menu-lateral-contenedor">
+        <nav
+          aria-label="Menú secundario"
+          class="menu-lateral-contenedor"
+        >
           <div
             class="menu-mov"
             @click="menu_abierto = !menu_abierto"
             :class="{ abierto: menu_abierto }"
           >
-            <button :aria-expanded="menu_abierto ? 'true' : 'false'" class="boton-icono boton-menu">
+            <button
+              :aria-expanded="menu_abierto ? 'true' : 'false'"
+              class="boton-icono boton-menu"
+            >
               <span class="icon-external-link"></span>
               <!-- <span
                 v-if="menu_abierto"
@@ -24,38 +30,54 @@ const menu_abierto = ref(false)
               <span v-else class="icono-angulo-doble-derecha" aria-hidden="true"></span> -->
             </button>
           </div>
-          <div id="snna7yrj3uh" class="menu-colapsable" :class="{ abierto: menu_abierto }">
+          <div
+            id="snna7yrj3uh"
+            class="menu-colapsable"
+            :class="{ abierto: menu_abierto }"
+          >
             <div class="menu-max-height">
               <ul>
                 <li>
-                  <router-link class="nav-boton" to="/development/visualization/intro"
+                  <router-link
+                    class="nav-boton"
+                    to="/development/visualization/intro"
                     ><h2>Visz</h2></router-link
                   >
                 </li>
                 <li>
-                  <router-link class="nav-boton" to="/development/visualization/d3js"
+                  <router-link
+                    class="nav-boton"
+                    to="/development/visualization/d3js"
                     >d3JS</router-link
                   >
                   <ul>
                     <li>
-                      <router-link class="nav-boton ml-5" to="/development/visualization/d3js"
+                      <router-link
+                        class="nav-boton ml-5"
+                        to="/development/visualization/d3js"
                         >Heatmap</router-link
-                      > 
+                      >
                     </li>
                     <li>
-                      <router-link class="nav-boton ml-5" to="/development/visualization/multiline"
+                      <router-link
+                        class="nav-boton ml-5"
+                        to="/development/visualization/multiline"
                         >Multiline</router-link
-                      > 
+                      >
                     </li>
                     <li>
-                      <router-link class="nav-boton ml-5" to="/development/visualization/area"
+                      <router-link
+                        class="nav-boton ml-5"
+                        to="/development/visualization/area"
                         >Area</router-link
-                      > 
+                      >
                     </li>
                   </ul>
                 </li>
                 <li>
-                  <router-link class="nav-boton" to="/development/visualization/maps"
+                  <router-link
+                    class="nav-boton"
+                    to="/development/visualization/maps"
                     >Maps</router-link
                   >
                 </li>
@@ -65,7 +87,8 @@ const menu_abierto = ref(false)
                     href="https://github.com/ciretorres/thesis-project"
                     target="_blank"
                     rel="noopener noreferrer"
-                    >Interactive-Interface <span class="color-yellow">[UAM-A]</span></a
+                    >Interactive-Interface
+                    <span class="color-yellow">[UAM-A]</span></a
                   >
                 </li>
                 <li>
@@ -74,7 +97,8 @@ const menu_abierto = ref(false)
                     href="https://ciretorres.github.io/flujo-de-residuos-solidos-cdmx/"
                     target="_blank"
                     rel="noopener noreferrer"
-                    >Solid Waste System's Interactive <span class="color-yellow">[CDMX]</span></a
+                    >Solid Waste System's Interactive
+                    <span class="color-yellow">[CDMX]</span></a
                   >
                 </li>
                 <li>
@@ -83,7 +107,8 @@ const menu_abierto = ref(false)
                     href="https://ciretorres.github.io/AR-System-UNIVERSUM/"
                     target="_blank"
                     rel="noopener noreferrer"
-                    >AR-System UNIVERSUM <span class="color-yellow">[UIC]</span></a
+                    >AR-System UNIVERSUM
+                    <span class="color-yellow">[UIC]</span></a
                   >
                 </li>
                 <li>
@@ -92,18 +117,24 @@ const menu_abierto = ref(false)
                     href="https://github.com/ciretorres/2HAWC"
                     target="_blank"
                     rel="noopener noreferrer"
-                    >3D Gamma-Ray Catalogue <span class="color-yellow">[HAWC Observatory]</span></a
+                    >3D Gamma-Ray Catalogue
+                    <span class="color-yellow">[HAWC Observatory]</span></a
                   >
                 </li>
                 <li>
                   <router-link
                     class="nav-boton"
                     to="/development/visualization/gravity-apple-tree"
-                    >The Gravity Apple Tree <span class="color-yellow">[UAM-C]</span></router-link
+                    >The Gravity Apple Tree
+                    <span class="color-yellow">[UAM-C]</span></router-link
                   >
                 </li>
                 <br />
-                <router-link class="color-yellow" to="/development">[Back]</router-link>
+                <router-link
+                  class="color-yellow"
+                  to="/development"
+                  >[Back]</router-link
+                >
               </ul>
             </div>
           </div>

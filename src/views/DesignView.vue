@@ -7,7 +7,7 @@ const arrayMessage = ref({
   b: ' ',
   c: ' ',
   d: ' ',
-  e: ' '
+  e: ' ',
 })
 
 onMounted(() => {
@@ -18,7 +18,7 @@ onMounted(() => {
       a: '',
       b: '',
       c: '',
-      d: ''
+      d: '',
     }
     let choose = salutation[Math.floor(Math.random() * salutation.length)]
     arrayMessage.value[item] = choose
@@ -27,7 +27,10 @@ onMounted(() => {
 </script>
 
 <template>
-  <main id="principal" class="design">
+  <main
+    id="principal"
+    class="design"
+  >
     <div class="container p-2">
       <p class="color-red">[Marketing & Design]</p>
       <ul>
@@ -38,7 +41,8 @@ onMounted(() => {
             target="_blank"
             rel="noopener noreferrer"
           >
-            Luxury Jewelry Imports <span class="color-yellow">[Retail]</span></router-link
+            Luxury Jewelry Imports
+            <span class="color-yellow">[Retail]</span></router-link
           >
         </li>
         <li>
@@ -48,7 +52,8 @@ onMounted(() => {
             target="_blank"
             rel="noopener noreferrer"
           >
-            Centro Óptico Profesional <span class="color-yellow">[Retail]</span></router-link
+            Centro Óptico Profesional
+            <span class="color-yellow">[Retail]</span></router-link
           >
         </li>
         <li>
@@ -58,7 +63,8 @@ onMounted(() => {
             target="_blank"
             rel="noopener noreferrer"
           >
-            Expediciones Trotamundos <span class="color-yellow">[Travel]</span></router-link
+            Expediciones Trotamundos
+            <span class="color-yellow">[Travel]</span></router-link
           >
         </li>
         <li>
@@ -81,7 +87,8 @@ onMounted(() => {
             target="_blank"
             rel="noopener noreferrer"
           >
-            OXXO México <span class="color-yellow">{{ arrayMessage.a }}</span></router-link
+            OXXO México
+            <span class="color-yellow">{{ arrayMessage.a }}</span></router-link
           >
         </li>
         <li>
@@ -102,7 +109,8 @@ onMounted(() => {
             target="_blank"
             rel="noopener noreferrer"
           >
-            Bibiki <span class="color-yellow">{{ arrayMessage.c }}</span></router-link
+            Bibiki
+            <span class="color-yellow">{{ arrayMessage.c }}</span></router-link
           >
         </li>
         <li>
@@ -112,19 +120,27 @@ onMounted(() => {
             target="_blank"
             rel="noopener noreferrer"
           >
-            Loreto Fish <span class="color-yellow">{{ arrayMessage.d }}</span></router-link
+            Loreto Fish
+            <span class="color-yellow">{{ arrayMessage.d }}</span></router-link
           >
         </li>
       </ul>
 
       <ul>
         <li>
-          <router-link class="color-white" to="/development/visualization/d3js">
+          <router-link
+            class="color-white"
+            to="/development/visualization/d3js"
+          >
             Go to <span class="color-yellow">[Visualization]</span></router-link
           >
         </li>
       </ul>
-      <router-link class="color-red" to="/">[Back]</router-link>
+      <router-link
+        class="color-red"
+        to="/"
+        >[Back]</router-link
+      >
     </div>
   </main>
 </template>

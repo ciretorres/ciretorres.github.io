@@ -1,7 +1,7 @@
-import Vue from 'vue';
-import Vuex from 'vuex';
+import Vue from 'vue'
+import Vuex from 'vuex'
 
-Vue.use(Vuex);
+Vue.use(Vuex)
 
 export default new Vuex.Store({
   state: {
@@ -12,23 +12,21 @@ export default new Vuex.Store({
   getters: {
     // selectores de variables
     varianteSeleccionada(state) {
-      return state.variante_seleccionada;
+      return state.variante_seleccionada
     },
     estadoSeleccionado(state) {
-      return state.estado_seleccionado;
+      return state.estado_seleccionado
     },
   },
   mutations: {
     // selectores de variables, nueva seleccion
     seleccionarVariante(state, value) {
-      state.variante_seleccionada = value;
+      state.variante_seleccionada = value
     },
     seleccionarEstado(state, value) {
-      state.estado_seleccionado = value;
+      state.estado_seleccionado = value
     },
   },
-  actions: {
-  },
-  modules: {
-  },
-});
+  actions: {},
+  modules: {},
+})
