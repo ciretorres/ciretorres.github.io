@@ -66,10 +66,10 @@ const tooltipRef = ref('')
 const tooltipVariableRef = ref('')
 const tooltipCifraRef = ref('')
 
+/**
+ * Método para traducir el formato de fecha
+ */
 function multiFormat(date) {
-  /**
-   * Método para traducir el formato de fecha
-   */
   const locale = d3.timeFormatLocale({
     "decimal": ",",
     "thousands": ".",
@@ -102,11 +102,10 @@ function multiFormat(date) {
       : d3.timeYear(date) < date ? formatMonth
       : formatYear)(date);
 }
-
+/**
+ * Método para configurar las dimensiones del elemento SVG
+ */
 function configurandoDimensionesParaSVG() {
-  /**
-   * Método para configurar las dimensiones del elemento SVG
-   */
   width.value = document.getElementById('contenedor_vis').clientWidth 
     - props.margin.left - props.margin.right
   
@@ -142,14 +141,10 @@ function configurandoDimensionesParaSVG() {
     .style('dominant-baseline', 'hanging')
     .style("color", "#efefef")
 }
-
+/**
+ * Método para configurar dimensiones para área
+*/
 function configurandoDimensionesParaArea() {      
-  /**
-   * Método para configurar dimensiones para área
-  */
-  const xValue = d => d.date
-  const yValue = d => +d.value
-
   // Build X scale -> it is a date format
   const xScale = d3.scaleTime()
     .range([0, width.value])
@@ -218,11 +213,10 @@ function configurandoDimensionesParaArea() {
     .y1((d) => yScale(d.value))
     .curve(d3.curveBasis);
 }
-
+/**
+ * Método para desplegar el tooltip
+ */
 function mostrarTooltip(evento, datum) {
-  /**
-   * Método para desplegar el tooltip
-   */
   tooltip.value
     .style('visibility', 'visible')
     .style('left', `${evento.pageX + 5}px`)
@@ -238,21 +232,19 @@ function mostrarTooltip(evento, datum) {
   // console.log('datum', datum.date);
   // console.log('evento',evento);
 }
-
+/**
+ * Método para esconder el tooltip
+ */
 function cerrarTooltip() {
-  /**
-   * Método para esconder el tooltip
-   */
   tooltip.value
     .style('visibility', 'hidden')
     .style('left', '0')
     .style('top', '0');
 }
-
+/** 
+ * Método para crear los paths del área
+*/
 function creandoArea() {
-  /** 
-   * Método para crear los paths del área
-  */
   // remove all area created
   grupo_contenedor.value
     .selectAll('path.paths-area')
@@ -283,16 +275,14 @@ function creandoArea() {
 
   svg.value.on('mouseout', cerrarTooltip);
 }
-
+/**
+ * Método para actualizar los paths trazados del área
+*/
 function actualizandoArea() {
-  /**
-   * Método para actualizar los paths trazados del área
-  */
   area.value
     // .datum(this.datas, function (d) { return d.date + ':' + d.value; })
     // .attr('d', this.areaGenerator);
-    .attr('d', areaGenerator(datas.value))
-    
+    .attr('d', areaGenerator(datas.value))   
 }
 
 onMounted(() => {
@@ -338,7 +328,6 @@ onMounted(() => {
 
 <template>
   <div class="contenedor-area">
-    <!-- <img src="@/assets/imgs/cerrar.svg"> -->
     <div 
       class="dai-contenedor-area"
       v-bind:id="area_id"
@@ -371,306 +360,6 @@ onMounted(() => {
     </div>
   </div>
 </template>
-
-<!-- <script>
-import * as d3 from "d3";
-
-export default {
-  name: 'DaiArea',
-  props: {
-    area_id: {
-      type: String,
-      default: () => 'area',
-    },
-    datos: {
-      type: Array,
-      default: () => [
-        { variable: '2021-01-01', cantidad: '30' },
-      ],
-    },
-    titulo: String,
-    instruccional: String,
-    fecha_actualizacion: String,
-    titulo_eje_y: String,
-    titulo_eje_x: String,
-    titulo_leyenda: String,
-    titulo_tooltip: {
-      type: String,
-      default: '',
-    },
-    margin: {
-      type: Object,
-      default: () => ({
-        top: 5,
-        right: 15,
-        bottom: 35,
-        left: 55,
-      }),
-    },
-    variables: {
-      type: Array,
-      default: function () {
-        return ['variable', 'cantidad'];
-      },
-    },
-    color_area: String,
-  },
-  watch: {
-
-  },
-  data() {
-    return {
-      datas: [],
-      width_limit: 769,
-    }
-  },
-  mounted() {
-    // Asignando datos
-    this.datas = this.datos;
-    // Asigna elementos a variables
-    this.svg = d3.select(`div#${this.area_id} svg.svg-area`);
-    this.grupo_contenedor = this.svg.select('g.grupo-contenedor-de-area');
-    this.grupo_contenedor_ejes = this.svg.select('g.grupo-contenedor-de-ejes');
-
-    this.texto_x = this.grupo_contenedor_ejes.append('text')
-      .text(this.titulo_eje_x)
-      .attr('class', 'label-x')
-      .style('font-weight', '600');
-    this.texto_y = this.grupo_contenedor_ejes.append('text')
-      .text(this.titulo_eje_y)
-      .attr('class', 'label-y')
-      .style('font-weight', '600');
-
-    // append and attribute class to axes
-    this.eje_x = this.grupo_contenedor_ejes
-      .append('g')
-        .attr('class', 'eje-x');
-    this.eje_y = this.grupo_contenedor_ejes
-      .append('g')
-        .attr('class', 'eje-y');
-
-    this.configurandoDimensionesParaSVG();
-
-    this.configurandoDimensionesParaArea();
-
-    this.creandoArea();
-
-    this.actualizandoArea();     
-    
-    this.tooltip = d3.select(this.$refs.tooltip);
-    this.tooltip.style('visibility', 'hidden');
-  },
-  methods: {
-    configurandoDimensionesParaSVG() {
-      /**
-       * Método para configurar las dimensiones del elemento SVG
-       */
-      this.width = document.getElementById('contenedor_vis').clientWidth 
-        - this.margin.left - this.margin.right;
-      window.innerWidth >= this.width_limit // 769
-        ? this.height = 600 - this.margin.top - this.margin.bottom // Desktop
-        : this.height = 400 - this.margin.top - this.margin.bottom; // Mobile
-
-      this.svg
-        .attr('width', this.width + this.margin.left + this.margin.right)
-        .attr('height', this.height + this.margin.top + this.margin.bottom)
-        // .style("background-color", "#efefef") // Comentar fondo
-
-      this.grupo_contenedor
-        .attr('transform',
-          `translate(${this.margin.left}, ${this.margin.top})`);
-      this.grupo_contenedor_ejes
-        .attr('transform',
-          `translate(${this.margin.left}, ${this.margin.top})`);
-      
-      // Labels title
-      this.texto_x
-        .attr('transform', `translate(${this.width * .5}, ${this.height + 25})`)
-        .style('text-anchor', 'middle')
-        .style('font-size', '10px')
-        .style('dominant-baseline', 'hanging').style("color", "#efefef");      
-      this.texto_y
-        .attr('transform',`translate(${-this.margin.left}, ${this.height * .5}) rotate(-90)`)
-        .style('text-anchor', 'middle')
-        .style('font-size', '10px')
-        .style('dominant-baseline', 'hanging').style("color", "#efefef");      
-    },
-    multiFormat(date) {
-      /**
-       * Método para traducir el formato de fecha
-       */
-      this.locale = d3.timeFormatLocale({
-        "decimal": ",",
-        "thousands": ".",
-        "grouping": [3],
-        "currency": ["€", ""],
-        "dateTime": "%A, %e %B %Y г. %X",
-        "date": "%d.%m.%Y",
-        "time": "%H:%M:%S",
-        "periods": ["AM", "PM"],
-        "days": ["Domingo", "Lunes", "Martes", "Miércoles", "Jueves", "Viernes", "Sábado"],
-        "shortDays": ["Dom", "Lun", "Mar", "Mi", "Jue", "Vie", "Sab"],
-        "months": ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"],
-        "shortMonths": ["Ene", "Feb", "Mar", "Abr", "May", "Jun", "Jul", "Ago", "Sep", "Oct", "Nov", "Dic"]
-      });
-      this.formatMillisecond = this.locale.format(".%L");
-      this.formatSecond = this.locale.format(":%S");
-      this.formatMinute = this.locale.format("%I:%M");
-      this.formatHour = this.locale.format("%I %p");
-      this.formatDay = this.locale.format("%a %d");
-      this.formatWeek = this.locale.format("%b %d");
-      this.formatMonth = this.locale.format("%b");
-      this.formatYear = this.locale.format("%Y");
-
-      return (d3.timeSecond(date) < date ? this.formatMillisecond
-          : d3.timeMinute(date) < date ? this.formatSecond
-          : d3.timeHour(date) < date ? this.formatMinute
-          : d3.timeDay(date) < date ? this.formatHour
-          : d3.timeMonth(date) < date ? (d3.timeWeek(date) < date ? this.formatDay : this.formatWeek)
-          : d3.timeYear(date) < date ? this.formatMonth
-          : this.formatYear)(date);
-    },
-    configurandoDimensionesParaArea() {      
-      /**
-       * Método para configurar dimensiones para área
-      */
-      this.xValue = d => d.date;
-      this.yValue = d => +d.value;
-      // Build X scale -> it is a date format
-      this.xScale = d3.scaleTime()
-        .range([0, this.width])
-        .domain(d3.extent(this.datas, (d) => d.date))
-        .nice();
-      // Build Y scale
-      this.yScale = d3.scaleLinear()
-        .range([this.height, 0])
-        .domain([0, d3.max(this.datas, (d) => +d.value)])
-        .nice();
-
-      // Add X axis
-      this.xAxis = d3.axisBottom(this.xScale)
-        .ticks(6)
-        .tickFormat(this.multiFormat)
-        .tickSize(-this.height)
-        .tickPadding(10);
-      // Call X axis
-      this.xAxisG = this.eje_x.append('g')
-        .attr('transform', `translate(0, ${this.height})`)
-        .call(this.xAxis).style("color", "#efefef");
-      // Remove domain line
-      this.xAxisG.selectAll('.domain').remove();
-      // Font text
-      this.xAxisG.selectAll('.tick text')
-          // .style('font-family', 'Montserrat')
-          .style('font-size', '10px')
-          .style('text-transform', 'uppercase');
-      // Color lines
-      this.xAxisG.selectAll('.tick line')
-          .style('stroke', '#efefef');
-      
-      // Add Y axis
-      this.yAxis = d3.axisLeft(this.yScale)
-        .tickSize(-this.width);      
-      // Call Y axis
-      this.yAxisG = this.eje_y.append('g')
-        .call(this.yAxis);
-      // Remove domain line
-      this.yAxisG.selectAll('.domain').remove();
-      // Font text
-      this.yAxisG
-        .selectAll('.tick text')
-            // .style('font-family', 'Montserrat')
-            .style('font-size', '10px').style("color", "#efefef");
-      // Color lines
-      this.yAxisG.selectAll('.tick line')
-          .style('stroke', '#efefef');
-      
-      // Area generator
-      this.areaGenerator = d3.area()
-        .x((d) => this.xScale(d.date))
-        .y0(this.yScale(0))
-        .y1((d) => this.yScale(d.value))
-        .curve(d3.curveBasis);
-    },
-    creandoArea() {
-      /** 
-       * Método para crear los paths del área
-      */
-      // remove all area created
-      this.grupo_contenedor
-        .selectAll('path.paths-area')
-        .remove();
-
-      // Join path with color values
-      this.area = this.grupo_contenedor
-          .selectAll('gpaths')
-          // .data(this.datas, function (d) { return d.date+':'+d.value; })
-          .data(this.datas)
-          .enter()
-        .append('path')
-          .attr('class', (d) => `${d.date} paths-area`)
-          // .attr('class', (d) => `paths-area-${d.date.getDate()+'-'+(+d.date.getMonth()+1)+'-'+d.date.getFullYear()}`)
-          .style('fill', this.color_area)
-          .style('opacity', 0.5)
-        .on('mouseover', (evento, datum) => {
-          // console.log("mousemove", evento, datum);
-          console.log("bug",);
-          this.mostrarTooltip(evento, datum);
-        })
-        .on('mousemove',(evento,datum) => this.mostrarTooltip(evento, datum))        
-        .on('click',(evento,datum) => {
-          // console.log("click", evento, datum);
-          console.log("bug",);
-          this.mostrarTooltip(evento, datum);
-        });
-
-      this.svg.on('mouseout', this.cerrarTooltip);
-    },
-    actualizandoArea() {
-      /**
-       * Método para actualizar los paths trazados del área
-      */
-      this.area
-        // .datum(this.datas, function (d) { return d.date + ':' + d.value; })
-        // .attr('d', this.areaGenerator);
-        .attr('d', this.areaGenerator(this.datas));
-        
-    },
-    mostrarTooltip(evento, datum) {
-      /**
-       * Método para desplegar el tooltip
-       */
-      this.tooltip
-        .style('visibility', 'visible')
-        .style('left', `${evento.pageX + 5}px`)
-        .style('top', `${evento.pageY + 5}px`);
-      // console.log('mostrar tooltip');
-      // d3.select(this.$refs.tooltip_grupo)
-      //   .text("datum.date");
-      // d3.select(this.$refs.tooltip_variable)
-      //   .text("Fecha:");
-      d3.select(this.$refs.tooltip_cifra)
-        .html(`Variable: ${datum.date.getDate()+'-'+(+datum.date.getMonth()+1)+'-'+datum.date.getFullYear()} 
-          <br/> Cantidad: <b>${datum.value}</b>`);      
-      // console.log('datum', datum.date);
-      // console.log('evento',evento);
-    },
-    cerrarTooltip() {
-      /**
-       * Método para esconder el tooltip
-       */
-      this.tooltip
-        .style('visibility', 'hidden')
-        .style('left', '0')
-        .style('top', '0');
-    },
-  },
-  computed: {
-
-  }
-  
-}
-</script> -->
 
 <style lang="scss" scoped>
 $border-radius-tarjeta:10px;
