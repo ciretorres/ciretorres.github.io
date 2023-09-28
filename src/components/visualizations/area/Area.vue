@@ -1,3 +1,341 @@
+<script setup>
+import * as d3 from 'd3'
+import { onMounted, ref } from 'vue';
+
+const props = defineProps({
+  area_id: {
+    type: String,
+    default: () => 'area',
+  },
+  datos: {
+    type: Array,
+    default: () => [
+      { variable: '2021-01-01', cantidad: '30' },
+    ],
+  },
+  titulo: String,
+  instruccional: String,
+  fecha_actualizacion: String,
+  titulo_eje_y: String,
+  titulo_eje_x: String,
+  titulo_leyenda: String,
+  titulo_tooltip: {
+    type: String,
+    default: '',
+  },
+  margin: {
+    type: Object,
+    default: () => ({
+      top: 5,
+      right: 15,
+      bottom: 35,
+      left: 55,
+    }),
+  },
+  variables: {
+    type: Array,
+    default: function () {
+      return ['variable', 'cantidad'];
+    },
+  },
+  color_area: String,
+})
+
+const datas = ref([])
+const width_limit = 769
+
+const width = ref()
+const height = ref()
+
+const svg = ref({})
+const grupo_contenedor = ref({})
+const grupo_contenedor_ejes = ref({})
+
+const texto_x = ref({})
+const texto_y = ref({})
+
+const eje_x = ref({})
+const eje_y = ref({})
+
+const area = ref({})
+
+const areaGenerator = d3.area()
+
+const tooltip = ref({})
+const tooltipRef = ref('')
+const tooltipVariableRef = ref('')
+const tooltipCifraRef = ref('')
+
+function multiFormat(date) {
+  /**
+   * Método para traducir el formato de fecha
+   */
+  const locale = d3.timeFormatLocale({
+    "decimal": ",",
+    "thousands": ".",
+    "grouping": [3],
+    "currency": ["€", ""],
+    "dateTime": "%A, %e %B %Y г. %X",
+    "date": "%d.%m.%Y",
+    "time": "%H:%M:%S",
+    "periods": ["AM", "PM"],
+    "days": ["Domingo", "Lunes", "Martes", "Miércoles", "Jueves", "Viernes", "Sábado"],
+    "shortDays": ["Dom", "Lun", "Mar", "Mi", "Jue", "Vie", "Sab"],
+    "months": ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"],
+    "shortMonths": ["Ene", "Feb", "Mar", "Abr", "May", "Jun", "Jul", "Ago", "Sep", "Oct", "Nov", "Dic"]
+  })
+  
+  const formatMillisecond = locale.format(".%L"),
+    formatSecond = locale.format(":%S"),
+    formatMinute = locale.format("%I:%M"),
+    formatHour = locale.format("%I %p"),
+    formatDay = locale.format("%a %d"),
+    formatWeek = locale.format("%b %d"),
+    formatMonth = locale.format("%b"),
+    formatYear = locale.format("%Y")
+
+  return (d3.timeSecond(date) < date ? formatMillisecond
+      : d3.timeMinute(date) < date ? formatSecond
+      : d3.timeHour(date) < date ? formatMinute
+      : d3.timeDay(date) < date ? formatHour
+      : d3.timeMonth(date) < date ? (d3.timeWeek(date) < date ? formatDay : formatWeek)
+      : d3.timeYear(date) < date ? formatMonth
+      : formatYear)(date);
+}
+
+function configurandoDimensionesParaSVG() {
+  /**
+   * Método para configurar las dimensiones del elemento SVG
+   */
+  width.value = document.getElementById('contenedor_vis').clientWidth 
+    - props.margin.left - props.margin.right
+  
+  window.innerWidth >= width_limit // 769
+    ? height.value = 600 - props.margin.top - props.margin.bottom // Desktop
+    : height.value = 400 - props.margin.top - props.margin.bottom // Mobile
+
+  svg.value
+    .attr('width', width.value + props.margin.left + props.margin.right)
+    .attr('height', height.value + props.margin.top + props.margin.bottom)
+    // .style("background-color", "#efefef") // Comentar fondo
+
+  grupo_contenedor.value
+    .attr('transform',
+      `translate(${props.margin.left}, ${props.margin.top})`)
+  
+  grupo_contenedor_ejes.value
+    .attr('transform',
+      `translate(${props.margin.left}, ${props.margin.top})`)
+  
+  // Labels title
+  texto_x.value
+    .attr('transform', `translate(${width.value * .5}, ${height.value + 25})`)
+    .style('text-anchor', 'middle')
+    .style('font-size', '10px')
+    .style('dominant-baseline', 'hanging')
+    .style("color", "#efefef")
+  
+  texto_y.value
+    .attr('transform',`translate(${-props.margin.left}, ${height.value * .5}) rotate(-90)`)
+    .style('text-anchor', 'middle')
+    .style('font-size', '10px')
+    .style('dominant-baseline', 'hanging')
+    .style("color", "#efefef")
+}
+
+function configurandoDimensionesParaArea() {      
+  /**
+   * Método para configurar dimensiones para área
+  */
+  const xValue = d => d.date
+  const yValue = d => +d.value
+
+  // Build X scale -> it is a date format
+  const xScale = d3.scaleTime()
+    .range([0, width.value])
+    .domain(d3.extent(datas.value, (d) => d.date))
+    .nice()
+
+  // Build Y scale
+  const yScale = d3.scaleLinear()
+    .range([height.value, 0])
+    .domain([0, d3.max(datas.value, (d) => +d.value)])
+    .nice()
+
+  // Add X axis
+  const xAxis = d3.axisBottom(xScale)
+    .ticks(6)
+    .tickFormat(multiFormat)
+    .tickSize(-height.value)
+    .tickPadding(10)
+
+  // Call X axis
+  const xAxisG = eje_x.value.append('g')
+    .attr('transform', `translate(0, ${height.value})`)
+    .call(xAxis)
+    .style("color", "#efefef")
+
+  // Remove domain line
+  xAxisG.selectAll('.domain').remove()
+
+  // Font text
+  xAxisG.selectAll('.tick text')
+      // .style('font-family', 'Montserrat')
+      .style('font-size', '10px')
+      .style('text-transform', 'uppercase')
+
+  // Color lines
+  xAxisG.selectAll('.tick line')
+      .style('stroke', '#efefef')
+  
+  // Add Y axis
+  const yAxis = d3.axisLeft(yScale)
+    .tickSize(-width.value)
+
+  // Call Y axis
+  const yAxisG = eje_y.value.append('g')
+    .call(yAxis)
+
+  // Remove domain line
+  yAxisG.selectAll('.domain').remove()
+
+  // Font text
+  yAxisG
+    .selectAll('.tick text')
+    // .style('font-family', 'Montserrat')
+    .style('font-size', '10px')
+    .style("color", "#efefef")
+
+  // Color lines
+  yAxisG.selectAll('.tick line')
+      .style('stroke', '#efefef')
+  
+  // Area generator
+  // areaGenerator.value = d3.area()
+  areaGenerator
+    .x((d) => xScale(d.date))
+    .y0(yScale(0))
+    .y1((d) => yScale(d.value))
+    .curve(d3.curveBasis);
+}
+
+function mostrarTooltip(evento, datum) {
+  /**
+   * Método para desplegar el tooltip
+   */
+  tooltip.value
+    .style('visibility', 'visible')
+    .style('left', `${evento.pageX + 5}px`)
+    .style('top', `${evento.pageY + 5}px`);
+  // console.log('mostrar tooltip');
+  // d3.select(this.$refs.tooltip_grupo)
+  //   .text("datum.date");
+  // d3.select(this.$refs.tooltip_variable)
+  //   .text("Fecha:");
+  d3.select(tooltipCifraRef.value)
+    .html(`Variable: ${datum.date.getDate()+'-'+(+datum.date.getMonth()+1)+'-'+datum.date.getFullYear()} 
+      <br/> Cantidad: <b>${datum.value}</b>`);      
+  // console.log('datum', datum.date);
+  // console.log('evento',evento);
+}
+
+function cerrarTooltip() {
+  /**
+   * Método para esconder el tooltip
+   */
+  tooltip.value
+    .style('visibility', 'hidden')
+    .style('left', '0')
+    .style('top', '0');
+}
+
+function creandoArea() {
+  /** 
+   * Método para crear los paths del área
+  */
+  // remove all area created
+  grupo_contenedor.value
+    .selectAll('path.paths-area')
+    .remove();
+
+  // Join path with color values
+  area.value = grupo_contenedor.value
+      .selectAll('gpaths')
+      // .data(this.datas, function (d) { return d.date+':'+d.value; })
+      .data(datas.value)
+      .enter()
+    .append('path')
+      .attr('class', (d) => `${d.date} paths-area`)
+      // .attr('class', (d) => `paths-area-${d.date.getDate()+'-'+(+d.date.getMonth()+1)+'-'+d.date.getFullYear()}`)
+      .style('fill', props.color_area)
+      .style('opacity', 0.5)
+    .on('mouseover', (evento, datum) => {
+      // console.log("mousemove", evento, datum);
+      console.log("bug")
+      mostrarTooltip(evento, datum)
+    })
+    .on('mousemove',(evento,datum) => mostrarTooltip(evento, datum))        
+    .on('click',(evento,datum) => {
+      // console.log("click", evento, datum);
+      console.log("bug")
+      mostrarTooltip(evento, datum)
+    });
+
+  svg.value.on('mouseout', cerrarTooltip);
+}
+
+function actualizandoArea() {
+  /**
+   * Método para actualizar los paths trazados del área
+  */
+  area.value
+    // .datum(this.datas, function (d) { return d.date + ':' + d.value; })
+    // .attr('d', this.areaGenerator);
+    .attr('d', areaGenerator(datas.value))
+    
+}
+
+onMounted(() => {
+  // Asignando datos
+  datas.value = props.datos
+
+  // Asigna elementos a variables
+  svg.value = d3.select(`div#${props.area_id} svg.svg-area`)
+  grupo_contenedor.value = svg.value.select('g.grupo-contenedor-de-area')
+  grupo_contenedor_ejes.value = svg.value.select('g.grupo-contenedor-de-ejes')
+
+  texto_x.value = grupo_contenedor_ejes.value.append('text')
+    .text(props.titulo_eje_x)
+    .attr('class', 'label-x')
+    .style('font-weight', '600')
+
+  texto_y.value = grupo_contenedor_ejes.value.append('text')
+    .text(props.titulo_eje_y)
+    .attr('class', 'label-y')
+    .style('font-weight', '600')
+
+  // append and attribute class to axes
+  eje_x.value = grupo_contenedor_ejes.value
+    .append('g')
+      .attr('class', 'eje-x');
+  eje_y.value = grupo_contenedor_ejes.value
+    .append('g')
+      .attr('class', 'eje-y')
+
+  configurandoDimensionesParaSVG()
+
+  configurandoDimensionesParaArea()
+
+  creandoArea()
+
+  actualizandoArea()
+
+  tooltip.value = d3.select(tooltipRef.value)
+  tooltip.value.style('visibility', 'hidden')
+})
+
+</script>
+
 <template>
   <div class="contenedor-area">
     <!-- <img src="@/assets/imgs/cerrar.svg"> -->
@@ -6,8 +344,8 @@
       v-bind:id="area_id"
     >
       <div class="dai-titulo">
-        <!-- <h3 class="titulo-visualizacion">Título del proyecto</h3> -->
-        <!-- <p class="fecha-actualizacion">Última actualización: {{ fecha_actualizacion }}</p> -->
+        <h3 class="titulo-visualizacion">Título del proyecto</h3>
+        <p class="fecha-actualizacion">Última actualización: {{ fecha_actualizacion }}</p>
         <p class="texto-instruccional">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
       </div>
       <div class="contenedor-vis" id="contenedor_vis">
@@ -17,7 +355,7 @@
             <g class="grupo-contenedor-de-area"></g>          
           </svg>
         </div>
-        <div class="tooltip-area" ref="tooltip">
+        <div class="tooltip-area" ref="tooltipRef">
           <div class="contenedor-boton-cerrar">
             <span>{{titulo_tooltip}}</span>
             <button class="boton-cerrar-tooltip" @click="cerrarTooltip()">
@@ -25,8 +363,8 @@
               &times;
             </button>
           </div>
-          <p class="tooltip-variable" ref="tooltip_variable"></p>
-          <p class="tooltip-cifra" ref="tooltip_cifra">120 | <b> 29.3%</b></p>
+          <p class="tooltip-variable" ref="tooltipVariableRef"></p>
+          <p class="tooltip-cifra" ref="tooltipCifraRef">120 | <b> 29.3%</b></p>
         </div>
       </div>
       <div class="dai-info"></div>    
@@ -34,7 +372,7 @@
   </div>
 </template>
 
-<script>
+<!-- <script>
 import * as d3 from "d3";
 
 export default {
@@ -198,7 +536,7 @@ export default {
       */
       this.xValue = d => d.date;
       this.yValue = d => +d.value;
-      // Build X scale --> it is a date format
+      // Build X scale -> it is a date format
       this.xScale = d3.scaleTime()
         .range([0, this.width])
         .domain(d3.extent(this.datas, (d) => d.date))
@@ -332,7 +670,7 @@ export default {
   }
   
 }
-</script>
+</script> -->
 
 <style lang="scss" scoped>
 $border-radius-tarjeta:10px;

@@ -8,7 +8,7 @@ const centroides = centroidesJSON
   <div class="maps">
     <div class="container sin-fondo">
       <h1>Mapas</h1>
-      <!-- <dai-tarjeta-contenedor-mapa class="contenedor-mapa"
+      <dai-tarjeta-contenedor-mapa class="contenedor-mapa"
         :permitir-colapso="false"
         :llenar-espacio-disponible-con-mapa="true"
       >
@@ -38,7 +38,7 @@ const centroides = centroidesJSON
         
         <template v-slot:footer>
         </template>
-      </dai-tarjeta-contenedor-mapa> -->
+      </dai-tarjeta-contenedor-mapa>
       <div class="contenedor-fuentes">
         <p class="fuentes">Fuentes:</p>
         <ul>
