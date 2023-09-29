@@ -1,0 +1,32 @@
+[
+  {
+    "orden": 1,
+    "clave": "VTODAS",
+    "nombre": "Todas las variables"
+  },
+  {
+    "orden": 2,
+    "clave": "VOC",
+    "nombre": "Variable 1"
+  },
+  {
+    "orden": 3,
+    "clave": "VOI",
+    "nombre": "Variable 2"
+  },
+  {
+    "orden": 4,
+    "clave": "VIN",
+    "nombre": "Variable 3"
+  },
+  {
+    "orden": 5,
+    "clave": "VOM",
+    "nombre": "Variable 4"
+  },
+  {
+    "orden": 6,
+    "clave": "VSIN",
+    "nombre": "Variable 5"
+  }
+]

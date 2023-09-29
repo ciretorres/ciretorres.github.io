@@ -1,0 +1,2 @@
+"use strict";(self["webpackChunkciretorres"]=self["webpackChunkciretorres"]||[]).push([[666],{6666:function(n,r,t){t.r(r),t.d(r,{default:function(){return a}});var e=function(){var n=this;n._self._c;return n._m(0)},u=[function(){var n=this,r=n._self._c;return r("main",{attrs:{id:"principal"}},[r("h1",[n._v("Página no encontrada")])])}],i=t(1001),c={},s=(0,i.Z)(c,e,u,!1,null,null,null),a=s.exports}}]);
+//# sourceMappingURL=666.9b4a13af.js.map
