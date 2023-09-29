@@ -85,6 +85,8 @@ onMounted(() => {
         <a
           class="color-red"
           href="//api.whatsapp.com/send?phone=5547904238"
+          target="_blank"
+          rel="noopener noreferrer"
         >
           WhatsApp<span class="icon icon-whatsapp"></span>
         </a>
