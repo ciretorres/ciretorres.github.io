@@ -1,3 +1,7 @@
+<script setup>
+const public_path = process.env.BASE_URL
+</script>
+
 <template>
   <main
     id="principal"
@@ -6,7 +10,7 @@
     <div class="portafolio">
       <img
         class="img-portafolio"
-        src="@/assets/imgs/header-oxxo.webp"
+        :src="`${public_path}imgs/header-oxxo.webp`"
         loading="lazy"
         alt=""
       />
@@ -19,7 +23,7 @@
             rel="noopener noreferrer"
             ><img
               class="logo-img"
-              src="@/assets/imgs/logo-oxxo.webp"
+              :src="`${public_path}imgs/logo-oxxo.webp`"
               loading="lazy"
               alt=""
           /></a>
@@ -70,7 +74,7 @@
             playsinline
           >
             <source
-              src="@/assets/imgs/post-oxxo-1.webm"
+              :src="`${public_path}imgs/post-oxxo-1.webm`"
               type="video/webm"
             />
           </video>
@@ -82,7 +86,7 @@
             playsinline
           >
             <source
-              src="@/assets/imgs/post-oxxo-2.webm"
+              :src="`${public_path}imgs/post-oxxo-2.webm`"
               type="video/webm"
             />
           </video>
@@ -94,7 +98,7 @@
             playsinline
           >
             <source
-              src="@/assets/imgs/post-oxxo-3.webm"
+              :src="`${public_path}imgs/post-oxxo-3.webm`"
               type="video/webm"
             />
           </video>
@@ -106,7 +110,7 @@
             playsinline
           >
             <source
-              src="@/assets/imgs/post-oxxo-4.webm"
+              :src="`${public_path}imgs/post-oxxo-4.webm`"
               type="video/webm"
             />
           </video>

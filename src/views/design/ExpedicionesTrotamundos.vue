@@ -1,3 +1,7 @@
+<script setup>
+const public_path = process.env.BASE_URL
+</script>
+
 <template>
   <main
     id="principal"
@@ -11,19 +15,19 @@
     >
       <img
         class="img-portafolio"
-        src="@/assets/imgs/portafolio-etrota-1.webp"
+        :src="`${public_path}imgs/portafolio-etrota-1.webp`"
         loading="lazy"
         alt=""
       />
       <img
         class="img-portafolio"
-        src="@/assets/imgs/portafolio-etrota-2.webp"
+        :src="`${public_path}imgs/portafolio-etrota-2.webp`"
         loading="lazy"
         alt=""
       />
       <img
         class="img-portafolio"
-        src="@/assets/imgs/portafolio-etrota-3.webp"
+        :src="`${public_path}imgs/portafolio-etrota-3.webp`"
         loading="lazy"
         alt=""
       />

@@ -8,12 +8,14 @@ import { computed, onMounted, ref, watch } from 'vue'
 import variantesjson from '@/assets/data/variantes.json'
 const variantes = variantesjson
 
-import consorcioVariantesHeatmapTodas from '@/assets/datasets/consorcio_variantes_heatmap_todas.json'
 import consorcioHeatmap from '@/assets/datasets/consorcio_heatmap.json'
+import consorcioVariantesHeatmapTodas from '@/assets/datasets/consorcio_variantes_heatmap_todas.json'
 
 // import { useStore } from '@/stores'
 import store from '../../../store'
 // const store = useStore()
+
+const public_path = process.env.BASE_URL
 
 // const varianteSeleccionada = computed({
 //   // getter
@@ -754,7 +756,7 @@ watch(
             @click="cerrarTooltip()"
           >
             <img
-              src="@/assets/imgs/cerrar.svg"
+              :src="`${public_path}imgs/cerrar.svg`"
               alt=""
               class="img-cerrar"
             />

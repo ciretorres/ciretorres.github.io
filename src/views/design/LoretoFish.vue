@@ -1,3 +1,7 @@
+<script setup>
+const public_path = process.env.BASE_URL
+</script>
+
 <template>
   <main
     id="principal"
@@ -6,7 +10,7 @@
     <div class="portafolio">
       <img
         class="img-portafolio"
-        src="@/assets/imgs/header-loreto-fish.webp"
+        :src="`${public_path}imgs/header-loreto-fish.webp`"
         loading="lazy"
         alt=""
       />
@@ -20,7 +24,7 @@
           >
             <img
               class="logo-img"
-              src="@/assets/imgs/logo-loreto-fish.webp"
+              :src="`${public_path}imgs/logo-loreto-fish.webp`"
               loading="lazy"
               alt=""
             />
@@ -66,7 +70,7 @@
         <div class="posts">
           <img
             class="post-img"
-            src="@/assets/imgs/post-loreto-fish-1.webp"
+            :src="`${public_path}imgs/post-loreto-fish-1.webp`"
             loading="lazy"
             alt=""
           />

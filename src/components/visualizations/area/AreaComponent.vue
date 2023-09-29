@@ -2,6 +2,8 @@
 import * as d3 from 'd3'
 import { onMounted, ref } from 'vue'
 
+const public_path = process.env.BASE_URL
+
 const props = defineProps({
   area_id: {
     type: String,
@@ -412,7 +414,7 @@ onMounted(() => {
               @click="cerrarTooltip()"
             >
               <img
-                src="@/assets/imgs/cerrar.svg"
+                :src="`${public_path}imgs/cerrar.svg`"
                 alt="Cerrar Tooltip"
               />
               &times;

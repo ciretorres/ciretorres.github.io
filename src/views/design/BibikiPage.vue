@@ -1,3 +1,7 @@
+<script setup>
+const public_path = process.env.BASE_URL
+</script>
+
 <template>
   <main
     id="principal"
@@ -6,7 +10,7 @@
     <div class="portafolio">
       <img
         class="img-portafolio"
-        src="@/assets/imgs/header-bibiki.webp"
+        :src="`${public_path}imgs/header-bibiki.webp`"
         loading="lazy"
         alt=""
       />
@@ -20,7 +24,7 @@
           >
             <img
               class="logo-img"
-              src="@/assets/imgs/logo-bibiki.webp"
+              :src="`${public_path}imgs/logo-bibiki.webp`"
               loading="lazy"
               alt=""
             />
@@ -72,7 +76,7 @@
             playsinline
           >
             <source
-              src="@/assets/imgs/post-bibiki-1.webm"
+              :src="`${public_path}imgs/post-bibiki-1.webm`"
               type="video/webm"
             />
           </video>
@@ -84,7 +88,7 @@
             playsinline
           >
             <source
-              src="@/assets/imgs/post-bibiki-2.webm"
+              :src="`${public_path}imgs/post-bibiki-2.webm`"
               type="video/webm"
             />
           </video>

@@ -1,3 +1,7 @@
+<script setup>
+const public_path = process.env.BASE_URL
+</script>
+
 <template>
   <main
     id="principal"
@@ -6,7 +10,7 @@
     <div class="portafolio">
       <img
         class="img-portafolio"
-        src="@/assets/imgs/header-cem.webp"
+        :src="`${public_path}imgs/header-cem.webp`"
         loading="lazy"
         alt=""
       />
@@ -20,7 +24,7 @@
           >
             <img
               class="logo-img"
-              src="@/assets/imgs/logo-cem.webp"
+              :src="`${public_path}imgs/logo-cem.webp`"
               loading="lazy"
               alt=""
             />
@@ -72,25 +76,25 @@
             playsinline
           >
             <source
-              src="@/assets/imgs/post-cem-1.webm"
+              :src="`${public_path}imgs/post-cem-1.webm`"
               type="video/webm"
             />
           </video>
           <img
             class="post-img"
-            src="@/assets/imgs/post-cem-2.webp"
+            :src="`${public_path}imgs/post-cem-2.webp`"
             loading="lazy"
             alt=""
           />
           <img
             class="post-img"
-            src="@/assets/imgs/post-cem-3.webp"
+            :src="`${public_path}imgs/post-cem-3.webp`"
             loading="lazy"
             alt=""
           />
           <img
             class="post-img"
-            src="@/assets/imgs/post-cem-4.webp"
+            :src="`${public_path}imgs/post-cem-4.webp`"
             loading="lazy"
             alt=""
           />
