@@ -1,77 +1,84 @@
 <template>
-    <label class="dai-checkbox-color-container" >
-        <input type="checkbox" :checked="value" @change="cambio">
-        <span class="color-square">
-            <span class="custom-checkbox " :class="{'dai-icon-check':value}"></span>
-            <span class="color" :style="{'backgroundColor':color}"></span>
-        </span>
+  <label class="dai-checkbox-color-container">
+    <input
+      type="checkbox"
+      :checked="value"
+      @change="cambio"
+    />
+    <span class="color-square">
+      <span
+        class="custom-checkbox"
+        :class="{ 'dai-icon-check': value }"
+      ></span>
+      <span
+        class="color"
+        :style="{ backgroundColor: color }"
+      ></span>
+    </span>
 
-        <slot></slot>
-    </label>
+    <slot></slot>
+  </label>
 </template>
 
 <script>
-/* eslint-disable */
 export default {
-    props:["value","color"],
-    model:{
-        prop:"value",
-        event:"change"
+  props: ['value', 'color'],
+  model: {
+    prop: 'value',
+    event: 'change',
+  },
+  methods: {
+    cambio: function (e) {
+      this.$emit('change', e.target.checked)
     },
-    methods:{
-        cambio:function(e){
-            this.$emit("change",e.target.checked)
-        }
-    }
+  },
 }
 </script>
 
-<style lang="scss" >
+<style lang="scss">
 ::-ms-check {
-    color: red;
-    background: black;
-    padding: 1em;
+  color: red;
+  background: black;
+  padding: 1em;
 }
 
-    .dai-checkbox-color-container{
-        //box-sizing: content-box !important;
-        position: relative;
-        display: flex;
-        align-items: center;
-        //flex-grow: 1;
-        cursor: pointer;
-        *{
-          box-sizing: content-box !important;
-        }
+.dai-checkbox-color-container {
+  //box-sizing: content-box !important;
+  position: relative;
+  display: flex;
+  align-items: center;
+  //flex-grow: 1;
+  cursor: pointer;
+  * {
+    box-sizing: content-box !important;
+  }
 
-        
-
-        input{
-            position: absolute;
-            left: 0;
-            opacity: 1;
-            z-index: 0;
-            // opacity: 0;
-            // z-index: -1;
-        }
-        .color-square{
-            display: flex;
-            width: 30px;
-            height: 27px;
-            border: 1px solid black;
-            border-radius: 4px;
-            margin-right: .7em;
-            span{
-                flex-grow: 1;
-            }
-            .custom-checkbox{
-                font-size: 15px;
-                padding-top: 5px;
-            }
-            .color{
-                background-color: black;
-                min-width: 15px;
-            }
-        }
+  input {
+    position: absolute;
+    left: 0;
+    opacity: 1;
+    z-index: 0;
+    // opacity: 0;
+    // z-index: -1;
+  }
+  .color-square {
+    display: flex;
+    width: 30px;
+    height: 27px;
+    border: 1px solid black;
+    border-radius: 4px;
+    margin-right: 0.7em;
+    span {
+      flex-grow: 1;
     }
+    .custom-checkbox {
+      font-size: 15px;
+      padding-top: 5px;
+    }
+    .color {
+      background-color: black;
+      min-width: 15px;
+    }
+  }
+}
 </style>

@@ -1,0 +1,15 @@
+@mixin mediaquery($breakpoint) {
+  @if $breakpoint == 'mov' {
+    @media screen and (max-width: calc(map-get($breakpoints, 'esc') - 1px)) {
+      @content;
+    }
+  } @else if $breakpoint == 'esc' {
+    @media screen and (min-width: map-get($breakpoints, 'esc')) {
+      @content;
+    }
+  } @else if $breakpoint == 'nav' {
+    @media screen and (min-width: $navegacion-breakpoint) {
+      @content;
+    }
+  }
+}
