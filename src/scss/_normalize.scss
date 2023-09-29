@@ -38,10 +38,12 @@ h6 {
 }
 
 a,
-.link {}
+.link {
+}
 
 button,
-.btn {}
+.btn {
+}
 
 article,
 aside,
@@ -57,17 +59,21 @@ section {
   display: block;
 }
 
-details {}
+details {
+}
 
 summary {
-  &:hover {}
+  &:hover {
+  }
 
-  &:focus {}
+  &:focus {
+  }
 }
 
 blockquote,
 form,
-figure {}
+figure {
+}
 
 figcaption {
   // font-size: La más pequeña;
@@ -105,9 +111,11 @@ ins {
   text-decoration: none;
 }
 
-abbr {}
+abbr {
+}
 
-ins {}
+ins {
+}
 
 b,
 strong {
@@ -158,23 +166,30 @@ mark {
 
 code,
 pre,
-samp {}
+samp {
+}
 
 kbd {
-  &::before {}
+  &::before {
+  }
 }
 
 samp {
-  &::before {}
+  &::before {
+  }
 }
 
-var {}
+var {
+}
 
-mark {}
+mark {
+}
 
-pre {}
+pre {
+}
 
-hr {}
+hr {
+}
 
 img {
   border-style: none;
@@ -189,68 +204,82 @@ svg:not(:root) {
 }
 
 // formularios
-fieldset {}
+fieldset {
+}
 
-legend {}
+legend {
+}
 
 input,
 textarea,
 select {
-  &:hover {}
+  &:hover {
+  }
 
-  &:focus {}
+  &:focus {
+  }
 }
 
-label {}
+label {
+}
 
-select {}
+select {
+}
 
 // listas
 ul,
 ol {
-
   ul,
   ol {
     li {
-      &::before {}
+      &::before {
+      }
     }
   }
 
-  li {}
+  li {
+  }
 }
 
 ul {
-  >li {
-    &::before {}
+  > li {
+    &::before {
+    }
   }
 }
 
 dl {
-  dt {}
+  dt {
+  }
 
-  dd {}
+  dd {
+  }
 }
 
 // tablas
 table {
-  caption {}
+  caption {
+  }
 
   td,
-  th {}
+  th {
+  }
 
-  th {}
+  th {
+  }
 
-  td {}
+  td {
+  }
 
   thead {
-
     td,
-    th {}
+    th {
+    }
   }
 
   tfoot {
-
     td,
-    th {}
+    th {
+    }
   }
 }

@@ -1,5 +1,4 @@
 <script setup>
-/* eslint-disable */
 import * as d3 from 'd3'
 
 import CheckboxColor from '@/components/utils/CheckboxColor.vue'
@@ -8,7 +7,6 @@ import { computed, onMounted, ref, watch } from 'vue'
 
 import variantesjson from '@/assets/data/variantes.json'
 const variantes = variantesjson
-const variante = ref('')
 
 import consorcioVariantesHeatmapTodas from '@/assets/datasets/consorcio_variantes_heatmap_todas.json'
 import consorcioHeatmap from '@/assets/datasets/consorcio_heatmap.json'
@@ -46,7 +44,7 @@ const dictColorsRango = {
   Rango_5: '#666666',
 }
 
-const variables = Object.entries(dictValuesRango).map(rango => {
+const vvariables = Object.entries(dictValuesRango).map(rango => {
   return {
     color: dictColorsRango[rango[0]],
     nombre: rango[1],
@@ -56,7 +54,7 @@ const variables = Object.entries(dictValuesRango).map(rango => {
 
 const status_button = ref('Quitar todos')
 const lista_filtros_activos = ref([])
-const variables_grafica = variables
+const variables_grafica = vvariables
 
 const width = ref(100)
 const height = ref(100)
@@ -527,34 +525,23 @@ function creandoHeatmapDesktop() {
     .attr('width', x.value.bandwidth())
     .attr('height', y.value.bandwidth())
     .style('fill', function (d) {
-      if (d.value == 0) {
-        return catChecked.filter(dd => dd === 'Rango_0') == 'Rango_0'
-          ? escalaColor[0]
-          : 'transparent'
+      if (d.value === 0) {
+        return catChecked.includes('Rango_0') ? escalaColor[0] : 'transparent'
       }
       if (d.value > 0 && d.value < 20) {
-        return catChecked.filter(dd => dd === 'Rango_1') == 'Rango_1'
-          ? escalaColor[1]
-          : 'transparent'
+        return catChecked.includes('Rango_1') ? escalaColor[1] : 'transparent'
       }
       if (d.value >= 20 && d.value < 40) {
-        return catChecked.filter(dd => dd === 'Rango_2') == 'Rango_2'
-          ? escalaColor[2]
-          : 'transparent'
+        return catChecked.includes('Rango_2') ? escalaColor[2] : 'transparent'
       }
       if (d.value >= 40 && d.value < 60) {
-        return catChecked.filter(dd => dd === 'Rango_3') == 'Rango_3'
-          ? escalaColor[3]
-          : 'transparent'
+        return catChecked.includes('Rango_3') ? escalaColor[3] : 'transparent'
       }
       if (d.value >= 60 && d.value < 80) {
-        return catChecked.filter(dd => dd === 'Rango_4') == 'Rango_4'
-          ? escalaColor[4]
-          : 'transparent'
-      } else {
-        return catChecked.filter(dd => dd === 'Rango_5') == 'Rango_5'
-          ? escalaColor[5]
-          : 'transparent'
+        return catChecked.includes('Rango_4') ? escalaColor[4] : 'transparent'
+      }
+      if (d.value >= 80) {
+        return catChecked.includes('Rango_5') ? escalaColor[5] : 'transparent'
       }
     })
     .on('mousemove', (evento, datum) => {
@@ -587,46 +574,22 @@ function creandoHeatmapMobile() {
     .attr('height', y.value.bandwidth())
     // .style("fill", function(d) { return myColor(d.value)} )
     .style('fill', function (d) {
-      if (d.value == 0) {
-        if (catChecked.filter(dd => dd === 'Rango_0') == 'Rango_0') {
-          return escalaColor[0]
-        } else {
-          return 'transparent'
-        }
+      if (d.value === 0) {
+        return catChecked.includes('Rango_0') ? escalaColor[0] : 'transparent'
       }
       if (d.value >= 0 && d.value < 20) {
-        if (catChecked.filter(dd => dd === 'Rango_1') == 'Rango_1') {
-          return escalaColor[1]
-        } else {
-          return 'transparent'
-        }
+        return catChecked.includes('Rango_1') ? escalaColor[1] : 'transparent'
       }
       if (d.value >= 20 && d.value < 40) {
-        if (catChecked.filter(dd => dd === 'Rango_2') == 'Rango_2') {
-          return escalaColor[2]
-        } else {
-          return 'transparent'
-        }
+        return catChecked.includes('Rango_2') ? escalaColor[2] : 'transparent'
       }
       if (d.value >= 40 && d.value < 60) {
-        if (catChecked.filter(dd => dd === 'Rango_3') == 'Rango_3') {
-          return escalaColor[3]
-        } else {
-          return 'transparent'
-        }
+        return catChecked.includes('Rango_3') ? escalaColor[3] : 'transparent'
       }
       if (d.value >= 60 && d.value < 80) {
-        if (catChecked.filter(dd => dd === 'Rango_4') == 'Rango_4') {
-          return escalaColor[4]
-        } else {
-          return 'transparent'
-        }
+        return catChecked.includes('Rango_4') ? escalaColor[4] : 'transparent'
       }
-      if (catChecked.filter(dd => dd === 'Rango_5') == 'Rango_5') {
-        return escalaColor[5]
-      } else {
-        return 'transparent'
-      }
+      return catChecked.includes('Rango_5') ? escalaColor[5] : 'transparent'
     })
     .attr('transform', 'translate(0, 15)')
     .on('click', (evento, datum) => {
@@ -659,7 +622,7 @@ onMounted(() => {
 
   // Dependiendo del valor de la lista de filtro
   //  asigna el id o colócalo vacío. Solo manda los que no están vacíos.
-  categorias_checkeadas.value = variables
+  categorias_checkeadas.value = vvariables
     .map((d, i) => (lista_filtros_activos.value[i] ? d.id : ''))
     .filter(d => d !== '')
 
@@ -689,7 +652,7 @@ onMounted(() => {
   actualizandoHeatmap()
 })
 
-watch(varianteSeleccionada, (newValue, oldValue) => {
+watch(varianteSeleccionada, () => {
   // Variante seleccionada proveniente del estado del store
   // console.log('varianteSeleccionada', newValue)
 
