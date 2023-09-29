@@ -210,7 +210,7 @@ const mostrar = ref(true)
         <li>
           <router-link
             class="color-white"
-            to="/development/visualization"
+            to="/development/visualization/intro"
           >
             Go to <span class="color-yellow">[Visualization]</span></router-link
           >

@@ -39,10 +39,10 @@ onMounted(() => {
         >
           México City<span class="icon icon-external-link"></span>
         </a>
-        looking for new challengues.
+        looking for new challengues!
       </p>
       <p>
-        Some of my <span class="color-blue">recent personal proyects!</span>
+        Some of my <span class="color-blue">recent personal proyects:</span>
       </p>
       <ul>
         <li>
