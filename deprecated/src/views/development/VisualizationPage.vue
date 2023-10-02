@@ -83,7 +83,7 @@ const menu_abierto = ref(false)
         </nav>
       </div>
       <div class="columna-12 columna-7-mov rout">
-        <router-view class="view" />
+        <router-view />
       </div>
     </div>
   </div>
