@@ -19,11 +19,15 @@ export default function (endPoint) {
    * Función asincrona que consulta los datos con los parámetros actualizados
    */
   async function consultarDatos() {
-    const { data } = await api.get(endPoint).catch(error => {
-      console.log(error)
-    })
-    // console.log('data', data)
+    const { data } = await api.get(endPoint)
     datos.value = data
+    // try {
+    //   const response = await api.get(endPoint)
+    //   console.log(response)
+    //   datos.value = response
+    // } catch (error) {
+    //   console.error(error)
+    // }
   }
 
   /**

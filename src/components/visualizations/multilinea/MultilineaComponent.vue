@@ -1,6 +1,6 @@
 <script setup>
 import * as d3 from 'd3'
-import { onMounted } from 'vue'
+import { onMounted, toRefs } from 'vue'
 
 // import CheckboxColor from '@/components/utils/CheckboxColor.vue'
 
@@ -12,9 +12,6 @@ const props = defineProps({
   datos: {
     // type: Array,
     type: Object,
-    default: () => {
-      return { nombre: 'Nombre de variable', cantidad_1: 120, cantidad_2: 30 }
-    },
   },
   titulo: String,
   instruccional: String,
@@ -65,8 +62,10 @@ const props = defineProps({
   },
 })
 
+const { datos } = toRefs(props)
+
 function esUnEstado() {
-  return props.datos.length === 1
+  return datos.value.length === 1
 }
 /**
  * Translate date
@@ -167,8 +166,8 @@ onMounted(() => {
    */
 
   // Obteniendo keys o nombre de la variable columna obj
-  const asArray = Object.entries(props.datos)
-  // console.log("asArray",asArray);
+  const asArray = Object.entries(datos.value)
+  // console.log('asArray', asArray)
 
   // Convirtiendo los sub objetos de valores en arreglo
   const dateArray = Object.values(asArray[0][1])

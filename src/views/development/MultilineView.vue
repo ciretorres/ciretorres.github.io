@@ -3,6 +3,13 @@ import consorcioEvolucionVariantes from '@/assets/datasets/consorcio_evolucion_v
 
 import Multilinea from '@/components/visualizations/multilinea/MultilineaComponent.vue'
 
+// import axios from 'axios'
+
+// import { onMounted, ref } from 'vue'
+
+// import usarDatosApi from '../../components/utils/usarDatosApi'
+// import { fetchJSON } from '../../components/utils/utiles'
+
 const diccionarioNacional = consorcioEvolucionVariantes
 
 const dictValuesRango = {
@@ -30,6 +37,40 @@ const variables = Object.entries(dictValuesRango).map(rango => {
     id: rango[0],
   }
 })
+
+// const public_path = process.env.BASE_URL
+// const data = ref([])
+
+// const { datos } = usarDatosApi('/consorcio_evolucion_variantes.json')
+
+// const insformacion = ref([])
+
+// onMounted(() => {
+//   // fetchJSON(
+//   //   public_path + 'datasets/consorcio_variantes_heatmap_todas.json',
+//   //   []
+//   // ).then(data => {
+//   //   insformacion.value = data
+//   // })
+//   // fetch(public_path + 'datasets/consorcio_variantes_heatmap_todas.json')
+//   //   .then(response => response.json())
+//   //   .then(data => {
+//   //     insformacion.value = data
+//   //   })
+//   // axios
+//   //   .get(public_path + 'datasets/consorcio_evolucion_variantes.json')
+//   //   .then(response => {
+//   //     console.log('response', response.data)
+//   //     data.value = response.data
+//   //     // console.log('data.value', Object.entries(data.value[0]))
+//   //   })
+// })
+
+// axios
+//   .get(public_path + 'datasets/consorcio_evolucion_variantes.json')
+//   .then(response => {
+//     data.value = response.data
+//   })
 
 const datosGrafica = diccionarioNacional
 const variablesGrafica = variables

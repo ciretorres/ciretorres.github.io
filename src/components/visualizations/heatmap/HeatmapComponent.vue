@@ -3,13 +3,13 @@ import * as d3 from 'd3'
 
 import CheckboxColor from '@/components/utils/CheckboxColor.vue'
 
-import { computed, onMounted, ref, watch } from 'vue'
+import { computed, onMounted, ref, toRefs, watch } from 'vue'
 
 import variantesjson from '@/assets/data/variantes.json'
 const variantes = variantesjson
 
 import consorcioHeatmap from '@/assets/datasets/consorcio_heatmap.json'
-import consorcioVariantesHeatmapTodas from '@/assets/datasets/consorcio_variantes_heatmap_todas.json'
+// import consorcioVariantesHeatmapTodas from '@/assets/datasets/consorcio_variantes_heatmap_todas.json'
 
 // import { useStore } from '@/stores'
 import store from '../../../store'
@@ -54,40 +54,6 @@ const vvariables = Object.entries(dictValuesRango).map(rango => {
   }
 })
 
-const status_button = ref('Quitar todos')
-const lista_filtros_activos = ref([])
-const variables_grafica = vvariables
-
-const width = ref(100)
-const height = ref(100)
-const width_limit = 769
-const datas = ref([])
-
-const keyAbreviatura = ref([])
-const keyVariante = ref([])
-const completo = ref([])
-const parentesis = ref([])
-
-const eje_x_bottom = ref({})
-const eje_y = ref({})
-const eje_y_abr = ref({})
-const eje_x_top = ref({})
-
-const svg = ref({})
-const grupo_contenedor = ref({})
-
-const categorias_checkeadas = ref([])
-
-const x = ref({})
-const y = ref({})
-
-const heatmap = ref({})
-
-const heatmapRef = ref('')
-const tooltipRef = ref('')
-const tooltipVariableRef = ref('')
-const tooltipCifraRef = ref('')
-
 const props = defineProps({
   mapa_calor_id: {
     type: String,
@@ -130,6 +96,42 @@ const props = defineProps({
     },
   },
 })
+
+const { datos } = toRefs(props)
+
+const status_button = ref('Quitar todos')
+const lista_filtros_activos = ref([])
+const variables_grafica = vvariables
+
+const width = ref(100)
+const height = ref(100)
+const width_limit = 769
+const datas = ref([])
+
+const keyAbreviatura = ref([])
+const keyVariante = ref([])
+const completo = ref([])
+const parentesis = ref([])
+
+const eje_x_bottom = ref({})
+const eje_y = ref({})
+const eje_y_abr = ref({})
+const eje_x_top = ref({})
+
+const svg = ref({})
+const grupo_contenedor = ref({})
+
+const categorias_checkeadas = ref([])
+
+const x = ref({})
+const y = ref({})
+
+const heatmap = ref({})
+
+const heatmapRef = ref('')
+const tooltipRef = ref('')
+const tooltipVariableRef = ref('')
+const tooltipCifraRef = ref('')
 
 function quitaPon() {
   if (!lista_filtros_activos.value.includes(false)) {
@@ -175,8 +177,9 @@ function configurandoDimensionesParaSVG() {
 function calculoHeatmap(tipoVariante) {
   if (tipoVariante.value === 'VTODAS') {
     // Asignando database
-    const datosJSON = consorcioVariantesHeatmapTodas
-    // console.log('this.datosJSON', datosJSON);
+    const datosJSON = datos.value
+    // const datosJSON = consorcioVariantesHeatmapTodas
+    console.log('this.datosJSON', datosJSON)
 
     // Creando keysArray para estado, tipo_variante y abreviatura_ent
     const groupEstado = {}
@@ -619,6 +622,7 @@ function actualizandoHeatmap() {
 }
 
 onMounted(() => {
+  console.log(datos)
   // Asigna todas las variables de filtro de input en checked
   lista_filtros_activos.value = variables_grafica.map(() => true)
 
@@ -651,6 +655,18 @@ onMounted(() => {
     creandoHeatmapMobile()
   }
 
+  actualizandoHeatmap()
+})
+
+watch(datos, () => {
+  configurandoDimensionesParaSVG()
+  calculoHeatmap(varianteSeleccionada)
+  configurandoDimensionesParaHeatmap()
+  if (window.innerWidth >= width_limit) {
+    creandoHeatmapDesktop()
+  } else {
+    creandoHeatmapMobile()
+  }
   actualizandoHeatmap()
 })
 
