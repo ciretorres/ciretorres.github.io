@@ -1,5 +1,34 @@
 <script setup>
 import MapaCalor from '@/components/visualizations/heatmap/MapaDeCalor.vue'
+// import { onMounted, ref } from 'vue'
+import usarDatosApi from '../../components/utils/usarDatosApi'
+
+const end_point = '/consorcio_variantes_heatmap_todas.json'
+
+const { datos } = usarDatosApi(end_point)
+
+console.log('datos', datos)
+
+// const public_path = process.env.BASE_URL
+
+// const data = ref([])
+// const errored = ref(false)
+// const loading = ref(true)
+// onMounted(() => {
+//   // axios
+//   //   .get(public_path + 'datasets/consorcio_variantes_heatmap_todas.json')
+//   //   .then(response => {
+//   //     data.value = response.data
+//   //     console.log('data.value', data.value)
+//   //   })
+//   //   .catch(error => {
+//   //     console.log(error)
+//   //     errored.value = true
+//   //   })
+//   //   .finally(() => {
+//   //     loading.value = true
+//   //   })
+// })
 </script>
 
 <template>
