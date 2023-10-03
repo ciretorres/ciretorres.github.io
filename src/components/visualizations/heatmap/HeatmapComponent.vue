@@ -179,7 +179,7 @@ function calculoHeatmap(tipoVariante) {
     // Asignando database
     const datosJSON = datos.value
     // const datosJSON = consorcioVariantesHeatmapTodas
-    console.log('this.datosJSON', datosJSON)
+    // console.log('datosJSON', datosJSON)
 
     // Creando keysArray para estado, tipo_variante y abreviatura_ent
     const groupEstado = {}
@@ -259,7 +259,7 @@ function calculoHeatmap(tipoVariante) {
   } else {
     // Asignando database
     const datosJSON = consorcioHeatmap
-    // console.log('this.datosJSON', datosJSON);
+    // console.log('datosJSON', datosJSON)
 
     // Filtro Tipo de Variante
     const filtroTipoVariante = Object.values(datosJSON).filter(
@@ -622,7 +622,6 @@ function actualizandoHeatmap() {
 }
 
 onMounted(() => {
-  console.log(datos)
   // Asigna todas las variables de filtro de input en checked
   lista_filtros_activos.value = variables_grafica.map(() => true)
 

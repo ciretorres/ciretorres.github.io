@@ -1,6 +1,6 @@
 <script setup>
 import * as d3 from 'd3'
-import { onMounted, ref } from 'vue'
+import { onMounted, ref, toRefs, watch } from 'vue'
 
 const public_path = process.env.BASE_URL
 
@@ -40,6 +40,8 @@ const props = defineProps({
   },
   color_area: String,
 })
+
+const { datos } = toRefs(props)
 
 const datas = ref([])
 const width_limit = 769
@@ -150,6 +152,10 @@ function multiFormat(date) {
  * Método para configurar las dimensiones del elemento SVG
  */
 function configurandoDimensionesParaSVG() {
+  // Asignando datos
+  datas.value = datos.value
+  // console.log('datas.value', datas.value)
+
   width.value =
     document.getElementById('contenedor_vis').clientWidth -
     props.margin.left -
@@ -341,9 +347,6 @@ function actualizandoArea() {
 }
 
 onMounted(() => {
-  // Asignando datos
-  datas.value = props.datos
-
   // Asigna elementos a variables
   svg.value = d3.select(`div#${props.area_id} svg.svg-area`)
   grupo_contenedor.value = svg.value.select('g.grupo-contenedor-de-area')
@@ -375,6 +378,16 @@ onMounted(() => {
 
   tooltip.value = d3.select(tooltipRef.value)
   tooltip.value.style('visibility', 'hidden')
+})
+
+watch(datos, () => {
+  configurandoDimensionesParaSVG()
+
+  configurandoDimensionesParaArea()
+
+  creandoArea()
+
+  actualizandoArea()
 })
 </script>
 

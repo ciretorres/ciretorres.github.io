@@ -2,42 +2,11 @@
 import SelectorVariantes from '@/components/visualizations/heatmap/SelectorVariantes.vue'
 import Heatmap from '@/components/visualizations/heatmap/HeatmapComponent.vue'
 
-import axios from 'axios'
-import { onMounted, ref } from 'vue'
-// import usarDatosApi from '../../components/utils/usarDatosApi'
+import usarDatosApi from '@/components/utils/usarDatosApi'
 
-// const end_point = '/consorcio_variantes_heatmap_todas.json'
+const end_point = '/consorcio_variantes_heatmap_todas.json'
 
-// const { datos } = usarDatosApi(end_point)
-
-// console.log('datos', datos)
-
-const public_path = process.env.BASE_URL
-
-const data = ref([])
-const errored = ref(false)
-const loading = ref(true)
-onMounted(async () => {
-  await axios
-    .get(public_path + 'datasets/consorcio_variantes_heatmap_todas.json')
-    .then(response => {
-      data.value = response.data
-      console.log('data.value', data.value)
-    })
-    .catch(error => {
-      console.log(error)
-      errored.value = true
-    })
-    .finally(() => {
-      loading.value = true
-    })
-})
-
-// const data = async () => {
-//   const response = await axios.get(
-//     public_path + 'datasets/consorcio_variantes_heatmap_todas.json'
-//   )
-// }
+const { datos } = usarDatosApi(end_point)
 </script>
 
 <template>
@@ -48,7 +17,7 @@ onMounted(async () => {
         <SelectorVariantes class="selector" />
       </div>
     </div>
-    <Heatmap :datos="data" />
+    <Heatmap :datos="datos" />
   </div>
 </template>
 
