@@ -1,5 +1,5 @@
 <template>
-  <RouterView class="view" />
+  <RouterView />
 </template>
 
 <style lang="scss">

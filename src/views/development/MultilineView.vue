@@ -33,6 +33,21 @@ const variables = Object.entries(dictValuesRango).map(rango => {
 
 const datosGrafica = diccionarioNacional
 const variablesGrafica = variables
+
+// import { onMounted, ref } from 'vue'
+// const public_path = process.env.BASE_URL
+// onMounted(() => {
+//   fetch(public_path + 'data/centroides-crateres.json')
+//     .then(response => response.json())
+//     .then(data => {
+//       centroides.value = data
+//     })
+// })
+// const data = async () => {
+//   const response = await axios.get(
+//     public_path + 'datasets/consorcio_variantes_heatmap_todas.json'
+//   )
+// }
 </script>
 
 <template>

@@ -1,7 +1,18 @@
 <script setup>
-import centroidesJSON from '@/assets/data/centroides-crateres.json'
+// import centroidesJSON from '@/assets/data/centroides-crateres.json'
+// const centroides = centroidesJSON
 
-const centroides = centroidesJSON
+import { onMounted, ref } from 'vue'
+import { fetchJSON } from '@/components/utils/utiles'
+
+const public_path = process.env.BASE_URL
+const centroides = ref([])
+
+onMounted(() => {
+  fetchJSON(public_path + 'data/centroides-crateres.json', []).then(data => {
+    centroides.value = data
+  })
+})
 </script>
 
 <template>
@@ -39,6 +50,7 @@ const centroides = centroidesJSON
 
         <template v-slot:footer> </template>
       </dai-tarjeta-contenedor-mapa>
+
       <div class="contenedor-fuentes">
         <p class="fuentes">Fuentes:</p>
         <ul>

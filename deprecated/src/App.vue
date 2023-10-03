@@ -1,7 +1,7 @@
 <script setup></script>
 
 <template>
-  <RouterView class="view" />
+  <RouterView />
 </template>
 
 <style lang="scss">

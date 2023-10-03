@@ -23,7 +23,7 @@ $ npm run dev
 $ npm run build
 
 # Subir cambios a subrama gh-pages
-$ git subtree push --prefix dist origin gh-pages
+$ git subtree push --prefix dist/ origin gh-pages
 
 # Lint with [ESLint](https://eslint.org/)
 $ npm run lint

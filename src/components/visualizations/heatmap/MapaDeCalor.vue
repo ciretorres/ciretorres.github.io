@@ -1,6 +1,12 @@
 <script setup>
 import SelectorVariantes from '@/components/visualizations/heatmap/SelectorVariantes.vue'
 import Heatmap from '@/components/visualizations/heatmap/HeatmapComponent.vue'
+
+import usarDatosApi from '@/components/utils/usarDatosApi'
+
+const end_point = '/consorcio_variantes_heatmap_todas.json'
+
+const { datos } = usarDatosApi(end_point)
 </script>
 
 <template>
@@ -11,7 +17,7 @@ import Heatmap from '@/components/visualizations/heatmap/HeatmapComponent.vue'
         <SelectorVariantes class="selector" />
       </div>
     </div>
-    <Heatmap />
+    <Heatmap :datos="datos" />
   </div>
 </template>
 

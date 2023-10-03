@@ -1,19 +1,50 @@
 <script setup>
 import * as d3 from 'd3'
 
-import dataJSON from '@/assets/data/area/data.json'
+// import dataJSON from '@/assets/data/area/data.json'
 
 import Area from '@/components/visualizations/area/AreaComponent.vue'
 
-import { computed } from 'vue'
+import { onMounted, ref, computed } from 'vue'
+import axios from 'axios'
 
+const public_path = process.env.BASE_URL
+
+const data = ref([])
+const errored = ref(false)
+const loading = ref(true)
+
+onMounted(() => {
+  axios
+    .get(public_path + 'data/area/data.json')
+    .then(response => {
+      data.value = response.data
+      // console.log('data.value', data.value)
+    })
+    .catch(error => {
+      console.log(error)
+      errored.value = true
+    })
+    .finally(() => {
+      loading.value = true
+    })
+})
+
+// const datosArea = computed(() => {
+//   dataJSON.forEach(d => {
+//     // Parse data
+//     d.date = d3.timeParse('%Y-%m-%d')(d.date)
+//     d.value = +d.value
+//   })
+//   return dataJSON
+// })
 const datosArea = computed(() => {
-  dataJSON.forEach(d => {
+  data.value.forEach(d => {
     // Parse data
     d.date = d3.timeParse('%Y-%m-%d')(d.date)
     d.value = +d.value
   })
-  return dataJSON
+  return data.value
 })
 </script>
 
