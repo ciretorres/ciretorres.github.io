@@ -10,11 +10,11 @@ const routes = [
     name: 'Inicio',
     component: HomeView,
   },
-  // {
-  //   path: '/pruebas',
-  //   name: 'Pruebas',
-  //   component: () => import('@/views/pruebas/Pruebas.vue'),
-  // },
+  {
+    path: '/pruebas',
+    name: 'Pruebas',
+    component: () => import('@/views/pruebas/PruebasView.vue'),
+  },
 
   /**
    * visualization
