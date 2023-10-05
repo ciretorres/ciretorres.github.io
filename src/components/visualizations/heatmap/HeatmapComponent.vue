@@ -3,7 +3,7 @@ import * as d3 from 'd3'
 
 import CheckboxColor from '@/components/utils/CheckboxColor.vue'
 
-import { computed, onMounted, ref, toRefs, watch } from 'vue'
+import { computed, onMounted, onUnmounted, ref, toRefs, watch } from 'vue'
 
 import variantesjson from '@/assets/data/variantes.json'
 const variantes = variantesjson
@@ -620,6 +620,17 @@ function actualizandoHeatmap() {
         : y.value(d.abreviatura)
     )
 }
+function reescalandoPantalla() {
+  configurandoDimensionesParaSVG()
+  calculoHeatmap(varianteSeleccionada)
+  configurandoDimensionesParaHeatmap()
+  if (window.innerWidth >= width_limit) {
+    creandoHeatmapDesktop()
+  } else {
+    creandoHeatmapMobile()
+  }
+  actualizandoHeatmap()
+}
 
 onMounted(() => {
   // Asigna todas las variables de filtro de input en checked
@@ -655,6 +666,12 @@ onMounted(() => {
   }
 
   actualizandoHeatmap()
+
+  window.addEventListener('resize', reescalandoPantalla)
+})
+
+onUnmounted(() => {
+  window.removeEventListener('resize', reescalandoPantalla)
 })
 
 watch(datos, () => {

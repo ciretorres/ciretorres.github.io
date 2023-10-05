@@ -1,6 +1,6 @@
 <script setup>
 import * as d3 from 'd3'
-import { onMounted, ref, toRefs, watch } from 'vue'
+import { onMounted, onUnmounted, ref, toRefs, watch } from 'vue'
 
 const public_path = process.env.BASE_URL
 
@@ -345,6 +345,15 @@ function actualizandoArea() {
     // .attr('d', this.areaGenerator);
     .attr('d', areaGenerator(datas.value))
 }
+function reescalandoPantalla() {
+  configurandoDimensionesParaSVG()
+
+  configurandoDimensionesParaArea()
+
+  creandoArea()
+
+  actualizandoArea()
+}
 
 onMounted(() => {
   // Asigna elementos a variables
@@ -378,6 +387,12 @@ onMounted(() => {
 
   tooltip.value = d3.select(tooltipRef.value)
   tooltip.value.style('visibility', 'hidden')
+
+  window.addEventListener('resize', reescalandoPantalla)
+})
+
+onUnmounted(() => {
+  window.removeEventListener('resize', reescalandoPantalla)
 })
 
 watch(datos, () => {
