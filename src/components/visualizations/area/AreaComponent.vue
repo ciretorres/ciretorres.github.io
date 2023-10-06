@@ -348,11 +348,11 @@ function actualizandoArea() {
 function reescalandoPantalla() {
   configurandoDimensionesParaSVG()
 
-  configurandoDimensionesParaArea()
+  // configurandoDimensionesParaArea()
 
-  creandoArea()
+  // creandoArea()
 
-  actualizandoArea()
+  // actualizandoArea()
 }
 
 onMounted(() => {

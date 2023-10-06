@@ -623,13 +623,13 @@ function actualizandoHeatmap() {
 function reescalandoPantalla() {
   configurandoDimensionesParaSVG()
   calculoHeatmap(varianteSeleccionada)
-  configurandoDimensionesParaHeatmap()
-  if (window.innerWidth >= width_limit) {
-    creandoHeatmapDesktop()
-  } else {
-    creandoHeatmapMobile()
-  }
-  actualizandoHeatmap()
+  // configurandoDimensionesParaHeatmap()
+  // if (window.innerWidth >= width_limit) {
+  //   creandoHeatmapDesktop()
+  // } else {
+  //   creandoHeatmapMobile()
+  // }
+  // actualizandoHeatmap()
 }
 
 onMounted(() => {
