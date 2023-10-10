@@ -45,6 +45,11 @@ const routes = [
         component: () => import('@/views/development/AreaView.vue'),
       },
       {
+        path: '/development/visualization/sankey',
+        name: 'Diagrama de flujo',
+        component: () => import('@/views/development/SankeyView.vue'),
+      },
+      {
         path: '/development/visualization/maps',
         name: 'Mapas',
         component: () => import('@/views/development/MapsPage.vue'),
