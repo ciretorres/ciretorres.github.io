@@ -130,12 +130,14 @@ function creandoSankey() {
   link
     .append('path')
     .attr('d', sankeyLinkHorizontal())
-    .attr('stroke', d => d.color)
+    // .attr('stroke', d => d.color)
+    .attr('stroke', '#efefef')
     .attr('stroke-width', d => Math.max(1, d.width))
     .attr('opacity', '0.5')
     .on('mouseover', function (d, i) {
       d3.select(this).transition().duration('50').attr('opacity', '1')
-      tooltip.value.style('background-color', i.color)
+      // tooltip.value.style('background-color', i.color)
+      tooltip.value.style('background-color', '#00000')
       tooltip.value.style('color', i.color === '#000000' ? '#FFF' : '#000')
       tooltip.value.text(
         '' +
@@ -194,7 +196,8 @@ function creandoSankey() {
     .attr('y', d => d.y0)
     .attr('height', d => d.y1 - d.y0)
     .attr('width', d => d.x1 - d.x0 - 2)
-    .attr('fill', d => d.color)
+    // .attr('fill', d => d.color)
+    .attr('fill', '#FFFFFF')
     .attr('class', 'node-rect')
     .attr('id', function (d, i) {
       d.id = i
@@ -216,7 +219,8 @@ function creandoSankey() {
             : 0.2
         })
 
-      tooltip.value.style('background-color', i.color)
+      // tooltip.value.style('background-color', i.color)
+      tooltip.value.style('background-color', '#00000')
       tooltip.value.style('color', i.color === '#000000' ? '#FFF' : '#000')
       tooltip.value.text(
         '' + i.name + ' : ' + i.value.toLocaleString() + '  value.'

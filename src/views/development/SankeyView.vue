@@ -209,12 +209,20 @@ const items = {
     { source: 'node41', target: 'node42', value: 1, color: '#efefef' },
   ],
 }
+// import data from '../../../public/data/sankey/sankeygreenhouse.json'
+// import data from '../../../public/data/sankey/energy.json
+// import data from '../../../public/data/sankey/data_sankey.json'
 </script>
 
 <template>
   <div class="d3js">
     <div class="container sin-fondo">
       <h1>Sankey Diagram</h1>
+      <SankeyComponent
+        v-if="false"
+        sankey_id="sankey0"
+        :datos="data"
+      />
       <SankeyComponent :datos="items" />
     </div>
   </div>
