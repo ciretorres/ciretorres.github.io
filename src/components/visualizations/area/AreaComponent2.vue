@@ -45,32 +45,32 @@ const props = defineProps({
       derecha: 10,
     }),
   },
-  textoTooltip: {
-    type: Function,
-    default: function () {
-      return `<p>No sirve el tooltip</p>`
-      // let total_muestras = d3.sum(
-      //   variables.value.map(d => tooltip_data_seleccionada.value[d.id])
-      // )
-      // let cifras_variables = variables.value.map(
-      //   d => `<p>
-      //       <span class="nomenclatura-tooltip" style="background: ${
-      //         d.color
-      //       } "></span>
-      //       ${d.nombre} <b>${tooltip_data_seleccionada.value[
-      //     d.id
-      //   ].toLocaleString('en')}</b>
-      //       (${Math.round(
-      //         (100 * tooltip_data_seleccionada.value[d.id]) / total_muestras
-      //       )}%)
-      //       </p>`
-      // )
-      // return `${cifras_variables.join('')}`
-    },
-  },
+  // textoTooltip: {
+  //   type: Function,
+  //   default: function () {
+  //     // return `<p>No sirve el tooltip</p>`
+  //     // let total_muestras = d3.sum(
+  //     //   variables.value.map(d => tooltip_data_seleccionada.value[d.id])
+  //     // )
+  //     // let cifras_variables = variables.value.map(
+  //     //   d => `<p>
+  //     //       <span class="nomenclatura-tooltip" style="background: ${
+  //     //         d.color
+  //     //       } "></span>
+  //     //       ${d.nombre} <b>${tooltip_data_seleccionada.value[
+  //     //     d.id
+  //     //   ].toLocaleString('en')}</b>
+  //     //       (${Math.round(
+  //     //         (100 * tooltip_data_seleccionada.value[d.id]) / total_muestras
+  //     //       )}%)
+  //     //       </p>`
+  //     // )
+  //     // return `${cifras_variables.join('')}`
+  //   },
+  // },
 })
 
-const { datos, variables, margen, textoTooltip } = toRefs(props)
+const { datos, variables, margen } = toRefs(props)
 
 const ancho_leyenda_y = ref(0)
 const tooltip_data_seleccionada = ref({})
@@ -80,21 +80,21 @@ const grupo_contenedor = ref({})
 const grupo_frente = ref({})
 const grupo_fondo = ref({})
 
-const eje_x = ref({})
-const eje_y = ref({})
-
-const guia_x = ref({})
-
 const ancho = ref(100)
 const alto = ref(100)
 
 const escalaX = ref({})
 const escalaY = ref({})
 
+const guia_x = ref({})
+
 const data_apilada = ref([])
 const area = ref({})
 
 const streams_apilados = ref({})
+
+const eje_x = ref({})
+const eje_y = ref({})
 
 const tooltip = ref({})
 
@@ -322,9 +322,27 @@ function mostrarTooltip(evento) {
       .style('width', `${props.ancho_tooltip}px`)
       .style('padding', '0 3px 0 10px')
 
+    let total_muestras = d3.sum(
+      variables.value.map(d => tooltip_data_seleccionada.value[d.id])
+    )
+    let cifras_variables = variables.value.map(
+      d => `<p>
+            <span class="nomenclatura-tooltip" style="background: ${
+              d.color
+            } "></span>
+            ${d.nombre} <b>${tooltip_data_seleccionada.value[
+        d.id
+      ].toLocaleString('en')}</b>
+            (${Math.round(
+              (100 * tooltip_data_seleccionada.value[d.id]) / total_muestras
+            )}%)
+            </p>`
+    )
+    let textoTooltip = cifras_variables.join('')
+
     contenidoTooltip
       .select('div.tooltip-cifras')
-      .html(textoTooltip.value)
+      .html(textoTooltip)
       .style('margin', '0')
       .style('padding', '0 0 5px 0')
 
@@ -340,6 +358,7 @@ function creandoStreams() {
   grupo_contenedor.value.selectAll('path.paths-streams').remove()
 
   grupo_contenedor.value.selectAll('path.paths-streams').remove()
+  // console.log('data_apilada.value', data_apilada.value)
   streams_apilados.value = grupo_contenedor.value
     .selectAll('gpaths')
     .data(data_apilada.value)

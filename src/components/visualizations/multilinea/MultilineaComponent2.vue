@@ -93,6 +93,7 @@ const ancho_leyenda_y = ref(0)
 const tooltip_data_seleccionada = ref({})
 
 const claves = ref([])
+
 const svg = ref({})
 const grupo_contenedor = ref({})
 const grupo_frente = ref({})
