@@ -1,6 +1,6 @@
 <script setup>
 import * as d3 from 'd3'
-import { onMounted, ref, toRefs, watch } from 'vue'
+import { onMounted, onUnmounted, ref, toRefs, watch } from 'vue'
 
 const public_path = process.env.BASE_URL
 
@@ -13,12 +13,30 @@ const props = defineProps({
     type: Array,
     default: () => [{ variable: '2021-01-01', cantidad: '30' }],
   },
+  variables: {
+    type: Array,
+    default: function () {
+      return ['variable', 'cantidad']
+    },
+  },
+  titulo_eje_y: {
+    type: String,
+    default: 'Título eje y',
+  },
+  titulo_eje_x: {
+    type: String,
+    default: 'Título eje x',
+  },
   titulo: String,
   instruccional: String,
-  fecha_actualizacion: String,
-  titulo_eje_y: String,
-  titulo_eje_x: String,
-  titulo_leyenda: String,
+  fecha_actualizacion: {
+    type: String,
+    default: 'dd/mm/aaaa',
+  },
+  titulo_leyenda: {
+    type: String,
+    default: 'Título de leyenda',
+  },
   titulo_tooltip: {
     type: String,
     default: '',
@@ -32,22 +50,12 @@ const props = defineProps({
       left: 55,
     }),
   },
-  variables: {
-    type: Array,
-    default: function () {
-      return ['variable', 'cantidad']
-    },
-  },
   color_area: String,
 })
 
 const { datos } = toRefs(props)
 
-const datas = ref([])
 const width_limit = 769
-
-const width = ref()
-const height = ref()
 
 const svg = ref({})
 const grupo_contenedor = ref({})
@@ -59,6 +67,11 @@ const texto_y = ref({})
 const eje_x = ref({})
 const eje_y = ref({})
 
+const width = ref()
+const height = ref()
+
+const datas = ref([])
+
 const area = ref({})
 
 const areaGenerator = d3.area()
@@ -68,6 +81,55 @@ const tooltipRef = ref('')
 const tooltipVariableRef = ref('')
 const tooltipCifraRef = ref('')
 
+/**
+ * Método para configurar las dimensiones del elemento SVG
+ */
+function configurandoDimensionesParaSVG() {
+  // Asignando datos
+  datas.value = datos.value
+  // console.log('datas.value', datas.value)
+
+  width.value =
+    document.getElementById('contenedor_vis').clientWidth -
+    props.margin.left -
+    props.margin.right
+
+  window.innerWidth >= width_limit // 769
+    ? (height.value = 600 - props.margin.top - props.margin.bottom) // Desktop
+    : (height.value = 400 - props.margin.top - props.margin.bottom) // Mobile
+
+  svg.value
+    .attr('width', width.value + props.margin.left + props.margin.right)
+    .attr('height', height.value + props.margin.top + props.margin.bottom)
+  // .style("background-color", "#efefef") // Comentar fondo
+
+  grupo_contenedor.value.attr(
+    'transform',
+    `translate(${props.margin.left}, ${props.margin.top})`
+  )
+
+  grupo_contenedor_ejes.value.attr(
+    'transform',
+    `translate(${props.margin.left}, ${props.margin.top})`
+  )
+
+  // Labels title
+  texto_x.value
+    .attr('transform', `translate(${width.value * 0.5}, ${height.value + 25})`)
+    .style('text-anchor', 'middle')
+    .style('font-size', '10px')
+    .style('dominant-baseline', 'hanging')
+    .style('color', '#efefef')
+  texto_y.value
+    .attr(
+      'transform',
+      `translate(${-props.margin.left}, ${height.value * 0.5}) rotate(-90)`
+    )
+    .style('text-anchor', 'middle')
+    .style('font-size', '10px')
+    .style('dominant-baseline', 'hanging')
+    .style('color', '#efefef')
+}
 /**
  * Método para traducir el formato de fecha
  */
@@ -149,73 +211,39 @@ function multiFormat(date) {
   )(date)
 }
 /**
- * Método para configurar las dimensiones del elemento SVG
- */
-function configurandoDimensionesParaSVG() {
-  // Asignando datos
-  datas.value = datos.value
-  // console.log('datas.value', datas.value)
-
-  width.value =
-    document.getElementById('contenedor_vis').clientWidth -
-    props.margin.left -
-    props.margin.right
-
-  window.innerWidth >= width_limit // 769
-    ? (height.value = 600 - props.margin.top - props.margin.bottom) // Desktop
-    : (height.value = 400 - props.margin.top - props.margin.bottom) // Mobile
-
-  svg.value
-    .attr('width', width.value + props.margin.left + props.margin.right)
-    .attr('height', height.value + props.margin.top + props.margin.bottom)
-  // .style("background-color", "#efefef") // Comentar fondo
-
-  grupo_contenedor.value.attr(
-    'transform',
-    `translate(${props.margin.left}, ${props.margin.top})`
-  )
-
-  grupo_contenedor_ejes.value.attr(
-    'transform',
-    `translate(${props.margin.left}, ${props.margin.top})`
-  )
-
-  // Labels title
-  texto_x.value
-    .attr('transform', `translate(${width.value * 0.5}, ${height.value + 25})`)
-    .style('text-anchor', 'middle')
-    .style('font-size', '10px')
-    .style('dominant-baseline', 'hanging')
-    .style('color', '#efefef')
-
-  texto_y.value
-    .attr(
-      'transform',
-      `translate(${-props.margin.left}, ${height.value * 0.5}) rotate(-90)`
-    )
-    .style('text-anchor', 'middle')
-    .style('font-size', '10px')
-    .style('dominant-baseline', 'hanging')
-    .style('color', '#efefef')
-}
-/**
  * Método para configurar dimensiones para área
  */
 function configurandoDimensionesParaArea() {
-  // Build X scale -> it is a date format
-  const xScale = d3
-    .scaleTime()
-    .range([0, width.value])
-    .domain(d3.extent(datas.value, d => d.date))
-    .nice()
-
   // Build Y scale
   const yScale = d3
     .scaleLinear()
-    .range([height.value, 0])
     .domain([0, d3.max(datas.value, d => +d.value)])
-    .nice()
+    .range([height.value, 0])
+  // .nice()
 
+  // Build X scale -> it is a date format
+  const xScale = d3
+    .scaleTime()
+    .domain(d3.extent(datas.value, d => d.date))
+    .range([0, width.value])
+  // .nice()
+
+  // Grid de líneas y posición de textos en los ejes
+  // Add Y axis
+  const yAxis = d3.axisLeft(yScale).tickSize(-width.value)
+  // Call Y axis
+  const yAxisG = eje_y.value.append('g').call(yAxis)
+  // Remove domain line
+  yAxisG.selectAll('.domain').remove()
+  // Font text
+  yAxisG
+    .selectAll('.tick text')
+    // .style('font-family', 'Montserrat')
+    .style('font-size', '10px')
+    .style('color', '#efefef')
+  // Color lines
+  yAxisG.selectAll('.tick line').style('stroke', '#efefef')
+  // --------------
   // Add X axis
   const xAxis = d3
     .axisBottom(xScale)
@@ -223,45 +251,22 @@ function configurandoDimensionesParaArea() {
     .tickFormat(multiFormat)
     .tickSize(-height.value)
     .tickPadding(10)
-
   // Call X axis
   const xAxisG = eje_x.value
     .append('g')
     .attr('transform', `translate(0, ${height.value})`)
     .call(xAxis)
     .style('color', '#efefef')
-
   // Remove domain line
   xAxisG.selectAll('.domain').remove()
-
   // Font text
   xAxisG
     .selectAll('.tick text')
     // .style('font-family', 'Montserrat')
     .style('font-size', '10px')
     .style('text-transform', 'uppercase')
-
   // Color lines
   xAxisG.selectAll('.tick line').style('stroke', '#efefef')
-
-  // Add Y axis
-  const yAxis = d3.axisLeft(yScale).tickSize(-width.value)
-
-  // Call Y axis
-  const yAxisG = eje_y.value.append('g').call(yAxis)
-
-  // Remove domain line
-  yAxisG.selectAll('.domain').remove()
-
-  // Font text
-  yAxisG
-    .selectAll('.tick text')
-    // .style('font-family', 'Montserrat')
-    .style('font-size', '10px')
-    .style('color', '#efefef')
-
-  // Color lines
-  yAxisG.selectAll('.tick line').style('stroke', '#efefef')
 
   // Area generator
   // areaGenerator.value = d3.area()
@@ -269,7 +274,8 @@ function configurandoDimensionesParaArea() {
     .x(d => xScale(d.date))
     .y0(yScale(0))
     .y1(d => yScale(d.value))
-    .curve(d3.curveBasis)
+    .curve(d3.curveLinear)
+  // .curve(d3.curveBasis)
 }
 /**
  * Método para desplegar el tooltip
@@ -341,9 +347,20 @@ function creandoArea() {
  */
 function actualizandoArea() {
   area.value
+    // .data(datas.value)
     // .datum(this.datas, function (d) { return d.date + ':' + d.value; })
     // .attr('d', this.areaGenerator);
+    // .attr('d', areaGenerator.value)
     .attr('d', areaGenerator(datas.value))
+}
+function reescalandoPantalla() {
+  configurandoDimensionesParaSVG()
+
+  configurandoDimensionesParaArea()
+
+  // creandoArea()
+
+  actualizandoArea()
 }
 
 onMounted(() => {
@@ -378,6 +395,12 @@ onMounted(() => {
 
   tooltip.value = d3.select(tooltipRef.value)
   tooltip.value.style('visibility', 'hidden')
+
+  window.addEventListener('resize', reescalandoPantalla)
+})
+
+onUnmounted(() => {
+  window.removeEventListener('resize', reescalandoPantalla)
 })
 
 watch(datos, () => {
@@ -397,15 +420,6 @@ watch(datos, () => {
       class="dai-contenedor-area"
       v-bind:id="area_id"
     >
-      <div class="dai-titulo">
-        <h3 class="titulo-visualizacion">Título del proyecto</h3>
-        <p class="fecha-actualizacion">
-          Última actualización: {{ fecha_actualizacion }}
-        </p>
-        <p class="texto-instruccional">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-        </p>
-      </div>
       <div
         class="contenedor-vis"
         id="contenedor_vis"
@@ -452,47 +466,9 @@ watch(datos, () => {
 
 <style lang="scss" scoped>
 $border-radius-tarjeta: 10px;
-
 .dai-contenedor-area {
-  max-width: 450px;
-  padding: 10px;
-  // border: 1px solid #000;
   border-radius: $border-radius-tarjeta;
-
-  display: grid;
-  grid-gap: 10px;
-  grid-template-areas:
-    'titulo'
-    'vis'
-    'info';
-  @media (min-width: 769px) {
-    max-width: 1300px;
-    grid-template-areas:
-      'titulo vis'
-      'info vis';
-    grid-template-columns: 1fr 2fr;
-    grid-template-rows: 1fr 2fr;
-  }
-
-  .dai-titulo {
-    grid-area: titulo;
-    @media (min-width: 769px) {
-      border-bottom: 1px solid #ccc;
-    }
-    p.fecha-actualizacion {
-      font-size: 14px;
-      font-weight: 600;
-      margin: 10px 0 5px 0;
-    }
-
-    p.texto-instruccional {
-      font-size: 14px;
-      font-weight: 300;
-      margin: 15px 0;
-    }
-  }
   .contenedor-vis {
-    grid-area: vis;
     .tooltip-area {
       position: absolute;
       visibility: hidden;

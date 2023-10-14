@@ -8,12 +8,14 @@ import router from './router'
 
 const app = createApp(App)
 
-import DaiMaps from 'dai-maps'
-import 'dai-maps/dist/dai-maps.css'
-app.use(DaiMaps)
+// import DaiMaps from 'dai-maps'
+// import 'dai-maps/dist/dai-maps.css'
+// app.use(DaiMaps)
+
+import SisdaiMapas from 'sisdai-mapas'
 // app.provide('DaiMaps', DaiMaps)
 // app.component('DaiMaps', DaiMaps)
-
+app.use(SisdaiMapas)
 app.use(createPinia())
 app.use(router)
 

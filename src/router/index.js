@@ -10,11 +10,11 @@ const routes = [
     name: 'Inicio',
     component: HomeView,
   },
-  // {
-  //   path: '/pruebas',
-  //   name: 'Pruebas',
-  //   component: () => import('@/views/pruebas/Pruebas.vue'),
-  // },
+  {
+    path: '/pruebas',
+    name: 'Pruebas',
+    component: () => import('@/views/pruebas/PruebasView.vue'),
+  },
 
   /**
    * visualization
@@ -43,6 +43,11 @@ const routes = [
         path: '/development/visualization/area',
         name: 'Área',
         component: () => import('@/views/development/AreaView.vue'),
+      },
+      {
+        path: '/development/visualization/sankey',
+        name: 'Diagrama de flujo',
+        component: () => import('@/views/development/SankeyView.vue'),
       },
       {
         path: '/development/visualization/maps',

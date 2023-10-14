@@ -72,6 +72,13 @@ const menu_abierto = ref(false)
                         >Area</router-link
                       >
                     </li>
+                    <li>
+                      <router-link
+                        class="nav-boton ml-5"
+                        to="/development/visualization/sankey"
+                        >Flow diagram</router-link
+                      >
+                    </li>
                   </ul>
                 </li>
                 <li>

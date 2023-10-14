@@ -4,6 +4,7 @@
   "description": "",
   "private": true,
   "scripts": {
+    "reinstall": "rm -rf node_modules && rm package-lock.json && npm cache clean -f && npm cache verify && npm i",
     "deprecated:install": "cd deprecated && npm install",
     "deprecated:dev": "cd deprecated && npm run dev",
     "dev": "vite",
@@ -14,13 +15,14 @@
     "test:e2e:dev": "start-server-and-test 'vite dev --port 4173' http://localhost:4173 'cypress open --e2e'",
     "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs --fix --ignore-path .gitignore",
     "format": "prettier --write src/",
-    "format-lint": "npm run format && npm run lint",
-    "reinstall": "rm -rf node_modules && rm package-lock.json && npm cache clean -f && npm cache verify && npm i"
+    "format-lint": "npm run format && npm run lint"
   },
   "dependencies": {
     "d3": "^7.8.5",
     "dai-maps": "git+https://devtemp-invitado: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@github.com/conacyt-dai/dai-maps.git#v0.3.12",
     "pinia": "^2.1.6",
+    "sisdai-css": "git+https://codigo.conahcyt.mx/sisdai/sisdai-css#v0.42.9",
+    "sisdai-mapas": "file:../../sisdai-mapas",
     "vue": "^3.3.4",
     "vue-router": "^4.2.4"
   },
