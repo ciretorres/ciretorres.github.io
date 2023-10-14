@@ -1,50 +1,19 @@
 <script setup>
-import centroidesJSON from '@/assets/data/centroides-crateres.json'
-
-const centroides = centroidesJSON
+import MapaComponent from '@/components/visualizations/maps/MapaComponent.vue'
 </script>
 
 <template>
   <div class="maps">
     <div class="container sin-fondo">
       <h1>Mapas</h1>
-      <dai-tarjeta-contenedor-mapa class="contenedor-mapa"
-        :permitir-colapso="false"
-        :llenar-espacio-disponible-con-mapa="true"
-      >
-        <template #header>
-          <h1>Cráteres de impacto en la Tierra</h1>
+      <MapaComponent></MapaComponent>
 
-          <dai-leyenda-mapa
-            :para="['crateres_centroides']"
-          />
-        </template>
-
-        <dai-mapa class="full-screen-height">
-          <dai-capa-xyz-osm />
-
-          <dai-capa-geojson 
-            id="crateres_centroides"
-            :datos="centroides" 
-            :estilo-capa="{circle:{fill:{color:'red'},radius:2}}"
-            :contenidoTooltip="(centroide) => `
-              <p>Nombre: ${centroide.name}</p>
-              <p>Lugar: ${centroide.country}</p>
-              <p>Diámetro: ${centroide.diameter_km} km</p>
-              <p>Edad: ${centroide.age_ma} ma</p>
-            `"
-          /> 
-        </dai-mapa>
-        
-        <template v-slot:footer>
-        </template>
-      </dai-tarjeta-contenedor-mapa>
       <div class="contenedor-fuentes">
         <p class="fuentes">Fuentes:</p>
         <ul>
           <li>
-            <a href="https://github.com/conacyt-dai/dai-maps"
-              >https://github.com/conacyt-dai/dai-maps</a
+            <a href="https://codigo.conahcyt.mx/sisdai/sisdai-mapas"
+              >https://codigo.conahcyt.mx/sisdai/sisdai-mapas</a
             >
           </li>
           <li>
@@ -97,27 +66,27 @@ const centroides = centroidesJSON
   </div>
 </template>
 
-<style>
-.maps {
-  width: 100%;
-  height: 100%;
-  /* position: absolute; */
-  /* top: 0; */
-  left: 0;
-}
-.contenedor-mapa {
-  height: 90%;
-}
-.contenedor-mapa,
+<style lang="scss" scoped>
+// .maps {
+//   width: 100%;
+//   height: 100%;
+//   /* position: absolute; */
+//   /* top: 0; */
+//   left: 0;
+// }
+// .contenedor-mapa {
+//   height: 90%;
+// }
+// .contenedor-mapa,
 .contenedor-fuentes {
   width: calc(100% - 64px);
   background: #fff;
   display: block;
   margin: 0 auto;
 }
-.full-screen-height {
-  height: 100%;
-}
+// .full-screen-height {
+//   height: 100%;
+// }
 .fuentes {
   color: #000;
 }
