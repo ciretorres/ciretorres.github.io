@@ -4,7 +4,7 @@ import * as d3 from 'd3'
 // import dataJSON from '@/assets/data/area/data.json'
 
 // import Area from '@/components/visualizations/area/AreaComponent.vue'
-import Area3 from '@/components/visualizations/area/AreaComponent3.vue'
+import Area4 from '@/components/visualizations/area/AreaComponent4.vue'
 
 import { onMounted, ref, computed } from 'vue'
 import axios from 'axios'
@@ -47,7 +47,7 @@ const datosArea = computed(() => {
   return data.value
 })
 
-// import Area2 from '@/components/visualizations/area/AreaComponent2.vue'
+import Area2 from '@/components/visualizations/area/AreaComponent2.vue'
 import Variables from '../../../public/data/area/dummy_voc.json'
 
 let dict_meses = {
@@ -83,11 +83,11 @@ datos_grafica.value = [...Variables]
 <template>
   <div class="area-view">
     <div class="container sin-fondo">
-      <Area3
+      <Area4
         :area_id="'area'"
         :datos="datosArea"
       />
-      <!-- <Area2
+      <Area2
         areas_apiladas_id="streamgraphbasico"
         :alto_vis="300"
         :datos="datos_grafica"
@@ -97,7 +97,7 @@ datos_grafica.value = [...Variables]
         ]"
         nombre_columna_horizontal="fecha_1"
       />
-      <Area
+      <!-- <Area
         :area_id="'area'"
         :datos="datosArea"
         color_area="#fff"
