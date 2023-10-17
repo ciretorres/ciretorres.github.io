@@ -2,8 +2,6 @@
 import * as d3 from 'd3'
 import { onMounted, onUnmounted, ref, toRefs, watch } from 'vue'
 
-const public_path = process.env.BASE_URL
-
 const props = defineProps({
   area_id: {
     type: String,
@@ -16,7 +14,7 @@ const props = defineProps({
   variables: {
     type: Array,
     default: function () {
-      return ['variable', 'cantidad']
+      return [{ id: 'value', nombre: 'value', color: '#FFFFFF' }]
     },
   },
   titulo_eje_y: {
@@ -27,113 +25,148 @@ const props = defineProps({
     type: String,
     default: 'Título eje x',
   },
-  titulo: String,
-  instruccional: String,
-  fecha_actualizacion: {
-    type: String,
-    default: 'dd/mm/aaaa',
+  ancho_tooltip: {
+    type: Number,
+    default: 140,
   },
-  titulo_leyenda: {
-    type: String,
-    default: 'Título de leyenda',
+  alto_vis: {
+    type: Number,
+    default: 400,
   },
-  titulo_tooltip: {
-    type: String,
-    default: '',
-  },
-  margin: {
+  margen: {
     type: Object,
     default: () => ({
-      top: 5,
-      right: 15,
-      bottom: 35,
-      left: 55,
+      arriba: 10,
+      derecha: 10,
+      abajo: 50,
+      izquierda: 50,
     }),
   },
-  color_area: String,
 })
 
-const { datos } = toRefs(props)
+const { datos, variables, margen } = toRefs(props)
 
-const width_limit = 769
+const width_limit = ref(769)
+const tooltip_data_seleccionada = ref({})
 
 const svg = ref({})
 const grupo_contenedor = ref({})
+const grupo_frente = ref({})
+const grupo_fondo = ref({})
 const grupo_contenedor_ejes = ref({})
 
-const texto_x = ref({})
-const texto_y = ref({})
+const xLabel = ref({})
+const yLabel = ref({})
 
-const eje_x = ref({})
-const eje_y = ref({})
+const xAxis = ref({})
+const yAxis = ref({})
 
-const width = ref()
-const height = ref()
+const width = ref(100)
+const height = ref(100)
 
-const datas = ref([])
+const xScale = ref({})
+const yScale = ref({})
+
+const data_stack = ref([])
 
 const area = ref({})
-
-const areaGenerator = d3.area()
+const areaGenerator = ref({})
 
 const tooltip = ref({})
 const tooltipRef = ref('')
-const tooltipVariableRef = ref('')
 const tooltipCifraRef = ref('')
 
-/**
- * Método para configurar las dimensiones del elemento SVG
- */
 function configurandoDimensionesParaSVG() {
-  // Asignando datos
-  datas.value = datos.value
-  // console.log('datas.value', datas.value)
-
+  /**
+   * Método para configurar las dimensiones del elemento SVG
+   */
   width.value =
-    document.getElementById('contenedor_vis').clientWidth -
-    props.margin.left -
-    props.margin.right
+    document.querySelector(`#${props.area_id}`).clientWidth -
+    margen.value.derecha -
+    margen.value.izquierda
 
-  window.innerWidth >= width_limit // 769
-    ? (height.value = 600 - props.margin.top - props.margin.bottom) // Desktop
-    : (height.value = 400 - props.margin.top - props.margin.bottom) // Mobile
+  // height.value = props.alto_vis - margen.value.arriba - margen.value.abajo
+  window.innerWidth >= width_limit.value // 769
+    ? (height.value = props.alto_vis - props.margen.arriba - props.margen.abajo) // Desktop
+    : (height.value = 500 - props.margen.arriba - props.margen.abajo) // Mobile
 
   svg.value
-    .attr('width', width.value + props.margin.left + props.margin.right)
-    .attr('height', height.value + props.margin.top + props.margin.bottom)
-    .style('background-color', 'rgba(255,255,255,0.2)') // Comentar fondo
+    .attr('width', width.value + margen.value.derecha + margen.value.izquierda)
+    .attr('height', height.value + margen.value.arriba + margen.value.abajo)
+  // .style('background-color', '#efefef99') // Comentar fondo
 
   grupo_contenedor.value.attr(
     'transform',
-    `translate(${props.margin.left}, ${props.margin.top})`
+    `translate(${margen.value.izquierda},${margen.value.arriba})`
+  )
+
+  grupo_fondo.value.attr(
+    'transform',
+    `translate(${margen.value.izquierda},${margen.value.arriba})`
+  )
+
+  grupo_frente.value.attr(
+    'transform',
+    `translate(${margen.value.izquierda},${margen.value.arriba})`
   )
 
   grupo_contenedor_ejes.value.attr(
     'transform',
-    `translate(${props.margin.left}, ${props.margin.top})`
+    `translate(${margen.value.izquierda}, ${margen.value.arriba})`
   )
-
-  // Labels title
-  texto_x.value
-    .attr('transform', `translate(${width.value * 0.5}, ${height.value + 25})`)
-    .style('text-anchor', 'middle')
-    .style('font-size', '10px')
-    .style('dominant-baseline', 'hanging')
-    .style('color', '#efefef')
-  texto_y.value
-    .attr(
-      'transform',
-      `translate(${-props.margin.left}, ${height.value * 0.5}) rotate(-90)`
-    )
-    .style('text-anchor', 'middle')
-    .style('font-size', '10px')
-    .style('dominant-baseline', 'hanging')
-    .style('color', '#efefef')
 }
-/**
- * Método para traducir el formato de fecha
- */
 function multiFormat(date) {
+  /**
+   * Método para traducir el formato de fecha
+   */
+  // const locale = d3.timeFormatLocale({
+  //   decimal: ',',
+  //   thousands: '.',
+  //   grouping: [3],
+  //   currency: ['€', ''],
+  //   dateTime: '%A, %e %B %Y г. %X',
+  //   date: '%d.%m.%Y',
+  //   time: '%H:%M:%S',
+  //   periods: ['AM', 'PM'],
+  //   days: [
+  //     'Domingo',
+  //     'Lunes',
+  //     'Martes',
+  //     'Miércoles',
+  //     'Jueves',
+  //     'Viernes',
+  //     'Sábado',
+  //   ],
+  //   shortDays: ['Dom', 'Lun', 'Mar', 'Mi', 'Jue', 'Vie', 'Sab'],
+  //   months: [
+  //     'Enero',
+  //     'Febrero',
+  //     'Marzo',
+  //     'Abril',
+  //     'Mayo',
+  //     'Junio',
+  //     'Julio',
+  //     'Agosto',
+  //     'Septiembre',
+  //     'Octubre',
+  //     'Noviembre',
+  //     'Diciembre',
+  //   ],
+  //   shortMonths: [
+  //     'ene',
+  //     'feb',
+  //     'mar',
+  //     'abr',
+  //     'may',
+  //     'jun',
+  //     'jul',
+  //     'ago',
+  //     'sep',
+  //     'oct',
+  //     'nov',
+  //     'dic',
+  //   ],
+  // })
   const locale = d3.timeFormatLocale({
     decimal: ',',
     thousands: '.',
@@ -144,53 +177,54 @@ function multiFormat(date) {
     time: '%H:%M:%S',
     periods: ['AM', 'PM'],
     days: [
-      'Domingo',
-      'Lunes',
-      'Martes',
-      'Miércoles',
-      'Jueves',
-      'Viernes',
-      'Sábado',
+      'Sunday',
+      'Monday',
+      'Tuesday',
+      'Wednesday',
+      'Thursday',
+      'Friday',
+      'Saturday',
     ],
-    shortDays: ['Dom', 'Lun', 'Mar', 'Mi', 'Jue', 'Vie', 'Sab'],
+    shortDays: ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'],
     months: [
-      'Enero',
-      'Febrero',
-      'Marzo',
-      'Abril',
-      'Mayo',
-      'Junio',
-      'Julio',
-      'Agosto',
-      'Septiembre',
-      'Octubre',
-      'Noviembre',
-      'Diciembre',
+      'January',
+      'February',
+      'March',
+      'April',
+      'May',
+      'June',
+      'July',
+      'August',
+      'September',
+      'October',
+      'November',
+      'December',
     ],
     shortMonths: [
-      'Ene',
-      'Feb',
-      'Mar',
-      'Abr',
-      'May',
-      'Jun',
-      'Jul',
-      'Ago',
-      'Sep',
-      'Oct',
-      'Nov',
-      'Dic',
+      'jan',
+      'feb',
+      'mar',
+      'apr',
+      'may',
+      'jun',
+      'jul',
+      'aug',
+      'sep',
+      'oct',
+      'nov',
+      'dec',
     ],
   })
 
-  const formatMillisecond = locale.format('.%L'),
-    formatSecond = locale.format(':%S'),
-    formatMinute = locale.format('%I:%M'),
-    formatHour = locale.format('%I %p'),
-    formatDay = locale.format('%a %d'),
-    formatWeek = locale.format('%b %d'),
-    formatMonth = locale.format('%b'),
-    formatYear = locale.format('%Y')
+  const formatMillisecond = locale.format('.%L')
+  const formatSecond = locale.format(':%S')
+  const formatMinute = locale.format('%I:%M')
+  const formatHour = locale.format('%I %p')
+  const formatDay = locale.format('%a %d')
+  const formatWeek = locale.format('%b %d')
+  // const formatMonth = locale.format('%b'),
+  const formatMonthYear = locale.format('%b/%Y')
+  // const formatYear = locale.format('%Y')
 
   return (
     d3.timeSecond(date) < date
@@ -206,195 +240,232 @@ function multiFormat(date) {
         ? formatDay
         : formatWeek
       : d3.timeYear(date) < date
-      ? formatMonth
-      : formatYear
+      ? formatMonthYear
+      : formatMonthYear
   )(date)
 }
-/**
- * Método para configurar dimensiones para área
- */
 function configurandoDimensionesParaArea() {
-  // Build Y scale
-  const yScale = d3
+  /**
+   * Método para configurar dimensiones para área
+   */
+  // Apilando datos
+  data_stack.value = d3.stack().keys(variables.value.map(d => d.id))(
+    datos.value
+  )
+  // Asignarle un objeto en data a la data apilada
+  for (let i = variables.value.length - 1; i >= 0; i -= 1) {
+    data_stack.value[i].forEach(dd => {
+      dd.data = Object.assign({}, dd.data, {
+        key: data_stack.value[i].key,
+      })
+    })
+  }
+  // Construyendo escalas
+  // Build Y scale -> it is linear
+  yScale.value = d3
     .scaleLinear()
-    .domain([0, d3.max(datas.value, d => +d.value)])
+    .domain([
+      0,
+      d3.max(datos.value.map(d => d3.sum(variables.value.map(dd => d[dd.id])))),
+    ])
     .range([height.value, 0])
-  // .nice()
-
+    .nice()
   // Build X scale -> it is a date format
-  const xScale = d3
+  xScale.value = d3
     .scaleTime()
-    .domain(d3.extent(datas.value, d => d.date))
+    .domain(d3.extent(datos.value.map(d => d.date)))
     .range([0, width.value])
   // .nice()
 
-  // Grid de líneas y posición de textos en los ejes
-  // Add Y axis
-  const yAxis = d3.axisLeft(yScale).tickSize(-width.value)
-  // Call Y axis
-  const yAxisG = eje_y.value.append('g').call(yAxis)
-  // Remove domain line
-  yAxisG.selectAll('.domain').remove()
-  // Font text
-  yAxisG
-    .selectAll('.tick text')
-    // .style('font-family', 'Montserrat')
-    .style('font-size', '10px')
-    .style('color', '#efefef')
-  // Color lines
-  yAxisG.selectAll('.tick line').style('stroke', '#efefef')
-  // --------------
-  // Add X axis
-  const xAxis = d3
-    .axisBottom(xScale)
-    .ticks(6)
-    .tickFormat(multiFormat)
-    .tickSize(-height.value)
-    .tickPadding(10)
-  // Call X axis
-  const xAxisG = eje_x.value
-    .append('g')
-    .attr('transform', `translate(0, ${height.value})`)
-    .call(xAxis)
-    .style('color', '#efefef')
-  // Remove domain line
-  xAxisG.selectAll('.domain').remove()
-  // Font text
-  xAxisG
-    .selectAll('.tick text')
-    // .style('font-family', 'Montserrat')
-    .style('font-size', '10px')
-    .style('text-transform', 'uppercase')
-  // Color lines
-  xAxisG.selectAll('.tick line').style('stroke', '#efefef')
-
-  // Area generator
-  // areaGenerator.value = d3.area()
-  areaGenerator
-    .x(d => xScale(d.date))
-    .y0(yScale(0))
-    .y1(d => yScale(d.value))
+  // Asignando las escalas para el área
+  areaGenerator.value = d3
+    .area()
+    .x(d => xScale.value(d.data.date))
+    .y0(d => yScale.value(d[0]))
+    .y1(d => yScale.value(d[1]))
     .curve(d3.curveLinear)
-  // .curve(d3.curveBasis)
+
+  // Construyendo ejes
+  // Add Y axis
+  yAxis.value.call(d3.axisLeft(yScale.value).ticks(5))
+  yAxis.value
+    .selectAll('line')
+    .attr('x2', width.value)
+    .style('stroke-dasharray', '3 2 ')
+    .style('color', '#EFEFEF')
+    .style('stroke-opacity', 0.8)
+  yAxis.value.selectAll('.domain').remove()
+  // Add X axis
+  xAxis.value
+    .call(d3.axisBottom(xScale.value).ticks(5).tickFormat(multiFormat))
+    .attr('transform', `translate(${0}, ${height.value})`)
+  xAxis.value.selectAll('text').style('dominant-baseline', 'middle')
+  xAxis.value
+    .selectAll('line')
+    .attr('y1', -height.value)
+    .style('stroke-dasharray', '3 2')
+    .style('color', '#EFEFEF')
+    .style('stroke-opacity', 0.8)
+  // xAxis.value.selectAll('.domain').remove()
+  xAxis.value.select('path').remove()
+
+  // Building text labels
+  // Adding label X
+  xLabel.value
+    .attr(
+      'transform',
+      `translate(${width.value * 0.5}, ${
+        height.value + margen.value.abajo - margen.value.arriba
+      })`
+    )
+    .text(props.titulo_eje_x)
+    .style('text-anchor', 'middle')
+    .style('font-size', '12px')
+    .style('font-weight', '600')
+    // .style('dominant-baseline', 'hanging')
+    .style('color', '#efefef')
+  // Adding label Y
+  yLabel.value
+    .attr(
+      'transform',
+      `translate(${-margen.value.izquierda}, ${height.value * 0.5}) rotate(-90)`
+    )
+    .text(props.titulo_eje_y)
+    .style('text-anchor', 'middle')
+    .style('font-size', '12px')
+    .style('font-weight', '600')
+    .style('dominant-baseline', 'hanging')
+    .style('color', '#efefef')
 }
-/**
- * Método para desplegar el tooltip
- */
-function mostrarTooltip(evento, datum) {
-  tooltip.value
-    .style('visibility', 'visible')
-    .style('left', `${evento.pageX + 5}px`)
-    .style('top', `${evento.pageY + 5}px`)
-  // console.log('mostrar tooltip');
-  // d3.select(this.$refs.tooltip_grupo)
-  //   .text("datum.date");
-  // d3.select(this.$refs.tooltip_variable)
-  //   .text("Fecha:");
-  d3.select(tooltipCifraRef.value).html(`Variable: ${
-    datum.date.getDate() +
-    '-' +
-    (+datum.date.getMonth() + 1) +
-    '-' +
-    datum.date.getFullYear()
-  } 
-      <br/> Cantidad: <b>${datum.value}</b>`)
-  // console.log('datum', datum.date);
-  // console.log('evento',evento);
+function mostrarTooltip(evento) {
+  /**
+   * Método para desplegar el tooltip
+   */
+  let bisecetDate = d3.bisector(d => d.date).left
+  let x0 = xScale.value.invert(evento.layerX - margen.value.izquierda)
+  let indice = bisecetDate(datos.value, x0, 1)
+  let d0 = datos.value[indice - 1]
+  let d1 = datos.value[indice]
+
+  if ((d0 !== undefined) & (d1 !== undefined)) {
+    tooltip_data_seleccionada.value = x0 - d0.date > d1.date - x0 ? d1 : d0
+
+    // Change tooltip position from cursor depending the hover area
+    tooltip.value
+      .style('visibility', 'visible')
+      .style(
+        'left',
+        evento.layerX >
+          0.5 * (width.value + margen.value.izquierda + margen.value.derecha)
+          ? `${evento.layerX - props.ancho_tooltip - 20}px`
+          : `${evento.layerX + 20}px`
+      )
+      .style('top', 0 + 'px')
+
+    const contenidoTooltip = tooltip.value
+      .select('div.tooltip-contenido')
+      .style('background', 'rgba(0, 0, 0, 0.8)')
+      .style('border-radius', '8px')
+      .style('width', `${props.ancho_tooltip}px`)
+      .style('padding', '0 3px 0 10px')
+
+    let cifras_variables = variables.value.map(
+      d => `<p>
+            <span class="nomenclatura-tooltip" style="background: ${
+              d.color
+            } "></span>
+            ${d.nombre}: <b>${tooltip_data_seleccionada.value[
+        d.id
+      ].toLocaleString('en')}</b>
+      <br /> date:
+          ${tooltip_data_seleccionada.value.date.toString().slice(4, 15)}
+            </p>`
+    )
+    let textoTooltip = cifras_variables.join('')
+
+    contenidoTooltip
+      .select('div.tooltip-cifras')
+      // .select(tooltipCifraRef.value)
+      .html(textoTooltip)
+      .style('margin', '0')
+      .style('padding', '0 0 5px 0')
+  }
 }
-/**
- * Método para esconder el tooltip
- */
 function cerrarTooltip() {
-  tooltip.value
-    .style('visibility', 'hidden')
-    .style('left', '0')
-    .style('top', '0')
+  /**
+   * Método para esconder el tooltip
+   */
+  tooltip.value.style('visibility', 'hidden')
 }
-/**
- * Método para crear los paths del área
- */
 function creandoArea() {
-  // remove all area created
+  /**
+   * Método para crear los paths del área
+   */
+  // Remove all area created
   grupo_contenedor.value.selectAll('path.paths-area').remove()
 
   // Join path with color values
   area.value = grupo_contenedor.value
     .selectAll('gpaths')
-    // .data(this.datas, function (d) { return d.date+':'+d.value; })
-    .data(datas.value)
+    .data(data_stack.value)
     .enter()
     .append('path')
-    .attr('class', d => `${d.date} paths-area`)
-    // .attr('class', (d) => `paths-area-${d.date.getDate()+'-'+(+d.date.getMonth()+1)+'-'+d.date.getFullYear()}`)
-    .style('fill', props.color_area)
-    .style('opacity', 0.5)
-    .on('mouseover', (evento, datum) => {
-      // console.log("mousemove", evento, datum);
-      console.log('bug')
-      mostrarTooltip(evento, datum)
-    })
-    .on('mousemove', (evento, datum) => mostrarTooltip(evento, datum))
-    .on('click', (evento, datum) => {
-      // console.log("click", evento, datum);
-      console.log('bug')
-      mostrarTooltip(evento, datum)
-    })
+    .attr('class', d => `${d.key} paths-area`)
+    .style('fill', (d, i) => variables.value[i].color)
+    .style('opacity', 0.8)
 
-  svg.value.on('mouseout', cerrarTooltip)
+  svg.value
+    .on('mousemove', evento => {
+      mostrarTooltip(evento)
+    })
+    .on('click', evento => {
+      mostrarTooltip(evento)
+    })
+    .on('mouseout', cerrarTooltip)
 }
-/**
- * Método para actualizar los paths trazados del área
- */
 function actualizandoArea() {
+  /**
+   * Método para actualizar los paths trazados del área
+   */
   area.value
-    // .data(datas.value)
-    // .datum(this.datas, function (d) { return d.date + ':' + d.value; })
-    // .attr('d', this.areaGenerator);
-    // .attr('d', areaGenerator.value)
-    .attr('d', areaGenerator(datas.value))
+    .data(data_stack.value)
+    .transition()
+    .duration(500)
+    .attr('d', areaGenerator.value)
 }
 function reescalandoPantalla() {
   configurandoDimensionesParaSVG()
-
   configurandoDimensionesParaArea()
-
-  // creandoArea()
-
   actualizandoArea()
 }
 
 onMounted(() => {
   // Asigna elementos a variables
   svg.value = d3.select(`div#${props.area_id} svg.svg-area`)
-  grupo_contenedor.value = svg.value.select('g.grupo-contenedor-de-area')
-  grupo_contenedor_ejes.value = svg.value.select('g.grupo-contenedor-de-ejes')
+  grupo_contenedor.value = svg.value.select('g.grupo-contenedor-area')
+  grupo_frente.value = svg.value.select('g.grupo-frente')
+  grupo_fondo.value = svg.value.select('g.grupo-fondo')
 
-  texto_x.value = grupo_contenedor_ejes.value
+  grupo_contenedor_ejes.value = svg.value.select('g.grupo-contenedor-ejes')
+
+  xAxis.value = grupo_fondo.value.select('g.eje-x')
+  yAxis.value = grupo_fondo.value.select('g.eje-y')
+
+  xLabel.value = grupo_contenedor_ejes.value
     .append('text')
-    .text(props.titulo_eje_x)
     .attr('class', 'label-x')
-    .style('font-weight', '600')
 
-  texto_y.value = grupo_contenedor_ejes.value
+  yLabel.value = grupo_contenedor_ejes.value
     .append('text')
-    .text(props.titulo_eje_y)
     .attr('class', 'label-y')
-    .style('font-weight', '600')
-
-  // append and attribute class to axes
-  eje_x.value = grupo_contenedor_ejes.value.append('g').attr('class', 'eje-x')
-  eje_y.value = grupo_contenedor_ejes.value.append('g').attr('class', 'eje-y')
 
   configurandoDimensionesParaSVG()
-
   configurandoDimensionesParaArea()
-
   creandoArea()
-
   actualizandoArea()
 
+  // tooltip.value = d3.select('div#' + props.area_id + ' div.tooltip')
   tooltip.value = d3.select(tooltipRef.value)
-  tooltip.value.style('visibility', 'hidden')
 
   window.addEventListener('resize', reescalandoPantalla)
 })
@@ -402,115 +473,125 @@ onMounted(() => {
 onUnmounted(() => {
   window.removeEventListener('resize', reescalandoPantalla)
 })
-
+watch(variables, () => {
+  configurandoDimensionesParaSVG()
+  configurandoDimensionesParaArea()
+  creandoArea()
+  actualizandoArea()
+})
 watch(datos, () => {
   configurandoDimensionesParaSVG()
-
   configurandoDimensionesParaArea()
-
   creandoArea()
-
   actualizandoArea()
+})
+watch(margen, () => {
+  reescalandoPantalla()
 })
 </script>
 
 <template>
-  <div class="contenedor-area">
-    <div
-      class="dai-contenedor-area"
-      v-bind:id="area_id"
-    >
+  <div
+    :id="area_id"
+    class="contenedor-area"
+  >
+    <slot name="encabezado"></slot>
+    <div class="contenedor-tooltip-svg">
       <div
-        class="contenedor-vis"
-        id="contenedor_vis"
+        ref="tooltipRef"
+        class="tooltip"
       >
-        <div id="contenedor_svg">
-          <svg class="svg-area">
-            <g class="grupo-contenedor-de-ejes"></g>
-            <g class="grupo-contenedor-de-area"></g>
-          </svg>
-        </div>
-        <div
-          class="tooltip-area"
-          ref="tooltipRef"
-        >
+        <div class="tooltip-contenido">
           <div class="contenedor-boton-cerrar">
-            <span>{{ titulo_tooltip }}</span>
             <button
               class="boton-cerrar-tooltip"
-              @click="cerrarTooltip()"
+              @click="cerrarTooltip"
             >
-              <img
-                :src="`${public_path}imgs/cerrar.svg`"
-                alt="Cerrar Tooltip"
-              />
               &times;
             </button>
           </div>
-          <p
-            class="tooltip-variable"
-            ref="tooltipVariableRef"
-          ></p>
-          <p
-            class="tooltip-cifra"
+          <div
             ref="tooltipCifraRef"
-          >
-            120 | <b> 29.3%</b>
-          </p>
+            class="tooltip-cifras"
+          ></div>
         </div>
       </div>
-      <div class="dai-info"></div>
+      <svg class="svg-area">
+        <g class="grupo-fondo">
+          <g class="eje-x"></g>
+          <g class="eje-y"></g>
+        </g>
+        <g class="grupo-contenedor-area"></g>
+        <g class="grupo-contenedor-ejes"></g>
+        <g class="grupo-frente"></g>
+      </svg>
     </div>
   </div>
 </template>
 
 <style lang="scss" scoped>
-$border-radius-tarjeta: 10px;
-.dai-contenedor-area {
-  border-radius: $border-radius-tarjeta;
-  .contenedor-vis {
-    .tooltip-area {
-      position: absolute;
-      visibility: hidden;
-      background: rgba(0, 0, 0, 0.8);
-      border-radius: 8px;
-      width: 180px;
-      // padding: 0px 3px 0px 10px;
-      padding: 10px;
-      color: #fff;
-      font-size: 12px;
-      min-height: 40px;
-      line-height: 1;
-      p {
-        margin: 0;
-      }
-      button.boton-cerrar-tooltip {
-        background: none;
-        border: none;
-        padding: 0 0 0 5px;
-        cursor: pointer;
-        max-width: none;
-        img {
-          width: 30px;
-          max-width: none;
-          height: 30px;
-        }
-      }
-      div.contenedor-boton-cerrar {
-        float: right;
-        height: auto;
-        width: 35px;
-        // padding-top: 5px;
-        justify-content: space-between;
-        @media (min-width: 769px) {
-          // En móvil el botón de cerrar desaparece
-          display: none;
-        }
+svg.svg-area {
+  position: absolute;
+  top: 0;
+}
+
+div.contenedor-tooltip-svg {
+  position: relative;
+  svg {
+    z-index: 1;
+  }
+
+  div.tooltip {
+    color: #fff;
+    font-size: 12px;
+    position: absolute;
+    z-index: 2;
+    visibility: hidden;
+  }
+
+  div.tooltip div.tooltip-cifras {
+    padding-bottom: 5px;
+
+    p {
+      margin: 3px;
+
+      span.nomenclatura-tooltip {
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        border: solid 1px rgba(255, 255, 255, 0.7);
+        display: inline-block;
       }
     }
   }
-  .dai-info {
-    grid-area: info;
+
+  div.tooltip div.contenedor-boton-cerrar {
+    height: auto;
+    display: flex;
+    width: 100%;
+    padding-top: 5px;
+    font-weight: 600;
+  }
+
+  div.tooltip button.boton-cerrar-tooltip {
+    background: #fff;
+    border: none;
+    font-size: 30px;
+    line-height: 0.9;
+    font-weight: 300;
+    padding: 0 5px;
+    border-radius: 5px;
+    margin: 0 0 0 auto;
+    @media (min-width: 768px) {
+      display: none;
+    }
+    cursor: pointer;
+
+    img {
+      width: 30px;
+      height: 30px;
+      float: right;
+    }
   }
 }
 </style>
