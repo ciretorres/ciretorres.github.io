@@ -101,7 +101,7 @@ function configurandoDimensionesParaSVG() {
   svg.value
     .attr('width', width.value + props.margin.left + props.margin.right)
     .attr('height', height.value + props.margin.top + props.margin.bottom)
-  // .style("background-color", "#efefef") // Comentar fondo
+    .style('background-color', 'rgba(255,255,255,0.2)') // Comentar fondo
 
   grupo_contenedor.value.attr(
     'transform',

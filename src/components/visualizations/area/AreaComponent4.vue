@@ -118,7 +118,7 @@ function configurandoDimensionesParaSVG() {
     .attr('width', width.value + margen.value.derecha + margen.value.izquierda)
     .attr('height', alto.value + margen.value.arriba + margen.value.abajo)
     .style('left', ancho_leyenda_y.value + 'px')
-  // .style('background-color', '#efefef99') // Comentar fondo
+    .style('background-color', '#efefef99') // Comentar fondo
 
   grupo_contenedor.value.attr(
     'transform',
