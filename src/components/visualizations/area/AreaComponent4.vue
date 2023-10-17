@@ -27,10 +27,6 @@ const props = defineProps({
     type: String,
     default: 'Título eje x',
   },
-  conversionTemporal: {
-    type: Function,
-    default: d3.timeParse('%d-%m-%Y'),
-  },
   titulo: String,
   instruccional: String,
   fecha_actualizacion: {
@@ -47,16 +43,12 @@ const props = defineProps({
   },
   ancho_tooltip: {
     type: Number,
-    default: 250,
+    default: 140,
   },
   alto_vis: {
     type: Number,
-    default: 600,
+    default: 400,
   },
-  // formatoEtiquetasY: {
-  //   default: d => d.toLocaleString('en'),
-  //   type: Function,
-  // },
   margen: {
     type: Object,
     default: () => ({
@@ -84,34 +76,34 @@ const grupo_fondo = ref({})
 // // const texto_x = ref({})
 // // const texto_y = ref({})
 
-const eje_x = ref({})
-const eje_y = ref({})
+const xAxis = ref({})
+const yAxis = ref({})
 
-const guia_x = ref({})
+// const guia_x = ref({})
 
-const ancho = ref(100)
+const width = ref(100)
 const alto = ref(100)
 
-const escalaX = ref({})
-const escalaY = ref({})
+const xScale = ref({})
+const yScale = ref({})
 
-const data_apilada = ref([])
+const data_stack = ref([])
 
-const streams_apilados = ref({})
 const area = ref({})
+const areaGenerator = ref({})
 
 const tooltip = ref({})
-// const tooltipRef = ref('')
+const tooltipRef = ref('')
 // const tooltipCifraRef = ref('')
 
-/**
- * Método para configurar las dimensiones del elemento SVG
- */
 function configurandoDimensionesParaSVG() {
+  /**
+   * Método para configurar las dimensiones del elemento SVG
+   */
   ancho_leyenda_y.value = document.querySelector(
     '#' + props.area_id + ' .rotation-wrapper-outer .element-to-rotate'
   ).clientHeight
-  ancho.value =
+  width.value =
     document.querySelector(`#${props.area_id}`).clientWidth -
     margen.value.derecha -
     margen.value.izquierda -
@@ -119,11 +111,11 @@ function configurandoDimensionesParaSVG() {
 
   alto.value = props.alto_vis - margen.value.arriba - margen.value.abajo
   // // window.innerWidth >= width_limit // 769
-  // //   ? (height.value = 600 - props.margin.top - props.margin.bottom) // Desktop
-  // //   : (height.value = 400 - props.margin.top - props.margin.bottom) // Mobile
+  // //   ? (height.value = props.alto_vis - props.margin.arriba - props.margin.abajo) // Desktop
+  // //   : (height.value = 400 - props.margin.arriba - props.margin.abajo) // Mobile
 
   svg.value
-    .attr('width', ancho.value + margen.value.derecha + margen.value.izquierda)
+    .attr('width', width.value + margen.value.derecha + margen.value.izquierda)
     .attr('height', alto.value + margen.value.arriba + margen.value.abajo)
     .style('left', ancho_leyenda_y.value + 'px')
   // .style('background-color', '#efefef99') // Comentar fondo
@@ -165,10 +157,10 @@ function configurandoDimensionesParaSVG() {
   // //   .style('dominant-baseline', 'hanging')
   // //   .style('color', '#efefef')
 }
-/**
- * Método para traducir el formato de fecha
- */
 function multiFormat(date) {
+  /**
+   * Método para traducir el formato de fecha
+   */
   // const locale = d3.timeFormatLocale({
   //   decimal: ',',
   //   thousands: '.',
@@ -294,25 +286,25 @@ function multiFormat(date) {
       : formatMonthYear
   )(date)
 }
-/**
- * Método para configurar dimensiones para área
- */
 function configurandoDimensionesParaArea() {
+  /**
+   * Método para configurar dimensiones para área
+   */
   // Apilando datos
-  data_apilada.value = d3.stack().keys(variables.value.map(d => d.id))(
+  data_stack.value = d3.stack().keys(variables.value.map(d => d.id))(
     datos.value
   )
   // Asignarle un objeto en data a la data apilada
   for (let i = variables.value.length - 1; i >= 0; i -= 1) {
-    data_apilada.value[i].forEach(dd => {
+    data_stack.value[i].forEach(dd => {
       dd.data = Object.assign({}, dd.data, {
-        key: data_apilada.value[i].key,
+        key: data_stack.value[i].key,
       })
     })
   }
   // Construyendo escalas
   // Build Y scale -> it is linear
-  escalaY.value = d3
+  yScale.value = d3
     .scaleLinear()
     .domain([
       0,
@@ -321,49 +313,57 @@ function configurandoDimensionesParaArea() {
     .range([alto.value, 0])
   // .nice()
   // Build X scale -> it is a date format
-  escalaX.value = d3
+  xScale.value = d3
     .scaleTime()
     .domain(d3.extent(datos.value.map(d => d.date)))
-    .range([0, ancho.value])
+    .range([0, width.value])
   // .nice()
-  guia_x.value
-    .attr('x1', 0)
-    .attr('y1', escalaY.value(0))
-    .attr('x2', 0)
-    .attr('y2', escalaY.value(100))
-    .style('stroke-opacity', 0)
-  area.value = d3
+
+  // Línea guía del puntero
+  // guia_x.value
+  //   .attr('x1', 0)
+  //   .attr('y1', yScale.value(0))
+  //   .attr('x2', 0)
+  //   .attr('y2', yScale.value(100))
+  //   .style('stroke-opacity', 0)
+
+  // Asignando las escalas para el área
+  areaGenerator.value = d3
     .area()
-    .x(d => escalaX.value(d.data.date))
-    .y0(d => escalaY.value(d[0]))
-    .y1(d => escalaY.value(d[1]))
+    .x(d => xScale.value(d.data.date))
+    .y0(d => yScale.value(d[0]))
+    .y1(d => yScale.value(d[1]))
     .curve(d3.curveLinear)
+
   // Construyendo ejes
   // Add Y axis
-  eje_y.value.call(
-    d3.axisLeft(escalaY.value).ticks(4).tickFormat(props.formatoEtiquetasY)
+  yAxis.value.call(
+    d3.axisLeft(yScale.value).ticks(5)
+    // .tickFormat(props.formatoEtiquetasY)
   )
-  eje_y.value
+  yAxis.value
     .selectAll('line')
-    .attr('x2', ancho.value)
+    .attr('x2', width.value)
     .style('stroke-dasharray', '3 2 ')
     .style('color', '#EFEFEF')
   // .style('stroke', 'gray')
-  // eje_y.value.selectAll('.domain').remove()
+  yAxis.value.selectAll('.domain').remove()
   // Add X axis
-  eje_x.value
-    .call(d3.axisBottom(escalaX.value).ticks(5).tickFormat(multiFormat))
+  xAxis.value
+    .call(d3.axisBottom(xScale.value).ticks(5).tickFormat(multiFormat))
     .attr('transform', `translate(${0}, ${alto.value})`)
-  eje_x.value.selectAll('text').style('dominant-baseline', 'middle')
-  eje_x.value
+  xAxis.value.selectAll('text').style('dominant-baseline', 'middle')
+  xAxis.value
     .selectAll('line')
     .attr('y1', -alto.value)
     .style('stroke-dasharray', '3 2')
     .style('color', '#EFEFEF')
-  eje_x.value.select('path').remove()
+  // xAxis.value.selectAll('.domain').remove()
+  xAxis.value.select('path').remove()
 
-  eje_y.value.selectAll('path').remove()
-  eje_y.value.selectAll('line').remove()
+  // yAxis.value.selectAll('path').remove()
+  // yAxis.value.selectAll('line').remove()
+
   // // // Estilos de textos en los ejes
   // // // Font text Y
   // // yAxisG
@@ -383,45 +383,47 @@ function configurandoDimensionesParaArea() {
   // // // Color lines
   // // xAxisG.selectAll('.tick line').style('stroke', '#efefef')
 }
-/**
- * Método para desplegar el tooltip
- */
 function mostrarTooltip(evento) {
+  /**
+   * Método para desplegar el tooltip
+   */
   let bisecetDate = d3.bisector(d => d.date).left
-  let x0 = escalaX.value.invert(evento.layerX - margen.value.izquierda)
+  let x0 = xScale.value.invert(evento.layerX - margen.value.izquierda)
   let indice = bisecetDate(datos.value, x0, 1)
   let d0 = datos.value[indice - 1]
   let d1 = datos.value[indice]
 
   if ((d0 !== undefined) & (d1 !== undefined)) {
     tooltip_data_seleccionada.value = x0 - d0.date > d1.date - x0 ? d1 : d0
-    guia_x.value
-      .transition()
-      .duration(100)
-      .attr('x1', escalaX.value(tooltip_data_seleccionada.value.date))
-      .attr('x2', escalaX.value(tooltip_data_seleccionada.value.date))
-      .attr('y1', 0)
-      .attr('y2', alto.value)
-      .style('stroke-opacity', 1)
+    // guia_x.value
+    //   .transition()
+    //   .duration(100)
+    //   .attr('x1', xScale.value(tooltip_data_seleccionada.value.date))
+    //   .attr('x2', xScale.value(tooltip_data_seleccionada.value.date))
+    //   .attr('y1', 0)
+    //   .attr('y2', alto.value)
+    //   .style('stroke-opacity', 1)
+
+    // Change tooltip position from cursor depending the hover area
     tooltip.value
       .style('visibility', 'visible')
       .style(
         'left',
         evento.layerX >
-          0.5 * (ancho.value + margen.value.izquierda + margen.value.derecha)
+          0.5 * (width.value + margen.value.izquierda + margen.value.derecha)
           ? `${
               evento.layerX - props.ancho_tooltip + ancho_leyenda_y.value - 20
             }px`
           : `${evento.layerX + ancho_leyenda_y.value + 20}px`
       )
       .style('top', 0 + 'px')
-      .attr('width', props.ancho_tooltip)
-      .attr('height', 30)
+    // .attr('width', props.ancho_tooltip)
+    // .attr('height', 30)
 
     const contenidoTooltip = tooltip.value
       .select('div.tooltip-contenido')
       .style('background', 'rgba(0, 0, 0,.8)')
-      .style('min-width', props.ancho_tooltip)
+      // .style('min-width', props.ancho_tooltip)
       .style('border-radius', '8px')
       .style('width', `${props.ancho_tooltip}px`)
       .style('padding', '0 3px 0 10px')
@@ -431,9 +433,10 @@ function mostrarTooltip(evento) {
             <span class="nomenclatura-tooltip" style="background: ${
               d.color
             } "></span>
-            ${d.nombre} <b>${tooltip_data_seleccionada.value[
+            ${d.nombre}: <b>${tooltip_data_seleccionada.value[
         d.id
       ].toLocaleString('en')}</b>
+      <br /> date:
           ${tooltip_data_seleccionada.value.date.toString().slice(4, 15)}
             </p>`
     )
@@ -445,33 +448,31 @@ function mostrarTooltip(evento) {
       .style('margin', '0')
       .style('padding', '0 0 5px 0')
 
-    tooltip.value
-      .style('height', contenidoTooltip.style('height'))
-      .style('width', contenidoTooltip.style('width'))
+    // tooltip.value
+    //   .style('height', contenidoTooltip.style('height'))
+    //   .style('width', contenidoTooltip.style('width'))
   }
 }
-/**
- * Método para esconder el tooltip
- */
 function cerrarTooltip() {
+  /**
+   * Método para esconder el tooltip
+   */
   tooltip.value.style('visibility', 'hidden')
-  // .style('left', '0')
-  // .style('top', '0')
 }
-// /**
-//  * Método para crear los paths del área
-//  */
 function creandoArea() {
-  // remove all area created
-  grupo_contenedor.value.selectAll('path.paths-streams').remove()
+  /**
+   * Método para crear los paths del área
+   */
+  // Remove all area created
+  grupo_contenedor.value.selectAll('path.paths-area').remove()
 
   // Join path with color values
-  streams_apilados.value = grupo_contenedor.value
+  area.value = grupo_contenedor.value
     .selectAll('gpaths')
-    .data(data_apilada.value)
+    .data(data_stack.value)
     .enter()
     .append('path')
-    .attr('class', d => `${d.key} paths-streams`)
+    .attr('class', d => `${d.key} paths-area`)
     .style('fill', (d, i) => variables.value[i].color)
     .style('opacity', 0.8)
 
@@ -479,17 +480,20 @@ function creandoArea() {
     .on('mousemove', evento => {
       mostrarTooltip(evento)
     })
+    .on('click', evento => {
+      mostrarTooltip(evento)
+    })
     .on('mouseout', cerrarTooltip)
 }
-/**
- * Método para actualizar los paths trazados del área
- */
 function actualizandoArea() {
-  streams_apilados.value
-    .data(data_apilada.value)
+  /**
+   * Método para actualizar los paths trazados del área
+   */
+  area.value
+    .data(data_stack.value)
     .transition()
     .duration(500)
-    .attr('d', area.value)
+    .attr('d', areaGenerator.value)
 }
 function reescalandoPantalla() {
   configurandoDimensionesParaSVG()
@@ -499,19 +503,17 @@ function reescalandoPantalla() {
 
 onMounted(() => {
   // Asigna elementos a variables
-  svg.value = d3.select(`div#${props.area_id} svg.svg-streamgraph`)
-  grupo_contenedor.value = svg.value.select('g.grupo-contenedor-de-streams')
+  svg.value = d3.select(`div#${props.area_id} svg.svg-area`)
+  grupo_contenedor.value = svg.value.select('g.grupo-contenedor-area')
   grupo_frente.value = svg.value.select('g.grupo-frente')
   grupo_fondo.value = svg.value.select('g.grupo-fondo')
 
   // grupo_contenedor_ejes.value = svg.value.select('g.grupo-contenedor-ejes')
 
-  eje_x.value = grupo_frente.value.select('g.eje-x')
-  eje_y.value = grupo_frente.value.select('g.eje-y')
+  xAxis.value = grupo_fondo.value.select('g.eje-x')
+  yAxis.value = grupo_fondo.value.select('g.eje-y')
 
-  guia_x.value = grupo_frente.value
-    .select('line.guia-x')
-    .style('stroke', 'gray')
+  // paths-area.value = grupo_fondo.value.select('line.guia-x').style('stroke', 'gray')
 
   // texto_x.value = grupo_contenedor_ejes.value
   //   .append('text')
@@ -529,8 +531,8 @@ onMounted(() => {
   creandoArea()
   actualizandoArea()
 
-  tooltip.value = d3.select('div#' + props.area_id + ' div.tooltip')
-  // tooltip.value = d3.select(tooltipRef.value)
+  // tooltip.value = d3.select('div#' + props.area_id + ' div.tooltip')
+  tooltip.value = d3.select(tooltipRef.value)
 
   window.addEventListener('resize', reescalandoPantalla)
 })
@@ -558,11 +560,14 @@ watch(margen, () => {
 <template>
   <div
     :id="area_id"
-    class="contenedor-stream-graph"
+    class="contenedor-area"
   >
     <slot name="encabezado"></slot>
     <div class="contenedor-tooltip-svg">
-      <div class="tooltip">
+      <div
+        ref="tooltipRef"
+        class="tooltip"
+      >
         <div class="tooltip-contenido">
           <div class="contenedor-boton-cerrar">
             <button
@@ -593,14 +598,18 @@ watch(margen, () => {
           </div>
         </div>
       </div>
-      <svg class="svg-streamgraph">
-        <g class="grupo-fondo"></g>
-        <g class="grupo-contenedor-de-streams"></g>
-        <g class="grupo-contenedor-de-ejes"></g>
-        <g class="grupo-frente">
+      <svg class="svg-area">
+        <g class="grupo-fondo">
           <g class="eje-x"></g>
           <g class="eje-y"></g>
           <line class="guia-x"></line>
+        </g>
+        <g class="grupo-contenedor-area"></g>
+        <g class="grupo-contenedor-de-ejes"></g>
+        <g class="grupo-frente">
+          <!-- <g class="eje-x"></g>
+          <g class="eje-y"></g> -->
+          <!-- <line class="guia-x"></line> -->
         </g>
       </svg>
       <div class="eje-x">
@@ -614,18 +623,13 @@ watch(margen, () => {
         ></p>
       </div>
     </div>
-    <slot name="pie"></slot>
   </div>
 </template>
 
 <style lang="scss" scoped>
-svg.svg-streamgraph {
+svg.svg-area {
   position: absolute;
   top: 0;
-}
-
-svg.svg-streamgraph::v-deep text {
-  font-family: 'Montserrat';
 }
 
 div.contenedor-tooltip-svg {

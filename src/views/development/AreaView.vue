@@ -1,9 +1,9 @@
 <script setup>
 import * as d3 from 'd3'
 
-// import dataJSON from '@/assets/data/area/data.json'
+import dataJSON from '@/assets/data/area/data.json'
 
-// import Area from '@/components/visualizations/area/AreaComponent.vue'
+import Area from '@/components/visualizations/area/AreaComponent.vue'
 import Area4 from '@/components/visualizations/area/AreaComponent4.vue'
 
 import { onMounted, ref, computed } from 'vue'
@@ -30,14 +30,14 @@ onMounted(() => {
     })
 })
 
-// const datosArea = computed(() => {
-//   dataJSON.forEach(d => {
-//     // Parse data
-//     d.date = d3.timeParse('%Y-%m-%d')(d.date)
-//     d.value = +d.value
-//   })
-//   return dataJSON
-// })
+const datosArea0 = computed(() => {
+  dataJSON.forEach(d => {
+    // Parse data
+    d.date = d3.timeParse('%Y-%m-%d')(d.date)
+    d.value = +d.value
+  })
+  return dataJSON
+})
 const datosArea = computed(() => {
   data.value.forEach(d => {
     // Parse data
@@ -88,6 +88,7 @@ datos_grafica.value = [...Variables]
         :datos="datosArea"
       />
       <Area2
+        v-if="false"
         areas_apiladas_id="streamgraphbasico"
         :alto_vis="300"
         :datos="datos_grafica"
@@ -97,11 +98,11 @@ datos_grafica.value = [...Variables]
         ]"
         nombre_columna_horizontal="fecha_1"
       />
-      <!-- <Area
-        :area_id="'area'"
-        :datos="datosArea"
+      <Area
+        :area_id="'area_0'"
+        :datos="datosArea0"
         color_area="#fff"
-      /> -->
+      />
     </div>
   </div>
 </template>
