@@ -36,11 +36,13 @@ const datosArea = computed(() => {
   })
   return data.value
 })
+// console.log(datosArea)
 </script>
 
 <template>
   <div class="area-view">
     <div class="container sin-fondo">
+      <h1>Area</h1>
       <Area
         :area_id="'area'"
         :datos="datosArea"

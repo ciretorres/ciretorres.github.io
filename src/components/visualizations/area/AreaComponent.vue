@@ -9,7 +9,11 @@ const props = defineProps({
   },
   datos: {
     type: Array,
-    default: () => [{ variable: '2021-01-01', cantidad: '30' }],
+    default: () => [
+      { date: '2021-01-01', value: '30' },
+      { date: '2021-02-01', value: '50' },
+      { date: '2021-03-01', value: '20' },
+    ],
   },
   variables: {
     type: Array,
@@ -33,7 +37,7 @@ const props = defineProps({
     type: Number,
     default: 400,
   },
-  margen: {
+  margin: {
     type: Object,
     default: () => ({
       arriba: 10,
@@ -44,7 +48,7 @@ const props = defineProps({
   },
 })
 
-const { datos, variables, margen } = toRefs(props)
+const { datos, variables, margin } = toRefs(props)
 
 const width_limit = ref(769)
 const tooltip_data_seleccionada = ref({})
@@ -82,37 +86,37 @@ function configurandoDimensionesParaSVG() {
    */
   width.value =
     document.querySelector(`#${props.area_id}`).clientWidth -
-    margen.value.derecha -
-    margen.value.izquierda
+    margin.value.derecha -
+    margin.value.izquierda
 
-  // height.value = props.alto_vis - margen.value.arriba - margen.value.abajo
+  // height.value = props.alto_vis - margin.value.arriba - margin.value.abajo
   window.innerWidth >= width_limit.value // 769
-    ? (height.value = props.alto_vis - props.margen.arriba - props.margen.abajo) // Desktop
-    : (height.value = 500 - props.margen.arriba - props.margen.abajo) // Mobile
+    ? (height.value = props.alto_vis - margin.value.arriba - margin.value.abajo) // Desktop
+    : (height.value = 500 - margin.value.arriba - margin.value.abajo) // Mobile
 
   svg.value
-    .attr('width', width.value + margen.value.derecha + margen.value.izquierda)
-    .attr('height', height.value + margen.value.arriba + margen.value.abajo)
+    .attr('width', width.value + margin.value.derecha + margin.value.izquierda)
+    .attr('height', height.value + margin.value.arriba + margin.value.abajo)
   // .style('background-color', '#efefef99') // Comentar fondo
 
   grupo_contenedor.value.attr(
     'transform',
-    `translate(${margen.value.izquierda},${margen.value.arriba})`
+    `translate(${margin.value.izquierda},${margin.value.arriba})`
   )
 
   grupo_fondo.value.attr(
     'transform',
-    `translate(${margen.value.izquierda},${margen.value.arriba})`
+    `translate(${margin.value.izquierda},${margin.value.arriba})`
   )
 
   grupo_frente.value.attr(
     'transform',
-    `translate(${margen.value.izquierda},${margen.value.arriba})`
+    `translate(${margin.value.izquierda},${margin.value.arriba})`
   )
 
   grupo_contenedor_ejes.value.attr(
     'transform',
-    `translate(${margen.value.izquierda}, ${margen.value.arriba})`
+    `translate(${margin.value.izquierda}, ${margin.value.arriba})`
   )
 }
 function multiFormat(date) {
@@ -315,7 +319,7 @@ function configurandoDimensionesParaArea() {
     .attr(
       'transform',
       `translate(${width.value * 0.5}, ${
-        height.value + margen.value.abajo - margen.value.arriba
+        height.value + margin.value.abajo - margin.value.arriba
       })`
     )
     .text(props.titulo_eje_x)
@@ -328,7 +332,7 @@ function configurandoDimensionesParaArea() {
   yLabel.value
     .attr(
       'transform',
-      `translate(${-margen.value.izquierda}, ${height.value * 0.5}) rotate(-90)`
+      `translate(${-margin.value.izquierda}, ${height.value * 0.5}) rotate(-90)`
     )
     .text(props.titulo_eje_y)
     .style('text-anchor', 'middle')
@@ -342,7 +346,7 @@ function mostrarTooltip(evento) {
    * Método para desplegar el tooltip
    */
   let bisecetDate = d3.bisector(d => d.date).left
-  let x0 = xScale.value.invert(evento.layerX - margen.value.izquierda)
+  let x0 = xScale.value.invert(evento.layerX - margin.value.izquierda)
   let indice = bisecetDate(datos.value, x0, 1)
   let d0 = datos.value[indice - 1]
   let d1 = datos.value[indice]
@@ -356,7 +360,7 @@ function mostrarTooltip(evento) {
       .style(
         'left',
         evento.layerX >
-          0.5 * (width.value + margen.value.izquierda + margen.value.derecha)
+          0.5 * (width.value + margin.value.izquierda + margin.value.derecha)
           ? `${evento.layerX - props.ancho_tooltip - 20}px`
           : `${evento.layerX + 20}px`
       )
@@ -413,7 +417,7 @@ function creandoArea() {
     .attr('class', d => `${d.key} paths-area`)
     .style('fill', (d, i) => variables.value[i].color)
     .style('opacity', 0.8)
-
+  // Event the tooltip
   svg.value
     .on('mousemove', evento => {
       mostrarTooltip(evento)
@@ -485,7 +489,7 @@ watch(datos, () => {
   creandoArea()
   actualizandoArea()
 })
-watch(margen, () => {
+watch(margin, () => {
   reescalandoPantalla()
 })
 </script>
@@ -530,11 +534,6 @@ watch(margen, () => {
 </template>
 
 <style lang="scss" scoped>
-svg.svg-area {
-  position: absolute;
-  top: 0;
-}
-
 div.contenedor-tooltip-svg {
   position: relative;
   svg {

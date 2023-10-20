@@ -38,12 +38,12 @@ const dictValuesRango = {
 }
 
 const dictColorsRango = {
-  Rango_0: '#efefef',
+  Rango_0: '#f0f0f0',
   Rango_1: '#d9d9d9',
-  Rango_2: '#cccccc',
-  Rango_3: '#b7b7b7',
-  Rango_4: '#999999',
-  Rango_5: '#666666',
+  Rango_2: '#bdbdbd',
+  Rango_3: '#969696',
+  Rango_4: '#737373',
+  Rango_5: '#525252',
 }
 
 const vvariables = Object.entries(dictValuesRango).map(rango => {

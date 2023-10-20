@@ -37,7 +37,7 @@ const props = defineProps({
   },
   tipo_tooltip: {
     type: String,
-    default: () => 'general',
+    default: () => 'individual',
   },
   logo_conacyt: {
     type: Boolean,
@@ -51,43 +51,43 @@ const props = defineProps({
       return true
     },
   },
-  textoTooltip: {
-    type: Function,
-    default() {
-      return `<p>No sirve el tooltip</p>`
-      // if (this.tipo_tooltip === 'general') {
-      //   let total_muestras = d3.sum(
-      //     this.variables.map(d => this.tooltip_data_seleccionada[d.cve])
-      //   )
-      //   let cifras_variables = this.variables.map(
-      //     d => `<p>
-      //   			<span class="nomenclatura-tooltip" style="background: ${d.color} "></span>
-      //   			${d.cve} <b>${this.tooltip_data_seleccionada[d.cve].toLocaleString(
-      //       'en'
-      //     )}</b>
-      //   			(${Math.round(
-      //           (100 * this.tooltip_data_seleccionada[d.cve]) / total_muestras
-      //         )}%)
-      //   			</p>`
-      //   )
-      //   return `${cifras_variables.join('')}`
-      // } else if (this.tipo_tooltip === 'individual') {
-      //   let entidad = this.variables.filter(
-      //     d => d.cve === this.tooltip_data_seleccionada.cve
-      //   )[0]
-      //   return `
-      // 				<p>${entidad.nombre}</p>
-      // 				${this.tooltip_data_seleccionada.fech
-      //           .toLocaleDateString('en-GB')
-      //           .replaceAll('/', '-')}<br/>
-      // 				<b>${this.tooltip_data_seleccionada.cat.toLocaleString('en')}</b>  <br/>
-      // 			`
-      // }
-    },
-  },
+  // textoTooltip: {
+  //   type: Function,
+  //   default() {
+  //     return `<p>No sirve el tooltip</p>`
+  //     // if (this.tipo_tooltip === 'general') {
+  //     //   let total_muestras = d3.sum(
+  //     //     this.variables.map(d => this.tooltip_data_seleccionada[d.cve])
+  //     //   )
+  //     //   let cifras_variables = this.variables.map(
+  //     //     d => `<p>
+  //     //   			<span class="nomenclatura-tooltip" style="background: ${d.color} "></span>
+  //     //   			${d.cve} <b>${this.tooltip_data_seleccionada[d.cve].toLocaleString(
+  //     //       'en'
+  //     //     )}</b>
+  //     //   			(${Math.round(
+  //     //           (100 * this.tooltip_data_seleccionada[d.cve]) / total_muestras
+  //     //         )}%)
+  //     //   			</p>`
+  //     //   )
+  //     //   return `${cifras_variables.join('')}`
+  //     // } else if (this.tipo_tooltip === 'individual') {
+  //     //   let entidad = this.variables.filter(
+  //     //     d => d.cve === this.tooltip_data_seleccionada.cve
+  //     //   )[0]
+  //     //   return `
+  //     // 				<p>${entidad.nombre}</p>
+  //     // 				${this.tooltip_data_seleccionada.fech
+  //     //           .toLocaleDateString('en-GB')
+  //     //           .replaceAll('/', '-')}<br/>
+  //     // 				<b>${this.tooltip_data_seleccionada.cat.toLocaleString('en')}</b>  <br/>
+  //     // 			`
+  //     // }
+  //   },
+  // },
 })
 
-const { datos, variables, margen, textoTooltip } = toRefs(props)
+const { datos, variables, margen } = toRefs(props)
 
 const ancho_leyenda_y = ref(0)
 const tooltip_data_seleccionada = ref({})
@@ -141,6 +141,7 @@ function configurandoDimensionesParaSVG() {
   )
 }
 function configurandoDimensionesParaLinea() {
+  // console.log('datos.value', datos.value)
   datos.value.forEach(d => {
     d.fech = props.conversionTemporal(d[props.nombre_columna_horizontal])
   })
@@ -150,6 +151,11 @@ function configurandoDimensionesParaLinea() {
     .range([0, ancho.value])
 
   claves.value = variables.value.map(d => d.cve)
+  // console.log('claves.value', claves.value)
+  // console.log(
+  //   'datos.value.map(d => d3.min(claves.value.map(dd => d[dd])))',
+  //   datos.value.map(d => d3.min(claves.value.map(dd => d[dd])))
+  // )
   if (props.escala_logaritmica) {
     escalaY.value = d3
       .scaleLog()
@@ -171,6 +177,7 @@ function configurandoDimensionesParaLinea() {
       escalaY.value = d3.scaleLinear().domain([0, 0]).range([alto.value, 0])
     }
   }
+  // console.log(datos.value)
 }
 function mostrarTooltipIndividual(evento) {
   let bisecetDate = d3.bisector(d => d.fech).left
@@ -237,9 +244,19 @@ function mostrarTooltipIndividual(evento) {
       .style('width', props.ancho_tooltip + 'px')
       .style('padding', '0 3px 0 10px')
 
+    let entidad = variables.value.filter(
+      d => d.cve === tooltip_data_seleccionada.value.cve
+    )[0]
+    let textoTooltip = `
+      				<p>${entidad.nombre}</p>
+      				${tooltip_data_seleccionada.value.fech
+                .toLocaleDateString('en-GB')
+                .replaceAll('/', '-')}<br/>
+      				<b>${tooltip_data_seleccionada.value.cat.toLocaleString('en')}</b>  <br/>`
+
     contenido_tooltip
       .select('div.tooltip-cifras')
-      .html(textoTooltip.value)
+      .html(textoTooltip)
       .style('margin', '0')
       .style('padding', '0 0 5px 0')
 
@@ -294,9 +311,58 @@ function mostrarTooltipGeneral(evento) {
       .style('width', `${props.ancho_tooltip}px`)
       .style('padding', '10px')
 
+    let total_muestras = d3.sum(
+      variables.value.map(d => tooltip_data_seleccionada.value[d.cve])
+    )
+    let cifras_variables = variables.value.map(
+      d => `<p>
+        			<span class="nomenclatura-tooltip" style="background: ${
+                d.color
+              } "></span>
+        			${d.cve} <b>${tooltip_data_seleccionada.value[d.cve].toLocaleString(
+        'en'
+      )}</b>
+        			(${Math.round(
+                (100 * tooltip_data_seleccionada.value[d.cve]) / total_muestras
+              )}%)
+        			</p>`
+    )
+    let textoTooltip = `${cifras_variables.join('')}`
+
+    // if (this.tipo_tooltip === 'general') {
+    //   // let total_muestras = d3.sum(
+    //   //   this.variables.map(d => this.tooltip_data_seleccionada[d.cve])
+    //   // )
+    //   // let cifras_variables = this.variables.map(
+    //   //   d => `<p>
+    //   //   			<span class="nomenclatura-tooltip" style="background: ${
+    //   //           d.color
+    //   //         } "></span>
+    //   //   			${d.cve} <b>${this.tooltip_data_seleccionada[d.cve].toLocaleString(
+    //   //     'en'
+    //   //   )}</b>
+    //   //   			(${Math.round(
+    //   //           (100 * this.tooltip_data_seleccionada[d.cve]) / total_muestras
+    //   //         )}%)
+    //   //   			</p>`
+    //   // )
+    //   // return `${cifras_variables.join('')}`
+    // } else if (this.tipo_tooltip === 'individual') {
+    //   // let entidad = this.variables.filter(
+    //   //   d => d.cve === this.tooltip_data_seleccionada.cve
+    //   // )[0]
+    //   // return `
+    //   // 				<p>${entidad.nombre}</p>
+    //   // 				${this.tooltip_data_seleccionada.fech
+    //   //           .toLocaleDateString('en-GB')
+    //   //           .replaceAll('/', '-')}<br/>
+    //   // 				<b>${this.tooltip_data_seleccionada.cat.toLocaleString('en')}</b>  <br/>
+    //   // 			`
+    // }
+
     contenidoTooltip
       .select('div.tooltip-cifras')
-      .html(textoTooltip.value)
+      .html(textoTooltip)
       .style('margin', '0')
       .style('padding', '0')
 
@@ -647,7 +713,7 @@ svg.svg-lineas {
 }
 
 svg.svg-lineas::v-deep text {
-  font-family: 'Montserrat';
+  // font-family: 'Montserrat';
 }
 
 div.contenedor-tooltip-svg {
