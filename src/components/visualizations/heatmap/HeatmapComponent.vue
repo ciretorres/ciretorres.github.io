@@ -34,7 +34,7 @@ const dictValuesRango = {
   Rango_2: '20 a 39',
   Rango_3: '40 a 59',
   Rango_4: '60 a 79',
-  Rango_5: '80 o más'
+  Rango_5: '80 o más',
 }
 
 const dictColorsRango = {
@@ -43,26 +43,26 @@ const dictColorsRango = {
   Rango_2: '#bdbdbd',
   Rango_3: '#969696',
   Rango_4: '#737373',
-  Rango_5: '#525252'
+  Rango_5: '#525252',
 }
 
-const vvariables = Object.entries(dictValuesRango).map((rango) => {
+const vvariables = Object.entries(dictValuesRango).map(rango => {
   return {
     color: dictColorsRango[rango[0]],
     nombre: rango[1],
-    id: rango[0]
+    id: rango[0],
   }
 })
 
 const props = defineProps({
   mapa_calor_id: {
     type: String,
-    default: () => 'mapa_calor'
+    default: () => 'mapa_calor',
   },
   datos: {
     type: Array,
     // type: Object,
-    default: () => [{ grupo: 'A', variable: 'v1', cantidad: '30' }]
+    default: () => [{ grupo: 'A', variable: 'v1', cantidad: '30' }],
   },
   titulo: String,
   instruccional: String,
@@ -70,15 +70,15 @@ const props = defineProps({
   titulo_leyenda: String,
   titulo_tooltip: {
     type: String,
-    default: ''
+    default: '',
   },
   alto_vis: {
     type: Number,
-    default: 500
+    default: 500,
   },
   ancho_vis: {
     type: Number,
-    default: 500
+    default: 500,
   },
   margin: {
     type: Object,
@@ -86,15 +86,15 @@ const props = defineProps({
       top: 10,
       right: 0,
       bottom: 40,
-      left: 40
-    })
+      left: 40,
+    }),
   },
   variables: {
     type: Array,
     default: function () {
       return ['grupo', 'variable', 'cantidad']
-    }
-  }
+    },
+  },
 })
 
 const { datos } = toRefs(props)
@@ -149,7 +149,9 @@ function quitaPon() {
 function configurandoDimensionesParaSVG() {
   // set the dimensions with margins to the graph
   width.value =
-    document.getElementById('contenedor_vis').clientWidth - props.margin.left - props.margin.right
+    document.getElementById('contenedor_vis').clientWidth -
+    props.margin.left -
+    props.margin.right
 
   if (window.innerWidth >= width_limit) {
     // 769
@@ -163,7 +165,10 @@ function configurandoDimensionesParaSVG() {
     .attr('height', height.value + props.margin.top + props.margin.bottom)
   // .style('background-color', '#eee') // <-- comentar
 
-  grupo_contenedor.value.attr('transform', `translate(${props.margin.left}, ${props.margin.top})`)
+  grupo_contenedor.value.attr(
+    'transform',
+    `translate(${props.margin.left}, ${props.margin.top})`
+  )
 }
 /**
  * Método para calcular los valores del heatmap
@@ -178,7 +183,7 @@ function calculoHeatmap(tipoVariante) {
 
     // Creando keysArray para estado, tipo_variante y abreviatura_ent
     const groupEstado = {}
-    Object.values(datosJSON).forEach((alumno) => {
+    Object.values(datosJSON).forEach(alumno => {
       const nombreGrupo = alumno.estado
       if (!groupEstado[nombreGrupo]) groupEstado[nombreGrupo] = []
       groupEstado[nombreGrupo].push(alumno)
@@ -186,7 +191,7 @@ function calculoHeatmap(tipoVariante) {
     const keyEstado = Object.keys(groupEstado)
     // console.log("keyEstado",keyEstado);
     const groupTipoVariante = {}
-    Object.values(datosJSON).forEach((alumno) => {
+    Object.values(datosJSON).forEach(alumno => {
       const nombreGrupo = alumno.tipo_variante
       if (!groupTipoVariante[nombreGrupo]) groupTipoVariante[nombreGrupo] = []
       groupTipoVariante[nombreGrupo].push(alumno)
@@ -195,9 +200,10 @@ function calculoHeatmap(tipoVariante) {
     keyVariante.value = keyTipoVariante
     // console.log("keyTipoVariante",keyTipoVariante);
     const groupAbreviaturaEnt = {}
-    Object.values(datosJSON).forEach((alumno) => {
+    Object.values(datosJSON).forEach(alumno => {
       const nombreGrupo = alumno.abreviatura_ent
-      if (!groupAbreviaturaEnt[nombreGrupo]) groupAbreviaturaEnt[nombreGrupo] = []
+      if (!groupAbreviaturaEnt[nombreGrupo])
+        groupAbreviaturaEnt[nombreGrupo] = []
       groupAbreviaturaEnt[nombreGrupo].push(alumno)
     })
     keyAbreviatura.value = Object.keys(groupAbreviaturaEnt)
@@ -205,23 +211,31 @@ function calculoHeatmap(tipoVariante) {
 
     // const completo = ['Interés nacional', 'Preocupación', 'Monitoreo', 'Sin clasificación', 'Interés'];
     // const parentesis = ['(VIN)', '(VOC)', '(VOM)', '(VSIN)', '(VOI)'];
-    completo.value = ['Variable 1', 'Variable 2', 'Variable 3', 'Variable 4', 'Variable 5']
+    completo.value = [
+      'Variable 1',
+      'Variable 2',
+      'Variable 3',
+      'Variable 4',
+      'Variable 5',
+    ]
     parentesis.value = ['', '', '', '', '']
 
     // Creando un nuevo arreglo de objectos con las claves ya filtradas y sumadas
     const arregloObjectos = []
     for (let i = 0; i < keyEstado.length; i++) {
       // Recorre por el número de estados y asigna el conjunto filtrado
-      const filtroEstado = Object.values(datosJSON).filter((d) => d.estado === keyEstado[i])
+      const filtroEstado = Object.values(datosJSON).filter(
+        d => d.estado === keyEstado[i]
+      )
 
       for (let j = 0; j < keyTipoVariante.length; j++) {
         // Recorre por el número de tipo de variantes asignando el conjunto filtrado
         // y recorre el conjunto para sumar la cantidad de muestras en total
         const filtroTipoVariante = filtroEstado.filter(
-          (d) => d.tipo_variante === keyTipoVariante[j]
+          d => d.tipo_variante === keyTipoVariante[j]
         )
         let valor = 0
-        filtroTipoVariante.forEach((element) => {
+        filtroTipoVariante.forEach(element => {
           // valor += element.cantidad_muestras;
           // valor += parseFloat(element.cantidad_muestras);
           valor = parseFloat(element.cantidad_muestras)
@@ -233,7 +247,7 @@ function calculoHeatmap(tipoVariante) {
             abreviatura: keyAbreviatura.value[i],
             variable: keyTipoVariante[j],
             variable_completa: completo.value[j],
-            value: valor
+            value: valor,
           })
         )
       }
@@ -249,12 +263,12 @@ function calculoHeatmap(tipoVariante) {
 
     // Filtro Tipo de Variante
     const filtroTipoVariante = Object.values(datosJSON).filter(
-      (d) => d.tipo_variante === tipoVariante.value
+      d => d.tipo_variante === tipoVariante.value
     )
 
     // Creando keyArray para estado, variante_oms y abreviatura_ent
     const groupEstado = {}
-    Object.values(datosJSON).forEach((alumno) => {
+    Object.values(datosJSON).forEach(alumno => {
       const nombreGrupo = alumno.estado
       if (!groupEstado[nombreGrupo]) groupEstado[nombreGrupo] = []
       groupEstado[nombreGrupo].push(alumno)
@@ -262,7 +276,7 @@ function calculoHeatmap(tipoVariante) {
     const keyEstado = Object.keys(groupEstado)
     // console.log("keyEstado",keyEstado);
     const groupVarianteOMS = {}
-    Object.values(filtroTipoVariante).forEach((alumno) => {
+    Object.values(filtroTipoVariante).forEach(alumno => {
       const nombreGrupo = alumno.variante_oms
       if (!groupVarianteOMS[nombreGrupo]) groupVarianteOMS[nombreGrupo] = []
       groupVarianteOMS[nombreGrupo].push(alumno)
@@ -278,9 +292,10 @@ function calculoHeatmap(tipoVariante) {
     keyVariante.value = keyVarianteOMS
     // console.log("keyVarianteOMS",keyVarianteOMS);
     const groupAbreviaturaEnt = {}
-    Object.values(datosJSON).forEach((alumno) => {
+    Object.values(datosJSON).forEach(alumno => {
       const nombreGrupo = alumno.abreviatura_ent
-      if (!groupAbreviaturaEnt[nombreGrupo]) groupAbreviaturaEnt[nombreGrupo] = []
+      if (!groupAbreviaturaEnt[nombreGrupo])
+        groupAbreviaturaEnt[nombreGrupo] = []
       groupAbreviaturaEnt[nombreGrupo].push(alumno)
     })
     keyAbreviatura.value = Object.keys(groupAbreviaturaEnt)
@@ -290,7 +305,9 @@ function calculoHeatmap(tipoVariante) {
     const arregloObjectos = []
     for (let i = 0; i < keyEstado.length; i++) {
       // Recorre por el número de estados y asigna el conjunto filtrado
-      const filtroEstado = filtroTipoVariante.filter((d) => d.estado === keyEstado[i])
+      const filtroEstado = filtroTipoVariante.filter(
+        d => d.estado === keyEstado[i]
+      )
 
       for (let j = 0; j < keyVariante.value.length; j++) {
         // Recorre por el número de variantes_oms asignando el conjunto filtrado
@@ -298,9 +315,9 @@ function calculoHeatmap(tipoVariante) {
 
         // Esto es lo que se tiene que implementar en el otro VTODAS
         const valor = filtroEstado
-          .filter((d) => d.variante_oms === keyVariante.value[j])
-          .map((d) => d.cantidad_muestras)
-        const abr = filtroEstado.map((d) => d.abreviatura_ent)
+          .filter(d => d.variante_oms === keyVariante.value[j])
+          .map(d => d.cantidad_muestras)
+        const abr = filtroEstado.map(d => d.abreviatura_ent)
 
         // Empujalo al arreglo de objectos para la nueva base de datos
         arregloObjectos.push(
@@ -310,7 +327,7 @@ function calculoHeatmap(tipoVariante) {
             variante: tipoVariante,
             variable: keyVariante.value[j],
             // value: valor.length === 0 ? 0 : valor[0],
-            value: valor
+            value: valor,
           })
         )
       }
@@ -330,17 +347,33 @@ function configurandoDimensionesParaHeatmap() {
     // // 769
     // // Desktop
     // // Build X, Y scales:
-    x.value = d3.scaleBand().range([50, width.value]).domain(keyAbreviatura.value).padding(0.03)
-    y.value = d3.scaleBand().range([height.value, 0]).domain(keyVariante.value).padding(0.03)
+    x.value = d3
+      .scaleBand()
+      .range([50, width.value])
+      .domain(keyAbreviatura.value)
+      .padding(0.03)
+    y.value = d3
+      .scaleBand()
+      .range([height.value, 0])
+      .domain(keyVariante.value)
+      .padding(0.03)
 
     const y_1 = ref({})
     const y_1_p = ref({})
 
     if (varianteSeleccionada.value === 'VTODAS') {
       // Despliega el nombre de las variables completas
-      y_1.value = d3.scaleBand().range([height.value, 0]).domain(completo.value).padding(0.03)
+      y_1.value = d3
+        .scaleBand()
+        .range([height.value, 0])
+        .domain(completo.value)
+        .padding(0.03)
       // Despliega el nombre de las variables entre paréntesis
-      y_1_p.value = d3.scaleBand().range([height.value, 0]).domain(parentesis.value).padding(0.03)
+      y_1_p.value = d3
+        .scaleBand()
+        .range([height.value, 0])
+        .domain(parentesis.value)
+        .padding(0.03)
     }
     // Build X, Y axis:
     eje_x_bottom.value
@@ -385,8 +418,16 @@ function configurandoDimensionesParaHeatmap() {
   } else {
     // Mobile
     // Build X, Y scales:
-    x.value = d3.scaleBand().range([0, width.value]).domain(keyVariante.value).padding(0.03)
-    y.value = d3.scaleBand().range([0, height.value]).domain(keyAbreviatura.value).padding(0.05)
+    x.value = d3
+      .scaleBand()
+      .range([0, width.value])
+      .domain(keyVariante.value)
+      .padding(0.03)
+    y.value = d3
+      .scaleBand()
+      .range([0, height.value])
+      .domain(keyAbreviatura.value)
+      .padding(0.05)
     // Build X, Y axis:
     eje_x_top.value
       .attr('transform', 'translate(40, 5)')
@@ -416,7 +457,9 @@ function configurandoDimensionesParaHeatmap() {
 function positionTooltip(e) {
   return {
     x:
-      60 + parseInt(e.target.attributes['x'].value) + tooltipRef.value.clientWidth >
+      60 +
+        parseInt(e.target.attributes['x'].value) +
+        tooltipRef.value.clientWidth >
       heatmapRef.value.clientWidth
         ? e.pageX - tooltipRef.value.clientWidth - 5
         : e.pageX + 15,
@@ -427,13 +470,15 @@ function positionTooltip(e) {
         tooltipRef.value.clientHeight >
       heatmapRef.value.clientHeight
         ? e.pageY - tooltipRef.value.clientHeight
-        : e.pageY + 15
+        : e.pageY + 15,
   }
 }
 
 function contenidoTooltip(datum) {
   return `${
-    varianteSeleccionada.value === 'VTODAS' ? `${datum.variable_completa}` : datum.variable
+    varianteSeleccionada.value === 'VTODAS'
+      ? `${datum.variable_completa}`
+      : datum.variable
   } | <b>${datum.value}</b>`
 }
 /**
@@ -460,12 +505,15 @@ function mostrarTooltip(evento, datum) {
  * Método para esconder el tooltip
  */
 function cerrarTooltip() {
-  d3.select(tooltipRef.value).style('visibility', 'hidden').style('left', '0').style('top', '0')
+  d3.select(tooltipRef.value)
+    .style('visibility', 'hidden')
+    .style('left', '0')
+    .style('top', '0')
 }
 /** */
 function creandoHeatmapDesktop() {
   // Build color scale
-  const escalaColor = variables_grafica.map((d) => d.color)
+  const escalaColor = variables_grafica.map(d => d.color)
   const catChecked = categorias_checkeadas.value
 
   // remove all rects created
@@ -478,7 +526,7 @@ function creandoHeatmapDesktop() {
       return d.abreviatura + ':' + d.variable
     })
     .join('rect')
-    .attr('class', (d) => `${d.abreviatura} rects-heatmaps`)
+    .attr('class', d => `${d.abreviatura} rects-heatmaps`)
     .attr('width', x.value.bandwidth())
     .attr('height', y.value.bandwidth())
     .style('fill', function (d) {
@@ -513,7 +561,7 @@ function creandoHeatmapDesktop() {
  */
 function creandoHeatmapMobile() {
   // Build color scale
-  const escalaColor = variables_grafica.map((d) => d.color)
+  const escalaColor = variables_grafica.map(d => d.color)
   const catChecked = categorias_checkeadas.value
 
   // remove all rects created
@@ -526,7 +574,7 @@ function creandoHeatmapMobile() {
       return d.abreviatura + ':' + d.variable
     })
     .join('rect')
-    .attr('class', (d) => `${d.abreviatura} rects-heatmaps`)
+    .attr('class', d => `${d.abreviatura} rects-heatmaps`)
     .attr('width', x.value.bandwidth())
     .attr('height', y.value.bandwidth())
     // .style("fill", function(d) { return myColor(d.value)} )
@@ -561,11 +609,15 @@ function actualizandoHeatmap() {
     .data(datas.value, function (d) {
       return d.abreviatura + ':' + d.variable
     })
-    .attr('x', (d) =>
-      window.innerWidth >= width_limit ? x.value(d.abreviatura) : x.value(d.variable)
+    .attr('x', d =>
+      window.innerWidth >= width_limit
+        ? x.value(d.abreviatura)
+        : x.value(d.variable)
     )
-    .attr('y', (d) =>
-      window.innerWidth >= width_limit ? y.value(d.variable) : y.value(d.abreviatura)
+    .attr('y', d =>
+      window.innerWidth >= width_limit
+        ? y.value(d.variable)
+        : y.value(d.abreviatura)
     )
 }
 function reescalandoPantalla() {
@@ -588,7 +640,7 @@ onMounted(() => {
   //  asigna el id o colócalo vacío. Solo manda los que no están vacíos.
   categorias_checkeadas.value = vvariables
     .map((d, i) => (lista_filtros_activos.value[i] ? d.id : ''))
-    .filter((d) => d !== '')
+    .filter(d => d !== '')
 
   // Asigna elementos a variables
   svg.value = d3.select(`div#${props.mapa_calor_id} svg.svg-heatmap`)
@@ -597,7 +649,9 @@ onMounted(() => {
 
   // append and attribute class to axes
   eje_x_top.value = grupo_contenedor_ejes.append('g').attr('class', 'eje-x-top')
-  eje_x_bottom.value = grupo_contenedor_ejes.append('g').attr('class', 'eje-x-bottom')
+  eje_x_bottom.value = grupo_contenedor_ejes
+    .append('g')
+    .attr('class', 'eje-x-bottom')
   eje_y.value = grupo_contenedor_ejes.append('g').attr('class', 'eje-y')
   eje_y_abr.value = grupo_contenedor_ejes.append('g').attr('class', 'eje-y-abr')
 
@@ -654,7 +708,7 @@ watch(
     // asigna el id o colócalo vacío. Solo manda los que no están vacíos.
     categorias_checkeadas.value = variables_grafica
       .map((d, i) => (lista_filtros_activos.value[i] ? d.id : ''))
-      .filter((d) => d !== '')
+      .filter(d => d !== '')
 
     configurandoDimensionesParaSVG()
     calculoHeatmap(varianteSeleccionada)
@@ -676,20 +730,31 @@ watch(
       <h3 class="titulo-visualizacion">
         Número de casos relacionados con
         {{
-          variantes.find((variante) => variante.clave === varianteSeleccionada).nombre.toLowerCase()
+          variantes
+            .find(variante => variante.clave === varianteSeleccionada)
+            .nombre.toLowerCase()
         }}
       </h3>
     </div>
 
     <div class="nomenclatura">
       <div class="leyenda-mapa-calor">
-        <button @click="quitaPon" class="quita-pon">
+        <button
+          @click="quitaPon"
+          class="quita-pon"
+        >
           {{ status_button }}
         </button>
       </div>
       <div class="checks">
-        <div class="label-1" v-for="(variable, i) in variables_grafica" :key="variable.id">
-          <CheckboxColor :color="variable.color" v-model="lista_filtros_activos[i]"
+        <div
+          class="label-1"
+          v-for="(variable, i) in variables_grafica"
+          :key="variable.id"
+        >
+          <CheckboxColor
+            :color="variable.color"
+            v-model="lista_filtros_activos[i]"
             ><span class="categoria-texto"
               >{{ variable.nombre }} {{ lista_filtros_activos[i] }}</span
             >
@@ -698,23 +763,47 @@ watch(
       </div>
     </div>
 
-    <div class="contenedor-vis" id="contenedor_vis">
+    <div
+      class="contenedor-vis"
+      id="contenedor_vis"
+    >
       <div :id="mapa_calor_id">
-        <svg class="svg-heatmap" ref="heatmapRef">
+        <svg
+          class="svg-heatmap"
+          ref="heatmapRef"
+        >
           <g class="grupo-contenedor-de-heatmap"></g>
           <g class="grupo-contenedor-de-ejes"></g>
         </svg>
       </div>
 
-      <div class="tooltip-mapa-calor" ref="tooltipRef">
+      <div
+        class="tooltip-mapa-calor"
+        ref="tooltipRef"
+      >
         <div class="contenedor-boton-cerrar">
           <span>{{ titulo_tooltip }}</span>
-          <button class="boton-cerrar-tooltip" @click="cerrarTooltip()">
-            <img :src="`${public_path}imgs/cerrar.svg`" alt="" class="img-cerrar" />
+          <button
+            class="boton-cerrar-tooltip"
+            @click="cerrarTooltip()"
+          >
+            <img
+              :src="`${public_path}imgs/cerrar.svg`"
+              alt=""
+              class="img-cerrar"
+            />
           </button>
         </div>
-        <p class="tooltip-variable" ref="tooltipVariableRef"></p>
-        <p class="tooltip-cifra" ref="tooltipCifraRef">120 | <b> 29.3%</b></p>
+        <p
+          class="tooltip-variable"
+          ref="tooltipVariableRef"
+        ></p>
+        <p
+          class="tooltip-cifra"
+          ref="tooltipCifraRef"
+        >
+          120 | <b> 29.3%</b>
+        </p>
       </div>
     </div>
   </div>

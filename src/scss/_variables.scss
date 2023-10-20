@@ -1,13 +1,13 @@
 $font-stack: Monaco, Roboto, Avenir, Helvetica, Arial, sans-serif;
 // $primary-color: #333;
-// $background-color: #0d2f5c;
+// $background-color: #0d2f5c; // Color azul, no borrar, está chido
 $background-color: #fff;
 
 // $background-color: #fff;
 
 $breakpoints: (
   'mov': 320px,
-  'esc': 768px
+  'esc': 768px,
 );
 
 $spacing: (
@@ -19,18 +19,18 @@ $spacing: (
   '5': 40px,
   '6': 48px,
   '7': 54px,
-  '8': 60px
+  '8': 60px,
 );
 
 $columnas: (
   'mov': (
     'columnas': 8,
-    'espaciado': map-get($spacing, '2')
+    'espaciado': map-get($spacing, '2'),
   ),
   'esc': (
     'columnas': 16,
-    'espaciado': map-get($spacing, '3')
-  )
+    'espaciado': map-get($spacing, '3'),
+  ),
 );
 
 :root {

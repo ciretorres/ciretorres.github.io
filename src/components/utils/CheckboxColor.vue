@@ -1,9 +1,19 @@
 <template>
   <label class="dai-checkbox-color-container">
-    <input type="checkbox" :checked="value" @change="cambio" />
+    <input
+      type="checkbox"
+      :checked="value"
+      @change="cambio"
+    />
     <span class="color-square">
-      <span class="custom-checkbox" :class="{ 'dai-icon-check': value }"></span>
-      <span class="color" :style="{ backgroundColor: color }"></span>
+      <span
+        class="custom-checkbox"
+        :class="{ 'dai-icon-check': value }"
+      ></span>
+      <span
+        class="color"
+        :style="{ backgroundColor: color }"
+      ></span>
     </span>
 
     <slot></slot>
@@ -15,13 +25,13 @@ export default {
   props: ['value', 'color'],
   model: {
     prop: 'value',
-    event: 'change'
+    event: 'change',
   },
   methods: {
     cambio: function (e) {
       this.$emit('change', e.target.checked)
-    }
-  }
+    },
+  },
 }
 </script>
 
