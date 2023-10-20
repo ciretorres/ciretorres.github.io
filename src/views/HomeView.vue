@@ -15,35 +15,20 @@ onMounted(() => {
 </script>
 
 <template>
-  <main
-    id="principal"
-    class="inicio"
-  >
+  <main id="principal" class="inicio">
     <div class="container p-2">
-      <p>
-        Hello! My name is <span class="color-blue">Eric</span>. Visualization
-        designer
-      </p>
-      <p>
-        I'm interested in art, data & systems to build better things for this
-        freak world.
-      </p>
+      <p>Hello! My name is <span class="color-blue">Eric</span>. Visualization designer</p>
+      <p>I'm interested in art, data & systems to build better things for this freak world.</p>
       <p>
         Currently, I'm learning about
         <span class="color-red">[machine learning & videogames]</span>
         in the beautiful
-        <a
-          href="https://goo.gl/ba2zp3"
-          target="_blank"
-          class="color-red"
-        >
+        <a href="https://goo.gl/ba2zp3" target="_blank" class="color-red">
           México City<span class="icon icon-external-link"></span>
         </a>
-        looking for new challengues!
+        looking for new challengues.
       </p>
-      <p>
-        Some of my <span class="color-blue">recent personal proyects:</span>
-      </p>
+      <p>Some of my <span class="color-blue">recent personal proyects!</span></p>
       <ul>
         <li>
           Developer
@@ -58,9 +43,7 @@ onMounted(() => {
               >
             </li>
             <li>
-              <router-link
-                class="color-yellow"
-                to="/development"
+              <router-link class="color-yellow" to="/development"
                 >[ Other stuff{{ period }} ]</router-link
               >
             </li>
@@ -71,23 +54,14 @@ onMounted(() => {
           Communication
           <ul>
             <li>
-              <router-link
-                class="color-yellow"
-                to="/design"
-                >[ Marketing & Design ]</router-link
-              >
+              <router-link class="color-yellow" to="/design">[ Marketing & Design ]</router-link>
             </li>
           </ul>
         </li>
       </ul>
       <p>
         Let's chat ->
-        <a
-          class="color-red"
-          href="//api.whatsapp.com/send?phone=5547904238"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
+        <a class="color-red" href="//api.whatsapp.com/send?phone=5547904238">
           WhatsApp<span class="icon icon-whatsapp"></span>
         </a>
       </p>

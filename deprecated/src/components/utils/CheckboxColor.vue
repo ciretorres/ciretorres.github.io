@@ -1,28 +1,39 @@
-<script setup>
-// const props = defineProps(['modelValue', 'color'])
-const props = defineProps({
-  modelValue: Boolean,
-  color: String
-})
-
-const emit = defineEmits(['update:modelValue'])
-</script>
-
 <template>
   <label class="dai-checkbox-color-container">
     <input
       type="checkbox"
-      :checked="modelValue"
-      @change="$emit('update:modelValue', $event.target.checked)"
+      :checked="value"
+      @change="cambio"
     />
     <span class="color-square">
-      <span class="custom-checkbox" :class="{ 'dai-icon-check': modelValue }"></span>
-      <span class="color" :style="{ backgroundColor: color }"></span>
+      <span
+        class="custom-checkbox"
+        :class="{ 'dai-icon-check': value }"
+      ></span>
+      <span
+        class="color"
+        :style="{ backgroundColor: color }"
+      ></span>
     </span>
 
     <slot></slot>
   </label>
 </template>
+
+<script>
+export default {
+  props: ['value', 'color'],
+  model: {
+    prop: 'value',
+    event: 'change',
+  },
+  methods: {
+    cambio: function (e) {
+      this.$emit('change', e.target.checked)
+    },
+  },
+}
+</script>
 
 <style lang="scss">
 ::-ms-check {

@@ -13,13 +13,6 @@
     background: transparent;
     border: none;
     max-width: 1000px;
-    height: 100%;
-    &.w-inherit {
-      @media (max-width: 768px) {
-        width: inherit;
-        // max-width: 800px;
-      }
-    }
   }
   // padding: 24px;
   @media (min-width: 768px) {
@@ -60,12 +53,10 @@
     @for $i from 1 through map-get($configuracion, 'columnas') {
       .flex > .columna-#{$i} {
         flex-basis: calc(
-          ($i / map-get($configuracion, 'columnas') * 100%) -
-            map-get($configuracion, 'espaciado')
+          ($i / map-get($configuracion, 'columnas') * 100%) - map-get($configuracion, 'espaciado')
         );
         max-width: calc(
-          ($i / map-get($configuracion, 'columnas') * 100%) -
-            map-get($configuracion, 'espaciado')
+          ($i / map-get($configuracion, 'columnas') * 100%) - map-get($configuracion, 'espaciado')
         );
       }
       // .grid > .columna-#{$i} {
@@ -82,12 +73,10 @@
     @for $i from 1 through map-get($configuracion, 'columnas') {
       .flex > .columna-#{$i}-#{$dispositivo} {
         flex-basis: calc(
-          ($i / map-get($configuracion, 'columnas') * 100%) -
-            map-get($configuracion, 'espaciado')
+          ($i / map-get($configuracion, 'columnas') * 100%) - map-get($configuracion, 'espaciado')
         );
         max-width: calc(
-          ($i / map-get($configuracion, 'columnas') * 100%) -
-            map-get($configuracion, 'espaciado')
+          ($i / map-get($configuracion, 'columnas') * 100%) - map-get($configuracion, 'espaciado')
         );
         margin-left: map-get($configuracion, 'espaciado') * 0.5;
         margin-right: map-get($configuracion, 'espaciado') * 0.5;

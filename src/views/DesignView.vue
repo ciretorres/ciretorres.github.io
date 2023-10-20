@@ -7,7 +7,7 @@ const arrayMessage = ref({
   b: ' ',
   c: ' ',
   d: ' ',
-  e: ' ',
+  e: ' '
 })
 
 onMounted(() => {
@@ -18,7 +18,7 @@ onMounted(() => {
       a: '',
       b: '',
       c: '',
-      d: '',
+      d: ''
     }
     let choose = salutation[Math.floor(Math.random() * salutation.length)]
     arrayMessage.value[item] = choose
@@ -27,10 +27,7 @@ onMounted(() => {
 </script>
 
 <template>
-  <main
-    id="principal"
-    class="design"
-  >
+  <main id="principal" class="design">
     <div class="container p-2">
       <p class="color-red">[Marketing & Design]</p>
       <ul>
@@ -128,19 +125,12 @@ onMounted(() => {
 
       <ul>
         <li>
-          <router-link
-            class="color-white"
-            to="/development/visualization/d3js"
-          >
-            Go to <span class="color-yellow">[Visualization]</span></router-link
+          <router-link class="color-white" to="/design/visualization/d3js">
+            Go to <span class="color-yellow">[Vis]</span></router-link
           >
         </li>
       </ul>
-      <router-link
-        class="color-red"
-        to="/"
-        >[Back]</router-link
-      >
+      <router-link class="color-red" to="/">[Back]</router-link>
     </div>
   </main>
 </template>

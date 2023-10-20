@@ -2,19 +2,19 @@
 import { ref } from 'vue'
 
 const mostrar = ref(true)
-
-function descubirSitios() {
-  mostrar.value = !mostrar.value
-}
 </script>
+
 <template>
-  <main id="principal" class="development">
+  <main
+    id="principal"
+    class="development"
+  >
     <div class="container p-2">
       <p class="color-red">[Other stuff...]</p>
       <ul>
         <li>
           <a
-            @click="descubirSitios()"
+            @click="mostrar = !mostrar"
             style="cursor: pointer"
             class="color-white"
             rel="noopener noreferrer"
@@ -203,17 +203,32 @@ function descubirSitios() {
               >
             </li>
             <ul>
-              <li></li>
+              <li>
+                <a
+                  class="color-white"
+                  href="https://toxicologia.conahcyt.mx/resa-atoyac/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >RESA: Cuenca del alto Atoyac</a
+                >
+              </li>
             </ul>
           </ul>
         </ul>
         <li>
-          <router-link class="color-white" to="/development/visualization">
+          <router-link
+            class="color-white"
+            to="/development/visualization/intro"
+          >
             Go to <span class="color-yellow">[Visualization]</span></router-link
           >
         </li>
       </ul>
-      <router-link class="color-red" to="/">[Back]</router-link>
+      <router-link
+        class="color-red"
+        to="/"
+        >[Back]</router-link
+      >
     </div>
   </main>
 </template>
