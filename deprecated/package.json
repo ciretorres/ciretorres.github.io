@@ -19,10 +19,9 @@
   },
   "dependencies": {
     "d3": "^7.8.5",
-    "dai-maps": "git+https://devtemp-invitado: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@github.com/conacyt-dai/dai-maps.git#v0.3.12",
     "pinia": "^2.1.6",
     "sisdai-css": "git+https://codigo.conahcyt.mx/sisdai/sisdai-css#v0.42.9",
-    "sisdai-mapas": "file:../../sisdai-mapas",
+    "sisdai-mapas": "git+https://codigo.conahcyt.mx/sisdai/sisdai-mapas#v1.5.0",
     "vue": "^3.3.4",
     "vue-router": "^4.2.4"
   },

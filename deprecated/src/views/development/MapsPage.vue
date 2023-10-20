@@ -4,7 +4,7 @@ import MapaComponent from '@/components/visualizations/maps/MapaComponent.vue'
 
 <template>
   <div class="maps">
-    <div class="container sin-fondo">
+    <div class="container sin-fondo my-8">
       <h1>Mapas</h1>
       <MapaComponent></MapaComponent>
 
@@ -65,6 +65,21 @@ import MapaComponent from '@/components/visualizations/maps/MapaComponent.vue'
     </div>
   </div>
 </template>
+
+<style lang="scss">
+.maps {
+  .sisdai-mapa.contenedor-vis {
+      background: transparent;
+      padding: 0;
+      .contenido-vis {
+        height: 515px;
+      }
+      .contenedor-vis-atribuciones {
+      display: none;
+    }  
+  }
+}
+</style>
 
 <style lang="scss" scoped>
 // .maps {

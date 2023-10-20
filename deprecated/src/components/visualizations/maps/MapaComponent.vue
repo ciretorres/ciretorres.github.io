@@ -42,7 +42,7 @@ function globoInformativo(f) {
 
 <template>
   <SisdaiMapa 
-    class="contenedor-vis sin-cargador con-panel-encabezado-vis contenedor-vis-atribuciones" 
+    class="contenedor-vis con-panel-encabezado-vis contenedor-vis-atribuciones" 
     :vista="{ centro: [0, 0], zoom: 1 }">
     <template #panel-encabezado-vis>
       <div class="m-r-2">
@@ -74,17 +74,4 @@ function globoInformativo(f) {
 
 <style lang="scss" scoped>
 @import 'node_modules/sisdai-css/src/eni.scss';
-.contenedor-vis {
-  background: transparent;
-  padding: 0;
-  div.contenedor-vis-atribuciones {
-    padding: 0 !important;
-    display: none;
-    visibility: hidden !important;
-  }
-}
-html body div#app div.visualization div.flex div.columna-12.columna-7-mov.rout div.maps div.container.sin-fondo div.sisdai-mapa.contenedor-vis.borde-redondeado-8.sin-cargador.con-panel-encabezado-vis.contenedor-vis-atribuciones div.contenedor-vis-atribuciones {
-  display: none !important;
-  visibility: hidden;
-}
 </style>
