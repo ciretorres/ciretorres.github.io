@@ -1,10 +1,11 @@
 import { fileURLToPath, URL } from 'node:url'
 
-import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
+import { defineConfig } from 'vite'
 
 // https://vitejs.dev/config/
 export default defineConfig({
+  base: import.meta.env.BASE_URL,
   css: {
     loaderOptions: {
       scss: {
@@ -21,6 +22,9 @@ export default defineConfig({
       // },
     }),
   ],
+  define: {
+    'process.env': import.meta.env.BASE_URL
+  },
   resolve: {
     alias: {
       '@': fileURLToPath(new URL('./src', import.meta.url))

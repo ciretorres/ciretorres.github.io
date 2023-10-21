@@ -1,8 +1,8 @@
 <script setup>
-import SelectorVariantes from '@/components/visualizations/heatmap/SelectorVariantes.vue'
-import Heatmap from '@/components/visualizations/heatmap/HeatmapComponent.vue'
+import Heatmap from '@/components/visualizations/heatmap/HeatmapComponent.vue';
+import SelectorVariantes from '@/components/visualizations/heatmap/SelectorVariantes.vue';
 
-import usarDatosApi from '@/components/utils/usarDatosApi'
+import usarDatosApi from '@/components/utils/usarDatosApi';
 
 const end_point = '/consorcio_variantes_heatmap_todas.json'
 

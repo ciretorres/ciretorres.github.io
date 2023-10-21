@@ -1,11 +1,12 @@
 <script setup>
-import { onMounted, ref, computed } from 'vue'
-import axios from 'axios'
-import * as d3 from 'd3'
+import axios from 'axios';
+import * as d3 from 'd3';
+import { computed, onMounted, ref } from 'vue';
 
-import Area from '@/components/visualizations/area/AreaComponent.vue'
+import Area from '@/components/visualizations/area/AreaComponent.vue';
 
-const public_path = process.env.BASE_URL
+// const public_path = process.env.BASE_URL
+const public_path = import.meta.env.BASE_URL
 
 const data = ref([])
 const errored = ref(false)

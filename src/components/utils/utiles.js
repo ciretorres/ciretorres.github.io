@@ -1,5 +1,5 @@
 import axios from 'axios'
-const public_path = process.env.BASE_URL
+const public_path = import.meta.env.BASE_URL
 /**
  * Instancia de axios
  */
