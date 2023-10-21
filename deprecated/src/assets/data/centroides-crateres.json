@@ -24,7 +24,10 @@
     },
     {
       "type": "Feature",
-      "geometry": { "type": "Point", "coordinates": [134.8333333333, -20.9166666667] },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [134.8333333333, -20.9166666667]
+      },
       "properties": {
         "name": "Amelia Creek",
         "country": "Northern Territory",
@@ -35,11 +38,19 @@
     {
       "type": "Feature",
       "geometry": { "type": "Point", "coordinates": [-98.2, 36.25] },
-      "properties": { "name": "Ames", "country": "USA", "diameter_km": "16", "age_ma": "470 ± 30" }
+      "properties": {
+        "name": "Ames",
+        "country": "USA",
+        "diameter_km": "16",
+        "age_ma": "470 ± 30"
+      }
     },
     {
       "type": "Feature",
-      "geometry": { "type": "Point", "coordinates": [4.3833333333, 26.0833333333] },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [4.3833333333, 26.0833333333]
+      },
       "properties": {
         "name": "Amguid",
         "country": "Algeria",
@@ -69,7 +80,10 @@
     },
     {
       "type": "Feature",
-      "geometry": { "type": "Point", "coordinates": [-52.9833333333, -16.7833333333] },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-52.9833333333, -16.7833333333]
+      },
       "properties": {
         "name": "Araguainha",
         "country": "Brazil",
@@ -80,16 +94,29 @@
     {
       "type": "Feature",
       "geometry": { "type": "Point", "coordinates": [23.75, 22.0666666667] },
-      "properties": { "name": "Arkenu", "country": "Libia", "diameter_km": "10", "age_ma": "~140" }
+      "properties": {
+        "name": "Arkenu",
+        "country": "Libia",
+        "diameter_km": "10",
+        "age_ma": "~140"
+      }
     },
     {
       "type": "Feature",
       "geometry": { "type": "Point", "coordinates": [-156.6333333333, 71.25] },
-      "properties": { "name": "Avak", "country": "USA", "diameter_km": "12", "age_ma": "3-95" }
+      "properties": {
+        "name": "Avak",
+        "country": "USA",
+        "diameter_km": "12",
+        "age_ma": "3-95"
+      }
     },
     {
       "type": "Feature",
-      "geometry": { "type": "Point", "coordinates": [-0.9166666667, 41.1666666667] },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-0.9166666667, 41.1666666667]
+      },
       "properties": {
         "name": "Azuara",
         "country": "Spain",
@@ -99,7 +126,10 @@
     },
     {
       "type": "Feature",
-      "geometry": { "type": "Point", "coordinates": [-111.0166666667, 35.0333333333] },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-111.0166666667, 35.0333333333]
+      },
       "properties": {
         "name": "Barringer",
         "country": "USA",
@@ -159,7 +189,10 @@
     },
     {
       "type": "Feature",
-      "geometry": { "type": "Point", "coordinates": [24.3333333333, 25.3166666667] },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [24.3333333333, 25.3166666667]
+      },
       "properties": {
         "name": "B.P. Structure",
         "country": "Libya",
@@ -180,7 +213,12 @@
     {
       "type": "Feature",
       "geometry": { "type": "Point", "coordinates": [97.8, 75.7] },
-      "properties": { "name": "Chukcha", "country": "Russia", "diameter_km": "6", "age_ma": "< 70" }
+      "properties": {
+        "name": "Chukcha",
+        "country": "Russia",
+        "diameter_km": "6",
+        "age_ma": "< 70"
+      }
     },
     {
       "type": "Feature",
@@ -194,7 +232,10 @@
     },
     {
       "type": "Feature",
-      "geometry": { "type": "Point", "coordinates": [-1.4166666667, 6.5333333333] },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-1.4166666667, 6.5333333333]
+      },
       "properties": {
         "name": "Bosumtwi",
         "country": "Ghana",
@@ -204,7 +245,10 @@
     },
     {
       "type": "Feature",
-      "geometry": { "type": "Point", "coordinates": [-78.4833333333, 46.0833333333] },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-78.4833333333, 46.0833333333]
+      },
       "properties": {
         "name": "Brent",
         "country": "Canada",
@@ -264,7 +308,10 @@
     },
     {
       "type": "Feature",
-      "geometry": { "type": "Point", "coordinates": [-76.0166666667, 37.2833333333] },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-76.0166666667, 37.2833333333]
+      },
       "properties": {
         "name": "Chesapeake Bay",
         "country": "USA",
@@ -284,7 +331,10 @@
     },
     {
       "type": "Feature",
-      "geometry": { "type": "Point", "coordinates": [-74.1166666667, 56.0833333333] },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-74.1166666667, 56.0833333333]
+      },
       "properties": {
         "name": "Clearwater East",
         "country": "Canada",
@@ -314,7 +364,10 @@
     },
     {
       "type": "Feature",
-      "geometry": { "type": "Point", "coordinates": [-46.7166666667, -23.8666666667] },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-46.7166666667, -23.8666666667]
+      },
       "properties": {
         "name": "Colônia",
         "country": "Brazil",
@@ -334,7 +387,10 @@
     },
     {
       "type": "Feature",
-      "geometry": { "type": "Point", "coordinates": [-75.3333333333, 60.1333333333] },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-75.3333333333, 60.1333333333]
+      },
       "properties": {
         "name": "Couture",
         "country": "Canada",
@@ -344,7 +400,10 @@
     },
     {
       "type": "Feature",
-      "geometry": { "type": "Point", "coordinates": [139.0333333333, -34.7166666667] },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [139.0333333333, -34.7166666667]
+      },
       "properties": {
         "name": "Crawford",
         "country": "South Australia",
@@ -354,7 +413,10 @@
     },
     {
       "type": "Feature",
-      "geometry": { "type": "Point", "coordinates": [-91.3833333333, 37.8333333333] },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-91.3833333333, 37.8333333333]
+      },
       "properties": {
         "name": "Crooked Creek",
         "country": "USA",
@@ -364,7 +426,10 @@
     },
     {
       "type": "Feature",
-      "geometry": { "type": "Point", "coordinates": [117.2833333333, -27.6333333333] },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [117.2833333333, -27.6333333333]
+      },
       "properties": {
         "name": "Dalgaranga",
         "country": "Western Australia",
@@ -444,7 +509,10 @@
     },
     {
       "type": "Feature",
-      "geometry": { "type": "Point", "coordinates": [-106.7166666667, 50.9833333333] },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-106.7166666667, 50.9833333333]
+      },
       "properties": {
         "name": "Elbow",
         "country": "Canada",
@@ -464,7 +532,10 @@
     },
     {
       "type": "Feature",
-      "geometry": { "type": "Point", "coordinates": [139.0666666667, -34.6166666667] },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [139.0666666667, -34.6166666667]
+      },
       "properties": {
         "name": "Flaxman",
         "country": "South Australia",
@@ -474,7 +545,10 @@
     },
     {
       "type": "Feature",
-      "geometry": { "type": "Point", "coordinates": [-85.6666666667, 36.2833333333] },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-85.6666666667, 36.2833333333]
+      },
       "properties": {
         "name": "Flynn Creek",
         "country": "USA",
@@ -484,7 +558,10 @@
     },
     {
       "type": "Feature",
-      "geometry": { "type": "Point", "coordinates": [136.7833333333, -16.6666666667] },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [136.7833333333, -16.6666666667]
+      },
       "properties": {
         "name": "Foelsche",
         "country": "Northern Territory",
@@ -505,11 +582,19 @@
     {
       "type": "Feature",
       "geometry": { "type": "Point", "coordinates": [-89.7833333333, 40.6] },
-      "properties": { "name": "Glasford", "country": "USA", "diameter_km": "4", "age_ma": "< 430" }
+      "properties": {
+        "name": "Glasford",
+        "country": "USA",
+        "diameter_km": "4",
+        "age_ma": "< 430"
+      }
     },
     {
       "type": "Feature",
-      "geometry": { "type": "Point", "coordinates": [121.5666666667, -23.9833333333] },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [121.5666666667, -23.9833333333]
+      },
       "properties": {
         "name": "Glikson",
         "country": "Western Australia",
@@ -519,7 +604,10 @@
     },
     {
       "type": "Feature",
-      "geometry": { "type": "Point", "coordinates": [-89.5333333333, 43.9666666667] },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-89.5333333333, 43.9666666667]
+      },
       "properties": {
         "name": "Glover Bluff",
         "country": "USA",
@@ -529,7 +617,10 @@
     },
     {
       "type": "Feature",
-      "geometry": { "type": "Point", "coordinates": [126.6666666667, -18.3333333333] },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [126.6666666667, -18.3333333333]
+      },
       "properties": {
         "name": "Goat Paddock",
         "country": "Western Australia",
@@ -539,7 +630,10 @@
     },
     {
       "type": "Feature",
-      "geometry": { "type": "Point", "coordinates": [132.3166666667, -23.8333333333] },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [132.3166666667, -23.8333333333]
+      },
       "properties": {
         "name": "Gosses Bluff",
         "country": "Northern Territory",
@@ -550,11 +644,19 @@
     {
       "type": "Feature",
       "geometry": { "type": "Point", "coordinates": [-104.4833333333, 56.45] },
-      "properties": { "name": "Gow", "country": "Canada", "diameter_km": "5", "age_ma": "< 250" }
+      "properties": {
+        "name": "Gow",
+        "country": "Canada",
+        "diameter_km": "5",
+        "age_ma": "< 250"
+      }
     },
     {
       "type": "Feature",
-      "geometry": { "type": "Point", "coordinates": [135.0333333333, -13.4666666667] },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [135.0333333333, -13.4666666667]
+      },
       "properties": {
         "name": "Goyder",
         "country": "Northern Territory",
@@ -564,12 +666,23 @@
     },
     {
       "type": "Feature",
-      "geometry": { "type": "Point", "coordinates": [14.9333333333, 56.4166666667] },
-      "properties": { "name": "Granby", "country": "Sweden", "diameter_km": "3", "age_ma": "~ 470" }
+      "geometry": {
+        "type": "Point",
+        "coordinates": [14.9333333333, 56.4166666667]
+      },
+      "properties": {
+        "name": "Granby",
+        "country": "Sweden",
+        "diameter_km": "3",
+        "age_ma": "~ 470"
+      }
     },
     {
       "type": "Feature",
-      "geometry": { "type": "Point", "coordinates": [40.5333333333, 48.4333333333] },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [40.5333333333, 48.4333333333]
+      },
       "properties": {
         "name": "Gusev",
         "country": "Russia",
@@ -589,12 +702,23 @@
     },
     {
       "type": "Feature",
-      "geometry": { "type": "Point", "coordinates": [-89.6833333333, 75.3666666667] },
-      "properties": { "name": "Haughton", "country": "Canada", "diameter_km": "23", "age_ma": "39" }
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-89.6833333333, 75.3666666667]
+      },
+      "properties": {
+        "name": "Haughton",
+        "country": "Canada",
+        "diameter_km": "23",
+        "age_ma": "39"
+      }
     },
     {
       "type": "Feature",
-      "geometry": { "type": "Point", "coordinates": [-99.1666666667, 37.5833333333] },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-99.1666666667, 37.5833333333]
+      },
       "properties": {
         "name": "Haviland",
         "country": "USA",
@@ -604,7 +728,10 @@
     },
     {
       "type": "Feature",
-      "geometry": { "type": "Point", "coordinates": [133.1333333333, -24.5666666667] },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [133.1333333333, -24.5666666667]
+      },
       "properties": {
         "name": "Henbury",
         "country": "Northern Territory",
@@ -614,7 +741,10 @@
     },
     {
       "type": "Feature",
-      "geometry": { "type": "Point", "coordinates": [-76.6333333333, 44.4666666667] },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-76.6333333333, 44.4666666667]
+      },
       "properties": {
         "name": "Holleford",
         "country": "Canada",
@@ -634,7 +764,10 @@
     },
     {
       "type": "Feature",
-      "geometry": { "type": "Point", "coordinates": [-73.8833333333, 50.6833333333] },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-73.8833333333, 50.6833333333]
+      },
       "properties": {
         "name": "Ile Rouleau",
         "country": "Canada",
@@ -644,7 +777,10 @@
     },
     {
       "type": "Feature",
-      "geometry": { "type": "Point", "coordinates": [27.4166666667, 57.9666666667] },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [27.4166666667, 57.9666666667]
+      },
       "properties": {
         "name": "Ilumetsä",
         "country": "Estonia",
@@ -684,7 +820,10 @@
     },
     {
       "type": "Feature",
-      "geometry": { "type": "Point", "coordinates": [30.9166666667, 61.9666666667] },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [30.9166666667, 61.9666666667]
+      },
       "properties": {
         "name": "Jänisjärvi",
         "country": "Russia",
@@ -714,7 +853,10 @@
     },
     {
       "type": "Feature",
-      "geometry": { "type": "Point", "coordinates": [24.4333333333, -32.7166666667] },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [24.4333333333, -32.7166666667]
+      },
       "properties": {
         "name": "Kalkkop",
         "country": "South Africa",
@@ -744,8 +886,16 @@
     },
     {
       "type": "Feature",
-      "geometry": { "type": "Point", "coordinates": [26.0833333333, 22.0166666667] },
-      "properties": { "name": "Kamil", "country": "Egypt", "diameter_km": "0.045", "age_ma": "-" }
+      "geometry": {
+        "type": "Point",
+        "coordinates": [26.0833333333, 22.0166666667]
+      },
+      "properties": {
+        "name": "Kamil",
+        "country": "Egypt",
+        "diameter_km": "0.045",
+        "age_ma": "-"
+      }
     },
     {
       "type": "Feature",
@@ -769,7 +919,10 @@
     },
     {
       "type": "Feature",
-      "geometry": { "type": "Point", "coordinates": [22.7666666667, 59.0166666667] },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [22.7666666667, 59.0166666667]
+      },
       "properties": {
         "name": "Kärdla",
         "country": "Estonia",
@@ -789,8 +942,16 @@
     },
     {
       "type": "Feature",
-      "geometry": { "type": "Point", "coordinates": [48.0333333333, 54.9166666667] },
-      "properties": { "name": "Karla", "country": "Russia", "diameter_km": "10", "age_ma": "5 ± 1" }
+      "geometry": {
+        "type": "Point",
+        "coordinates": [48.0333333333, 54.9166666667]
+      },
+      "properties": {
+        "name": "Karla",
+        "country": "Russia",
+        "diameter_km": "10",
+        "age_ma": "5 ± 1"
+      }
     },
     {
       "type": "Feature",
@@ -805,7 +966,12 @@
     {
       "type": "Feature",
       "geometry": { "type": "Point", "coordinates": [-87.4, 40.75] },
-      "properties": { "name": "Kentland", "country": "USA", "diameter_km": "13", "age_ma": "< 97" }
+      "properties": {
+        "name": "Kentland",
+        "country": "USA",
+        "diameter_km": "13",
+        "age_ma": "< 97"
+      }
     },
     {
       "type": "Feature",
@@ -819,7 +985,10 @@
     },
     {
       "type": "Feature",
-      "geometry": { "type": "Point", "coordinates": [27.5833333333, -22.4833333333] },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [27.5833333333, -22.4833333333]
+      },
       "properties": {
         "name": "Kgagodi",
         "country": "Botswana",
@@ -839,7 +1008,10 @@
     },
     {
       "type": "Feature",
-      "geometry": { "type": "Point", "coordinates": [-66.6166666667, 57.4333333333] },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-66.6166666667, 57.4333333333]
+      },
       "properties": {
         "name": "La Moinerie",
         "country": "Canada",
@@ -889,7 +1061,10 @@
     },
     {
       "type": "Feature",
-      "geometry": { "type": "Point", "coordinates": [95.9333333333, 65.5166666667] },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [95.9333333333, 65.5166666667]
+      },
       "properties": {
         "name": "Logancha",
         "country": "Russia",
@@ -909,7 +1084,10 @@
     },
     {
       "type": "Feature",
-      "geometry": { "type": "Point", "coordinates": [76.5166666667, 19.9666666667] },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [76.5166666667, 19.9666666667]
+      },
       "properties": {
         "name": "Lonar",
         "country": "India",
@@ -1009,7 +1187,10 @@
     },
     {
       "type": "Feature",
-      "geometry": { "type": "Point", "coordinates": [-83.7333333333, 36.6166666667] },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-83.7333333333, 36.6166666667]
+      },
       "properties": {
         "name": "Middlesboro",
         "country": "USA",
@@ -1019,7 +1200,10 @@
     },
     {
       "type": "Feature",
-      "geometry": { "type": "Point", "coordinates": [14.8666666667, 56.4166666667] },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [14.8666666667, 56.4166666667]
+      },
       "properties": {
         "name": "Mien",
         "country": "Sweden",
@@ -1069,7 +1253,10 @@
     },
     {
       "type": "Feature",
-      "geometry": { "type": "Point", "coordinates": [-68.2833333333, -23.9333333333] },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-68.2833333333, -23.9333333333]
+      },
       "properties": {
         "name": "Monturaqui",
         "country": "Chile",
@@ -1079,7 +1266,10 @@
     },
     {
       "type": "Feature",
-      "geometry": { "type": "Point", "coordinates": [-64.2166666667, 42.8833333333] },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-64.2166666667, 42.8833333333]
+      },
       "properties": {
         "name": "Montagnais",
         "country": "Canada",
@@ -1099,7 +1289,10 @@
     },
     {
       "type": "Feature",
-      "geometry": { "type": "Point", "coordinates": [23.5333333333, -26.4666666667] },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [23.5333333333, -26.4666666667]
+      },
       "properties": {
         "name": "Morokweng",
         "country": "South Africa",
@@ -1119,7 +1312,10 @@
     },
     {
       "type": "Feature",
-      "geometry": { "type": "Point", "coordinates": [23.6666666667, 59.3333333333] },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [23.6666666667, 59.3333333333]
+      },
       "properties": {
         "name": "Neugrund",
         "country": "Estonia",
@@ -1129,7 +1325,10 @@
     },
     {
       "type": "Feature",
-      "geometry": { "type": "Point", "coordinates": [-101.9666666667, 48.9666666667] },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-101.9666666667, 48.9666666667]
+      },
       "properties": {
         "name": "Newporte",
         "country": "USA",
@@ -1139,7 +1338,10 @@
     },
     {
       "type": "Feature",
-      "geometry": { "type": "Point", "coordinates": [-73.6666666667, 61.2833333333] },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-73.6666666667, 61.2833333333]
+      },
       "properties": {
         "name": "New Quebec",
         "country": "Canada",
@@ -1149,7 +1351,10 @@
     },
     {
       "type": "Feature",
-      "geometry": { "type": "Point", "coordinates": [-102.6833333333, 62.6666666667] },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-102.6833333333, 62.6666666667]
+      },
       "properties": {
         "name": "Nicholson",
         "country": "Canada",
@@ -1159,7 +1364,10 @@
     },
     {
       "type": "Feature",
-      "geometry": { "type": "Point", "coordinates": [10.5666666667, 48.8833333333] },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [10.5666666667, 48.8833333333]
+      },
       "properties": {
         "name": "Nördlinger Ries",
         "country": "Germany",
@@ -1170,11 +1378,19 @@
     {
       "type": "Feature",
       "geometry": { "type": "Point", "coordinates": [24.4, 24.5833333333] },
-      "properties": { "name": "Oasis'", "country": "Libya", "diameter_km": "18", "age_ma": "< 120" }
+      "properties": {
+        "name": "Oasis'",
+        "country": "Libya",
+        "diameter_km": "18",
+        "age_ma": "< 120"
+      }
     },
     {
       "type": "Feature",
-      "geometry": { "type": "Point", "coordinates": [32.9166666667, 49.5833333333] },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [32.9166666667, 49.5833333333]
+      },
       "properties": {
         "name": "Obolon'",
         "country": "Ukraine",
@@ -1204,7 +1420,10 @@
     },
     {
       "type": "Feature",
-      "geometry": { "type": "Point", "coordinates": [29.0833333333, 62.0333333333] },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [29.0833333333, 62.0333333333]
+      },
       "properties": {
         "name": "Paasselkä",
         "country": "Finland",
@@ -1214,7 +1433,10 @@
     },
     {
       "type": "Feature",
-      "geometry": { "type": "Point", "coordinates": [128.4166666667, -17.5333333333] },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [128.4166666667, -17.5333333333]
+      },
       "properties": {
         "name": "Piccaninny",
         "country": "Western Australia",
@@ -1224,7 +1446,10 @@
     },
     {
       "type": "Feature",
-      "geometry": { "type": "Point", "coordinates": [-111.0166666667, 60.2833333333] },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-111.0166666667, 60.2833333333]
+      },
       "properties": {
         "name": "Pilot",
         "country": "Canada",
@@ -1254,7 +1479,10 @@
     },
     {
       "type": "Feature",
-      "geometry": { "type": "Point", "coordinates": [43.7166666667, 56.9666666667] },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [43.7166666667, 56.9666666667]
+      },
       "properties": {
         "name": "Puchezh-Katunki",
         "country": "Russia",
@@ -1294,7 +1522,10 @@
     },
     {
       "type": "Feature",
-      "geometry": { "type": "Point", "coordinates": [10.6166666667, 48.8833333333] },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [10.6166666667, 48.8833333333]
+      },
       "properties": {
         "name": "Ries",
         "country": "Germany",
@@ -1304,7 +1535,10 @@
     },
     {
       "type": "Feature",
-      "geometry": { "type": "Point", "coordinates": [-64.2333333333, -32.8666666667] },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-64.2333333333, -32.8666666667]
+      },
       "properties": {
         "name": "Rio Cuarto",
         "country": "Argentina",
@@ -1314,7 +1548,10 @@
     },
     {
       "type": "Feature",
-      "geometry": { "type": "Point", "coordinates": [6.4333333333, 59.2333333333] },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [6.4333333333, 59.2333333333]
+      },
       "properties": {
         "name": "Ritland",
         "country": "Norway",
@@ -1324,7 +1561,10 @@
     },
     {
       "type": "Feature",
-      "geometry": { "type": "Point", "coordinates": [0.9333333333, 45.8333333333] },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [0.9333333333, 45.8333333333]
+      },
       "properties": {
         "name": "Rochechouart",
         "country": "France",
@@ -1334,8 +1574,16 @@
     },
     {
       "type": "Feature",
-      "geometry": { "type": "Point", "coordinates": [-92.2333333333, 44.7166666667] },
-      "properties": { "name": "Rock Elm", "country": "USA", "diameter_km": "6", "age_ma": "< 505" }
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-92.2333333333, 44.7166666667]
+      },
+      "properties": {
+        "name": "Rock Elm",
+        "country": "USA",
+        "diameter_km": "6",
+        "age_ma": "< 505"
+      }
     },
     {
       "type": "Feature",
@@ -1369,7 +1617,10 @@
     },
     {
       "type": "Feature",
-      "geometry": { "type": "Point", "coordinates": [28.3833333333, 65.2833333333] },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [28.3833333333, 65.2833333333]
+      },
       "properties": {
         "name": "Saarijärvi",
         "country": "Finland",
@@ -1389,7 +1640,10 @@
     },
     {
       "type": "Feature",
-      "geometry": { "type": "Point", "coordinates": [-98.5333333333, 51.7833333333] },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-98.5333333333, 51.7833333333]
+      },
       "properties": {
         "name": "Saint Martin",
         "country": "Canada",
@@ -1429,7 +1683,10 @@
     },
     {
       "type": "Feature",
-      "geometry": { "type": "Point", "coordinates": [-46.8666666667, -8.0833333333] },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-46.8666666667, -8.0833333333]
+      },
       "properties": {
         "name": "Serra da Cangalha",
         "country": "Brazil",
@@ -1439,7 +1696,10 @@
     },
     {
       "type": "Feature",
-      "geometry": { "type": "Point", "coordinates": [120.8833333333, -25.8666666667] },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [120.8833333333, -25.8666666667]
+      },
       "properties": {
         "name": "Shoemaker (formerly Teague)",
         "country": "Western Australia",
@@ -1469,7 +1729,10 @@
     },
     {
       "type": "Feature",
-      "geometry": { "type": "Point", "coordinates": [134.6666666667, 46.1166666667] },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [134.6666666667, 46.1166666667]
+      },
       "properties": {
         "name": "Sikhote Alin",
         "country": "Russia",
@@ -1479,7 +1742,10 @@
     },
     {
       "type": "Feature",
-      "geometry": { "type": "Point", "coordinates": [14.8666666667, 61.0333333333] },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [14.8666666667, 61.0333333333]
+      },
       "properties": {
         "name": "Siljan",
         "country": "Sweden",
@@ -1509,7 +1775,10 @@
     },
     {
       "type": "Feature",
-      "geometry": { "type": "Point", "coordinates": [21.5833333333, 63.0333333333] },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [21.5833333333, 63.0333333333]
+      },
       "properties": {
         "name": "Söderfjärden",
         "country": "Finland",
@@ -1519,7 +1788,10 @@
     },
     {
       "type": "Feature",
-      "geometry": { "type": "Point", "coordinates": [126.0833333333, -16.7333333333] },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [126.0833333333, -16.7333333333]
+      },
       "properties": {
         "name": "Spider",
         "country": "Western Australia",
@@ -1539,7 +1811,10 @@
     },
     {
       "type": "Feature",
-      "geometry": { "type": "Point", "coordinates": [10.0666666667, 48.6833333333] },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [10.0666666667, 48.6833333333]
+      },
       "properties": {
         "name": "Steinheim",
         "country": "Germany",
@@ -1559,7 +1834,10 @@
     },
     {
       "type": "Feature",
-      "geometry": { "type": "Point", "coordinates": [33.3833333333, 63.1166666667] },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [33.3833333333, 63.1166666667]
+      },
       "properties": {
         "name": "Suavjärvi",
         "country": "Russia",
@@ -1609,7 +1887,10 @@
     },
     {
       "type": "Feature",
-      "geometry": { "type": "Point", "coordinates": [4.0333333333, 33.3166666667] },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [4.0333333333, 33.3166666667]
+      },
       "properties": {
         "name": "Talemzane",
         "country": "Algeria",
@@ -1629,7 +1910,10 @@
     },
     {
       "type": "Feature",
-      "geometry": { "type": "Point", "coordinates": [33.5166666667, 48.1333333333] },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [33.5166666667, 48.1333333333]
+      },
       "properties": {
         "name": "Ternovka",
         "country": "Ukraine",
@@ -1640,7 +1924,12 @@
     {
       "type": "Feature",
       "geometry": { "type": "Point", "coordinates": [120, -70] },
-      "properties": { "name": "Tierra de Wilkes", "country": "", "diameter_km": "", "age_ma": "" }
+      "properties": {
+        "name": "Tierra de Wilkes",
+        "country": "",
+        "diameter_km": "",
+        "age_ma": ""
+      }
     },
     {
       "type": "Feature",
@@ -1654,7 +1943,10 @@
     },
     {
       "type": "Feature",
-      "geometry": { "type": "Point", "coordinates": [142.8333333333, -27.1166666667] },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [142.8333333333, -27.1166666667]
+      },
       "properties": {
         "name": "Tookoonooka",
         "country": "Queensland",
@@ -1674,7 +1966,10 @@
     },
     {
       "type": "Feature",
-      "geometry": { "type": "Point", "coordinates": [-113.9666666667, 72.4666666667] },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-113.9666666667, 72.4666666667]
+      },
       "properties": {
         "name": "Tunnunik (formerly Prince Albert)",
         "country": "Canada",
@@ -1684,8 +1979,16 @@
     },
     {
       "type": "Feature",
-      "geometry": { "type": "Point", "coordinates": [17.4166666667, 58.7666666667] },
-      "properties": { "name": "Tvären", "country": "Sweden", "diameter_km": "2", "age_ma": "~ 455" }
+      "geometry": {
+        "type": "Point",
+        "coordinates": [17.4166666667, 58.7666666667]
+      },
+      "properties": {
+        "name": "Tvären",
+        "country": "Sweden",
+        "diameter_km": "2",
+        "age_ma": "~ 455"
+      }
     },
     {
       "type": "Feature",
@@ -1700,11 +2003,19 @@
     {
       "type": "Feature",
       "geometry": { "type": "Point", "coordinates": [65.3, 69.3] },
-      "properties": { "name": "Ust", "country": "", "diameter_km": "", "age_ma": "" }
+      "properties": {
+        "name": "Ust",
+        "country": "",
+        "diameter_km": "",
+        "age_ma": ""
+      }
     },
     {
       "type": "Feature",
-      "geometry": { "type": "Point", "coordinates": [-52.1166666667, -26.8333333333] },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-52.1166666667, -26.8333333333]
+      },
       "properties": {
         "name": "Vargeão Dome",
         "country": "Brazil",
@@ -1714,7 +2025,10 @@
     },
     {
       "type": "Feature",
-      "geometry": { "type": "Point", "coordinates": [125.3666666667, -22.9666666667] },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [125.3666666667, -22.9666666667]
+      },
       "properties": {
         "name": "Veevers",
         "country": "Western Australia",
@@ -1724,7 +2038,10 @@
     },
     {
       "type": "Feature",
-      "geometry": { "type": "Point", "coordinates": [24.5833333333, 55.0833333333] },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [24.5833333333, 55.0833333333]
+      },
       "properties": {
         "name": "Vepriai",
         "country": "Lithuania",
@@ -1734,7 +2051,10 @@
     },
     {
       "type": "Feature",
-      "geometry": { "type": "Point", "coordinates": [-103.0666666667, 49.5833333333] },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-103.0666666667, 49.5833333333]
+      },
       "properties": {
         "name": "Viewfield",
         "country": "Canada",
@@ -1784,7 +2104,10 @@
     },
     {
       "type": "Feature",
-      "geometry": { "type": "Point", "coordinates": [-87.6666666667, 36.3833333333] },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-87.6666666667, 36.3833333333]
+      },
       "properties": {
         "name": "Wells Creek",
         "country": "USA",
@@ -1794,7 +2117,10 @@
     },
     {
       "type": "Feature",
-      "geometry": { "type": "Point", "coordinates": [-95.1833333333, 49.7666666667] },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-95.1833333333, 49.7666666667]
+      },
       "properties": {
         "name": "West Hawk",
         "country": "Canada",
@@ -1804,7 +2130,10 @@
     },
     {
       "type": "Feature",
-      "geometry": { "type": "Point", "coordinates": [-86.1666666667, 32.5166666667] },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-86.1666666667, 32.5166666667]
+      },
       "properties": {
         "name": "Wetumpka",
         "country": "USA",
@@ -1854,7 +2183,10 @@
     },
     {
       "type": "Feature",
-      "geometry": { "type": "Point", "coordinates": [118.8333333333, -27.1666666667] },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [118.8333333333, -27.1666666667]
+      },
       "properties": {
         "name": "Yarrabubba",
         "country": "Western Australia",

@@ -1,5 +1,5 @@
 <script setup>
-import MapaCalor from '@/components/visualizations/heatmap/MapaDeCalor.vue'
+import MapaCalor from '@/components/visualizations/heatmap/MapaDeCalor.vue';
 </script>
 
 <template>

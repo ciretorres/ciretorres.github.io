@@ -500,7 +500,7 @@ svg.svg-streamgraph {
 }
 
 svg.svg-streamgraph::v-deep text {
-  font-family: 'Montserrat';
+  // font-family: 'Montserrat';
 }
 
 div.contenedor-tooltip-svg {

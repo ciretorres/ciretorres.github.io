@@ -1,21 +1,18 @@
-import Vue from 'vue'
+// import './assets/main.css'
+
+import { createPinia } from 'pinia'
+import { createApp } from 'vue'
+
 import App from './App.vue'
 import router from './router'
-import store from './store'
 
-// import axios from 'axios'
-Vue.config.productionTip = false
-// Vue.prototype.$http = axios
+import SisdaiMapas from 'sisdai-mapas'
 
-// Biblioteca de mapas
-import DaiMaps from 'dai-maps'
-import 'dai-maps/dist/dai-maps.css'
-Vue.use(DaiMaps)
+const app = createApp(App)
 
-Vue.config.productionTip = false
+app.use(SisdaiMapas)
 
-new Vue({
-  router,
-  store,
-  render: h => h(App),
-}).$mount('#app')
+app.use(createPinia())
+app.use(router)
+
+app.mount('#app')

@@ -328,7 +328,6 @@ watch(datos, () => {
 <style scoped lang="scss">
 $border-radius-tarjeta: 10px;
 div.contenedor-sankey {
-  font-family: 'Montserrat';
   width: 100%;
   border: solid black 1px;
   border-radius: $border-radius-tarjeta;
@@ -343,7 +342,7 @@ div.contenedor-sankey {
     color: var(--tooltip-color);
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
     border-radius: 4px;
-    font: normal normal 400 12px/14px 'Montserrat', sans-serif;
+    // font: normal normal 400 12px/14px 'Montserrat', sans-serif;
     padding: 0.75rem;
     position: absolute;
     * {
@@ -373,9 +372,6 @@ div.contenedor-sankey {
         font-size: 30px;
       }
     }
-  }
-  svg.svg-sankey::v-deep text {
-    font-family: 'Montserrat';
   }
 }
 </style>

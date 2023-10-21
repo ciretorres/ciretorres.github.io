@@ -1,32 +1,32 @@
 <script setup>
-import * as d3 from 'd3'
+import * as d3 from 'd3';
 
-import CheckboxColor from '@/components/utils/CheckboxColor.vue'
+import CheckboxColor from '@/components/utils/CheckboxColor.vue';
 
-import { computed, onMounted, onUnmounted, ref, toRefs, watch } from 'vue'
+import { computed, onMounted, onUnmounted, ref, toRefs, watch } from 'vue';
 
-import variantesjson from '@/assets/data/variantes.json'
+import variantesjson from '@/assets/data/variantes.json';
 const variantes = variantesjson
 
-import consorcioHeatmap from '@/assets/datasets/consorcio_heatmap.json'
+import consorcioHeatmap from '@/assets/datasets/consorcio_heatmap.json';
 // import consorcioVariantesHeatmapTodas from '@/assets/datasets/consorcio_variantes_heatmap_todas.json'
 
-// import { useStore } from '@/stores'
-import store from '../../../store'
-// const store = useStore()
+import { useStore } from '@/stores';
+// import store from '../../../store'
+const store = useStore()
 
 const public_path = process.env.BASE_URL
 
-// const varianteSeleccionada = computed({
-//   // getter
-//   get() {
-//     return store.variante_seleccionada
-//   }
-// })
-const varianteSeleccionada = computed(() => {
-  // return store.variante_seleccionada
-  return store.state.variante_seleccionada
+const varianteSeleccionada = computed({
+  // getter
+  get() {
+    return store.variante_seleccionada
+  }
 })
+// const varianteSeleccionada = computed(() => {
+//   // return store.variante_seleccionada
+//   return store.state.variante_seleccionada
+// })
 
 const dictValuesRango = {
   Rango_0: '0',
@@ -38,12 +38,12 @@ const dictValuesRango = {
 }
 
 const dictColorsRango = {
-  Rango_0: '#efefef',
+  Rango_0: '#f0f0f0',
   Rango_1: '#d9d9d9',
-  Rango_2: '#cccccc',
-  Rango_3: '#b7b7b7',
-  Rango_4: '#999999',
-  Rango_5: '#666666',
+  Rango_2: '#bdbdbd',
+  Rango_3: '#969696',
+  Rango_4: '#737373',
+  Rango_5: '#525252',
 }
 
 const vvariables = Object.entries(dictValuesRango).map(rango => {

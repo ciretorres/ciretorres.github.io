@@ -1,8 +1,15 @@
 <template>
   <div>
     <label for="selector-estatal">Estados</label>
-    <select id="selector-estatal" v-model="estadoSeleccionado">
-      <option v-for="estado in estados" :key="estado.orden" :value="estado.clave">
+    <select
+      id="selector-estatal"
+      v-model="estadoSeleccionado"
+    >
+      <option
+        v-for="estado in estados"
+        :key="estado.orden"
+        :value="estado.clave"
+      >
         {{ estado.nombre }}
       </option>
     </select>
@@ -16,7 +23,7 @@ export default {
   name: 'SelectorEstados',
   data() {
     return {
-      estados: estadosjson
+      estados: estadosjson,
     }
   },
   computed: {
@@ -26,8 +33,8 @@ export default {
       },
       set(value) {
         this.$store.commit('seleccionarEstado', value)
-      }
-    }
-  }
+      },
+    },
+  },
 }
 </script>

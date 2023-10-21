@@ -1,3 +1,24 @@
+<script setup>
+import { computed } from 'vue';
+
+import { useStore } from '@/stores/index';
+const store = useStore()
+
+import variantesjson from '@/assets/data/variantes.json';
+const variantes = variantesjson
+
+const varianteSeleccionada = computed({
+  // getter
+  get() {
+    return store.variante_seleccionada
+  },
+  // setter
+  set(newValue) {
+    store.seleccionarVariante(newValue)
+  },
+})
+</script>
+
 <template>
   <div>
     <label for="selector-variante">Variables</label>
@@ -15,26 +36,3 @@
     </select>
   </div>
 </template>
-
-<script>
-import variantesjson from '@/assets/data/variantes.json'
-
-export default {
-  name: 'SelectorVariantes',
-  data() {
-    return {
-      variantes: variantesjson,
-    }
-  },
-  computed: {
-    varianteSeleccionada: {
-      get() {
-        return this.$store.getters.varianteSeleccionada
-      },
-      set(value) {
-        this.$store.commit('seleccionarVariante', value)
-      },
-    },
-  },
-}
-</script>

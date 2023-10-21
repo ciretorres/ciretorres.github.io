@@ -1,5 +1,5 @@
 <script setup>
-import { onMounted, ref } from 'vue'
+import { onMounted, ref } from 'vue';
 
 const salutation = ['[Clic me!]', '[No over here]', '[hellou!]', '[yei]']
 const arrayMessage = ref({
