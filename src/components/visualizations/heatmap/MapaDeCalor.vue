@@ -1,8 +1,8 @@
 <script setup>
-import Heatmap from '@/components/visualizations/heatmap/HeatmapComponent.vue';
-import SelectorVariantes from '@/components/visualizations/heatmap/SelectorVariantes.vue';
+import Heatmap from '@/components/visualizations/heatmap/HeatmapComponent.vue'
+import SelectorVariantes from '@/components/visualizations/heatmap/SelectorVariantes.vue'
 
-import usarDatosApi from '@/components/utils/usarDatosApi';
+import usarDatosApi from '@/components/utils/usarDatosApi'
 
 const end_point = '/consorcio_variantes_heatmap_todas.json'
 
@@ -11,7 +11,7 @@ const { datos } = usarDatosApi(end_point)
 
 <template>
   <div class="mapa-de-calor">
-    <h1>Mapa de calor</h1>
+    <h2>Mapa de calor</h2>
     <div class="selectores-fijos">
       <div class="contenedor">
         <SelectorVariantes class="selector" />

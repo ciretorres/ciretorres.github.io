@@ -39,7 +39,7 @@ function Objeto(fecha_recoleccion, tipo_variante) {
   // Constructor
   return {
     fecha_recoleccion: fecha_recoleccion,
-    tipo_variante: tipo_variante,
+    tipo_variante: tipo_variante
   }
 }
 function Objeto2(
@@ -57,7 +57,7 @@ function Objeto2(
     VIN: tipo_variante_1,
     VOM: tipo_variante_2,
     VOC: tipo_variante_3,
-    VOI: tipo_variante_4,
+    VOI: tipo_variante_4
   }
 }
 /**
@@ -81,13 +81,13 @@ for (let i = 0; i < dateArray.length; i++) {
  * Filtrando baseDatos por fecha_recolección
  * this.fecha_actualización '2021-04-30' -6 en mes
  */
-const dateFiltered = dataBase.filter(d => d.fecha_recoleccion > '2020-12-31')
+const dateFiltered = dataBase.filter((d) => d.fecha_recoleccion > '2020-12-31')
 // console.log('dateFiltered', dateFiltered)
-const onlyDate = dateFiltered.map(d => d['fecha_recoleccion'])
+const onlyDate = dateFiltered.map((d) => d['fecha_recoleccion'])
 function filterUniqueDates(data) {
   const lookup = new Set()
 
-  return data.filter(d => {
+  return data.filter((d) => {
     const serialised = d
     if (lookup.has(serialised)) {
       return false
@@ -150,7 +150,7 @@ for (let i = 0; i < uniqueValueDate.length; i++) {
           { id: 'VIN', nombre: 'VIN', color: '#b2df8a' },
           { id: 'VOM', nombre: 'VOM', color: '#fb9a99' },
           { id: 'VOC', nombre: 'VOC', color: '#fdbf6f' },
-          { id: 'VOI', nombre: 'VOI', color: '#cab2d6' },
+          { id: 'VOI', nombre: 'VOI', color: '#cab2d6' }
         ]"
         :conversionTemporal="d3.timeParse('%Y-%m-%d')"
       />
