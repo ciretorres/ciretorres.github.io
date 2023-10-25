@@ -45,7 +45,7 @@ const items = {
     { node: 39, name: 'node39', id: 'node_39', color: '#FFF' },
     { node: 40, name: 'node40', id: 'node_40', color: '#FFF' },
     { node: 41, name: 'node41', id: 'node_41', color: '#FFF' },
-    { node: 42, name: 'node42', id: 'node_42', color: '#FFF' },
+    { node: 42, name: 'node42', id: 'node_42', color: '#FFF' }
   ],
   links: [
     { source: 'node0', target: 'node21', value: 0, color: '#efefef' },
@@ -206,8 +206,8 @@ const items = {
     { source: 'node41', target: 'node38', value: 0, color: '#efefef' },
     { source: 'node41', target: 'node39', value: 0, color: '#efefef' },
     { source: 'node40', target: 'node42', value: 1, color: '#efefef' },
-    { source: 'node41', target: 'node42', value: 1, color: '#efefef' },
-  ],
+    { source: 'node41', target: 'node42', value: 1, color: '#efefef' }
+  ]
 }
 // import data from '../../../public/data/sankey/sankeygreenhouse.json'
 // import data from '../../../public/data/sankey/energy.json
@@ -218,12 +218,9 @@ const items = {
   <div class="d3js">
     <div class="container sin-fondo">
       <h1>Sankey Diagram</h1>
-      <SankeyComponent
-        v-if="false"
-        sankey_id="sankey0"
-        :datos="data"
-      />
       <SankeyComponent :datos="items" />
+
+      <SankeyComponent sankey_id="sankey0" :datos="data" />
     </div>
   </div>
 </template>
