@@ -7,6 +7,7 @@
   border: 1px solid rgba($color: #fff, $alpha: 0.1);
   border-radius: 8px;
   margin-top: 60px;
+  margin-bottom: 60px;
   margin-left: auto;
   margin-right: auto;
   &.sin-fondo {
@@ -60,12 +61,10 @@
     @for $i from 1 through map-get($configuracion, 'columnas') {
       .flex > .columna-#{$i} {
         flex-basis: calc(
-          ($i / map-get($configuracion, 'columnas') * 100%) -
-            map-get($configuracion, 'espaciado')
+          ($i / map-get($configuracion, 'columnas') * 100%) - map-get($configuracion, 'espaciado')
         );
         max-width: calc(
-          ($i / map-get($configuracion, 'columnas') * 100%) -
-            map-get($configuracion, 'espaciado')
+          ($i / map-get($configuracion, 'columnas') * 100%) - map-get($configuracion, 'espaciado')
         );
       }
       // .grid > .columna-#{$i} {
@@ -82,12 +81,10 @@
     @for $i from 1 through map-get($configuracion, 'columnas') {
       .flex > .columna-#{$i}-#{$dispositivo} {
         flex-basis: calc(
-          ($i / map-get($configuracion, 'columnas') * 100%) -
-            map-get($configuracion, 'espaciado')
+          ($i / map-get($configuracion, 'columnas') * 100%) - map-get($configuracion, 'espaciado')
         );
         max-width: calc(
-          ($i / map-get($configuracion, 'columnas') * 100%) -
-            map-get($configuracion, 'espaciado')
+          ($i / map-get($configuracion, 'columnas') * 100%) - map-get($configuracion, 'espaciado')
         );
         margin-left: map-get($configuracion, 'espaciado') * 0.5;
         margin-right: map-get($configuracion, 'espaciado') * 0.5;

@@ -4,7 +4,8 @@ const centroides = centroidesJSON
 
 const atribuciones = [
   '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>',
-  '&copy; <a href="https://carto.com/attributions">CARTO</a>'
+  '&copy; <a href="https://carto.com/attributions">CARTO</a>',
+  '&copy; <a href="https://codigo.conahcyt.mx/sisdai/sisdai-mapas">Sisdai-mapas</a>'
 ]
 
 const seleccion = {
