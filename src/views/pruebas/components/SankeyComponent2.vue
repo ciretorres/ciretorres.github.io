@@ -1,7 +1,6 @@
 <script setup>
 import * as d3 from 'd3'
-import { sankey } from 'd3-sankey'
-import { sankeyLinkHorizontal } from 'd3-sankey'
+import { sankey, sankeyLinkHorizontal } from 'd3-sankey'
 
 import { onMounted, ref } from 'vue'
 
@@ -570,14 +569,14 @@ const items = {
       node: 1,
       name: 'Del. Cuajimalpa de Morelos',
       id: 'node_1',
-      color: '#FFF',
+      color: '#FFF'
     },
     { node: 2, name: 'Del. Álvaro Obregón', id: 'node_2', color: '#FFF' },
     {
       node: 3,
       name: 'Del. La Magdalena Contreras',
       id: 'node_3',
-      color: '#FFF',
+      color: '#FFF'
     },
     { node: 4, name: 'Del. Tlalpan', id: 'node_4', color: '#FFF' },
     { node: 5, name: 'Del. Coyoacán', id: 'node_5', color: '#FFF' },
@@ -599,7 +598,7 @@ const items = {
       node: 20,
       name: 'Recolección Edo. de México',
       id: 'node_20',
-      color: '#FFF',
+      color: '#FFF'
     },
     { node: 21, name: 'Transferencia 1', id: 'node_21', color: '#FFF' },
     { node: 22, name: 'Transferencia 2', id: 'node_22', color: '#FFF' },
@@ -622,7 +621,7 @@ const items = {
     { node: 39, name: 'Disposición5', id: 'node_39', color: '#FFF' },
     { node: 40, name: 'Planta de Selección 1', id: 'node_40', color: '#FFF' },
     { node: 41, name: 'Planta de Selección 2', id: 'node_41', color: '#FFF' },
-    { node: 42, name: 'Recuperación', id: 'node_42', color: '#FFF' },
+    { node: 42, name: 'Recuperación', id: 'node_42', color: '#FFF' }
   ],
   links: [
     // Delegación -> Transferencia
@@ -630,768 +629,768 @@ const items = {
       source: 'Del. Miguel Hidalgo',
       target: 'Transferencia 1',
       value: 0,
-      color: '#EFF',
+      color: '#EFF'
     },
     {
       source: 'Del. Miguel Hidalgo',
       target: 'Transferencia 2',
       value: 0,
-      color: '#EFF',
+      color: '#EFF'
     },
     {
       source: 'Del. Cuajimalpa de Morelos',
       target: 'Transferencia 2',
       value: 0,
-      color: '#EFF',
+      color: '#EFF'
     },
     {
       source: 'Del. Álvaro Obregón',
       target: 'Transferencia 2',
       value: 0,
-      color: '#EFF',
+      color: '#EFF'
     },
     {
       source: 'Del. La Magdalena Contreras',
       target: 'Transferencia 2',
       value: 0,
-      color: '#EFF',
+      color: '#EFF'
     },
     {
       source: 'Del. La Magdalena Contreras',
       target: 'Transferencia 3',
       value: 0,
-      color: '#EFF',
+      color: '#EFF'
     },
     {
       source: 'Del. Tlalpan',
       target: 'Transferencia 3',
       value: 0,
-      color: '#EFF',
+      color: '#EFF'
     },
     {
       source: 'Del. Tlalpan',
       target: 'Transferencia 4',
       value: 0,
-      color: '#EFF',
+      color: '#EFF'
     },
     {
       source: 'Del. Coyoacán',
       target: 'Transferencia 4',
       value: 0,
-      color: '#EFF',
+      color: '#EFF'
     },
     {
       source: 'Del. Xochimilco',
       target: 'Transferencia 4',
       value: 0,
-      color: '#EFF',
+      color: '#EFF'
     },
     {
       source: 'Del. Xochimilco',
       target: 'Transferencia 5',
       value: 0,
-      color: '#EFF',
+      color: '#EFF'
     },
     {
       source: 'Del. Tláhuac',
       target: 'Transferencia 5',
       value: 0,
-      color: '#EFF',
+      color: '#EFF'
     },
     {
       source: 'Del. Milpa Alta',
       target: 'Transferencia 6',
       value: 0,
-      color: '#EFF',
+      color: '#EFF'
     },
     {
       source: 'Del. Venustiano Carranza',
       target: 'Transferencia 7',
       value: 0,
-      color: '#EFF',
+      color: '#EFF'
     },
     {
       source: 'Del. Benito Juárez',
       target: 'Transferencia 8',
       value: 0,
-      color: '#EFF',
+      color: '#EFF'
     },
     {
       source: 'Del. Iztacalco',
       target: 'Transferencia 9',
       value: 0,
-      color: '#EFF',
+      color: '#EFF'
     },
     {
       source: 'Del. Iztapalapa',
       target: 'Transferencia 9',
       value: 0,
-      color: '#EFF',
+      color: '#EFF'
     },
     {
       source: 'Del. Cuauhtémoc',
       target: 'Transferencia 10',
       value: 0,
-      color: '#EFF',
+      color: '#EFF'
     },
     {
       source: 'Del. Gustavo A. Madero',
       target: 'Transferencia 11',
       value: 0,
-      color: '#EFF',
+      color: '#EFF'
     },
     {
       source: 'Del. Azcapotzalco',
       target: 'Transferencia 12',
       value: 0,
-      color: '#EFF',
+      color: '#EFF'
     },
     // Recolección -> Transferencia
     {
       source: 'Recolección CEDA',
       target: 'Transferencia 1',
       value: 0,
-      color: '#EFF',
+      color: '#EFF'
     },
     {
       source: 'Recolección CEDA',
       target: 'Transferencia 2',
       value: 0,
-      color: '#EFF',
+      color: '#EFF'
     },
     {
       source: 'Recolección CEDA',
       target: 'Transferencia 3',
       value: 0,
-      color: '#EFF',
+      color: '#EFF'
     },
     {
       source: 'Recolección CEDA',
       target: 'Transferencia 4',
       value: 0,
-      color: '#EFF',
+      color: '#EFF'
     },
     {
       source: 'Recolección CEDA',
       target: 'Transferencia 5',
       value: 0,
-      color: '#EFF',
+      color: '#EFF'
     },
     {
       source: 'Recolección CEDA',
       target: 'Transferencia 6',
       value: 0,
-      color: '#EFF',
+      color: '#EFF'
     },
     {
       source: 'Recolección CEDA',
       target: 'Transferencia 7',
       value: 0,
-      color: '#EFF',
+      color: '#EFF'
     },
     {
       source: 'Recolección CEDA',
       target: 'Transferencia 8',
       value: 0,
-      color: '#EFF',
+      color: '#EFF'
     },
     {
       source: 'Recolección CEDA',
       target: 'Transferencia 9',
       value: 0,
-      color: '#EFF',
+      color: '#EFF'
     },
     {
       source: 'Recolección CEDA',
       target: 'Transferencia 10',
       value: 0,
-      color: '#EFF',
+      color: '#EFF'
     },
     {
       source: 'Recolección CEDA',
       target: 'Transferencia 11',
       value: 0,
-      color: '#EFF',
+      color: '#EFF'
     },
     {
       source: 'Recolección CEDA',
       target: 'Transferencia 12',
       value: 0,
-      color: '#EFF',
+      color: '#EFF'
     },
     {
       source: 'Recolección Particular',
       target: 'Transferencia 1',
       value: 0,
-      color: '#EFF',
+      color: '#EFF'
     },
     {
       source: 'Recolección Particular',
       target: 'Transferencia 2',
       value: 0,
-      color: '#EFF',
+      color: '#EFF'
     },
     {
       source: 'Recolección Particular',
       target: 'Transferencia 3',
       value: 0,
-      color: '#EFF',
+      color: '#EFF'
     },
     {
       source: 'Recolección Particular',
       target: 'Transferencia 4',
       value: 0,
-      color: '#EFF',
+      color: '#EFF'
     },
     {
       source: 'Recolección Particular',
       target: 'Transferencia 5',
       value: 0,
-      color: '#EFF',
+      color: '#EFF'
     },
     {
       source: 'Recolección Particular',
       target: 'Transferencia 6',
       value: 0,
-      color: '#EFF',
+      color: '#EFF'
     },
     {
       source: 'Recolección Particular',
       target: 'Transferencia 7',
       value: 0,
-      color: '#EFF',
+      color: '#EFF'
     },
     {
       source: 'Recolección Particular',
       target: 'Transferencia 8',
       value: 0,
-      color: '#EFF',
+      color: '#EFF'
     },
     {
       source: 'Recolección Particular',
       target: 'Transferencia 9',
       value: 0,
-      color: '#EFF',
+      color: '#EFF'
     },
     {
       source: 'Recolección Particular',
       target: 'Transferencia 10',
       value: 0,
-      color: '#EFF',
+      color: '#EFF'
     },
     {
       source: 'Recolección Particular',
       target: 'Transferencia 11',
       value: 0,
-      color: '#EFF',
+      color: '#EFF'
     },
     {
       source: 'Recolección Particular',
       target: 'Transferencia 12',
       value: 0,
-      color: '#EFF',
+      color: '#EFF'
     },
     {
       source: 'Recolección DGSU',
       target: 'Transferencia 1',
       value: 0,
-      color: '#EFF',
+      color: '#EFF'
     },
     {
       source: 'Recolección DGSU',
       target: 'Transferencia 2',
       value: 0,
-      color: '#EFF',
+      color: '#EFF'
     },
     {
       source: 'Recolección DGSU',
       target: 'Transferencia 3',
       value: 0,
-      color: '#EFF',
+      color: '#EFF'
     },
     {
       source: 'Recolección DGSU',
       target: 'Transferencia 4',
       value: 0,
-      color: '#EFF',
+      color: '#EFF'
     },
     {
       source: 'Recolección DGSU',
       target: 'Transferencia 5',
       value: 0,
-      color: '#EFF',
+      color: '#EFF'
     },
     {
       source: 'Recolección DGSU',
       target: 'Transferencia 6',
       value: 0,
-      color: '#EFF',
+      color: '#EFF'
     },
     {
       source: 'Recolección DGSU',
       target: 'Transferencia 7',
       value: 0,
-      color: '#EFF',
+      color: '#EFF'
     },
     {
       source: 'Recolección DGSU',
       target: 'Transferencia 8',
       value: 0,
-      color: '#EFF',
+      color: '#EFF'
     },
     {
       source: 'Recolección DGSU',
       target: 'Transferencia 9',
       value: 0,
-      color: '#EFF',
+      color: '#EFF'
     },
     {
       source: 'Recolección DGSU',
       target: 'Transferencia 10',
       value: 0,
-      color: '#EFF',
+      color: '#EFF'
     },
     {
       source: 'Recolección DGSU',
       target: 'Transferencia 11',
       value: 0,
-      color: '#EFF',
+      color: '#EFF'
     },
     {
       source: 'Recolección DGSU',
       target: 'Transferencia 12',
       value: 0,
-      color: '#EFF',
+      color: '#EFF'
     },
     {
       source: 'Recolección DGSU',
       target: 'Planta de Selección 1',
       value: 0,
-      color: '#EFF',
+      color: '#EFF'
     },
     {
       source: 'Recolección DGSU',
       target: 'Planta de Selección 2',
       value: 0,
-      color: '#EFF',
+      color: '#EFF'
     },
     {
       source: 'Recolección Edo. de México',
       target: 'Planta de Selección 1',
       value: 1,
-      color: '#BA3377',
+      color: '#BA3377'
     },
     {
       source: 'Recolección Edo. de México',
       target: 'Planta de Selección 2',
       value: 1,
-      color: '#BA3377',
+      color: '#BA3377'
     },
     // Recolección -> Disposición
     {
       source: 'Recolección RME',
       target: 'Disposición 1',
       value: 0,
-      color: '#EFF',
+      color: '#EFF'
     },
     {
       source: 'Recolección RME',
       target: 'Disposición 2',
       value: 0,
-      color: '#EFF',
+      color: '#EFF'
     },
     {
       source: 'Recolección RME',
       target: 'Disposición 3',
       value: 0,
-      color: '#EFF',
+      color: '#EFF'
     },
     {
       source: 'Recolección RME',
       target: 'Disposición 4',
       value: 0,
-      color: '#EFF',
+      color: '#EFF'
     },
     {
       source: 'Recolección RME',
       target: 'Disposición5',
       value: 0,
-      color: '#EFF',
+      color: '#EFF'
     },
     // Transferencia -> Composta
     {
       source: 'Transferencia 2',
       target: 'Planta de Composta',
       value: 1,
-      color: '#6D3F56',
+      color: '#6D3F56'
     },
     {
       source: 'Transferencia 3',
       target: 'Planta de Composta',
       value: 1,
-      color: '#6D3F56',
+      color: '#6D3F56'
     },
     {
       source: 'Transferencia 4',
       target: 'Planta de Composta',
       value: 1,
-      color: '#6D3F56',
+      color: '#6D3F56'
     },
     {
       source: 'Transferencia 5',
       target: 'Planta de Composta',
       value: 1,
-      color: '#6D3F56',
+      color: '#6D3F56'
     },
     {
       source: 'Transferencia 6',
       target: 'Planta de Composta',
       value: 1,
-      color: '#6D3F56',
+      color: '#6D3F56'
     },
     {
       source: 'Transferencia 7',
       target: 'Planta de Composta',
       value: 1,
-      color: '#6D3F56',
+      color: '#6D3F56'
     },
     {
       source: 'Transferencia 8',
       target: 'Planta de Composta',
       value: 1,
-      color: '#6D3F56',
+      color: '#6D3F56'
     },
     {
       source: 'Transferencia 9',
       target: 'Planta de Composta',
       value: 1,
-      color: '#6D3F56',
+      color: '#6D3F56'
     },
     {
       source: 'Transferencia 10',
       target: 'Planta de Composta',
       value: 1,
-      color: '#6D3F56',
+      color: '#6D3F56'
     },
     {
       source: 'Transferencia 11',
       target: 'Planta de Composta',
       value: 1,
-      color: '#6D3F56',
+      color: '#6D3F56'
     },
     {
       source: 'Transferencia 12',
       target: 'Planta de Composta',
       value: 1,
-      color: '#6D3F56',
+      color: '#6D3F56'
     },
     // Transferencia -> Compactadora
     {
       source: 'Transferencia 1',
       target: 'Planta Compactadora',
       value: 1,
-      color: '#6D1E46',
+      color: '#6D1E46'
     },
     {
       source: 'Transferencia 2',
       target: 'Planta Compactadora',
       value: 1,
-      color: '#6D1E46',
+      color: '#6D1E46'
     },
     {
       source: 'Transferencia 3',
       target: 'Planta Compactadora',
       value: 1,
-      color: '#6D1E46',
+      color: '#6D1E46'
     },
     {
       source: 'Transferencia 4',
       target: 'Planta Compactadora',
       value: 1,
-      color: '#6D1E46',
+      color: '#6D1E46'
     },
     {
       source: 'Transferencia 5',
       target: 'Planta Compactadora',
       value: 1,
-      color: '#6D1E46',
+      color: '#6D1E46'
     },
     {
       source: 'Transferencia 6',
       target: 'Planta Compactadora',
       value: 1,
-      color: '#6D1E46',
+      color: '#6D1E46'
     },
     {
       source: 'Transferencia 7',
       target: 'Planta Compactadora',
       value: 1,
-      color: '#6D1E46',
+      color: '#6D1E46'
     },
     {
       source: 'Transferencia 8',
       target: 'Planta Compactadora',
       value: 1,
-      color: '#6D1E46',
+      color: '#6D1E46'
     },
     {
       source: 'Transferencia 9',
       target: 'Planta Compactadora',
       value: 1,
-      color: '#6D1E46',
+      color: '#6D1E46'
     },
     {
       source: 'Transferencia 10',
       target: 'Planta Compactadora',
       value: 1,
-      color: '#6D1E46',
+      color: '#6D1E46'
     },
     {
       source: 'Transferencia 11',
       target: 'Planta Compactadora',
       value: 1,
-      color: '#6D1E46',
+      color: '#6D1E46'
     },
     {
       source: 'Transferencia 12',
       target: 'Planta Compactadora',
       value: 1,
-      color: '#6D1E46',
+      color: '#6D1E46'
     },
     // Transferencia -> Disposición
     {
       source: 'Transferencia 1',
       target: 'Disposición 1',
       value: 0,
-      color: 'transparent',
+      color: 'transparent'
     },
     {
       source: 'Transferencia 2',
       target: 'Disposición 1',
       value: 1,
-      color: '#ED4197',
+      color: '#ED4197'
     },
     {
       source: 'Transferencia 2',
       target: 'Disposición 2',
       value: 1,
-      color: '#ED4197',
+      color: '#ED4197'
     },
     {
       source: 'Transferencia 2',
       target: 'Disposición 3',
       value: 1,
-      color: '#ED4197',
+      color: '#ED4197'
     },
     {
       source: 'Transferencia 3',
       target: 'Disposición 1',
       value: 1,
-      color: '#ED4197',
+      color: '#ED4197'
     },
     {
       source: 'Transferencia 3',
       target: 'Disposición 2',
       value: 1,
-      color: '#ED4197',
+      color: '#ED4197'
     },
     {
       source: 'Transferencia 4',
       target: 'Disposición 1',
       value: 1,
-      color: '#ED4197',
+      color: '#ED4197'
     },
     {
       source: 'Transferencia 4',
       target: 'Disposición 2',
       value: 1,
-      color: '#ED4197',
+      color: '#ED4197'
     },
     {
       source: 'Transferencia 4',
       target: 'Disposición 4',
       value: 1,
-      color: '#ED4197',
+      color: '#ED4197'
     },
     {
       source: 'Transferencia 4',
       target: 'Disposición5',
       value: 1,
-      color: '#ED4197',
+      color: '#ED4197'
     },
     {
       source: 'Transferencia 5',
       target: 'Disposición 1',
       value: 1,
-      color: '#ED4197',
+      color: '#ED4197'
     },
     {
       source: 'Transferencia 5',
       target: 'Disposición 2',
       value: 1,
-      color: '#ED4197',
+      color: '#ED4197'
     },
     {
       source: 'Transferencia 5',
       target: 'Disposición 3',
       value: 1,
-      color: '#ED4197',
+      color: '#ED4197'
     },
     {
       source: 'Transferencia 6',
       target: 'Disposición 1',
       value: 1,
-      color: '#ED4197',
+      color: '#ED4197'
     },
     {
       source: 'Transferencia 6',
       target: 'Disposición 2',
       value: 1,
-      color: '#ED4197',
+      color: '#ED4197'
     },
     {
       source: 'Transferencia 6',
       target: 'Disposición 3',
       value: 1,
-      color: '#ED4197',
+      color: '#ED4197'
     },
     {
       source: 'Transferencia 7',
       target: 'Disposición 1',
       value: 1,
-      color: '#ED4197',
+      color: '#ED4197'
     },
     {
       source: 'Transferencia 7',
       target: 'Disposición 2',
       value: 1,
-      color: '#ED4197',
+      color: '#ED4197'
     },
     {
       source: 'Transferencia 7',
       target: 'Disposición 4',
       value: 1,
-      color: '#ED4197',
+      color: '#ED4197'
     },
     {
       source: 'Transferencia 8',
       target: 'Disposición 1',
       value: 1,
-      color: '#ED4197',
+      color: '#ED4197'
     },
     {
       source: 'Transferencia 8',
       target: 'Disposición 2',
       value: 1,
-      color: '#ED4197',
+      color: '#ED4197'
     },
     {
       source: 'Transferencia 8',
       target: 'Disposición 3',
       value: 1,
-      color: '#ED4197',
+      color: '#ED4197'
     },
     {
       source: 'Transferencia 8',
       target: 'Disposición 4',
       value: 1,
-      color: '#ED4197',
+      color: '#ED4197'
     },
     {
       source: 'Transferencia 9',
       target: 'Disposición 1',
       value: 1,
-      color: '#ED4197',
+      color: '#ED4197'
     },
     {
       source: 'Transferencia 9',
       target: 'Disposición 2',
       value: 1,
-      color: '#ED4197',
+      color: '#ED4197'
     },
     {
       source: 'Transferencia 9',
       target: 'Disposición 3',
       value: 1,
-      color: '#ED4197',
+      color: '#ED4197'
     },
     {
       source: 'Transferencia 9',
       target: 'Disposición 4',
       value: 1,
-      color: '#ED4197',
+      color: '#ED4197'
     },
     {
       source: 'Transferencia 10',
       target: 'Disposición 1',
       value: 1,
-      color: '#ED4197',
+      color: '#ED4197'
     },
     {
       source: 'Transferencia 10',
       target: 'Disposición 2',
       value: 1,
-      color: '#ED4197',
+      color: '#ED4197'
     },
     {
       source: 'Transferencia 10',
       target: 'Disposición 3',
       value: 1,
-      color: '#ED4197',
+      color: '#ED4197'
     },
     {
       source: 'Transferencia 10',
       target: 'Disposición 4',
       value: 1,
-      color: '#ED4197',
+      color: '#ED4197'
     },
     {
       source: 'Transferencia 11',
       target: 'Disposición 1',
       value: 1,
-      color: '#ED4197',
+      color: '#ED4197'
     },
     {
       source: 'Transferencia 11',
       target: 'Disposición 2',
       value: 1,
-      color: '#ED4197',
+      color: '#ED4197'
     },
     {
       source: 'Transferencia 11',
       target: 'Disposición 3',
       value: 1,
-      color: '#ED4197',
+      color: '#ED4197'
     },
     {
       source: 'Transferencia 11',
       target: 'Disposición 4',
       value: 1,
-      color: '#ED4197',
+      color: '#ED4197'
     },
     {
       source: 'Transferencia 12',
       target: 'Disposición 1',
       value: 1,
-      color: '#ED4197',
+      color: '#ED4197'
     },
     {
       source: 'Transferencia 12',
       target: 'Disposición 2',
       value: 1,
-      color: '#ED4197',
+      color: '#ED4197'
     },
     {
       source: 'Transferencia 12',
       target: 'Disposición 3',
       value: 1,
-      color: '#ED4197',
+      color: '#ED4197'
     },
     {
       source: 'Transferencia 12',
       target: 'Disposición 4',
       value: 1,
-      color: '#ED4197',
+      color: '#ED4197'
     },
     // Transferencia -> Selección
     // // { source: 'Transferencia 2', target: 'node34', value: 536, color: 'transparent' },
@@ -1399,203 +1398,203 @@ const items = {
       source: 'Transferencia 2',
       target: 'Planta de Selección 1',
       value: 1,
-      color: '#BA3377',
+      color: '#BA3377'
     },
     {
       source: 'Transferencia 2',
       target: 'Planta de Selección 2',
       value: 1,
-      color: '#BA3377',
+      color: '#BA3377'
     },
     {
       source: 'Transferencia 3',
       target: 'Planta de Selección 1',
       value: 1,
-      color: '#BA3377',
+      color: '#BA3377'
     },
     {
       source: 'Transferencia 3',
       target: 'Planta de Selección 2',
       value: 1,
-      color: '#BA3377',
+      color: '#BA3377'
     },
     {
       source: 'Transferencia 4',
       target: 'Planta de Selección 1',
       value: 1,
-      color: '#BA3377',
+      color: '#BA3377'
     },
     {
       source: 'Transferencia 4',
       target: 'Planta de Selección 2',
       value: 1,
-      color: '#BA3377',
+      color: '#BA3377'
     },
     {
       source: 'Transferencia 5',
       target: 'Planta de Selección 1',
       value: 1,
-      color: '#BA3377',
+      color: '#BA3377'
     },
     {
       source: 'Transferencia 5',
       target: 'Planta de Selección 2',
       value: 1,
-      color: '#BA3377',
+      color: '#BA3377'
     },
     {
       source: 'Transferencia 6',
       target: 'Planta de Selección 1',
       value: 1,
-      color: '#BA3377',
+      color: '#BA3377'
     },
     {
       source: 'Transferencia 6',
       target: 'Planta de Selección 2',
       value: 1,
-      color: '#BA3377',
+      color: '#BA3377'
     },
     {
       source: 'Transferencia 7',
       target: 'Planta de Selección 1',
       value: 1,
-      color: '#BA3377',
+      color: '#BA3377'
     },
     {
       source: 'Transferencia 7',
       target: 'Planta de Selección 2',
       value: 1,
-      color: '#BA3377',
+      color: '#BA3377'
     },
     {
       source: 'Transferencia 8',
       target: 'Planta de Selección 1',
       value: 1,
-      color: '#BA3377',
+      color: '#BA3377'
     },
     {
       source: 'Transferencia 8',
       target: 'Planta de Selección 2',
       value: 1,
-      color: '#BA3377',
+      color: '#BA3377'
     },
     {
       source: 'Transferencia 9',
       target: 'Planta de Selección 1',
       value: 1,
-      color: '#BA3377',
+      color: '#BA3377'
     },
     {
       source: 'Transferencia 9',
       target: 'Planta de Selección 2',
       value: 1,
-      color: '#BA3377',
+      color: '#BA3377'
     },
     {
       source: 'Transferencia 10',
       target: 'Planta de Selección 1',
       value: 1,
-      color: '#BA3377',
+      color: '#BA3377'
     },
     {
       source: 'Transferencia 10',
       target: 'Planta de Selección 2',
       value: 1,
-      color: '#BA3377',
+      color: '#BA3377'
     },
     {
       source: 'Transferencia 11',
       target: 'Planta de Selección 1',
       value: 1,
-      color: '#BA3377',
+      color: '#BA3377'
     },
     {
       source: 'Transferencia 12',
       target: 'Planta de Selección 1',
       value: 1,
-      color: '#BA3377',
+      color: '#BA3377'
     },
     {
       source: 'Transferencia 12',
       target: 'Planta de Selección 2',
       value: 1,
-      color: '#BA3377',
+      color: '#BA3377'
     },
     // Selección -> Disposición
     {
       source: 'Planta de Selección 1',
       target: 'Disposición 1',
       value: 0,
-      color: '#EFF',
+      color: '#EFF'
     },
     {
       source: 'Planta de Selección 1',
       target: 'Disposición 2',
       value: 0,
-      color: '#EFF',
+      color: '#EFF'
     },
     {
       source: 'Planta de Selección 1',
       target: 'Disposición 3',
       value: 0,
-      color: '#EFF',
+      color: '#EFF'
     },
     {
       source: 'Planta de Selección 1',
       target: 'Disposición 4',
       value: 0,
-      color: '#EFF',
+      color: '#EFF'
     },
     {
       source: 'Planta de Selección 1',
       target: 'Disposición5',
       value: 0,
-      color: '#EFF',
+      color: '#EFF'
     },
     {
       source: 'Planta de Selección 2',
       target: 'Disposición 1',
       value: 0,
-      color: '#EFF',
+      color: '#EFF'
     },
     {
       source: 'Planta de Selección 2',
       target: 'Disposición 2',
       value: 0,
-      color: '#EFF',
+      color: '#EFF'
     },
     {
       source: 'Planta de Selección 2',
       target: 'Disposición 3',
       value: 0,
-      color: '#EFF',
+      color: '#EFF'
     },
     {
       source: 'Planta de Selección 2',
       target: 'Disposición 4',
       value: 0,
-      color: '#EFF',
+      color: '#EFF'
     },
     {
       source: 'Planta de Selección 2',
       target: 'Disposición5',
       value: 0,
-      color: '#EFF',
+      color: '#EFF'
     },
     // Selección -> Recuperación
     {
       source: 'Planta de Selección 1',
       target: 'Recuperación',
       value: 1,
-      color: '#EFF',
+      color: '#EFF'
     },
     {
       source: 'Planta de Selección 2',
       target: 'Recuperación',
       value: 1,
-      color: '#EFF',
-    },
-  ],
+      color: '#EFF'
+    }
+  ]
 }
 
 onMounted(() => {
@@ -1608,18 +1607,16 @@ onMounted(() => {
 
   const ENABLE_LINKS_GRADIENTS = false
 
-  const svg = d3
-    .select(svgRef.value)
-    .attr('viewBox', [0, -20, width, height + 20])
+  const svg = d3.select(svgRef.value).attr('viewBox', [0, -20, width, height + 20])
 
   const { nodes, links } = sankey()
-    .nodeId(d => d.name)
+    .nodeId((d) => d.name)
     .nodeWidth(nodeWidth)
     .nodeSort(false)
     .nodePadding(nodePadding)
     .extent([
       [1, 1],
-      [width, height - nodeHeight],
+      [width, height - nodeHeight]
     ])(itemsGrafica)
 
   const link = svg
@@ -1629,26 +1626,26 @@ onMounted(() => {
     .selectAll('g')
     .data(links)
     .join('g')
-    .style('mix-blend-mode', 'multiply')
+    .style('mix-blend-mode', 'normal')
   // console.log(links)
 
   if (ENABLE_LINKS_GRADIENTS) {
     const gradient = link
       .append('linearGradient')
-      .attr('id', d => d.id)
+      .attr('id', (d) => d.id)
       .attr('gradientUnits', 'userSpaceOnUse')
-      .attr('x1', d => d.source.x1)
-      .attr('x2', d => d.target.x0)
+      .attr('x1', (d) => d.source.x1)
+      .attr('x2', (d) => d.target.x0)
 
     gradient
       .append('stop')
       .attr('offset', '0%')
-      .attr('stop-color', d => d.source.color)
+      .attr('stop-color', (d) => d.source.color)
 
     gradient
       .append('stop')
       .attr('offset', '100%')
-      .attr('stop-color', d => d.target.color)
+      .attr('stop-color', (d) => d.target.color)
   }
 
   let tooltip = d3
@@ -1668,22 +1665,14 @@ onMounted(() => {
   link
     .append('path')
     .attr('d', sankeyLinkHorizontal())
-    .attr('stroke', d => d.color)
-    .attr('stroke-width', d => Math.max(1, d.width))
+    .attr('stroke', (d) => d.color)
+    .attr('stroke-width', (d) => Math.max(1, d.width))
     .attr('opacity', '0.5')
     .on('mouseover', function (d, i) {
       d3.select(this).transition().duration('50').attr('opacity', '1')
       tooltip.style('background-color', i.color)
       tooltip.style('color', i.color === '#000000' ? '#FFF' : '#000')
-      tooltip.text(
-        '' +
-          i.source.name +
-          ' → ' +
-          i.target.name +
-          ' : ' +
-          i.value +
-          ' MtMS/año'
-      )
+      tooltip.text('' + i.source.name + ' → ' + i.target.name + ' : ' + i.value + ' MtMS/año')
       tooltip.style('visibility', 'visible')
     })
     .on('mouseout', function () {
@@ -1691,9 +1680,7 @@ onMounted(() => {
       tooltip.style('visibility', 'hidden')
     })
     .on('mousemove', function (d) {
-      return tooltip
-        .style('top', d.pageY + 10 + 'px')
-        .style('left', d.pageX + 10 + 'px')
+      return tooltip.style('top', d.pageY + 10 + 'px').style('left', d.pageX + 10 + 'px')
     })
 
   // Coloca texto alado del nodo rectángulo
@@ -1704,11 +1691,11 @@ onMounted(() => {
     .selectAll('text')
     .data(nodes)
     .join('text')
-    .attr('x', d => (d.x0 < width / 2 ? d.x1 + 6 : d.x0 - 6))
-    .attr('y', d => (d.y1 + d.y0) / 2)
+    .attr('x', (d) => (d.x0 < width / 2 ? d.x1 + 6 : d.x0 - 6))
+    .attr('y', (d) => (d.y1 + d.y0) / 2)
     .attr('dy', '0.35em')
-    .attr('text-anchor', d => (d.x0 < width / 2 ? 'start' : 'end'))
-    .text(d => d.name)
+    .attr('text-anchor', (d) => (d.x0 < width / 2 ? 'start' : 'end'))
+    .text((d) => d.name)
     .attr('class', 'node-text-rect')
     .attr('id', function (d, i) {
       d.id = i
@@ -1717,7 +1704,7 @@ onMounted(() => {
     .append('tspan')
     .attr('font-size', 9)
     .attr('fill-opacity', 0.7)
-    .text(d => ` (${d.value.toLocaleString()})`)
+    .text((d) => ` (${d.value.toLocaleString()})`)
 
   // Coloca el nodo rectángulo
   svg
@@ -1727,11 +1714,11 @@ onMounted(() => {
     .selectAll('rect')
     .data(nodes)
     .join('rect')
-    .attr('x', d => d.x0 + 1)
-    .attr('y', d => d.y0)
-    .attr('height', d => d.y1 - d.y0)
-    .attr('width', d => d.x1 - d.x0 - 2)
-    .attr('fill', d => d.color)
+    .attr('x', (d) => d.x0 + 1)
+    .attr('y', (d) => d.y0)
+    .attr('height', (d) => d.y1 - d.y0)
+    .attr('width', (d) => d.x1 - d.x0 - 2)
+    .attr('fill', (d) => d.color)
     .attr('class', 'node-rect')
     .attr('id', function (d, i) {
       d.id = i
@@ -1749,9 +1736,7 @@ onMounted(() => {
             nodeHiglight.push(l.source.id)
           }
 
-          return l.source.index === i.index || l.target.index === i.index
-            ? 1
-            : 0.2
+          return l.source.index === i.index || l.target.index === i.index ? 1 : 0.2
         })
 
       tooltip.style('background-color', i.color)
@@ -1774,9 +1759,7 @@ onMounted(() => {
       tooltip.style('visibility', 'hidden')
     })
     .on('mousemove', function (d) {
-      return tooltip
-        .style('top', d.pageY + 10 + 'px')
-        .style('left', d.pageX + 10 + 'px')
+      return tooltip.style('top', d.pageY + 10 + 'px').style('left', d.pageX + 10 + 'px')
     })
 })
 </script>
@@ -1784,10 +1767,7 @@ onMounted(() => {
 <template>
   <div class="sankey-component">
     <h2>Sankey 2</h2>
-    <div
-      class="container"
-      id="sankey-bio"
-    >
+    <div class="container" id="sankey-bio">
       <svg ref="svgRef"></svg>
     </div>
   </div>
