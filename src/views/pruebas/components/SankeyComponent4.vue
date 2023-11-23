@@ -1,14 +1,13 @@
 <script setup>
 import * as d3 from 'd3'
-import { sankey } from 'd3-sankey'
-import { sankeyLinkHorizontal } from 'd3-sankey'
+import { sankey, sankeyLinkHorizontal } from 'd3-sankey'
 
 import { onMounted, onUnmounted, ref, toRefs, watch } from 'vue'
 
 const props = defineProps({
   sankey_id: {
     type: String,
-    default: () => 'sankey',
+    default: () => 'sankey'
   },
   datos: {
     type: Object,
@@ -16,33 +15,33 @@ const props = defineProps({
       nodes: [
         { node: 0, name: 'node0', id: 'node_0', color: '#FFF' },
         { node: 1, name: 'node1', id: 'node_1', color: '#FFF' },
-        { node: 2, name: 'node2', id: 'node_2', color: '#FFF' },
+        { node: 2, name: 'node2', id: 'node_2', color: '#FFF' }
       ],
       links: [
         { source: 'node0', target: 'node2', value: 1, color: '#EFF' },
-        { source: 'node1', target: 'node2', value: 1, color: '#EFF' },
-      ],
-    }),
+        { source: 'node1', target: 'node2', value: 1, color: '#EFF' }
+      ]
+    })
   },
   alto_vis: {
     type: Number,
-    default: 800,
+    default: 800
   },
   ancho_vis: {
     type: Number,
-    default: 600,
+    default: 600
   },
   alto_nodo: {
     type: Number,
-    default: 20,
+    default: 20
   },
   ancho_nodo: {
     type: Number,
-    default: 15,
+    default: 15
   },
   separacion_nodo: {
     type: Number,
-    default: 10,
+    default: 10
   },
   margin: {
     type: Object,
@@ -50,9 +49,9 @@ const props = defineProps({
       top: 20,
       right: 20,
       bottom: 20,
-      left: 20,
-    }),
-  },
+      left: 20
+    })
+  }
 })
 
 const { datos } = toRefs(props)
@@ -71,9 +70,7 @@ const nodePadding = ref(10)
 
 function configurandoDimensionesParaSVG() {
   width.value =
-    document.getElementById(props.sankey_id).clientWidth -
-    props.margin.left -
-    props.margin.right
+    document.getElementById(props.sankey_id).clientWidth - props.margin.left - props.margin.right
 
   height.value = props.alto_vis + props.margin.top + props.margin.bottom
 
@@ -93,13 +90,13 @@ function creandoSankey() {
   const itemsGrafica = datos.value
 
   const { nodes, links } = sankey()
-    .nodeId(d => d.name)
+    .nodeId((d) => d.name)
     .nodeWidth(nodeWidth.value)
     .nodeSort(false)
     .nodePadding(nodePadding.value)
     .extent([
       [1, 1],
-      [width.value, height.value - nodeHeight.value],
+      [width.value, height.value - nodeHeight.value]
     ])(itemsGrafica)
 
   const link = svg.value
@@ -109,7 +106,7 @@ function creandoSankey() {
     .selectAll('g')
     .data(links)
     .join('g')
-    .style('mix-blend-mode', 'multiply')
+    .style('mix-blend-mode', 'normal')
 
   tooltip.value
     .style('position', 'absolute')
@@ -126,22 +123,14 @@ function creandoSankey() {
   link
     .append('path')
     .attr('d', sankeyLinkHorizontal())
-    .attr('stroke', d => d.color)
-    .attr('stroke-width', d => Math.max(1, d.width))
+    .attr('stroke', (d) => d.color)
+    .attr('stroke-width', (d) => Math.max(1, d.width))
     .attr('opacity', '0.5')
     .on('mouseover', function (d, i) {
       d3.select(this).transition().duration('50').attr('opacity', '1')
       tooltip.value.style('background-color', i.color)
       tooltip.value.style('color', i.color === '#000000' ? '#FFF' : '#000')
-      tooltip.value.text(
-        '' +
-          i.source.name +
-          ' → ' +
-          i.target.name +
-          ' : ' +
-          i.value +
-          ' ton/día.'
-      )
+      tooltip.value.text('' + i.source.name + ' → ' + i.target.name + ' : ' + i.value + ' ton/día.')
       tooltip.value.style('visibility', 'visible')
     })
     .on('mouseout', function () {
@@ -149,9 +138,7 @@ function creandoSankey() {
       tooltip.value.style('visibility', 'hidden')
     })
     .on('mousemove', function (d) {
-      return tooltip.value
-        .style('top', d.pageY + 10 + 'px')
-        .style('left', d.pageX + 10 + 'px')
+      return tooltip.value.style('top', d.pageY + 10 + 'px').style('left', d.pageX + 10 + 'px')
     })
 
   // Coloca texto alado del nodo rectángulo
@@ -162,11 +149,11 @@ function creandoSankey() {
     .selectAll('text')
     .data(nodes)
     .join('text')
-    .attr('x', d => (d.x0 < width.value / 2 ? d.x1 + 6 : d.x0 - 6))
-    .attr('y', d => (d.y1 + d.y0) / 2)
+    .attr('x', (d) => (d.x0 < width.value / 2 ? d.x1 + 6 : d.x0 - 6))
+    .attr('y', (d) => (d.y1 + d.y0) / 2)
     .attr('dy', '0.35em')
-    .attr('text-anchor', d => (d.x0 < width.value / 2 ? 'start' : 'end'))
-    .text(d => d.name)
+    .attr('text-anchor', (d) => (d.x0 < width.value / 2 ? 'start' : 'end'))
+    .text((d) => d.name)
     .attr('class', 'node-text-rect')
     .attr('id', function (d, i) {
       d.id = i
@@ -175,7 +162,7 @@ function creandoSankey() {
     .append('tspan')
     .attr('font-size', 9)
     .attr('fill-opacity', 0.7)
-    .text(d => ` (${d.value.toLocaleString()})`)
+    .text((d) => ` (${d.value.toLocaleString()})`)
 
   // Coloca el nodo rectángulo
   svg.value
@@ -185,11 +172,11 @@ function creandoSankey() {
     .selectAll('rect')
     .data(nodes)
     .join('rect')
-    .attr('x', d => d.x0 + 1)
-    .attr('y', d => d.y0)
-    .attr('height', d => d.y1 - d.y0)
-    .attr('width', d => d.x1 - d.x0 - 2)
-    .attr('fill', d => d.color)
+    .attr('x', (d) => d.x0 + 1)
+    .attr('y', (d) => d.y0)
+    .attr('height', (d) => d.y1 - d.y0)
+    .attr('width', (d) => d.x1 - d.x0 - 2)
+    .attr('fill', (d) => d.color)
     .attr('class', 'node-rect')
     .attr('id', function (d, i) {
       d.id = i
@@ -206,16 +193,12 @@ function creandoSankey() {
             nodeHiglight.push(l.target.id)
             nodeHiglight.push(l.source.id)
           }
-          return l.source.index === i.index || l.target.index === i.index
-            ? 1
-            : 0.2
+          return l.source.index === i.index || l.target.index === i.index ? 1 : 0.2
         })
 
       tooltip.value.style('background-color', i.color)
       tooltip.value.style('color', i.color === '#000000' ? '#FFF' : '#000')
-      tooltip.value.text(
-        '' + i.name + ' : ' + i.value.toLocaleString() + ' ton/día.'
-      )
+      tooltip.value.text('' + i.name + ' : ' + i.value.toLocaleString() + ' ton/día.')
       tooltip.value.style('visibility', 'visible')
 
       d3.selectAll('.node-rect').style('opacity', 0.2)
@@ -233,9 +216,7 @@ function creandoSankey() {
       tooltip.value.style('visibility', 'hidden')
     })
     .on('mousemove', function (d) {
-      return tooltip.value
-        .style('top', d.pageY + 10 + 'px')
-        .style('left', d.pageX + 10 + 'px')
+      return tooltip.value.style('top', d.pageY + 10 + 'px').style('left', d.pageX + 10 + 'px')
     })
 }
 
@@ -280,7 +261,7 @@ onMounted(() => {
   //   .selectAll('g')
   //   .data(links)
   //   .join('g')
-  //   .style('mix-blend-mode', 'multiply')
+  //   .style('mix-blend-mode', 'normal')
   // // console.log(links)
   // if (ENABLE_LINKS_GRADIENTS) {
   //   const gradient = link
@@ -430,10 +411,7 @@ watch(datos, () => {
 </script>
 
 <template>
-  <div
-    :id="sankey_id"
-    class="sankey-component"
-  >
+  <div :id="sankey_id" class="sankey-component">
     <h2>Sankey 4</h2>
     <div class="tooltip"></div>
     <div>
