@@ -1,0 +1,1 @@
+import{_ as r,b as o,c as t,d as n}from"./index-beb9cf1d.js";const s={},i={id:"principal"};function c(a,e){return o(),t("main",i,e[0]||(e[0]=[n("h1",null,"Página no encontrada",-1)]))}const d=r(s,[["render",c],["__file","/Users/erictorres/Documents/github/ciretorres.github.io/src/views/ErrorViewNotFound.vue"]]);export{d as default};
