@@ -3,11 +3,8 @@ import MapaCalor from '@/components/visualizations/heatmap/MapaDeCalor.vue'
 </script>
 
 <template>
-  <div class="d3js">
-    <div class="container sin-fondo">
-      <h1>d3JS</h1>
-      <MapaCalor />
-    </div>
+  <div class="">
+    <MapaCalor />
   </div>
 </template>
 

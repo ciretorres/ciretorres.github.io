@@ -1,3 +1,5 @@
+// $font-stack: Monaco, Roboto, Avenir, Helvetica, Arial, sans-serif;
+
 html,
 body {
   box-sizing: border-box;
@@ -10,7 +12,7 @@ body {
 }
 
 body {
-  font: 100% $font-stack;
+  font: 100% var(--font-stack);
   // color: $primary-color;
   // background: white;
   color: var(--font-color);
@@ -41,6 +43,9 @@ h6 {
 
 a,
 .link {
+  &:visited {
+    color: #be92e8;
+  }
 }
 
 button,
@@ -129,7 +134,7 @@ i,
 em,
 cite,
 q {
-  font-family: $font-stack;
+  font-family: var(--font-stack);
   font-style: italic;
 }
 

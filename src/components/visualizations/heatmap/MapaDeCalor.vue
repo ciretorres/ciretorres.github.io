@@ -11,7 +11,7 @@ const { datos } = usarDatosApi(end_point)
 
 <template>
   <div class="mapa-de-calor">
-    <h2>Mapa de calor</h2>
+    <h3>Mapa de calor</h3>
     <div class="selectores-fijos">
       <div class="contenedor">
         <SelectorVariantes class="selector" />

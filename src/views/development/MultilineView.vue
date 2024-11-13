@@ -137,23 +137,21 @@ for (let i = 0; i < uniqueValueDate.length; i++) {
 </script>
 
 <template>
-  <div class="multiline-view">
-    <div class="container sin-fondo">
-      <h1>Multiline</h1>
-      <Multilinea
-        ref="lineasRef"
-        :multilineas_id="'lineas'"
-        :datos="datosMultilinea"
-        :nombre_columna_horizontal="'fecha_recoleccion'"
-        :variables="[
-          { id: 'VSIN', nombre: 'VSIN', color: '#a6cee3' },
-          { id: 'VIN', nombre: 'VIN', color: '#b2df8a' },
-          { id: 'VOM', nombre: 'VOM', color: '#fb9a99' },
-          { id: 'VOC', nombre: 'VOC', color: '#fdbf6f' },
-          { id: 'VOI', nombre: 'VOI', color: '#cab2d6' }
-        ]"
-        :conversionTemporal="d3.timeParse('%Y-%m-%d')"
-      />
-    </div>
+  <div class="">
+    <h3>Multiline</h3>
+    <Multilinea
+      ref="lineasRef"
+      :multilineas_id="'lineas'"
+      :datos="datosMultilinea"
+      :nombre_columna_horizontal="'fecha_recoleccion'"
+      :variables="[
+        { id: 'VSIN', nombre: 'VSIN', color: '#a6cee3' },
+        { id: 'VIN', nombre: 'VIN', color: '#b2df8a' },
+        { id: 'VOM', nombre: 'VOM', color: '#fb9a99' },
+        { id: 'VOC', nombre: 'VOC', color: '#fdbf6f' },
+        { id: 'VOI', nombre: 'VOI', color: '#cab2d6' }
+      ]"
+      :conversionTemporal="d3.timeParse('%Y-%m-%d')"
+    />
   </div>
 </template>

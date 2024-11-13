@@ -215,12 +215,10 @@ const items = {
 </script>
 
 <template>
-  <div class="d3js">
-    <div class="container sin-fondo">
-      <h1>Sankey Diagram</h1>
-      <SankeyComponent :datos="items" />
+  <div class="">
+    <h3>Sankey Diagram</h3>
+    <SankeyComponent :datos="items" />
 
-      <SankeyComponent sankey_id="sankey0" :datos="data" />
-    </div>
+    <SankeyComponent sankey_id="sankey0" :datos="data" />
   </div>
 </template>

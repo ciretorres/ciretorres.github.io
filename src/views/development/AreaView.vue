@@ -42,10 +42,8 @@ const datosArea = computed(() => {
 </script>
 
 <template>
-  <div class="area-view">
-    <div class="container sin-fondo">
-      <h1>Area</h1>
-      <Area :datos="datosArea" />
-    </div>
+  <div class="">
+    <h3>Area</h3>
+    <Area :datos="datosArea" />
   </div>
 </template>

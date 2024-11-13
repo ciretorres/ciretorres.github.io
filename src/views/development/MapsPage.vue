@@ -22,13 +22,13 @@ const fuentes = [
 
 <template>
   <div class="maps">
-    <div class="container sin-fondo my-8">
-      <h1>Mapas</h1>
+    <div class="">
+      <h3>Mapas</h3>
       <MapaComponent></MapaComponent>
     </div>
     <div class="container">
-      <div class="contenedor-fuentes">
-        <p class="fuentes">Fuentes:</p>
+      <div class="">
+        <p class="">Fuentes:</p>
         <ul>
           <li v-for="(fuente, idx) in fuentes" :key="idx">
             <a :href="fuente.href" target="_blank" rel="noopener noreferrer">{{ fuente.href }}</a>
