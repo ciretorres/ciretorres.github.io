@@ -5,37 +5,37 @@ import { onMounted, onUnmounted, ref, toRefs, watch } from 'vue'
 const props = defineProps({
   area_id: {
     type: String,
-    default: () => 'area',
+    default: () => 'area'
   },
   datos: {
     type: Array,
     default: () => [
       { date: '2021-01-01', value: '30' },
       { date: '2021-02-01', value: '50' },
-      { date: '2021-03-01', value: '20' },
-    ],
+      { date: '2021-03-01', value: '20' }
+    ]
   },
   variables: {
     type: Array,
     default: function () {
       return [{ id: 'value', nombre: 'value', color: '#FFFFFF' }]
-    },
+    }
   },
   titulo_eje_y: {
     type: String,
-    default: 'Título eje y',
+    default: 'Título eje y'
   },
   titulo_eje_x: {
     type: String,
-    default: 'Título eje x',
+    default: 'Título eje x'
   },
   ancho_tooltip: {
     type: Number,
-    default: 140,
+    default: 140
   },
   alto_vis: {
     type: Number,
-    default: 400,
+    default: 400
   },
   margin: {
     type: Object,
@@ -43,9 +43,9 @@ const props = defineProps({
       arriba: 10,
       derecha: 10,
       abajo: 50,
-      izquierda: 50,
-    }),
-  },
+      izquierda: 50
+    })
+  }
 })
 
 const { datos, variables, margin } = toRefs(props)
@@ -104,10 +104,7 @@ function configurandoDimensionesParaSVG() {
     `translate(${margin.value.izquierda},${margin.value.arriba})`
   )
 
-  grupo_fondo.value.attr(
-    'transform',
-    `translate(${margin.value.izquierda},${margin.value.arriba})`
-  )
+  grupo_fondo.value.attr('transform', `translate(${margin.value.izquierda},${margin.value.arriba})`)
 
   grupo_frente.value.attr(
     'transform',
@@ -180,15 +177,7 @@ function multiFormat(date) {
     date: '%d.%m.%Y',
     time: '%H:%M:%S',
     periods: ['AM', 'PM'],
-    days: [
-      'Sunday',
-      'Monday',
-      'Tuesday',
-      'Wednesday',
-      'Thursday',
-      'Friday',
-      'Saturday',
-    ],
+    days: ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'],
     shortDays: ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'],
     months: [
       'January',
@@ -202,7 +191,7 @@ function multiFormat(date) {
       'September',
       'October',
       'November',
-      'December',
+      'December'
     ],
     shortMonths: [
       'jan',
@@ -216,8 +205,8 @@ function multiFormat(date) {
       'sep',
       'oct',
       'nov',
-      'dec',
-    ],
+      'dec'
+    ]
   })
 
   const formatMillisecond = locale.format('.%L')
@@ -234,18 +223,18 @@ function multiFormat(date) {
     d3.timeSecond(date) < date
       ? formatMillisecond
       : d3.timeMinute(date) < date
-      ? formatSecond
-      : d3.timeHour(date) < date
-      ? formatMinute
-      : d3.timeDay(date) < date
-      ? formatHour
-      : d3.timeMonth(date) < date
-      ? d3.timeWeek(date) < date
-        ? formatDay
-        : formatWeek
-      : d3.timeYear(date) < date
-      ? formatMonthYear
-      : formatMonthYear
+        ? formatSecond
+        : d3.timeHour(date) < date
+          ? formatMinute
+          : d3.timeDay(date) < date
+            ? formatHour
+            : d3.timeMonth(date) < date
+              ? d3.timeWeek(date) < date
+                ? formatDay
+                : formatWeek
+              : d3.timeYear(date) < date
+                ? formatMonthYear
+                : formatMonthYear
   )(date)
 }
 function configurandoDimensionesParaArea() {
@@ -253,14 +242,12 @@ function configurandoDimensionesParaArea() {
    * Método para configurar dimensiones para área
    */
   // Apilando datos
-  data_stack.value = d3.stack().keys(variables.value.map(d => d.id))(
-    datos.value
-  )
+  data_stack.value = d3.stack().keys(variables.value.map((d) => d.id))(datos.value)
   // Asignarle un objeto en data a la data apilada
   for (let i = variables.value.length - 1; i >= 0; i -= 1) {
-    data_stack.value[i].forEach(dd => {
+    data_stack.value[i].forEach((dd) => {
       dd.data = Object.assign({}, dd.data, {
-        key: data_stack.value[i].key,
+        key: data_stack.value[i].key
       })
     })
   }
@@ -268,25 +255,22 @@ function configurandoDimensionesParaArea() {
   // Build Y scale -> it is linear
   yScale.value = d3
     .scaleLinear()
-    .domain([
-      0,
-      d3.max(datos.value.map(d => d3.sum(variables.value.map(dd => d[dd.id])))),
-    ])
+    .domain([0, d3.max(datos.value.map((d) => d3.sum(variables.value.map((dd) => d[dd.id]))))])
     .range([height.value, 0])
     .nice()
   // Build X scale -> it is a date format
   xScale.value = d3
     .scaleTime()
-    .domain(d3.extent(datos.value.map(d => d.date)))
+    .domain(d3.extent(datos.value.map((d) => d.date)))
     .range([0, width.value])
   // .nice()
 
   // Asignando las escalas para el área
   areaGenerator.value = d3
     .area()
-    .x(d => xScale.value(d.data.date))
-    .y0(d => yScale.value(d[0]))
-    .y1(d => yScale.value(d[1]))
+    .x((d) => xScale.value(d.data.date))
+    .y0((d) => yScale.value(d[0]))
+    .y1((d) => yScale.value(d[1]))
     .curve(d3.curveLinear)
 
   // Construyendo ejes
@@ -318,9 +302,7 @@ function configurandoDimensionesParaArea() {
   xLabel.value
     .attr(
       'transform',
-      `translate(${width.value * 0.5}, ${
-        height.value + margin.value.abajo - margin.value.arriba
-      })`
+      `translate(${width.value * 0.5}, ${height.value + margin.value.abajo - margin.value.arriba})`
     )
     .text(props.titulo_eje_x)
     .style('text-anchor', 'middle')
@@ -330,10 +312,7 @@ function configurandoDimensionesParaArea() {
     .style('color', '#efefef')
   // Adding label Y
   yLabel.value
-    .attr(
-      'transform',
-      `translate(${-margin.value.izquierda}, ${height.value * 0.5}) rotate(-90)`
-    )
+    .attr('transform', `translate(${-margin.value.izquierda}, ${height.value * 0.5}) rotate(-90)`)
     .text(props.titulo_eje_y)
     .style('text-anchor', 'middle')
     .style('font-size', '12px')
@@ -345,7 +324,7 @@ function mostrarTooltip(evento) {
   /**
    * Método para desplegar el tooltip
    */
-  let bisecetDate = d3.bisector(d => d.date).left
+  let bisecetDate = d3.bisector((d) => d.date).left
   let x0 = xScale.value.invert(evento.layerX - margin.value.izquierda)
   let indice = bisecetDate(datos.value, x0, 1)
   let d0 = datos.value[indice - 1]
@@ -359,8 +338,7 @@ function mostrarTooltip(evento) {
       .style('visibility', 'visible')
       .style(
         'left',
-        evento.layerX >
-          0.5 * (width.value + margin.value.izquierda + margin.value.derecha)
+        evento.layerX > 0.5 * (width.value + margin.value.izquierda + margin.value.derecha)
           ? `${evento.layerX - props.ancho_tooltip - 20}px`
           : `${evento.layerX + 20}px`
       )
@@ -374,13 +352,9 @@ function mostrarTooltip(evento) {
       .style('padding', '0 3px 0 10px')
 
     let cifras_variables = variables.value.map(
-      d => `<p>
-            <span class="nomenclatura-tooltip" style="background: ${
-              d.color
-            } "></span>
-            ${d.nombre}: <b>${tooltip_data_seleccionada.value[
-        d.id
-      ].toLocaleString('en')}</b>
+      (d) => `<p>
+            <span class="nomenclatura-tooltip" style="background: ${d.color} "></span>
+            ${d.nombre}: <b>${tooltip_data_seleccionada.value[d.id].toLocaleString('en')}</b>
       <br /> date:
           ${tooltip_data_seleccionada.value.date.toString().slice(4, 15)}
             </p>`
@@ -414,15 +388,15 @@ function creandoArea() {
     .data(data_stack.value)
     .enter()
     .append('path')
-    .attr('class', d => `${d.key} paths-area`)
+    .attr('class', (d) => `${d.key} paths-area`)
     .style('fill', (d, i) => variables.value[i].color)
     .style('opacity', 0.8)
   // Event the tooltip
   svg.value
-    .on('mousemove', evento => {
+    .on('mousemove', (evento) => {
       mostrarTooltip(evento)
     })
-    .on('click', evento => {
+    .on('click', (evento) => {
       mostrarTooltip(evento)
     })
     .on('mouseout', cerrarTooltip)
@@ -431,11 +405,7 @@ function actualizandoArea() {
   /**
    * Método para actualizar los paths trazados del área
    */
-  area.value
-    .data(data_stack.value)
-    .transition()
-    .duration(500)
-    .attr('d', areaGenerator.value)
+  area.value.data(data_stack.value).transition().duration(500).attr('d', areaGenerator.value)
 }
 function reescalandoPantalla() {
   configurandoDimensionesParaSVG()
@@ -455,13 +425,9 @@ onMounted(() => {
   xAxis.value = grupo_fondo.value.select('g.eje-x')
   yAxis.value = grupo_fondo.value.select('g.eje-y')
 
-  xLabel.value = grupo_contenedor_ejes.value
-    .append('text')
-    .attr('class', 'label-x')
+  xLabel.value = grupo_contenedor_ejes.value.append('text').attr('class', 'label-x')
 
-  yLabel.value = grupo_contenedor_ejes.value
-    .append('text')
-    .attr('class', 'label-y')
+  yLabel.value = grupo_contenedor_ejes.value.append('text').attr('class', 'label-y')
 
   configurandoDimensionesParaSVG()
   configurandoDimensionesParaArea()
@@ -495,29 +461,15 @@ watch(margin, () => {
 </script>
 
 <template>
-  <div
-    :id="area_id"
-    class="contenedor-area"
-  >
+  <div :id="area_id" class="contenedor-area">
     <slot name="encabezado"></slot>
     <div class="contenedor-tooltip-svg">
-      <div
-        ref="tooltipRef"
-        class="tooltip"
-      >
+      <div ref="tooltipRef" class="tooltip">
         <div class="tooltip-contenido">
           <div class="contenedor-boton-cerrar">
-            <button
-              class="boton-cerrar-tooltip"
-              @click="cerrarTooltip"
-            >
-              &times;
-            </button>
+            <button class="boton-cerrar-tooltip" @click="cerrarTooltip">&times;</button>
           </div>
-          <div
-            ref="tooltipCifraRef"
-            class="tooltip-cifras"
-          ></div>
+          <div ref="tooltipCifraRef" class="tooltip-cifras"></div>
         </div>
       </div>
       <svg class="svg-area">

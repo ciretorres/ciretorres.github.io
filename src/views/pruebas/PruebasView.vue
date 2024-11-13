@@ -398,13 +398,13 @@ const items3 = {
       node: 27,
       name: 'Sector agropecuario',
       id: 'node36',
-      color: '#999',
+      color: '#999'
     },
     {
       node: 28,
       name: 'Sector comercial y servicios',
       id: 'node8',
-      color: '#999',
+      color: '#999'
     },
     { node: 29, name: 'Sector público', id: 'node8', color: '#999' },
     { node: 30, name: 'Sector residencial', id: 'node8', color: '#999' },
@@ -413,38 +413,38 @@ const items3 = {
       node: 32,
       name: 'Otras ramas económicas',
       id: 'node8',
-      color: '#999',
+      color: '#999'
     },
     {
       node: 33,
       name: 'Hornos y coquizadoras',
       id: 'node8',
-      color: '#999',
+      color: '#999'
     },
     {
       node: 34,
       name: 'Refinerías y despuntadoras',
       id: 'node8',
-      color: '#999',
+      color: '#999'
     },
     {
       node: 35,
       name: 'Plantas de gas y fraccionadoras',
       id: 'node8',
-      color: '#999',
+      color: '#999'
     },
     {
       node: 36,
       name: 'Transferencia interproductos',
       id: 'node8',
-      color: '#999',
+      color: '#999'
     },
     { node: 37, name: 'Coque de carbón', id: 'node8', color: '#cc4125' },
     {
       node: 38,
       name: 'Coque de petróleo',
       id: 'node8',
-      color: '#000000',
+      color: '#000000'
     },
     { node: 39, name: 'Combustóleo', id: 'node8', color: '#666666' },
     { node: 40, name: 'Queroseno', id: 'node8', color: '#999' },
@@ -457,113 +457,113 @@ const items3 = {
       node: 46,
       name: 'Pérdidas en transformación',
       id: 'node8',
-      color: '#999',
+      color: '#999'
     },
     {
       node: 47,
       name: 'Centrales eléctricas',
       id: 'node8',
-      color: '#00ff00',
+      color: '#00ff00'
     },
-    { node: 47, name: 'Electricidad', id: 'node8', color: '#00ff00' },
+    { node: 47, name: 'Electricidad', id: 'node8', color: '#00ff00' }
   ],
   links: [
     {
       source: 'Producción',
       target: 'Carbón',
       value: 192.29,
-      color: '#85200c',
+      color: '#85200c'
     },
     {
       source: 'Producción',
       target: 'Petróleo',
       value: 3821.1,
-      color: '#000000',
+      color: '#000000'
     },
     {
       source: 'Producción',
       target: 'Gas natural',
       value: 2553,
-      color: '#4a86e8',
+      color: '#4a86e8'
     },
     {
       source: 'Producción',
       target: 'Condensados',
       value: 140.98,
-      color: '#f00',
+      color: '#f00'
     },
     {
       source: 'Producción',
       target: 'Nucleoenergía',
       value: 125.62,
-      color: '#9900ff',
+      color: '#9900ff'
     },
     {
       source: 'Producción',
       target: 'Geoenergía',
       value: 18.54,
-      color: '#783f04',
+      color: '#783f04'
     },
     {
       source: 'Producción',
       target: 'Hidroenergía',
       value: 96.52,
-      color: '#0ff',
+      color: '#0ff'
     },
     {
       source: 'Producción',
       target: 'Energía eólica',
       value: 70.9,
-      color: '#0000ff',
+      color: '#0000ff'
     },
     {
       source: 'Producción',
       target: 'Bagazo de caña',
       value: 99.66,
-      color: '#0ff',
+      color: '#0ff'
     },
     {
       source: 'Producción',
       target: 'Biogas',
       value: 2.53,
-      color: '#6d9eeb',
+      color: '#6d9eeb'
     },
     {
       source: 'Producción',
       target: 'Leña',
       value: 246.62,
-      color: '#b45f06',
+      color: '#b45f06'
     },
     {
       source: 'Producción',
       target: 'Energía solar',
       value: 72.75,
-      color: '#ff0',
+      color: '#ff0'
     },
 
     {
       source: 'Carbón',
       target: 'Exportación',
       value: 0.09,
-      color: '#85200c',
+      color: '#85200c'
     },
     {
       source: 'Carbón',
       target: 'Hornos y coquizadoras',
       value: 27.13,
-      color: '#85200c',
+      color: '#85200c'
     },
     {
       source: 'Carbón',
       target: 'Sector industrial',
       value: 20.95,
-      color: '#85200c',
+      color: '#85200c'
     },
     {
       source: 'Carbón',
       target: 'Centrales eléctricas',
       value: 164.1,
-      color: '#85200c',
+      color: '#85200c'
     },
     { source: 'Carbón', target: 'Otros', value: 1.81, color: '#85200c' },
 
@@ -571,386 +571,386 @@ const items3 = {
       source: 'Petróleo',
       target: 'Exportación',
       value: 2509.2,
-      color: '#000000',
+      color: '#000000'
     },
     {
       source: 'Petróleo',
       target: 'Refinerías y despuntadoras',
       value: 1303.1,
-      color: '#000000',
+      color: '#000000'
     },
     {
       source: 'Petróleo',
       target: 'Consumo propio',
       value: 16.82,
-      color: '#000000',
+      color: '#000000'
     },
 
     {
       source: 'Condensados',
       target: 'Plantas de gas y fraccionadoras',
       value: 7.26,
-      color: '#F00',
+      color: '#F00'
     },
     {
       source: 'Condensados',
       target: 'Otros',
       value: 133.72,
-      color: '#F00',
+      color: '#F00'
     },
 
     {
       source: 'Gas natural',
       target: 'Plantas de gas y fraccionadoras',
       value: 1072.7,
-      color: '#4a86e8',
+      color: '#4a86e8'
     },
     {
       source: 'Gas natural',
       target: 'Consumo propio',
       value: 641.15,
-      color: '#4a86e8',
+      color: '#4a86e8'
     },
     {
       source: 'Gas natural',
       target: 'Transferencia interproductos',
       value: 134.9,
-      color: '#4a86e8',
+      color: '#4a86e8'
     },
     {
       source: 'Gas natural',
       target: 'Otros',
       value: 704.34,
-      color: '#4a86e8',
+      color: '#4a86e8'
     },
 
     {
       source: 'Nucleoenergía',
       target: 'Centrales eléctricas',
       value: 125.62,
-      color: '#9900ff',
+      color: '#9900ff'
     },
 
     {
       source: 'Geoenergía',
       target: 'Centrales eléctricas',
       value: 18.539,
-      color: '#783f04',
+      color: '#783f04'
     },
 
     {
       source: 'Energía eólica',
       target: 'Centrales eléctricas',
       value: 70.9,
-      color: '#0000ff',
+      color: '#0000ff'
     },
 
     {
       source: 'Hidroenergía',
       target: 'Centrales eléctricas',
       value: 95.52,
-      color: '#0ff',
+      color: '#0ff'
     },
 
     {
       source: 'Bagazo de caña',
       target: 'Otros',
       value: 1.1,
-      color: '#f6b26b',
+      color: '#f6b26b'
     },
     {
       source: 'Bagazo de caña',
       target: 'Centrales eléctricas',
       value: 57.82,
-      color: '#f6b26b',
+      color: '#f6b26b'
     },
     {
       source: 'Bagazo de caña',
       target: 'Sector industrial',
       value: 40.6,
-      color: '#f6b26b',
+      color: '#f6b26b'
     },
 
     {
       source: 'Biogas',
       target: 'Centrales eléctricas',
       value: 2.53,
-      color: '#6d9eeb',
+      color: '#6d9eeb'
     },
 
     {
       source: 'Energía solar',
       target: 'Centrales eléctricas',
       value: 56.48,
-      color: '#ffff00',
+      color: '#ffff00'
     },
     {
       source: 'Energía solar',
       target: 'Sector industrial',
       value: 1.3,
-      color: '#ffff00',
+      color: '#ffff00'
     },
     {
       source: 'Energía solar',
       target: 'Sector comercial y servicios',
       value: 5.96,
-      color: '#ffff00',
+      color: '#ffff00'
     },
     {
       source: 'Energía solar',
       target: 'Sector residencial',
       value: 9.01,
-      color: '#ffff00',
+      color: '#ffff00'
     },
 
     {
       source: 'Leña',
       target: 'Sector residencial',
       value: 246.62,
-      color: '#b45f06',
+      color: '#b45f06'
     },
 
     {
       source: 'Hornos y coquizadoras',
       target: 'Coque de carbón',
       value: 18.47,
-      color: '#cc4125',
+      color: '#cc4125'
     },
     {
       source: 'Hornos y coquizadoras',
       target: 'Pérdidas en transformación',
       value: 8.66,
-      color: '#f9a145',
+      color: '#f9a145'
     },
 
     {
       source: 'Refinerías y despuntadoras',
       target: 'Coque de petróleo',
       value: 99.27,
-      color: '#434343',
+      color: '#434343'
     },
     {
       source: 'Refinerías y despuntadoras',
       target: 'Combustóleo',
       value: 417.32,
-      color: '#666666',
+      color: '#666666'
     },
     {
       source: 'Refinerías y despuntadoras',
       target: 'Diésel',
       value: 220.49,
-      color: '#b7b7b7',
+      color: '#b7b7b7'
     },
     {
       source: 'Refinerías y despuntadoras',
       target: 'Gasolina',
       value: 357.7,
-      color: '#cccccc',
+      color: '#cccccc'
     },
     {
       source: 'Refinerías y despuntadoras',
       target: 'GLP',
       value: 8.43,
-      color: '#c9daf8',
+      color: '#c9daf8'
     },
     {
       source: 'Refinerías y despuntadoras',
       target: 'No energéticos',
       value: 29.4,
-      color: '#ff00ff',
+      color: '#ff00ff'
     },
     {
       source: 'Refinerías y despuntadoras',
       target: 'Gas seco',
       value: 76.64,
-      color: '#6d9eeb',
+      color: '#6d9eeb'
     },
     {
       source: 'Refinerías y despuntadoras',
       target: 'Pérdidas en transformación',
       value: 57.06,
-      color: '#FBFBFB',
+      color: '#FBFBFB'
     },
     {
       source: 'Refinerías y despuntadoras',
       target: 'Queroseno',
       value: 36.83,
-      color: '#999',
+      color: '#999'
     },
 
     {
       source: 'Plantas de gas y fraccionadoras',
       target: 'Pérdidas en transformación',
       value: 2.24,
-      color: '#FBFBFB',
+      color: '#FBFBFB'
     },
     {
       source: 'Plantas de gas y fraccionadoras',
       target: 'No energéticos',
       value: 70.8,
-      color: '#ff00ff',
+      color: '#ff00ff'
     },
     {
       source: 'Plantas de gas y fraccionadoras',
       target: 'Gas seco',
       value: 783.46,
-      color: '#6d9eeb',
+      color: '#6d9eeb'
     },
     {
       source: 'Plantas de gas y fraccionadoras',
       target: 'GLP',
       value: 144.27,
-      color: '#c9daf8',
+      color: '#c9daf8'
     },
     {
       source: 'Plantas de gas y fraccionadoras',
       target: 'Gasolina',
       value: 79.51,
-      color: '#cccccc',
+      color: '#cccccc'
     },
 
     {
       source: 'Transferencia interproductos',
       target: 'Gas seco',
       value: 134.9,
-      color: '#6d9eeb',
+      color: '#6d9eeb'
     },
 
     {
       source: 'Importación',
       target: 'Carbón',
       value: 21.79,
-      color: '#85200c',
+      color: '#85200c'
     },
     {
       source: 'Importación',
       target: 'Gas seco',
       value: 1890.4,
-      color: '#6d9eeb',
+      color: '#6d9eeb'
     },
     {
       source: 'Importación',
       target: 'Gasolina',
       value: 649.31,
-      color: '#cccccc',
+      color: '#cccccc'
     },
     {
       source: 'Importación',
       target: 'GLP',
       value: 283,
-      color: '#c9daf8',
+      color: '#c9daf8'
     },
     {
       source: 'Importación',
       target: 'Diésel',
       value: 436.23,
-      color: '#b7b7b7',
+      color: '#b7b7b7'
     },
     {
       source: 'Importación',
       target: 'Combustóleo',
       value: 20.2,
-      color: '#666666',
+      color: '#666666'
     },
     {
       source: 'Importación',
       target: 'Electricidad',
       value: 35.87,
-      color: '#00ff00',
+      color: '#00ff00'
     },
     {
       source: 'Importación',
       target: 'Coque de carbón',
       value: 27.2,
-      color: '#cc4125',
+      color: '#cc4125'
     },
     {
       source: 'Importación',
       target: 'Coque de petróleo',
       value: 113.55,
-      color: '#434343',
+      color: '#434343'
     },
     {
       source: 'Importación',
       target: 'Queroseno',
       value: 45.81,
-      color: '#999',
+      color: '#999'
     },
 
     {
       source: 'Coque de carbón',
       target: 'Sector industrial',
       value: 44.56,
-      color: '#cc4125',
+      color: '#cc4125'
     },
     {
       source: 'Coque de carbón',
       target: 'Consumo propio',
       value: 1.11,
-      color: '#cc4125',
+      color: '#cc4125'
     },
 
     {
       source: 'Coque de petróleo',
       target: 'Otros',
       value: 48.27,
-      color: '#434343',
+      color: '#434343'
     },
     {
       source: 'Coque de petróleo',
       target: 'Centrales eléctricas',
       value: 37.84,
-      color: '#434343',
+      color: '#434343'
     },
     {
       source: 'Coque de petróleo',
       target: 'Exportación',
       value: 0.07,
-      color: '#434343',
+      color: '#434343'
     },
     {
       source: 'Coque de petróleo',
       target: 'Sector industrial',
       value: 126.63,
-      color: '#434343',
+      color: '#434343'
     },
 
     {
       source: 'Combustóleo',
       target: 'Exportación',
       value: 262.87,
-      color: '#666666',
+      color: '#666666'
     },
     {
       source: 'Combustóleo',
       target: 'Sector industrial',
       value: 11.72,
-      color: '#666666',
+      color: '#666666'
     },
     {
       source: 'Combustóleo',
       target: 'Consumo propio',
       value: 37.35,
-      color: '#666666',
+      color: '#666666'
     },
     {
       source: 'Combustóleo',
       target: 'Centrales eléctricas',
       value: 137.69,
-      color: '#666666',
+      color: '#666666'
     },
     {
       source: 'Combustóleo',
       target: 'Sector transporte',
       value: 2.09,
-      color: '#666666',
+      color: '#666666'
     },
 
     {
       source: 'Queroseno',
       target: 'Sector transporte',
       value: 106.68,
-      color: '#999',
+      color: '#999'
     },
     { source: 'Queroseno', target: 'Otros', value: 1.51, color: '#999' },
 
@@ -958,99 +958,99 @@ const items3 = {
       source: 'Diésel',
       target: 'Sector transporte',
       value: 438.34,
-      color: '#b7b7b7',
+      color: '#b7b7b7'
     },
     {
       source: 'Diésel',
       target: 'Sector agropecuario',
       value: 127.34,
-      color: '#b7b7b7',
+      color: '#b7b7b7'
     },
     {
       source: 'Diésel',
       target: 'Exportación',
       value: 36.6,
-      color: '#b7b7b7',
+      color: '#b7b7b7'
     },
     {
       source: 'Diésel',
       target: 'Centrales eléctricas',
       value: 24.32,
-      color: '#b7b7b7',
+      color: '#b7b7b7'
     },
     {
       source: 'Diésel',
       target: 'Consumo propio',
       value: 41.48,
-      color: '#b7b7b7',
+      color: '#b7b7b7'
     },
     {
       source: 'Diésel',
       target: 'Sector industrial',
       value: 62.2,
-      color: '#b7b7b7',
+      color: '#b7b7b7'
     },
 
     {
       source: 'Gasolina',
       target: 'Sector transporte',
       value: 1404.2,
-      color: '#cccccc',
+      color: '#cccccc'
     },
     {
       source: 'Gasolina',
       target: 'Sector industrial',
       value: 1.47,
-      color: '#cccccc',
+      color: '#cccccc'
     },
     {
       source: 'Gasolina',
       target: 'Exportación',
       value: 23.49,
-      color: '#cccccc',
+      color: '#cccccc'
     },
 
     {
       source: 'GLP',
       target: 'Sector transporte',
       value: 61.04,
-      color: '#c9daf8',
+      color: '#c9daf8'
     },
     {
       source: 'GLP',
       target: 'Sector comercial y servicios',
       value: 61.04,
-      color: '#c9daf8',
+      color: '#c9daf8'
     },
     {
       source: 'GLP',
       target: 'Sector industrial',
       value: 46.34,
-      color: '#c9daf8',
+      color: '#c9daf8'
     },
     {
       source: 'GLP',
       target: 'Sector residencial',
       value: 240.14,
-      color: '#c9daf8',
+      color: '#c9daf8'
     },
     {
       source: 'GLP',
       target: 'Sector agropecuario',
       value: 4.9,
-      color: '#c9daf8',
+      color: '#c9daf8'
     },
     {
       source: 'GLP',
       target: 'Exportación',
       value: 1.21,
-      color: '#c9daf8',
+      color: '#c9daf8'
     },
     {
       source: 'GLP',
       target: 'Otras ramas económicas',
       value: 6.62,
-      color: '#c9daf8',
+      color: '#c9daf8'
     },
     { source: 'GLP', target: 'Otros', value: 14.4, color: '#c9daf8' },
 
@@ -1058,163 +1058,163 @@ const items3 = {
       source: 'Gas seco',
       target: 'Sector industrial',
       value: 438.81,
-      color: '#6d9eeb',
+      color: '#6d9eeb'
     },
     {
       source: 'Gas seco',
       target: 'PEMEX Petroquímica',
       value: 12.05,
-      color: '#6d9eeb',
+      color: '#6d9eeb'
     },
     {
       source: 'Gas seco',
       target: 'Sector comercial y servicios',
       value: 9.5,
-      color: '#6d9eeb',
+      color: '#6d9eeb'
     },
     {
       source: 'Gas seco',
       target: 'Sector transporte',
       value: 1.81,
-      color: '#6d9eeb',
+      color: '#6d9eeb'
     },
     {
       source: 'Gas seco',
       target: 'Exportación',
       value: 2.66,
-      color: '#6d9eeb',
+      color: '#6d9eeb'
     },
     {
       source: 'Gas seco',
       target: 'Sector residencial',
       value: 25.95,
-      color: '#6d9eeb',
+      color: '#6d9eeb'
     },
     {
       source: 'Gas seco',
       target: 'Consumo propio',
       value: 14.4,
-      color: '#6d9eeb',
+      color: '#6d9eeb'
     },
     {
       source: 'Gas seco',
       target: 'Centrales eléctricas',
       value: 1439,
-      color: '#6d9eeb',
+      color: '#6d9eeb'
     },
 
     {
       source: 'No energéticos',
       target: 'Consumo propio',
       value: 68.06,
-      color: '#ff00ff',
+      color: '#ff00ff'
     },
     {
       source: 'No energéticos',
       target: 'Otras ramas económicas',
       value: 30.4,
-      color: '#ff00ff',
+      color: '#ff00ff'
     },
     {
       source: 'No energéticos',
       target: 'Otros',
       value: 1.66,
-      color: '#ff00ff',
+      color: '#ff00ff'
     },
 
     {
       source: 'Centrales eléctricas',
       target: 'Electricidad',
       value: 1186.9,
-      color: '#00ff00',
+      color: '#00ff00'
     },
     {
       source: 'Centrales eléctricas',
       target: 'Pérdidas en transformación',
       value: 1044.5,
-      color: '#f9a145',
+      color: '#f9a145'
     },
 
     {
       source: 'Electricidad',
       target: 'Sector industrial',
       value: 635.85,
-      color: '#00ff00',
+      color: '#00ff00'
     },
     {
       source: 'Electricidad',
       target: 'Consumo propio',
       value: 199.6,
-      color: '#00ff00',
+      color: '#00ff00'
     },
     {
       source: 'Electricidad',
       target: 'Sector residencial',
       value: 248.32,
-      color: '#00ff00',
+      color: '#00ff00'
     },
     {
       source: 'Electricidad',
       target: 'Sector público',
       value: 14.26,
-      color: '#00ff00',
+      color: '#00ff00'
     },
     {
       source: 'Electricidad',
       target: 'Sector transporte',
       value: 3.41,
-      color: '#00ff00',
+      color: '#00ff00'
     },
     {
       source: 'Electricidad',
       target: 'Sector comercial y servicios',
       value: 49.48,
-      color: '#00ff00',
+      color: '#00ff00'
     },
     {
       source: 'Electricidad',
       target: 'Sector agropecuario',
       value: 50.4,
-      color: '#00ff00',
+      color: '#00ff00'
     },
     {
       source: 'Electricidad',
       target: 'Exportación',
       value: 21.44,
-      color: '#00ff00',
+      color: '#00ff00'
     },
 
     {
       source: 'Otros *',
       target: 'Diésel',
       value: 7.56,
-      color: '#b7b7b7',
+      color: '#b7b7b7'
     },
     {
       source: 'Otros *',
       target: 'Gasolina',
       value: 344.06,
-      color: '#cccccc',
+      color: '#cccccc'
     },
     {
       source: 'Otros *',
       target: 'Gas seco',
       value: 99.8,
-      color: '#6d9eeb',
+      color: '#6d9eeb'
     },
     {
       source: 'Otros *',
       target: 'Combustóleo',
       value: 14.2,
-      color: '#666666',
+      color: '#666666'
     },
     {
       source: 'Otros *',
       target: 'Queroseno',
       value: 25.54,
-      color: '#999',
-    },
-  ],
+      color: '#999'
+    }
+  ]
 }
 
 // const items = {
@@ -1776,9 +1776,9 @@ const items3 = {
 const items4 = {
   nodes: [
     { node: 0, name: 'node0', id: 'node0', color: '#FFF' },
-    { node: 1, name: 'node1', id: 'node1', color: '#FFF' },
+    { node: 1, name: 'node1', id: 'node1', color: '#FFF' }
   ],
-  links: [{ source: 'node0', target: 'node1', value: 3.12, color: '#EFF' }],
+  links: [{ source: 'node0', target: 'node1', value: 3.12, color: '#EFF' }]
 }
 
 const items = {
@@ -1788,14 +1788,14 @@ const items = {
       node: 1,
       name: 'Del. Cuajimalpa de Morelos',
       id: 'node_1',
-      color: '#FFF',
+      color: '#FFF'
     },
     { node: 2, name: 'Del. Álvaro Obregón', id: 'node_2', color: '#FFF' },
     {
       node: 3,
       name: 'Del. La Magdalena Contreras',
       id: 'node_3',
-      color: '#FFF',
+      color: '#FFF'
     },
     { node: 4, name: 'Del. Tlalpan', id: 'node_4', color: '#FFF' },
     { node: 5, name: 'Del. Coyoacán', id: 'node_5', color: '#FFF' },
@@ -1817,7 +1817,7 @@ const items = {
       node: 20,
       name: 'Recolección Edo. de México',
       id: 'node_20',
-      color: '#FFF',
+      color: '#FFF'
     },
     { node: 21, name: 'Transferencia 1', id: 'node_21', color: '#FFF' },
     { node: 22, name: 'Transferencia 2', id: 'node_22', color: '#FFF' },
@@ -1840,7 +1840,7 @@ const items = {
     { node: 39, name: 'Disposición5', id: 'node_39', color: '#FFF' },
     { node: 40, name: 'Planta de Selección 1', id: 'node_40', color: '#FFF' },
     { node: 41, name: 'Planta de Selección 2', id: 'node_41', color: '#FFF' },
-    { node: 42, name: 'Recuperación', id: 'node_42', color: '#FFF' },
+    { node: 42, name: 'Recuperación', id: 'node_42', color: '#FFF' }
   ],
   links: [
     // Delegación -> Transferencia
@@ -1848,768 +1848,768 @@ const items = {
       source: 'Del. Miguel Hidalgo',
       target: 'Transferencia 1',
       value: 0,
-      color: '#EFF',
+      color: '#EFF'
     },
     {
       source: 'Del. Miguel Hidalgo',
       target: 'Transferencia 2',
       value: 0,
-      color: '#EFF',
+      color: '#EFF'
     },
     {
       source: 'Del. Cuajimalpa de Morelos',
       target: 'Transferencia 2',
       value: 0,
-      color: '#EFF',
+      color: '#EFF'
     },
     {
       source: 'Del. Álvaro Obregón',
       target: 'Transferencia 2',
       value: 0,
-      color: '#EFF',
+      color: '#EFF'
     },
     {
       source: 'Del. La Magdalena Contreras',
       target: 'Transferencia 2',
       value: 0,
-      color: '#EFF',
+      color: '#EFF'
     },
     {
       source: 'Del. La Magdalena Contreras',
       target: 'Transferencia 3',
       value: 0,
-      color: '#EFF',
+      color: '#EFF'
     },
     {
       source: 'Del. Tlalpan',
       target: 'Transferencia 3',
       value: 0,
-      color: '#EFF',
+      color: '#EFF'
     },
     {
       source: 'Del. Tlalpan',
       target: 'Transferencia 4',
       value: 0,
-      color: '#EFF',
+      color: '#EFF'
     },
     {
       source: 'Del. Coyoacán',
       target: 'Transferencia 4',
       value: 0,
-      color: '#EFF',
+      color: '#EFF'
     },
     {
       source: 'Del. Xochimilco',
       target: 'Transferencia 4',
       value: 0,
-      color: '#EFF',
+      color: '#EFF'
     },
     {
       source: 'Del. Xochimilco',
       target: 'Transferencia 5',
       value: 0,
-      color: '#EFF',
+      color: '#EFF'
     },
     {
       source: 'Del. Tláhuac',
       target: 'Transferencia 5',
       value: 0,
-      color: '#EFF',
+      color: '#EFF'
     },
     {
       source: 'Del. Milpa Alta',
       target: 'Transferencia 6',
       value: 0,
-      color: '#EFF',
+      color: '#EFF'
     },
     {
       source: 'Del. Venustiano Carranza',
       target: 'Transferencia 7',
       value: 0,
-      color: '#EFF',
+      color: '#EFF'
     },
     {
       source: 'Del. Benito Juárez',
       target: 'Transferencia 8',
       value: 0,
-      color: '#EFF',
+      color: '#EFF'
     },
     {
       source: 'Del. Iztacalco',
       target: 'Transferencia 9',
       value: 0,
-      color: '#EFF',
+      color: '#EFF'
     },
     {
       source: 'Del. Iztapalapa',
       target: 'Transferencia 9',
       value: 0,
-      color: '#EFF',
+      color: '#EFF'
     },
     {
       source: 'Del. Cuauhtémoc',
       target: 'Transferencia 10',
       value: 0,
-      color: '#EFF',
+      color: '#EFF'
     },
     {
       source: 'Del. Gustavo A. Madero',
       target: 'Transferencia 11',
       value: 0,
-      color: '#EFF',
+      color: '#EFF'
     },
     {
       source: 'Del. Azcapotzalco',
       target: 'Transferencia 12',
       value: 0,
-      color: '#EFF',
+      color: '#EFF'
     },
     // Recolección -> Transferencia
     {
       source: 'Recolección CEDA',
       target: 'Transferencia 1',
       value: 0,
-      color: '#EFF',
+      color: '#EFF'
     },
     {
       source: 'Recolección CEDA',
       target: 'Transferencia 2',
       value: 0,
-      color: '#EFF',
+      color: '#EFF'
     },
     {
       source: 'Recolección CEDA',
       target: 'Transferencia 3',
       value: 0,
-      color: '#EFF',
+      color: '#EFF'
     },
     {
       source: 'Recolección CEDA',
       target: 'Transferencia 4',
       value: 0,
-      color: '#EFF',
+      color: '#EFF'
     },
     {
       source: 'Recolección CEDA',
       target: 'Transferencia 5',
       value: 0,
-      color: '#EFF',
+      color: '#EFF'
     },
     {
       source: 'Recolección CEDA',
       target: 'Transferencia 6',
       value: 0,
-      color: '#EFF',
+      color: '#EFF'
     },
     {
       source: 'Recolección CEDA',
       target: 'Transferencia 7',
       value: 0,
-      color: '#EFF',
+      color: '#EFF'
     },
     {
       source: 'Recolección CEDA',
       target: 'Transferencia 8',
       value: 0,
-      color: '#EFF',
+      color: '#EFF'
     },
     {
       source: 'Recolección CEDA',
       target: 'Transferencia 9',
       value: 0,
-      color: '#EFF',
+      color: '#EFF'
     },
     {
       source: 'Recolección CEDA',
       target: 'Transferencia 10',
       value: 0,
-      color: '#EFF',
+      color: '#EFF'
     },
     {
       source: 'Recolección CEDA',
       target: 'Transferencia 11',
       value: 0,
-      color: '#EFF',
+      color: '#EFF'
     },
     {
       source: 'Recolección CEDA',
       target: 'Transferencia 12',
       value: 0,
-      color: '#EFF',
+      color: '#EFF'
     },
     {
       source: 'Recolección Particular',
       target: 'Transferencia 1',
       value: 0,
-      color: '#EFF',
+      color: '#EFF'
     },
     {
       source: 'Recolección Particular',
       target: 'Transferencia 2',
       value: 0,
-      color: '#EFF',
+      color: '#EFF'
     },
     {
       source: 'Recolección Particular',
       target: 'Transferencia 3',
       value: 0,
-      color: '#EFF',
+      color: '#EFF'
     },
     {
       source: 'Recolección Particular',
       target: 'Transferencia 4',
       value: 0,
-      color: '#EFF',
+      color: '#EFF'
     },
     {
       source: 'Recolección Particular',
       target: 'Transferencia 5',
       value: 0,
-      color: '#EFF',
+      color: '#EFF'
     },
     {
       source: 'Recolección Particular',
       target: 'Transferencia 6',
       value: 0,
-      color: '#EFF',
+      color: '#EFF'
     },
     {
       source: 'Recolección Particular',
       target: 'Transferencia 7',
       value: 0,
-      color: '#EFF',
+      color: '#EFF'
     },
     {
       source: 'Recolección Particular',
       target: 'Transferencia 8',
       value: 0,
-      color: '#EFF',
+      color: '#EFF'
     },
     {
       source: 'Recolección Particular',
       target: 'Transferencia 9',
       value: 0,
-      color: '#EFF',
+      color: '#EFF'
     },
     {
       source: 'Recolección Particular',
       target: 'Transferencia 10',
       value: 0,
-      color: '#EFF',
+      color: '#EFF'
     },
     {
       source: 'Recolección Particular',
       target: 'Transferencia 11',
       value: 0,
-      color: '#EFF',
+      color: '#EFF'
     },
     {
       source: 'Recolección Particular',
       target: 'Transferencia 12',
       value: 0,
-      color: '#EFF',
+      color: '#EFF'
     },
     {
       source: 'Recolección DGSU',
       target: 'Transferencia 1',
       value: 0,
-      color: '#EFF',
+      color: '#EFF'
     },
     {
       source: 'Recolección DGSU',
       target: 'Transferencia 2',
       value: 0,
-      color: '#EFF',
+      color: '#EFF'
     },
     {
       source: 'Recolección DGSU',
       target: 'Transferencia 3',
       value: 0,
-      color: '#EFF',
+      color: '#EFF'
     },
     {
       source: 'Recolección DGSU',
       target: 'Transferencia 4',
       value: 0,
-      color: '#EFF',
+      color: '#EFF'
     },
     {
       source: 'Recolección DGSU',
       target: 'Transferencia 5',
       value: 0,
-      color: '#EFF',
+      color: '#EFF'
     },
     {
       source: 'Recolección DGSU',
       target: 'Transferencia 6',
       value: 0,
-      color: '#EFF',
+      color: '#EFF'
     },
     {
       source: 'Recolección DGSU',
       target: 'Transferencia 7',
       value: 0,
-      color: '#EFF',
+      color: '#EFF'
     },
     {
       source: 'Recolección DGSU',
       target: 'Transferencia 8',
       value: 0,
-      color: '#EFF',
+      color: '#EFF'
     },
     {
       source: 'Recolección DGSU',
       target: 'Transferencia 9',
       value: 0,
-      color: '#EFF',
+      color: '#EFF'
     },
     {
       source: 'Recolección DGSU',
       target: 'Transferencia 10',
       value: 0,
-      color: '#EFF',
+      color: '#EFF'
     },
     {
       source: 'Recolección DGSU',
       target: 'Transferencia 11',
       value: 0,
-      color: '#EFF',
+      color: '#EFF'
     },
     {
       source: 'Recolección DGSU',
       target: 'Transferencia 12',
       value: 0,
-      color: '#EFF',
+      color: '#EFF'
     },
     {
       source: 'Recolección DGSU',
       target: 'Planta de Selección 1',
       value: 0,
-      color: '#EFF',
+      color: '#EFF'
     },
     {
       source: 'Recolección DGSU',
       target: 'Planta de Selección 2',
       value: 0,
-      color: '#EFF',
+      color: '#EFF'
     },
     {
       source: 'Recolección Edo. de México',
       target: 'Planta de Selección 1',
       value: 1,
-      color: '#BA3377',
+      color: '#BA3377'
     },
     {
       source: 'Recolección Edo. de México',
       target: 'Planta de Selección 2',
       value: 1,
-      color: '#BA3377',
+      color: '#BA3377'
     },
     // Recolección -> Disposición
     {
       source: 'Recolección RME',
       target: 'Disposición 1',
       value: 0,
-      color: '#EFF',
+      color: '#EFF'
     },
     {
       source: 'Recolección RME',
       target: 'Disposición 2',
       value: 0,
-      color: '#EFF',
+      color: '#EFF'
     },
     {
       source: 'Recolección RME',
       target: 'Disposición 3',
       value: 0,
-      color: '#EFF',
+      color: '#EFF'
     },
     {
       source: 'Recolección RME',
       target: 'Disposición 4',
       value: 0,
-      color: '#EFF',
+      color: '#EFF'
     },
     {
       source: 'Recolección RME',
       target: 'Disposición5',
       value: 0,
-      color: '#EFF',
+      color: '#EFF'
     },
     // Transferencia -> Composta
     {
       source: 'Transferencia 2',
       target: 'Planta de Composta',
       value: 1,
-      color: '#6D3F56',
+      color: '#6D3F56'
     },
     {
       source: 'Transferencia 3',
       target: 'Planta de Composta',
       value: 1,
-      color: '#6D3F56',
+      color: '#6D3F56'
     },
     {
       source: 'Transferencia 4',
       target: 'Planta de Composta',
       value: 1,
-      color: '#6D3F56',
+      color: '#6D3F56'
     },
     {
       source: 'Transferencia 5',
       target: 'Planta de Composta',
       value: 1,
-      color: '#6D3F56',
+      color: '#6D3F56'
     },
     {
       source: 'Transferencia 6',
       target: 'Planta de Composta',
       value: 1,
-      color: '#6D3F56',
+      color: '#6D3F56'
     },
     {
       source: 'Transferencia 7',
       target: 'Planta de Composta',
       value: 1,
-      color: '#6D3F56',
+      color: '#6D3F56'
     },
     {
       source: 'Transferencia 8',
       target: 'Planta de Composta',
       value: 1,
-      color: '#6D3F56',
+      color: '#6D3F56'
     },
     {
       source: 'Transferencia 9',
       target: 'Planta de Composta',
       value: 1,
-      color: '#6D3F56',
+      color: '#6D3F56'
     },
     {
       source: 'Transferencia 10',
       target: 'Planta de Composta',
       value: 1,
-      color: '#6D3F56',
+      color: '#6D3F56'
     },
     {
       source: 'Transferencia 11',
       target: 'Planta de Composta',
       value: 1,
-      color: '#6D3F56',
+      color: '#6D3F56'
     },
     {
       source: 'Transferencia 12',
       target: 'Planta de Composta',
       value: 1,
-      color: '#6D3F56',
+      color: '#6D3F56'
     },
     // Transferencia -> Compactadora
     {
       source: 'Transferencia 1',
       target: 'Planta Compactadora',
       value: 1,
-      color: '#6D1E46',
+      color: '#6D1E46'
     },
     {
       source: 'Transferencia 2',
       target: 'Planta Compactadora',
       value: 1,
-      color: '#6D1E46',
+      color: '#6D1E46'
     },
     {
       source: 'Transferencia 3',
       target: 'Planta Compactadora',
       value: 1,
-      color: '#6D1E46',
+      color: '#6D1E46'
     },
     {
       source: 'Transferencia 4',
       target: 'Planta Compactadora',
       value: 1,
-      color: '#6D1E46',
+      color: '#6D1E46'
     },
     {
       source: 'Transferencia 5',
       target: 'Planta Compactadora',
       value: 1,
-      color: '#6D1E46',
+      color: '#6D1E46'
     },
     {
       source: 'Transferencia 6',
       target: 'Planta Compactadora',
       value: 1,
-      color: '#6D1E46',
+      color: '#6D1E46'
     },
     {
       source: 'Transferencia 7',
       target: 'Planta Compactadora',
       value: 1,
-      color: '#6D1E46',
+      color: '#6D1E46'
     },
     {
       source: 'Transferencia 8',
       target: 'Planta Compactadora',
       value: 1,
-      color: '#6D1E46',
+      color: '#6D1E46'
     },
     {
       source: 'Transferencia 9',
       target: 'Planta Compactadora',
       value: 1,
-      color: '#6D1E46',
+      color: '#6D1E46'
     },
     {
       source: 'Transferencia 10',
       target: 'Planta Compactadora',
       value: 1,
-      color: '#6D1E46',
+      color: '#6D1E46'
     },
     {
       source: 'Transferencia 11',
       target: 'Planta Compactadora',
       value: 1,
-      color: '#6D1E46',
+      color: '#6D1E46'
     },
     {
       source: 'Transferencia 12',
       target: 'Planta Compactadora',
       value: 1,
-      color: '#6D1E46',
+      color: '#6D1E46'
     },
     // Transferencia -> Disposición
     {
       source: 'Transferencia 1',
       target: 'Disposición 1',
       value: 0,
-      color: 'transparent',
+      color: 'transparent'
     },
     {
       source: 'Transferencia 2',
       target: 'Disposición 1',
       value: 1,
-      color: '#ED4197',
+      color: '#ED4197'
     },
     {
       source: 'Transferencia 2',
       target: 'Disposición 2',
       value: 1,
-      color: '#ED4197',
+      color: '#ED4197'
     },
     {
       source: 'Transferencia 2',
       target: 'Disposición 3',
       value: 1,
-      color: '#ED4197',
+      color: '#ED4197'
     },
     {
       source: 'Transferencia 3',
       target: 'Disposición 1',
       value: 1,
-      color: '#ED4197',
+      color: '#ED4197'
     },
     {
       source: 'Transferencia 3',
       target: 'Disposición 2',
       value: 1,
-      color: '#ED4197',
+      color: '#ED4197'
     },
     {
       source: 'Transferencia 4',
       target: 'Disposición 1',
       value: 1,
-      color: '#ED4197',
+      color: '#ED4197'
     },
     {
       source: 'Transferencia 4',
       target: 'Disposición 2',
       value: 1,
-      color: '#ED4197',
+      color: '#ED4197'
     },
     {
       source: 'Transferencia 4',
       target: 'Disposición 4',
       value: 1,
-      color: '#ED4197',
+      color: '#ED4197'
     },
     {
       source: 'Transferencia 4',
       target: 'Disposición5',
       value: 1,
-      color: '#ED4197',
+      color: '#ED4197'
     },
     {
       source: 'Transferencia 5',
       target: 'Disposición 1',
       value: 1,
-      color: '#ED4197',
+      color: '#ED4197'
     },
     {
       source: 'Transferencia 5',
       target: 'Disposición 2',
       value: 1,
-      color: '#ED4197',
+      color: '#ED4197'
     },
     {
       source: 'Transferencia 5',
       target: 'Disposición 3',
       value: 1,
-      color: '#ED4197',
+      color: '#ED4197'
     },
     {
       source: 'Transferencia 6',
       target: 'Disposición 1',
       value: 1,
-      color: '#ED4197',
+      color: '#ED4197'
     },
     {
       source: 'Transferencia 6',
       target: 'Disposición 2',
       value: 1,
-      color: '#ED4197',
+      color: '#ED4197'
     },
     {
       source: 'Transferencia 6',
       target: 'Disposición 3',
       value: 1,
-      color: '#ED4197',
+      color: '#ED4197'
     },
     {
       source: 'Transferencia 7',
       target: 'Disposición 1',
       value: 1,
-      color: '#ED4197',
+      color: '#ED4197'
     },
     {
       source: 'Transferencia 7',
       target: 'Disposición 2',
       value: 1,
-      color: '#ED4197',
+      color: '#ED4197'
     },
     {
       source: 'Transferencia 7',
       target: 'Disposición 4',
       value: 1,
-      color: '#ED4197',
+      color: '#ED4197'
     },
     {
       source: 'Transferencia 8',
       target: 'Disposición 1',
       value: 1,
-      color: '#ED4197',
+      color: '#ED4197'
     },
     {
       source: 'Transferencia 8',
       target: 'Disposición 2',
       value: 1,
-      color: '#ED4197',
+      color: '#ED4197'
     },
     {
       source: 'Transferencia 8',
       target: 'Disposición 3',
       value: 1,
-      color: '#ED4197',
+      color: '#ED4197'
     },
     {
       source: 'Transferencia 8',
       target: 'Disposición 4',
       value: 1,
-      color: '#ED4197',
+      color: '#ED4197'
     },
     {
       source: 'Transferencia 9',
       target: 'Disposición 1',
       value: 1,
-      color: '#ED4197',
+      color: '#ED4197'
     },
     {
       source: 'Transferencia 9',
       target: 'Disposición 2',
       value: 1,
-      color: '#ED4197',
+      color: '#ED4197'
     },
     {
       source: 'Transferencia 9',
       target: 'Disposición 3',
       value: 1,
-      color: '#ED4197',
+      color: '#ED4197'
     },
     {
       source: 'Transferencia 9',
       target: 'Disposición 4',
       value: 1,
-      color: '#ED4197',
+      color: '#ED4197'
     },
     {
       source: 'Transferencia 10',
       target: 'Disposición 1',
       value: 1,
-      color: '#ED4197',
+      color: '#ED4197'
     },
     {
       source: 'Transferencia 10',
       target: 'Disposición 2',
       value: 1,
-      color: '#ED4197',
+      color: '#ED4197'
     },
     {
       source: 'Transferencia 10',
       target: 'Disposición 3',
       value: 1,
-      color: '#ED4197',
+      color: '#ED4197'
     },
     {
       source: 'Transferencia 10',
       target: 'Disposición 4',
       value: 1,
-      color: '#ED4197',
+      color: '#ED4197'
     },
     {
       source: 'Transferencia 11',
       target: 'Disposición 1',
       value: 1,
-      color: '#ED4197',
+      color: '#ED4197'
     },
     {
       source: 'Transferencia 11',
       target: 'Disposición 2',
       value: 1,
-      color: '#ED4197',
+      color: '#ED4197'
     },
     {
       source: 'Transferencia 11',
       target: 'Disposición 3',
       value: 1,
-      color: '#ED4197',
+      color: '#ED4197'
     },
     {
       source: 'Transferencia 11',
       target: 'Disposición 4',
       value: 1,
-      color: '#ED4197',
+      color: '#ED4197'
     },
     {
       source: 'Transferencia 12',
       target: 'Disposición 1',
       value: 1,
-      color: '#ED4197',
+      color: '#ED4197'
     },
     {
       source: 'Transferencia 12',
       target: 'Disposición 2',
       value: 1,
-      color: '#ED4197',
+      color: '#ED4197'
     },
     {
       source: 'Transferencia 12',
       target: 'Disposición 3',
       value: 1,
-      color: '#ED4197',
+      color: '#ED4197'
     },
     {
       source: 'Transferencia 12',
       target: 'Disposición 4',
       value: 1,
-      color: '#ED4197',
+      color: '#ED4197'
     },
     // Transferencia -> Selección
     // // { source: 'Transferencia 2', target: 'node34', value: 536, color: 'transparent' },
@@ -2617,203 +2617,203 @@ const items = {
       source: 'Transferencia 2',
       target: 'Planta de Selección 1',
       value: 1,
-      color: '#BA3377',
+      color: '#BA3377'
     },
     {
       source: 'Transferencia 2',
       target: 'Planta de Selección 2',
       value: 1,
-      color: '#BA3377',
+      color: '#BA3377'
     },
     {
       source: 'Transferencia 3',
       target: 'Planta de Selección 1',
       value: 1,
-      color: '#BA3377',
+      color: '#BA3377'
     },
     {
       source: 'Transferencia 3',
       target: 'Planta de Selección 2',
       value: 1,
-      color: '#BA3377',
+      color: '#BA3377'
     },
     {
       source: 'Transferencia 4',
       target: 'Planta de Selección 1',
       value: 1,
-      color: '#BA3377',
+      color: '#BA3377'
     },
     {
       source: 'Transferencia 4',
       target: 'Planta de Selección 2',
       value: 1,
-      color: '#BA3377',
+      color: '#BA3377'
     },
     {
       source: 'Transferencia 5',
       target: 'Planta de Selección 1',
       value: 1,
-      color: '#BA3377',
+      color: '#BA3377'
     },
     {
       source: 'Transferencia 5',
       target: 'Planta de Selección 2',
       value: 1,
-      color: '#BA3377',
+      color: '#BA3377'
     },
     {
       source: 'Transferencia 6',
       target: 'Planta de Selección 1',
       value: 1,
-      color: '#BA3377',
+      color: '#BA3377'
     },
     {
       source: 'Transferencia 6',
       target: 'Planta de Selección 2',
       value: 1,
-      color: '#BA3377',
+      color: '#BA3377'
     },
     {
       source: 'Transferencia 7',
       target: 'Planta de Selección 1',
       value: 1,
-      color: '#BA3377',
+      color: '#BA3377'
     },
     {
       source: 'Transferencia 7',
       target: 'Planta de Selección 2',
       value: 1,
-      color: '#BA3377',
+      color: '#BA3377'
     },
     {
       source: 'Transferencia 8',
       target: 'Planta de Selección 1',
       value: 1,
-      color: '#BA3377',
+      color: '#BA3377'
     },
     {
       source: 'Transferencia 8',
       target: 'Planta de Selección 2',
       value: 1,
-      color: '#BA3377',
+      color: '#BA3377'
     },
     {
       source: 'Transferencia 9',
       target: 'Planta de Selección 1',
       value: 1,
-      color: '#BA3377',
+      color: '#BA3377'
     },
     {
       source: 'Transferencia 9',
       target: 'Planta de Selección 2',
       value: 1,
-      color: '#BA3377',
+      color: '#BA3377'
     },
     {
       source: 'Transferencia 10',
       target: 'Planta de Selección 1',
       value: 1,
-      color: '#BA3377',
+      color: '#BA3377'
     },
     {
       source: 'Transferencia 10',
       target: 'Planta de Selección 2',
       value: 1,
-      color: '#BA3377',
+      color: '#BA3377'
     },
     {
       source: 'Transferencia 11',
       target: 'Planta de Selección 1',
       value: 1,
-      color: '#BA3377',
+      color: '#BA3377'
     },
     {
       source: 'Transferencia 12',
       target: 'Planta de Selección 1',
       value: 1,
-      color: '#BA3377',
+      color: '#BA3377'
     },
     {
       source: 'Transferencia 12',
       target: 'Planta de Selección 2',
       value: 1,
-      color: '#BA3377',
+      color: '#BA3377'
     },
     // Selección -> Disposición
     {
       source: 'Planta de Selección 1',
       target: 'Disposición 1',
       value: 0,
-      color: '#EFF',
+      color: '#EFF'
     },
     {
       source: 'Planta de Selección 1',
       target: 'Disposición 2',
       value: 0,
-      color: '#EFF',
+      color: '#EFF'
     },
     {
       source: 'Planta de Selección 1',
       target: 'Disposición 3',
       value: 0,
-      color: '#EFF',
+      color: '#EFF'
     },
     {
       source: 'Planta de Selección 1',
       target: 'Disposición 4',
       value: 0,
-      color: '#EFF',
+      color: '#EFF'
     },
     {
       source: 'Planta de Selección 1',
       target: 'Disposición5',
       value: 0,
-      color: '#EFF',
+      color: '#EFF'
     },
     {
       source: 'Planta de Selección 2',
       target: 'Disposición 1',
       value: 0,
-      color: '#EFF',
+      color: '#EFF'
     },
     {
       source: 'Planta de Selección 2',
       target: 'Disposición 2',
       value: 0,
-      color: '#EFF',
+      color: '#EFF'
     },
     {
       source: 'Planta de Selección 2',
       target: 'Disposición 3',
       value: 0,
-      color: '#EFF',
+      color: '#EFF'
     },
     {
       source: 'Planta de Selección 2',
       target: 'Disposición 4',
       value: 0,
-      color: '#EFF',
+      color: '#EFF'
     },
     {
       source: 'Planta de Selección 2',
       target: 'Disposición5',
       value: 0,
-      color: '#EFF',
+      color: '#EFF'
     },
     // Selección -> Recuperación
     {
       source: 'Planta de Selección 1',
       target: 'Recuperación',
       value: 1,
-      color: '#EFF',
+      color: '#EFF'
     },
     {
       source: 'Planta de Selección 2',
       target: 'Recuperación',
       value: 1,
-      color: '#EFF',
-    },
-  ],
+      color: '#EFF'
+    }
+  ]
 }
 </script>
 
@@ -2823,15 +2823,7 @@ const items = {
 
     <SankeyComponent4 :datos="items" />
     <SankeyComponent2 v-if="false" />
-    <SankeyComponent3
-      v-if="false"
-      sankey_id="sankey"
-      :datos="items4"
-    />
-    <SankeyComponent3
-      v-if="false"
-      sankey_id="sankey2"
-      :datos="items3"
-    />
+    <SankeyComponent3 v-if="false" sankey_id="sankey" :datos="items4" />
+    <SankeyComponent3 v-if="false" sankey_id="sankey2" :datos="items3" />
   </div>
 </template>

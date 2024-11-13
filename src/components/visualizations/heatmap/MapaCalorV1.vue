@@ -1,32 +1,24 @@
 <template>
-  <div
-    class="mapa-calor"
-    v-bind:id="mapa_calor_id"
-  >
+  <div class="mapa-calor" v-bind:id="mapa_calor_id">
     <div class="titulo-calor">
       <h3 class="titulo-visualizacion">
         <span v-if="varianteSeleccionada == 'VTODAS'">
           Número de casos relacionados con todas las variantes por estado
         </span>
         <span v-if="varianteSeleccionada == 'VIN'">
-          Número de casos relacionados con las variantes de interés nacional
-          (VIN) por estado
+          Número de casos relacionados con las variantes de interés nacional (VIN) por estado
         </span>
         <span v-if="varianteSeleccionada == 'VOC'">
-          Número de casos relacionados con las variantes de preocupación (VOC)
-          por estado
+          Número de casos relacionados con las variantes de preocupación (VOC) por estado
         </span>
         <span v-if="varianteSeleccionada == 'VOI'">
-          Número de casos relacionados con las variantes de interés (VOI) por
-          estado
+          Número de casos relacionados con las variantes de interés (VOI) por estado
         </span>
         <span v-if="varianteSeleccionada == 'VOM'">
-          Número de casos relacionados con las variantes de monitoreo (VOM) por
-          estado
+          Número de casos relacionados con las variantes de monitoreo (VOM) por estado
         </span>
         <span v-if="varianteSeleccionada == 'VSIN'">
-          Número de casos relacionados con las variantes sin clasificación
-          (VSIN) por estado
+          Número de casos relacionados con las variantes sin clasificación (VSIN) por estado
         </span>
       </h3>
       <p class="instruccional">Última actualización: 05/07/2021</p>
@@ -34,32 +26,19 @@
     <div class="nomenclatura">
       <div class="leyenda-mapa-calor">
         <p class="titulo-leyenda">Título de la leyenda</p>
-        <button
-          @click="quitaPon"
-          class="quita-pon"
-        >
+        <button @click="quitaPon" class="quita-pon">
           {{ status_button }}
         </button>
       </div>
       <div class="checks">
-        <div
-          class="label-1"
-          v-for="(variable, i) in variables_graf"
-          :key="variable.id"
-        >
-          <CheckboxColor
-            :color="variable.color"
-            v-model="lista_filtros_activos[i]"
-          >
+        <div class="label-1" v-for="(variable, i) in variables_graf" :key="variable.id">
+          <CheckboxColor :color="variable.color" v-model="lista_filtros_activos[i]">
             <span class="categoria-texto">{{ variable.nombre }}</span>
           </CheckboxColor>
         </div>
       </div>
     </div>
-    <div
-      class="contenedor-vis"
-      id="contenedor_vis"
-    >
+    <div class="contenedor-vis" id="contenedor_vis">
       <div id="contenedor-mapacalor"></div>
 
       <div id="contenedor_svg">
@@ -69,32 +48,15 @@
         </svg>
       </div>
 
-      <div
-        class="tooltip-mapa-calor"
-        ref="tooltip"
-      >
+      <div class="tooltip-mapa-calor" ref="tooltip">
         <div class="contenedor-boton-cerrar">
           <span>{{ titulo_tooltip }}</span>
-          <button
-            class="boton-cerrar-tooltip"
-            @click="cerrarTooltip()"
-          >
-            <img
-              src="@/assets/img/cerrar.svg"
-              alt="Cerrar Tooltip"
-            />
+          <button class="boton-cerrar-tooltip" @click="cerrarTooltip()">
+            <img src="@/assets/img/cerrar.svg" alt="Cerrar Tooltip" />
           </button>
         </div>
-        <p
-          class="tooltip-variable"
-          ref="tooltip_variable"
-        ></p>
-        <p
-          class="tooltip-cifra"
-          ref="tooltip_cifra"
-        >
-          120 | <b> 29.3%</b>
-        </p>
+        <p class="tooltip-variable" ref="tooltip_variable"></p>
+        <p class="tooltip-cifra" ref="tooltip_cifra">120 | <b> 29.3%</b></p>
       </div>
     </div>
   </div>
@@ -114,37 +76,37 @@ const dictValuesRango = {
   Rango_1: '20 a 39',
   Rango_2: '40 a 59',
   Rango_3: '60 a 70',
-  Rango_4: '80 o más',
+  Rango_4: '80 o más'
 }
 const dictColorsRango = {
   Rango_0: '#7B053B',
   Rango_1: '#A71867',
   Rango_2: '#E31755',
   Rango_3: '#EB5382',
-  Rango_4: '#FEB7C5',
+  Rango_4: '#FEB7C5'
 }
-const variables = Object.entries(dictValuesRango).map(rango => {
+const variables = Object.entries(dictValuesRango).map((rango) => {
   return {
     color: dictColorsRango[rango[0]],
     nombre: rango[1],
-    id: rango[0],
+    id: rango[0]
   }
 })
 
 export default {
   name: 'MapaCalor',
   components: {
-    CheckboxColor,
+    CheckboxColor
   },
   props: {
     mapa_calor_id: {
       type: String,
-      default: () => 'mapa_calor',
+      default: () => 'mapa_calor'
     },
     datos: {
       type: Array,
       // type: Object,
-      default: () => [{ grupo: 'A', variable: 'v1', cantidad: '30' }],
+      default: () => [{ grupo: 'A', variable: 'v1', cantidad: '30' }]
     },
     titulo: String,
     instruccional: String,
@@ -152,15 +114,15 @@ export default {
     titulo_leyenda: String,
     titulo_tooltip: {
       type: String,
-      default: '',
+      default: ''
     },
     alto_vis: {
       type: Number,
-      default: 500,
+      default: 500
     },
     ancho_vis: {
       type: Number,
-      default: 500,
+      default: 500
     },
     margin: {
       type: Object,
@@ -168,15 +130,15 @@ export default {
         top: 10,
         right: 0,
         bottom: 40,
-        left: 40,
-      }),
+        left: 40
+      })
     },
     variables: {
       type: Array,
       default: function () {
         return ['grupo', 'variable', 'cantidad']
-      },
-    },
+      }
+    }
   },
   data() {
     return {
@@ -185,7 +147,7 @@ export default {
       height: 100,
       width_limit: 769,
       lista_filtros_activos: [],
-      status_button: 'Quitar todos',
+      status_button: 'Quitar todos'
     }
   },
   computed: {
@@ -194,7 +156,7 @@ export default {
     // Declara función para utilizar su valor en todo el componente
     varianteSeleccionada() {
       return this.$store.getters.varianteSeleccionada
-    },
+    }
   },
   watch: {
     lista_filtros_activos(nv) {
@@ -202,7 +164,7 @@ export default {
       // asigna el id o colócalo vacío. Solo manda los que no están vacíos.
       this.categorias_checkeadas = this.variables_graf
         .map((d, i) => (this.lista_filtros_activos[i] ? d.id : ''))
-        .filter(d => d !== '')
+        .filter((d) => d !== '')
       // console.log(this.categorias_checkeadas);
 
       this.configurandoDimensionesParaSVG()
@@ -231,7 +193,7 @@ export default {
       }
 
       this.actualizandoHeatmap()
-    },
+    }
   },
   mounted: function () {
     // Asigna todas las variables de filtro de input en checked
@@ -240,7 +202,7 @@ export default {
     //  asigna el id o colócalo vacío. Solo manda los que no están vacíos.
     this.categorias_checkeadas = this.variables
       .map((d, i) => (this.lista_filtros_activos[i] ? d.id : ''))
-      .filter(d => d !== '')
+      .filter((d) => d !== '')
 
     // console.log(consorcioHeatmap);
 
@@ -249,12 +211,8 @@ export default {
     this.grupo_contenedor = this.svg.select('g.grupo-contenedor-de-heatmap')
     this.grupo_contenedor_ejes = this.svg.select('g.grupo-contenedor-de-ejes')
     // append and attribute class to axes
-    this.eje_x_top = this.grupo_contenedor_ejes
-      .append('g')
-      .attr('class', 'eje-x-top')
-    this.eje_x_bottom = this.grupo_contenedor_ejes
-      .append('g')
-      .attr('class', 'eje-x-bottom')
+    this.eje_x_top = this.grupo_contenedor_ejes.append('g').attr('class', 'eje-x-top')
+    this.eje_x_bottom = this.grupo_contenedor_ejes.append('g').attr('class', 'eje-x-bottom')
     this.eje_y = this.grupo_contenedor_ejes.append('g').attr('class', 'eje-y')
 
     this.configurandoDimensionesParaSVG()
@@ -274,9 +232,7 @@ export default {
        */
       // set the dimensions with margins to the graph
       this.width =
-        document.getElementById('contenedor_vis').clientWidth -
-        this.margin.left -
-        this.margin.right
+        document.getElementById('contenedor_vis').clientWidth - this.margin.left - this.margin.right
       if (window.innerWidth >= this.width_limit) {
         // 769
         this.height = 400 - this.margin.top - this.margin.bottom // Desktop
@@ -289,10 +245,7 @@ export default {
         .attr('height', this.height + this.margin.top + this.margin.bottom)
       // .style('background-color', '#eee') // <-- comentar
 
-      this.grupo_contenedor.attr(
-        'transform',
-        `translate(${this.margin.left},${this.margin.top})`
-      )
+      this.grupo_contenedor.attr('transform', `translate(${this.margin.left},${this.margin.top})`)
     },
     calculoHeatmap(tipoVariante) {
       /**
@@ -302,7 +255,7 @@ export default {
       if (tipoVariante === 'VTODAS') {
         // Creando keysArray para estado, tipo_variante y abreviatura_ent
         const groupObj = {}
-        Object.values(consorcioHeatmap).forEach(alumno => {
+        Object.values(consorcioHeatmap).forEach((alumno) => {
           const nombreGrupo = alumno.estado
           if (!groupObj[nombreGrupo]) groupObj[nombreGrupo] = []
           groupObj[nombreGrupo].push(alumno)
@@ -310,7 +263,7 @@ export default {
         const keyEstado = Object.keys(groupObj)
         // console.log("keyEstado",keyEstado);
         const groupObj2 = {}
-        Object.values(consorcioHeatmap).forEach(alumno => {
+        Object.values(consorcioHeatmap).forEach((alumno) => {
           const nombreGrupo = alumno.tipo_variante
           if (!groupObj2[nombreGrupo]) groupObj2[nombreGrupo] = []
           groupObj2[nombreGrupo].push(alumno)
@@ -319,7 +272,7 @@ export default {
         this.keyVariante = this.keyTipoVariante
         // console.log("keyTipoVariante",this.keyTipoVariante);
         const groupObj3 = {}
-        Object.values(consorcioHeatmap).forEach(alumno => {
+        Object.values(consorcioHeatmap).forEach((alumno) => {
           const nombreGrupo = alumno.abreviatura_ent
           if (!groupObj3[nombreGrupo]) groupObj3[nombreGrupo] = []
           groupObj3[nombreGrupo].push(alumno)
@@ -332,17 +285,17 @@ export default {
         for (let i = 0; i < keyEstado.length; i++) {
           // Recorre por el número de estados y asigna el conjunto filtrado
           const filtroEstado = Object.values(consorcioHeatmap).filter(
-            d => d.estado === keyEstado[i]
+            (d) => d.estado === keyEstado[i]
           )
           // console.log(filtroEstado);
           for (let j = 0; j < this.keyTipoVariante.length; j++) {
             // Recorre por el número de tipo de variantes asignando el conjunto filtrado
             // y recorre el conjunto para sumar la cantidad de muestras en total
             const filtroTipoVariante = filtroEstado.filter(
-              d => d.tipo_variante === this.keyTipoVariante[j]
+              (d) => d.tipo_variante === this.keyTipoVariante[j]
             )
             let valor = 0
-            filtroTipoVariante.forEach(element => {
+            filtroTipoVariante.forEach((element) => {
               valor += element.cantidad_muestras
             })
 
@@ -352,7 +305,7 @@ export default {
                 group: keyEstado[i],
                 abreviatura: this.keyAbreviatura[i],
                 variable: this.keyTipoVariante[j],
-                value: valor,
+                value: valor
               })
             )
           }
@@ -364,13 +317,13 @@ export default {
       } else {
         // Filtro Tipo de Variante
         const filtroTipoVariante = Object.values(consorcioHeatmap).filter(
-          d => d.tipo_variante === tipoVariante
+          (d) => d.tipo_variante === tipoVariante
         )
         // console.log(filtroTipoVariante);
 
         // Creando keyArray para estado, variante_oms y abreviatura_ent
         const groupObj = {}
-        Object.values(filtroTipoVariante).forEach(alumno => {
+        Object.values(filtroTipoVariante).forEach((alumno) => {
           const nombreGrupo = alumno.estado
           if (!groupObj[nombreGrupo]) groupObj[nombreGrupo] = []
           groupObj[nombreGrupo].push(alumno)
@@ -378,7 +331,7 @@ export default {
         const keyEstado = Object.keys(groupObj)
         // console.log("keyEstado",keyEstado);
         const groupObj2 = {}
-        Object.values(filtroTipoVariante).forEach(alumno => {
+        Object.values(filtroTipoVariante).forEach((alumno) => {
           const nombreGrupo = alumno.variante_oms
           if (!groupObj2[nombreGrupo]) groupObj2[nombreGrupo] = []
           groupObj2[nombreGrupo].push(alumno)
@@ -393,7 +346,7 @@ export default {
         this.keyVariante = this.keyVarianteOMS
         // console.log("keyVarianteOMS",this.keyVarianteOMS);
         const groupObj3 = {}
-        Object.values(filtroTipoVariante).forEach(alumno => {
+        Object.values(filtroTipoVariante).forEach((alumno) => {
           const nombreGrupo = alumno.abreviatura_ent
           if (!groupObj3[nombreGrupo]) groupObj3[nombreGrupo] = []
           groupObj3[nombreGrupo].push(alumno)
@@ -405,17 +358,15 @@ export default {
         const arregloObjectos = []
         for (let i = 0; i < keyEstado.length; i++) {
           // Recorre por el número de estados y asigna el conjunto filtrado
-          const filtroEstado = filtroTipoVariante.filter(
-            d => d.estado === keyEstado[i]
-          )
+          const filtroEstado = filtroTipoVariante.filter((d) => d.estado === keyEstado[i])
           // console.log(filtroEstado);
           for (let j = 0; j < this.keyVariante.length; j++) {
             // Recorre por el número de variantes_oms asignando el conjunto filtrado
             // y recorre el conjunto para regresar la cantidad de muestras
             const valor = filtroEstado
-              .filter(d => d.variante_oms === this.keyVariante[j])
-              .map(d => d.cantidad_muestras)
-            const abr = filtroEstado.map(d => d.abreviatura_ent)
+              .filter((d) => d.variante_oms === this.keyVariante[j])
+              .map((d) => d.cantidad_muestras)
+            const abr = filtroEstado.map((d) => d.abreviatura_ent)
 
             // Empujalo al arreglo de objectos para la nueva base de datos
             arregloObjectos.push(
@@ -424,7 +375,7 @@ export default {
                 abreviatura: abr[0],
                 variante: tipoVariante,
                 variable: this.keyVariante[j],
-                value: valor.length === 0 ? 0 : valor[0],
+                value: valor.length === 0 ? 0 : valor[0]
               })
             )
           }
@@ -444,11 +395,7 @@ export default {
         // 769
         // Desktop
         // Build X, Y scales:
-        this.x = d3
-          .scaleBand()
-          .range([0, this.width])
-          .domain(this.keyAbreviatura)
-          .padding(0.03)
+        this.x = d3.scaleBand().range([0, this.width]).domain(this.keyAbreviatura).padding(0.03)
         this.y = d3
           .scaleBand()
           .range([this.height, 0])
@@ -516,7 +463,7 @@ export default {
     creandoHeatmapDesktop() {
       /** */
       // Build color scale
-      const escalaColor = this.variables_graf.map(d => d.color)
+      const escalaColor = this.variables_graf.map((d) => d.color)
       const catChecked = this.categorias_checkeadas
 
       // remove all rects created
@@ -529,31 +476,31 @@ export default {
           return d.abreviatura + ':' + d.variable
         })
         .join('rect')
-        .attr('class', d => `${d.abreviatura} rects-heatmaps`)
+        .attr('class', (d) => `${d.abreviatura} rects-heatmaps`)
         .attr('width', this.x.bandwidth())
         .attr('height', this.y.bandwidth())
         .style('fill', function (d) {
           if (d.value < 20) {
-            return catChecked.filter(dd => dd === 'Rango_0') == 'Rango_0'
+            return catChecked.filter((dd) => dd === 'Rango_0') == 'Rango_0'
               ? escalaColor[0]
               : 'transparent'
           }
           if (d.value >= 20 && d.value < 40) {
-            return catChecked.filter(dd => dd === 'Rango_1') == 'Rango_1'
+            return catChecked.filter((dd) => dd === 'Rango_1') == 'Rango_1'
               ? escalaColor[1]
               : 'transparent'
           }
           if (d.value >= 40 && d.value < 60) {
-            return catChecked.filter(dd => dd === 'Rango_2') == 'Rango_2'
+            return catChecked.filter((dd) => dd === 'Rango_2') == 'Rango_2'
               ? escalaColor[2]
               : 'transparent'
           }
           if (d.value >= 60 && d.value < 80) {
-            return catChecked.filter(dd => dd === 'Rango_3') == 'Rango_3'
+            return catChecked.filter((dd) => dd === 'Rango_3') == 'Rango_3'
               ? escalaColor[3]
               : 'transparent'
           } else {
-            return catChecked.filter(dd => dd === 'Rango_4') == 'Rango_4'
+            return catChecked.filter((dd) => dd === 'Rango_4') == 'Rango_4'
               ? escalaColor[4]
               : 'transparent'
           }
@@ -570,7 +517,7 @@ export default {
        * Método para crear el heatmap versión movil
        */
       // Build color scale
-      const escalaColor = this.variables_graf.map(d => d.color)
+      const escalaColor = this.variables_graf.map((d) => d.color)
       const catChecked = this.categorias_checkeadas
 
       // remove all rects created
@@ -583,40 +530,40 @@ export default {
           return d.abreviatura + ':' + d.variable
         })
         .join('rect')
-        .attr('class', d => `${d.abreviatura} rects-heatmaps`)
+        .attr('class', (d) => `${d.abreviatura} rects-heatmaps`)
         .attr('width', this.x.bandwidth())
         .attr('height', this.y.bandwidth())
         // .style("fill", function(d) { return myColor(d.value)} )
         .style('fill', function (d) {
           if (d.value < 20) {
-            if (catChecked.filter(dd => dd === 'Rango_0') == 'Rango_0') {
+            if (catChecked.filter((dd) => dd === 'Rango_0') == 'Rango_0') {
               return escalaColor[0]
             } else {
               return 'transparent'
             }
           }
           if (d.value >= 20 && d.value < 40) {
-            if (catChecked.filter(dd => dd === 'Rango_1') == 'Rango_1') {
+            if (catChecked.filter((dd) => dd === 'Rango_1') == 'Rango_1') {
               return escalaColor[1]
             } else {
               return 'transparent'
             }
           }
           if (d.value >= 40 && d.value < 60) {
-            if (catChecked.filter(dd => dd === 'Rango_2') == 'Rango_2') {
+            if (catChecked.filter((dd) => dd === 'Rango_2') == 'Rango_2') {
               return escalaColor[2]
             } else {
               return 'transparent'
             }
           }
           if (d.value >= 60 && d.value < 80) {
-            if (catChecked.filter(dd => dd === 'Rango_3') == 'Rango_3') {
+            if (catChecked.filter((dd) => dd === 'Rango_3') == 'Rango_3') {
               return escalaColor[3]
             } else {
               return 'transparent'
             }
           }
-          if (catChecked.filter(dd => dd === 'Rango_4') == 'Rango_4') {
+          if (catChecked.filter((dd) => dd === 'Rango_4') == 'Rango_4') {
             return escalaColor[4]
           } else {
             return 'transparent'
@@ -635,15 +582,11 @@ export default {
         .data(this.datas, function (d) {
           return d.abreviatura + ':' + d.variable
         })
-        .attr('x', d =>
-          window.innerWidth >= this.width_limit
-            ? this.x(d.abreviatura)
-            : this.x(d.variable)
+        .attr('x', (d) =>
+          window.innerWidth >= this.width_limit ? this.x(d.abreviatura) : this.x(d.variable)
         )
-        .attr('y', d =>
-          window.innerWidth >= this.width_limit
-            ? this.y(d.variable)
-            : this.y(d.abreviatura)
+        .attr('y', (d) =>
+          window.innerWidth >= this.width_limit ? this.y(d.variable) : this.y(d.abreviatura)
         )
     },
     mostrarTooltip(evento, datum) {
@@ -656,9 +599,7 @@ export default {
         .style('top', `${evento.pageY + 5}px`)
       d3.select(this.$refs.tooltip_grupo).text(datum.group)
       d3.select(this.$refs.tooltip_variable).text(datum.group)
-      d3.select(this.$refs.tooltip_cifra).html(
-        `${datum.variable} | <b>${datum.value}</b>`
-      )
+      d3.select(this.$refs.tooltip_cifra).html(`${datum.variable} | <b>${datum.value}</b>`)
       // .html(`${this.variables
       // .filter((d) => d.id === datum.data.key)[0].nombre} | <b>${datum.data[this.variables
       // .filter((d) => d.id === datum.data.key)[0].id].toLocaleString('en')}<b>`)
@@ -682,8 +623,8 @@ export default {
         this.status_button = 'Quitar todos'
         this.lista_filtros_activos = this.lista_filtros_activos.map(() => true)
       }
-    },
-  },
+    }
+  }
 }
 </script>
 
