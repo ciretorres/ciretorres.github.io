@@ -75,5 +75,5 @@ function globoInformativo(f) {
 </template>
 
 <style lang="scss" scoped>
-@import 'node_modules/sisdai-css/src/eni.scss';
+// @import 'node_modules/sisdai-css/src/eni.scss';
 </style>

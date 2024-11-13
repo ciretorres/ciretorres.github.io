@@ -14,21 +14,21 @@
     }
   }
   .menu-mov {
-    margin-left: map-get($spacing, '2');
-    margin-top: map-get($spacing, '2');
+    margin-left: map.get($spacing, '2');
+    margin-top: map.get($spacing, '2');
 
     //   background: var(--submenu-lateral-fondo-mov);
     // background: red;
     background: var(--container-background-color);
     border: 1px solid rgba(255, 255, 255, 0.1);
-    border-radius: map-get($spacing, '2');
-    padding: map-get($spacing, '1') 0;
+    border-radius: map.get($spacing, '2');
+    padding: map.get($spacing, '1') 0;
     transition: all 0.2s ease-in-out;
     z-index: 99;
     position: relative;
     &.abierto {
       border-right: none;
-      border-radius: map-get($spacing, '2') 0 0 map-get($spacing, '2');
+      border-radius: map.get($spacing, '2') 0 0 map.get($spacing, '2');
     }
     .boton-menu.boton-icono {
       :hover {
@@ -60,10 +60,10 @@
     border: 1px solid rgba(255, 255, 255, 0.1);
     border-left: none;
     opacity: 0;
-    padding-top: map-get($spacing, '1');
-    padding-bottom: map-get($spacing, '1');
+    padding-top: map.get($spacing, '1');
+    padding-bottom: map.get($spacing, '1');
     &.abierto {
-      border-radius: 0 map-get($spacing, '2') map-get($spacing, '2') 0;
+      border-radius: 0 map.get($spacing, '2') map.get($spacing, '2') 0;
       // box-shadow: 4px 4px 8px var(--sombra);
       box-shadow: 4px 4px 8px rgba(255, 255, 255, 0.1);
       pointer-events: inherit;
@@ -88,9 +88,9 @@
   a {
     display: block;
     border-radius: 0;
-    //   padding: map-get($spacing, '1')
-    //     map-get($contenedores, 'mov', 'margen-interior');
-    padding: map-get($spacing, '1') map-get($spacing, '2');
+    //   padding: map.get($spacing, '1')
+    //     map.get($contenedores, 'mov', 'margen-interior');
+    padding: map.get($spacing, '1') map.get($spacing, '2');
     text-decoration: none;
     background: transparent;
     //   color: var(--menu-lateral-color);
@@ -124,7 +124,7 @@
   }
 }
 
-@media (min-width: map-get($breakpoints, 'esc')) {
+@media (min-width: map.get($breakpoints, 'esc')) {
   .menu-lateral-contenedor {
     //   background: var(--menu-lateral-fondo);
     // background: red;
@@ -146,8 +146,8 @@
       margin-left: 0;
 
       margin-top: 0;
-      // padding-top: map-get($spacing, '5');
-      padding-bottom: map-get($spacing, '5');
+      // padding-top: map.get($spacing, '5');
+      padding-bottom: map.get($spacing, '5');
       opacity: 1;
     }
     .menu-max-height {
@@ -156,9 +156,9 @@
       width: inherit;
     }
     a {
-      // padding: map-get($spacing, '1')
-      //   map-get($contenedores, 'esc', 'margen-interior');
-      padding: map-get($spacing, '1') map-get($spacing, '5');
+      // padding: map.get($spacing, '1')
+      //   map.get($contenedores, 'esc', 'margen-interior');
+      padding: map.get($spacing, '1') map.get($spacing, '5');
     }
   }
 }

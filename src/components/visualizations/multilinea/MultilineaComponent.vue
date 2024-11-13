@@ -521,10 +521,10 @@ div.contenedor-tooltip-svg {
     padding: 0 5px;
     border-radius: 5px;
     margin: 0 0 0 auto;
+    cursor: pointer;
     @media (min-width: 768px) {
       display: none;
     }
-    cursor: pointer;
 
     img {
       width: 30px;

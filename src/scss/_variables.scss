@@ -25,11 +25,11 @@ $spacing: (
 $columnas: (
   'mov': (
     'columnas': 8,
-    'espaciado': map-get($spacing, '2')
+    'espaciado': 16px
   ),
   'esc': (
     'columnas': 16,
-    'espaciado': map-get($spacing, '3')
+    'espaciado': 24px
   )
 );
 

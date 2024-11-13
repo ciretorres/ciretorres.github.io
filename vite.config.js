@@ -5,29 +5,26 @@ import { defineConfig } from 'vite'
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  // base: import.meta.env.BASE_URL,
-  css: {
-    loaderOptions: {
-      scss: {
-        // additionalData: `@import 'sisdai-css/src/_variables.scss'; @import 'sisdai-css/src/_mixins.scss';`,
-      }
-    }
-  },
-  plugins: [
-    vue({
-      // template: {
-      //   compilerOptions: {
-      //     isCustomElement: tag => tag.startsWith('dai-'),
-      //   },
-      // },
-    })
-  ],
-  // define: {
-  //   'process.env': process.env
-  // },
+  plugins: [vue()],
   resolve: {
     alias: {
       '@': fileURLToPath(new URL('./src', import.meta.url))
     }
+  },
+  css: {
+    preprocessorOptions: {
+      scss: {
+        api: 'modern-compiler'
+        // additionalData: `@import 'sisdai-css/src/_variables.scss'; @import 'sisdai-css/src/_mixins.scss';`
+      }
+    }
+    // loaderOptions: {
+    //   scss: {
+    //     // additionalData: `@import 'sisdai-css/src/_variables.scss'; @import 'sisdai-css/src/_mixins.scss';`,
+    //   }
+    // }
   }
+  // define: {
+  //   'process.env': process.env
+  // },
 })
