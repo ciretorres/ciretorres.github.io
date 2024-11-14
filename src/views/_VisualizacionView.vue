@@ -33,15 +33,4 @@
   </div>
 </template>
 
-<style lang="scss">
-@media screen and (min-width: 375px) {
-  .container {
-    display: flex;
-  }
-  aside {
-    width: 40%;
-    max-width: 300px;
-    min-width: 200px;
-  }
-}
-</style>
+<style lang="scss"></style>

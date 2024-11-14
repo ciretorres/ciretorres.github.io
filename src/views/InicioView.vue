@@ -33,7 +33,7 @@
         <a href="https://github.com/ciretorres/" target="_blank" rel="noopener noreferrer">
           Github</a
         >
-        or view my
+        or view
         <a
           href="https://xd.adobe.com/view/6e6a30c0-f541-4cab-a5bb-1e817c9cec5c-3b39/?fullscreen"
           target="_blank"

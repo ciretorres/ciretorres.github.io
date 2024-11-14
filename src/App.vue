@@ -1,5 +1,7 @@
 <template>
-  <RouterView />
+  <div class="p-3">
+    <RouterView />
+  </div>
 </template>
 
 <style lang="scss">

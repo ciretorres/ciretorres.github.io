@@ -1,0 +1,13 @@
+@media screen and (min-width: 375px) {
+  .container {
+    display: flex;
+  }
+  main {
+    width: 100%;
+  }
+  aside {
+    width: 40%;
+    max-width: 300px;
+    min-width: 200px;
+  }
+}

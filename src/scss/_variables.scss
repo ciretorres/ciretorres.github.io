@@ -1,3 +1,27 @@
+:root {
+  --font-stack: Monaco, Roboto, Avenir, Helvetica, Arial, sans-serif;
+
+  --background-color: #181818;
+  --font-color: #ffffff;
+  --a-color: #9999ff;
+  --a-visited-color: #be90ea;
+
+  // --background-color: #fff;
+  // --background-color: #0f0f0f;
+  // --background-color: #0d2f5c;
+  // --font-color: #000;
+  // --color-blue: #20d6d6;
+  // --color-yellow: #fcffd0;
+  // --color-red: #d33682;
+
+  // --color-blue: #f1f1f1;
+  // --color-yellow: #f1f1f1;
+  // --color-red: #f1f1f1;
+  // --container-background-color: rgba($color: #fff, $alpha: 0.05);
+  // --container-background-color: #272727;
+  // --container-background-color:rgba(0, 0, 0, 0.1);
+}
+
 // $font-stack: Monaco, Roboto, Avenir, Helvetica, Arial, sans-serif;
 // $primary-color: #333;
 // $background-color: #0d2f5c; // Color azul, no borrar, está chido
@@ -5,52 +29,18 @@
 
 // $background-color: #fff;
 
-$breakpoints: (
-  'mov': 320px,
-  'esc': 768px
-);
+// $breakpoints: (
+//   'mov': 320px,
+//   'esc': 768px
+// );
 
-$spacing: (
-  '0': 0,
-  '1': 8px,
-  '2': 16px,
-  '3': 24px,
-  '4': 32px,
-  '5': 40px,
-  '6': 48px,
-  '7': 54px,
-  '8': 60px
-);
-
-$columnas: (
-  'mov': (
-    'columnas': 8,
-    'espaciado': 16px
-  ),
-  'esc': (
-    'columnas': 16,
-    'espaciado': 24px
-  )
-);
-
-:root {
-  --font-stack: Monaco, Roboto, Avenir, Helvetica, Arial, sans-serif;
-  // --background-color: #fff;
-  // --background-color: #0f0f0f;
-  --background-color: #181818;
-  // --background-color: #0d2f5c;
-  // --font-color: #000;
-  --font-color: #fff;
-
-  --color-blue: #20d6d6;
-  --color-yellow: #fcffd0;
-  --color-red: #d33682;
-
-  // --color-blue: #f1f1f1;
-  // --color-yellow: #f1f1f1;
-  // --color-red: #f1f1f1;
-
-  // --container-background-color: rgba($color: #fff, $alpha: 0.05);
-  --container-background-color: #272727;
-  // --container-background-color:rgba(0, 0, 0, 0.1);
-}
+// $columnas: (
+//   'mov': (
+//     'columnas': 8,
+//     'espaciado': 16px
+//   ),
+//   'esc': (
+//     'columnas': 16,
+//     'espaciado': 24px
+//   )
+// );

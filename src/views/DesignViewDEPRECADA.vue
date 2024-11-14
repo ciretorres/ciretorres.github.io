@@ -122,15 +122,6 @@ onMounted(() => {
           >
         </li>
       </ul>
-
-      <ul>
-        <li>
-          <router-link class="color-white" to="/development/visualization/d3js">
-            Go to <span class="color-yellow">[Visualization]</span></router-link
-          >
-        </li>
-      </ul>
-      <router-link class="color-red" to="/">[Back]</router-link>
     </div>
   </main>
 </template>

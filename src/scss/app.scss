@@ -1,18 +1,14 @@
-// @charset "UTF-8";
+@charset "UTF-8";
 
-// :root {
-//   --vh: 1px;
-// }
+@use '_variables';
+@use '_normalize';
 
-// @use '_variables';
-// @use '_normalize';
+@use 'spacing';
+
+@use 'visualizacion';
 
 // @import '_mixins';
-
 // @import 'fonts';
 // @import 'color';
-// @import 'spacing';
 // @import 'grid';
 // @import 'navigation';
-
-// // Componentes
