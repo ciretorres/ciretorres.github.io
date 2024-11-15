@@ -1,49 +1,53 @@
 <script setup></script>
 <template>
-  <main id="principal">
-    <section id="intro">
+  <div>
+    <header>
       <h1>Alo! My name is Eric. Viszualization developer</h1>
-      <p>I'm interested in art, data & systems to build better things for this freak world.</p>
-      <p>
-        Currently, I'm learning about algorithms & videogames in the beautiful
-        <a href="https://goo.gl/ba2zp3" target="_blank" rel="noopener noreferrer"> México City</a>
-        looking for new challengues!
-      </p>
-    </section>
+    </header>
+    <main id="principal">
+      <section id="intro">
+        <p>I'm interested in art, data & systems to build better things for this freak world.</p>
+        <p>
+          Currently, I'm learning about algorithms & videogames in the beautiful
+          <a href="https://goo.gl/ba2zp3" target="_blank" rel="noopener noreferrer"> México City</a>
+          looking for new challengues!
+        </p>
+      </section>
 
-    <section id="proyectos">
-      <h2>These are some of my recent personal proyects:</h2>
-      <a href="https://itch.io/profile/ciretorres" target="_blank" rel="noopener noreferrer"
-        ><h3>[ Videogames ]</h3></a
-      >
-      <router-link to="/web-development"><h3>[ Web Frontend ]</h3></router-link>
-      <router-link to="/visualization/intro"><h3>[ Visualization ]</h3></router-link>
-    </section>
+      <section id="proyectos">
+        <h2>These are some of my recent personal proyects:</h2>
+        <a href="https://itch.io/profile/ciretorres" target="_blank" rel="noopener noreferrer"
+          ><h3>[ Videogames ]</h3></a
+        >
+        <router-link to="/web-development"><h3>[ Web Frontend ]</h3></router-link>
+        <router-link to="/visualization/intro"><h3>[ Visualization ]</h3></router-link>
+      </section>
 
-    <section id="contacto">
-      <h2>
-        Let's chat on
-        <a
-          href="//api.whatsapp.com/send?phone=5547904238"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          WhatsApp</a
-        >, check my code on
-        <a href="https://github.com/ciretorres/" target="_blank" rel="noopener noreferrer">
-          Github</a
-        >
-        or view
-        <a
-          href="https://xd.adobe.com/view/6e6a30c0-f541-4cab-a5bb-1e817c9cec5c-3b39/?fullscreen"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          CurriculumVitae</a
-        >.
-      </h2>
-    </section>
-  </main>
+      <section id="contacto">
+        <h2>
+          Let's chat on
+          <a
+            href="//api.whatsapp.com/send?phone=5547904238"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            WhatsApp</a
+          >, check my code on
+          <a href="https://github.com/ciretorres/" target="_blank" rel="noopener noreferrer">
+            Github</a
+          >
+          or view
+          <a
+            href="https://xd.adobe.com/view/6e6a30c0-f541-4cab-a5bb-1e817c9cec5c-3b39/?fullscreen"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            CurriculumVitae</a
+          >.
+        </h2>
+      </section>
+    </main>
+  </div>
 </template>
 
 <!-- <script setup>
