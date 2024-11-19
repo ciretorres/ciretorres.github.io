@@ -31,7 +31,7 @@ onMounted(() => {
 })
 
 const datosArea = computed(() => {
-  data.value.forEach((d) => {
+  data.value.forEach(d => {
     // Parse data
     d.date = d3.timeParse('%Y-%m-%d')(d.date)
     d.value = +d.value

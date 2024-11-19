@@ -6,19 +6,19 @@ const router = createRouter({
     {
       path: '/',
       name: '',
-      component: () => import('../views/InicioView.vue')
+      component: () => import('../views/InicioView.vue'),
     },
     // development
     {
       path: '/web-development',
       name: 'Web development |',
-      component: () => import('@/views/_DesarrolloView.vue')
+      component: () => import('@/views/_DesarrolloView.vue'),
     },
     // no borrar
     {
       path: '/pruebas',
       name: 'Pruebas',
-      component: () => import('@/views/pruebas/PruebasView.vue')
+      component: () => import('@/views/pruebas/PruebasView.vue'),
     },
     // visualization
     {
@@ -29,41 +29,41 @@ const router = createRouter({
         {
           path: '/visualization/intro',
           name: 'Introduction | Visualization |',
-          component: () => import('@/views/visualization/IntroductionPage.vue')
+          component: () => import('@/views/visualization/IntroductionPage.vue'),
         },
         {
           path: '/visualization/d3js',
           name: 'Heatmap | Visualization |',
-          component: () => import('@/views/visualization/D3JS.vue')
+          component: () => import('@/views/visualization/D3JS.vue'),
         },
         {
           path: '/visualization/multiline',
           name: 'Multilinea | Visualization |',
-          component: () => import('@/views/visualization/MultilineView.vue')
+          component: () => import('@/views/visualization/MultilineView.vue'),
         },
         {
           path: '/visualization/area',
           name: 'Área | Visualization |',
-          component: () => import('@/views/visualization/AreaView.vue')
+          component: () => import('@/views/visualization/AreaView.vue'),
         },
         {
           path: '/visualization/sankey',
           name: 'Diagrama de flujo | Visualization |',
-          component: () => import('@/views/visualization/SankeyView.vue')
+          component: () => import('@/views/visualization/SankeyView.vue'),
         },
         {
           path: '/visualization/maps',
           name: 'Mapas | Visualization |',
-          component: () => import('@/views/visualization/MapsPage.vue')
-        }
-      ]
+          component: () => import('@/views/visualization/MapsPage.vue'),
+        },
+      ],
     },
     // error
     {
       path: '/**',
       name: 'Página no encontrada',
-      component: () => import('@/views/ErrorViewNotFound.vue')
-    }
+      component: () => import('@/views/ErrorViewNotFound.vue'),
+    },
     // {
     //   path: '/design',
     //   name: 'Comunicación y Diseño',
@@ -116,13 +116,13 @@ const router = createRouter({
         selector: to.hash,
         offset: {
           x: 0,
-          y: 80
-        }
+          y: 80,
+        },
       }
     } else {
       return { x: 0, y: 0, behavior: 'smooth' }
     }
-  }
+  },
 })
 
 // Muestra el título de la página dependiendo de las vistas

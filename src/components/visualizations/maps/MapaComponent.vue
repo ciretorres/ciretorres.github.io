@@ -5,7 +5,7 @@ const centroides = centroidesJSON
 const atribuciones = [
   '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>',
   '&copy; <a href="https://carto.com/attributions">CARTO</a>',
-  '&copy; <a href="https://codigo.conahcyt.mx/sisdai/sisdai-mapas">Sisdai-mapas</a>'
+  '&copy; <a href="https://codigo.conahcyt.mx/sisdai/sisdai-mapas">Sisdai-mapas</a>',
 ]
 
 const seleccion = {
@@ -18,7 +18,7 @@ const seleccion = {
   'contorno-color': 'black',
   'contorno-grosor': 1,
   'relleno-color': 'rgba(255,0,0,1)',
-  'circulo-relleno-color': 'rojo'
+  'circulo-relleno-color': 'rojo',
 }
 
 function globoInformativo(f) {
@@ -69,7 +69,7 @@ function globoInformativo(f) {
       geometria="punto"
       :renderizarComoImagen="true"
       :visible="true"
-      :globoInformativo="(f) => globoInformativo(f)"
+      :globoInformativo="f => globoInformativo(f)"
     />
   </SisdaiMapa>
 </template>

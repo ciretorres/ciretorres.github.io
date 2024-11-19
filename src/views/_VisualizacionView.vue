@@ -5,32 +5,54 @@
       <aside aria-label="Barra lateral">
         <nav aria-label="Secundaria Viszualization">
           <header>
-            <router-link to="/visualization/intro"><h2>Viszualization</h2></router-link>
+            <router-link to="/visualization/intro"
+              ><h2>Viszualization</h2></router-link
+            >
           </header>
 
-          <div class="group" tabindex="0">
-            <section id="d3js" aria-label="d3js">
+          <div
+            class="group"
+            tabindex="0"
+          >
+            <section
+              id="d3js"
+              aria-label="d3js"
+            >
               <ul>
-                <li><router-link to="/visualization/d3js">Heatmap</router-link></li>
                 <li>
-                  <router-link to="/visualization/multiline">Multiline</router-link>
+                  <router-link to="/visualization/d3js">Heatmap</router-link>
+                </li>
+                <li>
+                  <router-link to="/visualization/multiline"
+                    >Multiline</router-link
+                  >
                 </li>
                 <li>
                   <router-link to="/visualization/area">Area</router-link>
                 </li>
                 <li>
-                  <router-link to="/visualization/sankey">Flow diagram</router-link>
+                  <router-link to="/visualization/sankey"
+                    >Flow diagram</router-link
+                  >
                 </li>
               </ul>
             </section>
 
-            <section id="maps" aria-label="mapas">
+            <section
+              id="maps"
+              aria-label="mapas"
+            >
               <ul>
-                <li>+<router-link to="/visualization/maps">Maps</router-link></li>
+                <li>
+                  +<router-link to="/visualization/maps">Maps</router-link>
+                </li>
               </ul>
             </section>
 
-            <section id="visualizations" aria-label="visualizations">
+            <section
+              id="visualizations"
+              aria-label="visualizations"
+            >
               <ul>
                 <li>
                   <a
@@ -70,7 +92,10 @@
         </nav>
       </aside>
 
-      <section id="content" aria-label="contenido">
+      <section
+        id="content"
+        aria-label="contenido"
+      >
         <router-view />
       </section>
     </div>

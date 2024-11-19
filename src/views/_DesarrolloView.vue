@@ -1,19 +1,30 @@
-<script setup>
-import { ref } from 'vue'
-const mostarLista = ref(false)
-</script>
+<script setup></script>
 
 <template>
   <article aria-label="Web development">
     <h2>Web development</h2>
-    <section id="gema" aria-labelledby="gema-label">
-      <a href="https://gema.conahcyt.mx/" target="_blank" rel="noopener noreferrer"
-        ><h3 id="gema-label">Generador y visualizador de Mapas Interactivo (GEMA)</h3></a
+    <section
+      id="gema"
+      aria-labelledby="gema-label"
+    >
+      <a
+        href="https://gema.conahcyt.mx/"
+        target="_blank"
+        rel="noopener noreferrer"
+        ><h3 id="gema-label">
+          Generador y visualizador de Mapas Interactivo (GEMA)
+        </h3></a
       >
     </section>
 
-    <section id="sisdai" aria-labelledby="sisdai-label">
-      <a href="https://sisdai.conahcyt.mx/" target="_blank" rel="noopener noreferrer"
+    <section
+      id="sisdai"
+      aria-labelledby="sisdai-label"
+    >
+      <a
+        href="https://sisdai.conahcyt.mx/"
+        target="_blank"
+        rel="noopener noreferrer"
         ><h3 id="sisdai-label">
           Sistema de diseño y Accesibilidad para la Investigación (SISDAI)
         </h3></a
@@ -21,38 +32,67 @@ const mostarLista = ref(false)
 
       <ul>
         <li>
-          <a href="http://sisdai-css.conahcyt.mx" target="_blank" rel="noopener noreferrer"
+          <a
+            href="http://sisdai-css.conahcyt.mx"
+            target="_blank"
+            rel="noopener noreferrer"
             >sisdai-css</a
           >
         </li>
         <li>
-          <a href="http://sisdai-componentes.conahcyt.mx" target="_blank" rel="noopener noreferrer"
+          <a
+            href="http://sisdai-componentes.conahcyt.mx"
+            target="_blank"
+            rel="noopener noreferrer"
             >sisdai-componentes</a
           >
         </li>
         <li>
-          <a href="http://sisdai-graficas.conahcyt.mx" target="_blank" rel="noopener noreferrer"
+          <a
+            href="http://sisdai-graficas.conahcyt.mx"
+            target="_blank"
+            rel="noopener noreferrer"
             >sisdai-graficas</a
           >
         </li>
         <li>
-          <a href="http://sisdai-mapas.conahcyt.mx" target="_blank" rel="noopener noreferrer"
+          <a
+            href="http://sisdai-mapas.conahcyt.mx"
+            target="_blank"
+            rel="noopener noreferrer"
             >sisdai-mapas</a
           >
         </li>
       </ul>
     </section>
 
-    <section id="eni" aria-labelledby="eni-label">
-      <a href="https://eni.conacyt.mx/" target="_blank" rel="noopener noreferrer">
+    <section
+      id="eni"
+      aria-labelledby="eni-label"
+    >
+      <a
+        href="https://eni.conacyt.mx/"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
         <h3 id="eni-label">Ecosistemas Nacionales Informáticos (ENI)</h3></a
       >
       <details>
-        <summary id="button-label" aria-labelledby="button-label eni-label">Mostrar más</summary>
+        <summary
+          id="button-label"
+          aria-labelledby="button-label eni-label"
+        >
+          Mostrar más
+        </summary>
 
         <ul>
           <li>
-            <a href="https://salud.conacyt.mx/" target="_blank" rel="noopener noreferrer">Salud</a>
+            <a
+              href="https://salud.conacyt.mx/"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Salud</a
+            >
             <ul>
               <li>
                 <a
@@ -60,8 +100,8 @@ const mostarLista = ref(false)
                   class="color-white"
                   target="_blank"
                   rel="noopener noreferrer"
-                  >Red de transmisión y vigilancia de farmacorresistencia de <strong>VIH</strong> en
-                  la CDMX</a
+                  >Red de transmisión y vigilancia de farmacorresistencia de
+                  <strong>VIH</strong> en la CDMX</a
                 >
               </li>
               <li>
@@ -78,7 +118,8 @@ const mostarLista = ref(false)
                       href="https://salud.conacyt.mx/coronavirus/variantes/"
                       target="_blank"
                       rel="noopener noreferrer"
-                      >Vigilancia de <strong>variantes</strong> del virus SARS-CoV-2</a
+                      >Vigilancia de <strong>variantes</strong> del virus
+                      SARS-CoV-2</a
                     >
                   </li>
                   <li>
@@ -86,8 +127,8 @@ const mostarLista = ref(false)
                       href="https://salud.conacyt.mx/coronavirus/vacunacion/"
                       target="_blank"
                       rel="noopener noreferrer"
-                      >Plataforma para la Planeación Logística de la Camapa Nacaional de
-                      <strong>Vacunación</strong> Covid-19</a
+                      >Plataforma para la Planeación Logística de la Camapa
+                      Nacaional de <strong>Vacunación</strong> Covid-19</a
                     >
                   </li>
                   <li>
@@ -95,7 +136,8 @@ const mostarLista = ref(false)
                       href="https://salud.conahcyt.mx/coronavirus/investigacion/"
                       target="_blank"
                       rel="noopener noreferrer"
-                      >Productos de <strong>investigación</strong> y modelado de datos Covid-19</a
+                      >Productos de <strong>investigación</strong> y modelado de
+                      datos Covid-19</a
                     >
                   </li>
                 </ul>
@@ -103,7 +145,11 @@ const mostarLista = ref(false)
             </ul>
           </li>
           <li>
-            <a href="https://alimentacion.conacyt.mx/" target="_blank" rel="noopener noreferrer">
+            <a
+              href="https://alimentacion.conacyt.mx/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               Soberanía alimentaria</a
             >
             <ul>
@@ -126,7 +172,10 @@ const mostarLista = ref(false)
             </ul>
           </li>
           <li>
-            <a href="http://socioecologia.conahcyt.mx" target="_blank" rel="noopener noreferrer"
+            <a
+              href="http://socioecologia.conahcyt.mx"
+              target="_blank"
+              rel="noopener noreferrer"
               >Sistemas socioecológicos</a
             >
             <ul>
@@ -141,7 +190,10 @@ const mostarLista = ref(false)
             </ul>
           </li>
           <li>
-            <a href="http://cultura.conahcyt.mx" target="_blank" rel="noopener noreferrer"
+            <a
+              href="http://cultura.conahcyt.mx"
+              target="_blank"
+              rel="noopener noreferrer"
               >Cultura</a
             >
             <ul>
@@ -150,13 +202,17 @@ const mostarLista = ref(false)
                   href="http://cultura.conahcyt.mx/pueblosindigenas"
                   target="_blank"
                   rel="noopener noreferrer"
-                  >Pueblos y <strong>Comunidades Indígenas</strong> y Afromexicanas</a
+                  >Pueblos y <strong>Comunidades Indígenas</strong> y
+                  Afromexicanas</a
                 >
               </li>
             </ul>
           </li>
           <li>
-            <a href="https://energia.conacyt.mx/" target="_blank" rel="noopener noreferrer"
+            <a
+              href="https://energia.conacyt.mx/"
+              target="_blank"
+              rel="noopener noreferrer"
               >Energía y cambio climático</a
             >
             <ul>
@@ -165,7 +221,8 @@ const mostarLista = ref(false)
                   href="https://energia.conacyt.mx/sargazo/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  >Arribo del <strong>sargazo</strong> pelágico a las costas mexicanas</a
+                  >Arribo del <strong>sargazo</strong> pelágico a las costas
+                  mexicanas</a
                 >
               </li>
               <li>
@@ -179,7 +236,10 @@ const mostarLista = ref(false)
             </ul>
           </li>
           <li>
-            <a href="http://seguridad.conahcyt.mx" target="_blank" rel="noopener noreferrer"
+            <a
+              href="http://seguridad.conahcyt.mx"
+              target="_blank"
+              rel="noopener noreferrer"
               >Seguridad humana</a
             >
             <ul>
@@ -194,15 +254,26 @@ const mostarLista = ref(false)
             </ul>
           </li>
           <li>
-            <a href="https://agua.conahcyt.mx/" target="_blank" rel="noopener noreferrer">Agua</a>
+            <a
+              href="https://agua.conahcyt.mx/"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Agua</a
+            >
             <ul>
               <li>
-                <a href="https://agua.conacyt.mx/cuencas/" target="_blank" rel="noopener noreferrer"
+                <a
+                  href="https://agua.conacyt.mx/cuencas/"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   >Aguas y <strong>cuencas</strong> en México</a
                 >
               </li>
               <li>
-                <a href="https://agua.conacyt.mx/atoyac/" target="_blank" rel="noopener noreferrer"
+                <a
+                  href="https://agua.conacyt.mx/atoyac/"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   >Reapropiación comunitaria de la cuenca Atoyac-Zahuapan</a
                 >
               </li>
@@ -217,7 +288,10 @@ const mostarLista = ref(false)
             </ul>
           </li>
           <li>
-            <a href="https://toxicologia.conacyt.mx/" target="_blank" rel="noopener noreferrer"
+            <a
+              href="https://toxicologia.conacyt.mx/"
+              target="_blank"
+              rel="noopener noreferrer"
               >Agentes tóxicos y procesos contaminantes</a
             >
             <ul>
@@ -233,12 +307,18 @@ const mostarLista = ref(false)
             </ul>
           </li>
           <li>
-            <a href="http://vivienda.conahcyt.mx" target="_blank" rel="noopener noreferrer"
+            <a
+              href="http://vivienda.conahcyt.mx"
+              target="_blank"
+              rel="noopener noreferrer"
               >Vivienda</a
             >
           </li>
           <li>
-            <a href="http://educacion.conahcyt.mx" target="_blank" rel="noopener noreferrer"
+            <a
+              href="http://educacion.conahcyt.mx"
+              target="_blank"
+              rel="noopener noreferrer"
               >Educación</a
             >
           </li>

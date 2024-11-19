@@ -3,7 +3,10 @@ const public_path = import.meta.env.BASE_URL
 </script>
 
 <template>
-  <main id="principal" class="luxji">
+  <main
+    id="principal"
+    class="luxji"
+  >
     <a
       class="portafolio"
       href="https://luxuryjewelryimports.com/"
@@ -31,11 +34,23 @@ const public_path = import.meta.env.BASE_URL
     </a>
 
     <div class="navegacion">
-      <router-link class="nav-boton" to="/design/tulumers">[previous]</router-link>
-      <router-link class="nav-boton" to="/design/centro-optico-profesional">[next]</router-link>
+      <router-link
+        class="nav-boton"
+        to="/design/tulumers"
+        >[previous]</router-link
+      >
+      <router-link
+        class="nav-boton"
+        to="/design/centro-optico-profesional"
+        >[next]</router-link
+      >
     </div>
     <div class="contenedor pb-5">
-      <router-link class="color-red" to="/design">[Back]</router-link>
+      <router-link
+        class="color-red"
+        to="/design"
+        >[Back]</router-link
+      >
     </div>
   </main>
 </template>

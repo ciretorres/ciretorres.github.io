@@ -40,6 +40,6 @@ export default function (endPoint) {
   validarEndPoint()
 
   return {
-    datos
+    datos,
   }
 }

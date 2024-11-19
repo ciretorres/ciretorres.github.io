@@ -2,10 +2,10 @@
 // const props = defineProps(['modelValue', 'color'])
 const props = defineProps({
   modelValue: Boolean,
-  color: String
+  color: String,
 })
 
-const emit = defineEmits(['update:modelValue'])
+// const emit = defineEmits(['update:modelValue'])
 </script>
 
 <template>
@@ -16,8 +16,14 @@ const emit = defineEmits(['update:modelValue'])
       @change="$emit('update:modelValue', $event.target.checked)"
     />
     <span class="color-square">
-      <span class="custom-checkbox" :class="{ 'icon-check': modelValue }"></span>
-      <span class="color" :style="{ backgroundColor: props.color }"></span>
+      <span
+        class="custom-checkbox"
+        :class="{ 'icon-check': modelValue }"
+      ></span>
+      <span
+        class="color"
+        :style="{ backgroundColor: props.color }"
+      ></span>
     </span>
 
     <slot></slot>

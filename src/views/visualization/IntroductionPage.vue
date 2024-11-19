@@ -2,24 +2,45 @@
   <article aria-label="Intro visualización">
     <h3>Introduction</h3>
     <p>
-      Hi! The purpose of this view is to upload some of my personal ideas about working with visual
-      representation during the end of my master and the experience in work.
+      Hi! The purpose of this view is to upload some of my personal ideas about
+      working with visual representation during the end of my master and the
+      experience in work.
     </p>
     <p>
       I begin with the basic knowledge that I have using
-      <a href="https://d3js.org/" target="_blank" rel="noopener noreferrer">d3.js</a> library to
-      visualize data from a set in an easy way.
+      <a
+        href="https://d3js.org/"
+        target="_blank"
+        rel="noopener noreferrer"
+        >d3.js</a
+      >
+      library to visualize data from a set in an easy way.
     </p>
     <p>
       After that, I try to experiment with another library base on
-      <a href="https://openlayers.org/" target="_blank" rel="noopener noreferrer">OpenLayers</a>
+      <a
+        href="https://openlayers.org/"
+        target="_blank"
+        rel="noopener noreferrer"
+        >OpenLayers</a
+      >
       to map some coordinates about impact craters on Earth using
-      <a href="https://vuejs.org/" target="_blank" rel="noopener noreferrer">Vue.js</a>.
+      <a
+        href="https://vuejs.org/"
+        target="_blank"
+        rel="noopener noreferrer"
+        >Vue.js</a
+      >.
     </p>
     <p>
-      Then, there is a bunch of ideas that comes from a thesis project like an Interactive solid
-      waste system and a 3D Gamma-ray catalogue using
-      <a href="https://processing.org/" target="_blank" rel="noopener noreferrer">processing.js</a>
+      Then, there is a bunch of ideas that comes from a thesis project like an
+      Interactive solid waste system and a 3D Gamma-ray catalogue using
+      <a
+        href="https://processing.org/"
+        target="_blank"
+        rel="noopener noreferrer"
+        >processing.js</a
+      >
       library.
     </p>
   </article>

@@ -25,12 +25,14 @@ const props = defineProps({
     type: Object,
     default: function () {
       return { arriba: 20, abajo: 20, izquierda: 20, derecha: 20 }
-    }
-  }
+    },
+  },
 })
 
 const isTouchDevice = () =>
-  'ontouchstart' in window || navigator.maxTouchPoints > 0 || navigator.msMaxTouchPoints > 0
+  'ontouchstart' in window ||
+  navigator.maxTouchPoints > 0 ||
+  navigator.msMaxTouchPoints > 0
 
 const VM_isTouchDevice = isTouchDevice()
 
@@ -60,7 +62,7 @@ function configurandoDimensionesParaSVG() {
 
   const extent = [
     [props.margen.izquierda, props.margen.arriba],
-    [width.value, height.value]
+    [width.value, height.value],
   ]
 
   const zoom = d3
@@ -68,7 +70,7 @@ function configurandoDimensionesParaSVG() {
     .scaleExtent([1.5, 8])
     .translateExtent(extent)
     .extent(extent)
-    .on('zoom', (evento) => actualizarGraficaZoom(evento))
+    .on('zoom', evento => actualizarGraficaZoom(evento))
 
   svg.value.call(zoom)
 }
@@ -79,13 +81,13 @@ function creandoSankey() {
   svg.value.attr('viewBox', [0, -20, props.ancho_vis, props.alto_vis + 20])
 
   const { nodes, links } = sankey()
-    .nodeId((d) => d.name)
+    .nodeId(d => d.name)
     .nodeWidth(props.ancho_nodo)
     .nodeSort(false)
     .nodePadding(props.separacion_nodo)
     .extent([
       [1, 1],
-      [props.ancho_vis, props.alto_vis - props.alto_nodo]
+      [props.ancho_vis, props.alto_vis - props.alto_nodo],
     ])(datos.value)
 
   const link = svg.value
@@ -110,14 +112,22 @@ function creandoSankey() {
   link
     .append('path')
     .attr('d', sankeyLinkHorizontal())
-    .attr('stroke', (d) => d.color)
-    .attr('stroke-width', (d) => Math.max(1, d.width))
+    .attr('stroke', d => d.color)
+    .attr('stroke-width', d => Math.max(1, d.width))
     .attr('opacity', '0.5')
     .on('mouseover', function (d, i) {
       d3.select(this).transition().duration('50').attr('opacity', '1')
       tooltip.value.style('background-color', i.color)
       tooltip.value.style('color', i.color === '#000000' ? '#FFF' : '#000')
-      tooltip.value.text('' + i.source.name + ' → ' + i.target.name + ' : ' + i.value + ' MtMS/año')
+      tooltip.value.text(
+        '' +
+          i.source.name +
+          ' → ' +
+          i.target.name +
+          ' : ' +
+          i.value +
+          ' MtMS/año'
+      )
       tooltip.value.style('visibility', 'visible')
     })
     .on('mouseout', function () {
@@ -125,7 +135,9 @@ function creandoSankey() {
       tooltip.value.style('visibility', 'hidden')
     })
     .on('mousemove', function (d) {
-      return tooltip.value.style('top', d.pageY + 10 + 'px').style('left', d.pageX + 10 + 'px')
+      return tooltip.value
+        .style('top', d.pageY + 10 + 'px')
+        .style('left', d.pageX + 10 + 'px')
     })
 
   svg.value
@@ -135,11 +147,11 @@ function creandoSankey() {
     .selectAll('text')
     .data(nodes)
     .join('text')
-    .attr('x', (d) => (d.x0 < props.ancho_vis / 2 ? d.x1 + 6 : d.x0 - 6))
-    .attr('y', (d) => (d.y1 + d.y0) / 2)
+    .attr('x', d => (d.x0 < props.ancho_vis / 2 ? d.x1 + 6 : d.x0 - 6))
+    .attr('y', d => (d.y1 + d.y0) / 2)
     .attr('dy', '0.35em')
-    .attr('text-anchor', (d) => (d.x0 < props.ancho_vis / 2 ? 'start' : 'end'))
-    .text((d) => (d.name.length <= 15 ? d.name : d.name.substring(0, 15) + '...'))
+    .attr('text-anchor', d => (d.x0 < props.ancho_vis / 2 ? 'start' : 'end'))
+    .text(d => (d.name.length <= 15 ? d.name : d.name.substring(0, 15) + '...'))
     .attr('class', 'node-text-rect')
     .attr('id', function (d, i) {
       d.id = i
@@ -148,7 +160,9 @@ function creandoSankey() {
     .on('mouseover', function (d, i) {
       tooltip.value.style('background-color', i.color)
       tooltip.value.style('color', i.color === '#000000' ? '#FFF' : '#000')
-      tooltip.value.text('' + i.name + ' : ' + i.value.toLocaleString() + ' MtMS/año')
+      tooltip.value.text(
+        '' + i.name + ' : ' + i.value.toLocaleString() + ' MtMS/año'
+      )
       tooltip.value.style('visibility', 'visible')
     })
     .on('mouseleave', function () {
@@ -157,7 +171,7 @@ function creandoSankey() {
     .append('tspan')
     .attr('font-size', 8)
     .attr('fill-opacity', 0.7)
-    .text((d) => ` (${d.value.toLocaleString()})`)
+    .text(d => ` (${d.value.toLocaleString()})`)
 
   svg.value
     .append('g')
@@ -166,11 +180,11 @@ function creandoSankey() {
     .selectAll('rect')
     .data(nodes)
     .join('rect')
-    .attr('x', (d) => d.x0 + 1)
-    .attr('y', (d) => d.y0)
-    .attr('height', (d) => d.y1 - d.y0)
-    .attr('width', (d) => d.x1 - d.x0 - 2)
-    .attr('fill', (d) => d.color)
+    .attr('x', d => d.x0 + 1)
+    .attr('y', d => d.y0)
+    .attr('height', d => d.y1 - d.y0)
+    .attr('width', d => d.x1 - d.x0 - 2)
+    .attr('fill', d => d.color)
     .attr('class', 'node-rect')
     .attr('id', function (d, i) {
       d.id = i
@@ -188,12 +202,16 @@ function creandoSankey() {
             nodeHiglight.push(l.source.id)
           }
 
-          return l.source.index === i.index || l.target.index === i.index ? 1 : 0.2
+          return l.source.index === i.index || l.target.index === i.index
+            ? 1
+            : 0.2
         })
 
       tooltip.value.style('background-color', i.color)
       tooltip.value.style('color', i.color === '#000000' ? '#FFF' : '#000')
-      tooltip.value.text('' + i.name + ' : ' + i.value.toLocaleString() + ' MtMS/año')
+      tooltip.value.text(
+        '' + i.name + ' : ' + i.value.toLocaleString() + ' MtMS/año'
+      )
       tooltip.value.style('visibility', 'visible')
 
       d3.selectAll('.node-rect').style('opacity', 0.2)
@@ -211,7 +229,9 @@ function creandoSankey() {
       tooltip.value.style('visibility', 'hidden')
     })
     .on('mousemove', function (d) {
-      return tooltip.value.style('top', d.pageY + 10 + 'px').style('left', d.pageX + 10 + 'px')
+      return tooltip.value
+        .style('top', d.pageY + 10 + 'px')
+        .style('left', d.pageX + 10 + 'px')
     })
   //.append('title')
   //.text((d) => `${d.name}\n${d.value} MtMS/año`)
@@ -278,11 +298,18 @@ watch(datos, () => {
 </script>
 
 <template>
-  <div class="contenedor-sankey" :id="sankey_id">
+  <div
+    class="contenedor-sankey"
+    :id="sankey_id"
+  >
     <h2>Sankey 3</h2>
     <div class="tooltip">
       <div class="botones">
-        <button class="boton-cerrar" v-if="VM_isTouchDevice" @click="cerrarTooltip()">
+        <button
+          class="boton-cerrar"
+          v-if="VM_isTouchDevice"
+          @click="cerrarTooltip()"
+        >
           <span class="icono-cerrar"></span>
         </button>
       </div>

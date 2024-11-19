@@ -9,7 +9,7 @@ $spacing: (
   '5': 40px,
   '6': 48px,
   '7': 54px,
-  '8': 60px
+  '8': 60px,
 );
 
 @each $key, $val in $spacing {

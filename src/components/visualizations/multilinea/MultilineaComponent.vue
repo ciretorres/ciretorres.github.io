@@ -12,42 +12,42 @@ const props = defineProps({
       { fecha_recoleccion: '2021-03-01', VSIN: 4 },
       { fecha_recoleccion: '2021-04-01', VSIN: 10 },
       { fecha_recoleccion: '2021-05-01', VSIN: 8 },
-      { fecha_recoleccion: '2021-06-01', VSIN: 5 }
-    ]
+      { fecha_recoleccion: '2021-06-01', VSIN: 5 },
+    ],
   },
   variables: {
     type: Array,
     default: function () {
       return [{ id: 'VSIN', nombre: 'VSIN', color: '#EFEFEF' }]
-    }
+    },
   },
   titulo_eje_y: {
     type: String,
-    default: ''
+    default: '',
   },
   titulo_eje_x: {
     type: String,
-    default: ''
+    default: '',
   },
   nombre_columna_horizontal: String,
   conversionTemporal: {
     type: Function,
-    default: () => d3.timeParse('%d-%m-%Y')
+    default: () => d3.timeParse('%d-%m-%Y'),
   },
   alto_vis: {
     type: Number,
     default: function () {
       return 400
-    }
+    },
   },
   ancho_tooltip: {
     type: Number,
-    default: 180
+    default: 180,
   },
   margin: {
     type: Object,
-    default: () => ({ arriba: 10, abajo: 60, izquierda: 50, derecha: 20 })
-  }
+    default: () => ({ arriba: 10, abajo: 60, izquierda: 50, derecha: 20 }),
+  },
 })
 
 const { datos, variables, margin } = toRefs(props)
@@ -108,24 +108,24 @@ function configurandoDimensionesParaLinea() {
   /**
    * Método para configurar dimensiones para líneas
    */
-  datos.value.forEach((d) => {
+  datos.value.forEach(d => {
     d.fech = props.conversionTemporal(d[props.nombre_columna_horizontal])
   })
   // Construyendo escalas
   // Build X scale -> it is temporal or date format
   xScale.value = d3
     .scaleTime()
-    .domain(d3.extent(datos.value.map((d) => d.fech)))
+    .domain(d3.extent(datos.value.map(d => d.fech)))
     .range([0, width.value])
 
-  claves.value = variables.value.map((d) => d.id)
+  claves.value = variables.value.map(d => d.id)
   // Build Y scale -> it is linear
   if (claves.value.length !== 0) {
     yScale.value = d3
       .scaleLinear()
       .domain([
-        d3.min(datos.value.map((d) => d3.min(claves.value.map((dd) => d[dd])))),
-        d3.max(datos.value.map((d) => d3.max(claves.value.map((dd) => d[dd]))))
+        d3.min(datos.value.map(d => d3.min(claves.value.map(dd => d[dd])))),
+        d3.max(datos.value.map(d => d3.max(claves.value.map(dd => d[dd])))),
       ])
       .range([height.value, 0])
   } else {
@@ -138,7 +138,13 @@ function configurandoDimensionesParaLinea() {
       'transform',
       `translate(${margin.value.izquierda}, ${height.value + margin.value.arriba})`
     )
-    .call(d3.axisBottom(xScale.value).ticks(5).tickFormat(multiFormat).tickSizeOuter(0))
+    .call(
+      d3
+        .axisBottom(xScale.value)
+        .ticks(5)
+        .tickFormat(multiFormat)
+        .tickSizeOuter(0)
+    )
   xAxis.value
     .selectAll('line')
     .attr('y1', -height.value)
@@ -150,12 +156,21 @@ function configurandoDimensionesParaLinea() {
   xAxis.value
     .append('g')
     .attr('class', 'grid-x')
-    .call(d3.axisBottom(xScale.value).tickSize(-height.value, 0, 0).tickFormat('').ticks(0))
+    .call(
+      d3
+        .axisBottom(xScale.value)
+        .tickSize(-height.value, 0, 0)
+        .tickFormat('')
+        .ticks(0)
+    )
     .style('opacity', '0.3')
     .style('color', '#efefef')
   // Draw Y axis
   yAxis.value
-    .attr('transform', `translate(${margin.value.izquierda}, ${margin.value.arriba})`)
+    .attr(
+      'transform',
+      `translate(${margin.value.izquierda}, ${margin.value.arriba})`
+    )
     .call(d3.axisLeft(yScale.value).ticks(4).tickSizeOuter(0))
   yAxis.value
     .selectAll('line')
@@ -167,7 +182,13 @@ function configurandoDimensionesParaLinea() {
   yAxis.value
     .append('g')
     .attr('class', 'grid-y')
-    .call(d3.axisLeft(yScale.value).tickSize(-width.value, 0, 0).tickFormat('').ticks(0))
+    .call(
+      d3
+        .axisLeft(yScale.value)
+        .tickSize(-width.value, 0, 0)
+        .tickFormat('')
+        .ticks(0)
+    )
     .style('opacity', '0.3')
     .style('color', '#efefef')
 
@@ -198,19 +219,21 @@ function mostrarTooltip(evento) {
   /**
    * Método para desplegar el tooltip individual
    */
-  let bisecetDate = d3.bisector((d) => d.fech).left
+  let bisecetDate = d3.bisector(d => d.fech).left
   let x0 = xScale.value.invert(evento.layerX - margin.value.izquierda)
   let indice = bisecetDate(datos.value, x0)
   let d0 = datos.value[indice - 1]
   let d1 = datos.value[indice]
   if ((d0 !== undefined) & (d1 !== undefined)) {
     let datum = x0 - d0.fech > d1.fech - x0 ? d1 : d0
-    let datos_y = claves.value.map((d) => [d, datum[d]]).sort((a, b) => d3.ascending(a[1], b[1]))
+    let datos_y = claves.value
+      .map(d => [d, datum[d]])
+      .sort((a, b) => d3.ascending(a[1], b[1]))
 
-    let bisectCantidad = d3.bisector((d) => d).center
+    let bisectCantidad = d3.bisector(d => d).center
     let y0 = yScale.value.invert(evento.layerY - margin.value.arriba)
     let indiceY = bisectCantidad(
-      datos_y.map((d) => d[1]),
+      datos_y.map(d => d[1]),
       y0
     )
 
@@ -218,7 +241,7 @@ function mostrarTooltip(evento) {
       fech: datum.fech,
       id: datos_y[indiceY][0],
       cat: datum[datos_y[indiceY][0]],
-      ...props.variables.filter((d) => d.id === datos_y[indiceY][0])[0]
+      ...props.variables.filter(d => d.id === datos_y[indiceY][0])[0],
     }
     // Change tooltip position from cursor depending the hover line
     tooltip.value
@@ -241,7 +264,9 @@ function mostrarTooltip(evento) {
       .style('width', props.ancho_tooltip + 'px')
       .style('padding', '0 3px 0 10px')
 
-    let entidad = variables.value.filter((d) => d.id === tooltip_data_seleccionada.value.id)[0]
+    let entidad = variables.value.filter(
+      d => d.id === tooltip_data_seleccionada.value.id
+    )[0]
     let textoTooltip = `
       <p>variable: ${entidad.nombre}<br/>
         <b>value: ${tooltip_data_seleccionada.value.cat.toLocaleString('en')}</b> <br/>
@@ -286,18 +311,18 @@ function creandoLineas() {
 
   grupos_lineas.value = grupos_series
     .style('fill', 'none')
-    .style('stroke', (d) => d.color)
+    .style('stroke', d => d.color)
     .style('stroke-width', '1.5px')
     .selectAll('lineas')
-    .data((d) => {
+    .data(d => {
       return [
-        datos.value.map((dd) => ({
+        datos.value.map(dd => ({
           fech: dd.fech,
           cat: dd[d.id],
           color: d.color,
           id: d.id,
-          resaltado: d.resaltado
-        }))
+          resaltado: d.resaltado,
+        })),
       ]
     })
     .enter()
@@ -305,10 +330,10 @@ function creandoLineas() {
     .attr('class', 'lineas')
   // Event the tooltip
   svg.value
-    .on('mousemove', (evento) => {
+    .on('mousemove', evento => {
       mostrarTooltip(evento)
     })
-    .on('click', (evento) => {
+    .on('click', evento => {
       mostrarTooltip(evento)
     })
     .on('mouseout', cerrarTooltip)
@@ -326,7 +351,15 @@ function multiFormat(date) {
     date: '%d.%m.%Y',
     time: '%H:%M:%S',
     periods: ['AM', 'PM'],
-    days: ['Domingo', 'Lunes', 'Martes', 'Miércoles', 'Jueves', 'Viernes', 'Sábado'],
+    days: [
+      'Domingo',
+      'Lunes',
+      'Martes',
+      'Miércoles',
+      'Jueves',
+      'Viernes',
+      'Sábado',
+    ],
     shortDays: ['Dom', 'Lun', 'Mar', 'Mi', 'Jue', 'Vie', 'Sab'],
     months: [
       'Enero',
@@ -340,7 +373,7 @@ function multiFormat(date) {
       'Septiembre',
       'Octubre',
       'Noviembre',
-      'Diciembre'
+      'Diciembre',
     ],
     shortMonths: [
       'ene',
@@ -354,8 +387,8 @@ function multiFormat(date) {
       'sep',
       'oct',
       'nov',
-      'dic'
-    ]
+      'dic',
+    ],
   })
   const formatMillisecond = locale.format('.%L')
   const formatSecond = locale.format(':%S')
@@ -389,11 +422,11 @@ function actualizandoLineas() {
   /**
    * Método para actualizar los paths trazados de línea
    */
-  grupos_lineas.value.attr('d', (dd) => {
+  grupos_lineas.value.attr('d', dd => {
     return d3
       .line()
-      .x((d) => xScale.value(d.fech))
-      .y((d) => yScale.value(d.cat))(dd)
+      .x(d => xScale.value(d.fech))
+      .y(d => yScale.value(d.cat))(dd)
   })
 }
 function reescalandoPantalla() {
@@ -404,7 +437,7 @@ function reescalandoPantalla() {
 
 onMounted(() => {
   // Asigna elementos a variables
-  claves.value = variables.value.map((d) => d.id)
+  claves.value = variables.value.map(d => d.id)
 
   svg.value = d3.select('div#' + props.multilineas_id + ' svg.svg-multilineas')
   grupo_contenedor.value = svg.value.select('g.grupo-contenedor-multilineas')
@@ -416,9 +449,13 @@ onMounted(() => {
   xAxis.value = grupo_fondo.value.select('g.eje-x')
   yAxis.value = grupo_fondo.value.select('g.eje-y')
 
-  xLabel.value = grupo_contenedor_ejes.value.append('text').attr('class', 'label-x')
+  xLabel.value = grupo_contenedor_ejes.value
+    .append('text')
+    .attr('class', 'label-x')
 
-  yLabel.value = grupo_contenedor_ejes.value.append('text').attr('class', 'label-y')
+  yLabel.value = grupo_contenedor_ejes.value
+    .append('text')
+    .attr('class', 'label-y')
 
   configurandoDimensionesParaSVG()
   configurandoDimensionesParaLinea()
@@ -450,12 +487,18 @@ watch(margin, () => {
 </script>
 
 <template>
-  <div :id="multilineas_id" class="contenedor-lineas">
+  <div
+    :id="multilineas_id"
+    class="contenedor-lineas"
+  >
     <div class="contenedor-tooltip-svg">
       <div class="tooltip">
         <div class="tooltip-contenido">
           <div class="contenedor-boton-cerrar">
-            <button class="boton-cerrar-tooltip" @click="cerrarTooltip"></button>
+            <button
+              class="boton-cerrar-tooltip"
+              @click="cerrarTooltip"
+            ></button>
           </div>
           <div class="tooltip-cifras"></div>
         </div>

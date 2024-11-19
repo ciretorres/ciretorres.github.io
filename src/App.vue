@@ -2,13 +2,18 @@
   <div class="p-3">
     <header>
       <nav aria-label="Principal">
-        <router-link to="/"><h1>Alo! My name is Eric. Viszualization developer</h1></router-link>
+        <router-link to="/"
+          ><h1>Alo! My name is Eric. Viszualization developer</h1></router-link
+        >
       </nav>
     </header>
     <main id="principal">
       <RouterView />
     </main>
-    <section id="contacto" aria-label="Contacto">
+    <section
+      id="contacto"
+      aria-label="Contacto"
+    >
       <h2>
         Let's chat on
         <a
@@ -18,7 +23,11 @@
         >
           WhatsApp</a
         >, check my code on
-        <a href="https://github.com/ciretorres/" target="_blank" rel="noopener noreferrer">
+        <a
+          href="https://github.com/ciretorres/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           Github</a
         >
         or view

@@ -15,15 +15,22 @@ const varianteSeleccionada = computed({
   // setter
   set(newValue) {
     store.seleccionarVariante(newValue)
-  }
+  },
 })
 </script>
 
 <template>
   <div>
     <label for="selector-variante">Variables</label>
-    <select id="selector-variante" v-model="varianteSeleccionada">
-      <option v-for="variante in variantes" :key="variante.orden" :value="variante.clave">
+    <select
+      id="selector-variante"
+      v-model="varianteSeleccionada"
+    >
+      <option
+        v-for="variante in variantes"
+        :key="variante.orden"
+        :value="variante.clave"
+      >
         {{ variante.nombre }}
       </option>
     </select>
