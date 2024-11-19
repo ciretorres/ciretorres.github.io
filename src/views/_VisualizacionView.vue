@@ -20,6 +20,11 @@
             >
               <ul>
                 <li>
+                  <router-link to="/visualization/sankey"
+                    >Flow diagram</router-link
+                  >
+                </li>
+                <li>
                   <router-link to="/visualization/d3js">Heatmap</router-link>
                 </li>
                 <li>
@@ -29,11 +34,6 @@
                 </li>
                 <li>
                   <router-link to="/visualization/area">Area</router-link>
-                </li>
-                <li>
-                  <router-link to="/visualization/sankey"
-                    >Flow diagram</router-link
-                  >
                 </li>
               </ul>
             </section>
