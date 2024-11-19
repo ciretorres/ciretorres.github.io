@@ -1,4 +1,5 @@
 <script setup>
+// TODO: traer solo lo necesario de d3
 import * as d3 from 'd3'
 import { onMounted, onUnmounted, ref, toRefs, watch } from 'vue'
 
@@ -80,10 +81,10 @@ const tooltip = ref({})
 const tooltipRef = ref('')
 const tooltipCifraRef = ref('')
 
+/**
+ * Método para configurar las dimensiones del elemento SVG
+ */
 function configurandoDimensionesParaSVG() {
-  /**
-   * Método para configurar las dimensiones del elemento SVG
-   */
   width.value =
     document.querySelector(`#${props.area_id}`).clientWidth -
     margin.value.derecha -
@@ -119,10 +120,11 @@ function configurandoDimensionesParaSVG() {
     `translate(${margin.value.izquierda}, ${margin.value.arriba})`
   )
 }
+
+/**
+ * Método para traducir el formato de fecha
+ */
 function multiFormat(date) {
-  /**
-   * Método para traducir el formato de fecha
-   */
   // const locale = d3.timeFormatLocale({
   //   decimal: ',',
   //   thousands: '.',
@@ -248,10 +250,11 @@ function multiFormat(date) {
                 : formatMonthYear
   )(date)
 }
+
+/**
+ * Método para configurar dimensiones para área
+ */
 function configurandoDimensionesParaArea() {
-  /**
-   * Método para configurar dimensiones para área
-   */
   // Apilando datos
   data_stack.value = d3.stack().keys(variables.value.map(d => d.id))(
     datos.value
@@ -341,10 +344,8 @@ function configurandoDimensionesParaArea() {
     .style('dominant-baseline', 'hanging')
     .style('fill', '#fff')
 }
+
 function mostrarTooltip(evento) {
-  /**
-   * Método para desplegar el tooltip
-   */
   let bisecetDate = d3.bisector(d => d.date).left
   let x0 = xScale.value.invert(evento.layerX - margin.value.izquierda)
   let indice = bisecetDate(datos.value, x0, 1)
@@ -392,15 +393,13 @@ function mostrarTooltip(evento) {
   }
 }
 function cerrarTooltip() {
-  /**
-   * Método para esconder el tooltip
-   */
   tooltip.value.style('visibility', 'hidden')
 }
+
+/**
+ * Método para crear los paths del área
+ */
 function creandoArea() {
-  /**
-   * Método para crear los paths del área
-   */
   // Remove all area created
   grupo_contenedor.value.selectAll('path.paths-area').remove()
 
@@ -423,10 +422,10 @@ function creandoArea() {
     })
     .on('mouseout', cerrarTooltip)
 }
+/**
+ * Método para actualizar los paths trazados del área
+ */
 function actualizandoArea() {
-  /**
-   * Método para actualizar los paths trazados del área
-   */
   area.value
     .data(data_stack.value)
     .transition()
@@ -467,12 +466,12 @@ onMounted(() => {
   // tooltip.value = d3.select('div#' + props.area_id + ' div.tooltip')
   tooltip.value = d3.select(tooltipRef.value)
 
-  window.addEventListener('resize', reescalandoPantalla)
+  // window.addEventListener('resize', reescalandoPantalla)
+})
+onUnmounted(() => {
+  // window.removeEventListener('resize', reescalandoPantalla)
 })
 
-onUnmounted(() => {
-  window.removeEventListener('resize', reescalandoPantalla)
-})
 watch(variables, () => {
   configurandoDimensionesParaSVG()
   configurandoDimensionesParaArea()
@@ -496,6 +495,7 @@ watch(margin, () => {
     class="contenedor-area"
   >
     <slot name="encabezado"></slot>
+
     <div class="contenedor-tooltip-svg">
       <div
         ref="tooltipRef"
@@ -516,6 +516,7 @@ watch(margin, () => {
           ></div>
         </div>
       </div>
+
       <svg class="svg-area">
         <g class="grupo-fondo">
           <g class="eje-x"></g>

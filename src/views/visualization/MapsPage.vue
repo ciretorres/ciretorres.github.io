@@ -1,6 +1,6 @@
 <script setup>
-import MapaComponente from '@/components/visualizations/maps/MapaComponent.vue'
 import centroidesJSON from '@/assets/data/centroides-crateres.json'
+import MapaComponente from '@/components/visualizations/maps/MapaComponent.vue'
 
 const fuentes = [
   { href: 'https://codigo.conahcyt.mx/sisdai/sisdai-mapas' },
@@ -90,12 +90,6 @@ const fuentes = [
 }
 </style>
 <style lang="scss" scoped>
-code {
-  display: inline-block;
-  height: 250px;
-  border: 1px solid #ffffff;
-  overflow-y: auto;
-}
 .lista-fuentes {
   word-wrap: break-word;
   // word-break: break-all;

@@ -1,10 +1,14 @@
 <script setup>
+// TODO: revisar por qué tantos componentes de mapa calor
 import MapaCalor from '@/components/visualizations/heatmap/MapaDeCalor.vue'
 </script>
 
 <template>
-  <article class="">
-    <MapaCalor />
+  <article>
+    <h3>Mapa de calor</h3>
+    <section>
+      <MapaCalor />
+    </section>
   </article>
 </template>
 

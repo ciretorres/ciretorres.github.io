@@ -1,20 +1,32 @@
 <script setup>
-// import axios from 'axios'
+// TODO: importar solo timeParse de d3
 import * as d3 from 'd3'
 import { computed, onMounted, ref } from 'vue'
 
+import datosA from '@/assets/data/area/area.json'
 import Area from '@/components/visualizations/area/AreaComponent.vue'
-import datosA from '../../../public/data/area/area.json'
-
-// const public_path = process.env.BASE_URL
-// const public_path = import.meta.env.BASE_URL
 
 const data = ref(datosA)
-// const errored = ref(false)
-// const loading = ref(true)
 
 onMounted(() => {
-  // api request
+  // TODO: hacerlo con fetch api request
+  // fetch(public_path + 'data/centroides-crateres.json')
+  //   .then(response => {
+  //     // Verificar el estado de la respuesta
+  //     if (!response.ok) {
+  //       throw new Error('La solicitud no pudo realizarse con éxito')
+  //     }
+  //     // Analizar la respuesta como JSON
+  //     return response.json()
+  //   })
+  //   .then(data => {
+  //     centroides.value = data
+  //   })
+  //   .catch(error => {
+  //     // Manejar errores de la solicitud
+  //     console.warn('Error en la solicitud de los datos remotodo')
+  //   })
+  //---------
   // axios
   //   .get(datosA)
   //   .then((response) => {
@@ -38,7 +50,6 @@ const datosArea = computed(() => {
   })
   return data.value
 })
-// console.log(datosArea)
 </script>
 
 <template>

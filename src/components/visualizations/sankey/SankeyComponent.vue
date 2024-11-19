@@ -53,7 +53,6 @@ const props = defineProps({
     }),
   },
 })
-
 const { datos } = toRefs(props)
 
 const svgRef = ref('')
@@ -172,6 +171,7 @@ function creandoSankey() {
     .attr('dy', '0.35em')
     .attr('text-anchor', d => (d.x0 < width.value / 2 ? 'start' : 'end'))
     .text(d => d.name)
+    .attr('fill', '#FFFFFF')
     .attr('class', 'node-text-rect')
     .attr('id', function (d, i) {
       d.id = i
@@ -261,11 +261,10 @@ onMounted(() => {
   configurandoDimensionesParaSVG()
   creandoSankey()
 
-  window.addEventListener('resize', reescalandoPantalla)
+  // window.addEventListener('resize', reescalandoPantalla)
 })
-
 onUnmounted(() => {
-  window.removeEventListener('resize', reescalandoPantalla)
+  // window.removeEventListener('resize', reescalandoPantalla)
 })
 
 watch(datos, () => {

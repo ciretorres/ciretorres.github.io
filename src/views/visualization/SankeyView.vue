@@ -211,17 +211,34 @@ const items = {
 }
 // import data from '../../../public/data/sankey/sankeygreenhouse.json'
 // import data from '../../../public/data/sankey/energy.json
-// import data from '../../../public/data/sankey/data_sankey.json'
+import data_sankey from '../../../public/data/sankey/data_sankey.json'
 </script>
 
 <template>
-  <article class="">
+  <article>
     <h3>Sankey Diagram</h3>
-    <SankeyComponent :datos="items" />
+    <section aria-label="Componente Diagrama de flujo">
+      <SankeyComponent :datos="items" />
+    </section>
 
-    <SankeyComponent
-      sankey_id="sankey0"
-      :datos="data"
-    />
+    <section>
+      <h4>Datos</h4>
+      <code>{{ data_sankey }}</code>
+      <br />
+      <br />
+      <a
+        href="https://raw.githubusercontent.com/ciretorres/ciretorres.github.io/refs/heads/develop/public/data/sankey/data_sankey.json"
+        download="data_sankey.json"
+        >Descargar json</a
+      >
+    </section>
+
+    <section>
+      <h4>Ejemplo con pocos datos</h4>
+      <SankeyComponent
+        sankey_id="sankey0"
+        :datos="data"
+      />
+    </section>
   </article>
 </template>

@@ -1,4 +1,7 @@
-<script setup></script>
+<script setup>
+// TODO: homologar estructura lógica de vis con d3js
+</script>
+
 <template>
   <div>
     <div class="container">

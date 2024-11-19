@@ -78,11 +78,10 @@ const grupos_lineas = ref({})
 const xAxis = ref({})
 const yAxis = ref({})
 
+/**
+ * Método para configurar las dimensiones del elemento SVG
+ */
 function configurandoDimensionesParaSVG() {
-  /**
-   * Método para configurar las dimensiones del elemento SVG
-   */
-
   width.value =
     document.querySelector(`#${props.multilineas_id}`).clientWidth -
     margin.value.derecha -
@@ -104,10 +103,10 @@ function configurandoDimensionesParaSVG() {
     `translate(${margin.value.izquierda},${margin.value.arriba})`
   )
 }
+/**
+ * Método para configurar dimensiones para líneas
+ */
 function configurandoDimensionesParaLinea() {
-  /**
-   * Método para configurar dimensiones para líneas
-   */
   datos.value.forEach(d => {
     d.fech = props.conversionTemporal(d[props.nombre_columna_horizontal])
   })
@@ -215,10 +214,10 @@ function configurandoDimensionesParaLinea() {
     .style('dominant-baseline', 'hanging')
     .style('color', '#efefef')
 }
+/**
+ * Método para desplegar el tooltip individual
+ */
 function mostrarTooltip(evento) {
-  /**
-   * Método para desplegar el tooltip individual
-   */
   let bisecetDate = d3.bisector(d => d.fech).left
   let x0 = xScale.value.invert(evento.layerX - margin.value.izquierda)
   let indice = bisecetDate(datos.value, x0)
@@ -290,15 +289,12 @@ function mostrarTooltip(evento) {
   }
 }
 function cerrarTooltip() {
-  /**
-   * Método para esconder el tooltip
-   */
   tooltip.value.style('visibility', 'hidden')
 }
+/**
+ * Método para crear los paths del área
+ */
 function creandoLineas() {
-  /**
-   * Método para crear los paths del área
-   */
   // Remove all lines created
   grupo_contenedor.value.selectAll('g.grupos-lineas').remove()
   // Join path with color values
@@ -338,10 +334,10 @@ function creandoLineas() {
     })
     .on('mouseout', cerrarTooltip)
 }
+/**
+ * Método para traducir el formato de fecha
+ */
 function multiFormat(date) {
-  /**
-   * Método para traducir el formato de fecha
-   */
   const locale = d3.timeFormatLocale({
     decimal: ',',
     thousands: '.',
@@ -464,10 +460,10 @@ onMounted(() => {
 
   tooltip.value = d3.select('div#' + props.multilineas_id).select('div.tooltip')
 
-  window.addEventListener('resize', reescalandoPantalla)
+  // window.addEventListener('resize', reescalandoPantalla)
 })
 onUnmounted(() => {
-  window.removeEventListener('resize', reescalandoPantalla)
+  // window.removeEventListener('resize', reescalandoPantalla)
 })
 watch(variables, () => {
   configurandoDimensionesParaSVG()
@@ -498,11 +494,14 @@ watch(margin, () => {
             <button
               class="boton-cerrar-tooltip"
               @click="cerrarTooltip"
-            ></button>
+            >
+              Cerrar
+            </button>
           </div>
           <div class="tooltip-cifras"></div>
         </div>
       </div>
+
       <svg class="svg-multilineas">
         <g class="grupo-fondo">
           <g class="eje-x"></g>
@@ -565,6 +564,7 @@ div.contenedor-tooltip-svg {
     border-radius: 5px;
     margin: 0 0 0 auto;
     cursor: pointer;
+
     @media (min-width: 768px) {
       display: none;
     }

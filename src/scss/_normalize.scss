@@ -55,6 +55,13 @@ h1 {
   color: var(--font-color);
 }
 
+code {
+  display: inline-block;
+  height: 250px;
+  border: 1px solid #ffffff;
+  overflow-y: auto;
+}
+
 img {
   border: none;
 }

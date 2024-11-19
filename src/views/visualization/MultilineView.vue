@@ -1,13 +1,11 @@
 <script setup>
 import consorcioEvolucionVariantes from '@/assets/datasets/consorcio_evolucion_variantes.json'
-
 import Multilinea from '@/components/visualizations/multilinea/MultilineaComponent.vue'
-
+import * as d3 from 'd3'
 const datosGrafica = consorcioEvolucionVariantes
 
-// import { onMounted, ref } from 'vue'
-// const public_path = process.env.BASE_URL
 // onMounted(() => {
+// TODO: traer mediante api request
 //   fetch(public_path + 'data/centroides-crateres.json')
 //     .then(response => {
 //       // Verificar el estado de la respuesta
@@ -30,12 +28,11 @@ const datosGrafica = consorcioEvolucionVariantes
 //     public_path + 'datasets/consorcio_variantes_heatmap_todas.json'
 //   )
 // }
-import * as d3 from 'd3'
 
+/**
+ * Construcción de objetoDatos
+ */
 function Objeto(fecha_recoleccion, tipo_variante) {
-  /**
-   * Construcción de objetoDatos
-   */
   // Constructor
   return {
     fecha_recoleccion: fecha_recoleccion,
@@ -60,9 +57,11 @@ function Objeto2(
     VOI: tipo_variante_4,
   }
 }
+
 /**
  * Formateando datos
  */
+
 // Obteniendo keys o nombre de la variable columna obj
 const asArray = Object.entries(datosGrafica)
 const dateArray = Object.values(asArray[0][1])
@@ -77,13 +76,14 @@ for (let i = 0; i < dateArray.length; i++) {
   )
   dataBase.push(nuevoObjeto)
 }
+
 /**
  * Filtrando baseDatos por fecha_recolección
  * this.fecha_actualización '2021-04-30' -6 en mes
  */
 const dateFiltered = dataBase.filter(d => d.fecha_recoleccion > '2020-12-31')
-// console.log('dateFiltered', dateFiltered)
 const onlyDate = dateFiltered.map(d => d['fecha_recoleccion'])
+
 function filterUniqueDates(data) {
   const lookup = new Set()
 
@@ -97,6 +97,7 @@ function filterUniqueDates(data) {
     }
   })
 }
+
 const uniqueValueDate = filterUniqueDates(onlyDate)
 const datosMultilinea = []
 for (let i = 0; i < uniqueValueDate.length; i++) {
@@ -137,21 +138,24 @@ for (let i = 0; i < uniqueValueDate.length; i++) {
 </script>
 
 <template>
-  <article class="">
+  <article>
     <h3>Multiline</h3>
-    <Multilinea
-      ref="lineasRef"
-      :multilineas_id="'lineas'"
-      :datos="datosMultilinea"
-      :nombre_columna_horizontal="'fecha_recoleccion'"
-      :variables="[
-        { id: 'VSIN', nombre: 'VSIN', color: '#a6cee3' },
-        { id: 'VIN', nombre: 'VIN', color: '#b2df8a' },
-        { id: 'VOM', nombre: 'VOM', color: '#fb9a99' },
-        { id: 'VOC', nombre: 'VOC', color: '#fdbf6f' },
-        { id: 'VOI', nombre: 'VOI', color: '#cab2d6' },
-      ]"
-      :conversionTemporal="d3.timeParse('%Y-%m-%d')"
-    />
+
+    <section aria-label="Componente de multilinea">
+      <Multilinea
+        ref="lineasRef"
+        :multilineas_id="'lineas'"
+        :datos="datosMultilinea"
+        :nombre_columna_horizontal="'fecha_recoleccion'"
+        :variables="[
+          { id: 'VSIN', nombre: 'VSIN', color: '#a6cee3' },
+          { id: 'VIN', nombre: 'VIN', color: '#b2df8a' },
+          { id: 'VOM', nombre: 'VOM', color: '#fb9a99' },
+          { id: 'VOC', nombre: 'VOC', color: '#fdbf6f' },
+          { id: 'VOI', nombre: 'VOI', color: '#cab2d6' },
+        ]"
+        :conversionTemporal="d3.timeParse('%Y-%m-%d')"
+      />
+    </section>
   </article>
 </template>
