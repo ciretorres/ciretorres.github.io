@@ -1,5 +1,6 @@
 <script setup>
-import MapaComponent from '@/components/visualizations/maps/MapaComponent.vue'
+import MapaComponente from '@/components/visualizations/maps/MapaComponent.vue'
+import centroidesJSON from '@/assets/data/centroides-crateres.json'
 
 const fuentes = [
   { href: 'https://codigo.conahcyt.mx/sisdai/sisdai-mapas' },
@@ -30,7 +31,29 @@ const fuentes = [
     </section>
 
     <section aria-label="Mapa componente">
-      <MapaComponent></MapaComponent>
+      <MapaComponente></MapaComponente>
+
+      <p>
+        Este proyecto nació de la curiosidad por aprender a usar la biblioteca
+        de mapas SisdaiMapas en versión v1.5.0 y comprender su funcionamiento a
+        nivel de código fuente.
+      </p>
+      <p>
+        Busqué uno por uno los puntos o cráteres de manera manual en distintas
+        páginas de coordenadas geográficas.
+      </p>
+    </section>
+
+    <section aria-label="Base de datos">
+      <h3>Base datos de centroides cráteres</h3>
+      <code>{{ centroidesJSON }}</code>
+      <br />
+      <br />
+      <a
+        href="https://raw.githubusercontent.com/ciretorres/ciretorres.github.io/refs/heads/develop/src/assets/data/centroides-crateres.json"
+        download="centroides-crateres.json"
+        >Descargar json</a
+      >
     </section>
 
     <section aria-label="Fuentes bibliográficas">
@@ -66,28 +89,16 @@ const fuentes = [
   }
 }
 </style>
-
 <style lang="scss" scoped>
-.lista-fuentes {
-  // word-wrap: break-word;
-  word-break: break-all;
-  // overflow-x: auto;
-  // width: calc(100% - 64px);
-  // background: #fff;
-  // display: block;
-  // margin: 0 auto;
-  padding: 0 16px;
-  li {
-    a {
-      // color: #fff;
-    }
-    // margin-bottom: 16px;
-  }
+code {
+  display: inline-block;
+  height: 250px;
+  border: 1px solid #ffffff;
+  overflow-y: auto;
 }
-// .full-screen-height {
-//   height: 100%;
-// }
-.fuentes {
-  // color: #000;
+.lista-fuentes {
+  word-wrap: break-word;
+  // word-break: break-all;
+  padding: 0 16px;
 }
 </style>

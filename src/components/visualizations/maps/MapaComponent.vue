@@ -47,10 +47,7 @@ function globoInformativo(f) {
     :vista="{ centro: [0, 0], zoom: 1 }"
   >
     <template #panel-encabezado-vis>
-      <div class="m-r-2">
-        <!-- <h5 class="texto-color-1 m-y-0">Cráteres de impacto en la Tierra</h5> -->
-        <SisdaiLeyenda para="crateres_centroides" />
-      </div>
+      <SisdaiLeyenda para="crateres_centroides" />
     </template>
 
     <SisdaiCapaXyz
