@@ -36,13 +36,13 @@ const router = createRouter({
     {
       path: '/web-development',
       name: 'Web development |',
-      component: () => import('@/views/_DesarrolloView.vue'),
+      component: () => import('@/views/DesarrolloView.vue'),
     },
     // visualization
     {
       path: '/visualization',
       name: 'Visualization',
-      component: () => import('@/views/_VisualizacionView.vue'),
+      component: () => import('@/views/VisualizacionView.vue'),
       children: [
         {
           path: '/visualization/intro',
@@ -52,22 +52,22 @@ const router = createRouter({
         {
           path: '/visualization/d3js',
           name: 'Heatmap | Visualization |',
-          component: () => import('@/views/visualization/D3JS.vue'),
+          component: () => import('@/views/visualization/HeatmapPage.vue'),
         },
         {
           path: '/visualization/multiline',
           name: 'Multilinea | Visualization |',
-          component: () => import('@/views/visualization/MultilineView.vue'),
+          component: () => import('@/views/visualization/MultilinePage.vue'),
         },
         {
           path: '/visualization/area',
           name: 'Área | Visualization |',
-          component: () => import('@/views/visualization/AreaView.vue'),
+          component: () => import('@/views/visualization/AreaPage.vue'),
         },
         {
           path: '/visualization/sankey',
           name: 'Diagrama de flujo | Visualization |',
-          component: () => import('@/views/visualization/SankeyView.vue'),
+          component: () => import('@/views/visualization/SankeyPage.vue'),
         },
         {
           path: '/visualization/maps',
