@@ -137,7 +137,7 @@ for (let i = 0; i < uniqueValueDate.length; i++) {
 </script>
 
 <template>
-  <div class="">
+  <article class="">
     <h3>Multiline</h3>
     <Multilinea
       ref="lineasRef"
@@ -153,5 +153,5 @@ for (let i = 0; i < uniqueValueDate.length; i++) {
       ]"
       :conversionTemporal="d3.timeParse('%Y-%m-%d')"
     />
-  </div>
+  </article>
 </template>

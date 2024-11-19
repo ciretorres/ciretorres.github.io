@@ -30,7 +30,7 @@ body * {
 
 main {
   display: block;
-  min-height: calc(100vh - 250px);
+  // min-height: calc(100vh - 250px);
 }
 
 b,
@@ -49,6 +49,10 @@ a {
   // &:focus-visible {
   //   // color: #be92e8;
   // }
+}
+
+h1 {
+  color: var(--font-color);
 }
 
 img {

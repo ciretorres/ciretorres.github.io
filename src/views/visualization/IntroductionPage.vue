@@ -1,5 +1,5 @@
 <template>
-  <div class="intro">
+  <article aria-label="Intro visualización">
     <h3>Introduction</h3>
     <p>
       Hi! The purpose of this view is to upload some of my personal ideas about working with visual
@@ -22,5 +22,5 @@
       <a href="https://processing.org/" target="_blank" rel="noopener noreferrer">processing.js</a>
       library.
     </p>
-  </div>
+  </article>
 </template>

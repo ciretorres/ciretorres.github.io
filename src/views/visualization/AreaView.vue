@@ -42,8 +42,8 @@ const datosArea = computed(() => {
 </script>
 
 <template>
-  <div class="">
+  <article class="">
     <h3>Area</h3>
     <Area :datos="datosArea" />
-  </div>
+  </article>
 </template>

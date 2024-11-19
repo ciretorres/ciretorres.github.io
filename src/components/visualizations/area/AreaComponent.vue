@@ -280,7 +280,8 @@ function configurandoDimensionesParaArea() {
     .selectAll('line')
     .attr('x2', width.value)
     .style('stroke-dasharray', '3 2 ')
-    .style('color', '#EFEFEF')
+    // .style('color', '#EFEFEF')
+    .style('color', '#FFFFFF')
     .style('stroke-opacity', 0.8)
   yAxis.value.selectAll('.domain').remove()
   // Add X axis
@@ -309,7 +310,8 @@ function configurandoDimensionesParaArea() {
     .style('font-size', '12px')
     .style('font-weight', '600')
     // .style('dominant-baseline', 'hanging')
-    .style('color', '#efefef')
+    // .style('color', '#efefef')
+    .style('fill', '#fff')
   // Adding label Y
   yLabel.value
     .attr('transform', `translate(${-margin.value.izquierda}, ${height.value * 0.5}) rotate(-90)`)
@@ -318,7 +320,7 @@ function configurandoDimensionesParaArea() {
     .style('font-size', '12px')
     .style('font-weight', '600')
     .style('dominant-baseline', 'hanging')
-    .style('color', '#efefef')
+    .style('fill', '#fff')
 }
 function mostrarTooltip(evento) {
   /**

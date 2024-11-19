@@ -3,9 +3,9 @@ import MapaCalor from '@/components/visualizations/heatmap/MapaDeCalor.vue'
 </script>
 
 <template>
-  <div class="">
+  <article class="">
     <MapaCalor />
-  </div>
+  </article>
 </template>
 
 <!-- <template>

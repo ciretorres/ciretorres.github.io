@@ -1,13 +1,22 @@
 @media screen and (min-width: 375px) {
   .container {
     display: flex;
-  }
-  main {
-    width: 100%;
-  }
-  aside {
-    width: 40%;
-    max-width: 300px;
-    min-width: 200px;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    aside {
+      display: block;
+      width: 33%;
+      height: 70vh;
+      padding: 0 16px;
+      overflow-y: auto;
+    }
+    section#content {
+      display: block;
+      width: 68%;
+      height: 70vh;
+      padding: 0 16px;
+      overflow-y: auto;
+    }
   }
 }

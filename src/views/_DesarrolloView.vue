@@ -4,17 +4,19 @@ const mostarLista = ref(false)
 </script>
 
 <template>
-  <main id="principal">
+  <article aria-label="Web development">
     <h2>Web development</h2>
-    <section id="gema">
+    <section id="gema" aria-labelledby="gema-label">
       <a href="https://gema.conahcyt.mx/" target="_blank" rel="noopener noreferrer"
-        ><h3>Generador y visualizador de Mapas Interactivo (GEMA)</h3></a
+        ><h3 id="gema-label">Generador y visualizador de Mapas Interactivo (GEMA)</h3></a
       >
     </section>
 
-    <section id="sisdai">
+    <section id="sisdai" aria-labelledby="sisdai-label">
       <a href="https://sisdai.conahcyt.mx/" target="_blank" rel="noopener noreferrer"
-        ><h3>Sistema de diseño y Accesibilidad para la Investigación (SISDAI)</h3></a
+        ><h3 id="sisdai-label">
+          Sistema de diseño y Accesibilidad para la Investigación (SISDAI)
+        </h3></a
       >
 
       <ul>
@@ -41,11 +43,16 @@ const mostarLista = ref(false)
       </ul>
     </section>
 
-    <section id="eni">
+    <section id="eni" aria-labelledby="eni-label">
       <a href="https://eni.conacyt.mx/" target="_blank" rel="noopener noreferrer">
-        <h3 id="h3">Ecosistemas Nacionales Informáticos (ENI)</h3></a
+        <h3 id="eni-label">Ecosistemas Nacionales Informáticos (ENI)</h3></a
       >
-      <button id="btn" type="button" aria-labelledby="btn h3" @click="mostarLista = !mostarLista">
+      <button
+        id="button-label"
+        type="button"
+        aria-labelledby="button-label eni-label"
+        @click="mostarLista = !mostarLista"
+      >
         Mostrar más
       </button>
 
@@ -241,5 +248,5 @@ const mostarLista = ref(false)
 
     <br />
     <router-link to="/">[Go back]</router-link>
-  </main>
+  </article>
 </template>

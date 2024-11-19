@@ -21,22 +21,23 @@ const fuentes = [
 </script>
 
 <template>
-  <div class="maps">
-    <div class="">
+  <article class="maps">
+    <section aria-label="Mapas introducción">
       <h3>Mapas</h3>
-      <MapaComponent></MapaComponent>
-    </div>
-    <div class="container">
-      <div class="">
-        <p class="">Fuentes:</p>
-        <ul>
-          <li v-for="(fuente, idx) in fuentes" :key="idx">
-            <a :href="fuente.href" target="_blank" rel="noopener noreferrer">{{ fuente.href }}</a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </div>
+      <h4>Cráteres de impacto en la Tierra</h4>
+    </section>
+
+    <section aria-label="Mapa componente"><MapaComponent></MapaComponent></section>
+
+    <section aria-label="Fuentes bibliográficas">
+      <h3>Fuentes:</h3>
+      <ul class="lista-fuentes">
+        <li v-for="(fuente, idx) in fuentes" :key="idx">
+          <a :href="fuente.href" target="_blank" rel="noopener noreferrer">{{ fuente.href }}</a>
+        </li>
+      </ul>
+    </section>
+  </article>
 </template>
 
 <style lang="scss">
@@ -55,7 +56,7 @@ const fuentes = [
 </style>
 
 <style lang="scss" scoped>
-.contenedor-fuentes {
+.lista-fuentes {
   // word-wrap: break-word;
   word-break: break-all;
   // overflow-x: auto;
@@ -63,12 +64,12 @@ const fuentes = [
   // background: #fff;
   // display: block;
   // margin: 0 auto;
-  padding: 8px 16px;
+  padding: 0 16px;
   li {
     a {
-      color: #fff;
+      // color: #fff;
     }
-    margin-bottom: 16px;
+    // margin-bottom: 16px;
   }
 }
 // .full-screen-height {

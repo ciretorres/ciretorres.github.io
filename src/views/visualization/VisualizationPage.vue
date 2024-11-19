@@ -14,8 +14,9 @@ const menu_abierto = ref(false)
             @click="menu_abierto = !menu_abierto"
             :class="{ abierto: menu_abierto }"
           >
-            <button :aria-expanded="menu_abierto ? 'true' : 'false'" class="boton-icono boton-menu">
+            <button :aria-expanded="menu_abierto" class="boton-icono boton-menu">
               <span class="icon-external-link"></span>
+              alternar
               <!-- <span
                 v-if="menu_abierto"
                 class="icono-angulo-doble-izquierda"

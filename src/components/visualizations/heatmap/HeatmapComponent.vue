@@ -674,12 +674,12 @@ watch(
 <template>
   <div class="mapa-calor">
     <div class="encabezado">
-      <h3 class="titulo-visualizacion">
+      <h4 class="titulo-visualizacion">
         Número de casos relacionados con
         {{
           variantes.find((variante) => variante.clave === varianteSeleccionada).nombre.toLowerCase()
         }}
-      </h3>
+      </h4>
     </div>
 
     <div class="nomenclatura">
@@ -710,8 +710,9 @@ watch(
       <div class="tooltip-mapa-calor" ref="tooltipRef">
         <div class="contenedor-boton-cerrar">
           <span>{{ titulo_tooltip }}</span>
-          <button class="boton-cerrar-tooltip" @click="cerrarTooltip()">
+          <button type="button" class="boton-cerrar-tooltip" @click="cerrarTooltip()">
             <img :src="`${public_path}imgs/cerrar.svg`" alt="" class="img-cerrar" />
+            Cerrar
           </button>
         </div>
         <p class="tooltip-variable" ref="tooltipVariableRef"></p>
@@ -750,12 +751,12 @@ $border-radius-tarjeta: 10px;
       border-bottom: 1px solid #ccc;
     }
     .titulo-visualizacion {
-      font-size: 24px;
+      // font-size: 24px;
       font-weight: 900;
     }
 
     .instruccional {
-      font-size: 12px;
+      // font-size: 12px;
     }
   }
 
