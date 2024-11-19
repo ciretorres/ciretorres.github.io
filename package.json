@@ -1,13 +1,13 @@
 {
   "name": "ciretorres",
-  "version": "0.2.7",
+  "version": "0.2.8",
   "description": "",
   "type": "module",
   "scripts": {
     "reinstall": "rm -rf node_modules && rm package-lock.json && npm cache clean -f && npm cache verify && npm i",
     "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview",    
+    "preview": "vite preview",
     "format": "prettier --write src/",
     "format-lint": "npm run format && npm run lint",
     "lint": "eslint --fix --ignore-pattern .gitignore .",
