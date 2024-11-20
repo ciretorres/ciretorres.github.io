@@ -211,7 +211,7 @@ const items = {
 }
 // import data from '../../../public/data/sankey/sankeygreenhouse.json'
 // import data from '../../../public/data/sankey/energy.json
-import data_sankey from '../../../public/data/sankey/data_sankey.json'
+// import data_sankey from '@/assets/data/sankey/data_sankey.json'
 </script>
 
 <template>
@@ -223,11 +223,11 @@ import data_sankey from '../../../public/data/sankey/data_sankey.json'
 
     <section>
       <h4>Datos</h4>
-      <code>{{ data_sankey }}</code>
+      <code>{{ items }}</code>
       <br />
       <br />
       <a
-        href="https://raw.githubusercontent.com/ciretorres/ciretorres.github.io/refs/heads/develop/public/data/sankey/data_sankey.json"
+        href="https://raw.githubusercontent.com/ciretorres/ciretorres.github.io/refs/heads/develop/src/assets/data/sankey/data_sankey.json"
         download="data_sankey.json"
         >Descargar json</a
       >
@@ -235,10 +235,7 @@ import data_sankey from '../../../public/data/sankey/data_sankey.json'
 
     <section>
       <h4>Ejemplo con pocos datos</h4>
-      <SankeyComponent
-        sankey_id="sankey0"
-        :datos="data"
-      />
+      <SankeyComponent sankey_id="sankey0" />
     </section>
   </article>
 </template>
