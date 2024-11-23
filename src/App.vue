@@ -19,7 +19,7 @@
       <h2>
         Let's chat on
         <a
-          href="//api.whatsapp.com/send?phone=5547904238"
+          href="https://api.whatsapp.com/send?phone=5547904238"
           target="_blank"
           rel="noopener noreferrer"
         >

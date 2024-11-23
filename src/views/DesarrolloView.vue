@@ -63,6 +63,14 @@
             >sisdai-mapas</a
           >
         </li>
+        <li>
+          <a
+            href="https://www.npmjs.com/org/centrogeomx"
+            target="_blank"
+            rel="noopener noreferrer"
+            >npmjs</a
+          >
+        </li>
       </ul>
     </section>
 
