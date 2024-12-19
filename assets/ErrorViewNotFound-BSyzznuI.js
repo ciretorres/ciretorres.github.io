@@ -1,0 +1,1 @@
+import{_ as n,c as o,a as r,o as t}from"./index-cqOiel9G.js";const a={},c={id:"principal"};function s(i,e){return t(),o("main",c,e[0]||(e[0]=[r("h1",null,"Página no encontrada",-1)]))}const d=n(a,[["render",s]]);export{d as default};
