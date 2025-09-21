@@ -34,8 +34,8 @@ const router = createRouter({
     },
     // development
     {
-      path: '/web-development',
-      name: 'Web development |',
+      path: '/web-dev',
+      name: 'Web dev |',
       component: () => import('@/views/DesarrolloView.vue'),
     },
     // visualization

@@ -10,15 +10,8 @@
         freak world.
       </h2>
       <p>
-        Currently, I'm learning about algorithms & videogames in the beautiful
-        <a
-          href="https://goo.gl/ba2zp3"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          México City</a
-        >
-        looking for new challengues!
+        Currently, I'm learning about videogames & algorithms looking for new
+        challengues!
       </p>
     </section>
 
@@ -26,7 +19,7 @@
       id="proyectos"
       aria-label="Proyectos"
     >
-      <h2>These are some of my recent personal proyects:</h2>
+      <h2>my recent projects:</h2>
 
       <nav aria-label="Secundaria proyectos">
         <ul>
@@ -35,15 +28,15 @@
               href="https://itch.io/profile/ciretorres"
               target="_blank"
               rel="noopener noreferrer"
-              >[ Videogames ]</a
+              >[ videogames ]</a
             >
           </li>
           <li>
-            <router-link to="/web-development">[ Web Frontend ]</router-link>
+            <router-link to="/web-dev">[ web frontend ]</router-link>
           </li>
           <li>
             <router-link to="/visualization/intro"
-              >[ Visualization ]</router-link
+              >[ visualization ]</router-link
             >
           </li>
         </ul>

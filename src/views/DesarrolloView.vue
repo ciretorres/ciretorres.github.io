@@ -30,48 +30,52 @@
         </h3></a
       >
 
-      <ul>
-        <li>
-          <a
-            href="http://sisdai-css.conahcyt.mx"
-            target="_blank"
-            rel="noopener noreferrer"
-            >sisdai-css</a
-          >
-        </li>
-        <li>
-          <a
-            href="http://sisdai-componentes.conahcyt.mx"
-            target="_blank"
-            rel="noopener noreferrer"
-            >sisdai-componentes</a
-          >
-        </li>
-        <li>
-          <a
-            href="http://sisdai-graficas.conahcyt.mx"
-            target="_blank"
-            rel="noopener noreferrer"
-            >sisdai-graficas</a
-          >
-        </li>
-        <li>
-          <a
-            href="http://sisdai-mapas.conahcyt.mx"
-            target="_blank"
-            rel="noopener noreferrer"
-            >sisdai-mapas</a
-          >
-        </li>
-        <li>
-          <a
-            href="https://www.npmjs.com/org/centrogeomx"
-            target="_blank"
-            rel="noopener noreferrer"
-            >npmjs</a
-          >
-        </li>
-      </ul>
+      <div style="display: flex; gap: 24px">
+        <ul>
+          <li>
+            <a
+              href="http://sisdai-css.conahcyt.mx"
+              target="_blank"
+              rel="noopener noreferrer"
+              >sisdai-css</a
+            >
+          </li>
+          <li>
+            <a
+              href="http://sisdai-graficas.conahcyt.mx"
+              target="_blank"
+              rel="noopener noreferrer"
+              >sisdai-graficas</a
+            >
+          </li>
+          <li>
+            <a
+              href="http://sisdai-mapas.conahcyt.mx"
+              target="_blank"
+              rel="noopener noreferrer"
+              >sisdai-mapas</a
+            >
+          </li>
+        </ul>
+        <ul>
+          <li>
+            <a
+              href="http://sisdai-componentes.conahcyt.mx"
+              target="_blank"
+              rel="noopener noreferrer"
+              >sisdai-componentes</a
+            >
+          </li>
+          <li>
+            <a
+              href="https://www.npmjs.com/org/centrogeomx"
+              target="_blank"
+              rel="noopener noreferrer"
+              >npmjs</a
+            >
+          </li>
+        </ul>
+      </div>
     </section>
 
     <section
