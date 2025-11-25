@@ -74,6 +74,12 @@ const router = createRouter({
           name: 'Mapas | Visualization |',
           component: () => import('@/views/visualization/MapsPage.vue'),
         },
+        {
+          path: '/visualization/thesis-project',
+          name: 'Thesis Project | Visualization |',
+          component: () =>
+            import('@/views/visualization/ThesisProjectPage.vue'),
+        },
       ],
     },
     // error

@@ -2,7 +2,7 @@
   <div class="p-3">
     <header>
       <nav aria-label="Principal">
-        <router-link to="/"> <h1>I'm Eric. sw developer</h1></router-link>
+        <router-link to="/"> <h1>I'm Eric. web developer</h1></router-link>
       </nav>
     </header>
 
