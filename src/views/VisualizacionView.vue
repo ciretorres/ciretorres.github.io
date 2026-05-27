@@ -8,7 +8,7 @@
       <aside aria-label="Barra lateral">
         <nav aria-label="Secundaria Viszualization">
           <header>
-            <router-link to="/visualization/intro"
+            <router-link to="/visualization/sankey"
               ><h2>Viszualization</h2></router-link
             >
           </header>
@@ -58,12 +58,15 @@
             >
               <ul>
                 <li>
-                  <a
+                  <!-- <a
                     href="https://github.com/ciretorres/thesis-project"
                     target="_blank"
                     rel="noopener noreferrer"
                     >Thesis-project [UAM-A]</a
-                  >
+                  > -->
+                  <router-link to="/visualization/thesis-project"
+                    >Thesis-project [UAM-A]
+                  </router-link>
                 </li>
                 <li>
                   <a

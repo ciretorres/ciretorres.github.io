@@ -2,7 +2,7 @@
   <div class="p-3">
     <header>
       <nav aria-label="Principal">
-        <router-link to="/"> <h1>I'm Eric. sw developer</h1></router-link>
+        <router-link to="/"> <h1>I'm Eric. web developer</h1></router-link>
       </nav>
     </header>
 
@@ -15,16 +15,16 @@
       aria-label="Contacto"
     >
       <h2>
-        check my code on
+        Code
         <a
           href="https://github.com/ciretorres/"
           target="_blank"
           rel="noopener noreferrer"
         >
           Github</a
-        >, or view
+        >,
         <a
-          href="https://dev.qwer.mx/CV_EricTorres(english).pdf"
+          href="https://raw.githubusercontent.com/ciretorres/ciretorres.github.io/refs/heads/develop/src/assets/docs/CV_EricTorres(english)_compressed.pdf"
           target="_blank"
           rel="noopener noreferrer"
         >
