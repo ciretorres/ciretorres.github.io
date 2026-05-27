@@ -2,7 +2,6 @@
   <article aria-label="Intro visualización">
     <h3>Thesis project</h3>
     <p>
-      From my Master's Degree
       <a
         href="https://github.com/ciretorres/thesis-project"
         target="_blank"
@@ -10,7 +9,7 @@
         >Github repository</a
       >
     </p>
-    <iframe
+    <!-- <iframe
       src="/visualization/thesis-project"
       frameborder="0"
       height="200"
@@ -23,6 +22,6 @@
       height="200"
       width="300"
       title="Iframe Example"
-    ></iframe>
+    ></iframe> -->
   </article>
 </template>

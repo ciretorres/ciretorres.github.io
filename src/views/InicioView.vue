@@ -9,17 +9,13 @@
         I'm interested in art, data & systems to build better things for this
         freak world.
       </h2>
-      <p>
-        Currently, I'm learning about videogames & algorithms looking for new
-        challengues!
-      </p>
     </section>
 
     <section
       id="proyectos"
       aria-label="Proyectos"
     >
-      <h2>my recent projects:</h2>
+      <h2>recent projects:</h2>
 
       <nav aria-label="Secundaria proyectos">
         <ul>
@@ -35,7 +31,7 @@
             <router-link to="/web-dev">[ web frontend ]</router-link>
           </li>
           <li>
-            <router-link to="/visualization/intro"
+            <router-link to="/visualization/sankey"
               >[ visualization ]</router-link
             >
           </li>

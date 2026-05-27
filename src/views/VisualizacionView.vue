@@ -8,7 +8,7 @@
       <aside aria-label="Barra lateral">
         <nav aria-label="Secundaria Viszualization">
           <header>
-            <router-link to="/visualization/intro"
+            <router-link to="/visualization/sankey"
               ><h2>Viszualization</h2></router-link
             >
           </header>
