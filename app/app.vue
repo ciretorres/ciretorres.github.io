@@ -25,8 +25,37 @@
 </script>
 
 <template>
-  <div>
-    <NuxtPage />
+  <div class="p-3">
+    <header>
+      <nav aria-label="Principal">
+        <nuxt-link to="/"><h1>I'm Eric. web developer</h1></nuxt-link>
+      </nav>
+    </header>
+
+    <main id="principal">
+      <NuxtPage />
+    </main>
+
+    <section
+      id="contacto"
+      aria-label="Contacto"
+    >
+      <h2>
+        Code
+        <a
+          href="https://github.com/ciretorres/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Github</a>,
+        <a
+          href="https://raw.githubusercontent.com/ciretorres/ciretorres.github.io/refs/heads/develop/src/assets/docs/CV_EricTorres(english)_compressed.pdf"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          CurriculumVitae</a>.
+      </h2>
+    </section>
   <!-- <UApp>
     <UHeader>
       <template #left>
@@ -81,4 +110,3 @@
   </UApp> -->
   </div>
 </template>
-
