@@ -58,7 +58,7 @@ export default defineNuxtConfig({
     enabled: true
   },
 
-  css: ['~/assets/css/main.css'],
+  css: ['~/assets/style/main.scss'],
 
   routeRules: {
     '/': { prerender: true }

@@ -1,6 +1,19 @@
-@import './_variables.css';
+// SCSS debe ir primero
+@charset "UTF-8";
 
-@import '_normalize.css';
+@use './scss/spacing.scss';
+@use './scss/visualizacion.scss';
+
+// CSS
+
+@import './css/_variables.css';
+@import './css/_normalize.css';
+
+// @import '_mixins';
+// @import 'fonts';
+// @import 'color';
+// @import 'grid';
+// @import 'navigation';
 
 
 /* @import "tailwindcss"; */
