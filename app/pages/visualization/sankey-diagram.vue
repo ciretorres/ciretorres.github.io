@@ -213,8 +213,17 @@ const items = {
   <article>
     <h3>Sankey Diagram</h3>
 
+    <section>
+      <h4>Ejemplo con pocos datos</h4>
+      <ClientOnly>
+        <SankeyComponent sankey-id="sankey0" />
+      </ClientOnly>
+    </section>
+
     <section aria-label="Componente Diagrama de flujo">
-      <SankeyComponent :datos="items" />
+      <ClientOnly>
+        <SankeyComponent :datos="items" />
+      </ClientOnly>
     </section>
 
     <section>
@@ -226,11 +235,6 @@ const items = {
         href="https://raw.githubusercontent.com/ciretorres/ciretorres.github.io/refs/heads/develop/src/assets/data/sankey/data_sankey.json"
         download="data_sankey.json"
       >Descargar json</a>
-    </section>
-
-    <section>
-      <h4>Ejemplo con pocos datos</h4>
-      <SankeyComponent sankey-id="sankey0" />
     </section>
   </article>
 </template>
