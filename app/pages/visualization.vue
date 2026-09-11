@@ -2,8 +2,12 @@
 
 <template>
   <div>
-    <header>
-      <nuxt-link to="/visualization"><h2>VVVViszualization</h2></nuxt-link>
+    <header style="width: max-content;">
+      <nuxt-link
+        to="/visualization"
+      >
+        <h2>Viszualization</h2>
+      </nuxt-link>
     </header>
 
     <div class="container">

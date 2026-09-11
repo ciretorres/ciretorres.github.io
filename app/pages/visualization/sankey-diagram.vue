@@ -213,12 +213,12 @@ const items = {
   <article>
     <h3>Sankey Diagram</h3>
 
-    <section>
+    <!-- <section>
       <h4>Ejemplo con pocos datos</h4>
       <ClientOnly>
         <SankeyComponent sankey-id="sankey0" />
       </ClientOnly>
-    </section>
+    </section> -->
 
     <section aria-label="Componente Diagrama de flujo">
       <ClientOnly>
