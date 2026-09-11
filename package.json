@@ -16,6 +16,7 @@
     "test:watch": "vitest watch"
   },
   "dependencies": {
+    "@centrogeomx/sisdai-mapas": "git+https://github.com/CentroGeo/sisdai-mapas.git#v1.13.3",
     "@pinia/nuxt": "^1.0.2",
     "nuxt": "^4.5.2",
     "pinia": "^4.0.3",

@@ -11,9 +11,12 @@ export default defineNuxtConfig({
     // '@nuxt/ui'
   ],
 
+  ssr: true,
+
   devtools: {
     enabled: true,
   },
+
   app: {
     baseURL: '/',
     head: {
@@ -65,6 +68,18 @@ export default defineNuxtConfig({
   },
 
   compatibilityDate: '2026-06-30',
+
+  nitro: {
+    baseURL: '/',
+    preset: 'node-server',
+    compressPublicAssets: false,
+  },
+
+  vite: {
+    ssr: {
+      noExternal: ['@centrogeomx/sisdai-mapas', 'ol-displaced-points', 'circle-properties'],
+    },
+  },
 
   eslint: {
     config: {

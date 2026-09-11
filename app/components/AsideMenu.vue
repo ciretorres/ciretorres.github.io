@@ -42,12 +42,11 @@
         >
           <ul>
             <li>
-              <!-- <a
-                    href="https://github.com/ciretorres/thesis-project"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    >Thesis-project [UAM-A]</a
-                  > -->
+              <a
+                href="https://github.com/ciretorres/thesis-project"
+                target="_blank"
+                rel="noopener noreferrer"
+              >Thesis-project [UAM-A]</a>
               <!-- <router-link to="/visualization/thesis-project">Thesis-project [UAM-A]
               </router-link> -->
             </li>

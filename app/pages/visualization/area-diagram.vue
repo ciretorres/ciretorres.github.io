@@ -15,6 +15,40 @@ const datosArea = computed(() => {
   return data.value
 })
 // console.log(datosArea.value)
+
+// onMounted(() => {
+//   // TODO: hacerlo con fetch api request
+//   // fetch(public_path + 'data/centroides-crateres.json')
+//   //   .then(response => {
+//   //     // Verificar el estado de la respuesta
+//   //     if (!response.ok) {
+//   //       throw new Error('La solicitud no pudo realizarse con éxito')
+//   //     }
+//   //     // Analizar la respuesta como JSON
+//   //     return response.json()
+//   //   })
+//   //   .then(data => {
+//   //     centroides.value = data
+//   //   })
+//   //   .catch(error => {
+//   //     // Manejar errores de la solicitud
+//   //     console.warn('Error en la solicitud de los datos remotodo')
+//   //   })
+//   //---------
+//   // axios
+//   //   .get(datosA)
+//   //   .then((response) => {
+//   //     // handle data array here
+//   //     data.value = response.data
+//   //   })
+//   //   .catch((error) => {
+//   //     console.log(error)
+//   //     errored.value = true
+//   //   })
+//   //   .finally(() => {
+//   //     loading.value = true
+//   //   })
+// })
 </script>
 
 <template>
