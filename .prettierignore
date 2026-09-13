@@ -1,0 +1,52 @@
+# Dependencias
+node_modules/
+
+# Archivos generados por Nuxt
+.nuxt/
+.output/
+
+# Resultados de compilación
+dist/
+build/
+
+# Cobertura de pruebas
+coverage/
+
+# Cachés
+.cache/
+.nitro/
+.vite/
+
+# Control de versiones
+.git/
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Variables de entorno
+.env
+.env.*
+!.env.example
+
+# Source maps y archivos minimizados
+*.map
+*.min.js
+*.min.css
+
+# Lockfiles: no modificarlos con Prettier
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+bun.lockb
+
+# Archivos generados automáticamente
+*.generated.*
+*.gen.*
+
+# Archivos temporales del sistema
+.DS_Store
+Thumbs.db

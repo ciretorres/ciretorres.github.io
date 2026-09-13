@@ -11,58 +11,101 @@
     "editor.wordWrap": "on"
   },
 
-  "[css]": {
-    "editor.formatOnSave": true
-  },
-  "[scss]": {
-    "editor.formatOnSave": true
-  },
-  "[javascript]": {
-    "editor.formatOnSave": true
-  },
-  "[typescript]": {
-    "editor.defaultFormatter": "vscode.typescript-language-features"
-  },
-  "[vue]": {
-    "editor.formatOnSave": true
-  },
-  "[html]": {
-    "editor.defaultFormatter": "vscode.html-language-features",
-    "editor.formatOnSave": true
-  },
-  "[json]": {
-    "editor.formatOnSave": true
-  },
-  "[yaml]": {
-    "editor.formatOnSave": true
-  },
-
   "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.formatOnSave": true,
+  "editor.tabSize": 2,
+  "editor.insertSpaces": true,
   "editor.autoClosingBrackets": "always",
   "editor.autoClosingQuotes": "always",
   "editor.autoIndent": "advanced",
-  "editor.codeActionsOnSave": {
-    "source.fixAll": "always",
-    "source.fixAll.eslint": "always",
-    "source.fixAll.stylelint": "always",
-    "source.organizeImports": "always",
-    "source.removeUnusedImports": "always",
-    "source.sortImports": "always"
-  },
   "editor.comments.insertSpace": true,
-  "editor.formatOnSave": true,
+  "editor.codeLens": false,
   "editor.rulers": [],
-  "editor.tabSize": 2,
   "editor.trimAutoWhitespace": true,
-  // "editor.wordBreak": "normal",
-  // "editor.wordWrap": "bounded",
-  // "editor.wordWrapColumn": 80,
 
-  "eslint.codeActionsOnSave.rules": null,
-  "eslint.run": "onSave",
-  "eslint.options": {},
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": "explicit"
+  },
+
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.codeActionsOnSave": {
+      "source.fixAll.eslint": "explicit",
+      "source.organizeImports": "explicit"
+    }
+  },
+
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+
+  "[vue]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+
+  "[css]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[scss]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+
+  "[html]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+
+  "[yaml]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+
   "eslint.useFlatConfig": true,
-  "eslint.validate": ["css", "javascript", "typescript", "javascriptreact", "sass", "vue"],
+  "eslint.validate": [
+    "css",
+    "javascript",
+    "typescript",
+    "javascriptreact",
+    "sass",
+    "vue"
+  ],
+  "eslint.run": "onSave",
+
+  "files.insertFinalNewline": true,
+  "files.trimTrailingWhitespace": true,
+
+  "files.exclude": {
+    "**/.nuxt": true,
+    "**/.output": true,
+    "**/node_modules": true
+  },
+
+  "search.exclude": {
+    "**/.nuxt": true,
+    "**/.output": true,
+    "**/node_modules": true
+  },
+
+  "scss.validate": true,
+
+  "prettier.configPath": "${workspaceFolder}/.prettierrc.json",
+  "prettier.ignorePath": "{workspaceFolder}/.prettierignore",
+  "prettier.requireConfig": true,
+  "prettier.useEditorConfig": true,
+  "prettier.endOfLine": "lf",
+  "prettier.singleQuote": true,
+  "prettier.semi": false,
+  "prettier.printWidth": 80,
+  "prettier.tabWidth": 2,
+  "prettier.useTabs": false,
+  "prettier.trailingComma": "es5",
+  "prettier.bracketSpacing": true,
+  "prettier.arrowParens": "avoid",
+  "prettier.htmlWhitespaceSensitivity": "ignore",
+  "prettier.singleAttributePerLine": true,
+  "prettier.vueIndentScriptAndStyle": false,
 
   "explorer.fileNesting.enabled": true,
   "explorer.fileNesting.patterns": {
@@ -70,34 +113,5 @@
     "package.json": "package-lock.json, pnpm*, .yarnrc*, yarn*, lint-staged.config.js",
     "README.md": "LICENSE, CHANGELOG.*",
     "vite.config.*": "jsconfig*, vitest.config.*, cypress.config.*, playwright.config.*, TEST.md"
-  },
-
-  "prettier.arrowParens": "avoid",
-  "prettier.bracketSameLine": false,
-  "prettier.bracketSpacing": true,
-  "prettier.configPath": ".prettierrc.cjs",
-  "prettier.embeddedLanguageFormatting": "auto",
-  "prettier.enable": true,
-  "prettier.enableDebugLogs": false,
-  "prettier.endOfLine": "lf",
-  "prettier.experimentalTernaries": false,
-  "prettier.htmlWhitespaceSensitivity": "ignore",
-  "prettier.ignorePath": ".prettierignore",
-  "prettier.insertPragma": false,
-  "prettier.jsxSingleQuote": true,
-  "prettier.printWidth": 80,
-  "prettier.proseWrap": "always",
-  "prettier.quoteProps": "as-needed",
-  "prettier.requireConfig": true,
-  "prettier.requirePragma": false,
-  "prettier.resolveGlobalModules": false,
-  "prettier.semi": false,
-  "prettier.singleAttributePerLine": true,
-  "prettier.singleQuote": true,
-  "prettier.tabWidth": 2,
-  "prettier.trailingComma": "es5",
-  "prettier.useEditorConfig": true,
-  "prettier.useTabs": false,
-  "prettier.vueIndentScriptAndStyle": false,
-  "prettier.withNodeModules": false
+  }
 }
