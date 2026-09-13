@@ -1,61 +1,41 @@
 <script setup>
 import * as d3 from 'd3'
-import { ref } from 'vue'
+import { computed } from 'vue'
 
-import datosA from '@/assets/data/area.json'
-
-const data = ref(datosA)
+import datosAreaOriginales from '@/assets/data/area.json'
 
 // Parse data para Área
 const datosArea = computed(() => {
-  data.value.forEach((d) => {
-    d.date = d3.timeParse('%Y-%m-%d')(d.date)
-    d.value = +d.value
-  })
-  return data.value
-})
-// console.log(datosArea.value)
+  // para fecha tipo "2021-01-01"
+  const parseFecha = d3.timeParse('%Y-%m-%d')
 
-// onMounted(() => {
-//   // TODO: hacerlo con fetch api request
-//   // fetch(public_path + 'data/centroides-crateres.json')
-//   //   .then(response => {
-//   //     // Verificar el estado de la respuesta
-//   //     if (!response.ok) {
-//   //       throw new Error('La solicitud no pudo realizarse con éxito')
-//   //     }
-//   //     // Analizar la respuesta como JSON
-//   //     return response.json()
-//   //   })
-//   //   .then(data => {
-//   //     centroides.value = data
-//   //   })
-//   //   .catch(error => {
-//   //     // Manejar errores de la solicitud
-//   //     console.warn('Error en la solicitud de los datos remotodo')
-//   //   })
-//   //---------
-//   // axios
-//   //   .get(datosA)
-//   //   .then((response) => {
-//   //     // handle data array here
-//   //     data.value = response.data
-//   //   })
-//   //   .catch((error) => {
-//   //     console.log(error)
-//   //     errored.value = true
-//   //   })
-//   //   .finally(() => {
-//   //     loading.value = true
-//   //   })
-// })
+  return datosAreaOriginales
+    .map(data => ({
+      ...data,
+      date: parseFecha(data.date),
+      value: Number(data.value)
+    }))
+    .filter(d => d.date instanceof Date && !Number.isNaN(d.value))
+})
 </script>
 
 <template>
-  <article class="">
-    <h3>Area</h3>
+  <article>
+    <h3>Área</h3>
+
     <ClientOnly>
-      <AreaComponent :datos="datosArea" />
+      <AreaComponent
+        :datos="datosArea"
+        :variables="[
+          {
+            id: 'value',
+            nombre: 'Valor',
+            color: '#4CAF50'
+          }
+        ]"
+        titulo-eje-x="Fecha"
+        titulo-eje-y="Valor"
+      />
     </ClientOnly>
   </article>
 </template>
