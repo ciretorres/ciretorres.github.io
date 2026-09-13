@@ -36,6 +36,12 @@ const datosArea = computed(() => {
         titulo-eje-x="Fecha"
         titulo-eje-y="Valor"
       />
+
+      <template #fallback>
+        <div class="cargando-grafica">
+          Cargando gráfico...
+        </div>
+      </template>
     </ClientOnly>
   </article>
 </template>

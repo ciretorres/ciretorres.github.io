@@ -1,10 +1,12 @@
 <script setup>
 import * as d3 from 'd3'
-import { onMounted, onUnmounted, ref, toRefs, watch } from 'vue'
+import { computed, nextTick, onMounted, onUnmounted, ref, watch } from 'vue'
 
 const props = defineProps({
-  multilineasId: String,
-
+  multilineasId: {
+    type: String,
+    default: () => `multilineasid-${Math.random().toString(36).substring(2)}`,
+  },
   datos: {
     type: Array,
     default: () => [
@@ -16,339 +18,150 @@ const props = defineProps({
       { fecha_recoleccion: '2021-06-01', VSIN: 5 },
     ],
   },
-
   variables: {
     type: Array,
-    default: function () {
-      return [{ id: 'VSIN', nombre: 'VSIN', color: '#EFEFEF' }]
-    },
+    default: () => [{ id: 'VSIN', nombre: 'VSIN', color: '#EFEFEF' }],
+  },
+  nombreColumnaHorizontal: {
+    type: String,
+    required: true,
+  },
+  conversionTemporal: {
+    type: Function,
+    default: () => d3.timeParse('%Y-%m-%d'),
+  },
+  tituloEjeX: {
+    type: String,
+    default: '',
   },
   tituloEjeY: {
     type: String,
     default: '',
   },
-
-  tituloEjeX: {
-    type: String,
-    default: '',
-  },
-
-  nombreColumnaHorizontal: String,
-
-  conversionTemporal: {
-    type: Function,
-    default: () => d3.timeParse('%d-%m-%Y'),
-  },
-
   altoVis: {
     type: Number,
-    default: function () {
-      return 400
-    },
+    default: 400,
   },
-
   anchoTooltip: {
     type: Number,
     default: 180,
   },
-
   margin: {
     type: Object,
     default: () => ({ arriba: 10, abajo: 60, izquierda: 50, derecha: 20 }),
   },
 })
 
-const { datos, variables, margin } = toRefs(props)
+const containerRef = ref(null)
+const tooltipRef = ref(null)
+const svgRef = ref(null)
 
-const multilineaRef = ref(null)
+let svg
+let chartGroup
 
-const tooltip_data_seleccionada = ref({})
+let axisGroup
+let xAxisGroup
+let yAxisGroup
+let gridXGroup
+let gridYGroup
 
-const claves = ref([])
+let resizeObserver
 
-const svg = ref({})
-const grupo_contenedor = ref({})
-const grupo_frente = ref({})
-const grupo_fondo = ref({})
-const grupo_contenedor_ejes = ref({})
-
-const xLabel = ref({})
-const yLabel = ref({})
-
-const width = ref(100)
-const height = ref(100)
-
-const xScale = ref({})
-const yScale = ref({})
-
-const tooltip = ref({})
-
-const grupos_lineas = ref({})
-
-const xAxis = ref({})
-const yAxis = ref({})
+const width = ref(0)
+const height = ref(0)
+const xScale = ref(null)
+const yScale = ref(null)
 
 /**
- * Método para configurar las dimensiones del elemento SVG
+ * Método para renombrar la fecha_recoleccion a solo fecha
+ * y ordenarlos cronológicamente
  */
-function configurandoDimensionesParaSVG() {
-  // width.value
-  //   = document.querySelector(`#${props.multilineasId}`).clientWidth
-  //     - margin.value.derecha
-  //     - margin.value.izquierda
-  width.value
-    = multilineaRef.value.clientWidth
-      - margin.value.derecha
-      - margin.value.izquierda
+const puntos = computed(() => {
+  return props.datos
+    .map(dato => ({
+      ...dato,
+      fecha: props.conversionTemporal(
+        dato[props.nombreColumnaHorizontal],
+      ),
+    }))
+    .filter(({ fecha }) => {
+      return fecha instanceof Date
+        && !Number.isNaN(fecha.getTime())
+    })
+    .sort((a, b) => a.fecha - b.fecha)
+})
 
-  height.value = props.altoVis - margin.value.arriba - margin.value.abajo
+const idsVariables = computed(() => {
+  return props.variables.map(variable => variable.id)
+})
 
-  svg.value
-    .attr('width', width.value + margin.value.derecha + margin.value.izquierda)
-    .attr('height', height.value + margin.value.arriba + margin.value.abajo)
+/**
+ * Método para configurar dimensiones para el svg
+ */
+function calcularDimensiones() {
+  const containerWidth = containerRef.value?.clientWidth ?? 0
+
+  width.value = Math.max(
+    0,
+    containerWidth
+      - props.margin.izquierda
+      - props.margin.derecha,
+  )
+  height.value = Math.max(
+    0,
+    props.altoVis
+      - props.margin.arriba
+      - props.margin.abajo,
+  )
+
+  svg
+    .attr('width', width.value + props.margin.izquierda + props.margin.derecha)
+    .attr('height', height.value + props.margin.arriba + props.margin.abajo)
   // .style('background-color', '#efefef99') // Comentar fondo
-
-  grupo_contenedor.value.attr(
-    'transform',
-    `translate(${margin.value.izquierda},${margin.value.arriba})`,
-  )
-  grupo_frente.value.attr(
-    'transform',
-    `translate(${margin.value.izquierda},${margin.value.arriba})`,
-  )
 }
+
 /**
  * Método para configurar dimensiones para líneas
  */
-function configurandoDimensionesParaLinea() {
-  datos.value.forEach((d) => {
-    d.fech = props.conversionTemporal(d[props.nombreColumnaHorizontal])
+function calcularEscalas() {
+  if (!puntos.value.length || !idsVariables.value.length) {
+    return
+  }
+
+  // obtener las fechas
+  const fechas = puntos.value.map(d => d.fecha)
+  // los valores para esas fechas de cada variante
+  const valores = puntos.value.flatMap((dato) => {
+    return idsVariables.value
+      .map(id => Number(dato[id]))
+      .filter(Number.isFinite)
   })
+
+  if (!valores.length) {
+    return
+  }
+
   // Construyendo escalas
   // Build X scale -> it is temporal or date format
   xScale.value = d3
     .scaleTime()
-    .domain(d3.extent(datos.value.map(d => d.fech)))
+    .domain(d3.extent(fechas))
     .range([0, width.value])
 
-  claves.value = variables.value.map(d => d.id)
   // Build Y scale -> it is linear
-  if (claves.value.length !== 0) {
-    yScale.value = d3
-      .scaleLinear()
-      .domain([
-        d3.min(datos.value.map(d => d3.min(claves.value.map(dd => d[dd])))),
-        d3.max(datos.value.map(d => d3.max(claves.value.map(dd => d[dd])))),
-      ])
-      .range([height.value, 0])
+  const dominioY = d3.extent(valores)
+  // Evita un dominio con la misma cantidad mínima y máxima.
+  if (dominioY[0] === dominioY[1]) {
+    dominioY[0] -= 1
+    dominioY[1] += 1
   }
-  else {
-    yScale.value = d3.scaleLinear().domain([0, 0]).range([height.value, 0])
-  }
-  // Building axis
-  // Draw X axis
-  xAxis.value
-    .attr(
-      'transform',
-      `translate(${margin.value.izquierda}, ${height.value + margin.value.arriba})`,
-    )
-    .call(
-      d3
-        .axisBottom(xScale.value)
-        .ticks(5)
-        .tickFormat(multiFormat)
-        .tickSizeOuter(0),
-    )
-  xAxis.value
-    .selectAll('line')
-    .attr('y1', -height.value)
-    .style('stroke-dasharray', '3 2 ')
-    .style('color', '#EFEFEF')
-    .style('stroke-opacity', 0.3)
-  xAxis.value.selectAll('text').style('dominant-baseline', 'middle')
-  // Línea extra vertical hasta la derecha
-  xAxis.value
-    .append('g')
-    .attr('class', 'grid-x')
-    .call(
-      d3
-        .axisBottom(xScale.value)
-        .tickSize(-height.value, 0, 0)
-        .tickFormat('')
-        .ticks(0),
-    )
-    .style('opacity', '0.3')
-    .style('color', '#efefef')
-  // Draw Y axis
-  yAxis.value
-    .attr(
-      'transform',
-      `translate(${margin.value.izquierda}, ${margin.value.arriba})`,
-    )
-    .call(d3.axisLeft(yScale.value).ticks(4).tickSizeOuter(0))
-  yAxis.value
-    .selectAll('line')
-    .attr('x2', width.value)
-    .style('stroke-dasharray', '3 2 ')
-    .style('color', '#EFEFEF')
-    .style('stroke-opacity', 0.3)
-  // Línea extra horizontal hasta arriba
-  yAxis.value
-    .append('g')
-    .attr('class', 'grid-y')
-    .call(
-      d3
-        .axisLeft(yScale.value)
-        .tickSize(-width.value, 0, 0)
-        .tickFormat('')
-        .ticks(0),
-    )
-    .style('opacity', '0.3')
-    .style('color', '#efefef')
-
-  // Building text labels
-  // Adding label X
-  xLabel.value
-    .attr(
-      'transform',
-      `translate(${width.value * 0.5}, ${height.value + margin.value.abajo - margin.value.arriba})`,
-    )
-    .text(props.tituloEjeX)
-    .style('text-anchor', 'middle')
-    .style('font-size', '12px')
-    .style('font-weight', '600')
-    // .style('dominant-baseline', 'hanging')
-    .style('color', '#efefef')
-  // Adding label Y
-  yLabel.value
-    .attr('transform', `translate(0, ${height.value * 0.5}) rotate(-90)`)
-    .text(props.tituloEjeY)
-    .style('text-anchor', 'middle')
-    .style('font-size', '12px')
-    .style('font-weight', '600')
-    .style('dominant-baseline', 'hanging')
-    .style('color', '#efefef')
+  yScale.value = d3
+    .scaleLinear()
+    .domain(dominioY)
+    .nice()
+    .range([height.value, 0])
 }
-/**
- * Método para desplegar el tooltip individual
- */
-function mostrarTooltip(evento) {
-  const bisecetDate = d3.bisector(d => d.fech).left
-  const x0 = xScale.value.invert(evento.layerX - margin.value.izquierda)
-  const indice = bisecetDate(datos.value, x0)
-  const d0 = datos.value[indice - 1]
-  const d1 = datos.value[indice]
-  if ((d0 !== undefined) & (d1 !== undefined)) {
-    const datum = x0 - d0.fech > d1.fech - x0 ? d1 : d0
-    const datos_y = claves.value
-      .map(d => [d, datum[d]])
-      .sort((a, b) => d3.ascending(a[1], b[1]))
 
-    const bisectCantidad = d3.bisector(d => d).center
-    const y0 = yScale.value.invert(evento.layerY - margin.value.arriba)
-    const indiceY = bisectCantidad(
-      datos_y.map(d => d[1]),
-      y0,
-    )
-
-    tooltip_data_seleccionada.value = {
-      fech: datum.fech,
-      id: datos_y[indiceY][0],
-      cat: datum[datos_y[indiceY][0]],
-      ...props.variables.filter(d => d.id === datos_y[indiceY][0])[0],
-    }
-    // Change tooltip position from cursor depending the hover line
-    tooltip.value
-      .style('visibility', 'visible')
-      .style(
-        'left',
-        evento.layerX - margin.value.izquierda < 0.6 * width.value
-          ? evento.layerX + 10 + 'px'
-          : +evento.layerX - props.anchoTooltip - 20 + 'px',
-      )
-      .style('top', evento.layerY + 'px')
-      .attr('width', props.anchoTooltip)
-      .attr('height', 30)
-
-    const contenido_tooltip = tooltip.value
-      .select('div.tooltip-contenido')
-      .style('background', tooltip_data_seleccionada.value.color)
-      .style('opacity', 0.9)
-      .style('border-radius', '8px')
-      .style('width', props.anchoTooltip + 'px')
-      .style('padding', '0 3px 0 10px')
-
-    const entidad = variables.value.filter(
-      d => d.id === tooltip_data_seleccionada.value.id,
-    )[0]
-    const textoTooltip = `
-      <p>variable: ${entidad.nombre}<br/>
-        <b>value: ${tooltip_data_seleccionada.value.cat.toLocaleString('en')}</b> <br/>
-        date: ${tooltip_data_seleccionada.value.fech
-          .toLocaleDateString('en-GB')
-          .replaceAll('/', '-')}</p>`
-
-    contenido_tooltip
-      .select('div.tooltip-cifras')
-      .html(textoTooltip)
-      .style('margin', '0')
-      .style('padding', '0 0 5px 0')
-
-    contenido_tooltip
-      .transition()
-      .duration(100)
-      .style('background', tooltip_data_seleccionada.value.color)
-    tooltip.value
-      .style('height', contenido_tooltip.style('height'))
-      .style('width', contenido_tooltip.style('width'))
-  }
-}
-function cerrarTooltip() {
-  tooltip.value.style('visibility', 'hidden')
-}
-/**
- * Método para crear los paths del área
- */
-function creandoLineas() {
-  // Remove all lines created
-  grupo_contenedor.value.selectAll('g.grupos-lineas').remove()
-  // Join path with color values
-  const grupos_series = grupo_contenedor.value
-    .selectAll('grupos-lineas')
-    .data(variables.value)
-    .enter()
-    .append('g')
-    .attr('class', 'grupos-lineas')
-
-  grupos_lineas.value = grupos_series
-    .style('fill', 'none')
-    .style('stroke', d => d.color)
-    .style('stroke-width', '1.5px')
-    .selectAll('lineas')
-    .data((d) => {
-      return [
-        datos.value.map(dd => ({
-          fech: dd.fech,
-          cat: dd[d.id],
-          color: d.color,
-          id: d.id,
-          resaltado: d.resaltado,
-        })),
-      ]
-    })
-    .enter()
-    .append('path')
-    .attr('class', 'lineas')
-  // Event the tooltip
-  svg.value
-    .on('mousemove', (evento) => {
-      mostrarTooltip(evento)
-    })
-    .on('click', (evento) => {
-      mostrarTooltip(evento)
-    })
-    .on('mouseout', cerrarTooltip)
-}
 /**
  * Método para traducir el formato de fecha
  */
@@ -429,167 +242,480 @@ function multiFormat(date) {
                 : formatMonthYear
   )(date)
 }
-function actualizandoLineas() {
-  /**
-   * Método para actualizar los paths trazados de línea
+
+function actualizarEjes() {
+  if (!xScale.value || !yScale.value) {
+    return
+  }
+
+  // Building axis
+  // Draw X axis
+  xAxisGroup
+    .attr(
+      'transform',
+      `translate(${props.margin.izquierda}, ${props.margin.arriba + height.value})`,
+    )
+    .call(
+      d3.axisBottom(xScale.value)
+        // .ticks(5)
+        .ticks(Math.max(2, Math.floor(width.value / 100)))
+        .tickFormat(multiFormat)
+        .tickSizeOuter(0),
+    )
+  // Draw Y axis
+  yAxisGroup
+    .attr(
+      'transform',
+      `translate(${props.margin.izquierda}, ${props.margin.arriba})`,
+    )
+    .call(
+      d3.axisLeft(yScale.value)
+        .ticks(5)
+        .tickSizeOuter(0),
+    )
+
+  gridXGroup
+    .attr(
+      'transform',
+      `translate(${props.margin.izquierda}, ${props.margin.arriba + height.value})`,
+    )
+    .call(
+      d3.axisBottom(xScale.value)
+        .ticks(5)
+        .tickSize(-height.value)
+        .tickFormat(''),
+    )
+
+  gridYGroup
+    .attr('transform', `translate(${props.margin.izquierda}, ${props.margin.arriba})`)
+    .call(
+      d3.axisLeft(yScale.value)
+        .ticks(5)
+        .tickSize(-width.value)
+        .tickFormat(''),
+    )
+
+  axisGroup
+    .selectAll('.domain')
+    .attr('stroke', 'currentColor')
+
+  // Estilos generales de los grid de ambos ejes
+  axisGroup
+    .selectAll('.tick line')
+    .style('stroke-dasharray', '3 2 ')
+    .style('color', '#EFEFEF')
+    .style('stroke-opacity', 0.3)
+
+  axisGroup
+    .selectAll('.tick text')
+    .attr('font-size', 11)
+}
+
+/**
+ * Método para crear y actualizar los paths trazados de línea
+ */
+function actualizarLineas() {
+  if (!xScale.value || !yScale.value) {
+    return
+  }
+
+  const line = d3
+    .line()
+    .defined(d => Number.isFinite(Number(d.valor)))
+    .x(d => xScale.value(d.fecha))
+    .y(d => yScale.value(Number(d.valor)))
+
+  const series = props.variables.map(variable => ({
+    ...variable,
+    valores: puntos.value.map(dato => ({
+      fecha: dato.fecha,
+      valor: dato[variable.id],
+    })),
+  }))
+
+  chartGroup
+    .selectAll('g.grupo-linea')
+    .data(series, d => d.id)
+    .join(
+      enter => {
+        const grupo = enter
+          .append('g')
+          .attr('class', 'grupo-linea')
+
+        grupo
+          .append('path')
+          .attr('class', 'linea')
+
+        return grupo
+      },
+      update => update,
+      exit => exit.remove(),
+    )
+    .attr('color', d => d.color)
+    .select('path')
+    .attr('fill', 'none')
+    .attr('stroke', d => d.color)
+    .attr('stroke-width', 1.5)
+    .attr('d', d => line(d.valores))
+}
+
+// método para configurar y renderizar todo de un jalón
+function renderizar() {
+  if (!svg || !containerRef.value) {
+    return
+  }
+
+  calcularDimensiones()
+  calcularEscalas()
+  actualizarEjes()
+  actualizarLineas()
+}
+
+function posicionarTooltip(tooltip, mouseX, mouseY) {
+  const tooltipNode = tooltip.node()
+  const containerNode = containerRef.value
+
+  if (!tooltipNode || !containerNode) {
+    return
+  }
+
+  const separacion = 12
+
+  // El tooltip debe estar visible antes de calcular su tamaño.
+  tooltip.style('visibility', 'visible')
+
+  const anchoTooltip = tooltipNode.offsetWidth
+  const altoTooltip = tooltipNode.offsetHeight
+  const anchoContenedor = containerNode.clientWidth
+  const altoContenedor = containerNode.clientHeight
+
+  // Posición horizontal del tooltip
+  let left = mouseX + separacion
+  // Posición vertical del tooltip
+  let top = mouseY + separacion
+
+  // Si no cabe a la derecha, se coloca a la izquierda.
+  if (left + anchoTooltip > anchoContenedor) {
+    left = mouseX - anchoTooltip - separacion
+  }
+
+  // Evita que se salga por la izquierda.
+  if (left < 4) {
+    left = 4
+  }
+
+  // Evita que se salga por la derecha.
+  if (left + anchoTooltip > anchoContenedor) {
+    left = anchoContenedor - anchoTooltip - 4
+  }
+
+  // Si no cabe debajo del cursor, se coloca arriba.
+  if (top + altoTooltip > altoContenedor) {
+    top = mouseY - altoTooltip - separacion
+  }
+
+  // Evita que se salga por arriba.
+  if (top < 4) {
+    top = 4
+  }
+
+  tooltip
+    .style('left', `${left}px`)
+    .style('top', `${top}px`)
+}
+
+// Método para desaparecer el tooltip
+function ocultarTooltip() {
+  if (!tooltipRef.value) {
+    return
+  }
+
+  d3.select(tooltipRef.value)
+    .style('visibility', 'hidden')
+}
+
+/**
+ * Método para mostrar el tooltip comparando con el areaInteracción
+ * @param event evento
+ */
+function mostrarTooltip(event) {
+  if (!xScale.value || !yScale.value || !puntos.value.length || !tooltipRef.value) {
+    return
+  }
+
+  // Coordenadas relativas al SVG completo
+  const [mouseX, mouseY] = d3.pointer(event, svg.node())
+
+  // Convertimos la posición horizontal en una fecha
+  const fechaMouse = xScale.value.invert(
+    mouseX - props.margin.izquierda,
+  )
+
+  // Buscamos la posición más cercana en los datos
+  const bisectorDate = d3.bisector(d => d.fecha).left
+  const index = bisectorDate(puntos.value, fechaMouse)
+
+  let dato
+
+  if (index <= 0) {
+    dato = puntos.value[0]
+  }
+  else if (index >= puntos.value.length) {
+    dato = puntos.value[puntos.value.length - 1]
+  }
+  else {
+    // Compara los datos anterior y siguiente
+    const anterior = puntos.value[index - 1]
+    const siguiente = puntos.value[index]
+
+    dato =
+      fechaMouse - anterior.fecha
+        <= siguiente.fecha - fechaMouse
+        ? anterior
+        : siguiente
+  }
+
+  const tooltip = d3.select(tooltipRef.value)
+
+  const valores = props.variables
+    .map(variable => ({
+      id: variable.id,
+      nombre: variable.nombre ?? variable.id,
+      color: variable.color ?? '#333',
+      valor: dato[variable.id],
+    }))
+    .filter(item => {
+      return item.valor !== null
+        && item.valor !== undefined
+        && Number.isFinite(Number(item.valor))
+    })
+
+  /*
+   * fecha_recoleccion original recibida en el objeto.
+   * Por ejemplo: "2021-01-01"
    */
-  grupos_lineas.value.attr('d', (dd) => {
-    return d3
-      .line()
-      .x(d => xScale.value(d.fech))
-      .y(d => yScale.value(d.cat))(dd)
+  const fechaOriginal = dato[props.nombreColumnaHorizontal]
+
+  tooltip
+    .select('.tooltip-fecha-label')
+    .text('Fecha de recolección:')
+
+  tooltip
+    .select('.tooltip-fecha-valor')
+    .text(fechaOriginal)
+
+
+  const filas = tooltip
+    .select('.tooltip-cifras')
+    .selectAll('.tooltip-fila')
+    .data(valores, d => d.id)
+
+  const filasEnter = filas
+    .enter()
+    .append('div')
+    .attr('class', 'tooltip-fila')
+
+  filasEnter
+    .append('span')
+    .attr('class', 'tooltip-color')
+
+  filasEnter
+    .append('span')
+    .attr('class', 'tooltip-nombre')
+
+  filasEnter
+    .append('span')
+    .attr('class', 'tooltip-valor')
+
+  filas
+    .merge(filasEnter)
+    .each(function (d) {
+      const fila = d3.select(this)
+
+      fila
+        .select('.tooltip-color')
+        .style('display', 'inline-block')
+        .style('width', '10px')
+        .style('height', '10px')
+        .style('min-width', '10px')
+        .style('border-radius', '50%')
+        .style('background-color', d.color)
+        .style('margin-right', '6px')
+
+      fila
+        .select('.tooltip-nombre')
+        .text(`${d.id}:`)
+
+      fila
+        .select('.tooltip-valor')
+        .text(Number(d.valor).toLocaleString('es-ES'))
+    })
+
+  filas.exit().remove()
+
+  // Debe ejecutarse después de agregar la fecha y las filas.
+  posicionarTooltip(tooltip, mouseX, mouseY)
+}
+
+function inicializar() {
+  // Inicializar selecciones de elementos de D3
+  svg = d3.select(svgRef.value)
+
+  chartGroup = svg.select('.grupo-contenedor-multilineas')
+  axisGroup = svg.select('.grupo-fondo')
+
+  xAxisGroup = svg.select('.eje-x')
+  yAxisGroup = svg.select('.eje-y')
+  gridXGroup = svg.select('.grid-x')
+  gridYGroup = svg.select('.grid-y')
+
+  // el tooltip se hace sensible al svg
+  svg
+    .on('mousemove.chart', mostrarTooltip)
+    .on('mouseleave.chart', ocultarTooltip)
+
+  renderizar()
+
+  resizeObserver = new ResizeObserver(() => {
+    renderizar()
   })
-}
-function reescalandoPantalla() {
-  configurandoDimensionesParaSVG()
-  configurandoDimensionesParaLinea()
-  actualizandoLineas()
+  resizeObserver.observe(containerRef.value)
 }
 
-onMounted(() => {
-  // Asigna elementos a variables
-  claves.value = variables.value.map(d => d.id)
-
-  svg.value = d3.select('div#' + props.multilineasId + ' svg.svg-multilineas')
-  grupo_contenedor.value = svg.value.select('g.grupo-contenedor-multilineas')
-  grupo_frente.value = svg.value.select('g.grupo-frente')
-  grupo_fondo.value = svg.value.select('g.grupo-fondo')
-
-  grupo_contenedor_ejes.value = svg.value.select('g.grupo-contenedor-ejes')
-
-  xAxis.value = grupo_fondo.value.select('g.eje-x')
-  yAxis.value = grupo_fondo.value.select('g.eje-y')
-
-  xLabel.value = grupo_contenedor_ejes.value
-    .append('text')
-    .attr('class', 'label-x')
-
-  yLabel.value = grupo_contenedor_ejes.value
-    .append('text')
-    .attr('class', 'label-y')
-
-  configurandoDimensionesParaSVG()
-  configurandoDimensionesParaLinea()
-  creandoLineas()
-  actualizandoLineas()
-
-  tooltip.value = d3.select('div#' + props.multilineasId).select('div.tooltip')
-
-  // window.addEventListener('resize', reescalandoPantalla)
+onMounted(async () => {
+  await nextTick()
+  inicializar()
 })
+
+watch(
+  [
+    () => props.datos,
+    () => props.variables,
+    () => props.margin,
+    () => props.altoVis,
+  ],
+  renderizar,
+  { deep: true, flush: 'post' },
+)
+
 onUnmounted(() => {
-  // window.removeEventListener('resize', reescalandoPantalla)
-})
-watch(variables, () => {
-  configurandoDimensionesParaSVG()
-  configurandoDimensionesParaLinea()
-  creandoLineas()
-  actualizandoLineas()
-})
-watch(datos, () => {
-  configurandoDimensionesParaSVG()
-  configurandoDimensionesParaLinea()
-  creandoLineas()
-  actualizandoLineas()
-})
-watch(margin, () => {
-  reescalandoPantalla()
+  resizeObserver?.disconnect()
+  svg?.on('.chart', null)
 })
 </script>
+
 
 <template>
   <div
     :id="multilineasId"
-    ref="multilineaRef"
+    ref="containerRef"
     class="contenedor-lineas"
   >
     <div class="contenedor-tooltip-svg">
-      <div class="tooltip">
-        <div class="tooltip-contenido">
-          <div class="contenedor-boton-cerrar">
-            <button
-              class="boton-cerrar-tooltip"
-              @click="cerrarTooltip"
-            >
-              Cerrar
-            </button>
-          </div>
-          <div class="tooltip-cifras" />
+      <div ref="tooltipRef" class="tooltip">
+        <button
+          class="boton-cerrar-tooltip"
+          type="button"
+          @click="ocultarTooltip"
+        >
+          x
+        </button>
+
+        <div class="tooltip-fecha" >
+          <div class="tooltip-fecha-label"/>
+          <div class="tooltip-fecha-valor"/>
         </div>
+        <div class="tooltip-cifras" />
       </div>
 
-      <svg class="svg-multilineas">
+      <svg
+        ref="svgRef"
+        class="svg-multilineas"
+      >
         <g class="grupo-fondo">
+          <g class="grid-x" />
+          <g class="grid-y" />
           <g class="eje-x" />
           <g class="eje-y" />
         </g>
-        <g class="grupo-contenedor-multilineas" />
-        <g class="grupo-contenedor-ejes" />
-        <g class="grupo-frente" />
+
+        <g
+          class="grupo-contenedor-multilineas"
+          :transform="`translate(${margin.izquierda}, ${margin.arriba})`"
+        />
       </svg>
     </div>
   </div>
 </template>
 
+
 <style lang="scss" scoped>
-div.contenedor-tooltip-svg {
+.contenedor-tooltip-svg {
   position: relative;
-  svg {
-    z-index: 1;
-  }
+  width: 100%;
 
-  div.tooltip {
-    color: #000;
-    font-size: 12px;
+  .tooltip {
     position: absolute;
-    z-index: 2;
+    z-index: 10;
+    width: max-content;
+    min-width: 180px;
+    max-width: 280px;
+    box-sizing: border-box;
+    padding: 8px 10px;
+    color: #222;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 3px 12px rgb(0 0 0 / 18%);
+    font-size: 12px;
+    pointer-events: none;
     visibility: hidden;
-  }
 
-  div.tooltip div.tooltip-cifras {
-    padding-bottom: 5px;
+    .boton-cerrar-tooltip {
+      pointer-events: auto;
+      display: block;
+      margin-left: auto;
+      border: 0;
+      background: transparent;
+      font-size: 20px;
+      cursor: pointer;
+    }
 
-    p {
-      margin: 3px;
+    .tooltip-fecha {
+      margin-bottom: 6px;
+      padding-bottom: 5px;
+      border-bottom: 1px solid #ddd;
 
-      span.nomenclatura-tooltip {
-        width: 10px;
-        height: 10px;
-        border-radius: 50%;
-        border: solid 1px rgba(255, 255, 255, 0.7);
-        display: inline-block;
+      .tooltip-fecha-label {
+        font-weight: 600;
+      }
+
+      .tooltip-fecha-valor {
+        margin-top: 2px;
       }
     }
   }
+}
 
-  div.tooltip div.contenedor-boton-cerrar {
-    height: auto;
-    display: flex;
-    width: 100%;
-    padding-top: 5px;
-    font-weight: 600;
-  }
+.tooltip-fila {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin: 4px 0;
+}
 
-  div.tooltip button.boton-cerrar-tooltip {
-    background: #fff;
-    border: none;
-    font-size: 30px;
-    line-height: 0.9;
-    font-weight: 300;
-    padding: 0 5px;
-    border-radius: 5px;
-    margin: 0 0 0 auto;
-    cursor: pointer;
+.tooltip-color {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
 
-    @media (min-width: 768px) {
-      display: none;
-    }
+.tooltip-nombre {
+  margin-right: 4px;
+}
 
-    img {
-      width: 30px;
-      height: 30px;
-      float: right;
-    }
-  }
+.tooltip-valor {
+  font-weight: 600;
 }
 </style>

@@ -5,7 +5,7 @@ import { onMounted, onUnmounted, ref, toRefs, watch } from 'vue'
 const props = defineProps({
   areaId: {
     type: String,
-    default: () => `area-${Math.random().toString(36).substring(2)}`
+    default: () => `areaid-${Math.random().toString(36).substring(2)}`
   },
   datos: {
     type: Array,
@@ -21,7 +21,6 @@ const props = defineProps({
       return [{ id: 'value', nombre: 'value', color: '#FFFFFF' }]
     }
   },
-
   tituloEjeY: {
     type: String,
     default: 'Título eje y'
@@ -51,6 +50,10 @@ const props = defineProps({
 
 const { datos, variables, margin } = toRefs(props)
 
+const areaRef = ref(null)
+const tooltipRef = ref(null)
+const svgRef = ref(null)
+
 let svg
 let grupoContenedor
 let grupoFrente
@@ -75,10 +78,6 @@ let tooltip
 let resizeObserver
 let areaInteraccion
 
-const areaRef = ref(null)
-const tooltipRef = ref(null)
-
-const svgRef = ref(null)
 const widthLimit = 769
 
 /**
@@ -284,12 +283,10 @@ function renderizarEjes() {
   const colorTexto = '#FFFFFF'
   const colorGrid = 'rgba(255, 255, 255, 0.25)'
 
+  // Building axis
   // Eje X
   xAxis
-    .attr(
-      'transform',
-      `translate(0, ${height})`
-    )
+    .attr('transform', `translate(0, ${height})`)
     .call(
       d3
         .axisBottom(xScale)
@@ -300,7 +297,6 @@ function renderizarEjes() {
         .tickPadding(10)
         .tickFormat(multiFormat)
     )
-
   // Eje Y
   yAxis
     .call(
@@ -406,6 +402,12 @@ function renderizarGrafico() {
   renderizarArea()
 }
 
+// Método para desaparecer el tooltip
+function cerrarTooltip() {
+  if (!tooltip) return
+  tooltip.style('visibility', 'hidden')
+}
+
 /**
  * Método para mostrar el tooltip comparando con el areaInteracción
  * @param evento evento
@@ -484,6 +486,7 @@ function mostrarTooltip(evento) {
   // Mostrar temporalmente para poder medir sus dimensiones
   tooltip.style('visibility', 'hidden')
 
+  // posicionar tooltip
   const tooltipNode = tooltip.node()
   const tooltipWidth = tooltipNode?.offsetWidth || props.anchoTooltip
   const tooltipHeight = tooltipNode?.offsetHeight || 0
@@ -505,14 +508,6 @@ function mostrarTooltip(evento) {
     .style('left', `${posicionLeft}px`)
     .style('top', `${posicionTop}px`)
     .style('visibility', 'visible')
-}
-
-/**
- * Método para desaparecer el tooltip
- */
-function cerrarTooltip() {
-  if (!tooltip) return
-  tooltip.style('visibility', 'hidden')
 }
 
 // Configura mousemove, click y mouseleave
@@ -615,64 +610,64 @@ watch([datos, variables, margin],
 </template>
 
 <style lang="scss" scoped>
-rect.area-interaccion {
-  fill: transparent;
-  pointer-events: all;
-}
-
 .contenedor-area {
   position: relative;
   width: 100%;
   overflow: hidden; // evita que el tooltip cree scroll
-}
 
-.svg-area {
-  display: block;
-  width: 100%;
-  position: relative;
-  z-index: 1;
-}
+  .svg-area {
+    display: block;
+    width: 100%;
+    position: relative;
+    z-index: 1;
 
-.contenedor-tooltip {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 2;
-  pointer-events: none;
-  overflow: visible;
-}
-
-.tooltip {
-  position: absolute;
-  visibility: hidden;
-  color: #fff;
-  font-size: 12px;
-  pointer-events: none;
-  white-space: nowrap;
-}
-
-.tooltip-contenido {
-  background: rgba(0, 0, 0, 0.85);
-  border-radius: 8px;
-  width: max-content;
-  max-width: 240px;
-  padding: 5px 8px;
-}
-
-.tooltip-cifras {
-  padding-bottom: 5px;
-
-  p {
-    margin: 3px;
+    rect.area-interaccion {
+      fill: transparent;
+      pointer-events: all;
+    }
   }
 
-  .nomenclatura-tooltip {
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
-    border: solid 1px rgba(255, 255, 255, 0.7);
-    display: inline-block;
+  .contenedor-tooltip {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    pointer-events: none;
+    overflow: visible;
+
+    .tooltip {
+      position: absolute;
+      visibility: hidden;
+      color: #fff;
+      font-size: 12px;
+      pointer-events: none;
+      white-space: nowrap;
+
+      .tooltip-contenido {
+        background: rgba(0, 0, 0, 0.85);
+        border-radius: 8px;
+        width: max-content;
+        max-width: 240px;
+        padding: 5px 8px;
+
+        .tooltip-cifras {
+          padding-bottom: 5px;
+
+          p {
+            margin: 3px;
+          }
+
+          .nomenclatura-tooltip {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            border: solid 1px rgba(255, 255, 255, 0.7);
+            display: inline-block;
+          }
+        }
+      }
+    }
   }
 }
 </style>
