@@ -33,6 +33,8 @@ store.setMuestras(muestras)
       <HeatmapComponent
         v-else
         :data="store.muestrasFiltradas"
+        titulo="Distribución de muestras"
+        file-name="distribucion-muestras"
       />
     </ClientOnly>
   </section>
