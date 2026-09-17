@@ -1,5 +1,5 @@
-{
-  "0": {
+[
+  {
     "cve_edo": "01",
     "estado": "a",
     "abreviatura_ent": "A",
@@ -8,7 +8,7 @@
     "variante_oms": "3.1",
     "cantidad_muestras": 6
   },
-  "1": {
+  {
     "cve_edo": "01",
     "estado": "a",
     "abreviatura_ent": "A",
@@ -17,7 +17,7 @@
     "variante_oms": "1.4",
     "cantidad_muestras": 1
   },
-  "2": {
+  {
     "cve_edo": "01",
     "estado": "a",
     "abreviatura_ent": "A",
@@ -26,7 +26,7 @@
     "variante_oms": "1.3",
     "cantidad_muestras": 2
   },
-  "3": {
+  {
     "cve_edo": "01",
     "estado": "a",
     "abreviatura_ent": "A",
@@ -35,7 +35,7 @@
     "variante_oms": "4.5",
     "cantidad_muestras": 21
   },
-  "4": {
+  {
     "cve_edo": "01",
     "estado": "a",
     "abreviatura_ent": "A",
@@ -44,7 +44,7 @@
     "variante_oms": "4.4",
     "cantidad_muestras": 3
   },
-  "5": {
+  {
     "cve_edo": "01",
     "estado": "a",
     "abreviatura_ent": "A",
@@ -53,7 +53,7 @@
     "variante_oms": "5.5",
     "cantidad_muestras": 7
   },
-  "6": {
+  {
     "cve_edo": "01",
     "estado": "a",
     "abreviatura_ent": "A",
@@ -62,7 +62,7 @@
     "variante_oms": "5.3",
     "cantidad_muestras": 3
   },
-  "7": {
+  {
     "cve_edo": "01",
     "estado": "a",
     "abreviatura_ent": "A",
@@ -71,7 +71,7 @@
     "variante_oms": "B.1.1.322",
     "cantidad_muestras": 1
   },
-  "8": {
+  {
     "cve_edo": "01",
     "estado": "a",
     "abreviatura_ent": "A",
@@ -80,7 +80,7 @@
     "variante_oms": "B.1.1.344",
     "cantidad_muestras": 4
   },
-  "9": {
+  {
     "cve_edo": "01",
     "estado": "a",
     "abreviatura_ent": "A",
@@ -89,7 +89,7 @@
     "variante_oms": "B.1.1.512",
     "cantidad_muestras": 2
   },
-  "10": {
+  {
     "cve_edo": "01",
     "estado": "a",
     "abreviatura_ent": "A",
@@ -98,7 +98,7 @@
     "variante_oms": "B.1.1.517",
     "cantidad_muestras": 1
   },
-  "11": {
+  {
     "cve_edo": "01",
     "estado": "a",
     "abreviatura_ent": "A",
@@ -107,7 +107,7 @@
     "variante_oms": "B.1.2",
     "cantidad_muestras": 8
   },
-  "12": {
+  {
     "cve_edo": "01",
     "estado": "a",
     "abreviatura_ent": "A",
@@ -116,7 +116,7 @@
     "variante_oms": "5.4",
     "cantidad_muestras": 1
   },
-  "13": {
+  {
     "cve_edo": "01",
     "estado": "a",
     "abreviatura_ent": "A",
@@ -125,7 +125,7 @@
     "variante_oms": "B.1.36.10",
     "cantidad_muestras": 1
   },
-  "14": {
+  {
     "cve_edo": "01",
     "estado": "a",
     "abreviatura_ent": "A",
@@ -134,7 +134,7 @@
     "variante_oms": "B.1.396",
     "cantidad_muestras": 6
   },
-  "15": {
+  {
     "cve_edo": "01",
     "estado": "a",
     "abreviatura_ent": "A",
@@ -143,7 +143,7 @@
     "variante_oms": "B.1.404",
     "cantidad_muestras": 6
   },
-  "16": {
+  {
     "cve_edo": "01",
     "estado": "a",
     "abreviatura_ent": "A",
@@ -152,7 +152,7 @@
     "variante_oms": "B.1.558",
     "cantidad_muestras": 1
   },
-  "17": {
+  {
     "cve_edo": "01",
     "estado": "a",
     "abreviatura_ent": "A",
@@ -161,7 +161,7 @@
     "variante_oms": "B.1.561",
     "cantidad_muestras": 2
   },
-  "18": {
+  {
     "cve_edo": "01",
     "estado": "a",
     "abreviatura_ent": "A",
@@ -170,7 +170,7 @@
     "variante_oms": "B.1.596",
     "cantidad_muestras": 1
   },
-  "19": {
+  {
     "cve_edo": "01",
     "estado": "a",
     "abreviatura_ent": "A",
@@ -179,7 +179,7 @@
     "variante_oms": "5.2",
     "cantidad_muestras": 2
   },
-  "20": {
+  {
     "cve_edo": "01",
     "estado": "a",
     "abreviatura_ent": "A",
@@ -188,7 +188,7 @@
     "variante_oms": "C.23",
     "cantidad_muestras": 1
   },
-  "21": {
+  {
     "cve_edo": "02",
     "estado": "b",
     "abreviatura_ent": "B",
@@ -197,7 +197,7 @@
     "variante_oms": "5.5",
     "cantidad_muestras": 2
   },
-  "22": {
+  {
     "cve_edo": "02",
     "estado": "b",
     "abreviatura_ent": "B",
@@ -206,7 +206,7 @@
     "variante_oms": "B.1.2",
     "cantidad_muestras": 1
   },
-  "23": {
+  {
     "cve_edo": "02",
     "estado": "b",
     "abreviatura_ent": "B",
@@ -215,7 +215,7 @@
     "variante_oms": "5.4",
     "cantidad_muestras": 2
   },
-  "24": {
+  {
     "cve_edo": "02",
     "estado": "b",
     "abreviatura_ent": "B",
@@ -224,7 +224,7 @@
     "variante_oms": "B.1.397",
     "cantidad_muestras": 2
   },
-  "25": {
+  {
     "cve_edo": "02",
     "estado": "b",
     "abreviatura_ent": "B",
@@ -233,7 +233,7 @@
     "variante_oms": "B.1.558",
     "cantidad_muestras": 1
   },
-  "26": {
+  {
     "cve_edo": "02",
     "estado": "b",
     "abreviatura_ent": "B",
@@ -242,7 +242,7 @@
     "variante_oms": "5.2",
     "cantidad_muestras": 1
   },
-  "27": {
+  {
     "cve_edo": "02",
     "estado": "b",
     "abreviatura_ent": "B",
@@ -251,7 +251,7 @@
     "variante_oms": "3.1",
     "cantidad_muestras": 4
   },
-  "28": {
+  {
     "cve_edo": "02",
     "estado": "b",
     "abreviatura_ent": "B",
@@ -260,7 +260,7 @@
     "variante_oms": "1.4",
     "cantidad_muestras": 9
   },
-  "29": {
+  {
     "cve_edo": "02",
     "estado": "b",
     "abreviatura_ent": "B",
@@ -269,7 +269,7 @@
     "variante_oms": "1.2",
     "cantidad_muestras": 2
   },
-  "30": {
+  {
     "cve_edo": "02",
     "estado": "b",
     "abreviatura_ent": "B",
@@ -278,7 +278,7 @@
     "variante_oms": "1.3",
     "cantidad_muestras": 5
   },
-  "31": {
+  {
     "cve_edo": "02",
     "estado": "b",
     "abreviatura_ent": "B",
@@ -287,7 +287,7 @@
     "variante_oms": "4.5",
     "cantidad_muestras": 9
   },
-  "32": {
+  {
     "cve_edo": "02",
     "estado": "b",
     "abreviatura_ent": "B",
@@ -296,7 +296,7 @@
     "variante_oms": "4.4",
     "cantidad_muestras": 11
   },
-  "33": {
+  {
     "cve_edo": "02",
     "estado": "b",
     "abreviatura_ent": "B",
@@ -305,7 +305,7 @@
     "variante_oms": "A.5",
     "cantidad_muestras": 2
   },
-  "34": {
+  {
     "cve_edo": "02",
     "estado": "b",
     "abreviatura_ent": "B",
@@ -314,7 +314,7 @@
     "variante_oms": "5.5",
     "cantidad_muestras": 26
   },
-  "35": {
+  {
     "cve_edo": "02",
     "estado": "b",
     "abreviatura_ent": "B",
@@ -323,7 +323,7 @@
     "variante_oms": "5.3",
     "cantidad_muestras": 1
   },
-  "36": {
+  {
     "cve_edo": "02",
     "estado": "b",
     "abreviatura_ent": "B",
@@ -332,7 +332,7 @@
     "variante_oms": "B.1.1.432",
     "cantidad_muestras": 1
   },
-  "37": {
+  {
     "cve_edo": "02",
     "estado": "b",
     "abreviatura_ent": "B",
@@ -341,7 +341,7 @@
     "variante_oms": "B.1.2",
     "cantidad_muestras": 1
   },
-  "38": {
+  {
     "cve_edo": "02",
     "estado": "b",
     "abreviatura_ent": "B",
@@ -350,7 +350,7 @@
     "variante_oms": "B.1.241",
     "cantidad_muestras": 1
   },
-  "39": {
+  {
     "cve_edo": "02",
     "estado": "b",
     "abreviatura_ent": "B",
@@ -359,7 +359,7 @@
     "variante_oms": "5.4",
     "cantidad_muestras": 52
   },
-  "40": {
+  {
     "cve_edo": "02",
     "estado": "b",
     "abreviatura_ent": "B",
@@ -368,7 +368,7 @@
     "variante_oms": "B.1.245",
     "cantidad_muestras": 1
   },
-  "41": {
+  {
     "cve_edo": "02",
     "estado": "b",
     "abreviatura_ent": "B",
@@ -377,7 +377,7 @@
     "variante_oms": "B.1.320",
     "cantidad_muestras": 17
   },
-  "42": {
+  {
     "cve_edo": "02",
     "estado": "b",
     "abreviatura_ent": "B",
@@ -386,7 +386,7 @@
     "variante_oms": "B.1.324",
     "cantidad_muestras": 1
   },
-  "43": {
+  {
     "cve_edo": "02",
     "estado": "b",
     "abreviatura_ent": "B",
@@ -395,7 +395,7 @@
     "variante_oms": "B.1.36.10",
     "cantidad_muestras": 3
   },
-  "44": {
+  {
     "cve_edo": "02",
     "estado": "b",
     "abreviatura_ent": "B",
@@ -404,7 +404,7 @@
     "variante_oms": "B.1.397",
     "cantidad_muestras": 1
   },
-  "45": {
+  {
     "cve_edo": "02",
     "estado": "b",
     "abreviatura_ent": "B",
@@ -413,7 +413,7 @@
     "variante_oms": "B.1.399",
     "cantidad_muestras": 2
   },
-  "46": {
+  {
     "cve_edo": "02",
     "estado": "b",
     "abreviatura_ent": "B",
@@ -422,7 +422,7 @@
     "variante_oms": "B.1.400",
     "cantidad_muestras": 1
   },
-  "47": {
+  {
     "cve_edo": "02",
     "estado": "b",
     "abreviatura_ent": "B",
@@ -431,7 +431,7 @@
     "variante_oms": "B.1.405",
     "cantidad_muestras": 2
   },
-  "48": {
+  {
     "cve_edo": "02",
     "estado": "b",
     "abreviatura_ent": "B",
@@ -440,7 +440,7 @@
     "variante_oms": "B.1.526.2",
     "cantidad_muestras": 1
   },
-  "49": {
+  {
     "cve_edo": "02",
     "estado": "b",
     "abreviatura_ent": "B",
@@ -449,7 +449,7 @@
     "variante_oms": "B.1.551",
     "cantidad_muestras": 3
   },
-  "50": {
+  {
     "cve_edo": "02",
     "estado": "b",
     "abreviatura_ent": "B",
@@ -458,7 +458,7 @@
     "variante_oms": "B.1.558",
     "cantidad_muestras": 1
   },
-  "51": {
+  {
     "cve_edo": "02",
     "estado": "b",
     "abreviatura_ent": "B",
@@ -467,7 +467,7 @@
     "variante_oms": "B.1.561",
     "cantidad_muestras": 1
   },
-  "52": {
+  {
     "cve_edo": "02",
     "estado": "b",
     "abreviatura_ent": "B",
@@ -476,7 +476,7 @@
     "variante_oms": "B.1.604",
     "cantidad_muestras": 1
   },
-  "53": {
+  {
     "cve_edo": "02",
     "estado": "b",
     "abreviatura_ent": "B",
@@ -484,7 +484,7 @@
     "tipo_variante": "VSIN",
     "cantidad_muestras": 15
   },
-  "54": {
+  {
     "cve_edo": "02",
     "estado": "b",
     "abreviatura_ent": "B",
@@ -493,7 +493,7 @@
     "variante_oms": "5.1",
     "cantidad_muestras": 3
   },
-  "55": {
+  {
     "cve_edo": "02",
     "estado": "b",
     "abreviatura_ent": "B",
@@ -502,7 +502,7 @@
     "variante_oms": "5.5",
     "cantidad_muestras": 2
   },
-  "56": {
+  {
     "cve_edo": "02",
     "estado": "b",
     "abreviatura_ent": "B",
@@ -511,7 +511,7 @@
     "variante_oms": "B.1.397",
     "cantidad_muestras": 1
   },
-  "57": {
+  {
     "cve_edo": "02",
     "estado": "b",
     "abreviatura_ent": "B",
@@ -520,7 +520,7 @@
     "variante_oms": "3.1",
     "cantidad_muestras": 19
   },
-  "58": {
+  {
     "cve_edo": "02",
     "estado": "b",
     "abreviatura_ent": "B",
@@ -529,7 +529,7 @@
     "variante_oms": "1.4",
     "cantidad_muestras": 3
   },
-  "59": {
+  {
     "cve_edo": "02",
     "estado": "b",
     "abreviatura_ent": "B",
@@ -538,7 +538,7 @@
     "variante_oms": "4.5",
     "cantidad_muestras": 14
   },
-  "60": {
+  {
     "cve_edo": "02",
     "estado": "b",
     "abreviatura_ent": "B",
@@ -547,7 +547,7 @@
     "variante_oms": "4.4",
     "cantidad_muestras": 85
   },
-  "61": {
+  {
     "cve_edo": "02",
     "estado": "b",
     "abreviatura_ent": "B",
@@ -556,7 +556,7 @@
     "variante_oms": "5.5",
     "cantidad_muestras": 193
   },
-  "62": {
+  {
     "cve_edo": "02",
     "estado": "b",
     "abreviatura_ent": "B",
@@ -565,7 +565,7 @@
     "variante_oms": "5.3",
     "cantidad_muestras": 10
   },
-  "63": {
+  {
     "cve_edo": "02",
     "estado": "b",
     "abreviatura_ent": "B",
@@ -574,7 +574,7 @@
     "variante_oms": "B.1.1.128",
     "cantidad_muestras": 1
   },
-  "64": {
+  {
     "cve_edo": "02",
     "estado": "b",
     "abreviatura_ent": "B",
@@ -583,7 +583,7 @@
     "variante_oms": "B.1.1.285",
     "cantidad_muestras": 1
   },
-  "65": {
+  {
     "cve_edo": "02",
     "estado": "b",
     "abreviatura_ent": "B",
@@ -592,7 +592,7 @@
     "variante_oms": "B.1.1.316",
     "cantidad_muestras": 3
   },
-  "66": {
+  {
     "cve_edo": "02",
     "estado": "b",
     "abreviatura_ent": "B",
@@ -601,7 +601,7 @@
     "variante_oms": "B.1.1.331",
     "cantidad_muestras": 2
   },
-  "67": {
+  {
     "cve_edo": "02",
     "estado": "b",
     "abreviatura_ent": "B",
@@ -610,7 +610,7 @@
     "variante_oms": "B.1.1.344",
     "cantidad_muestras": 1
   },
-  "68": {
+  {
     "cve_edo": "02",
     "estado": "b",
     "abreviatura_ent": "B",
@@ -619,7 +619,7 @@
     "variante_oms": "B.1.1.362",
     "cantidad_muestras": 2
   },
-  "69": {
+  {
     "cve_edo": "02",
     "estado": "b",
     "abreviatura_ent": "B",
@@ -628,7 +628,7 @@
     "variante_oms": "B.1.1.403",
     "cantidad_muestras": 1
   },
-  "70": {
+  {
     "cve_edo": "02",
     "estado": "b",
     "abreviatura_ent": "B",
@@ -637,7 +637,7 @@
     "variante_oms": "B.1.1.416",
     "cantidad_muestras": 1
   },
-  "71": {
+  {
     "cve_edo": "02",
     "estado": "b",
     "abreviatura_ent": "B",
@@ -646,7 +646,7 @@
     "variante_oms": "B.1.1.432",
     "cantidad_muestras": 10
   },
-  "72": {
+  {
     "cve_edo": "02",
     "estado": "b",
     "abreviatura_ent": "B",
@@ -655,7 +655,7 @@
     "variante_oms": "B.1.1.8",
     "cantidad_muestras": 2
   },
-  "73": {
+  {
     "cve_edo": "02",
     "estado": "b",
     "abreviatura_ent": "B",
@@ -664,7 +664,7 @@
     "variante_oms": "B.1.1.93",
     "cantidad_muestras": 1
   },
-  "74": {
+  {
     "cve_edo": "02",
     "estado": "b",
     "abreviatura_ent": "B",
@@ -673,7 +673,7 @@
     "variante_oms": "B.1.177.53",
     "cantidad_muestras": 1
   },
-  "75": {
+  {
     "cve_edo": "02",
     "estado": "b",
     "abreviatura_ent": "B",
@@ -682,7 +682,7 @@
     "variante_oms": "B.1.2",
     "cantidad_muestras": 29
   },
-  "76": {
+  {
     "cve_edo": "02",
     "estado": "b",
     "abreviatura_ent": "B",
@@ -691,7 +691,7 @@
     "variante_oms": "B.1.229",
     "cantidad_muestras": 1
   },
-  "77": {
+  {
     "cve_edo": "02",
     "estado": "b",
     "abreviatura_ent": "B",
@@ -700,7 +700,7 @@
     "variante_oms": "B.1.232",
     "cantidad_muestras": 47
   },
-  "78": {
+  {
     "cve_edo": "02",
     "estado": "b",
     "abreviatura_ent": "B",
@@ -709,7 +709,7 @@
     "variante_oms": "B.1.239",
     "cantidad_muestras": 4
   },
-  "79": {
+  {
     "cve_edo": "02",
     "estado": "b",
     "abreviatura_ent": "B",
@@ -718,7 +718,7 @@
     "variante_oms": "B.1.241",
     "cantidad_muestras": 39
   },
-  "80": {
+  {
     "cve_edo": "02",
     "estado": "b",
     "abreviatura_ent": "B",
@@ -727,7 +727,7 @@
     "variante_oms": "5.4",
     "cantidad_muestras": 56
   },
-  "81": {
+  {
     "cve_edo": "02",
     "estado": "b",
     "abreviatura_ent": "B",
@@ -736,7 +736,7 @@
     "variante_oms": "B.1.245",
     "cantidad_muestras": 3
   },
-  "82": {
+  {
     "cve_edo": "02",
     "estado": "b",
     "abreviatura_ent": "B",
@@ -745,7 +745,7 @@
     "variante_oms": "B.1.267",
     "cantidad_muestras": 2
   },
-  "83": {
+  {
     "cve_edo": "02",
     "estado": "b",
     "abreviatura_ent": "B",
@@ -754,7 +754,7 @@
     "variante_oms": "B.1.324",
     "cantidad_muestras": 1
   },
-  "84": {
+  {
     "cve_edo": "02",
     "estado": "b",
     "abreviatura_ent": "B",
@@ -763,7 +763,7 @@
     "variante_oms": "B.1.336",
     "cantidad_muestras": 1
   },
-  "85": {
+  {
     "cve_edo": "02",
     "estado": "b",
     "abreviatura_ent": "B",
@@ -772,7 +772,7 @@
     "variante_oms": "B.1.369",
     "cantidad_muestras": 5
   },
-  "86": {
+  {
     "cve_edo": "02",
     "estado": "b",
     "abreviatura_ent": "B",
@@ -781,7 +781,7 @@
     "variante_oms": "B.1.375",
     "cantidad_muestras": 1
   },
-  "87": {
+  {
     "cve_edo": "02",
     "estado": "b",
     "abreviatura_ent": "B",
@@ -790,7 +790,7 @@
     "variante_oms": "B.1.396",
     "cantidad_muestras": 3
   },
-  "88": {
+  {
     "cve_edo": "02",
     "estado": "b",
     "abreviatura_ent": "B",
@@ -799,7 +799,7 @@
     "variante_oms": "B.1.397",
     "cantidad_muestras": 12
   },
-  "89": {
+  {
     "cve_edo": "02",
     "estado": "b",
     "abreviatura_ent": "B",
@@ -808,7 +808,7 @@
     "variante_oms": "B.1.399",
     "cantidad_muestras": 7
   },
-  "90": {
+  {
     "cve_edo": "02",
     "estado": "b",
     "abreviatura_ent": "B",
@@ -817,7 +817,7 @@
     "variante_oms": "B.1.400",
     "cantidad_muestras": 8
   },
-  "91": {
+  {
     "cve_edo": "02",
     "estado": "b",
     "abreviatura_ent": "B",
@@ -826,7 +826,7 @@
     "variante_oms": "B.1.404",
     "cantidad_muestras": 1
   },
-  "92": {
+  {
     "cve_edo": "02",
     "estado": "b",
     "abreviatura_ent": "B",
@@ -835,7 +835,7 @@
     "variante_oms": "B.1.551",
     "cantidad_muestras": 40
   },
-  "93": {
+  {
     "cve_edo": "02",
     "estado": "b",
     "abreviatura_ent": "B",
@@ -844,7 +844,7 @@
     "variante_oms": "B.1.556",
     "cantidad_muestras": 1
   },
-  "94": {
+  {
     "cve_edo": "02",
     "estado": "b",
     "abreviatura_ent": "B",
@@ -853,7 +853,7 @@
     "variante_oms": "B.1.558",
     "cantidad_muestras": 7
   },
-  "95": {
+  {
     "cve_edo": "02",
     "estado": "b",
     "abreviatura_ent": "B",
@@ -862,7 +862,7 @@
     "variante_oms": "B.1.561",
     "cantidad_muestras": 91
   },
-  "96": {
+  {
     "cve_edo": "02",
     "estado": "b",
     "abreviatura_ent": "B",
@@ -871,7 +871,7 @@
     "variante_oms": "B.1.577",
     "cantidad_muestras": 1
   },
-  "97": {
+  {
     "cve_edo": "02",
     "estado": "b",
     "abreviatura_ent": "B",
@@ -880,7 +880,7 @@
     "variante_oms": "B.1.595",
     "cantidad_muestras": 1
   },
-  "98": {
+  {
     "cve_edo": "02",
     "estado": "b",
     "abreviatura_ent": "B",
@@ -889,7 +889,7 @@
     "variante_oms": "B.1.596",
     "cantidad_muestras": 4
   },
-  "99": {
+  {
     "cve_edo": "02",
     "estado": "b",
     "abreviatura_ent": "B",
@@ -898,7 +898,7 @@
     "variante_oms": "B.1.599",
     "cantidad_muestras": 2
   },
-  "100": {
+  {
     "cve_edo": "02",
     "estado": "b",
     "abreviatura_ent": "B",
@@ -907,7 +907,7 @@
     "variante_oms": "5.2",
     "cantidad_muestras": 7
   },
-  "101": {
+  {
     "cve_edo": "02",
     "estado": "b",
     "abreviatura_ent": "B",
@@ -916,7 +916,7 @@
     "variante_oms": "B.1.612",
     "cantidad_muestras": 1
   },
-  "102": {
+  {
     "cve_edo": "02",
     "estado": "b",
     "abreviatura_ent": "B",
@@ -925,7 +925,7 @@
     "variante_oms": "S.1",
     "cantidad_muestras": 1
   },
-  "103": {
+  {
     "cve_edo": "03",
     "estado": "C",
     "abreviatura_ent": "C",
@@ -934,7 +934,7 @@
     "variante_oms": "3.1",
     "cantidad_muestras": 4
   },
-  "104": {
+  {
     "cve_edo": "03",
     "estado": "C",
     "abreviatura_ent": "C",
@@ -943,7 +943,7 @@
     "variante_oms": "1.4",
     "cantidad_muestras": 5
   },
-  "105": {
+  {
     "cve_edo": "03",
     "estado": "C",
     "abreviatura_ent": "C",
@@ -952,7 +952,7 @@
     "variante_oms": "1.1",
     "cantidad_muestras": 45
   },
-  "106": {
+  {
     "cve_edo": "03",
     "estado": "C",
     "abreviatura_ent": "C",
@@ -961,7 +961,7 @@
     "variante_oms": "1.3",
     "cantidad_muestras": 29
   },
-  "107": {
+  {
     "cve_edo": "03",
     "estado": "C",
     "abreviatura_ent": "C",
@@ -970,7 +970,7 @@
     "variante_oms": "4.5",
     "cantidad_muestras": 74
   },
-  "108": {
+  {
     "cve_edo": "03",
     "estado": "C",
     "abreviatura_ent": "C",
@@ -979,7 +979,7 @@
     "variante_oms": "4.4",
     "cantidad_muestras": 22
   },
-  "109": {
+  {
     "cve_edo": "03",
     "estado": "C",
     "abreviatura_ent": "C",
@@ -988,7 +988,7 @@
     "variante_oms": "5.5",
     "cantidad_muestras": 13
   },
-  "110": {
+  {
     "cve_edo": "03",
     "estado": "C",
     "abreviatura_ent": "C",
@@ -997,7 +997,7 @@
     "variante_oms": "5.3",
     "cantidad_muestras": 4
   },
-  "111": {
+  {
     "cve_edo": "03",
     "estado": "C",
     "abreviatura_ent": "C",
@@ -1006,7 +1006,7 @@
     "variante_oms": "B.1.1.316",
     "cantidad_muestras": 1
   },
-  "112": {
+  {
     "cve_edo": "03",
     "estado": "C",
     "abreviatura_ent": "C",
@@ -1015,7 +1015,7 @@
     "variante_oms": "B.1.1.334",
     "cantidad_muestras": 1
   },
-  "113": {
+  {
     "cve_edo": "03",
     "estado": "C",
     "abreviatura_ent": "C",
@@ -1024,7 +1024,7 @@
     "variante_oms": "B.1.1.432",
     "cantidad_muestras": 3
   },
-  "114": {
+  {
     "cve_edo": "03",
     "estado": "C",
     "abreviatura_ent": "C",
@@ -1033,7 +1033,7 @@
     "variante_oms": "B.1.2",
     "cantidad_muestras": 1
   },
-  "115": {
+  {
     "cve_edo": "03",
     "estado": "C",
     "abreviatura_ent": "C",
@@ -1042,7 +1042,7 @@
     "variante_oms": "B.1.232",
     "cantidad_muestras": 3
   },
-  "116": {
+  {
     "cve_edo": "03",
     "estado": "C",
     "abreviatura_ent": "C",
@@ -1051,7 +1051,7 @@
     "variante_oms": "B.1.234",
     "cantidad_muestras": 1
   },
-  "117": {
+  {
     "cve_edo": "03",
     "estado": "C",
     "abreviatura_ent": "C",
@@ -1060,7 +1060,7 @@
     "variante_oms": "5.4",
     "cantidad_muestras": 4
   },
-  "118": {
+  {
     "cve_edo": "03",
     "estado": "C",
     "abreviatura_ent": "C",
@@ -1069,7 +1069,7 @@
     "variante_oms": "B.1.36.10",
     "cantidad_muestras": 2
   },
-  "119": {
+  {
     "cve_edo": "03",
     "estado": "C",
     "abreviatura_ent": "C",
@@ -1078,7 +1078,7 @@
     "variante_oms": "B.1.565",
     "cantidad_muestras": 2
   },
-  "120": {
+  {
     "cve_edo": "03",
     "estado": "C",
     "abreviatura_ent": "C",
@@ -1087,7 +1087,7 @@
     "variante_oms": "5.2",
     "cantidad_muestras": 12
   },
-  "121": {
+  {
     "cve_edo": "03",
     "estado": "C",
     "abreviatura_ent": "C",
@@ -1096,7 +1096,7 @@
     "variante_oms": "B.1.610",
     "cantidad_muestras": 1
   },
-  "122": {
+  {
     "cve_edo": "03",
     "estado": "C",
     "abreviatura_ent": "C",
@@ -1105,7 +1105,7 @@
     "variante_oms": "5.1",
     "cantidad_muestras": 1
   },
-  "123": {
+  {
     "cve_edo": "04",
     "estado": "d",
     "abreviatura_ent": "D",
@@ -1114,7 +1114,7 @@
     "variante_oms": "3.1",
     "cantidad_muestras": 4
   },
-  "124": {
+  {
     "cve_edo": "04",
     "estado": "d",
     "abreviatura_ent": "D",
@@ -1123,7 +1123,7 @@
     "variante_oms": "1.4",
     "cantidad_muestras": 14
   },
-  "125": {
+  {
     "cve_edo": "04",
     "estado": "d",
     "abreviatura_ent": "D",
@@ -1132,7 +1132,7 @@
     "variante_oms": "1.2",
     "cantidad_muestras": 12
   },
-  "126": {
+  {
     "cve_edo": "04",
     "estado": "d",
     "abreviatura_ent": "D",
@@ -1141,7 +1141,7 @@
     "variante_oms": "1.3",
     "cantidad_muestras": 22
   },
-  "127": {
+  {
     "cve_edo": "04",
     "estado": "d",
     "abreviatura_ent": "D",
@@ -1150,7 +1150,7 @@
     "variante_oms": "2.3",
     "cantidad_muestras": 4
   },
-  "128": {
+  {
     "cve_edo": "04",
     "estado": "d",
     "abreviatura_ent": "D",
@@ -1159,7 +1159,7 @@
     "variante_oms": "4.5",
     "cantidad_muestras": 61
   },
-  "129": {
+  {
     "cve_edo": "04",
     "estado": "d",
     "abreviatura_ent": "D",
@@ -1168,7 +1168,7 @@
     "variante_oms": "4.4",
     "cantidad_muestras": 6
   },
-  "130": {
+  {
     "cve_edo": "04",
     "estado": "d",
     "abreviatura_ent": "D",
@@ -1177,7 +1177,7 @@
     "variante_oms": "A.2.5",
     "cantidad_muestras": 2
   },
-  "131": {
+  {
     "cve_edo": "04",
     "estado": "d",
     "abreviatura_ent": "D",
@@ -1186,7 +1186,7 @@
     "variante_oms": "5.5",
     "cantidad_muestras": 7
   },
-  "132": {
+  {
     "cve_edo": "04",
     "estado": "d",
     "abreviatura_ent": "D",
@@ -1195,7 +1195,7 @@
     "variante_oms": "5.3",
     "cantidad_muestras": 1
   },
-  "133": {
+  {
     "cve_edo": "04",
     "estado": "d",
     "abreviatura_ent": "D",
@@ -1204,7 +1204,7 @@
     "variante_oms": "B.1.2",
     "cantidad_muestras": 1
   },
-  "134": {
+  {
     "cve_edo": "04",
     "estado": "d",
     "abreviatura_ent": "D",
@@ -1213,7 +1213,7 @@
     "variante_oms": "B.1.578",
     "cantidad_muestras": 1
   },
-  "135": {
+  {
     "cve_edo": "04",
     "estado": "d",
     "abreviatura_ent": "D",
@@ -1222,7 +1222,7 @@
     "variante_oms": "C.23",
     "cantidad_muestras": 1
   },
-  "136": {
+  {
     "cve_edo": "04",
     "estado": "d",
     "abreviatura_ent": "D",
@@ -1231,7 +1231,7 @@
     "variante_oms": "5.1",
     "cantidad_muestras": 5
   },
-  "137": {
+  {
     "cve_edo": "07",
     "estado": "e",
     "abreviatura_ent": "E",
@@ -1240,7 +1240,7 @@
     "variante_oms": "3.1",
     "cantidad_muestras": 1
   },
-  "138": {
+  {
     "cve_edo": "07",
     "estado": "e",
     "abreviatura_ent": "E",
@@ -1249,7 +1249,7 @@
     "variante_oms": "1.4",
     "cantidad_muestras": 1
   },
-  "139": {
+  {
     "cve_edo": "07",
     "estado": "e",
     "abreviatura_ent": "E",
@@ -1258,7 +1258,7 @@
     "variante_oms": "1.3",
     "cantidad_muestras": 4
   },
-  "140": {
+  {
     "cve_edo": "07",
     "estado": "e",
     "abreviatura_ent": "E",
@@ -1267,7 +1267,7 @@
     "variante_oms": "4.5",
     "cantidad_muestras": 24
   },
-  "141": {
+  {
     "cve_edo": "07",
     "estado": "e",
     "abreviatura_ent": "E",
@@ -1276,7 +1276,7 @@
     "variante_oms": "4.4",
     "cantidad_muestras": 1
   },
-  "142": {
+  {
     "cve_edo": "07",
     "estado": "e",
     "abreviatura_ent": "E",
@@ -1285,7 +1285,7 @@
     "variante_oms": "5.5",
     "cantidad_muestras": 13
   },
-  "143": {
+  {
     "cve_edo": "07",
     "estado": "e",
     "abreviatura_ent": "E",
@@ -1294,7 +1294,7 @@
     "variante_oms": "5.3",
     "cantidad_muestras": 2
   },
-  "144": {
+  {
     "cve_edo": "07",
     "estado": "e",
     "abreviatura_ent": "E",
@@ -1303,7 +1303,7 @@
     "variante_oms": "B.1.1.244",
     "cantidad_muestras": 1
   },
-  "145": {
+  {
     "cve_edo": "07",
     "estado": "e",
     "abreviatura_ent": "E",
@@ -1312,7 +1312,7 @@
     "variante_oms": "B.1.241",
     "cantidad_muestras": 1
   },
-  "146": {
+  {
     "cve_edo": "07",
     "estado": "e",
     "abreviatura_ent": "E",
@@ -1321,7 +1321,7 @@
     "variante_oms": "5.4",
     "cantidad_muestras": 1
   },
-  "147": {
+  {
     "cve_edo": "07",
     "estado": "e",
     "abreviatura_ent": "E",
@@ -1330,7 +1330,7 @@
     "variante_oms": "B.1.36.10",
     "cantidad_muestras": 1
   },
-  "148": {
+  {
     "cve_edo": "07",
     "estado": "e",
     "abreviatura_ent": "E",
@@ -1339,7 +1339,7 @@
     "variante_oms": "5.2",
     "cantidad_muestras": 1
   },
-  "149": {
+  {
     "cve_edo": "07",
     "estado": "e",
     "abreviatura_ent": "E",
@@ -1348,7 +1348,7 @@
     "variante_oms": "5.1",
     "cantidad_muestras": 1
   },
-  "150": {
+  {
     "cve_edo": "08",
     "estado": "f",
     "abreviatura_ent": "F",
@@ -1357,7 +1357,7 @@
     "variante_oms": "3.1",
     "cantidad_muestras": 6
   },
-  "151": {
+  {
     "cve_edo": "08",
     "estado": "f",
     "abreviatura_ent": "F",
@@ -1366,7 +1366,7 @@
     "variante_oms": "1.4",
     "cantidad_muestras": 123
   },
-  "152": {
+  {
     "cve_edo": "08",
     "estado": "f",
     "abreviatura_ent": "F",
@@ -1375,7 +1375,7 @@
     "variante_oms": "1.3",
     "cantidad_muestras": 3
   },
-  "153": {
+  {
     "cve_edo": "08",
     "estado": "f",
     "abreviatura_ent": "F",
@@ -1384,7 +1384,7 @@
     "variante_oms": "2.2",
     "cantidad_muestras": 2
   },
-  "154": {
+  {
     "cve_edo": "08",
     "estado": "f",
     "abreviatura_ent": "F",
@@ -1393,7 +1393,7 @@
     "variante_oms": "2.3",
     "cantidad_muestras": 1
   },
-  "155": {
+  {
     "cve_edo": "08",
     "estado": "f",
     "abreviatura_ent": "F",
@@ -1402,7 +1402,7 @@
     "variante_oms": "4.5",
     "cantidad_muestras": 153
   },
-  "156": {
+  {
     "cve_edo": "08",
     "estado": "f",
     "abreviatura_ent": "F",
@@ -1411,7 +1411,7 @@
     "variante_oms": "4.4",
     "cantidad_muestras": 11
   },
-  "157": {
+  {
     "cve_edo": "08",
     "estado": "f",
     "abreviatura_ent": "F",
@@ -1420,7 +1420,7 @@
     "variante_oms": "5.5",
     "cantidad_muestras": 12
   },
-  "158": {
+  {
     "cve_edo": "08",
     "estado": "f",
     "abreviatura_ent": "F",
@@ -1429,7 +1429,7 @@
     "variante_oms": "5.3",
     "cantidad_muestras": 1
   },
-  "159": {
+  {
     "cve_edo": "08",
     "estado": "f",
     "abreviatura_ent": "F",
@@ -1438,7 +1438,7 @@
     "variante_oms": "B.1.1.362",
     "cantidad_muestras": 4
   },
-  "160": {
+  {
     "cve_edo": "08",
     "estado": "f",
     "abreviatura_ent": "F",
@@ -1447,7 +1447,7 @@
     "variante_oms": "B.1.189",
     "cantidad_muestras": 8
   },
-  "161": {
+  {
     "cve_edo": "08",
     "estado": "f",
     "abreviatura_ent": "F",
@@ -1456,7 +1456,7 @@
     "variante_oms": "B.1.2",
     "cantidad_muestras": 8
   },
-  "162": {
+  {
     "cve_edo": "08",
     "estado": "f",
     "abreviatura_ent": "F",
@@ -1465,7 +1465,7 @@
     "variante_oms": "B.1.395",
     "cantidad_muestras": 1
   },
-  "163": {
+  {
     "cve_edo": "08",
     "estado": "f",
     "abreviatura_ent": "F",
@@ -1474,7 +1474,7 @@
     "variante_oms": "B.1.396",
     "cantidad_muestras": 1
   },
-  "164": {
+  {
     "cve_edo": "08",
     "estado": "f",
     "abreviatura_ent": "F",
@@ -1483,7 +1483,7 @@
     "variante_oms": "B.1.526.2",
     "cantidad_muestras": 1
   },
-  "165": {
+  {
     "cve_edo": "08",
     "estado": "f",
     "abreviatura_ent": "F",
@@ -1492,7 +1492,7 @@
     "variante_oms": "B.1.567",
     "cantidad_muestras": 1
   },
-  "166": {
+  {
     "cve_edo": "08",
     "estado": "f",
     "abreviatura_ent": "F",
@@ -1501,7 +1501,7 @@
     "variante_oms": "B.1.596",
     "cantidad_muestras": 4
   },
-  "167": {
+  {
     "cve_edo": "08",
     "estado": "f",
     "abreviatura_ent": "F",
@@ -1510,7 +1510,7 @@
     "variante_oms": "B.1.599",
     "cantidad_muestras": 1
   },
-  "168": {
+  {
     "cve_edo": "08",
     "estado": "f",
     "abreviatura_ent": "F",
@@ -1519,7 +1519,7 @@
     "variante_oms": "5.2",
     "cantidad_muestras": 7
   },
-  "169": {
+  {
     "cve_edo": "08",
     "estado": "f",
     "abreviatura_ent": "F",
@@ -1528,7 +1528,7 @@
     "variante_oms": "D.2",
     "cantidad_muestras": 1
   },
-  "170": {
+  {
     "cve_edo": "08",
     "estado": "f",
     "abreviatura_ent": "F",
@@ -1537,7 +1537,7 @@
     "variante_oms": "5.1",
     "cantidad_muestras": 1
   },
-  "171": {
+  {
     "cve_edo": "09",
     "estado": "g",
     "abreviatura_ent": "G",
@@ -1546,7 +1546,7 @@
     "variante_oms": "3.1",
     "cantidad_muestras": 257
   },
-  "172": {
+  {
     "cve_edo": "09",
     "estado": "g",
     "abreviatura_ent": "G",
@@ -1555,7 +1555,7 @@
     "variante_oms": "1.4",
     "cantidad_muestras": 243
   },
-  "173": {
+  {
     "cve_edo": "09",
     "estado": "g",
     "abreviatura_ent": "G",
@@ -1564,7 +1564,7 @@
     "variante_oms": "1.1",
     "cantidad_muestras": 246
   },
-  "174": {
+  {
     "cve_edo": "09",
     "estado": "g",
     "abreviatura_ent": "G",
@@ -1573,7 +1573,7 @@
     "variante_oms": "1.3",
     "cantidad_muestras": 153
   },
-  "175": {
+  {
     "cve_edo": "09",
     "estado": "g",
     "abreviatura_ent": "G",
@@ -1582,7 +1582,7 @@
     "variante_oms": "2.2",
     "cantidad_muestras": 16
   },
-  "176": {
+  {
     "cve_edo": "09",
     "estado": "g",
     "abreviatura_ent": "G",
@@ -1591,7 +1591,7 @@
     "variante_oms": "2.1",
     "cantidad_muestras": 1
   },
-  "177": {
+  {
     "cve_edo": "09",
     "estado": "g",
     "abreviatura_ent": "G",
@@ -1600,7 +1600,7 @@
     "variante_oms": "2.3",
     "cantidad_muestras": 12
   },
-  "178": {
+  {
     "cve_edo": "09",
     "estado": "g",
     "abreviatura_ent": "G",
@@ -1609,7 +1609,7 @@
     "variante_oms": "4.3",
     "cantidad_muestras": 2
   },
-  "179": {
+  {
     "cve_edo": "09",
     "estado": "g",
     "abreviatura_ent": "G",
@@ -1618,7 +1618,7 @@
     "variante_oms": "4.5",
     "cantidad_muestras": 2466
   },
-  "180": {
+  {
     "cve_edo": "09",
     "estado": "g",
     "abreviatura_ent": "G",
@@ -1627,7 +1627,7 @@
     "variante_oms": "4.2",
     "cantidad_muestras": 49
   },
-  "181": {
+  {
     "cve_edo": "09",
     "estado": "g",
     "abreviatura_ent": "G",
@@ -1636,7 +1636,7 @@
     "variante_oms": "4.4",
     "cantidad_muestras": 26
   },
-  "182": {
+  {
     "cve_edo": "09",
     "estado": "g",
     "abreviatura_ent": "G",
@@ -1645,7 +1645,7 @@
     "variante_oms": "A",
     "cantidad_muestras": 1
   },
-  "183": {
+  {
     "cve_edo": "09",
     "estado": "g",
     "abreviatura_ent": "G",
@@ -1654,7 +1654,7 @@
     "variante_oms": "A.1",
     "cantidad_muestras": 7
   },
-  "184": {
+  {
     "cve_edo": "09",
     "estado": "g",
     "abreviatura_ent": "G",
@@ -1663,7 +1663,7 @@
     "variante_oms": "A.2",
     "cantidad_muestras": 1
   },
-  "185": {
+  {
     "cve_edo": "09",
     "estado": "g",
     "abreviatura_ent": "G",
@@ -1672,7 +1672,7 @@
     "variante_oms": "A.2.5",
     "cantidad_muestras": 12
   },
-  "186": {
+  {
     "cve_edo": "09",
     "estado": "g",
     "abreviatura_ent": "G",
@@ -1681,7 +1681,7 @@
     "variante_oms": "A.5",
     "cantidad_muestras": 3
   },
-  "187": {
+  {
     "cve_edo": "09",
     "estado": "g",
     "abreviatura_ent": "G",
@@ -1690,7 +1690,7 @@
     "variante_oms": "B",
     "cantidad_muestras": 1
   },
-  "188": {
+  {
     "cve_edo": "09",
     "estado": "g",
     "abreviatura_ent": "G",
@@ -1699,7 +1699,7 @@
     "variante_oms": "5.5",
     "cantidad_muestras": 349
   },
-  "189": {
+  {
     "cve_edo": "09",
     "estado": "g",
     "abreviatura_ent": "G",
@@ -1708,7 +1708,7 @@
     "variante_oms": "5.3",
     "cantidad_muestras": 81
   },
-  "190": {
+  {
     "cve_edo": "09",
     "estado": "g",
     "abreviatura_ent": "G",
@@ -1717,7 +1717,7 @@
     "variante_oms": "B.1.1.10",
     "cantidad_muestras": 1
   },
-  "191": {
+  {
     "cve_edo": "09",
     "estado": "g",
     "abreviatura_ent": "G",
@@ -1726,7 +1726,7 @@
     "variante_oms": "B.1.1.12",
     "cantidad_muestras": 1
   },
-  "192": {
+  {
     "cve_edo": "09",
     "estado": "g",
     "abreviatura_ent": "G",
@@ -1735,7 +1735,7 @@
     "variante_oms": "B.1.1.244",
     "cantidad_muestras": 1
   },
-  "193": {
+  {
     "cve_edo": "09",
     "estado": "g",
     "abreviatura_ent": "G",
@@ -1744,7 +1744,7 @@
     "variante_oms": "B.1.1.28",
     "cantidad_muestras": 3
   },
-  "194": {
+  {
     "cve_edo": "09",
     "estado": "g",
     "abreviatura_ent": "G",
@@ -1753,7 +1753,7 @@
     "variante_oms": "B.1.1.316",
     "cantidad_muestras": 1
   },
-  "195": {
+  {
     "cve_edo": "09",
     "estado": "g",
     "abreviatura_ent": "G",
@@ -1762,7 +1762,7 @@
     "variante_oms": "B.1.1.317",
     "cantidad_muestras": 1
   },
-  "196": {
+  {
     "cve_edo": "09",
     "estado": "g",
     "abreviatura_ent": "G",
@@ -1771,7 +1771,7 @@
     "variante_oms": "B.1.1.322",
     "cantidad_muestras": 7
   },
-  "197": {
+  {
     "cve_edo": "09",
     "estado": "g",
     "abreviatura_ent": "G",
@@ -1780,7 +1780,7 @@
     "variante_oms": "B.1.1.33",
     "cantidad_muestras": 1
   },
-  "198": {
+  {
     "cve_edo": "09",
     "estado": "g",
     "abreviatura_ent": "G",
@@ -1789,7 +1789,7 @@
     "variante_oms": "B.1.1.344",
     "cantidad_muestras": 1
   },
-  "199": {
+  {
     "cve_edo": "09",
     "estado": "g",
     "abreviatura_ent": "G",
@@ -1798,7 +1798,7 @@
     "variante_oms": "B.1.1.348",
     "cantidad_muestras": 1
   },
-  "200": {
+  {
     "cve_edo": "09",
     "estado": "g",
     "abreviatura_ent": "G",
@@ -1807,7 +1807,7 @@
     "variante_oms": "B.1.1.432",
     "cantidad_muestras": 9
   },
-  "201": {
+  {
     "cve_edo": "09",
     "estado": "g",
     "abreviatura_ent": "G",
@@ -1816,7 +1816,7 @@
     "variante_oms": "B.1.1.453",
     "cantidad_muestras": 1
   },
-  "202": {
+  {
     "cve_edo": "09",
     "estado": "g",
     "abreviatura_ent": "G",
@@ -1825,7 +1825,7 @@
     "variante_oms": "B.1.1.512",
     "cantidad_muestras": 3
   },
-  "203": {
+  {
     "cve_edo": "09",
     "estado": "g",
     "abreviatura_ent": "G",
@@ -1834,7 +1834,7 @@
     "variante_oms": "B.1.1.518",
     "cantidad_muestras": 3
   },
-  "204": {
+  {
     "cve_edo": "09",
     "estado": "g",
     "abreviatura_ent": "G",
@@ -1843,7 +1843,7 @@
     "variante_oms": "B.1.189",
     "cantidad_muestras": 27
   },
-  "205": {
+  {
     "cve_edo": "09",
     "estado": "g",
     "abreviatura_ent": "G",
@@ -1852,7 +1852,7 @@
     "variante_oms": "B.1.190",
     "cantidad_muestras": 7
   },
-  "206": {
+  {
     "cve_edo": "09",
     "estado": "g",
     "abreviatura_ent": "G",
@@ -1861,7 +1861,7 @@
     "variante_oms": "B.1.2",
     "cantidad_muestras": 7
   },
-  "207": {
+  {
     "cve_edo": "09",
     "estado": "g",
     "abreviatura_ent": "G",
@@ -1870,7 +1870,7 @@
     "variante_oms": "B.1.201",
     "cantidad_muestras": 1
   },
-  "208": {
+  {
     "cve_edo": "09",
     "estado": "g",
     "abreviatura_ent": "G",
@@ -1879,7 +1879,7 @@
     "variante_oms": "B.1.232",
     "cantidad_muestras": 2
   },
-  "209": {
+  {
     "cve_edo": "09",
     "estado": "g",
     "abreviatura_ent": "G",
@@ -1888,7 +1888,7 @@
     "variante_oms": "B.1.234",
     "cantidad_muestras": 1
   },
-  "210": {
+  {
     "cve_edo": "09",
     "estado": "g",
     "abreviatura_ent": "G",
@@ -1897,7 +1897,7 @@
     "variante_oms": "B.1.239",
     "cantidad_muestras": 1
   },
-  "211": {
+  {
     "cve_edo": "09",
     "estado": "g",
     "abreviatura_ent": "G",
@@ -1906,7 +1906,7 @@
     "variante_oms": "B.1.241",
     "cantidad_muestras": 1
   },
-  "212": {
+  {
     "cve_edo": "09",
     "estado": "g",
     "abreviatura_ent": "G",
@@ -1915,7 +1915,7 @@
     "variante_oms": "5.4",
     "cantidad_muestras": 31
   },
-  "213": {
+  {
     "cve_edo": "09",
     "estado": "g",
     "abreviatura_ent": "G",
@@ -1924,7 +1924,7 @@
     "variante_oms": "B.1.258.21",
     "cantidad_muestras": 1
   },
-  "214": {
+  {
     "cve_edo": "09",
     "estado": "g",
     "abreviatura_ent": "G",
@@ -1933,7 +1933,7 @@
     "variante_oms": "B.1.301",
     "cantidad_muestras": 28
   },
-  "215": {
+  {
     "cve_edo": "09",
     "estado": "g",
     "abreviatura_ent": "G",
@@ -1942,7 +1942,7 @@
     "variante_oms": "B.1.319",
     "cantidad_muestras": 1
   },
-  "216": {
+  {
     "cve_edo": "09",
     "estado": "g",
     "abreviatura_ent": "G",
@@ -1951,7 +1951,7 @@
     "variante_oms": "B.1.36.10",
     "cantidad_muestras": 2
   },
-  "217": {
+  {
     "cve_edo": "09",
     "estado": "g",
     "abreviatura_ent": "G",
@@ -1960,7 +1960,7 @@
     "variante_oms": "B.1.36.31",
     "cantidad_muestras": 1
   },
-  "218": {
+  {
     "cve_edo": "09",
     "estado": "g",
     "abreviatura_ent": "G",
@@ -1969,7 +1969,7 @@
     "variante_oms": "B.1.369",
     "cantidad_muestras": 1
   },
-  "219": {
+  {
     "cve_edo": "09",
     "estado": "g",
     "abreviatura_ent": "G",
@@ -1978,7 +1978,7 @@
     "variante_oms": "B.1.375",
     "cantidad_muestras": 1
   },
-  "220": {
+  {
     "cve_edo": "09",
     "estado": "g",
     "abreviatura_ent": "G",
@@ -1987,7 +1987,7 @@
     "variante_oms": "B.1.396",
     "cantidad_muestras": 5
   },
-  "221": {
+  {
     "cve_edo": "09",
     "estado": "g",
     "abreviatura_ent": "G",
@@ -1996,7 +1996,7 @@
     "variante_oms": "B.1.400",
     "cantidad_muestras": 2
   },
-  "222": {
+  {
     "cve_edo": "09",
     "estado": "g",
     "abreviatura_ent": "G",
@@ -2005,7 +2005,7 @@
     "variante_oms": "B.1.415",
     "cantidad_muestras": 1
   },
-  "223": {
+  {
     "cve_edo": "09",
     "estado": "g",
     "abreviatura_ent": "G",
@@ -2014,7 +2014,7 @@
     "variante_oms": "B.1.499",
     "cantidad_muestras": 6
   },
-  "224": {
+  {
     "cve_edo": "09",
     "estado": "g",
     "abreviatura_ent": "G",
@@ -2023,7 +2023,7 @@
     "variante_oms": "B.1.526.1",
     "cantidad_muestras": 1
   },
-  "225": {
+  {
     "cve_edo": "09",
     "estado": "g",
     "abreviatura_ent": "G",
@@ -2032,7 +2032,7 @@
     "variante_oms": "B.1.526.2",
     "cantidad_muestras": 3
   },
-  "226": {
+  {
     "cve_edo": "09",
     "estado": "g",
     "abreviatura_ent": "G",
@@ -2041,7 +2041,7 @@
     "variante_oms": "B.1.551",
     "cantidad_muestras": 7
   },
-  "227": {
+  {
     "cve_edo": "09",
     "estado": "g",
     "abreviatura_ent": "G",
@@ -2050,7 +2050,7 @@
     "variante_oms": "B.1.558",
     "cantidad_muestras": 1
   },
-  "228": {
+  {
     "cve_edo": "09",
     "estado": "g",
     "abreviatura_ent": "G",
@@ -2059,7 +2059,7 @@
     "variante_oms": "B.1.564",
     "cantidad_muestras": 1
   },
-  "229": {
+  {
     "cve_edo": "09",
     "estado": "g",
     "abreviatura_ent": "G",
@@ -2068,7 +2068,7 @@
     "variante_oms": "B.1.596",
     "cantidad_muestras": 2
   },
-  "230": {
+  {
     "cve_edo": "09",
     "estado": "g",
     "abreviatura_ent": "G",
@@ -2077,7 +2077,7 @@
     "variante_oms": "5.2",
     "cantidad_muestras": 75
   },
-  "231": {
+  {
     "cve_edo": "09",
     "estado": "g",
     "abreviatura_ent": "G",
@@ -2086,7 +2086,7 @@
     "variante_oms": "B.1.610",
     "cantidad_muestras": 2
   },
-  "232": {
+  {
     "cve_edo": "09",
     "estado": "g",
     "abreviatura_ent": "G",
@@ -2095,7 +2095,7 @@
     "variante_oms": "B.15",
     "cantidad_muestras": 2
   },
-  "233": {
+  {
     "cve_edo": "09",
     "estado": "g",
     "abreviatura_ent": "G",
@@ -2104,7 +2104,7 @@
     "variante_oms": "5.1",
     "cantidad_muestras": 10
   },
-  "234": {
+  {
     "cve_edo": "09",
     "estado": "g",
     "abreviatura_ent": "G",
@@ -2113,7 +2113,7 @@
     "variante_oms": "Sin informaci\u00f3n",
     "cantidad_muestras": 11
   },
-  "235": {
+  {
     "cve_edo": "06",
     "estado": "h",
     "abreviatura_ent": "H",
@@ -2122,7 +2122,7 @@
     "variante_oms": "3.1",
     "cantidad_muestras": 1
   },
-  "236": {
+  {
     "cve_edo": "06",
     "estado": "h",
     "abreviatura_ent": "H",
@@ -2131,7 +2131,7 @@
     "variante_oms": "1.4",
     "cantidad_muestras": 11
   },
-  "237": {
+  {
     "cve_edo": "06",
     "estado": "h",
     "abreviatura_ent": "H",
@@ -2140,7 +2140,7 @@
     "variante_oms": "1.3",
     "cantidad_muestras": 2
   },
-  "238": {
+  {
     "cve_edo": "06",
     "estado": "h",
     "abreviatura_ent": "H",
@@ -2149,7 +2149,7 @@
     "variante_oms": "4.3",
     "cantidad_muestras": 1
   },
-  "239": {
+  {
     "cve_edo": "06",
     "estado": "h",
     "abreviatura_ent": "H",
@@ -2158,7 +2158,7 @@
     "variante_oms": "4.5",
     "cantidad_muestras": 21
   },
-  "240": {
+  {
     "cve_edo": "06",
     "estado": "h",
     "abreviatura_ent": "H",
@@ -2167,7 +2167,7 @@
     "variante_oms": "4.4",
     "cantidad_muestras": 4
   },
-  "241": {
+  {
     "cve_edo": "06",
     "estado": "h",
     "abreviatura_ent": "H",
@@ -2176,7 +2176,7 @@
     "variante_oms": "5.5",
     "cantidad_muestras": 6
   },
-  "242": {
+  {
     "cve_edo": "06",
     "estado": "h",
     "abreviatura_ent": "H",
@@ -2185,7 +2185,7 @@
     "variante_oms": "5.3",
     "cantidad_muestras": 1
   },
-  "243": {
+  {
     "cve_edo": "06",
     "estado": "h",
     "abreviatura_ent": "H",
@@ -2194,7 +2194,7 @@
     "variante_oms": "B.1.1.244",
     "cantidad_muestras": 1
   },
-  "244": {
+  {
     "cve_edo": "06",
     "estado": "h",
     "abreviatura_ent": "H",
@@ -2203,7 +2203,7 @@
     "variante_oms": "B.1.1.316",
     "cantidad_muestras": 1
   },
-  "245": {
+  {
     "cve_edo": "06",
     "estado": "h",
     "abreviatura_ent": "H",
@@ -2212,7 +2212,7 @@
     "variante_oms": "B.1.2",
     "cantidad_muestras": 2
   },
-  "246": {
+  {
     "cve_edo": "06",
     "estado": "h",
     "abreviatura_ent": "H",
@@ -2221,7 +2221,7 @@
     "variante_oms": "5.4",
     "cantidad_muestras": 1
   },
-  "247": {
+  {
     "cve_edo": "06",
     "estado": "h",
     "abreviatura_ent": "H",
@@ -2230,7 +2230,7 @@
     "variante_oms": "B.1.396",
     "cantidad_muestras": 1
   },
-  "248": {
+  {
     "cve_edo": "06",
     "estado": "h",
     "abreviatura_ent": "H",
@@ -2239,7 +2239,7 @@
     "variante_oms": "B.1.558",
     "cantidad_muestras": 1
   },
-  "249": {
+  {
     "cve_edo": "06",
     "estado": "h",
     "abreviatura_ent": "H",
@@ -2248,7 +2248,7 @@
     "variante_oms": "5.2",
     "cantidad_muestras": 3
   },
-  "250": {
+  {
     "cve_edo": "06",
     "estado": "h",
     "abreviatura_ent": "H",
@@ -2257,7 +2257,7 @@
     "variante_oms": "5.1",
     "cantidad_muestras": 3
   },
-  "251": {
+  {
     "cve_edo": "10",
     "estado": "i",
     "abreviatura_ent": "I",
@@ -2266,7 +2266,7 @@
     "variante_oms": "3.1",
     "cantidad_muestras": 5
   },
-  "252": {
+  {
     "cve_edo": "10",
     "estado": "i",
     "abreviatura_ent": "I",
@@ -2275,7 +2275,7 @@
     "variante_oms": "1.4",
     "cantidad_muestras": 9
   },
-  "253": {
+  {
     "cve_edo": "10",
     "estado": "i",
     "abreviatura_ent": "I",
@@ -2284,7 +2284,7 @@
     "variante_oms": "1.3",
     "cantidad_muestras": 2
   },
-  "254": {
+  {
     "cve_edo": "10",
     "estado": "i",
     "abreviatura_ent": "I",
@@ -2293,7 +2293,7 @@
     "variante_oms": "4.5",
     "cantidad_muestras": 28
   },
-  "255": {
+  {
     "cve_edo": "10",
     "estado": "i",
     "abreviatura_ent": "I",
@@ -2302,7 +2302,7 @@
     "variante_oms": "4.4",
     "cantidad_muestras": 2
   },
-  "256": {
+  {
     "cve_edo": "10",
     "estado": "i",
     "abreviatura_ent": "I",
@@ -2311,7 +2311,7 @@
     "variante_oms": "A.1",
     "cantidad_muestras": 1
   },
-  "257": {
+  {
     "cve_edo": "10",
     "estado": "i",
     "abreviatura_ent": "I",
@@ -2320,7 +2320,7 @@
     "variante_oms": "5.5",
     "cantidad_muestras": 3
   },
-  "258": {
+  {
     "cve_edo": "10",
     "estado": "i",
     "abreviatura_ent": "I",
@@ -2329,7 +2329,7 @@
     "variante_oms": "B.1.1.432",
     "cantidad_muestras": 1
   },
-  "259": {
+  {
     "cve_edo": "10",
     "estado": "i",
     "abreviatura_ent": "I",
@@ -2338,7 +2338,7 @@
     "variante_oms": "B.1.2",
     "cantidad_muestras": 2
   },
-  "260": {
+  {
     "cve_edo": "10",
     "estado": "i",
     "abreviatura_ent": "I",
@@ -2347,7 +2347,7 @@
     "variante_oms": "5.4",
     "cantidad_muestras": 1
   },
-  "261": {
+  {
     "cve_edo": "10",
     "estado": "i",
     "abreviatura_ent": "I",
@@ -2356,7 +2356,7 @@
     "variante_oms": "B.1.366",
     "cantidad_muestras": 1
   },
-  "262": {
+  {
     "cve_edo": "10",
     "estado": "i",
     "abreviatura_ent": "I",
@@ -2365,7 +2365,7 @@
     "variante_oms": "B.1.558",
     "cantidad_muestras": 1
   },
-  "263": {
+  {
     "cve_edo": "10",
     "estado": "i",
     "abreviatura_ent": "I",
@@ -2374,7 +2374,7 @@
     "variante_oms": "B.1.596",
     "cantidad_muestras": 1
   },
-  "264": {
+  {
     "cve_edo": "10",
     "estado": "i",
     "abreviatura_ent": "I",
@@ -2383,7 +2383,7 @@
     "variante_oms": "5.2",
     "cantidad_muestras": 3
   },
-  "265": {
+  {
     "cve_edo": "10",
     "estado": "i",
     "abreviatura_ent": "I",
@@ -2392,7 +2392,7 @@
     "variante_oms": "D.2",
     "cantidad_muestras": 1
   },
-  "266": {
+  {
     "cve_edo": "11",
     "estado": "j",
     "abreviatura_ent": "J",
@@ -2401,7 +2401,7 @@
     "variante_oms": "3.1",
     "cantidad_muestras": 26
   },
-  "267": {
+  {
     "cve_edo": "11",
     "estado": "j",
     "abreviatura_ent": "J",
@@ -2410,7 +2410,7 @@
     "variante_oms": "1.4",
     "cantidad_muestras": 33
   },
-  "268": {
+  {
     "cve_edo": "11",
     "estado": "j",
     "abreviatura_ent": "J",
@@ -2419,7 +2419,7 @@
     "variante_oms": "1.2",
     "cantidad_muestras": 2
   },
-  "269": {
+  {
     "cve_edo": "11",
     "estado": "j",
     "abreviatura_ent": "J",
@@ -2428,7 +2428,7 @@
     "variante_oms": "1.1",
     "cantidad_muestras": 1
   },
-  "270": {
+  {
     "cve_edo": "11",
     "estado": "j",
     "abreviatura_ent": "J",
@@ -2437,7 +2437,7 @@
     "variante_oms": "1.3",
     "cantidad_muestras": 45
   },
-  "271": {
+  {
     "cve_edo": "11",
     "estado": "j",
     "abreviatura_ent": "J",
@@ -2446,7 +2446,7 @@
     "variante_oms": "2.2",
     "cantidad_muestras": 1
   },
-  "272": {
+  {
     "cve_edo": "11",
     "estado": "j",
     "abreviatura_ent": "J",
@@ -2455,7 +2455,7 @@
     "variante_oms": "4.5",
     "cantidad_muestras": 251
   },
-  "273": {
+  {
     "cve_edo": "11",
     "estado": "j",
     "abreviatura_ent": "J",
@@ -2464,7 +2464,7 @@
     "variante_oms": "4.2",
     "cantidad_muestras": 5
   },
-  "274": {
+  {
     "cve_edo": "11",
     "estado": "j",
     "abreviatura_ent": "J",
@@ -2473,7 +2473,7 @@
     "variante_oms": "4.4",
     "cantidad_muestras": 34
   },
-  "275": {
+  {
     "cve_edo": "11",
     "estado": "j",
     "abreviatura_ent": "J",
@@ -2482,7 +2482,7 @@
     "variante_oms": "A.2.5",
     "cantidad_muestras": 1
   },
-  "276": {
+  {
     "cve_edo": "11",
     "estado": "j",
     "abreviatura_ent": "J",
@@ -2491,7 +2491,7 @@
     "variante_oms": "5.5",
     "cantidad_muestras": 27
   },
-  "277": {
+  {
     "cve_edo": "11",
     "estado": "j",
     "abreviatura_ent": "J",
@@ -2500,7 +2500,7 @@
     "variante_oms": "5.3",
     "cantidad_muestras": 7
   },
-  "278": {
+  {
     "cve_edo": "11",
     "estado": "j",
     "abreviatura_ent": "J",
@@ -2509,7 +2509,7 @@
     "variante_oms": "B.1.1.322",
     "cantidad_muestras": 3
   },
-  "279": {
+  {
     "cve_edo": "11",
     "estado": "j",
     "abreviatura_ent": "J",
@@ -2518,7 +2518,7 @@
     "variante_oms": "B.1.1.374",
     "cantidad_muestras": 1
   },
-  "280": {
+  {
     "cve_edo": "11",
     "estado": "j",
     "abreviatura_ent": "J",
@@ -2527,7 +2527,7 @@
     "variante_oms": "B.1.1.432",
     "cantidad_muestras": 2
   },
-  "281": {
+  {
     "cve_edo": "11",
     "estado": "j",
     "abreviatura_ent": "J",
@@ -2536,7 +2536,7 @@
     "variante_oms": "B.1.1.517",
     "cantidad_muestras": 3
   },
-  "282": {
+  {
     "cve_edo": "11",
     "estado": "j",
     "abreviatura_ent": "J",
@@ -2545,7 +2545,7 @@
     "variante_oms": "B.1.1.71",
     "cantidad_muestras": 1
   },
-  "283": {
+  {
     "cve_edo": "11",
     "estado": "j",
     "abreviatura_ent": "J",
@@ -2554,7 +2554,7 @@
     "variante_oms": "B.1.126",
     "cantidad_muestras": 1
   },
-  "284": {
+  {
     "cve_edo": "11",
     "estado": "j",
     "abreviatura_ent": "J",
@@ -2563,7 +2563,7 @@
     "variante_oms": "B.1.128",
     "cantidad_muestras": 1
   },
-  "285": {
+  {
     "cve_edo": "11",
     "estado": "j",
     "abreviatura_ent": "J",
@@ -2572,7 +2572,7 @@
     "variante_oms": "B.1.189",
     "cantidad_muestras": 5
   },
-  "286": {
+  {
     "cve_edo": "11",
     "estado": "j",
     "abreviatura_ent": "J",
@@ -2581,7 +2581,7 @@
     "variante_oms": "B.1.2",
     "cantidad_muestras": 9
   },
-  "287": {
+  {
     "cve_edo": "11",
     "estado": "j",
     "abreviatura_ent": "J",
@@ -2590,7 +2590,7 @@
     "variante_oms": "B.1.234",
     "cantidad_muestras": 1
   },
-  "288": {
+  {
     "cve_edo": "11",
     "estado": "j",
     "abreviatura_ent": "J",
@@ -2599,7 +2599,7 @@
     "variante_oms": "5.4",
     "cantidad_muestras": 6
   },
-  "289": {
+  {
     "cve_edo": "11",
     "estado": "j",
     "abreviatura_ent": "J",
@@ -2608,7 +2608,7 @@
     "variante_oms": "B.1.301",
     "cantidad_muestras": 4
   },
-  "290": {
+  {
     "cve_edo": "11",
     "estado": "j",
     "abreviatura_ent": "J",
@@ -2617,7 +2617,7 @@
     "variante_oms": "B.1.397",
     "cantidad_muestras": 1
   },
-  "291": {
+  {
     "cve_edo": "11",
     "estado": "j",
     "abreviatura_ent": "J",
@@ -2626,7 +2626,7 @@
     "variante_oms": "B.1.446",
     "cantidad_muestras": 1
   },
-  "292": {
+  {
     "cve_edo": "11",
     "estado": "j",
     "abreviatura_ent": "J",
@@ -2635,7 +2635,7 @@
     "variante_oms": "B.1.551",
     "cantidad_muestras": 1
   },
-  "293": {
+  {
     "cve_edo": "11",
     "estado": "j",
     "abreviatura_ent": "J",
@@ -2644,7 +2644,7 @@
     "variante_oms": "B.1.561",
     "cantidad_muestras": 1
   },
-  "294": {
+  {
     "cve_edo": "11",
     "estado": "j",
     "abreviatura_ent": "J",
@@ -2653,7 +2653,7 @@
     "variante_oms": "5.2",
     "cantidad_muestras": 1
   },
-  "295": {
+  {
     "cve_edo": "11",
     "estado": "j",
     "abreviatura_ent": "J",
@@ -2662,7 +2662,7 @@
     "variante_oms": "5.1",
     "cantidad_muestras": 8
   },
-  "296": {
+  {
     "cve_edo": "12",
     "estado": "k",
     "abreviatura_ent": "K",
@@ -2671,7 +2671,7 @@
     "variante_oms": "3.1",
     "cantidad_muestras": 13
   },
-  "297": {
+  {
     "cve_edo": "12",
     "estado": "k",
     "abreviatura_ent": "K",
@@ -2680,7 +2680,7 @@
     "variante_oms": "1.4",
     "cantidad_muestras": 3
   },
-  "298": {
+  {
     "cve_edo": "12",
     "estado": "k",
     "abreviatura_ent": "K",
@@ -2689,7 +2689,7 @@
     "variante_oms": "1.1",
     "cantidad_muestras": 1
   },
-  "299": {
+  {
     "cve_edo": "12",
     "estado": "k",
     "abreviatura_ent": "K",
@@ -2698,7 +2698,7 @@
     "variante_oms": "1.3",
     "cantidad_muestras": 1
   },
-  "300": {
+  {
     "cve_edo": "12",
     "estado": "k",
     "abreviatura_ent": "K",
@@ -2707,7 +2707,7 @@
     "variante_oms": "4.5",
     "cantidad_muestras": 64
   },
-  "301": {
+  {
     "cve_edo": "12",
     "estado": "k",
     "abreviatura_ent": "K",
@@ -2716,7 +2716,7 @@
     "variante_oms": "5.5",
     "cantidad_muestras": 9
   },
-  "302": {
+  {
     "cve_edo": "12",
     "estado": "k",
     "abreviatura_ent": "K",
@@ -2725,7 +2725,7 @@
     "variante_oms": "5.3",
     "cantidad_muestras": 7
   },
-  "303": {
+  {
     "cve_edo": "12",
     "estado": "k",
     "abreviatura_ent": "K",
@@ -2734,7 +2734,7 @@
     "variante_oms": "B.1.1.244",
     "cantidad_muestras": 1
   },
-  "304": {
+  {
     "cve_edo": "12",
     "estado": "k",
     "abreviatura_ent": "K",
@@ -2743,7 +2743,7 @@
     "variante_oms": "B.1.1.322",
     "cantidad_muestras": 3
   },
-  "305": {
+  {
     "cve_edo": "12",
     "estado": "k",
     "abreviatura_ent": "K",
@@ -2752,7 +2752,7 @@
     "variante_oms": "B.1.1.33",
     "cantidad_muestras": 1
   },
-  "306": {
+  {
     "cve_edo": "12",
     "estado": "k",
     "abreviatura_ent": "K",
@@ -2761,7 +2761,7 @@
     "variante_oms": "B.1.1.432",
     "cantidad_muestras": 2
   },
-  "307": {
+  {
     "cve_edo": "12",
     "estado": "k",
     "abreviatura_ent": "K",
@@ -2770,7 +2770,7 @@
     "variante_oms": "B.1.2",
     "cantidad_muestras": 2
   },
-  "308": {
+  {
     "cve_edo": "12",
     "estado": "k",
     "abreviatura_ent": "K",
@@ -2779,7 +2779,7 @@
     "variante_oms": "B.1.232",
     "cantidad_muestras": 1
   },
-  "309": {
+  {
     "cve_edo": "12",
     "estado": "k",
     "abreviatura_ent": "K",
@@ -2788,7 +2788,7 @@
     "variante_oms": "B.1.397",
     "cantidad_muestras": 1
   },
-  "310": {
+  {
     "cve_edo": "12",
     "estado": "k",
     "abreviatura_ent": "K",
@@ -2797,7 +2797,7 @@
     "variante_oms": "B.1.446",
     "cantidad_muestras": 1
   },
-  "311": {
+  {
     "cve_edo": "12",
     "estado": "k",
     "abreviatura_ent": "K",
@@ -2806,7 +2806,7 @@
     "variante_oms": "5.2",
     "cantidad_muestras": 5
   },
-  "312": {
+  {
     "cve_edo": "12",
     "estado": "k",
     "abreviatura_ent": "K",
@@ -2815,7 +2815,7 @@
     "variante_oms": "B.1.610",
     "cantidad_muestras": 1
   },
-  "313": {
+  {
     "cve_edo": "12",
     "estado": "k",
     "abreviatura_ent": "K",
@@ -2824,7 +2824,7 @@
     "variante_oms": "5.1",
     "cantidad_muestras": 2
   },
-  "314": {
+  {
     "cve_edo": "13",
     "estado": "l",
     "abreviatura_ent": "L",
@@ -2833,7 +2833,7 @@
     "variante_oms": "3.1",
     "cantidad_muestras": 9
   },
-  "315": {
+  {
     "cve_edo": "13",
     "estado": "l",
     "abreviatura_ent": "L",
@@ -2842,7 +2842,7 @@
     "variante_oms": "1.4",
     "cantidad_muestras": 49
   },
-  "316": {
+  {
     "cve_edo": "13",
     "estado": "l",
     "abreviatura_ent": "L",
@@ -2851,7 +2851,7 @@
     "variante_oms": "1.1",
     "cantidad_muestras": 4
   },
-  "317": {
+  {
     "cve_edo": "13",
     "estado": "l",
     "abreviatura_ent": "L",
@@ -2860,7 +2860,7 @@
     "variante_oms": "1.3",
     "cantidad_muestras": 21
   },
-  "318": {
+  {
     "cve_edo": "13",
     "estado": "l",
     "abreviatura_ent": "L",
@@ -2869,7 +2869,7 @@
     "variante_oms": "2.3",
     "cantidad_muestras": 1
   },
-  "319": {
+  {
     "cve_edo": "13",
     "estado": "l",
     "abreviatura_ent": "L",
@@ -2878,7 +2878,7 @@
     "variante_oms": "4.5",
     "cantidad_muestras": 112
   },
-  "320": {
+  {
     "cve_edo": "13",
     "estado": "l",
     "abreviatura_ent": "L",
@@ -2887,7 +2887,7 @@
     "variante_oms": "4.2",
     "cantidad_muestras": 1
   },
-  "321": {
+  {
     "cve_edo": "13",
     "estado": "l",
     "abreviatura_ent": "L",
@@ -2896,7 +2896,7 @@
     "variante_oms": "4.4",
     "cantidad_muestras": 2
   },
-  "322": {
+  {
     "cve_edo": "13",
     "estado": "l",
     "abreviatura_ent": "L",
@@ -2905,7 +2905,7 @@
     "variante_oms": "4.1",
     "cantidad_muestras": 1
   },
-  "323": {
+  {
     "cve_edo": "13",
     "estado": "l",
     "abreviatura_ent": "L",
@@ -2914,7 +2914,7 @@
     "variante_oms": "5.5",
     "cantidad_muestras": 14
   },
-  "324": {
+  {
     "cve_edo": "13",
     "estado": "l",
     "abreviatura_ent": "L",
@@ -2923,7 +2923,7 @@
     "variante_oms": "5.3",
     "cantidad_muestras": 9
   },
-  "325": {
+  {
     "cve_edo": "13",
     "estado": "l",
     "abreviatura_ent": "L",
@@ -2932,7 +2932,7 @@
     "variante_oms": "B.1.1.28",
     "cantidad_muestras": 1
   },
-  "326": {
+  {
     "cve_edo": "13",
     "estado": "l",
     "abreviatura_ent": "L",
@@ -2941,7 +2941,7 @@
     "variante_oms": "B.1.1.432",
     "cantidad_muestras": 1
   },
-  "327": {
+  {
     "cve_edo": "13",
     "estado": "l",
     "abreviatura_ent": "L",
@@ -2950,7 +2950,7 @@
     "variante_oms": "B.1.137",
     "cantidad_muestras": 1
   },
-  "328": {
+  {
     "cve_edo": "13",
     "estado": "l",
     "abreviatura_ent": "L",
@@ -2959,7 +2959,7 @@
     "variante_oms": "B.1.189",
     "cantidad_muestras": 4
   },
-  "329": {
+  {
     "cve_edo": "13",
     "estado": "l",
     "abreviatura_ent": "L",
@@ -2968,7 +2968,7 @@
     "variante_oms": "B.1.229",
     "cantidad_muestras": 1
   },
-  "330": {
+  {
     "cve_edo": "13",
     "estado": "l",
     "abreviatura_ent": "L",
@@ -2977,7 +2977,7 @@
     "variante_oms": "5.4",
     "cantidad_muestras": 2
   },
-  "331": {
+  {
     "cve_edo": "13",
     "estado": "l",
     "abreviatura_ent": "L",
@@ -2986,7 +2986,7 @@
     "variante_oms": "B.1.243.1",
     "cantidad_muestras": 2
   },
-  "332": {
+  {
     "cve_edo": "13",
     "estado": "l",
     "abreviatura_ent": "L",
@@ -2995,7 +2995,7 @@
     "variante_oms": "B.1.301",
     "cantidad_muestras": 1
   },
-  "333": {
+  {
     "cve_edo": "13",
     "estado": "l",
     "abreviatura_ent": "L",
@@ -3004,7 +3004,7 @@
     "variante_oms": "B.1.400",
     "cantidad_muestras": 1
   },
-  "334": {
+  {
     "cve_edo": "13",
     "estado": "l",
     "abreviatura_ent": "L",
@@ -3013,7 +3013,7 @@
     "variante_oms": "B.1.526.1",
     "cantidad_muestras": 1
   },
-  "335": {
+  {
     "cve_edo": "13",
     "estado": "l",
     "abreviatura_ent": "L",
@@ -3022,7 +3022,7 @@
     "variante_oms": "B.1.551",
     "cantidad_muestras": 1
   },
-  "336": {
+  {
     "cve_edo": "13",
     "estado": "l",
     "abreviatura_ent": "L",
@@ -3031,7 +3031,7 @@
     "variante_oms": "B.1.582",
     "cantidad_muestras": 1
   },
-  "337": {
+  {
     "cve_edo": "13",
     "estado": "l",
     "abreviatura_ent": "L",
@@ -3040,7 +3040,7 @@
     "variante_oms": "5.2",
     "cantidad_muestras": 1
   },
-  "338": {
+  {
     "cve_edo": "13",
     "estado": "l",
     "abreviatura_ent": "L",
@@ -3049,7 +3049,7 @@
     "variante_oms": "B.1.610",
     "cantidad_muestras": 1
   },
-  "339": {
+  {
     "cve_edo": "13",
     "estado": "l",
     "abreviatura_ent": "L",
@@ -3058,7 +3058,7 @@
     "variante_oms": "B.1.94",
     "cantidad_muestras": 1
   },
-  "340": {
+  {
     "cve_edo": "13",
     "estado": "l",
     "abreviatura_ent": "L",
@@ -3067,7 +3067,7 @@
     "variante_oms": "5.1",
     "cantidad_muestras": 16
   },
-  "341": {
+  {
     "cve_edo": "14",
     "estado": "m",
     "abreviatura_ent": "M",
@@ -3076,7 +3076,7 @@
     "variante_oms": "3.1",
     "cantidad_muestras": 8
   },
-  "342": {
+  {
     "cve_edo": "14",
     "estado": "m",
     "abreviatura_ent": "M",
@@ -3085,7 +3085,7 @@
     "variante_oms": "1.4",
     "cantidad_muestras": 20
   },
-  "343": {
+  {
     "cve_edo": "14",
     "estado": "m",
     "abreviatura_ent": "M",
@@ -3094,7 +3094,7 @@
     "variante_oms": "1.1",
     "cantidad_muestras": 2
   },
-  "344": {
+  {
     "cve_edo": "14",
     "estado": "m",
     "abreviatura_ent": "M",
@@ -3103,7 +3103,7 @@
     "variante_oms": "1.3",
     "cantidad_muestras": 30
   },
-  "345": {
+  {
     "cve_edo": "14",
     "estado": "m",
     "abreviatura_ent": "M",
@@ -3112,7 +3112,7 @@
     "variante_oms": "2.2",
     "cantidad_muestras": 11
   },
-  "346": {
+  {
     "cve_edo": "14",
     "estado": "m",
     "abreviatura_ent": "M",
@@ -3121,7 +3121,7 @@
     "variante_oms": "2.3",
     "cantidad_muestras": 1
   },
-  "347": {
+  {
     "cve_edo": "14",
     "estado": "m",
     "abreviatura_ent": "M",
@@ -3130,7 +3130,7 @@
     "variante_oms": "4.3",
     "cantidad_muestras": 1
   },
-  "348": {
+  {
     "cve_edo": "14",
     "estado": "m",
     "abreviatura_ent": "M",
@@ -3139,7 +3139,7 @@
     "variante_oms": "4.5",
     "cantidad_muestras": 170
   },
-  "349": {
+  {
     "cve_edo": "14",
     "estado": "m",
     "abreviatura_ent": "M",
@@ -3148,7 +3148,7 @@
     "variante_oms": "4.4",
     "cantidad_muestras": 47
   },
-  "350": {
+  {
     "cve_edo": "14",
     "estado": "m",
     "abreviatura_ent": "M",
@@ -3157,7 +3157,7 @@
     "variante_oms": "4.1",
     "cantidad_muestras": 35
   },
-  "351": {
+  {
     "cve_edo": "14",
     "estado": "m",
     "abreviatura_ent": "M",
@@ -3166,7 +3166,7 @@
     "variante_oms": "B",
     "cantidad_muestras": 2
   },
-  "352": {
+  {
     "cve_edo": "14",
     "estado": "m",
     "abreviatura_ent": "M",
@@ -3175,7 +3175,7 @@
     "variante_oms": "5.5",
     "cantidad_muestras": 13
   },
-  "353": {
+  {
     "cve_edo": "14",
     "estado": "m",
     "abreviatura_ent": "M",
@@ -3184,7 +3184,7 @@
     "variante_oms": "5.3",
     "cantidad_muestras": 3
   },
-  "354": {
+  {
     "cve_edo": "14",
     "estado": "m",
     "abreviatura_ent": "M",
@@ -3193,7 +3193,7 @@
     "variante_oms": "B.1.1.244",
     "cantidad_muestras": 1
   },
-  "355": {
+  {
     "cve_edo": "14",
     "estado": "m",
     "abreviatura_ent": "M",
@@ -3202,7 +3202,7 @@
     "variante_oms": "B.1.1.316",
     "cantidad_muestras": 1
   },
-  "356": {
+  {
     "cve_edo": "14",
     "estado": "m",
     "abreviatura_ent": "M",
@@ -3211,7 +3211,7 @@
     "variante_oms": "B.1.1.322",
     "cantidad_muestras": 1
   },
-  "357": {
+  {
     "cve_edo": "14",
     "estado": "m",
     "abreviatura_ent": "M",
@@ -3220,7 +3220,7 @@
     "variante_oms": "B.1.1.348",
     "cantidad_muestras": 1
   },
-  "358": {
+  {
     "cve_edo": "14",
     "estado": "m",
     "abreviatura_ent": "M",
@@ -3229,7 +3229,7 @@
     "variante_oms": "B.1.1.517",
     "cantidad_muestras": 2
   },
-  "359": {
+  {
     "cve_edo": "14",
     "estado": "m",
     "abreviatura_ent": "M",
@@ -3238,7 +3238,7 @@
     "variante_oms": "B.1.1.518",
     "cantidad_muestras": 1
   },
-  "360": {
+  {
     "cve_edo": "14",
     "estado": "m",
     "abreviatura_ent": "M",
@@ -3247,7 +3247,7 @@
     "variante_oms": "B.1.189",
     "cantidad_muestras": 1
   },
-  "361": {
+  {
     "cve_edo": "14",
     "estado": "m",
     "abreviatura_ent": "M",
@@ -3256,7 +3256,7 @@
     "variante_oms": "B.1.2",
     "cantidad_muestras": 4
   },
-  "362": {
+  {
     "cve_edo": "14",
     "estado": "m",
     "abreviatura_ent": "M",
@@ -3265,7 +3265,7 @@
     "variante_oms": "B.1.239",
     "cantidad_muestras": 5
   },
-  "363": {
+  {
     "cve_edo": "14",
     "estado": "m",
     "abreviatura_ent": "M",
@@ -3274,7 +3274,7 @@
     "variante_oms": "5.4",
     "cantidad_muestras": 28
   },
-  "364": {
+  {
     "cve_edo": "14",
     "estado": "m",
     "abreviatura_ent": "M",
@@ -3283,7 +3283,7 @@
     "variante_oms": "B.1.301",
     "cantidad_muestras": 1
   },
-  "365": {
+  {
     "cve_edo": "14",
     "estado": "m",
     "abreviatura_ent": "M",
@@ -3292,7 +3292,7 @@
     "variante_oms": "B.1.438.1",
     "cantidad_muestras": 1
   },
-  "366": {
+  {
     "cve_edo": "14",
     "estado": "m",
     "abreviatura_ent": "M",
@@ -3301,7 +3301,7 @@
     "variante_oms": "B.1.558",
     "cantidad_muestras": 1
   },
-  "367": {
+  {
     "cve_edo": "14",
     "estado": "m",
     "abreviatura_ent": "M",
@@ -3310,7 +3310,7 @@
     "variante_oms": "5.2",
     "cantidad_muestras": 1
   },
-  "368": {
+  {
     "cve_edo": "14",
     "estado": "m",
     "abreviatura_ent": "M",
@@ -3319,7 +3319,7 @@
     "variante_oms": "5.1",
     "cantidad_muestras": 4
   },
-  "369": {
+  {
     "cve_edo": "14",
     "estado": "m",
     "abreviatura_ent": "M",
@@ -3328,7 +3328,7 @@
     "variante_oms": "4.1",
     "cantidad_muestras": 5
   },
-  "370": {
+  {
     "cve_edo": "14",
     "estado": "m",
     "abreviatura_ent": "M",
@@ -3337,7 +3337,7 @@
     "variante_oms": "4.1",
     "cantidad_muestras": 1
   },
-  "371": {
+  {
     "cve_edo": "17",
     "estado": "n",
     "abreviatura_ent": "N",
@@ -3346,7 +3346,7 @@
     "variante_oms": "3.1",
     "cantidad_muestras": 20
   },
-  "372": {
+  {
     "cve_edo": "17",
     "estado": "n",
     "abreviatura_ent": "N",
@@ -3355,7 +3355,7 @@
     "variante_oms": "1.4",
     "cantidad_muestras": 4
   },
-  "373": {
+  {
     "cve_edo": "17",
     "estado": "n",
     "abreviatura_ent": "N",
@@ -3364,7 +3364,7 @@
     "variante_oms": "1.3",
     "cantidad_muestras": 2
   },
-  "374": {
+  {
     "cve_edo": "17",
     "estado": "n",
     "abreviatura_ent": "N",
@@ -3373,7 +3373,7 @@
     "variante_oms": "4.5",
     "cantidad_muestras": 217
   },
-  "375": {
+  {
     "cve_edo": "17",
     "estado": "n",
     "abreviatura_ent": "N",
@@ -3382,7 +3382,7 @@
     "variante_oms": "4.4",
     "cantidad_muestras": 4
   },
-  "376": {
+  {
     "cve_edo": "17",
     "estado": "n",
     "abreviatura_ent": "N",
@@ -3391,7 +3391,7 @@
     "variante_oms": "5.5",
     "cantidad_muestras": 16
   },
-  "377": {
+  {
     "cve_edo": "17",
     "estado": "n",
     "abreviatura_ent": "N",
@@ -3400,7 +3400,7 @@
     "variante_oms": "5.3",
     "cantidad_muestras": 15
   },
-  "378": {
+  {
     "cve_edo": "17",
     "estado": "n",
     "abreviatura_ent": "N",
@@ -3409,7 +3409,7 @@
     "variante_oms": "B.1.1.133",
     "cantidad_muestras": 1
   },
-  "379": {
+  {
     "cve_edo": "17",
     "estado": "n",
     "abreviatura_ent": "N",
@@ -3418,7 +3418,7 @@
     "variante_oms": "B.1.1.322",
     "cantidad_muestras": 1
   },
-  "380": {
+  {
     "cve_edo": "17",
     "estado": "n",
     "abreviatura_ent": "N",
@@ -3427,7 +3427,7 @@
     "variante_oms": "B.1.2",
     "cantidad_muestras": 5
   },
-  "381": {
+  {
     "cve_edo": "17",
     "estado": "n",
     "abreviatura_ent": "N",
@@ -3436,7 +3436,7 @@
     "variante_oms": "5.4",
     "cantidad_muestras": 2
   },
-  "382": {
+  {
     "cve_edo": "17",
     "estado": "n",
     "abreviatura_ent": "N",
@@ -3445,7 +3445,7 @@
     "variante_oms": "B.1.301",
     "cantidad_muestras": 4
   },
-  "383": {
+  {
     "cve_edo": "17",
     "estado": "n",
     "abreviatura_ent": "N",
@@ -3454,7 +3454,7 @@
     "variante_oms": "B.1.551",
     "cantidad_muestras": 1
   },
-  "384": {
+  {
     "cve_edo": "17",
     "estado": "n",
     "abreviatura_ent": "N",
@@ -3463,7 +3463,7 @@
     "variante_oms": "5.2",
     "cantidad_muestras": 2
   },
-  "385": {
+  {
     "cve_edo": "17",
     "estado": "n",
     "abreviatura_ent": "N",
@@ -3472,7 +3472,7 @@
     "variante_oms": "B.1.610",
     "cantidad_muestras": 2
   },
-  "386": {
+  {
     "cve_edo": "18",
     "estado": "o",
     "abreviatura_ent": "O",
@@ -3481,7 +3481,7 @@
     "variante_oms": "1.4",
     "cantidad_muestras": 4
   },
-  "387": {
+  {
     "cve_edo": "18",
     "estado": "o",
     "abreviatura_ent": "O",
@@ -3490,7 +3490,7 @@
     "variante_oms": "1.3",
     "cantidad_muestras": 1
   },
-  "388": {
+  {
     "cve_edo": "18",
     "estado": "o",
     "abreviatura_ent": "O",
@@ -3499,7 +3499,7 @@
     "variante_oms": "4.5",
     "cantidad_muestras": 18
   },
-  "389": {
+  {
     "cve_edo": "18",
     "estado": "o",
     "abreviatura_ent": "O",
@@ -3508,7 +3508,7 @@
     "variante_oms": "5.5",
     "cantidad_muestras": 2
   },
-  "390": {
+  {
     "cve_edo": "18",
     "estado": "o",
     "abreviatura_ent": "O",
@@ -3517,7 +3517,7 @@
     "variante_oms": "B.1.1.344",
     "cantidad_muestras": 1
   },
-  "391": {
+  {
     "cve_edo": "18",
     "estado": "o",
     "abreviatura_ent": "O",
@@ -3526,7 +3526,7 @@
     "variante_oms": "B.1.126",
     "cantidad_muestras": 1
   },
-  "392": {
+  {
     "cve_edo": "18",
     "estado": "o",
     "abreviatura_ent": "O",
@@ -3535,7 +3535,7 @@
     "variante_oms": "B.1.241",
     "cantidad_muestras": 2
   },
-  "393": {
+  {
     "cve_edo": "18",
     "estado": "o",
     "abreviatura_ent": "O",
@@ -3544,7 +3544,7 @@
     "variante_oms": "B.1.320",
     "cantidad_muestras": 1
   },
-  "394": {
+  {
     "cve_edo": "18",
     "estado": "o",
     "abreviatura_ent": "O",
@@ -3553,7 +3553,7 @@
     "variante_oms": "B.1.561",
     "cantidad_muestras": 1
   },
-  "395": {
+  {
     "cve_edo": "18",
     "estado": "o",
     "abreviatura_ent": "O",
@@ -3562,7 +3562,7 @@
     "variante_oms": "B.1.596",
     "cantidad_muestras": 1
   },
-  "396": {
+  {
     "cve_edo": "18",
     "estado": "o",
     "abreviatura_ent": "O",
@@ -3571,7 +3571,7 @@
     "variante_oms": "5.2",
     "cantidad_muestras": 1
   },
-  "397": {
+  {
     "cve_edo": "19",
     "estado": "p",
     "abreviatura_ent": "P",
@@ -3580,7 +3580,7 @@
     "variante_oms": "3.1",
     "cantidad_muestras": 19
   },
-  "398": {
+  {
     "cve_edo": "19",
     "estado": "p",
     "abreviatura_ent": "P",
@@ -3589,7 +3589,7 @@
     "variante_oms": "1.4",
     "cantidad_muestras": 80
   },
-  "399": {
+  {
     "cve_edo": "19",
     "estado": "p",
     "abreviatura_ent": "P",
@@ -3598,7 +3598,7 @@
     "variante_oms": "1.2",
     "cantidad_muestras": 2
   },
-  "400": {
+  {
     "cve_edo": "19",
     "estado": "p",
     "abreviatura_ent": "P",
@@ -3607,7 +3607,7 @@
     "variante_oms": "1.1",
     "cantidad_muestras": 2
   },
-  "401": {
+  {
     "cve_edo": "19",
     "estado": "p",
     "abreviatura_ent": "P",
@@ -3616,7 +3616,7 @@
     "variante_oms": "1.3",
     "cantidad_muestras": 25
   },
-  "402": {
+  {
     "cve_edo": "19",
     "estado": "p",
     "abreviatura_ent": "P",
@@ -3625,7 +3625,7 @@
     "variante_oms": "2.2",
     "cantidad_muestras": 2
   },
-  "403": {
+  {
     "cve_edo": "19",
     "estado": "p",
     "abreviatura_ent": "P",
@@ -3634,7 +3634,7 @@
     "variante_oms": "2.3",
     "cantidad_muestras": 4
   },
-  "404": {
+  {
     "cve_edo": "19",
     "estado": "p",
     "abreviatura_ent": "P",
@@ -3643,7 +3643,7 @@
     "variante_oms": "4.5",
     "cantidad_muestras": 219
   },
-  "405": {
+  {
     "cve_edo": "19",
     "estado": "p",
     "abreviatura_ent": "P",
@@ -3652,7 +3652,7 @@
     "variante_oms": "4.2",
     "cantidad_muestras": 4
   },
-  "406": {
+  {
     "cve_edo": "19",
     "estado": "p",
     "abreviatura_ent": "P",
@@ -3661,7 +3661,7 @@
     "variante_oms": "4.4",
     "cantidad_muestras": 36
   },
-  "407": {
+  {
     "cve_edo": "19",
     "estado": "p",
     "abreviatura_ent": "P",
@@ -3670,7 +3670,7 @@
     "variante_oms": "A",
     "cantidad_muestras": 5
   },
-  "408": {
+  {
     "cve_edo": "19",
     "estado": "p",
     "abreviatura_ent": "P",
@@ -3679,7 +3679,7 @@
     "variante_oms": "A.2",
     "cantidad_muestras": 2
   },
-  "409": {
+  {
     "cve_edo": "19",
     "estado": "p",
     "abreviatura_ent": "P",
@@ -3688,7 +3688,7 @@
     "variante_oms": "A.2.5",
     "cantidad_muestras": 4
   },
-  "410": {
+  {
     "cve_edo": "19",
     "estado": "p",
     "abreviatura_ent": "P",
@@ -3697,7 +3697,7 @@
     "variante_oms": "B",
     "cantidad_muestras": 3
   },
-  "411": {
+  {
     "cve_edo": "19",
     "estado": "p",
     "abreviatura_ent": "P",
@@ -3706,7 +3706,7 @@
     "variante_oms": "5.5",
     "cantidad_muestras": 71
   },
-  "412": {
+  {
     "cve_edo": "19",
     "estado": "p",
     "abreviatura_ent": "P",
@@ -3715,7 +3715,7 @@
     "variante_oms": "5.3",
     "cantidad_muestras": 39
   },
-  "413": {
+  {
     "cve_edo": "19",
     "estado": "p",
     "abreviatura_ent": "P",
@@ -3724,7 +3724,7 @@
     "variante_oms": "B.1.1.161",
     "cantidad_muestras": 11
   },
-  "414": {
+  {
     "cve_edo": "19",
     "estado": "p",
     "abreviatura_ent": "P",
@@ -3733,7 +3733,7 @@
     "variante_oms": "B.1.1.207",
     "cantidad_muestras": 1
   },
-  "415": {
+  {
     "cve_edo": "19",
     "estado": "p",
     "abreviatura_ent": "P",
@@ -3742,7 +3742,7 @@
     "variante_oms": "B.1.1.274",
     "cantidad_muestras": 1
   },
-  "416": {
+  {
     "cve_edo": "19",
     "estado": "p",
     "abreviatura_ent": "P",
@@ -3751,7 +3751,7 @@
     "variante_oms": "B.1.1.28",
     "cantidad_muestras": 3
   },
-  "417": {
+  {
     "cve_edo": "19",
     "estado": "p",
     "abreviatura_ent": "P",
@@ -3760,7 +3760,7 @@
     "variante_oms": "B.1.1.316",
     "cantidad_muestras": 4
   },
-  "418": {
+  {
     "cve_edo": "19",
     "estado": "p",
     "abreviatura_ent": "P",
@@ -3769,7 +3769,7 @@
     "variante_oms": "B.1.1.317",
     "cantidad_muestras": 1
   },
-  "419": {
+  {
     "cve_edo": "19",
     "estado": "p",
     "abreviatura_ent": "P",
@@ -3778,7 +3778,7 @@
     "variante_oms": "B.1.1.322",
     "cantidad_muestras": 1
   },
-  "420": {
+  {
     "cve_edo": "19",
     "estado": "p",
     "abreviatura_ent": "P",
@@ -3787,7 +3787,7 @@
     "variante_oms": "B.1.1.329",
     "cantidad_muestras": 1
   },
-  "421": {
+  {
     "cve_edo": "19",
     "estado": "p",
     "abreviatura_ent": "P",
@@ -3796,7 +3796,7 @@
     "variante_oms": "B.1.1.34",
     "cantidad_muestras": 1
   },
-  "422": {
+  {
     "cve_edo": "19",
     "estado": "p",
     "abreviatura_ent": "P",
@@ -3805,7 +3805,7 @@
     "variante_oms": "B.1.1.344",
     "cantidad_muestras": 19
   },
-  "423": {
+  {
     "cve_edo": "19",
     "estado": "p",
     "abreviatura_ent": "P",
@@ -3814,7 +3814,7 @@
     "variante_oms": "B.1.1.432",
     "cantidad_muestras": 13
   },
-  "424": {
+  {
     "cve_edo": "19",
     "estado": "p",
     "abreviatura_ent": "P",
@@ -3823,7 +3823,7 @@
     "variante_oms": "B.1.1.434",
     "cantidad_muestras": 1
   },
-  "425": {
+  {
     "cve_edo": "19",
     "estado": "p",
     "abreviatura_ent": "P",
@@ -3832,7 +3832,7 @@
     "variante_oms": "B.1.1.518",
     "cantidad_muestras": 1
   },
-  "426": {
+  {
     "cve_edo": "19",
     "estado": "p",
     "abreviatura_ent": "P",
@@ -3841,7 +3841,7 @@
     "variante_oms": "B.1.1.523",
     "cantidad_muestras": 1
   },
-  "427": {
+  {
     "cve_edo": "19",
     "estado": "p",
     "abreviatura_ent": "P",
@@ -3850,7 +3850,7 @@
     "variante_oms": "B.1.153",
     "cantidad_muestras": 1
   },
-  "428": {
+  {
     "cve_edo": "19",
     "estado": "p",
     "abreviatura_ent": "P",
@@ -3859,7 +3859,7 @@
     "variante_oms": "B.1.177",
     "cantidad_muestras": 1
   },
-  "429": {
+  {
     "cve_edo": "19",
     "estado": "p",
     "abreviatura_ent": "P",
@@ -3868,7 +3868,7 @@
     "variante_oms": "B.1.2",
     "cantidad_muestras": 24
   },
-  "430": {
+  {
     "cve_edo": "19",
     "estado": "p",
     "abreviatura_ent": "P",
@@ -3877,7 +3877,7 @@
     "variante_oms": "B.1.241",
     "cantidad_muestras": 7
   },
-  "431": {
+  {
     "cve_edo": "19",
     "estado": "p",
     "abreviatura_ent": "P",
@@ -3886,7 +3886,7 @@
     "variante_oms": "5.4",
     "cantidad_muestras": 39
   },
-  "432": {
+  {
     "cve_edo": "19",
     "estado": "p",
     "abreviatura_ent": "P",
@@ -3895,7 +3895,7 @@
     "variante_oms": "B.1.350",
     "cantidad_muestras": 1
   },
-  "433": {
+  {
     "cve_edo": "19",
     "estado": "p",
     "abreviatura_ent": "P",
@@ -3904,7 +3904,7 @@
     "variante_oms": "B.1.366",
     "cantidad_muestras": 2
   },
-  "434": {
+  {
     "cve_edo": "19",
     "estado": "p",
     "abreviatura_ent": "P",
@@ -3913,7 +3913,7 @@
     "variante_oms": "B.1.369",
     "cantidad_muestras": 1
   },
-  "435": {
+  {
     "cve_edo": "19",
     "estado": "p",
     "abreviatura_ent": "P",
@@ -3922,7 +3922,7 @@
     "variante_oms": "B.1.396",
     "cantidad_muestras": 13
   },
-  "436": {
+  {
     "cve_edo": "19",
     "estado": "p",
     "abreviatura_ent": "P",
@@ -3931,7 +3931,7 @@
     "variante_oms": "B.1.538",
     "cantidad_muestras": 1
   },
-  "437": {
+  {
     "cve_edo": "19",
     "estado": "p",
     "abreviatura_ent": "P",
@@ -3940,7 +3940,7 @@
     "variante_oms": "B.1.551",
     "cantidad_muestras": 1
   },
-  "438": {
+  {
     "cve_edo": "19",
     "estado": "p",
     "abreviatura_ent": "P",
@@ -3949,7 +3949,7 @@
     "variante_oms": "B.1.558",
     "cantidad_muestras": 9
   },
-  "439": {
+  {
     "cve_edo": "19",
     "estado": "p",
     "abreviatura_ent": "P",
@@ -3958,7 +3958,7 @@
     "variante_oms": "B.1.564",
     "cantidad_muestras": 1
   },
-  "440": {
+  {
     "cve_edo": "19",
     "estado": "p",
     "abreviatura_ent": "P",
@@ -3967,7 +3967,7 @@
     "variante_oms": "B.1.576",
     "cantidad_muestras": 1
   },
-  "441": {
+  {
     "cve_edo": "19",
     "estado": "p",
     "abreviatura_ent": "P",
@@ -3976,7 +3976,7 @@
     "variante_oms": "B.1.588",
     "cantidad_muestras": 1
   },
-  "442": {
+  {
     "cve_edo": "19",
     "estado": "p",
     "abreviatura_ent": "P",
@@ -3985,7 +3985,7 @@
     "variante_oms": "B.1.595",
     "cantidad_muestras": 3
   },
-  "443": {
+  {
     "cve_edo": "19",
     "estado": "p",
     "abreviatura_ent": "P",
@@ -3994,7 +3994,7 @@
     "variante_oms": "B.1.596",
     "cantidad_muestras": 1
   },
-  "444": {
+  {
     "cve_edo": "19",
     "estado": "p",
     "abreviatura_ent": "P",
@@ -4003,7 +4003,7 @@
     "variante_oms": "5.2",
     "cantidad_muestras": 3
   },
-  "445": {
+  {
     "cve_edo": "19",
     "estado": "p",
     "abreviatura_ent": "P",
@@ -4012,7 +4012,7 @@
     "variante_oms": "C.23",
     "cantidad_muestras": 1
   },
-  "446": {
+  {
     "cve_edo": "19",
     "estado": "p",
     "abreviatura_ent": "P",
@@ -4021,7 +4021,7 @@
     "variante_oms": "C.36",
     "cantidad_muestras": 1
   },
-  "447": {
+  {
     "cve_edo": "19",
     "estado": "p",
     "abreviatura_ent": "P",
@@ -4030,7 +4030,7 @@
     "variante_oms": "5.1",
     "cantidad_muestras": 11
   },
-  "448": {
+  {
     "cve_edo": "19",
     "estado": "p",
     "abreviatura_ent": "P",
@@ -4039,7 +4039,7 @@
     "variante_oms": "Sin informaci\u00f3n",
     "cantidad_muestras": 18
   },
-  "449": {
+  {
     "cve_edo": "20",
     "estado": "q",
     "abreviatura_ent": "Q",
@@ -4048,7 +4048,7 @@
     "variante_oms": "3.1",
     "cantidad_muestras": 9
   },
-  "450": {
+  {
     "cve_edo": "20",
     "estado": "q",
     "abreviatura_ent": "Q",
@@ -4057,7 +4057,7 @@
     "variante_oms": "1.4",
     "cantidad_muestras": 18
   },
-  "451": {
+  {
     "cve_edo": "20",
     "estado": "q",
     "abreviatura_ent": "Q",
@@ -4066,7 +4066,7 @@
     "variante_oms": "1.3",
     "cantidad_muestras": 2
   },
-  "452": {
+  {
     "cve_edo": "20",
     "estado": "q",
     "abreviatura_ent": "Q",
@@ -4075,7 +4075,7 @@
     "variante_oms": "4.5",
     "cantidad_muestras": 47
   },
-  "453": {
+  {
     "cve_edo": "20",
     "estado": "q",
     "abreviatura_ent": "Q",
@@ -4084,7 +4084,7 @@
     "variante_oms": "4.4",
     "cantidad_muestras": 6
   },
-  "454": {
+  {
     "cve_edo": "20",
     "estado": "q",
     "abreviatura_ent": "Q",
@@ -4093,7 +4093,7 @@
     "variante_oms": "A.2.5",
     "cantidad_muestras": 4
   },
-  "455": {
+  {
     "cve_edo": "20",
     "estado": "q",
     "abreviatura_ent": "Q",
@@ -4102,7 +4102,7 @@
     "variante_oms": "5.5",
     "cantidad_muestras": 6
   },
-  "456": {
+  {
     "cve_edo": "20",
     "estado": "q",
     "abreviatura_ent": "Q",
@@ -4111,7 +4111,7 @@
     "variante_oms": "5.3",
     "cantidad_muestras": 4
   },
-  "457": {
+  {
     "cve_edo": "20",
     "estado": "q",
     "abreviatura_ent": "Q",
@@ -4120,7 +4120,7 @@
     "variante_oms": "B.1.1.198",
     "cantidad_muestras": 1
   },
-  "458": {
+  {
     "cve_edo": "20",
     "estado": "q",
     "abreviatura_ent": "Q",
@@ -4129,7 +4129,7 @@
     "variante_oms": "B.1.1.432",
     "cantidad_muestras": 4
   },
-  "459": {
+  {
     "cve_edo": "20",
     "estado": "q",
     "abreviatura_ent": "Q",
@@ -4138,7 +4138,7 @@
     "variante_oms": "B.1.189",
     "cantidad_muestras": 1
   },
-  "460": {
+  {
     "cve_edo": "20",
     "estado": "q",
     "abreviatura_ent": "Q",
@@ -4147,7 +4147,7 @@
     "variante_oms": "B.1.2",
     "cantidad_muestras": 1
   },
-  "461": {
+  {
     "cve_edo": "20",
     "estado": "q",
     "abreviatura_ent": "Q",
@@ -4156,7 +4156,7 @@
     "variante_oms": "5.4",
     "cantidad_muestras": 1
   },
-  "462": {
+  {
     "cve_edo": "20",
     "estado": "q",
     "abreviatura_ent": "Q",
@@ -4165,7 +4165,7 @@
     "variante_oms": "B.1.301",
     "cantidad_muestras": 1
   },
-  "463": {
+  {
     "cve_edo": "20",
     "estado": "q",
     "abreviatura_ent": "Q",
@@ -4174,7 +4174,7 @@
     "variante_oms": "B.1.36.10",
     "cantidad_muestras": 2
   },
-  "464": {
+  {
     "cve_edo": "20",
     "estado": "q",
     "abreviatura_ent": "Q",
@@ -4183,7 +4183,7 @@
     "variante_oms": "B.1.405",
     "cantidad_muestras": 1
   },
-  "465": {
+  {
     "cve_edo": "20",
     "estado": "q",
     "abreviatura_ent": "Q",
@@ -4192,7 +4192,7 @@
     "variante_oms": "5.2",
     "cantidad_muestras": 4
   },
-  "466": {
+  {
     "cve_edo": "20",
     "estado": "q",
     "abreviatura_ent": "Q",
@@ -4201,7 +4201,7 @@
     "variante_oms": "5.1",
     "cantidad_muestras": 1
   },
-  "467": {
+  {
     "cve_edo": "21",
     "estado": "r",
     "abreviatura_ent": "R",
@@ -4210,7 +4210,7 @@
     "variante_oms": "3.1",
     "cantidad_muestras": 37
   },
-  "468": {
+  {
     "cve_edo": "21",
     "estado": "r",
     "abreviatura_ent": "R",
@@ -4219,7 +4219,7 @@
     "variante_oms": "1.4",
     "cantidad_muestras": 31
   },
-  "469": {
+  {
     "cve_edo": "21",
     "estado": "r",
     "abreviatura_ent": "R",
@@ -4228,7 +4228,7 @@
     "variante_oms": "1.1",
     "cantidad_muestras": 2
   },
-  "470": {
+  {
     "cve_edo": "21",
     "estado": "r",
     "abreviatura_ent": "R",
@@ -4237,7 +4237,7 @@
     "variante_oms": "1.3",
     "cantidad_muestras": 9
   },
-  "471": {
+  {
     "cve_edo": "21",
     "estado": "r",
     "abreviatura_ent": "R",
@@ -4246,7 +4246,7 @@
     "variante_oms": "2.2",
     "cantidad_muestras": 1
   },
-  "472": {
+  {
     "cve_edo": "21",
     "estado": "r",
     "abreviatura_ent": "R",
@@ -4255,7 +4255,7 @@
     "variante_oms": "4.5",
     "cantidad_muestras": 534
   },
-  "473": {
+  {
     "cve_edo": "21",
     "estado": "r",
     "abreviatura_ent": "R",
@@ -4264,7 +4264,7 @@
     "variante_oms": "4.4",
     "cantidad_muestras": 7
   },
-  "474": {
+  {
     "cve_edo": "21",
     "estado": "r",
     "abreviatura_ent": "R",
@@ -4273,7 +4273,7 @@
     "variante_oms": "A.2.5",
     "cantidad_muestras": 1
   },
-  "475": {
+  {
     "cve_edo": "21",
     "estado": "r",
     "abreviatura_ent": "R",
@@ -4282,7 +4282,7 @@
     "variante_oms": "5.5",
     "cantidad_muestras": 20
   },
-  "476": {
+  {
     "cve_edo": "21",
     "estado": "r",
     "abreviatura_ent": "R",
@@ -4291,7 +4291,7 @@
     "variante_oms": "5.3",
     "cantidad_muestras": 4
   },
-  "477": {
+  {
     "cve_edo": "21",
     "estado": "r",
     "abreviatura_ent": "R",
@@ -4300,7 +4300,7 @@
     "variante_oms": "B.1.1.244",
     "cantidad_muestras": 1
   },
-  "478": {
+  {
     "cve_edo": "21",
     "estado": "r",
     "abreviatura_ent": "R",
@@ -4309,7 +4309,7 @@
     "variante_oms": "B.1.1.311",
     "cantidad_muestras": 1
   },
-  "479": {
+  {
     "cve_edo": "21",
     "estado": "r",
     "abreviatura_ent": "R",
@@ -4318,7 +4318,7 @@
     "variante_oms": "B.1.1.432",
     "cantidad_muestras": 2
   },
-  "480": {
+  {
     "cve_edo": "21",
     "estado": "r",
     "abreviatura_ent": "R",
@@ -4327,7 +4327,7 @@
     "variante_oms": "B.1.189",
     "cantidad_muestras": 1
   },
-  "481": {
+  {
     "cve_edo": "21",
     "estado": "r",
     "abreviatura_ent": "R",
@@ -4336,7 +4336,7 @@
     "variante_oms": "5.4",
     "cantidad_muestras": 4
   },
-  "482": {
+  {
     "cve_edo": "21",
     "estado": "r",
     "abreviatura_ent": "R",
@@ -4345,7 +4345,7 @@
     "variante_oms": "B.1.397",
     "cantidad_muestras": 4
   },
-  "483": {
+  {
     "cve_edo": "21",
     "estado": "r",
     "abreviatura_ent": "R",
@@ -4354,7 +4354,7 @@
     "variante_oms": "B.1.400",
     "cantidad_muestras": 1
   },
-  "484": {
+  {
     "cve_edo": "21",
     "estado": "r",
     "abreviatura_ent": "R",
@@ -4363,7 +4363,7 @@
     "variante_oms": "B.1.503",
     "cantidad_muestras": 1
   },
-  "485": {
+  {
     "cve_edo": "21",
     "estado": "r",
     "abreviatura_ent": "R",
@@ -4372,7 +4372,7 @@
     "variante_oms": "B.1.551",
     "cantidad_muestras": 2
   },
-  "486": {
+  {
     "cve_edo": "21",
     "estado": "r",
     "abreviatura_ent": "R",
@@ -4381,7 +4381,7 @@
     "variante_oms": "B.1.596",
     "cantidad_muestras": 2
   },
-  "487": {
+  {
     "cve_edo": "21",
     "estado": "r",
     "abreviatura_ent": "R",
@@ -4390,7 +4390,7 @@
     "variante_oms": "5.2",
     "cantidad_muestras": 1
   },
-  "488": {
+  {
     "cve_edo": "21",
     "estado": "r",
     "abreviatura_ent": "R",
@@ -4399,7 +4399,7 @@
     "variante_oms": "5.1",
     "cantidad_muestras": 3
   },
-  "489": {
+  {
     "cve_edo": "22",
     "estado": "s",
     "abreviatura_ent": "S",
@@ -4408,7 +4408,7 @@
     "variante_oms": "3.1",
     "cantidad_muestras": 16
   },
-  "490": {
+  {
     "cve_edo": "22",
     "estado": "s",
     "abreviatura_ent": "S",
@@ -4417,7 +4417,7 @@
     "variante_oms": "1.4",
     "cantidad_muestras": 43
   },
-  "491": {
+  {
     "cve_edo": "22",
     "estado": "s",
     "abreviatura_ent": "S",
@@ -4426,7 +4426,7 @@
     "variante_oms": "1.3",
     "cantidad_muestras": 5
   },
-  "492": {
+  {
     "cve_edo": "22",
     "estado": "s",
     "abreviatura_ent": "S",
@@ -4435,7 +4435,7 @@
     "variante_oms": "2.3",
     "cantidad_muestras": 33
   },
-  "493": {
+  {
     "cve_edo": "22",
     "estado": "s",
     "abreviatura_ent": "S",
@@ -4444,7 +4444,7 @@
     "variante_oms": "4.5",
     "cantidad_muestras": 292
   },
-  "494": {
+  {
     "cve_edo": "22",
     "estado": "s",
     "abreviatura_ent": "S",
@@ -4453,7 +4453,7 @@
     "variante_oms": "4.4",
     "cantidad_muestras": 9
   },
-  "495": {
+  {
     "cve_edo": "22",
     "estado": "s",
     "abreviatura_ent": "S",
@@ -4462,7 +4462,7 @@
     "variante_oms": "A.2.5",
     "cantidad_muestras": 2
   },
-  "496": {
+  {
     "cve_edo": "22",
     "estado": "s",
     "abreviatura_ent": "S",
@@ -4471,7 +4471,7 @@
     "variante_oms": "A.5",
     "cantidad_muestras": 2
   },
-  "497": {
+  {
     "cve_edo": "22",
     "estado": "s",
     "abreviatura_ent": "S",
@@ -4480,7 +4480,7 @@
     "variante_oms": "5.5",
     "cantidad_muestras": 23
   },
-  "498": {
+  {
     "cve_edo": "22",
     "estado": "s",
     "abreviatura_ent": "S",
@@ -4489,7 +4489,7 @@
     "variante_oms": "5.3",
     "cantidad_muestras": 3
   },
-  "499": {
+  {
     "cve_edo": "22",
     "estado": "s",
     "abreviatura_ent": "S",
@@ -4498,7 +4498,7 @@
     "variante_oms": "B.1.1.316",
     "cantidad_muestras": 2
   },
-  "500": {
+  {
     "cve_edo": "22",
     "estado": "s",
     "abreviatura_ent": "S",
@@ -4507,7 +4507,7 @@
     "variante_oms": "B.1.1.322",
     "cantidad_muestras": 1
   },
-  "501": {
+  {
     "cve_edo": "22",
     "estado": "s",
     "abreviatura_ent": "S",
@@ -4516,7 +4516,7 @@
     "variante_oms": "B.1.1.33",
     "cantidad_muestras": 4
   },
-  "502": {
+  {
     "cve_edo": "22",
     "estado": "s",
     "abreviatura_ent": "S",
@@ -4525,7 +4525,7 @@
     "variante_oms": "B.1.1.393",
     "cantidad_muestras": 1
   },
-  "503": {
+  {
     "cve_edo": "22",
     "estado": "s",
     "abreviatura_ent": "S",
@@ -4534,7 +4534,7 @@
     "variante_oms": "B.1.111",
     "cantidad_muestras": 2
   },
-  "504": {
+  {
     "cve_edo": "22",
     "estado": "s",
     "abreviatura_ent": "S",
@@ -4543,7 +4543,7 @@
     "variante_oms": "B.1.2",
     "cantidad_muestras": 2
   },
-  "505": {
+  {
     "cve_edo": "22",
     "estado": "s",
     "abreviatura_ent": "S",
@@ -4552,7 +4552,7 @@
     "variante_oms": "B.1.241",
     "cantidad_muestras": 4
   },
-  "506": {
+  {
     "cve_edo": "22",
     "estado": "s",
     "abreviatura_ent": "S",
@@ -4561,7 +4561,7 @@
     "variante_oms": "5.4",
     "cantidad_muestras": 3
   },
-  "507": {
+  {
     "cve_edo": "22",
     "estado": "s",
     "abreviatura_ent": "S",
@@ -4570,7 +4570,7 @@
     "variante_oms": "B.1.301",
     "cantidad_muestras": 3
   },
-  "508": {
+  {
     "cve_edo": "22",
     "estado": "s",
     "abreviatura_ent": "S",
@@ -4579,7 +4579,7 @@
     "variante_oms": "B.1.369",
     "cantidad_muestras": 1
   },
-  "509": {
+  {
     "cve_edo": "22",
     "estado": "s",
     "abreviatura_ent": "S",
@@ -4588,7 +4588,7 @@
     "variante_oms": "B.1.396",
     "cantidad_muestras": 1
   },
-  "510": {
+  {
     "cve_edo": "22",
     "estado": "s",
     "abreviatura_ent": "S",
@@ -4597,7 +4597,7 @@
     "variante_oms": "B.1.551",
     "cantidad_muestras": 1
   },
-  "511": {
+  {
     "cve_edo": "22",
     "estado": "s",
     "abreviatura_ent": "S",
@@ -4606,7 +4606,7 @@
     "variante_oms": "B.1.596",
     "cantidad_muestras": 2
   },
-  "512": {
+  {
     "cve_edo": "22",
     "estado": "s",
     "abreviatura_ent": "S",
@@ -4615,7 +4615,7 @@
     "variante_oms": "5.2",
     "cantidad_muestras": 1
   },
-  "513": {
+  {
     "cve_edo": "22",
     "estado": "s",
     "abreviatura_ent": "S",
@@ -4624,7 +4624,7 @@
     "variante_oms": "5.1",
     "cantidad_muestras": 1
   },
-  "514": {
+  {
     "cve_edo": "23",
     "estado": "t",
     "abreviatura_ent": "T",
@@ -4633,7 +4633,7 @@
     "variante_oms": "5.5",
     "cantidad_muestras": 1
   },
-  "515": {
+  {
     "cve_edo": "23",
     "estado": "t",
     "abreviatura_ent": "T",
@@ -4642,7 +4642,7 @@
     "variante_oms": "3.1",
     "cantidad_muestras": 2
   },
-  "516": {
+  {
     "cve_edo": "23",
     "estado": "t",
     "abreviatura_ent": "T",
@@ -4651,7 +4651,7 @@
     "variante_oms": "1.4",
     "cantidad_muestras": 75
   },
-  "517": {
+  {
     "cve_edo": "23",
     "estado": "t",
     "abreviatura_ent": "T",
@@ -4660,7 +4660,7 @@
     "variante_oms": "1.1",
     "cantidad_muestras": 10
   },
-  "518": {
+  {
     "cve_edo": "23",
     "estado": "t",
     "abreviatura_ent": "T",
@@ -4669,7 +4669,7 @@
     "variante_oms": "1.3",
     "cantidad_muestras": 122
   },
-  "519": {
+  {
     "cve_edo": "23",
     "estado": "t",
     "abreviatura_ent": "T",
@@ -4678,7 +4678,7 @@
     "variante_oms": "2.2",
     "cantidad_muestras": 2
   },
-  "520": {
+  {
     "cve_edo": "23",
     "estado": "t",
     "abreviatura_ent": "T",
@@ -4687,7 +4687,7 @@
     "variante_oms": "2.3",
     "cantidad_muestras": 1
   },
-  "521": {
+  {
     "cve_edo": "23",
     "estado": "t",
     "abreviatura_ent": "T",
@@ -4696,7 +4696,7 @@
     "variante_oms": "4.5",
     "cantidad_muestras": 36
   },
-  "522": {
+  {
     "cve_edo": "23",
     "estado": "t",
     "abreviatura_ent": "T",
@@ -4705,7 +4705,7 @@
     "variante_oms": "4.2",
     "cantidad_muestras": 3
   },
-  "523": {
+  {
     "cve_edo": "23",
     "estado": "t",
     "abreviatura_ent": "T",
@@ -4714,7 +4714,7 @@
     "variante_oms": "4.4",
     "cantidad_muestras": 6
   },
-  "524": {
+  {
     "cve_edo": "23",
     "estado": "t",
     "abreviatura_ent": "T",
@@ -4723,7 +4723,7 @@
     "variante_oms": "5.5",
     "cantidad_muestras": 87
   },
-  "525": {
+  {
     "cve_edo": "23",
     "estado": "t",
     "abreviatura_ent": "T",
@@ -4732,7 +4732,7 @@
     "variante_oms": "5.3",
     "cantidad_muestras": 6
   },
-  "526": {
+  {
     "cve_edo": "23",
     "estado": "t",
     "abreviatura_ent": "T",
@@ -4741,7 +4741,7 @@
     "variante_oms": "B.1.1.329",
     "cantidad_muestras": 1
   },
-  "527": {
+  {
     "cve_edo": "23",
     "estado": "t",
     "abreviatura_ent": "T",
@@ -4750,7 +4750,7 @@
     "variante_oms": "B.1.160",
     "cantidad_muestras": 1
   },
-  "528": {
+  {
     "cve_edo": "23",
     "estado": "t",
     "abreviatura_ent": "T",
@@ -4759,7 +4759,7 @@
     "variante_oms": "B.1.177",
     "cantidad_muestras": 1
   },
-  "529": {
+  {
     "cve_edo": "23",
     "estado": "t",
     "abreviatura_ent": "T",
@@ -4768,7 +4768,7 @@
     "variante_oms": "B.1.189",
     "cantidad_muestras": 1
   },
-  "530": {
+  {
     "cve_edo": "23",
     "estado": "t",
     "abreviatura_ent": "T",
@@ -4777,7 +4777,7 @@
     "variante_oms": "5.4",
     "cantidad_muestras": 1
   },
-  "531": {
+  {
     "cve_edo": "23",
     "estado": "t",
     "abreviatura_ent": "T",
@@ -4786,7 +4786,7 @@
     "variante_oms": "B.1.415",
     "cantidad_muestras": 1
   },
-  "532": {
+  {
     "cve_edo": "23",
     "estado": "t",
     "abreviatura_ent": "T",
@@ -4795,7 +4795,7 @@
     "variante_oms": "B.1.428",
     "cantidad_muestras": 1
   },
-  "533": {
+  {
     "cve_edo": "23",
     "estado": "t",
     "abreviatura_ent": "T",
@@ -4804,7 +4804,7 @@
     "variante_oms": "B.1.526.2",
     "cantidad_muestras": 1
   },
-  "534": {
+  {
     "cve_edo": "23",
     "estado": "t",
     "abreviatura_ent": "T",
@@ -4813,7 +4813,7 @@
     "variante_oms": "5.1",
     "cantidad_muestras": 17
   },
-  "535": {
+  {
     "cve_edo": "24",
     "estado": "u",
     "abreviatura_ent": "U",
@@ -4822,7 +4822,7 @@
     "variante_oms": "3.1",
     "cantidad_muestras": 7
   },
-  "536": {
+  {
     "cve_edo": "24",
     "estado": "u",
     "abreviatura_ent": "U",
@@ -4831,7 +4831,7 @@
     "variante_oms": "1.4",
     "cantidad_muestras": 7
   },
-  "537": {
+  {
     "cve_edo": "24",
     "estado": "u",
     "abreviatura_ent": "U",
@@ -4840,7 +4840,7 @@
     "variante_oms": "1.3",
     "cantidad_muestras": 7
   },
-  "538": {
+  {
     "cve_edo": "24",
     "estado": "u",
     "abreviatura_ent": "U",
@@ -4849,7 +4849,7 @@
     "variante_oms": "2.2",
     "cantidad_muestras": 1
   },
-  "539": {
+  {
     "cve_edo": "24",
     "estado": "u",
     "abreviatura_ent": "U",
@@ -4858,7 +4858,7 @@
     "variante_oms": "2.1",
     "cantidad_muestras": 4
   },
-  "540": {
+  {
     "cve_edo": "24",
     "estado": "u",
     "abreviatura_ent": "U",
@@ -4867,7 +4867,7 @@
     "variante_oms": "2.3",
     "cantidad_muestras": 1
   },
-  "541": {
+  {
     "cve_edo": "24",
     "estado": "u",
     "abreviatura_ent": "U",
@@ -4876,7 +4876,7 @@
     "variante_oms": "4.5",
     "cantidad_muestras": 100
   },
-  "542": {
+  {
     "cve_edo": "24",
     "estado": "u",
     "abreviatura_ent": "U",
@@ -4885,7 +4885,7 @@
     "variante_oms": "4.4",
     "cantidad_muestras": 5
   },
-  "543": {
+  {
     "cve_edo": "24",
     "estado": "u",
     "abreviatura_ent": "U",
@@ -4894,7 +4894,7 @@
     "variante_oms": "5.5",
     "cantidad_muestras": 15
   },
-  "544": {
+  {
     "cve_edo": "24",
     "estado": "u",
     "abreviatura_ent": "U",
@@ -4903,7 +4903,7 @@
     "variante_oms": "B.1.1.317",
     "cantidad_muestras": 1
   },
-  "545": {
+  {
     "cve_edo": "24",
     "estado": "u",
     "abreviatura_ent": "U",
@@ -4912,7 +4912,7 @@
     "variante_oms": "B.1.1.322",
     "cantidad_muestras": 1
   },
-  "546": {
+  {
     "cve_edo": "24",
     "estado": "u",
     "abreviatura_ent": "U",
@@ -4921,7 +4921,7 @@
     "variante_oms": "B.1.1.344",
     "cantidad_muestras": 1
   },
-  "547": {
+  {
     "cve_edo": "24",
     "estado": "u",
     "abreviatura_ent": "U",
@@ -4930,7 +4930,7 @@
     "variante_oms": "B.1.1.512",
     "cantidad_muestras": 1
   },
-  "548": {
+  {
     "cve_edo": "24",
     "estado": "u",
     "abreviatura_ent": "U",
@@ -4939,7 +4939,7 @@
     "variante_oms": "B.1.1.517",
     "cantidad_muestras": 1
   },
-  "549": {
+  {
     "cve_edo": "24",
     "estado": "u",
     "abreviatura_ent": "U",
@@ -4948,7 +4948,7 @@
     "variante_oms": "B.1.189",
     "cantidad_muestras": 6
   },
-  "550": {
+  {
     "cve_edo": "24",
     "estado": "u",
     "abreviatura_ent": "U",
@@ -4957,7 +4957,7 @@
     "variante_oms": "B.1.2",
     "cantidad_muestras": 1
   },
-  "551": {
+  {
     "cve_edo": "24",
     "estado": "u",
     "abreviatura_ent": "U",
@@ -4966,7 +4966,7 @@
     "variante_oms": "B.1.239",
     "cantidad_muestras": 1
   },
-  "552": {
+  {
     "cve_edo": "24",
     "estado": "u",
     "abreviatura_ent": "U",
@@ -4975,7 +4975,7 @@
     "variante_oms": "B.1.241",
     "cantidad_muestras": 5
   },
-  "553": {
+  {
     "cve_edo": "24",
     "estado": "u",
     "abreviatura_ent": "U",
@@ -4984,7 +4984,7 @@
     "variante_oms": "B.1.301",
     "cantidad_muestras": 1
   },
-  "554": {
+  {
     "cve_edo": "24",
     "estado": "u",
     "abreviatura_ent": "U",
@@ -4993,7 +4993,7 @@
     "variante_oms": "B.1.396",
     "cantidad_muestras": 5
   },
-  "555": {
+  {
     "cve_edo": "24",
     "estado": "u",
     "abreviatura_ent": "U",
@@ -5002,7 +5002,7 @@
     "variante_oms": "B.1.397",
     "cantidad_muestras": 1
   },
-  "556": {
+  {
     "cve_edo": "24",
     "estado": "u",
     "abreviatura_ent": "U",
@@ -5011,7 +5011,7 @@
     "variante_oms": "B.1.551",
     "cantidad_muestras": 3
   },
-  "557": {
+  {
     "cve_edo": "24",
     "estado": "u",
     "abreviatura_ent": "U",
@@ -5020,7 +5020,7 @@
     "variante_oms": "B.1.558",
     "cantidad_muestras": 1
   },
-  "558": {
+  {
     "cve_edo": "24",
     "estado": "u",
     "abreviatura_ent": "U",
@@ -5029,7 +5029,7 @@
     "variante_oms": "B.1.561",
     "cantidad_muestras": 1
   },
-  "559": {
+  {
     "cve_edo": "24",
     "estado": "u",
     "abreviatura_ent": "U",
@@ -5038,7 +5038,7 @@
     "variante_oms": "5.2",
     "cantidad_muestras": 3
   },
-  "560": {
+  {
     "cve_edo": "24",
     "estado": "u",
     "abreviatura_ent": "U",
@@ -5047,7 +5047,7 @@
     "variante_oms": "5.1",
     "cantidad_muestras": 1
   },
-  "561": {
+  {
     "cve_edo": "25",
     "estado": "v",
     "abreviatura_ent": "V",
@@ -5056,7 +5056,7 @@
     "variante_oms": "1.4",
     "cantidad_muestras": 2
   },
-  "562": {
+  {
     "cve_edo": "25",
     "estado": "v",
     "abreviatura_ent": "V",
@@ -5065,7 +5065,7 @@
     "variante_oms": "1.1",
     "cantidad_muestras": 1
   },
-  "563": {
+  {
     "cve_edo": "25",
     "estado": "v",
     "abreviatura_ent": "V",
@@ -5074,7 +5074,7 @@
     "variante_oms": "3.1",
     "cantidad_muestras": 5
   },
-  "564": {
+  {
     "cve_edo": "25",
     "estado": "v",
     "abreviatura_ent": "V",
@@ -5083,7 +5083,7 @@
     "variante_oms": "1.4",
     "cantidad_muestras": 30
   },
-  "565": {
+  {
     "cve_edo": "25",
     "estado": "v",
     "abreviatura_ent": "V",
@@ -5092,7 +5092,7 @@
     "variante_oms": "1.1",
     "cantidad_muestras": 18
   },
-  "566": {
+  {
     "cve_edo": "25",
     "estado": "v",
     "abreviatura_ent": "V",
@@ -5101,7 +5101,7 @@
     "variante_oms": "1.3",
     "cantidad_muestras": 13
   },
-  "567": {
+  {
     "cve_edo": "25",
     "estado": "v",
     "abreviatura_ent": "V",
@@ -5110,7 +5110,7 @@
     "variante_oms": "2.3",
     "cantidad_muestras": 3
   },
-  "568": {
+  {
     "cve_edo": "25",
     "estado": "v",
     "abreviatura_ent": "V",
@@ -5119,7 +5119,7 @@
     "variante_oms": "4.5",
     "cantidad_muestras": 87
   },
-  "569": {
+  {
     "cve_edo": "25",
     "estado": "v",
     "abreviatura_ent": "V",
@@ -5128,7 +5128,7 @@
     "variante_oms": "4.4",
     "cantidad_muestras": 33
   },
-  "570": {
+  {
     "cve_edo": "25",
     "estado": "v",
     "abreviatura_ent": "V",
@@ -5137,7 +5137,7 @@
     "variante_oms": "A.2.5.2",
     "cantidad_muestras": 2
   },
-  "571": {
+  {
     "cve_edo": "25",
     "estado": "v",
     "abreviatura_ent": "V",
@@ -5146,7 +5146,7 @@
     "variante_oms": "5.5",
     "cantidad_muestras": 8
   },
-  "572": {
+  {
     "cve_edo": "25",
     "estado": "v",
     "abreviatura_ent": "V",
@@ -5155,7 +5155,7 @@
     "variante_oms": "5.3",
     "cantidad_muestras": 2
   },
-  "573": {
+  {
     "cve_edo": "25",
     "estado": "v",
     "abreviatura_ent": "V",
@@ -5164,7 +5164,7 @@
     "variante_oms": "B.1.1.344",
     "cantidad_muestras": 1
   },
-  "574": {
+  {
     "cve_edo": "25",
     "estado": "v",
     "abreviatura_ent": "V",
@@ -5173,7 +5173,7 @@
     "variante_oms": "B.1.160.32",
     "cantidad_muestras": 2
   },
-  "575": {
+  {
     "cve_edo": "25",
     "estado": "v",
     "abreviatura_ent": "V",
@@ -5182,7 +5182,7 @@
     "variante_oms": "B.1.2",
     "cantidad_muestras": 1
   },
-  "576": {
+  {
     "cve_edo": "25",
     "estado": "v",
     "abreviatura_ent": "V",
@@ -5191,7 +5191,7 @@
     "variante_oms": "5.4",
     "cantidad_muestras": 1
   },
-  "577": {
+  {
     "cve_edo": "25",
     "estado": "v",
     "abreviatura_ent": "V",
@@ -5200,7 +5200,7 @@
     "variante_oms": "B.1.301",
     "cantidad_muestras": 1
   },
-  "578": {
+  {
     "cve_edo": "25",
     "estado": "v",
     "abreviatura_ent": "V",
@@ -5209,7 +5209,7 @@
     "variante_oms": "B.1.526.2",
     "cantidad_muestras": 1
   },
-  "579": {
+  {
     "cve_edo": "25",
     "estado": "v",
     "abreviatura_ent": "V",
@@ -5218,7 +5218,7 @@
     "variante_oms": "B.1.551",
     "cantidad_muestras": 1
   },
-  "580": {
+  {
     "cve_edo": "25",
     "estado": "v",
     "abreviatura_ent": "V",
@@ -5227,7 +5227,7 @@
     "variante_oms": "B.1.561",
     "cantidad_muestras": 1
   },
-  "581": {
+  {
     "cve_edo": "25",
     "estado": "v",
     "abreviatura_ent": "V",
@@ -5236,7 +5236,7 @@
     "variante_oms": "5.2",
     "cantidad_muestras": 5
   },
-  "582": {
+  {
     "cve_edo": "25",
     "estado": "v",
     "abreviatura_ent": "V",
@@ -5245,7 +5245,7 @@
     "variante_oms": "5.1",
     "cantidad_muestras": 2
   },
-  "583": {
+  {
     "cve_edo": "25",
     "estado": "v",
     "abreviatura_ent": "V",
@@ -5254,7 +5254,7 @@
     "variante_oms": "3.1",
     "cantidad_muestras": 1
   },
-  "584": {
+  {
     "cve_edo": "25",
     "estado": "v",
     "abreviatura_ent": "V",
@@ -5263,7 +5263,7 @@
     "variante_oms": "1.4",
     "cantidad_muestras": 23
   },
-  "585": {
+  {
     "cve_edo": "25",
     "estado": "v",
     "abreviatura_ent": "V",
@@ -5272,7 +5272,7 @@
     "variante_oms": "1.1",
     "cantidad_muestras": 10
   },
-  "586": {
+  {
     "cve_edo": "25",
     "estado": "v",
     "abreviatura_ent": "V",
@@ -5281,7 +5281,7 @@
     "variante_oms": "1.3",
     "cantidad_muestras": 2
   },
-  "587": {
+  {
     "cve_edo": "25",
     "estado": "v",
     "abreviatura_ent": "V",
@@ -5290,7 +5290,7 @@
     "variante_oms": "2.3",
     "cantidad_muestras": 1
   },
-  "588": {
+  {
     "cve_edo": "25",
     "estado": "v",
     "abreviatura_ent": "V",
@@ -5299,7 +5299,7 @@
     "variante_oms": "4.5",
     "cantidad_muestras": 32
   },
-  "589": {
+  {
     "cve_edo": "25",
     "estado": "v",
     "abreviatura_ent": "V",
@@ -5308,7 +5308,7 @@
     "variante_oms": "4.4",
     "cantidad_muestras": 10
   },
-  "590": {
+  {
     "cve_edo": "25",
     "estado": "v",
     "abreviatura_ent": "V",
@@ -5317,7 +5317,7 @@
     "variante_oms": "5.5",
     "cantidad_muestras": 1
   },
-  "591": {
+  {
     "cve_edo": "25",
     "estado": "v",
     "abreviatura_ent": "V",
@@ -5326,7 +5326,7 @@
     "variante_oms": "5.3",
     "cantidad_muestras": 2
   },
-  "592": {
+  {
     "cve_edo": "25",
     "estado": "v",
     "abreviatura_ent": "V",
@@ -5335,7 +5335,7 @@
     "variante_oms": "B.1.1.205",
     "cantidad_muestras": 1
   },
-  "593": {
+  {
     "cve_edo": "25",
     "estado": "v",
     "abreviatura_ent": "V",
@@ -5344,7 +5344,7 @@
     "variante_oms": "B.1.2",
     "cantidad_muestras": 2
   },
-  "594": {
+  {
     "cve_edo": "25",
     "estado": "v",
     "abreviatura_ent": "V",
@@ -5353,7 +5353,7 @@
     "variante_oms": "B.1.234",
     "cantidad_muestras": 1
   },
-  "595": {
+  {
     "cve_edo": "25",
     "estado": "v",
     "abreviatura_ent": "V",
@@ -5362,7 +5362,7 @@
     "variante_oms": "B.1.241",
     "cantidad_muestras": 1
   },
-  "596": {
+  {
     "cve_edo": "25",
     "estado": "v",
     "abreviatura_ent": "V",
@@ -5371,7 +5371,7 @@
     "variante_oms": "B.1.596",
     "cantidad_muestras": 1
   },
-  "597": {
+  {
     "cve_edo": "25",
     "estado": "v",
     "abreviatura_ent": "V",
@@ -5380,7 +5380,7 @@
     "variante_oms": "4.5",
     "cantidad_muestras": 1
   },
-  "598": {
+  {
     "cve_edo": "26",
     "estado": "w",
     "abreviatura_ent": "W",
@@ -5389,7 +5389,7 @@
     "variante_oms": "B.1.320",
     "cantidad_muestras": 1
   },
-  "599": {
+  {
     "cve_edo": "26",
     "estado": "w",
     "abreviatura_ent": "W",
@@ -5398,7 +5398,7 @@
     "variante_oms": "3.1",
     "cantidad_muestras": 4
   },
-  "600": {
+  {
     "cve_edo": "26",
     "estado": "w",
     "abreviatura_ent": "W",
@@ -5407,7 +5407,7 @@
     "variante_oms": "1.4",
     "cantidad_muestras": 8
   },
-  "601": {
+  {
     "cve_edo": "26",
     "estado": "w",
     "abreviatura_ent": "W",
@@ -5416,7 +5416,7 @@
     "variante_oms": "1.3",
     "cantidad_muestras": 10
   },
-  "602": {
+  {
     "cve_edo": "26",
     "estado": "w",
     "abreviatura_ent": "W",
@@ -5425,7 +5425,7 @@
     "variante_oms": "4.5",
     "cantidad_muestras": 22
   },
-  "603": {
+  {
     "cve_edo": "26",
     "estado": "w",
     "abreviatura_ent": "W",
@@ -5434,7 +5434,7 @@
     "variante_oms": "4.4",
     "cantidad_muestras": 7
   },
-  "604": {
+  {
     "cve_edo": "26",
     "estado": "w",
     "abreviatura_ent": "W",
@@ -5443,7 +5443,7 @@
     "variante_oms": "A.2.5",
     "cantidad_muestras": 3
   },
-  "605": {
+  {
     "cve_edo": "26",
     "estado": "w",
     "abreviatura_ent": "W",
@@ -5452,7 +5452,7 @@
     "variante_oms": "5.5",
     "cantidad_muestras": 10
   },
-  "606": {
+  {
     "cve_edo": "26",
     "estado": "w",
     "abreviatura_ent": "W",
@@ -5461,7 +5461,7 @@
     "variante_oms": "B.1.1.316",
     "cantidad_muestras": 2
   },
-  "607": {
+  {
     "cve_edo": "26",
     "estado": "w",
     "abreviatura_ent": "W",
@@ -5470,7 +5470,7 @@
     "variante_oms": "B.1.105",
     "cantidad_muestras": 1
   },
-  "608": {
+  {
     "cve_edo": "26",
     "estado": "w",
     "abreviatura_ent": "W",
@@ -5479,7 +5479,7 @@
     "variante_oms": "B.1.2",
     "cantidad_muestras": 1
   },
-  "609": {
+  {
     "cve_edo": "26",
     "estado": "w",
     "abreviatura_ent": "W",
@@ -5488,7 +5488,7 @@
     "variante_oms": "B.1.232",
     "cantidad_muestras": 4
   },
-  "610": {
+  {
     "cve_edo": "26",
     "estado": "w",
     "abreviatura_ent": "W",
@@ -5497,7 +5497,7 @@
     "variante_oms": "B.1.241",
     "cantidad_muestras": 1
   },
-  "611": {
+  {
     "cve_edo": "26",
     "estado": "w",
     "abreviatura_ent": "W",
@@ -5506,7 +5506,7 @@
     "variante_oms": "5.4",
     "cantidad_muestras": 2
   },
-  "612": {
+  {
     "cve_edo": "26",
     "estado": "w",
     "abreviatura_ent": "W",
@@ -5515,7 +5515,7 @@
     "variante_oms": "B.1.301",
     "cantidad_muestras": 1
   },
-  "613": {
+  {
     "cve_edo": "26",
     "estado": "w",
     "abreviatura_ent": "W",
@@ -5524,7 +5524,7 @@
     "variante_oms": "B.1.36.10",
     "cantidad_muestras": 1
   },
-  "614": {
+  {
     "cve_edo": "26",
     "estado": "w",
     "abreviatura_ent": "W",
@@ -5533,7 +5533,7 @@
     "variante_oms": "B.1.402",
     "cantidad_muestras": 1
   },
-  "615": {
+  {
     "cve_edo": "26",
     "estado": "w",
     "abreviatura_ent": "W",
@@ -5542,7 +5542,7 @@
     "variante_oms": "B.1.478",
     "cantidad_muestras": 1
   },
-  "616": {
+  {
     "cve_edo": "26",
     "estado": "w",
     "abreviatura_ent": "W",
@@ -5551,7 +5551,7 @@
     "variante_oms": "B.1.551",
     "cantidad_muestras": 1
   },
-  "617": {
+  {
     "cve_edo": "26",
     "estado": "w",
     "abreviatura_ent": "W",
@@ -5560,7 +5560,7 @@
     "variante_oms": "B.1.558",
     "cantidad_muestras": 2
   },
-  "618": {
+  {
     "cve_edo": "26",
     "estado": "w",
     "abreviatura_ent": "W",
@@ -5569,7 +5569,7 @@
     "variante_oms": "B.1.561",
     "cantidad_muestras": 2
   },
-  "619": {
+  {
     "cve_edo": "26",
     "estado": "w",
     "abreviatura_ent": "W",
@@ -5578,7 +5578,7 @@
     "variante_oms": "5.2",
     "cantidad_muestras": 3
   },
-  "620": {
+  {
     "cve_edo": "26",
     "estado": "w",
     "abreviatura_ent": "W",
@@ -5587,7 +5587,7 @@
     "variante_oms": "5.1",
     "cantidad_muestras": 8
   },
-  "621": {
+  {
     "cve_edo": "26",
     "estado": "w",
     "abreviatura_ent": "W",
@@ -5596,7 +5596,7 @@
     "variante_oms": "5.5",
     "cantidad_muestras": 17
   },
-  "622": {
+  {
     "cve_edo": "26",
     "estado": "w",
     "abreviatura_ent": "W",
@@ -5605,7 +5605,7 @@
     "variante_oms": "5.3",
     "cantidad_muestras": 1
   },
-  "623": {
+  {
     "cve_edo": "26",
     "estado": "w",
     "abreviatura_ent": "W",
@@ -5614,7 +5614,7 @@
     "variante_oms": "B.1.1.71",
     "cantidad_muestras": 1
   },
-  "624": {
+  {
     "cve_edo": "26",
     "estado": "w",
     "abreviatura_ent": "W",
@@ -5623,7 +5623,7 @@
     "variante_oms": "5.4",
     "cantidad_muestras": 4
   },
-  "625": {
+  {
     "cve_edo": "26",
     "estado": "w",
     "abreviatura_ent": "W",
@@ -5632,7 +5632,7 @@
     "variante_oms": "5.2",
     "cantidad_muestras": 1
   },
-  "626": {
+  {
     "cve_edo": "27",
     "estado": "y",
     "abreviatura_ent": "Y",
@@ -5641,7 +5641,7 @@
     "variante_oms": "5.5",
     "cantidad_muestras": 1
   },
-  "627": {
+  {
     "cve_edo": "27",
     "estado": "y",
     "abreviatura_ent": "Y",
@@ -5650,7 +5650,7 @@
     "variante_oms": "3.1",
     "cantidad_muestras": 3
   },
-  "628": {
+  {
     "cve_edo": "27",
     "estado": "y",
     "abreviatura_ent": "Y",
@@ -5659,7 +5659,7 @@
     "variante_oms": "1.4",
     "cantidad_muestras": 52
   },
-  "629": {
+  {
     "cve_edo": "27",
     "estado": "y",
     "abreviatura_ent": "Y",
@@ -5668,7 +5668,7 @@
     "variante_oms": "1.2",
     "cantidad_muestras": 1
   },
-  "630": {
+  {
     "cve_edo": "27",
     "estado": "y",
     "abreviatura_ent": "Y",
@@ -5677,7 +5677,7 @@
     "variante_oms": "1.3",
     "cantidad_muestras": 22
   },
-  "631": {
+  {
     "cve_edo": "27",
     "estado": "y",
     "abreviatura_ent": "Y",
@@ -5686,7 +5686,7 @@
     "variante_oms": "2.2",
     "cantidad_muestras": 1
   },
-  "632": {
+  {
     "cve_edo": "27",
     "estado": "y",
     "abreviatura_ent": "Y",
@@ -5695,7 +5695,7 @@
     "variante_oms": "2.3",
     "cantidad_muestras": 25
   },
-  "633": {
+  {
     "cve_edo": "27",
     "estado": "y",
     "abreviatura_ent": "Y",
@@ -5704,7 +5704,7 @@
     "variante_oms": "4.5",
     "cantidad_muestras": 130
   },
-  "634": {
+  {
     "cve_edo": "27",
     "estado": "y",
     "abreviatura_ent": "Y",
@@ -5713,7 +5713,7 @@
     "variante_oms": "4.2",
     "cantidad_muestras": 2
   },
-  "635": {
+  {
     "cve_edo": "27",
     "estado": "y",
     "abreviatura_ent": "Y",
@@ -5722,7 +5722,7 @@
     "variante_oms": "4.4",
     "cantidad_muestras": 2
   },
-  "636": {
+  {
     "cve_edo": "27",
     "estado": "y",
     "abreviatura_ent": "Y",
@@ -5731,7 +5731,7 @@
     "variante_oms": "A.2.5",
     "cantidad_muestras": 4
   },
-  "637": {
+  {
     "cve_edo": "27",
     "estado": "y",
     "abreviatura_ent": "Y",
@@ -5740,7 +5740,7 @@
     "variante_oms": "5.5",
     "cantidad_muestras": 20
   },
-  "638": {
+  {
     "cve_edo": "27",
     "estado": "y",
     "abreviatura_ent": "Y",
@@ -5749,7 +5749,7 @@
     "variante_oms": "5.3",
     "cantidad_muestras": 4
   },
-  "639": {
+  {
     "cve_edo": "27",
     "estado": "y",
     "abreviatura_ent": "Y",
@@ -5758,7 +5758,7 @@
     "variante_oms": "B.1.239",
     "cantidad_muestras": 1
   },
-  "640": {
+  {
     "cve_edo": "27",
     "estado": "y",
     "abreviatura_ent": "Y",
@@ -5767,7 +5767,7 @@
     "variante_oms": "B.1.241",
     "cantidad_muestras": 3
   },
-  "641": {
+  {
     "cve_edo": "27",
     "estado": "y",
     "abreviatura_ent": "Y",
@@ -5776,7 +5776,7 @@
     "variante_oms": "5.4",
     "cantidad_muestras": 1
   },
-  "642": {
+  {
     "cve_edo": "27",
     "estado": "y",
     "abreviatura_ent": "Y",
@@ -5785,7 +5785,7 @@
     "variante_oms": "B.1.446",
     "cantidad_muestras": 1
   },
-  "643": {
+  {
     "cve_edo": "27",
     "estado": "y",
     "abreviatura_ent": "Y",
@@ -5794,7 +5794,7 @@
     "variante_oms": "B.1.526.2",
     "cantidad_muestras": 1
   },
-  "644": {
+  {
     "cve_edo": "27",
     "estado": "y",
     "abreviatura_ent": "Y",
@@ -5803,7 +5803,7 @@
     "variante_oms": "5.1",
     "cantidad_muestras": 13
   },
-  "645": {
+  {
     "cve_edo": "27",
     "estado": "y",
     "abreviatura_ent": "Y",
@@ -5812,7 +5812,7 @@
     "variante_oms": "5.5",
     "cantidad_muestras": 1
   },
-  "646": {
+  {
     "cve_edo": "28",
     "estado": "x",
     "abreviatura_ent": "X",
@@ -5821,7 +5821,7 @@
     "variante_oms": "3.1",
     "cantidad_muestras": 13
   },
-  "647": {
+  {
     "cve_edo": "28",
     "estado": "x",
     "abreviatura_ent": "X",
@@ -5830,7 +5830,7 @@
     "variante_oms": "1.4",
     "cantidad_muestras": 66
   },
-  "648": {
+  {
     "cve_edo": "28",
     "estado": "x",
     "abreviatura_ent": "X",
@@ -5839,7 +5839,7 @@
     "variante_oms": "1.2",
     "cantidad_muestras": 1
   },
-  "649": {
+  {
     "cve_edo": "28",
     "estado": "x",
     "abreviatura_ent": "X",
@@ -5848,7 +5848,7 @@
     "variante_oms": "1.3",
     "cantidad_muestras": 39
   },
-  "650": {
+  {
     "cve_edo": "28",
     "estado": "x",
     "abreviatura_ent": "X",
@@ -5857,7 +5857,7 @@
     "variante_oms": "2.1",
     "cantidad_muestras": 1
   },
-  "651": {
+  {
     "cve_edo": "28",
     "estado": "x",
     "abreviatura_ent": "X",
@@ -5866,7 +5866,7 @@
     "variante_oms": "4.5",
     "cantidad_muestras": 50
   },
-  "652": {
+  {
     "cve_edo": "28",
     "estado": "x",
     "abreviatura_ent": "X",
@@ -5875,7 +5875,7 @@
     "variante_oms": "4.4",
     "cantidad_muestras": 5
   },
-  "653": {
+  {
     "cve_edo": "28",
     "estado": "x",
     "abreviatura_ent": "X",
@@ -5884,7 +5884,7 @@
     "variante_oms": "5.5",
     "cantidad_muestras": 23
   },
-  "654": {
+  {
     "cve_edo": "28",
     "estado": "x",
     "abreviatura_ent": "X",
@@ -5893,7 +5893,7 @@
     "variante_oms": "5.3",
     "cantidad_muestras": 6
   },
-  "655": {
+  {
     "cve_edo": "28",
     "estado": "x",
     "abreviatura_ent": "X",
@@ -5902,7 +5902,7 @@
     "variante_oms": "B.1.1.231",
     "cantidad_muestras": 1
   },
-  "656": {
+  {
     "cve_edo": "28",
     "estado": "x",
     "abreviatura_ent": "X",
@@ -5911,7 +5911,7 @@
     "variante_oms": "B.1.1.28",
     "cantidad_muestras": 1
   },
-  "657": {
+  {
     "cve_edo": "28",
     "estado": "x",
     "abreviatura_ent": "X",
@@ -5920,7 +5920,7 @@
     "variante_oms": "B.1.1.432",
     "cantidad_muestras": 6
   },
-  "658": {
+  {
     "cve_edo": "28",
     "estado": "x",
     "abreviatura_ent": "X",
@@ -5929,7 +5929,7 @@
     "variante_oms": "B.1.1.517",
     "cantidad_muestras": 1
   },
-  "659": {
+  {
     "cve_edo": "28",
     "estado": "x",
     "abreviatura_ent": "X",
@@ -5938,7 +5938,7 @@
     "variante_oms": "B.1.2",
     "cantidad_muestras": 7
   },
-  "660": {
+  {
     "cve_edo": "28",
     "estado": "x",
     "abreviatura_ent": "X",
@@ -5947,7 +5947,7 @@
     "variante_oms": "5.4",
     "cantidad_muestras": 4
   },
-  "661": {
+  {
     "cve_edo": "28",
     "estado": "x",
     "abreviatura_ent": "X",
@@ -5956,7 +5956,7 @@
     "variante_oms": "B.1.366",
     "cantidad_muestras": 1
   },
-  "662": {
+  {
     "cve_edo": "28",
     "estado": "x",
     "abreviatura_ent": "X",
@@ -5965,7 +5965,7 @@
     "variante_oms": "B.1.546",
     "cantidad_muestras": 1
   },
-  "663": {
+  {
     "cve_edo": "28",
     "estado": "x",
     "abreviatura_ent": "X",
@@ -5974,7 +5974,7 @@
     "variante_oms": "B.1.558",
     "cantidad_muestras": 5
   },
-  "664": {
+  {
     "cve_edo": "28",
     "estado": "x",
     "abreviatura_ent": "X",
@@ -5983,7 +5983,7 @@
     "variante_oms": "B.1.596",
     "cantidad_muestras": 2
   },
-  "665": {
+  {
     "cve_edo": "28",
     "estado": "x",
     "abreviatura_ent": "X",
@@ -5992,7 +5992,7 @@
     "variante_oms": "5.2",
     "cantidad_muestras": 3
   },
-  "666": {
+  {
     "cve_edo": "28",
     "estado": "x",
     "abreviatura_ent": "X",
@@ -6001,7 +6001,7 @@
     "variante_oms": "B.1.610",
     "cantidad_muestras": 1
   },
-  "667": {
+  {
     "cve_edo": "28",
     "estado": "x",
     "abreviatura_ent": "X",
@@ -6010,7 +6010,7 @@
     "variante_oms": "5.1",
     "cantidad_muestras": 4
   },
-  "668": {
+  {
     "cve_edo": "29",
     "estado": "z",
     "abreviatura_ent": "Z",
@@ -6019,7 +6019,7 @@
     "variante_oms": "5.2",
     "cantidad_muestras": 1
   },
-  "669": {
+  {
     "cve_edo": "29",
     "estado": "z",
     "abreviatura_ent": "Z",
@@ -6028,7 +6028,7 @@
     "variante_oms": "3.1",
     "cantidad_muestras": 5
   },
-  "670": {
+  {
     "cve_edo": "29",
     "estado": "z",
     "abreviatura_ent": "Z",
@@ -6037,7 +6037,7 @@
     "variante_oms": "1.4",
     "cantidad_muestras": 1
   },
-  "671": {
+  {
     "cve_edo": "29",
     "estado": "z",
     "abreviatura_ent": "Z",
@@ -6046,7 +6046,7 @@
     "variante_oms": "1.3",
     "cantidad_muestras": 1
   },
-  "672": {
+  {
     "cve_edo": "29",
     "estado": "z",
     "abreviatura_ent": "Z",
@@ -6055,7 +6055,7 @@
     "variante_oms": "4.5",
     "cantidad_muestras": 43
   },
-  "673": {
+  {
     "cve_edo": "29",
     "estado": "z",
     "abreviatura_ent": "Z",
@@ -6064,7 +6064,7 @@
     "variante_oms": "4.4",
     "cantidad_muestras": 1
   },
-  "674": {
+  {
     "cve_edo": "29",
     "estado": "z",
     "abreviatura_ent": "Z",
@@ -6073,7 +6073,7 @@
     "variante_oms": "5.5",
     "cantidad_muestras": 8
   },
-  "675": {
+  {
     "cve_edo": "29",
     "estado": "z",
     "abreviatura_ent": "Z",
@@ -6082,7 +6082,7 @@
     "variante_oms": "5.3",
     "cantidad_muestras": 3
   },
-  "676": {
+  {
     "cve_edo": "29",
     "estado": "z",
     "abreviatura_ent": "Z",
@@ -6091,7 +6091,7 @@
     "variante_oms": "B.1.1.317",
     "cantidad_muestras": 1
   },
-  "677": {
+  {
     "cve_edo": "29",
     "estado": "z",
     "abreviatura_ent": "Z",
@@ -6100,7 +6100,7 @@
     "variante_oms": "B.1.1.322",
     "cantidad_muestras": 1
   },
-  "678": {
+  {
     "cve_edo": "29",
     "estado": "z",
     "abreviatura_ent": "Z",
@@ -6109,7 +6109,7 @@
     "variante_oms": "B.1.1.432",
     "cantidad_muestras": 2
   },
-  "679": {
+  {
     "cve_edo": "29",
     "estado": "z",
     "abreviatura_ent": "Z",
@@ -6118,7 +6118,7 @@
     "variante_oms": "B.1.189",
     "cantidad_muestras": 1
   },
-  "680": {
+  {
     "cve_edo": "29",
     "estado": "z",
     "abreviatura_ent": "Z",
@@ -6127,7 +6127,7 @@
     "variante_oms": "5.4",
     "cantidad_muestras": 2
   },
-  "681": {
+  {
     "cve_edo": "29",
     "estado": "z",
     "abreviatura_ent": "Z",
@@ -6136,7 +6136,7 @@
     "variante_oms": "5.2",
     "cantidad_muestras": 6
   },
-  "682": {
+  {
     "cve_edo": "29",
     "estado": "z",
     "abreviatura_ent": "Z",
@@ -6145,4 +6145,4 @@
     "variante_oms": "B.1.610",
     "cantidad_muestras": 1
   }
-}
+]
