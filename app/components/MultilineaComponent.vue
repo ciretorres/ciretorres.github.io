@@ -52,6 +52,7 @@ const props = defineProps({
   },
 })
 
+// referencias al DOM
 const containerRef = ref(null)
 const tooltipRef = ref(null)
 const svgRef = ref(null)
@@ -499,34 +500,28 @@ function mostrarTooltip(event) {
   tooltip
     .select('.tooltip-fecha-label')
     .text('Fecha de recolección:')
-
   tooltip
     .select('.tooltip-fecha-valor')
     .text(fechaOriginal)
-
-
+  // filas
   const filas = tooltip
     .select('.tooltip-cifras')
     .selectAll('.tooltip-fila')
     .data(valores, d => d.id)
-
   const filasEnter = filas
     .enter()
     .append('div')
     .attr('class', 'tooltip-fila')
-
   filasEnter
     .append('span')
     .attr('class', 'tooltip-color')
-
   filasEnter
     .append('span')
     .attr('class', 'tooltip-nombre')
-
   filasEnter
     .append('span')
     .attr('class', 'tooltip-valor')
-
+  // merge
   filas
     .merge(filasEnter)
     .each(function (d) {

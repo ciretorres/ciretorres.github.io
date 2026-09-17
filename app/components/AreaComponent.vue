@@ -47,9 +47,9 @@ const props = defineProps({
     })
   }
 })
-
 const { datos, variables, margin } = toRefs(props)
 
+// referencias al DOM
 const areaRef = ref(null)
 const tooltipRef = ref(null)
 const svgRef = ref(null)
@@ -425,10 +425,8 @@ function mostrarTooltip(evento) {
 
   // Coordenada relativa al área de dibujo, sin márgenes
   const plotX = mouseX - margin.value.izquierda
-
   // Evitar que el puntero quede fuera del área útil
   const plotXLimitado = Math.max(0, Math.min(width, plotX))
-
   // Convertimos la posición horizontal en una fecha
   // const fechaMouse = xScale.invert(mouseX - margin.value.izquierda)
   const fechaMouse = xScale.invert(plotXLimitado)
@@ -486,7 +484,9 @@ function mostrarTooltip(evento) {
   // Mostrar temporalmente para poder medir sus dimensiones
   tooltip.style('visibility', 'hidden')
 
-  // posicionar tooltip
+  /**
+   * Posicionar tooltip
+   */
   const tooltipNode = tooltip.node()
   const tooltipWidth = tooltipNode?.offsetWidth || props.anchoTooltip
   const tooltipHeight = tooltipNode?.offsetHeight || 0
