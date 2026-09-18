@@ -62,7 +62,7 @@ const props = defineProps({
     type: Object,
     default: () => ({
       top: 20,
-      right: 140,
+      right: 20,
       bottom: 20,
       left: 20,
     }),
