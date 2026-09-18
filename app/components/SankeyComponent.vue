@@ -76,8 +76,7 @@ const tooltipRef = ref(null)
 let resizeObserver = null
 let animationFrame = null
 
-const formatValue = value =>
-  new Intl.NumberFormat('es-ES').format(value)
+const formatValue = value => new Intl.NumberFormat('es-ES').format(value)
 
 function getDimensions() {
   // get the dimensions and margins of the graph
@@ -86,12 +85,14 @@ function getDimensions() {
   const outerWidth = containerWidth || props.anchoVis
   const outerHeight = props.altoVis
 
-  const innerWidth = Math.max(0,
-    outerWidth - props.margin.left - props.margin.right,
+  const innerWidth = Math.max(
+    0,
+    outerWidth - props.margin.left - props.margin.right
   )
 
-  const innerHeight = Math.max(0,
-    outerHeight - props.margin.top - props.margin.bottom,
+  const innerHeight = Math.max(
+    0,
+    outerHeight - props.margin.top - props.margin.bottom
   )
 
   return {
@@ -130,9 +131,7 @@ function highlightNode(node, linkSelection, nodeSelection, labelSelection) {
   const connectedLinks = new Set()
 
   linkSelection.each(link => {
-    const isConnected =
-      link.source.id === node.id ||
-      link.target.id === node.id
+    const isConnected = link.source.id === node.id || link.target.id === node.id
 
     if (isConnected) {
       connectedLinks.add(link.source.id)
@@ -145,8 +144,7 @@ function highlightNode(node, linkSelection, nodeSelection, labelSelection) {
     .duration(150)
     .style('stroke-opacity', link => {
       const isConnected =
-        link.source.id === node.id ||
-        link.target.id === node.id
+        link.source.id === node.id || link.target.id === node.id
 
       return isConnected ? 0.9 : 0.12
     })
@@ -154,48 +152,26 @@ function highlightNode(node, linkSelection, nodeSelection, labelSelection) {
   nodeSelection
     .transition()
     .duration(150)
-    .style('opacity', item =>
-      connectedLinks.has(item.id) ? 1 : 0.25,
-    )
+    .style('opacity', item => (connectedLinks.has(item.id) ? 1 : 0.25))
 
   labelSelection
     .transition()
     .duration(150)
-    .style('opacity', item =>
-      connectedLinks.has(item.id) ? 1 : 0.25,
-    )
+    .style('opacity', item => (connectedLinks.has(item.id) ? 1 : 0.25))
 }
 
-function resetHighlight(
-  linkSelection,
-  nodeSelection,
-  labelSelection,
-) {
-  linkSelection
-    .transition()
-    .duration(150)
-    .style('stroke-opacity', 0.45)
+function resetHighlight(linkSelection, nodeSelection, labelSelection) {
+  linkSelection.transition().duration(150).style('stroke-opacity', 0.45)
 
-  nodeSelection
-    .transition()
-    .duration(150)
-    .style('opacity', 1)
+  nodeSelection.transition().duration(150).style('opacity', 1)
 
-  labelSelection
-    .transition()
-    .duration(150)
-    .style('opacity', 1)
+  labelSelection.transition().duration(150).style('opacity', 1)
 }
 
 function renderChart() {
   if (!svgRef.value || !containerRef.value) return
 
-  const {
-    outerWidth,
-    outerHeight,
-    innerWidth,
-    innerHeight,
-  } = getDimensions()
+  const { outerWidth, outerHeight, innerWidth, innerHeight } = getDimensions()
 
   if (innerWidth <= 0 || innerHeight <= 0) return
 
@@ -214,9 +190,7 @@ function renderChart() {
 
   const chart = svg
     .append('g')
-    .attr('transform',
-      `translate(${props.margin.left},${props.margin.top})`,
-    )
+    .attr('transform', `translate(${props.margin.left},${props.margin.top})`)
 
   // d3-sankey modifica internamente los nodos y enlaces.
   // const graphData = structuredClone(props.datos)
@@ -231,12 +205,12 @@ function renderChart() {
     .nodeWidth(props.anchoNodo)
     .nodePadding(props.separacionNodo)
     .nodeSort(null)
-    .extent([ [0, 0], [innerWidth, innerHeight] ])
+    .extent([
+      [0, 0],
+      [innerWidth, innerHeight],
+    ])
 
-  const {
-    nodes,
-    links,
-  } = layout(graphData)
+  const { nodes, links } = layout(graphData)
 
   // add in the links
   const linkGroup = chart
@@ -248,19 +222,13 @@ function renderChart() {
     .data(links)
     .join('path')
     .attr('d', sankeyLinkHorizontal())
-    .attr(
-      'stroke',
-      link => link.color || link.source.color || '#94a3b8',
-    )
+    .attr('stroke', link => link.color || link.source.color || '#94a3b8')
     // forzando que el valor sea 1 aunque venga en cero
     .attr('stroke-width', link => Math.max(1, link.width))
     .style('stroke-opacity', 0.45)
     .style('cursor', 'pointer')
     .on('pointerenter', function (event, link) {
-      d3.select(this)
-        .transition()
-        .duration(100)
-        .style('stroke-opacity', 0.95)
+      d3.select(this).transition().duration(100).style('stroke-opacity', 0.95)
 
       showTooltip(
         event,
@@ -269,15 +237,12 @@ function renderChart() {
           → <strong>${link.target.name}</strong>
           <br>
           Valor: ${formatValue(link.value)}
-        `,
+        `
       )
     })
     .on('pointermove', positionTooltip)
     .on('pointerleave', function () {
-      d3.select(this)
-        .transition()
-        .duration(100)
-        .style('stroke-opacity', 0.45)
+      d3.select(this).transition().duration(100).style('stroke-opacity', 0.45)
 
       hideTooltip()
     })
@@ -299,9 +264,7 @@ function renderChart() {
     .attr('fill', node => node.color || '#cbd5e1')
     .style('cursor', 'pointer')
     .on('pointerenter', function (event, node) {
-      highlightNode(
-        node, linkSelection, nodeSelection, labelSelection,
-      )
+      highlightNode(node, linkSelection, nodeSelection, labelSelection)
 
       showTooltip(
         event,
@@ -309,14 +272,12 @@ function renderChart() {
           <strong>${node.name}</strong>
           <br>
           Valor: ${formatValue(node.value || 0)}
-        `,
+        `
       )
     })
     .on('pointermove', positionTooltip)
     .on('pointerleave', function () {
-      resetHighlight(
-        linkSelection, nodeSelection, labelSelection,
-      )
+      resetHighlight(linkSelection, nodeSelection, labelSelection)
 
       hideTooltip()
     })
@@ -329,20 +290,10 @@ function renderChart() {
     .selectAll('text')
     .data(nodes)
     .join('text')
-    .attr('x',
-      node => node.x0 < innerWidth / 2
-        ? node.x1 + 8
-        : node.x0 - 8,
-    )
-    .attr('y',
-      node => (node.y0 + node.y1) / 2,
-    )
+    .attr('x', node => (node.x0 < innerWidth / 2 ? node.x1 + 8 : node.x0 - 8))
+    .attr('y', node => (node.y0 + node.y1) / 2)
     .attr('dy', '0.35em')
-    .attr('text-anchor',
-      node => node.x0 < innerWidth / 2
-        ? 'start'
-        : 'end',
-    )
+    .attr('text-anchor', node => (node.x0 < innerWidth / 2 ? 'start' : 'end'))
     .attr('fill', '#e2e8f0')
     .text(node => `${node.name} (${formatValue(node.value || 0)})`)
     .style('pointer-events', 'none')
@@ -374,7 +325,7 @@ watch(
   },
   {
     deep: true,
-  },
+  }
 )
 
 onMounted(async () => {
@@ -388,10 +339,7 @@ onUnmounted(() => {
   resizeObserver?.disconnect()
   cancelAnimationFrame(animationFrame)
 
-  d3.select(svgRef.value)
-    .selectAll('*')
-    .interrupt()
-    .remove()
+  d3.select(svgRef.value).selectAll('*').interrupt().remove()
 })
 </script>
 
@@ -435,7 +383,9 @@ onUnmounted(() => {
   border-radius: 4px;
   background: #0f172a;
   color: #f8fafc;
-  font: 0.875rem/1.4 system-ui, sans-serif;
+  font:
+    0.875rem/1.4 system-ui,
+    sans-serif;
   pointer-events: none;
   box-shadow: 0 4px 12px rgb(0 0 0 / 20%);
 }

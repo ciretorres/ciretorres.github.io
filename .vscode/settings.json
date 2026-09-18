@@ -11,8 +11,8 @@
     "editor.wordWrap": "on"
   },
 
-  "editor.defaultFormatter": "esbenp.prettier-vscode",
   "editor.formatOnSave": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
   "editor.tabSize": 2,
   "editor.insertSpaces": true,
   "editor.autoClosingBrackets": "always",
@@ -28,6 +28,7 @@
   },
 
   "[typescript]": {
+    "editor.formatOnSave": true,
     "editor.defaultFormatter": "esbenp.prettier-vscode",
     "editor.codeActionsOnSave": {
       "source.fixAll.eslint": "explicit",
@@ -36,29 +37,36 @@
   },
 
   "[javascript]": {
+    "editor.formatOnSave": true,
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
 
   "[vue]": {
+    "editor.formatOnSave": true,
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
 
   "[css]": {
+    "editor.formatOnSave": true,
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "[scss]": {
+    "editor.formatOnSave": true,
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
 
   "[html]": {
+    "editor.formatOnSave": true,
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
 
   "[json]": {
+    "editor.formatOnSave": true,
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
 
   "[yaml]": {
+    "editor.formatOnSave": true,
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
 
@@ -90,22 +98,26 @@
 
   "scss.validate": true,
 
-  "prettier.configPath": "${workspaceFolder}/.prettierrc.json",
-  "prettier.ignorePath": "{workspaceFolder}/.prettierignore",
+  // "prettier.configPath": "${workspaceFolder}/.prettierrc.cjs",
+  // "prettier.ignorePath": "${workspaceFolder}/.prettierignore",
+
+  // Detectar automáticamente tu .prettierrc.cjs y .prettierignore desde la raíz del proyecto.
   "prettier.requireConfig": true,
   "prettier.useEditorConfig": true,
-  "prettier.endOfLine": "lf",
-  "prettier.singleQuote": true,
-  "prettier.semi": false,
-  "prettier.printWidth": 80,
-  "prettier.tabWidth": 2,
-  "prettier.useTabs": false,
-  "prettier.trailingComma": "es5",
-  "prettier.bracketSpacing": true,
-  "prettier.arrowParens": "avoid",
-  "prettier.htmlWhitespaceSensitivity": "ignore",
-  "prettier.singleAttributePerLine": true,
-  "prettier.vueIndentScriptAndStyle": false,
+
+  // configuraciones duplicadas de Prettier
+  // "prettier.endOfLine": "lf",
+  // "prettier.singleQuote": true,
+  // "prettier.semi": false,
+  // "prettier.printWidth": 80,
+  // "prettier.tabWidth": 2,
+  // "prettier.useTabs": false,
+  // "prettier.trailingComma": "es5",
+  // "prettier.bracketSpacing": true,
+  // "prettier.arrowParens": "avoid",
+  // "prettier.htmlWhitespaceSensitivity": "ignore",
+  // "prettier.singleAttributePerLine": true,
+  // "prettier.vueIndentScriptAndStyle": false,
 
   "explorer.fileNesting.enabled": true,
   "explorer.fileNesting.patterns": {
