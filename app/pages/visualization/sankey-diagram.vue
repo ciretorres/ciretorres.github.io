@@ -1,240 +1,210 @@
 <script setup>
-const items = {
-  nodes: [
-    { node: 0, name: 'node0', id: 'node_0', color: '#FFF' },
-    { node: 1, name: 'node1', id: 'node_1', color: '#FFF' },
-    { node: 2, name: 'node2', id: 'node_2', color: '#FFF' },
-    { node: 3, name: 'node3', id: 'node_3', color: '#FFF' },
-    { node: 4, name: 'node4', id: 'node_4', color: '#FFF' },
-    { node: 5, name: 'node5', id: 'node_5', color: '#FFF' },
-    { node: 6, name: 'node6', id: 'node_6', color: '#FFF' },
-    { node: 7, name: 'node7', id: 'node_7', color: '#FFF' },
-    { node: 8, name: 'node8', id: 'node_8', color: '#FFF' },
-    { node: 9, name: 'node9', id: 'node_9', color: '#FFF' },
-    { node: 10, name: 'node10', id: 'node_10', color: '#FFF' },
-    { node: 11, name: 'node11', id: 'node_11', color: '#FFF' },
-    { node: 12, name: 'node12', id: 'node_12', color: '#FFF' },
-    { node: 13, name: 'node13', id: 'node_13', color: '#FFF' },
-    { node: 14, name: 'node14', id: 'node_14', color: '#FFF' },
-    { node: 15, name: 'node15', id: 'node_15', color: '#FFF' },
-    { node: 16, name: 'node16', id: 'node_16', color: '#FFF' },
-    { node: 17, name: 'node17', id: 'node_17', color: '#FFF' },
-    { node: 18, name: 'node18', id: 'node_18', color: '#FFF' },
-    { node: 19, name: 'node19', id: 'node_19', color: '#FFF' },
-    { node: 20, name: 'node20', id: 'node_20', color: '#FFF' },
-    { node: 21, name: 'node21', id: 'node_21', color: '#FFF' },
-    { node: 22, name: 'node22', id: 'node_22', color: '#FFF' },
-    { node: 23, name: 'node23', id: 'node_23', color: '#FFF' },
-    { node: 24, name: 'node24', id: 'node_24', color: '#FFF' },
-    { node: 25, name: 'node25', id: 'node_25', color: '#FFF' },
-    { node: 26, name: 'node26', id: 'node_26', color: '#FFF' },
-    { node: 27, name: 'node27', id: 'node_27', color: '#FFF' },
-    { node: 28, name: 'node28', id: 'node_28', color: '#FFF' },
-    { node: 29, name: 'node29', id: 'node_29', color: '#FFF' },
-    { node: 30, name: 'node30', id: 'node_30', color: '#FFF' },
-    { node: 31, name: 'node31', id: 'node_31', color: '#FFF' },
-    { node: 32, name: 'node32', id: 'node_32', color: '#FFF' },
-    { node: 33, name: 'node33', id: 'node_33', color: '#FFF' },
-    { node: 34, name: 'node34', id: 'node_34', color: '#FFF' },
-    { node: 35, name: 'node35', id: 'node_35', color: '#FFF' },
-    { node: 36, name: 'node36', id: 'node_36', color: '#FFF' },
-    { node: 37, name: 'node37', id: 'node_37', color: '#FFF' },
-    { node: 38, name: 'node38', id: 'node_38', color: '#FFF' },
-    { node: 39, name: 'node39', id: 'node_39', color: '#FFF' },
-    { node: 40, name: 'node40', id: 'node_40', color: '#FFF' },
-    { node: 41, name: 'node41', id: 'node_41', color: '#FFF' },
-    { node: 42, name: 'node42', id: 'node_42', color: '#FFF' },
-  ],
-  links: [
-    { source: 'node0', target: 'node21', value: 0, color: '#efefef' },
-    { source: 'node0', target: 'node22', value: 0, color: '#efefef' },
-    { source: 'node1', target: 'node22', value: 0, color: '#efefef' },
-    { source: 'node2', target: 'node22', value: 0, color: '#efefef' },
-    { source: 'node3', target: 'node22', value: 0, color: '#efefef' },
-    { source: 'node3', target: 'node23', value: 0, color: '#efefef' },
-    { source: 'node4', target: 'node23', value: 0, color: '#efefef' },
-    { source: 'node4', target: 'node24', value: 0, color: '#efefef' },
-    { source: 'node5', target: 'node24', value: 0, color: '#efefef' },
-    { source: 'node6', target: 'node24', value: 0, color: '#efefef' },
-    { source: 'node6', target: 'node25', value: 0, color: '#efefef' },
-    { source: 'node7', target: 'node25', value: 0, color: '#efefef' },
-    { source: 'node8', target: 'node26', value: 0, color: '#efefef' },
-    { source: 'node9', target: 'node27', value: 0, color: '#efefef' },
-    { source: 'node10', target: 'node28', value: 0, color: '#efefef' },
-    { source: 'node11', target: 'node29', value: 0, color: '#efefef' },
-    { source: 'node12', target: 'node29', value: 0, color: '#efefef' },
-    { source: 'node13', target: 'node30', value: 0, color: '#efefef' },
-    { source: 'node14', target: 'node31', value: 0, color: '#efefef' },
-    { source: 'node15', target: 'node32', value: 0, color: '#efefef' },
-    { source: 'node16', target: 'node21', value: 0, color: '#efefef' },
-    { source: 'node16', target: 'node22', value: 0, color: '#efefef' },
-    { source: 'node16', target: 'node23', value: 0, color: '#efefef' },
-    { source: 'node16', target: 'node24', value: 0, color: '#efefef' },
-    { source: 'node16', target: 'node25', value: 0, color: '#efefef' },
-    { source: 'node16', target: 'node26', value: 0, color: '#efefef' },
-    { source: 'node16', target: 'node27', value: 0, color: '#efefef' },
-    { source: 'node16', target: 'node28', value: 0, color: '#efefef' },
-    { source: 'node16', target: 'node29', value: 0, color: '#efefef' },
-    { source: 'node16', target: 'node30', value: 0, color: '#efefef' },
-    { source: 'node16', target: 'node31', value: 0, color: '#efefef' },
-    { source: 'node16', target: 'node32', value: 0, color: '#efefef' },
-    { source: 'node17', target: 'node21', value: 0, color: '#efefef' },
-    { source: 'node17', target: 'node22', value: 0, color: '#efefef' },
-    { source: 'node17', target: 'node23', value: 0, color: '#efefef' },
-    { source: 'node17', target: 'node24', value: 0, color: '#efefef' },
-    { source: 'node17', target: 'node25', value: 0, color: '#efefef' },
-    { source: 'node17', target: 'node26', value: 0, color: '#efefef' },
-    { source: 'node17', target: 'node27', value: 0, color: '#efefef' },
-    { source: 'node17', target: 'node28', value: 0, color: '#efefef' },
-    { source: 'node17', target: 'node29', value: 0, color: '#efefef' },
-    { source: 'node17', target: 'node30', value: 0, color: '#efefef' },
-    { source: 'node17', target: 'node31', value: 0, color: '#efefef' },
-    { source: 'node17', target: 'node32', value: 0, color: '#efefef' },
-    { source: 'node18', target: 'node21', value: 0, color: '#efefef' },
-    { source: 'node18', target: 'node22', value: 0, color: '#efefef' },
-    { source: 'node18', target: 'node23', value: 0, color: '#efefef' },
-    { source: 'node18', target: 'node24', value: 0, color: '#efefef' },
-    { source: 'node18', target: 'node25', value: 0, color: '#efefef' },
-    { source: 'node18', target: 'node26', value: 0, color: '#efefef' },
-    { source: 'node18', target: 'node27', value: 0, color: '#efefef' },
-    { source: 'node18', target: 'node28', value: 0, color: '#efefef' },
-    { source: 'node18', target: 'node29', value: 0, color: '#efefef' },
-    { source: 'node18', target: 'node30', value: 0, color: '#efefef' },
-    { source: 'node18', target: 'node31', value: 0, color: '#efefef' },
-    { source: 'node18', target: 'node32', value: 0, color: '#efefef' },
-    { source: 'node18', target: 'node40', value: 0, color: '#efefef' },
-    { source: 'node18', target: 'node41', value: 0, color: '#efefef' },
-    { source: 'node20', target: 'node40', value: 1, color: '#cccccc' },
-    { source: 'node20', target: 'node41', value: 1, color: '#cccccc' },
-    { source: 'node19', target: 'node35', value: 0, color: '#efefef' },
-    { source: 'node19', target: 'node36', value: 0, color: '#efefef' },
-    { source: 'node19', target: 'node37', value: 0, color: '#efefef' },
-    { source: 'node19', target: 'node38', value: 0, color: '#efefef' },
-    { source: 'node19', target: 'node39', value: 0, color: '#efefef' },
-    { source: 'node22', target: 'node33', value: 1, color: '#666666' },
-    { source: 'node23', target: 'node33', value: 1, color: '#666666' },
-    { source: 'node24', target: 'node33', value: 1, color: '#666666' },
-    { source: 'node25', target: 'node33', value: 1, color: '#666666' },
-    { source: 'node26', target: 'node33', value: 1, color: '#666666' },
-    { source: 'node27', target: 'node33', value: 1, color: '#666666' },
-    { source: 'node28', target: 'node33', value: 1, color: '#666666' },
-    { source: 'node29', target: 'node33', value: 1, color: '#666666' },
-    { source: 'node30', target: 'node33', value: 1, color: '#666666' },
-    { source: 'node31', target: 'node33', value: 1, color: '#666666' },
-    { source: 'node32', target: 'node33', value: 1, color: '#666666' },
-    { source: 'node21', target: 'node34', value: 1, color: '#999999' },
-    { source: 'node22', target: 'node34', value: 1, color: '#999999' },
-    { source: 'node23', target: 'node34', value: 1, color: '#999999' },
-    { source: 'node24', target: 'node34', value: 1, color: '#999999' },
-    { source: 'node25', target: 'node34', value: 1, color: '#999999' },
-    { source: 'node26', target: 'node34', value: 1, color: '#999999' },
-    { source: 'node27', target: 'node34', value: 1, color: '#999999' },
-    { source: 'node28', target: 'node34', value: 1, color: '#999999' },
-    { source: 'node29', target: 'node34', value: 1, color: '#999999' },
-    { source: 'node30', target: 'node34', value: 1, color: '#999999' },
-    { source: 'node31', target: 'node34', value: 1, color: '#999999' },
-    { source: 'node32', target: 'node34', value: 1, color: '#999999' },
-    { source: 'node22', target: 'node35', value: 1, color: '#b7b7b7' },
-    { source: 'node22', target: 'node36', value: 1, color: '#b7b7b7' },
-    { source: 'node22', target: 'node37', value: 1, color: '#b7b7b7' },
-    { source: 'node23', target: 'node35', value: 1, color: '#b7b7b7' },
-    { source: 'node23', target: 'node36', value: 1, color: '#b7b7b7' },
-    { source: 'node24', target: 'node35', value: 1, color: '#b7b7b7' },
-    { source: 'node24', target: 'node36', value: 1, color: '#b7b7b7' },
-    { source: 'node24', target: 'node38', value: 1, color: '#b7b7b7' },
-    { source: 'node24', target: 'node39', value: 1, color: '#b7b7b7' },
-    { source: 'node25', target: 'node35', value: 1, color: '#b7b7b7' },
-    { source: 'node25', target: 'node36', value: 1, color: '#b7b7b7' },
-    { source: 'node25', target: 'node37', value: 1, color: '#b7b7b7' },
-    { source: 'node26', target: 'node35', value: 1, color: '#b7b7b7' },
-    { source: 'node26', target: 'node36', value: 1, color: '#b7b7b7' },
-    { source: 'node26', target: 'node37', value: 1, color: '#b7b7b7' },
-    { source: 'node27', target: 'node35', value: 1, color: '#b7b7b7' },
-    { source: 'node27', target: 'node36', value: 1, color: '#b7b7b7' },
-    { source: 'node27', target: 'node38', value: 1, color: '#b7b7b7' },
-    { source: 'node28', target: 'node35', value: 1, color: '#b7b7b7' },
-    { source: 'node28', target: 'node36', value: 1, color: '#b7b7b7' },
-    { source: 'node28', target: 'node37', value: 1, color: '#b7b7b7' },
-    { source: 'node28', target: 'node38', value: 1, color: '#b7b7b7' },
-    { source: 'node29', target: 'node35', value: 1, color: '#b7b7b7' },
-    { source: 'node29', target: 'node36', value: 1, color: '#b7b7b7' },
-    { source: 'node29', target: 'node37', value: 1, color: '#b7b7b7' },
-    { source: 'node29', target: 'node38', value: 1, color: '#b7b7b7' },
-    { source: 'node30', target: 'node35', value: 1, color: '#b7b7b7' },
-    { source: 'node30', target: 'node36', value: 1, color: '#b7b7b7' },
-    { source: 'node30', target: 'node37', value: 1, color: '#b7b7b7' },
-    { source: 'node30', target: 'node38', value: 1, color: '#b7b7b7' },
-    { source: 'node31', target: 'node35', value: 1, color: '#b7b7b7' },
-    { source: 'node31', target: 'node36', value: 1, color: '#b7b7b7' },
-    { source: 'node31', target: 'node37', value: 1, color: '#b7b7b7' },
-    { source: 'node31', target: 'node38', value: 1, color: '#b7b7b7' },
-    { source: 'node32', target: 'node35', value: 1, color: '#b7b7b7' },
-    { source: 'node32', target: 'node36', value: 1, color: '#b7b7b7' },
-    { source: 'node32', target: 'node37', value: 1, color: '#b7b7b7' },
-    { source: 'node32', target: 'node38', value: 1, color: '#b7b7b7' },
-    { source: 'node22', target: 'node40', value: 1, color: '#cccccc' },
-    { source: 'node22', target: 'node41', value: 1, color: '#cccccc' },
-    { source: 'node23', target: 'node40', value: 1, color: '#cccccc' },
-    { source: 'node23', target: 'node41', value: 1, color: '#cccccc' },
-    { source: 'node24', target: 'node40', value: 1, color: '#cccccc' },
-    { source: 'node24', target: 'node41', value: 1, color: '#cccccc' },
-    { source: 'node25', target: 'node40', value: 1, color: '#cccccc' },
-    { source: 'node25', target: 'node41', value: 1, color: '#cccccc' },
-    { source: 'node26', target: 'node40', value: 1, color: '#cccccc' },
-    { source: 'node26', target: 'node41', value: 1, color: '#cccccc' },
-    { source: 'node27', target: 'node40', value: 1, color: '#cccccc' },
-    { source: 'node27', target: 'node41', value: 1, color: '#cccccc' },
-    { source: 'node28', target: 'node40', value: 1, color: '#cccccc' },
-    { source: 'node28', target: 'node41', value: 1, color: '#cccccc' },
-    { source: 'node29', target: 'node40', value: 1, color: '#cccccc' },
-    { source: 'node29', target: 'node41', value: 1, color: '#cccccc' },
-    { source: 'node30', target: 'node40', value: 1, color: '#cccccc' },
-    { source: 'node30', target: 'node41', value: 1, color: '#cccccc' },
-    { source: 'node31', target: 'node40', value: 1, color: '#cccccc' },
-    { source: 'node32', target: 'node40', value: 1, color: '#cccccc' },
-    { source: 'node32', target: 'node41', value: 1, color: '#cccccc' },
-    { source: 'node40', target: 'node35', value: 0, color: '#efefef' },
-    { source: 'node40', target: 'node36', value: 0, color: '#efefef' },
-    { source: 'node40', target: 'node37', value: 0, color: '#efefef' },
-    { source: 'node40', target: 'node38', value: 0, color: '#efefef' },
-    { source: 'node40', target: 'node39', value: 0, color: '#efefef' },
-    { source: 'node41', target: 'node35', value: 0, color: '#efefef' },
-    { source: 'node41', target: 'node36', value: 0, color: '#efefef' },
-    { source: 'node41', target: 'node37', value: 0, color: '#efefef' },
-    { source: 'node41', target: 'node38', value: 0, color: '#efefef' },
-    { source: 'node41', target: 'node39', value: 0, color: '#efefef' },
-    { source: 'node40', target: 'node42', value: 1, color: '#efefef' },
-    { source: 'node41', target: 'node42', value: 1, color: '#efefef' },
-  ],
+import { onBeforeUnmount, onMounted, ref } from 'vue'
+import sankeyData from '@/assets/data/sankey.json'
+
+function isPrimitive(value) {
+  return (
+    value === null ||
+    typeof value !== 'object'
+  )
 }
+function isSimpleObject(value) {
+  return (
+    value !== null &&
+    typeof value === 'object' &&
+    !Array.isArray(value) &&
+    Object.values(value).every(isPrimitive)
+  )
+}
+function formatJson(value, level = 0) {
+  const indent = '  '.repeat(level)
+  const childIndent = '  '.repeat(level + 1)
+
+  if (isPrimitive(value)) {
+    return JSON.stringify(value)
+  }
+
+  if (Array.isArray(value)) {
+    if (value.length === 0) {
+      return '[]'
+    }
+
+    return [
+      '[',
+      value
+        .map(item => `${childIndent}${formatJson(item, level + 1)}`)
+        .join(',\n'),
+      `${indent}]`,
+    ].join('\n')
+  }
+
+  if (isSimpleObject(value)) {
+    const entries = Object.entries(value)
+      .map(([key, item]) => {
+        return `${JSON.stringify(key)}: ${formatJson(item)}`
+      })
+      .join(', ')
+
+    return `{ ${entries} }`
+  }
+
+  const entries = Object.entries(value)
+    .map(([key, item]) => {
+      return [
+        `${childIndent}${JSON.stringify(key)}:`,
+        formatJson(item, level + 1),
+      ].join(' ')
+    })
+    .join(',\n')
+
+  return [
+    '{',
+    entries,
+    `${indent}}`,
+  ].join('\n')
+}
+// formateando el json con filas completas
+const formattedData = formatJson(sankeyData)
+
+const downloadUrl = ref('')
+
+onMounted(() => {
+  const blob = new Blob(
+    [formattedData],
+    { type: 'application/json' },
+  )
+
+  downloadUrl.value = URL.createObjectURL(blob)
+})
+
+onBeforeUnmount(() => {
+  if (downloadUrl.value) {
+    URL.revokeObjectURL(downloadUrl.value)
+  }
+})
 </script>
 
 <template>
-  <article>
-    <h3>Sankey Diagram</h3>
+  <section class="sankey-page">
+    <h1>Sankey Diagram</h1>
 
-    <!-- <section>
-      <h4>Ejemplo con pocos datos</h4>
+    <figure
+      class="sankey"
+      aria-labelledby="sankey-title"
+    >
+      <figcaption id="sankey-title">
+        Diagrama de flujo de datos
+      </figcaption>
+
       <ClientOnly>
-        <SankeyComponent sankey-id="sankey0" />
-      </ClientOnly>
-    </section> -->
+        <SankeyComponent
+          :datos="sankeyData"
+          titulo="Diagrama de flujo de datos"
+        />
 
-    <section aria-label="Componente Diagrama de flujo">
-      <ClientOnly>
-        <SankeyComponent :datos="items" />
+        <template #fallback>
+          <p class="sankey__loading">
+            Cargando diagrama…
+          </p>
+        </template>
       </ClientOnly>
-    </section>
+    </figure>
 
-    <section>
-      <h4>Datos</h4>
-      <code>{{ items }}</code>
-      <br>
-      <br>
-      <a
-        href="https://raw.githubusercontent.com/ciretorres/ciretorres.github.io/refs/heads/develop/src/assets/data/sankey/data_sankey.json"
-        download="data_sankey.json"
-      >Descargar json</a>
+    <section
+      class="data-section"
+      aria-labelledby="data-title"
+    >
+      <div class="data-section__header">
+        <h2 id="data-title">Datos del diagrama</h2>
+
+        <a
+          v-if="downloadUrl"
+          :href="downloadUrl"
+          download="sankey.json"
+        >
+          Descargar JSON
+        </a>
+      </div>
+
+      <pre class="json-viewer"><code>{{ formattedData }}</code></pre>
     </section>
-  </article>
+  </section>
 </template>
+
+<style scoped>
+.sankey-page {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+.sankey {
+  width: 100%;
+  margin: 0;
+}
+
+.sankey figcaption {
+  margin-bottom: 0.75rem;
+  font-size: 1.125rem;
+  font-weight: 600;
+}
+
+.sankey__loading {
+  min-height: 500px;
+  display: grid;
+  place-items: center;
+  color: #64748b;
+}
+
+.data-section {
+  margin-top: 2rem;
+}
+
+.data-section__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 0.75rem;
+}
+
+.data-section h2 {
+  margin: 0;
+  font-size: 1.25rem;
+}
+
+.data-section a {
+  color: #2563eb;
+  text-decoration: underline;
+}
+
+.json-viewer {
+  width: 100%;
+  box-sizing: border-box;
+  max-height: 500px;
+  overflow: auto;
+  margin: 0;
+  padding: 1rem;
+  border: 1px solid #cbd5e1;
+  border-radius: 0.5rem;
+  background: #0f172a;
+  color: #e2e8f0;
+  font-size: 0.875rem;
+  line-height: 1.5;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
+
+.json-viewer code {
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+}
+</style>

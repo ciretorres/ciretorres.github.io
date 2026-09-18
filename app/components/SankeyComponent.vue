@@ -1,280 +1,397 @@
 <script setup>
 import * as d3 from 'd3'
 import { sankey, sankeyLinkHorizontal } from 'd3-sankey'
-
-import { onMounted, onUnmounted, ref, toRefs, watch } from 'vue'
+import { nextTick, onMounted, onUnmounted, ref, watch } from 'vue'
 
 const props = defineProps({
   sankeyId: {
     type: String,
-    default: () => 'sankey',
+    default: () => `sankeyid-${Math.random().toString(36).substring(2)}`,
   },
+
   datos: {
     type: Object,
     default: () => ({
       nodes: [
-        { node: 0, name: 'node0', id: 'node_0', color: '#FFF' },
-        { node: 1, name: 'node1', id: 'node_1', color: '#FFF' },
-        { node: 2, name: 'node2', id: 'node_2', color: '#FFF' },
+        { id: 'node_0', name: 'Node 0', color: '#2563eb' },
+        { id: 'node_1', name: 'Node 1', color: '#16a34a' },
+        { id: 'node_2', name: 'Node 2', color: '#dc2626' },
       ],
       links: [
-        { source: 'node0', target: 'node2', value: 1, color: '#EFF' },
-        { source: 'node1', target: 'node2', value: 1, color: '#EFF' },
+        {
+          source: 'node_0',
+          target: 'node_2',
+          value: 1,
+          color: '#93c5fd',
+        },
+        {
+          source: 'node_1',
+          target: 'node_2',
+          value: 1,
+          color: '#86efac',
+        },
       ],
     }),
   },
-  altoVis: {
-    type: Number,
-    default: 800,
+  titulo: {
+    type: String,
+    default: 'Diagrama Sankey de flujos',
   },
-  anchoVis: {
+
+  altoVis: {
     type: Number,
     default: 600,
   },
-  altoNodo: {
+
+  anchoVis: {
     type: Number,
-    default: 20,
+    default: 800,
   },
+
   anchoNodo: {
     type: Number,
     default: 15,
   },
+
   separacionNodo: {
     type: Number,
     default: 10,
   },
+
   margin: {
     type: Object,
     default: () => ({
       top: 20,
-      right: 20,
+      right: 140,
       bottom: 20,
       left: 20,
     }),
   },
 })
-const { datos } = toRefs(props)
 
 const containerRef = ref(null)
-const svgRef = ref('')
-const svg = ref({})
+const svgRef = ref(null)
+const tooltipRef = ref(null)
 
-const tooltip = ref({})
+let resizeObserver = null
+let animationFrame = null
 
-const width = ref(800)
-const height = ref(600)
+const formatValue = value =>
+  new Intl.NumberFormat('es-ES').format(value)
 
-const nodeWidth = ref(15)
-const nodeHeight = ref(20)
-const nodePadding = ref(10)
+function getDimensions() {
+  // get the dimensions and margins of the graph
+  const containerWidth = containerRef.value?.clientWidth
 
-function configurandoDimensionesParaSVG() {
-  // set the dimensions and margins of the graph
-  // width.value
-  //   = document.getElementById(props.sankeyId).clientWidth
-  //     - props.margin.left
-  //     - props.margin.right
-  width.value
-    = containerRef.value.clientWidth
-      - props.margin.left
-      - props.margin.right
+  const outerWidth = containerWidth || props.anchoVis
+  const outerHeight = props.altoVis
 
-  height.value = props.altoVis + props.margin.top + props.margin.bottom
+  const innerWidth = Math.max(0,
+    outerWidth - props.margin.left - props.margin.right,
+  )
 
-  svg.value
-    .attr('width', width.value + props.margin.left + props.margin.right)
-    .attr('height', height.value + props.margin.top + props.margin.bottom)
+  const innerHeight = Math.max(0,
+    outerHeight - props.margin.top - props.margin.bottom,
+  )
 
-  // const extent = [
-  //   [props.margin.left, props.margin.top],
-  //   [width.value, height.value],
-  // ]
+  return {
+    outerWidth,
+    outerHeight,
+    innerWidth,
+    innerHeight,
+  }
 }
 
-function creandoSankey() {
-  svg.value.attr('viewBox', [0, -20, width.value, height.value + 20])
+function positionTooltip(event) {
+  if (!tooltipRef.value) return
 
-  // load the data
-  const itemsGrafica = datos.value
+  const rect = containerRef.value.getBoundingClientRect()
+
+  tooltipRef.value.style.left = `${event.clientX - rect.left + 12}px`
+  tooltipRef.value.style.top = `${event.clientY - rect.top + 12}px`
+}
+
+function showTooltip(event, html) {
+  if (!tooltipRef.value) return
+
+  tooltipRef.value.innerHTML = html
+  tooltipRef.value.hidden = false
+
+  positionTooltip(event)
+}
+
+function hideTooltip() {
+  if (!tooltipRef.value) return
+
+  tooltipRef.value.hidden = true
+}
+
+function highlightNode(node, linkSelection, nodeSelection, labelSelection) {
+  const connectedLinks = new Set()
+
+  linkSelection.each(link => {
+    const isConnected =
+      link.source.id === node.id ||
+      link.target.id === node.id
+
+    if (isConnected) {
+      connectedLinks.add(link.source.id)
+      connectedLinks.add(link.target.id)
+    }
+  })
+
+  linkSelection
+    .transition()
+    .duration(150)
+    .style('stroke-opacity', link => {
+      const isConnected =
+        link.source.id === node.id ||
+        link.target.id === node.id
+
+      return isConnected ? 0.9 : 0.12
+    })
+
+  nodeSelection
+    .transition()
+    .duration(150)
+    .style('opacity', item =>
+      connectedLinks.has(item.id) ? 1 : 0.25,
+    )
+
+  labelSelection
+    .transition()
+    .duration(150)
+    .style('opacity', item =>
+      connectedLinks.has(item.id) ? 1 : 0.25,
+    )
+}
+
+function resetHighlight(
+  linkSelection,
+  nodeSelection,
+  labelSelection,
+) {
+  linkSelection
+    .transition()
+    .duration(150)
+    .style('stroke-opacity', 0.45)
+
+  nodeSelection
+    .transition()
+    .duration(150)
+    .style('opacity', 1)
+
+  labelSelection
+    .transition()
+    .duration(150)
+    .style('opacity', 1)
+}
+
+function renderChart() {
+  if (!svgRef.value || !containerRef.value) return
+
+  const {
+    outerWidth,
+    outerHeight,
+    innerWidth,
+    innerHeight,
+  } = getDimensions()
+
+  if (innerWidth <= 0 || innerHeight <= 0) return
+
+  // append the svg object to the body of the page
+  const svg = d3.select(svgRef.value)
+
+  // Limpia el gráfico anterior.
+  svg.selectAll('*').remove()
+
+  svg
+    .attr('width', '100%')
+    .attr('height', outerHeight)
+    .attr('viewBox', `0 0 ${outerWidth} ${outerHeight}`)
+    .attr('role', 'img')
+    .attr('aria-label', props.titulo)
+
+  const chart = svg
+    .append('g')
+    .attr('transform',
+      `translate(${props.margin.left},${props.margin.top})`,
+    )
+
+  // d3-sankey modifica internamente los nodos y enlaces.
+  // const graphData = structuredClone(props.datos)
+  const graphData = {
+    nodes: props.datos.nodes.map(node => ({ ...node })),
+    links: props.datos.links.map(link => ({ ...link })),
+  }
 
   // Set the sankey diagram properties
-  const { nodes, links } = sankey()
-    .nodeId(d => d.name)
-    .nodeWidth(nodeWidth.value)
-    .nodeSort(false)
-    .nodePadding(nodePadding.value)
-    .extent([
-      [1, 1],
-      [width.value, height.value - nodeHeight.value],
-    ])(itemsGrafica)
+  const layout = sankey()
+    .nodeId(node => node.id)
+    .nodeWidth(props.anchoNodo)
+    .nodePadding(props.separacionNodo)
+    .nodeSort(null)
+    .extent([ [0, 0], [innerWidth, innerHeight] ])
 
-  const link = svg.value
-    .append('g')
-    .attr('fill', 'none')
-    .attr('stroke-opacity', 0.7)
-    .selectAll('g')
-    .data(links)
-    .join('g')
-    .style('mix-blend-mode', 'normal')
-
-  tooltip.value
-    .style('position', 'absolute')
-    .style('visibility', 'hidden')
-    .style('border', '1px solid #333')
-    .style('font-family', 'Arial')
-    .style('font-size', '10pt')
-    .style('font-weight', 'bold')
-    .style('max-width', '200px')
-    .style('padding', '5px')
-    .style('background-color', '#FFF')
-    .text('Tooltip')
+  const {
+    nodes,
+    links,
+  } = layout(graphData)
 
   // add in the links
-  link
-    .append('path')
-    .attr('d', sankeyLinkHorizontal())
-    // .attr('stroke', d => d.color)
-    .attr('stroke', '#efefef')
-    .attr('stroke-width', d => Math.max(1, d.width))
-    .attr('opacity', '0.5')
-    .on('mouseover', function (d, i) {
-      d3.select(this).transition().duration('50').attr('opacity', '1')
-      // tooltip.value.style('background-color', i.color)
-      tooltip.value.style('background-color', '#00000')
-      tooltip.value.style('color', i.color === '#000000' ? '#FFF' : '#000')
-      tooltip.value.text(
-        ''
-        + i.source.name
-        + ' → '
-        + i.target.name
-        + ' : '
-        + i.value
-        + '  value.',
-      )
-      tooltip.value.style('visibility', 'visible')
-    })
-    .on('mouseout', function () {
-      d3.select(this).transition().duration('50').attr('opacity', '0.5')
-      tooltip.value.style('visibility', 'hidden')
-    })
-    .on('mousemove', function (d) {
-      return tooltip.value
-        .style('top', d.pageY + 10 + 'px')
-        .style('left', d.pageX + 10 + 'px')
-    })
-
-  // Coloca texto alado del nodo rectángulo
-  svg.value
+  const linkGroup = chart
     .append('g')
-    .attr('font-size', 9)
-    .attr('font-weight', 'bold')
-    .selectAll('text')
-    .data(nodes)
-    .join('text')
-    .attr('x', d => (d.x0 < width.value / 2 ? d.x1 + 6 : d.x0 - 6))
-    .attr('y', d => (d.y1 + d.y0) / 2)
-    .attr('dy', '0.35em')
-    .attr('text-anchor', d => (d.x0 < width.value / 2 ? 'start' : 'end'))
-    .text(d => d.name)
-    .attr('fill', '#FFFFFF')
-    .attr('class', 'node-text-rect')
-    .attr('id', function (d, i) {
-      d.id = i
-      return 'rect-text-' + i
+    .attr('fill', 'none')
+    .attr('stroke-linecap', 'round')
+  const linkSelection = linkGroup
+    .selectAll('path')
+    .data(links)
+    .join('path')
+    .attr('d', sankeyLinkHorizontal())
+    .attr(
+      'stroke',
+      link => link.color || link.source.color || '#94a3b8',
+    )
+    // forzando que el valor sea 1 aunque venga en cero
+    .attr('stroke-width', link => Math.max(1, link.width))
+    .style('stroke-opacity', 0.45)
+    .style('cursor', 'pointer')
+    .on('pointerenter', function (event, link) {
+      d3.select(this)
+        .transition()
+        .duration(100)
+        .style('stroke-opacity', 0.95)
+
+      showTooltip(
+        event,
+        `
+          <strong>${link.source.name}</strong>
+          → <strong>${link.target.name}</strong>
+          <br>
+          Valor: ${formatValue(link.value)}
+        `,
+      )
     })
-    .append('tspan')
-    .attr('font-size', 9)
-    .attr('fill-opacity', 0.7)
-    .text(d => ` (${d.value.toLocaleString()})`)
+    .on('pointermove', positionTooltip)
+    .on('pointerleave', function () {
+      d3.select(this)
+        .transition()
+        .duration(100)
+        .style('stroke-opacity', 0.45)
+
+      hideTooltip()
+    })
 
   // add in the nodes
-  // add the rectangles for the nodes
-  svg.value
+  const nodeGroup = chart
     .append('g')
-    .attr('stroke', '#333')
-    .attr('stroke-width', '0.75')
+    .attr('stroke', '#334155')
+    .attr('stroke-width', 0.75)
+  const nodeSelection = nodeGroup
     .selectAll('rect')
     .data(nodes)
     .join('rect')
-    .attr('x', d => d.x0 + 1)
-    .attr('y', d => d.y0)
-    .attr('height', d => d.y1 - d.y0)
-    .attr('width', d => d.x1 - d.x0 - 2)
-    // .attr('fill', d => d.color)
-    .attr('fill', '#FFFFFF')
-    .attr('class', 'node-rect')
-    .attr('id', function (d, i) {
-      d.id = i
-      return 'rect-' + i
-    })
-    // Add hover text
-    .on('mouseover', function (d, i) {
-      const nodeHiglight = []
-      link
-        .transition()
-        .duration(300)
-        .style('stroke-opacity', function (l) {
-          if (l.source.index === i.index || l.target.index === i.index) {
-            nodeHiglight.push(l.target.id)
-            nodeHiglight.push(l.source.id)
-          }
-          return l.source.index === i.index || l.target.index === i.index
-            ? 1
-            : 0.2
-        })
-
-      // tooltip.value.style('background-color', i.color)
-      tooltip.value.style('background-color', '#00000')
-      tooltip.value.style('color', i.color === '#000000' ? '#FFF' : '#000')
-      tooltip.value.text(
-        '' + i.name + ' : ' + i.value.toLocaleString() + '  value.',
+    .attr('x', node => node.x0)
+    .attr('y', node => node.y0)
+    .attr('width', node => node.x1 - node.x0)
+    .attr('height', node => node.y1 - node.y0)
+    .attr('rx', 2)
+    .attr('fill', node => node.color || '#cbd5e1')
+    .style('cursor', 'pointer')
+    .on('pointerenter', function (event, node) {
+      highlightNode(
+        node, linkSelection, nodeSelection, labelSelection,
       )
-      tooltip.value.style('visibility', 'visible')
 
-      d3.selectAll('.node-rect').style('opacity', 0.2)
-      d3.selectAll('.node-text-rect').style('opacity', 0.2)
-      for (let i = 0; i < nodeHiglight.length; i++) {
-        d3.select('#rect-' + nodeHiglight[i]).style('opacity', 1)
-        d3.select('#rect-text-' + nodeHiglight[i]).style('opacity', 1)
-      }
+      showTooltip(
+        event,
+        `
+          <strong>${node.name}</strong>
+          <br>
+          Valor: ${formatValue(node.value || 0)}
+        `,
+      )
     })
-    .on('mouseleave', function () {
-      link.transition().duration(300).style('stroke-opacity', 0.5)
+    .on('pointermove', positionTooltip)
+    .on('pointerleave', function () {
+      resetHighlight(
+        linkSelection, nodeSelection, labelSelection,
+      )
 
-      d3.selectAll('.node-text-rect').style('opacity', 1)
-      d3.selectAll('.node-rect').style('opacity', 1)
-      tooltip.value.style('visibility', 'hidden')
+      hideTooltip()
     })
-    .on('mousemove', function (d) {
-      return tooltip.value
-        .style('top', d.pageY + 10 + 'px')
-        .style('left', d.pageX + 10 + 'px')
-    })
+
+  // Coloca texto alado del nodo rectángulo
+  const labelSelection = chart
+    .append('g')
+    .attr('font-size', 12)
+    .attr('font-family', 'system-ui, sans-serif')
+    .selectAll('text')
+    .data(nodes)
+    .join('text')
+    .attr('x',
+      node => node.x0 < innerWidth / 2
+        ? node.x1 + 8
+        : node.x0 - 8,
+    )
+    .attr('y',
+      node => (node.y0 + node.y1) / 2,
+    )
+    .attr('dy', '0.35em')
+    .attr('text-anchor',
+      node => node.x0 < innerWidth / 2
+        ? 'start'
+        : 'end',
+    )
+    .attr('fill', '#e2e8f0')
+    .text(node => `${node.name} (${formatValue(node.value || 0)})`)
+    .style('pointer-events', 'none')
 }
 
-function reescalandoPantalla() {
-  configurandoDimensionesParaSVG()
+function scheduleRender() {
+  cancelAnimationFrame(animationFrame)
+
+  animationFrame = requestAnimationFrame(() => {
+    renderChart()
+  })
 }
 
-onMounted(() => {
-  // append the svg object to the body of the page
-  svg.value = d3.select(svgRef.value)
-  // .attr('viewBox', [0, -20, width.value, height.value + 20])
+function observeResize() {
+  if (!containerRef.value) return
 
-  tooltip.value = d3.select(`div#${props.sankeyId}`).select('div.tooltip')
+  resizeObserver = new ResizeObserver(() => {
+    scheduleRender()
+  })
 
-  configurandoDimensionesParaSVG()
-  creandoSankey()
+  resizeObserver.observe(containerRef.value)
+}
 
-  // window.addEventListener('resize', reescalandoPantalla)
+watch(
+  () => props.datos,
+  async () => {
+    await nextTick()
+    scheduleRender()
+  },
+  {
+    deep: true,
+  },
+)
+
+onMounted(async () => {
+  await nextTick()
+
+  renderChart()
+  observeResize()
 })
+
 onUnmounted(() => {
-  // window.removeEventListener('resize', reescalandoPantalla)
-})
+  resizeObserver?.disconnect()
+  cancelAnimationFrame(animationFrame)
 
-watch(datos, () => {
-  configurandoDimensionesParaSVG()
-  creandoSankey()
+  d3.select(svgRef.value)
+    .selectAll('*')
+    .interrupt()
+    .remove()
 })
 </script>
 
@@ -285,14 +402,41 @@ watch(datos, () => {
     class="sankey-component"
   >
     <!-- eslint-disable vue/html-self-closing -->
+    <svg ref="svgRef"></svg>
+
     <div
       ref="tooltipRef"
       class="tooltip"
+      hidden
     ></div>
-
-    <div>
-      <svg ref="svgRef"></svg>
-    </div>
     <!-- eslint-enable vue/html-self-closing -->
   </div>
 </template>
+
+<style scoped>
+.sankey-component {
+  position: relative;
+  width: 100%;
+  min-width: 0;
+}
+
+.sankey-component svg {
+  display: block;
+  width: 100%;
+  overflow: visible;
+}
+
+.tooltip {
+  position: absolute;
+  z-index: 10;
+  max-width: 240px;
+  padding: 0.5rem 0.65rem;
+  border: 1px solid #334155;
+  border-radius: 4px;
+  background: #0f172a;
+  color: #f8fafc;
+  font: 0.875rem/1.4 system-ui, sans-serif;
+  pointer-events: none;
+  box-shadow: 0 4px 12px rgb(0 0 0 / 20%);
+}
+</style>
