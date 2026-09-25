@@ -4,17 +4,23 @@ const site = {
   name: 'ciretorres',
   url: 'https://ciretorres.github.io',
   description:
-    'Portafolio de proyectos de desarrollo web con Nuxt, Vue, D3.js, Sass y Sisdai.'
+    'Portafolio de proyectos de desarrollo web con Nuxt, Vue, D3.js, Sass y Sisdai.',
 }
 
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   modules: ['@pinia/nuxt', '@nuxt/eslint'],
 
+  runtimeConfig: {
+    public: {
+      cartoApiKey: process.env.CARTO_API_KEY || '',
+    },
+  },
+
   ssr: true,
 
   devtools: {
-    enabled: true
+    enabled: true,
   },
 
   app: {
@@ -23,7 +29,7 @@ export default defineNuxtConfig({
 
     head: {
       htmlAttrs: {
-        lang: 'es-MX'
+        lang: 'es-MX',
       },
 
       meta: [
@@ -39,7 +45,7 @@ export default defineNuxtConfig({
         { name: 'twitter:card', content: 'summary_large_image' },
         { name: 'twitter:title', content: site.name },
         { name: 'twitter:description', content: site.description },
-        { name: 'twitter:image', content: `${site.url}/img/icono.png` }
+        { name: 'twitter:image', content: `${site.url}/img/icono.png` },
       ],
 
       link: [
@@ -48,40 +54,40 @@ export default defineNuxtConfig({
           // type: 'image/svg+xml',
           // type: 'image/png',
           type: 'image/x-icon',
-          href: '/favicon.ico'
+          href: '/favicon.ico',
         },
         {
           rel: 'canonical',
-          href: site.url
+          href: site.url,
         },
         {
           rel: 'preconnect',
-          href: 'https://fonts.googleapis.com'
+          href: 'https://fonts.googleapis.com',
         },
         {
           rel: 'preconnect',
           href: 'https://fonts.gstatic.com',
-          crossorigin: 'anonymous'
-        }
-      ]
-    }
+          crossorigin: 'anonymous',
+        },
+      ],
+    },
   },
 
   css: ['~/assets/style/main.scss'],
 
   routeRules: {
     '/': {
-      prerender: true
+      prerender: true,
     },
     '/web-development': {
-      prerender: true
+      prerender: true,
     },
     '/visualization': {
-      prerender: true
+      prerender: true,
     },
     '/visualization/**': {
-      prerender: true
-    }
+      prerender: true,
+    },
   },
 
   compatibilityDate: '2026-06-30',
@@ -89,8 +95,8 @@ export default defineNuxtConfig({
   nitro: {
     prerender: {
       crawlLinks: true,
-      failOnError: true
-    }
+      failOnError: true,
+    },
   },
 
   vite: {
@@ -98,15 +104,15 @@ export default defineNuxtConfig({
       noExternal: [
         '@centrogeomx/sisdai-mapas',
         'ol-displaced-points',
-        'circle-properties'
-      ]
-    }
+        'circle-properties',
+      ],
+    },
   },
 
   eslint: {
     config: {
       // se desactiva porque prettier se encarga del formateo
-      stylistic: false
+      stylistic: false,
       // stylistic: {
       //   commaDangle: 'never',
       //   braceStyle: '1tbs',
@@ -114,6 +120,6 @@ export default defineNuxtConfig({
       //   quotes: 'single',
       //   indent: 2
       // }
-    }
-  }
+    },
+  },
 })

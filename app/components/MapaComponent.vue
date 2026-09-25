@@ -7,6 +7,15 @@ import {
   SisdaiMapa,
 } from '@centrogeomx/sisdai-mapas'
 
+const config = useRuntimeConfig()
+// const cartoApiKey = config.public.cartoApiKey
+// const urlCapaBase = `https://{a-c}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}.png?key=${cartoApiKey}`
+const urlCapaBase = computed(() => {
+  const cartoApiKey = encodeURIComponent(config.public.cartoApiKey)
+
+  return `https://{a-c}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}.png?key=${cartoApiKey}`
+})
+
 const centroides = centroidesJSON
 
 const atribuciones = [
@@ -54,10 +63,14 @@ function globoInformativo(f) {
   // const propiedades = f.properties ?? f
   const propiedades = f.properties ?? f
 
-  const nombre = escaparHtml(propiedades.name ?? 'Sin nombre')
-  const pais = escaparHtml(propiedades.country ?? 'Sin dato')
-  const diametro = formatearNumero(propiedades.diameter_km)
-  const edad = formatearNumero(propiedades.age_ma)
+  // const nombre = escaparHtml(propiedades.name ?? 'Sin nombre')
+  // const pais = escaparHtml(propiedades.country ?? 'Sin dato')
+  // const diametro = formatearNumero(propiedades.diameter_km)
+  // const edad = formatearNumero(propiedades.age_ma)
+  const nombre = propiedades.name
+  const pais = propiedades.country
+  const diametro = propiedades.diameter_km
+  const edad = propiedades.age_ma
 
   return `
     <div class="globo-crater">
@@ -83,7 +96,7 @@ function globoInformativo(f) {
       <SisdaiCapaXyz
         id="base"
         :posicion="1"
-        url="https://{a-c}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}.png"
+        :url="urlCapaBase"
         :atribuciones="atribuciones"
       />
 

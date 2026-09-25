@@ -325,7 +325,7 @@
       "properties": {
         "name": "Chicxulub",
         "country": "México",
-        "diameter_km": "150****",
+        "diameter_km": "150",
         "age_ma": "64.98 ± 0.05"
       }
     },
