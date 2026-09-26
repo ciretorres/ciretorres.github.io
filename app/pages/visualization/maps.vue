@@ -1,38 +1,14 @@
 <script setup>
 import { defineAsyncComponent, onMounted, ref } from 'vue'
 
+import { useDatosApi } from '@/composables/usarDatosApi'
+const { consultarDatos } = useDatosApi('data/centroides-crateres.json')
+
 const MapaComponent = defineAsyncComponent(
   () => import('@/components/MapaComponent.vue')
 )
-// import centroidesJSON from '@/assets/data/centroides-crateres.json'
-// console.log('centroidesJSON', centroidesJSON)
 
-// let centroidesJSON
 const centroidesJSON = ref(null)
-onMounted(async () => {
-  // const config = useRuntimeConfig()
-  // const respuesta = await fetch(`/data/centroides-crateres.json`)
-  // console.log('respuesta', respuesta)
-
-  try {
-    // const respuesta = await fetch('/consorcio_variantes_heatmap_todas.json')
-    // centroides - crateres
-    const config = useRuntimeConfig()
-    const respuesta = await fetch(
-      `${config.app.baseURL}data/centroides-crateres.json`
-    )
-    // const respuesta = await fetch(`/data/centroides-crateres.json`)
-    console.log('respuesta Cargada')
-    if (!respuesta.ok) {
-      throw new Error(`HTTP ${respuesta.status}`)
-    }
-    centroidesJSON.value = await respuesta.json()
-
-    console.log('centroidesJSON Cargado')
-  } catch (error) {
-    console.error('No se pudo cargar el JSON:', error)
-  }
-})
 
 const fuentes = [
   { href: 'https://gitlab.com/sisdai-org/sisdai-mapas' },
@@ -53,10 +29,14 @@ const fuentes = [
   },
   { href: 'https://fondodeculturaeconomica.com/Ficha/9786071657145/F' },
 ]
+
+onMounted(async () => {
+  centroidesJSON.value = await consultarDatos()
+})
 </script>
 
 <template>
-  <article class="maps">
+  <section class="maps">
     <section aria-label="Mapas introducción">
       <h3>Mapas</h3>
       <h4>Cráteres de impacto en la Tierra</h4>
@@ -89,12 +69,14 @@ const fuentes = [
 
     <section aria-label="Base de datos">
       <h3>Base datos de centroides cráteres</h3>
-      <!-- <code>{{ centroidesJSON }}</code> -->
+
       <pre v-if="centroidesJSON"><code>{{
         JSON.stringify(centroidesJSON, null, 2)
       }}</code></pre>
+
       <br />
       <br />
+
       <a
         href="https://raw.githubusercontent.com/ciretorres/ciretorres.github.io/refs/heads/develop/src/assets/data/centroides-crateres.json"
         download="centroides-crateres.json"
@@ -105,6 +87,7 @@ const fuentes = [
 
     <section aria-label="Fuentes bibliográficas">
       <h3>Fuentes:</h3>
+
       <ul class="lista-fuentes">
         <li
           v-for="(fuente, idx) in fuentes"
@@ -120,7 +103,7 @@ const fuentes = [
         </li>
       </ul>
     </section>
-  </article>
+  </section>
 </template>
 
 <style lang="scss">
@@ -139,8 +122,6 @@ const fuentes = [
 </style>
 
 <style lang="scss" scoped>
-// @import "sisdai-css";
-
 .lista-fuentes {
   word-wrap: break-word;
   // word-break: break-all;

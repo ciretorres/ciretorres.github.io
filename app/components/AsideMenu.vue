@@ -1,3 +1,31 @@
+<script setup>
+const d3jsRoutes = [
+  { titulo: 'Flow diagram', link: '/visualization/sankey-diagram' },
+  { titulo: 'Heatmap', link: '/visualization/heatmap-diagram' },
+  { titulo: 'Multiline', link: '/visualization/multiline-diagram' },
+  { titulo: 'Area', link: '/visualization/area-diagram' },
+]
+
+const visualizationRoutes = [
+  {
+    titulo: 'Thesis-project [UAM-A]',
+    href: 'https://github.com/ciretorres/thesis-project',
+  },
+  {
+    titulo: 'Interactive Solid Waste System [CDMX]',
+    href: 'https://ciretorres.github.io/flujo-de-residuos-solidos-cdmx/',
+  },
+  {
+    titulo: 'AR-System UNIVERSUM [UIC]',
+    href: 'https://ciretorres.github.io/AR-System-UNIVERSUM/',
+  },
+  {
+    titulo: '3D Gamma-Ray-Catalogue [HAWC Observatory]',
+    href: 'https://github.com/ciretorres/2HAWC',
+  },
+]
+</script>
+
 <template>
   <aside aria-label="Barra lateral">
     <nav aria-label="Secundaria Viszualization">
@@ -10,17 +38,13 @@
           aria-label="d3js"
         >
           <ul>
-            <li>
-              <nuxt-link to="/visualization/sankey-diagram">Flow diagram</nuxt-link>
-            </li>
-            <li>
-              <nuxt-link to="/visualization/heatmap-diagram">Heatmap</nuxt-link>
-            </li>
-            <li>
-              <nuxt-link to="/visualization/multiline-diagram">Multiline</nuxt-link>
-            </li>
-            <li>
-              <nuxt-link to="/visualization/area-diagram">Area</nuxt-link>
+            <li
+              v-for="(value, idx) in d3jsRoutes"
+              :key="`rutad3js-${idx}`"
+            >
+              <nuxt-link :to="value.link">
+                {{ value.titulo }}
+              </nuxt-link>
             </li>
           </ul>
         </section>
@@ -31,7 +55,8 @@
         >
           <ul>
             <li>
-              +<nuxt-link to="/visualization/maps">Maps</nuxt-link>
+              +
+              <nuxt-link to="/visualization/maps">Maps</nuxt-link>
             </li>
           </ul>
         </section>
@@ -41,35 +66,17 @@
           aria-label="visualizations"
         >
           <ul>
-            <li>
+            <li
+              v-for="(value, idx) in visualizationRoutes"
+              :key="`rutavisualization-${idx}`"
+            >
               <a
-                href="https://github.com/ciretorres/thesis-project"
+                :href="value.href"
                 target="_blank"
                 rel="noopener noreferrer"
-              >Thesis-project [UAM-A]</a>
-              <!-- <router-link to="/visualization/thesis-project">Thesis-project [UAM-A]
-              </router-link> -->
-            </li>
-            <li>
-              <a
-                href="https://ciretorres.github.io/flujo-de-residuos-solidos-cdmx/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >Interactive Solid Waste System [CDMX]</a>
-            </li>
-            <li>
-              <a
-                href="https://ciretorres.github.io/AR-System-UNIVERSUM/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >AR-System UNIVERSUM [UIC]</a>
-            </li>
-            <li>
-              <a
-                href="https://github.com/ciretorres/2HAWC"
-                target="_blank"
-                rel="noopener noreferrer"
-              >3D Gamma-Ray-Catalogue [HAWC Observatory]</a>
+              >
+                {{ value.titulo }}
+              </a>
             </li>
           </ul>
         </section>

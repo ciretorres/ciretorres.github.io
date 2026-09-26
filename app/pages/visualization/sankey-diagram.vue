@@ -1,12 +1,15 @@
 <script setup>
 import { defineAsyncComponent, onBeforeUnmount, onMounted, ref } from 'vue'
-// import sankeyData from '@/assets/data/sankey.json'
+
+import { useDatosApi } from '@/composables/usarDatosApi'
+const { consultarDatos } = useDatosApi('data/sankey.json')
 
 const SankeyComponent = defineAsyncComponent(
   () => import('@/components/SankeyComponent.vue')
 )
 
 const sankeyData = ref(null)
+const downloadUrl = ref('')
 
 let formattedData
 
@@ -65,30 +68,9 @@ function formatJson(value, level = 0) {
   return ['{', entries, `${indent}}`].join('\n')
 }
 
-async function fetchJSON() {
-  try {
-    // const respuesta = await fetch('/consorcio_variantes_heatmap_todas.json')
-    // centroides - crateres
-    const config = useRuntimeConfig()
-    const respuesta = await fetch(`${config.app.baseURL}data/sankey.json`)
-    // const respuesta = await fetch(`/data/centroides-crateres.json`)
-    console.log('respuesta Cargada')
-    if (!respuesta.ok) {
-      throw new Error(`HTTP ${respuesta.status}`)
-    }
-    sankeyData.value = await respuesta.json()
-
-    console.log('sankeyData Cargado')
-  } catch (error) {
-    console.error('No se pudo cargar el JSON:', error)
-  }
-}
-
-const downloadUrl = ref('')
-
 onMounted(async () => {
   // cargando json
-  await fetchJSON()
+  sankeyData.value = await consultarDatos()
 
   // formateando el json con filas completas
   formattedData = formatJson(sankeyData.value)
@@ -133,7 +115,6 @@ onBeforeUnmount(() => {
     >
       <div class="data-section__header">
         <h2 id="data-title">Datos del diagrama</h2>
-
         <a
           v-if="downloadUrl"
           :href="downloadUrl"

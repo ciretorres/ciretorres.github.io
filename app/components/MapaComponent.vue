@@ -28,7 +28,6 @@ import { unByKey } from 'ol/Observable.js'
 
 import 'ol/ol.css'
 
-// import centroidesJSON from '@/assets/data/centroides-crateres.json'
 const props = defineProps({
   centroides: {
     type: Object,

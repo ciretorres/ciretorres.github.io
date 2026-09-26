@@ -14,7 +14,7 @@ const props = defineProps({
       type="checkbox"
       :checked="modelValue"
       @change="$emit('update:modelValue', $event.target.checked)"
-    >
+    />
     <span class="color-square">
       <span
         class="custom-checkbox"

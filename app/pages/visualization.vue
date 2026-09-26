@@ -2,10 +2,8 @@
 
 <template>
   <div>
-    <header style="width: max-content;">
-      <nuxt-link
-        to="/visualization"
-      >
+    <header style="width: max-content">
+      <nuxt-link to="/visualization">
         <h2>Viszualization</h2>
       </nuxt-link>
     </header>
@@ -21,7 +19,7 @@
       </section>
     </div>
 
-    <br>
+    <br />
     <nuxt-link to="/">[Go back]</nuxt-link>
   </div>
 </template>

@@ -1,28 +1,11 @@
 <script setup>
 import * as d3 from 'd3'
-import {
-  ref,
-  watch,
-  nextTick,
-  onMounted,
-  onBeforeUnmount
-} from 'vue'
+import { ref, watch, nextTick, onMounted, onBeforeUnmount } from 'vue'
 
-/**
- * Propiedades del componente
- * @property {String} mapaCalorId
- * @property {Array} data
- * @property {String} titulo
- * @property {[Number, String]} anchoVis
- * @property {Number} altoVis
- * @property {String} tituloEjeX
- * @property {String} tituloEjeY
- * @property {Object} margen: reservan espacio para el título, ejes, etiquetas y contenido ppal
- */
 const props = defineProps({
   mapaCalorId: {
     type: String,
-    default: () => `mapacalorid-${Math.random().toString(36).substring(2)}`
+    default: () => `mapacalorid-${Math.random().toString(36).substring(2)}`,
   },
   data: {
     type: Array,
@@ -30,44 +13,43 @@ const props = defineProps({
       {
         estado: 'Activo',
         tipo_variante: 'Delta',
-        cantidad_muestras: 25
+        cantidad_muestras: 25,
       },
       {
         estado: 'Activo',
         tipo_variante: 'Ómicron',
-        cantidad_muestras: 40
+        cantidad_muestras: 40,
       },
       {
         estado: 'Activo',
         tipo_variante: 'Delta',
-        cantidad_muestras: 10
+        cantidad_muestras: 10,
       },
       {
         estado: 'Activo',
         tipo_variante: 'Delta',
-        cantidad_muestras: 15
-      }
-    ]
+        cantidad_muestras: 15,
+      },
+    ],
   },
 
   titulo: {
     type: String,
-    default:
-      'Mapa de calor de muestras por estado y tipo de variante'
+    default: 'Mapa de calor de muestras por estado y tipo de variante',
   },
 
   fileName: {
     type: String,
-    default: 'heatmap'
+    default: 'heatmap',
   },
 
   anchoVis: {
     type: [Number, String],
-    default: 650
+    default: 650,
   },
   altoVis: {
     type: Number,
-    default: 500
+    default: 500,
   },
 
   margen: {
@@ -76,18 +58,18 @@ const props = defineProps({
       top: 70,
       right: 30,
       bottom: 80,
-      left: 100
-    })
+      left: 100,
+    }),
   },
 
   tituloEjeX: {
     type: String,
-    default: 'Estados'
+    default: 'Estados',
   },
   tituloEjeY: {
     type: String,
-    default: 'Tipos de variante'
-  }
+    default: 'Tipos de variante',
+  },
 })
 
 // referencias al DOM
@@ -102,13 +84,7 @@ let resizeObserver = null
 // Puntos del dominio y colores correspondientes
 const dominioColor = [1, 20, 40, 60, 80]
 
-const rangoColor = [
-  '#fff7bc',
-  '#fec44f',
-  '#fe9929',
-  '#d95f0e',
-  '#993404'
-]
+const rangoColor = ['#fff7bc', '#fec44f', '#fe9929', '#d95f0e', '#993404']
 // escala de gris
 // const rangoColor = [
 //   '#f0f0f0',
@@ -128,7 +104,7 @@ function obtenerMargen() {
     right: 30,
     bottom: 80,
     left: 100,
-    ...props.margen
+    ...props.margen,
   }
 }
 
@@ -143,7 +119,7 @@ function agruparDatos(data) {
 
   for (const item of data) {
     const estado = String(item.estado ?? '').trim()
-    const tipoVariante = String(item.tipo_variante ?? '' ).trim()
+    const tipoVariante = String(item.tipo_variante ?? '').trim()
 
     if (!estado || !tipoVariante) {
       continue
@@ -164,7 +140,7 @@ function agruparDatos(data) {
       agrupado.set(key, {
         estado,
         tipo_variante: tipoVariante,
-        cantidad
+        cantidad,
       })
     }
   }
@@ -184,19 +160,16 @@ function agruparDatos(data) {
 function completarCombinaciones(datosAgrupados) {
   // remueve valores repetidos y obtiene valores únicos
   // con Set y ordénalos
-  const estados = [
-    ...new Set( datosAgrupados.map(item => item.estado) )
-  ].sort((a, b) => a.localeCompare(b))
+  const estados = [...new Set(datosAgrupados.map(item => item.estado))].sort(
+    (a, b) => a.localeCompare(b)
+  )
 
   const tipos = [
-    ...new Set( datosAgrupados.map(item => item.tipo_variante) )
+    ...new Set(datosAgrupados.map(item => item.tipo_variante)),
   ].sort((a, b) => a.localeCompare(b))
 
   const datosPorClave = new Map(
-    datosAgrupados.map(item => [
-      `${item.estado}__${item.tipo_variante}`,
-      item
-    ])
+    datosAgrupados.map(item => [`${item.estado}__${item.tipo_variante}`, item])
   )
 
   const datosCompletos = []
@@ -209,7 +182,7 @@ function completarCombinaciones(datosAgrupados) {
       datosCompletos.push({
         estado,
         tipo_variante: tipo,
-        cantidad: datoExistente?.cantidad ?? 0
+        cantidad: datoExistente?.cantidad ?? 0,
       })
     }
   }
@@ -217,7 +190,7 @@ function completarCombinaciones(datosAgrupados) {
   return {
     datos: datosCompletos,
     estados,
-    tipos
+    tipos,
   }
 }
 
@@ -243,17 +216,13 @@ function detectarRotacion(estados, escalaX) {
     const texto = String(estado).trim()
     const anchoTextoEstimado = texto.length * 7
 
-    return (
-      texto.length > 12 ||
-      anchoTextoEstimado > anchoBanda
-    )
+    return texto.length > 12 || anchoTextoEstimado > anchoBanda
   })
 }
 
-
 function descargarArchivo(contenido, nombre, tipo) {
   const blob = new Blob([contenido], {
-    type: tipo
+    type: tipo,
   })
 
   const url = URL.createObjectURL(blob)
@@ -282,7 +251,10 @@ function prepararSvgParaExportar() {
 
   svgClonado.setAttribute('viewBox', `0 0 ${anchoReal.value} ${props.altoVis}`)
 
-  const estilos = document.createElementNS('http://www.w3.org/2000/svg', 'style')
+  const estilos = document.createElementNS(
+    'http://www.w3.org/2000/svg',
+    'style'
+  )
 
   estilos.textContent = `
     text {
@@ -307,7 +279,7 @@ function prepararSvgParaExportar() {
     }
   `
 
-  svgClonado.insertBefore( estilos, svgClonado.firstChild )
+  svgClonado.insertBefore(estilos, svgClonado.firstChild)
 
   return svgClonado
 }
@@ -333,9 +305,7 @@ function crearCanvasDesdeSVG() {
     const svg = prepararSvgParaExportar()
 
     if (!svg) {
-      reject(
-        new Error('El SVG no está disponible')
-      )
+      reject(new Error('El SVG no está disponible'))
       return
     }
 
@@ -361,7 +331,7 @@ function crearCanvasDesdeSVG() {
 
       contexto.scale(escala, escala)
 
-      contexto.drawImage( imagen, 0, 0, anchoReal.value, props.altoVis )
+      contexto.drawImage(imagen, 0, 0, anchoReal.value, props.altoVis)
 
       URL.revokeObjectURL(url)
       resolve(canvas)
@@ -409,10 +379,10 @@ async function exportarPDF() {
     const pdf = new jsPDF({
       orientation: anchoReal.value > props.altoVis ? 'landscape' : 'portrait',
       unit: 'px',
-      format: [ anchoReal.value, props.altoVis ]
+      format: [anchoReal.value, props.altoVis],
     })
 
-    pdf.addImage( imagenPNG, 'PNG', 0, 0, anchoReal.value, props.altoVis )
+    pdf.addImage(imagenPNG, 'PNG', 0, 0, anchoReal.value, props.altoVis)
 
     pdf.save(`${props.fileName}.pdf`)
   } catch (error) {
@@ -437,9 +407,7 @@ function dibujarHeatmap() {
   // Agrupa los datos sumando la cantidad de muestras
   const datosAgrupados = agruparDatos(props.data)
   // completando datos con cantidad en 0
-  const resultado = completarCombinaciones(
-    datosAgrupados
-  )
+  const resultado = completarCombinaciones(datosAgrupados)
 
   const datos = resultado.datos
   const estados = resultado.estados
@@ -449,17 +417,10 @@ function dibujarHeatmap() {
 
   // calcular tamaño del contenedor
   const anchoInterior = Math.max(
-    anchoReal.value -
-      margen.left -
-      margen.right,
+    anchoReal.value - margen.left - margen.right,
     100
   )
-  let altoInterior = Math.max(
-    alto -
-      margen.top -
-      margen.bottom,
-    100
-  )
+  let altoInterior = Math.max(alto - margen.top - margen.bottom, 100)
 
   // configuración accesible y dimensiones svg
   svg
@@ -492,19 +453,10 @@ function dibujarHeatmap() {
     .range([0, anchoInterior])
     .padding(0.08)
 
-  detectarRotacion(
-    estados,
-    escalaXInicial
-  )
+  detectarRotacion(estados, escalaXInicial)
 
   if (rotarEtiquetas.value) {
-    altoInterior = Math.max(
-      alto -
-        margen.top -
-        margen.bottom -
-        35,
-      100
-    )
+    altoInterior = Math.max(alto - margen.top - margen.bottom - 35, 100)
   }
 
   const escalaX = d3
@@ -520,8 +472,7 @@ function dibujarHeatmap() {
     .padding(0.08)
 
   // Cálculando el valor máximod de cantidad en los datos
-  const maximo =
-    d3.max(datos, item => item.cantidad) || 80
+  const maximo = d3.max(datos, item => item.cantidad) || 80
 
   const escalaColor = d3
     .scaleLinear()
@@ -531,25 +482,20 @@ function dibujarHeatmap() {
 
   const grupo = svg
     .append('g')
-    .attr(
-      'transform',
-      `translate(${margen.left}, ${margen.top})`
-    )
+    .attr('transform', `translate(${margen.left}, ${margen.top})`)
 
   // Contrucción de los ejes
   // eje horizontal o abajo: estados
   const ejeX = grupo
     .append('g')
     .attr('class', 'eje-horizontal')
-    .attr(
-      'transform',
-      `translate(0, ${altoInterior})`
-    )
+    .attr('transform', `translate(0, ${altoInterior})`)
     .attr('color', 'white')
     .call(
-      d3.axisBottom(escalaX)
-      // remueve palitos y líneas de los ejes
-      .tickSize(0)
+      d3
+        .axisBottom(escalaX)
+        // remueve palitos y líneas de los ejes
+        .tickSize(0)
     )
   // Eliminar solamente la línea del eje,
   // pero conservar el grupo completo
@@ -569,9 +515,7 @@ function dibujarHeatmap() {
     .append('g')
     .attr('class', 'eje-vertical')
     .attr('color', 'white')
-    .call(
-      d3.axisLeft(escalaY).tickSize(0)
-    )
+    .call(d3.axisLeft(escalaY).tickSize(0))
   ejeY.select('.domain').remove()
 
   // Contrucción de etiquetas
@@ -580,11 +524,7 @@ function dibujarHeatmap() {
     .append('text')
     .attr('class', 'etiqueta-eje-horizontal')
     .attr('x', anchoInterior / 2)
-    .attr(
-      'y',
-      altoInterior +
-        (rotarEtiquetas.value ? 85 : 55)
-    )
+    .attr('y', altoInterior + (rotarEtiquetas.value ? 85 : 55))
     .attr('text-anchor', 'middle')
     .attr('fill', 'white')
     .style('font-size', '14px')
@@ -606,11 +546,7 @@ function dibujarHeatmap() {
    */
   const celdas = grupo
     .selectAll('.celda')
-    .data(
-      datos,
-      item =>
-        `${item.estado}__${item.tipo_variante}`
-    )
+    .data(datos, item => `${item.estado}__${item.tipo_variante}`)
     .join('rect')
     .attr('class', 'celda')
     .attr('x', item => escalaX(item.estado))
@@ -618,11 +554,8 @@ function dibujarHeatmap() {
     .attr('width', escalaX.bandwidth())
     .attr('height', escalaY.bandwidth())
     // .attr('rx', 4)
-    .attr( 'fill',
-      item =>
-        item.cantidad === 0
-          ? colorCero
-          : escalaColor(item.cantidad)
+    .attr('fill', item =>
+      item.cantidad === 0 ? colorCero : escalaColor(item.cantidad)
     )
 
   /*
@@ -630,51 +563,26 @@ function dibujarHeatmap() {
    * El navegador lo muestra como tooltip al colocar
    * el cursor sobre la celda
    */
-  celdas
-    .append('title')
-    .text(item => {
-      return [
-        `Estado: ${item.estado}`,
-        `Tipo: ${item.tipo_variante}`,
-        `Muestras: ${item.cantidad}`
-      ].join('\n')
-    })
+  celdas.append('title').text(item => {
+    return [
+      `Estado: ${item.estado}`,
+      `Tipo: ${item.tipo_variante}`,
+      `Muestras: ${item.cantidad}`,
+    ].join('\n')
+  })
   // Colocando Valores dentro de las celdas
   grupo
     .selectAll('.valor')
-    .data(
-      datos,
-      item =>
-        `${item.estado}__${item.tipo_variante}`
-    )
+    .data(datos, item => `${item.estado}__${item.tipo_variante}`)
     .join('text')
     .attr('class', 'valor')
     // centradas
-    .attr(
-      'x',
-      item =>
-        escalaX(item.estado) +
-        escalaX.bandwidth() / 2
-    )
-    .attr(
-      'y',
-      item =>
-        escalaY(item.tipo_variante) +
-        escalaY.bandwidth() / 2
-    )
+    .attr('x', item => escalaX(item.estado) + escalaX.bandwidth() / 2)
+    .attr('y', item => escalaY(item.tipo_variante) + escalaY.bandwidth() / 2)
     .attr('text-anchor', 'middle')
-    .attr(
-      'dominant-baseline',
-      'middle'
-    )
+    .attr('dominant-baseline', 'middle')
     // El color del texto cambia según el valor
-    .attr(
-      'fill',
-      item =>
-        item.cantidad > maximo * 0.55
-          ? 'white'
-          : 'black'
-    )
+    .attr('fill', item => (item.cantidad > maximo * 0.55 ? 'white' : 'black'))
     .style('font-size', '12px')
     .style('pointer-events', 'none')
     .text(item => item.cantidad)
@@ -699,7 +607,7 @@ watch(
     () => props.margen,
     () => props.titulo,
     () => props.tituloEjeX,
-    () => props.tituloEjeY
+    () => props.tituloEjeY,
   ],
   () => {
     nextTick(() => {
@@ -708,7 +616,7 @@ watch(
   },
   {
     // permite detectar cambios dentro de los objetos del arreglo
-    deep: true
+    deep: true,
   }
 )
 
@@ -722,7 +630,7 @@ onMounted(() => {
 
   // Observa y responde a cambios en el tamaño del contenedor
   if (contenedorRef.value) {
-    resizeObserver.observe( contenedorRef.value )
+    resizeObserver.observe(contenedorRef.value)
   }
 })
 
@@ -743,15 +651,24 @@ onBeforeUnmount(() => {
     class="heatmap-wrapper"
   >
     <div class="heatmap-toolbar">
-      <button type="button" @click="exportarSVG" >
+      <button
+        type="button"
+        @click="exportarSVG"
+      >
         Exportar SVG
       </button>
 
-      <button type="button" @click="exportarPNG" >
+      <button
+        type="button"
+        @click="exportarPNG"
+      >
         Exportar PNG
       </button>
 
-      <button type="button" @click="exportarPDF" >
+      <button
+        type="button"
+        @click="exportarPDF"
+      >
         Exportar PDF
       </button>
     </div>
