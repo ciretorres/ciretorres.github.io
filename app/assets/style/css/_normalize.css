@@ -56,10 +56,19 @@ h1 {
 }
 
 code {
+  /* display: inline-block;
+  height: 250px; */
+}
+
+pre {
   display: inline-block;
   height: 250px;
   border: 1px solid #ffffff;
   overflow-y: auto;
+  background-color: #0f172a;
+  border-radius: 0.5rem;
+  max-height: 500px;
+  padding: 1rem;
 }
 
 img {

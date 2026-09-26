@@ -24,11 +24,34 @@ import Stroke from 'ol/style/Stroke.js'
 
 import { fromLonLat } from 'ol/proj.js'
 
-import centroidesJSON from '@/assets/data/centroides-crateres.json'
-
 import { unByKey } from 'ol/Observable.js'
 
 import 'ol/ol.css'
+
+// import centroidesJSON from '@/assets/data/centroides-crateres.json'
+const props = defineProps({
+  centroides: {
+    type: Object,
+    default: () => ({
+      type: 'FeatureCollection',
+      features: [
+        {
+          type: 'Feature',
+          geometry: {
+            type: 'Point',
+            coordinates: [-99.1332, 19.4326],
+          },
+          properties: {
+            nombre: 'Cráter de ejemplo',
+            country: 'México',
+            diameter_km: 2.5,
+            age_ma: 10,
+          },
+        },
+      ],
+    }),
+  },
+})
 
 const mapaElemento = ref(null)
 const popupElemento = ref(null)
@@ -42,6 +65,7 @@ onMounted(async () => {
     return
   }
 
+  // revisa api key carto
   const config = useRuntimeConfig()
   const apiKey = config.public.cartoApiKey
 
@@ -52,7 +76,7 @@ onMounted(async () => {
     return
   }
 
-  const crateres = new GeoJSON().readFeatures(centroidesJSON, {
+  const crateres = new GeoJSON().readFeatures(props.centroides, {
     dataProjection: 'EPSG:4326',
     featureProjection: 'EPSG:3857',
   })
@@ -307,5 +331,13 @@ onBeforeUnmount(() => {
 
 .ol-scale-singlebar-odd {
   background-color: white;
+}
+
+.mapa-cargando {
+  display: grid;
+  min-height: 600px;
+  place-items: center;
+  color: #4b5563;
+  background: #f3f4f6;
 }
 </style>

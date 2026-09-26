@@ -7,6 +7,7 @@ const props = defineProps({
     type: String,
     default: () => `multilineasid-${Math.random().toString(36).substring(2)}`,
   },
+
   datos: {
     type: Array,
     default: () => [
@@ -18,6 +19,7 @@ const props = defineProps({
       { fecha_recoleccion: '2021-06-01', VSIN: 5 },
     ],
   },
+
   variables: {
     type: Array,
     default: () => [{ id: 'VSIN', nombre: 'VSIN', color: '#EFEFEF' }],
@@ -81,13 +83,10 @@ const puntos = computed(() => {
   return props.datos
     .map(dato => ({
       ...dato,
-      fecha: props.conversionTemporal(
-        dato[props.nombreColumnaHorizontal],
-      ),
+      fecha: props.conversionTemporal(dato[props.nombreColumnaHorizontal]),
     }))
     .filter(({ fecha }) => {
-      return fecha instanceof Date
-        && !Number.isNaN(fecha.getTime())
+      return fecha instanceof Date && !Number.isNaN(fecha.getTime())
     })
     .sort((a, b) => a.fecha - b.fecha)
 })
@@ -104,15 +103,11 @@ function calcularDimensiones() {
 
   width.value = Math.max(
     0,
-    containerWidth
-      - props.margin.izquierda
-      - props.margin.derecha,
+    containerWidth - props.margin.izquierda - props.margin.derecha
   )
   height.value = Math.max(
     0,
-    props.altoVis
-      - props.margin.arriba
-      - props.margin.abajo,
+    props.altoVis - props.margin.arriba - props.margin.abajo
   )
 
   svg
@@ -132,7 +127,7 @@ function calcularEscalas() {
   // obtener las fechas
   const fechas = puntos.value.map(d => d.fecha)
   // los valores para esas fechas de cada variante
-  const valores = puntos.value.flatMap((dato) => {
+  const valores = puntos.value.flatMap(dato => {
     return idsVariables.value
       .map(id => Number(dato[id]))
       .filter(Number.isFinite)
@@ -254,51 +249,47 @@ function actualizarEjes() {
   xAxisGroup
     .attr(
       'transform',
-      `translate(${props.margin.izquierda}, ${props.margin.arriba + height.value})`,
+      `translate(${props.margin.izquierda}, ${props.margin.arriba + height.value})`
     )
     .call(
-      d3.axisBottom(xScale.value)
+      d3
+        .axisBottom(xScale.value)
         // .ticks(5)
         .ticks(Math.max(2, Math.floor(width.value / 100)))
         .tickFormat(multiFormat)
-        .tickSizeOuter(0),
+        .tickSizeOuter(0)
     )
   // Draw Y axis
   yAxisGroup
     .attr(
       'transform',
-      `translate(${props.margin.izquierda}, ${props.margin.arriba})`,
+      `translate(${props.margin.izquierda}, ${props.margin.arriba})`
     )
-    .call(
-      d3.axisLeft(yScale.value)
-        .ticks(5)
-        .tickSizeOuter(0),
-    )
+    .call(d3.axisLeft(yScale.value).ticks(5).tickSizeOuter(0))
 
   gridXGroup
     .attr(
       'transform',
-      `translate(${props.margin.izquierda}, ${props.margin.arriba + height.value})`,
+      `translate(${props.margin.izquierda}, ${props.margin.arriba + height.value})`
     )
     .call(
-      d3.axisBottom(xScale.value)
+      d3
+        .axisBottom(xScale.value)
         .ticks(5)
         .tickSize(-height.value)
-        .tickFormat(''),
+        .tickFormat('')
     )
 
   gridYGroup
-    .attr('transform', `translate(${props.margin.izquierda}, ${props.margin.arriba})`)
+    .attr(
+      'transform',
+      `translate(${props.margin.izquierda}, ${props.margin.arriba})`
+    )
     .call(
-      d3.axisLeft(yScale.value)
-        .ticks(5)
-        .tickSize(-width.value)
-        .tickFormat(''),
+      d3.axisLeft(yScale.value).ticks(5).tickSize(-width.value).tickFormat('')
     )
 
-  axisGroup
-    .selectAll('.domain')
-    .attr('stroke', 'currentColor')
+  axisGroup.selectAll('.domain').attr('stroke', 'currentColor')
 
   // Estilos generales de los grid de ambos ejes
   axisGroup
@@ -307,9 +298,7 @@ function actualizarEjes() {
     .style('color', '#EFEFEF')
     .style('stroke-opacity', 0.3)
 
-  axisGroup
-    .selectAll('.tick text')
-    .attr('font-size', 11)
+  axisGroup.selectAll('.tick text').attr('font-size', 11)
 }
 
 /**
@@ -339,18 +328,14 @@ function actualizarLineas() {
     .data(series, d => d.id)
     .join(
       enter => {
-        const grupo = enter
-          .append('g')
-          .attr('class', 'grupo-linea')
+        const grupo = enter.append('g').attr('class', 'grupo-linea')
 
-        grupo
-          .append('path')
-          .attr('class', 'linea')
+        grupo.append('path').attr('class', 'linea')
 
         return grupo
       },
       update => update,
-      exit => exit.remove(),
+      exit => exit.remove()
     )
     .attr('color', d => d.color)
     .select('path')
@@ -420,9 +405,7 @@ function posicionarTooltip(tooltip, mouseX, mouseY) {
     top = 4
   }
 
-  tooltip
-    .style('left', `${left}px`)
-    .style('top', `${top}px`)
+  tooltip.style('left', `${left}px`).style('top', `${top}px`)
 }
 
 // Método para desaparecer el tooltip
@@ -431,8 +414,7 @@ function ocultarTooltip() {
     return
   }
 
-  d3.select(tooltipRef.value)
-    .style('visibility', 'hidden')
+  d3.select(tooltipRef.value).style('visibility', 'hidden')
 }
 
 /**
@@ -440,7 +422,12 @@ function ocultarTooltip() {
  * @param event evento
  */
 function mostrarTooltip(event) {
-  if (!xScale.value || !yScale.value || !puntos.value.length || !tooltipRef.value) {
+  if (
+    !xScale.value ||
+    !yScale.value ||
+    !puntos.value.length ||
+    !tooltipRef.value
+  ) {
     return
   }
 
@@ -448,9 +435,7 @@ function mostrarTooltip(event) {
   const [mouseX, mouseY] = d3.pointer(event, svg.node())
 
   // Convertimos la posición horizontal en una fecha
-  const fechaMouse = xScale.value.invert(
-    mouseX - props.margin.izquierda,
-  )
+  const fechaMouse = xScale.value.invert(mouseX - props.margin.izquierda)
 
   // Buscamos la posición más cercana en los datos
   const bisectorDate = d3.bisector(d => d.fecha).left
@@ -460,18 +445,15 @@ function mostrarTooltip(event) {
 
   if (index <= 0) {
     dato = puntos.value[0]
-  }
-  else if (index >= puntos.value.length) {
+  } else if (index >= puntos.value.length) {
     dato = puntos.value[puntos.value.length - 1]
-  }
-  else {
+  } else {
     // Compara los datos anterior y siguiente
     const anterior = puntos.value[index - 1]
     const siguiente = puntos.value[index]
 
     dato =
-      fechaMouse - anterior.fecha
-        <= siguiente.fecha - fechaMouse
+      fechaMouse - anterior.fecha <= siguiente.fecha - fechaMouse
         ? anterior
         : siguiente
   }
@@ -486,9 +468,11 @@ function mostrarTooltip(event) {
       valor: dato[variable.id],
     }))
     .filter(item => {
-      return item.valor !== null
-        && item.valor !== undefined
-        && Number.isFinite(Number(item.valor))
+      return (
+        item.valor !== null &&
+        item.valor !== undefined &&
+        Number.isFinite(Number(item.valor))
+      )
     })
 
   /*
@@ -497,54 +481,35 @@ function mostrarTooltip(event) {
    */
   const fechaOriginal = dato[props.nombreColumnaHorizontal]
 
-  tooltip
-    .select('.tooltip-fecha-label')
-    .text('Fecha de recolección:')
-  tooltip
-    .select('.tooltip-fecha-valor')
-    .text(fechaOriginal)
+  tooltip.select('.tooltip-fecha-label').text('Fecha de recolección:')
+  tooltip.select('.tooltip-fecha-valor').text(fechaOriginal)
   // filas
   const filas = tooltip
     .select('.tooltip-cifras')
     .selectAll('.tooltip-fila')
     .data(valores, d => d.id)
-  const filasEnter = filas
-    .enter()
-    .append('div')
-    .attr('class', 'tooltip-fila')
-  filasEnter
-    .append('span')
-    .attr('class', 'tooltip-color')
-  filasEnter
-    .append('span')
-    .attr('class', 'tooltip-nombre')
-  filasEnter
-    .append('span')
-    .attr('class', 'tooltip-valor')
+  const filasEnter = filas.enter().append('div').attr('class', 'tooltip-fila')
+  filasEnter.append('span').attr('class', 'tooltip-color')
+  filasEnter.append('span').attr('class', 'tooltip-nombre')
+  filasEnter.append('span').attr('class', 'tooltip-valor')
   // merge
-  filas
-    .merge(filasEnter)
-    .each(function (d) {
-      const fila = d3.select(this)
+  filas.merge(filasEnter).each(function (d) {
+    const fila = d3.select(this)
 
-      fila
-        .select('.tooltip-color')
-        .style('display', 'inline-block')
-        .style('width', '10px')
-        .style('height', '10px')
-        .style('min-width', '10px')
-        .style('border-radius', '50%')
-        .style('background-color', d.color)
-        .style('margin-right', '6px')
+    fila
+      .select('.tooltip-color')
+      .style('display', 'inline-block')
+      .style('width', '10px')
+      .style('height', '10px')
+      .style('min-width', '10px')
+      .style('border-radius', '50%')
+      .style('background-color', d.color)
+      .style('margin-right', '6px')
 
-      fila
-        .select('.tooltip-nombre')
-        .text(`${d.id}:`)
+    fila.select('.tooltip-nombre').text(`${d.id}:`)
 
-      fila
-        .select('.tooltip-valor')
-        .text(Number(d.valor).toLocaleString('es-ES'))
-    })
+    fila.select('.tooltip-valor').text(Number(d.valor).toLocaleString('es-ES'))
+  })
 
   filas.exit().remove()
 
@@ -590,7 +555,7 @@ watch(
     () => props.altoVis,
   ],
   renderizar,
-  { deep: true, flush: 'post' },
+  { deep: true, flush: 'post' }
 )
 
 onUnmounted(() => {
@@ -599,7 +564,6 @@ onUnmounted(() => {
 })
 </script>
 
-
 <template>
   <div
     :id="multilineasId"
@@ -607,7 +571,10 @@ onUnmounted(() => {
     class="contenedor-lineas"
   >
     <div class="contenedor-tooltip-svg">
-      <div ref="tooltipRef" class="tooltip">
+      <div
+        ref="tooltipRef"
+        class="tooltip"
+      >
         <button
           class="boton-cerrar-tooltip"
           type="button"
@@ -616,9 +583,9 @@ onUnmounted(() => {
           x
         </button>
 
-        <div class="tooltip-fecha" >
-          <div class="tooltip-fecha-label"/>
-          <div class="tooltip-fecha-valor"/>
+        <div class="tooltip-fecha">
+          <div class="tooltip-fecha-label" />
+          <div class="tooltip-fecha-valor" />
         </div>
         <div class="tooltip-cifras" />
       </div>
@@ -642,7 +609,6 @@ onUnmounted(() => {
     </div>
   </div>
 </template>
-
 
 <style lang="scss" scoped>
 .contenedor-tooltip-svg {

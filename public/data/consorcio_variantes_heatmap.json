@@ -1,0 +1,6148 @@
+[
+  {
+    "cve_edo": "01",
+    "estado": "a",
+    "abreviatura_ent": "A",
+    "municipio": "a",
+    "tipo_variante": "VIN",
+    "variante_oms": "3.1",
+    "cantidad_muestras": 6
+  },
+  {
+    "cve_edo": "01",
+    "estado": "a",
+    "abreviatura_ent": "A",
+    "municipio": "a",
+    "tipo_variante": "VOC",
+    "variante_oms": "1.4",
+    "cantidad_muestras": 1
+  },
+  {
+    "cve_edo": "01",
+    "estado": "a",
+    "abreviatura_ent": "A",
+    "municipio": "a",
+    "tipo_variante": "VOC",
+    "variante_oms": "1.3",
+    "cantidad_muestras": 2
+  },
+  {
+    "cve_edo": "01",
+    "estado": "a",
+    "abreviatura_ent": "A",
+    "municipio": "a",
+    "tipo_variante": "VOM",
+    "variante_oms": "4.5",
+    "cantidad_muestras": 21
+  },
+  {
+    "cve_edo": "01",
+    "estado": "a",
+    "abreviatura_ent": "A",
+    "municipio": "a",
+    "tipo_variante": "VOM",
+    "variante_oms": "4.4",
+    "cantidad_muestras": 3
+  },
+  {
+    "cve_edo": "01",
+    "estado": "a",
+    "abreviatura_ent": "A",
+    "municipio": "a",
+    "tipo_variante": "VSIN",
+    "variante_oms": "5.5",
+    "cantidad_muestras": 7
+  },
+  {
+    "cve_edo": "01",
+    "estado": "a",
+    "abreviatura_ent": "A",
+    "municipio": "a",
+    "tipo_variante": "VSIN",
+    "variante_oms": "5.3",
+    "cantidad_muestras": 3
+  },
+  {
+    "cve_edo": "01",
+    "estado": "a",
+    "abreviatura_ent": "A",
+    "municipio": "a",
+    "tipo_variante": "VSIN",
+    "variante_oms": "B.1.1.322",
+    "cantidad_muestras": 1
+  },
+  {
+    "cve_edo": "01",
+    "estado": "a",
+    "abreviatura_ent": "A",
+    "municipio": "a",
+    "tipo_variante": "VSIN",
+    "variante_oms": "B.1.1.344",
+    "cantidad_muestras": 4
+  },
+  {
+    "cve_edo": "01",
+    "estado": "a",
+    "abreviatura_ent": "A",
+    "municipio": "a",
+    "tipo_variante": "VSIN",
+    "variante_oms": "B.1.1.512",
+    "cantidad_muestras": 2
+  },
+  {
+    "cve_edo": "01",
+    "estado": "a",
+    "abreviatura_ent": "A",
+    "municipio": "a",
+    "tipo_variante": "VSIN",
+    "variante_oms": "B.1.1.517",
+    "cantidad_muestras": 1
+  },
+  {
+    "cve_edo": "01",
+    "estado": "a",
+    "abreviatura_ent": "A",
+    "municipio": "a",
+    "tipo_variante": "VSIN",
+    "variante_oms": "B.1.2",
+    "cantidad_muestras": 8
+  },
+  {
+    "cve_edo": "01",
+    "estado": "a",
+    "abreviatura_ent": "A",
+    "municipio": "a",
+    "tipo_variante": "VSIN",
+    "variante_oms": "5.4",
+    "cantidad_muestras": 1
+  },
+  {
+    "cve_edo": "01",
+    "estado": "a",
+    "abreviatura_ent": "A",
+    "municipio": "a",
+    "tipo_variante": "VSIN",
+    "variante_oms": "B.1.36.10",
+    "cantidad_muestras": 1
+  },
+  {
+    "cve_edo": "01",
+    "estado": "a",
+    "abreviatura_ent": "A",
+    "municipio": "a",
+    "tipo_variante": "VSIN",
+    "variante_oms": "B.1.396",
+    "cantidad_muestras": 6
+  },
+  {
+    "cve_edo": "01",
+    "estado": "a",
+    "abreviatura_ent": "A",
+    "municipio": "a",
+    "tipo_variante": "VSIN",
+    "variante_oms": "B.1.404",
+    "cantidad_muestras": 6
+  },
+  {
+    "cve_edo": "01",
+    "estado": "a",
+    "abreviatura_ent": "A",
+    "municipio": "a",
+    "tipo_variante": "VSIN",
+    "variante_oms": "B.1.558",
+    "cantidad_muestras": 1
+  },
+  {
+    "cve_edo": "01",
+    "estado": "a",
+    "abreviatura_ent": "A",
+    "municipio": "a",
+    "tipo_variante": "VSIN",
+    "variante_oms": "B.1.561",
+    "cantidad_muestras": 2
+  },
+  {
+    "cve_edo": "01",
+    "estado": "a",
+    "abreviatura_ent": "A",
+    "municipio": "a",
+    "tipo_variante": "VSIN",
+    "variante_oms": "B.1.596",
+    "cantidad_muestras": 1
+  },
+  {
+    "cve_edo": "01",
+    "estado": "a",
+    "abreviatura_ent": "A",
+    "municipio": "a",
+    "tipo_variante": "VSIN",
+    "variante_oms": "5.2",
+    "cantidad_muestras": 2
+  },
+  {
+    "cve_edo": "01",
+    "estado": "a",
+    "abreviatura_ent": "A",
+    "municipio": "a",
+    "tipo_variante": "VSIN",
+    "variante_oms": "C.23",
+    "cantidad_muestras": 1
+  },
+  {
+    "cve_edo": "02",
+    "estado": "b",
+    "abreviatura_ent": "B",
+    "municipio": "Ensenada",
+    "tipo_variante": "VSIN",
+    "variante_oms": "5.5",
+    "cantidad_muestras": 2
+  },
+  {
+    "cve_edo": "02",
+    "estado": "b",
+    "abreviatura_ent": "B",
+    "municipio": "Ensenada",
+    "tipo_variante": "VSIN",
+    "variante_oms": "B.1.2",
+    "cantidad_muestras": 1
+  },
+  {
+    "cve_edo": "02",
+    "estado": "b",
+    "abreviatura_ent": "B",
+    "municipio": "Ensenada",
+    "tipo_variante": "VSIN",
+    "variante_oms": "5.4",
+    "cantidad_muestras": 2
+  },
+  {
+    "cve_edo": "02",
+    "estado": "b",
+    "abreviatura_ent": "B",
+    "municipio": "Ensenada",
+    "tipo_variante": "VSIN",
+    "variante_oms": "B.1.397",
+    "cantidad_muestras": 2
+  },
+  {
+    "cve_edo": "02",
+    "estado": "b",
+    "abreviatura_ent": "B",
+    "municipio": "Ensenada",
+    "tipo_variante": "VSIN",
+    "variante_oms": "B.1.558",
+    "cantidad_muestras": 1
+  },
+  {
+    "cve_edo": "02",
+    "estado": "b",
+    "abreviatura_ent": "B",
+    "municipio": "Ensenada",
+    "tipo_variante": "VSIN",
+    "variante_oms": "5.2",
+    "cantidad_muestras": 1
+  },
+  {
+    "cve_edo": "02",
+    "estado": "b",
+    "abreviatura_ent": "B",
+    "municipio": "Mexicali",
+    "tipo_variante": "VIN",
+    "variante_oms": "3.1",
+    "cantidad_muestras": 4
+  },
+  {
+    "cve_edo": "02",
+    "estado": "b",
+    "abreviatura_ent": "B",
+    "municipio": "Mexicali",
+    "tipo_variante": "VOC",
+    "variante_oms": "1.4",
+    "cantidad_muestras": 9
+  },
+  {
+    "cve_edo": "02",
+    "estado": "b",
+    "abreviatura_ent": "B",
+    "municipio": "Mexicali",
+    "tipo_variante": "VOC",
+    "variante_oms": "1.2",
+    "cantidad_muestras": 2
+  },
+  {
+    "cve_edo": "02",
+    "estado": "b",
+    "abreviatura_ent": "B",
+    "municipio": "Mexicali",
+    "tipo_variante": "VOC",
+    "variante_oms": "1.3",
+    "cantidad_muestras": 5
+  },
+  {
+    "cve_edo": "02",
+    "estado": "b",
+    "abreviatura_ent": "B",
+    "municipio": "Mexicali",
+    "tipo_variante": "VOM",
+    "variante_oms": "4.5",
+    "cantidad_muestras": 9
+  },
+  {
+    "cve_edo": "02",
+    "estado": "b",
+    "abreviatura_ent": "B",
+    "municipio": "Mexicali",
+    "tipo_variante": "VOM",
+    "variante_oms": "4.4",
+    "cantidad_muestras": 11
+  },
+  {
+    "cve_edo": "02",
+    "estado": "b",
+    "abreviatura_ent": "B",
+    "municipio": "Mexicali",
+    "tipo_variante": "VSIN",
+    "variante_oms": "A.5",
+    "cantidad_muestras": 2
+  },
+  {
+    "cve_edo": "02",
+    "estado": "b",
+    "abreviatura_ent": "B",
+    "municipio": "Mexicali",
+    "tipo_variante": "VSIN",
+    "variante_oms": "5.5",
+    "cantidad_muestras": 26
+  },
+  {
+    "cve_edo": "02",
+    "estado": "b",
+    "abreviatura_ent": "B",
+    "municipio": "Mexicali",
+    "tipo_variante": "VSIN",
+    "variante_oms": "5.3",
+    "cantidad_muestras": 1
+  },
+  {
+    "cve_edo": "02",
+    "estado": "b",
+    "abreviatura_ent": "B",
+    "municipio": "Mexicali",
+    "tipo_variante": "VSIN",
+    "variante_oms": "B.1.1.432",
+    "cantidad_muestras": 1
+  },
+  {
+    "cve_edo": "02",
+    "estado": "b",
+    "abreviatura_ent": "B",
+    "municipio": "Mexicali",
+    "tipo_variante": "VSIN",
+    "variante_oms": "B.1.2",
+    "cantidad_muestras": 1
+  },
+  {
+    "cve_edo": "02",
+    "estado": "b",
+    "abreviatura_ent": "B",
+    "municipio": "Mexicali",
+    "tipo_variante": "VSIN",
+    "variante_oms": "B.1.241",
+    "cantidad_muestras": 1
+  },
+  {
+    "cve_edo": "02",
+    "estado": "b",
+    "abreviatura_ent": "B",
+    "municipio": "Mexicali",
+    "tipo_variante": "VSIN",
+    "variante_oms": "5.4",
+    "cantidad_muestras": 52
+  },
+  {
+    "cve_edo": "02",
+    "estado": "b",
+    "abreviatura_ent": "B",
+    "municipio": "Mexicali",
+    "tipo_variante": "VSIN",
+    "variante_oms": "B.1.245",
+    "cantidad_muestras": 1
+  },
+  {
+    "cve_edo": "02",
+    "estado": "b",
+    "abreviatura_ent": "B",
+    "municipio": "Mexicali",
+    "tipo_variante": "VSIN",
+    "variante_oms": "B.1.320",
+    "cantidad_muestras": 17
+  },
+  {
+    "cve_edo": "02",
+    "estado": "b",
+    "abreviatura_ent": "B",
+    "municipio": "Mexicali",
+    "tipo_variante": "VSIN",
+    "variante_oms": "B.1.324",
+    "cantidad_muestras": 1
+  },
+  {
+    "cve_edo": "02",
+    "estado": "b",
+    "abreviatura_ent": "B",
+    "municipio": "Mexicali",
+    "tipo_variante": "VSIN",
+    "variante_oms": "B.1.36.10",
+    "cantidad_muestras": 3
+  },
+  {
+    "cve_edo": "02",
+    "estado": "b",
+    "abreviatura_ent": "B",
+    "municipio": "Mexicali",
+    "tipo_variante": "VSIN",
+    "variante_oms": "B.1.397",
+    "cantidad_muestras": 1
+  },
+  {
+    "cve_edo": "02",
+    "estado": "b",
+    "abreviatura_ent": "B",
+    "municipio": "Mexicali",
+    "tipo_variante": "VSIN",
+    "variante_oms": "B.1.399",
+    "cantidad_muestras": 2
+  },
+  {
+    "cve_edo": "02",
+    "estado": "b",
+    "abreviatura_ent": "B",
+    "municipio": "Mexicali",
+    "tipo_variante": "VSIN",
+    "variante_oms": "B.1.400",
+    "cantidad_muestras": 1
+  },
+  {
+    "cve_edo": "02",
+    "estado": "b",
+    "abreviatura_ent": "B",
+    "municipio": "Mexicali",
+    "tipo_variante": "VSIN",
+    "variante_oms": "B.1.405",
+    "cantidad_muestras": 2
+  },
+  {
+    "cve_edo": "02",
+    "estado": "b",
+    "abreviatura_ent": "B",
+    "municipio": "Mexicali",
+    "tipo_variante": "VSIN",
+    "variante_oms": "B.1.526.2",
+    "cantidad_muestras": 1
+  },
+  {
+    "cve_edo": "02",
+    "estado": "b",
+    "abreviatura_ent": "B",
+    "municipio": "Mexicali",
+    "tipo_variante": "VSIN",
+    "variante_oms": "B.1.551",
+    "cantidad_muestras": 3
+  },
+  {
+    "cve_edo": "02",
+    "estado": "b",
+    "abreviatura_ent": "B",
+    "municipio": "Mexicali",
+    "tipo_variante": "VSIN",
+    "variante_oms": "B.1.558",
+    "cantidad_muestras": 1
+  },
+  {
+    "cve_edo": "02",
+    "estado": "b",
+    "abreviatura_ent": "B",
+    "municipio": "Mexicali",
+    "tipo_variante": "VSIN",
+    "variante_oms": "B.1.561",
+    "cantidad_muestras": 1
+  },
+  {
+    "cve_edo": "02",
+    "estado": "b",
+    "abreviatura_ent": "B",
+    "municipio": "Mexicali",
+    "tipo_variante": "VSIN",
+    "variante_oms": "B.1.604",
+    "cantidad_muestras": 1
+  },
+  {
+    "cve_edo": "02",
+    "estado": "b",
+    "abreviatura_ent": "B",
+    "municipio": "Mexicali",
+    "tipo_variante": "VSIN",
+    "cantidad_muestras": 15
+  },
+  {
+    "cve_edo": "02",
+    "estado": "b",
+    "abreviatura_ent": "B",
+    "municipio": "Mexicali",
+    "tipo_variante": "VSIN",
+    "variante_oms": "5.1",
+    "cantidad_muestras": 3
+  },
+  {
+    "cve_edo": "02",
+    "estado": "b",
+    "abreviatura_ent": "B",
+    "municipio": "Tecate",
+    "tipo_variante": "VSIN",
+    "variante_oms": "5.5",
+    "cantidad_muestras": 2
+  },
+  {
+    "cve_edo": "02",
+    "estado": "b",
+    "abreviatura_ent": "B",
+    "municipio": "Tecate",
+    "tipo_variante": "VSIN",
+    "variante_oms": "B.1.397",
+    "cantidad_muestras": 1
+  },
+  {
+    "cve_edo": "02",
+    "estado": "b",
+    "abreviatura_ent": "B",
+    "municipio": "Tijuana",
+    "tipo_variante": "VIN",
+    "variante_oms": "3.1",
+    "cantidad_muestras": 19
+  },
+  {
+    "cve_edo": "02",
+    "estado": "b",
+    "abreviatura_ent": "B",
+    "municipio": "Tijuana",
+    "tipo_variante": "VOC",
+    "variante_oms": "1.4",
+    "cantidad_muestras": 3
+  },
+  {
+    "cve_edo": "02",
+    "estado": "b",
+    "abreviatura_ent": "B",
+    "municipio": "Tijuana",
+    "tipo_variante": "VOM",
+    "variante_oms": "4.5",
+    "cantidad_muestras": 14
+  },
+  {
+    "cve_edo": "02",
+    "estado": "b",
+    "abreviatura_ent": "B",
+    "municipio": "Tijuana",
+    "tipo_variante": "VOM",
+    "variante_oms": "4.4",
+    "cantidad_muestras": 85
+  },
+  {
+    "cve_edo": "02",
+    "estado": "b",
+    "abreviatura_ent": "B",
+    "municipio": "Tijuana",
+    "tipo_variante": "VSIN",
+    "variante_oms": "5.5",
+    "cantidad_muestras": 193
+  },
+  {
+    "cve_edo": "02",
+    "estado": "b",
+    "abreviatura_ent": "B",
+    "municipio": "Tijuana",
+    "tipo_variante": "VSIN",
+    "variante_oms": "5.3",
+    "cantidad_muestras": 10
+  },
+  {
+    "cve_edo": "02",
+    "estado": "b",
+    "abreviatura_ent": "B",
+    "municipio": "Tijuana",
+    "tipo_variante": "VSIN",
+    "variante_oms": "B.1.1.128",
+    "cantidad_muestras": 1
+  },
+  {
+    "cve_edo": "02",
+    "estado": "b",
+    "abreviatura_ent": "B",
+    "municipio": "Tijuana",
+    "tipo_variante": "VSIN",
+    "variante_oms": "B.1.1.285",
+    "cantidad_muestras": 1
+  },
+  {
+    "cve_edo": "02",
+    "estado": "b",
+    "abreviatura_ent": "B",
+    "municipio": "Tijuana",
+    "tipo_variante": "VSIN",
+    "variante_oms": "B.1.1.316",
+    "cantidad_muestras": 3
+  },
+  {
+    "cve_edo": "02",
+    "estado": "b",
+    "abreviatura_ent": "B",
+    "municipio": "Tijuana",
+    "tipo_variante": "VSIN",
+    "variante_oms": "B.1.1.331",
+    "cantidad_muestras": 2
+  },
+  {
+    "cve_edo": "02",
+    "estado": "b",
+    "abreviatura_ent": "B",
+    "municipio": "Tijuana",
+    "tipo_variante": "VSIN",
+    "variante_oms": "B.1.1.344",
+    "cantidad_muestras": 1
+  },
+  {
+    "cve_edo": "02",
+    "estado": "b",
+    "abreviatura_ent": "B",
+    "municipio": "Tijuana",
+    "tipo_variante": "VSIN",
+    "variante_oms": "B.1.1.362",
+    "cantidad_muestras": 2
+  },
+  {
+    "cve_edo": "02",
+    "estado": "b",
+    "abreviatura_ent": "B",
+    "municipio": "Tijuana",
+    "tipo_variante": "VSIN",
+    "variante_oms": "B.1.1.403",
+    "cantidad_muestras": 1
+  },
+  {
+    "cve_edo": "02",
+    "estado": "b",
+    "abreviatura_ent": "B",
+    "municipio": "Tijuana",
+    "tipo_variante": "VSIN",
+    "variante_oms": "B.1.1.416",
+    "cantidad_muestras": 1
+  },
+  {
+    "cve_edo": "02",
+    "estado": "b",
+    "abreviatura_ent": "B",
+    "municipio": "Tijuana",
+    "tipo_variante": "VSIN",
+    "variante_oms": "B.1.1.432",
+    "cantidad_muestras": 10
+  },
+  {
+    "cve_edo": "02",
+    "estado": "b",
+    "abreviatura_ent": "B",
+    "municipio": "Tijuana",
+    "tipo_variante": "VSIN",
+    "variante_oms": "B.1.1.8",
+    "cantidad_muestras": 2
+  },
+  {
+    "cve_edo": "02",
+    "estado": "b",
+    "abreviatura_ent": "B",
+    "municipio": "Tijuana",
+    "tipo_variante": "VSIN",
+    "variante_oms": "B.1.1.93",
+    "cantidad_muestras": 1
+  },
+  {
+    "cve_edo": "02",
+    "estado": "b",
+    "abreviatura_ent": "B",
+    "municipio": "Tijuana",
+    "tipo_variante": "VSIN",
+    "variante_oms": "B.1.177.53",
+    "cantidad_muestras": 1
+  },
+  {
+    "cve_edo": "02",
+    "estado": "b",
+    "abreviatura_ent": "B",
+    "municipio": "Tijuana",
+    "tipo_variante": "VSIN",
+    "variante_oms": "B.1.2",
+    "cantidad_muestras": 29
+  },
+  {
+    "cve_edo": "02",
+    "estado": "b",
+    "abreviatura_ent": "B",
+    "municipio": "Tijuana",
+    "tipo_variante": "VSIN",
+    "variante_oms": "B.1.229",
+    "cantidad_muestras": 1
+  },
+  {
+    "cve_edo": "02",
+    "estado": "b",
+    "abreviatura_ent": "B",
+    "municipio": "Tijuana",
+    "tipo_variante": "VSIN",
+    "variante_oms": "B.1.232",
+    "cantidad_muestras": 47
+  },
+  {
+    "cve_edo": "02",
+    "estado": "b",
+    "abreviatura_ent": "B",
+    "municipio": "Tijuana",
+    "tipo_variante": "VSIN",
+    "variante_oms": "B.1.239",
+    "cantidad_muestras": 4
+  },
+  {
+    "cve_edo": "02",
+    "estado": "b",
+    "abreviatura_ent": "B",
+    "municipio": "Tijuana",
+    "tipo_variante": "VSIN",
+    "variante_oms": "B.1.241",
+    "cantidad_muestras": 39
+  },
+  {
+    "cve_edo": "02",
+    "estado": "b",
+    "abreviatura_ent": "B",
+    "municipio": "Tijuana",
+    "tipo_variante": "VSIN",
+    "variante_oms": "5.4",
+    "cantidad_muestras": 56
+  },
+  {
+    "cve_edo": "02",
+    "estado": "b",
+    "abreviatura_ent": "B",
+    "municipio": "Tijuana",
+    "tipo_variante": "VSIN",
+    "variante_oms": "B.1.245",
+    "cantidad_muestras": 3
+  },
+  {
+    "cve_edo": "02",
+    "estado": "b",
+    "abreviatura_ent": "B",
+    "municipio": "Tijuana",
+    "tipo_variante": "VSIN",
+    "variante_oms": "B.1.267",
+    "cantidad_muestras": 2
+  },
+  {
+    "cve_edo": "02",
+    "estado": "b",
+    "abreviatura_ent": "B",
+    "municipio": "Tijuana",
+    "tipo_variante": "VSIN",
+    "variante_oms": "B.1.324",
+    "cantidad_muestras": 1
+  },
+  {
+    "cve_edo": "02",
+    "estado": "b",
+    "abreviatura_ent": "B",
+    "municipio": "Tijuana",
+    "tipo_variante": "VSIN",
+    "variante_oms": "B.1.336",
+    "cantidad_muestras": 1
+  },
+  {
+    "cve_edo": "02",
+    "estado": "b",
+    "abreviatura_ent": "B",
+    "municipio": "Tijuana",
+    "tipo_variante": "VSIN",
+    "variante_oms": "B.1.369",
+    "cantidad_muestras": 5
+  },
+  {
+    "cve_edo": "02",
+    "estado": "b",
+    "abreviatura_ent": "B",
+    "municipio": "Tijuana",
+    "tipo_variante": "VSIN",
+    "variante_oms": "B.1.375",
+    "cantidad_muestras": 1
+  },
+  {
+    "cve_edo": "02",
+    "estado": "b",
+    "abreviatura_ent": "B",
+    "municipio": "Tijuana",
+    "tipo_variante": "VSIN",
+    "variante_oms": "B.1.396",
+    "cantidad_muestras": 3
+  },
+  {
+    "cve_edo": "02",
+    "estado": "b",
+    "abreviatura_ent": "B",
+    "municipio": "Tijuana",
+    "tipo_variante": "VSIN",
+    "variante_oms": "B.1.397",
+    "cantidad_muestras": 12
+  },
+  {
+    "cve_edo": "02",
+    "estado": "b",
+    "abreviatura_ent": "B",
+    "municipio": "Tijuana",
+    "tipo_variante": "VSIN",
+    "variante_oms": "B.1.399",
+    "cantidad_muestras": 7
+  },
+  {
+    "cve_edo": "02",
+    "estado": "b",
+    "abreviatura_ent": "B",
+    "municipio": "Tijuana",
+    "tipo_variante": "VSIN",
+    "variante_oms": "B.1.400",
+    "cantidad_muestras": 8
+  },
+  {
+    "cve_edo": "02",
+    "estado": "b",
+    "abreviatura_ent": "B",
+    "municipio": "Tijuana",
+    "tipo_variante": "VSIN",
+    "variante_oms": "B.1.404",
+    "cantidad_muestras": 1
+  },
+  {
+    "cve_edo": "02",
+    "estado": "b",
+    "abreviatura_ent": "B",
+    "municipio": "Tijuana",
+    "tipo_variante": "VSIN",
+    "variante_oms": "B.1.551",
+    "cantidad_muestras": 40
+  },
+  {
+    "cve_edo": "02",
+    "estado": "b",
+    "abreviatura_ent": "B",
+    "municipio": "Tijuana",
+    "tipo_variante": "VSIN",
+    "variante_oms": "B.1.556",
+    "cantidad_muestras": 1
+  },
+  {
+    "cve_edo": "02",
+    "estado": "b",
+    "abreviatura_ent": "B",
+    "municipio": "Tijuana",
+    "tipo_variante": "VSIN",
+    "variante_oms": "B.1.558",
+    "cantidad_muestras": 7
+  },
+  {
+    "cve_edo": "02",
+    "estado": "b",
+    "abreviatura_ent": "B",
+    "municipio": "Tijuana",
+    "tipo_variante": "VSIN",
+    "variante_oms": "B.1.561",
+    "cantidad_muestras": 91
+  },
+  {
+    "cve_edo": "02",
+    "estado": "b",
+    "abreviatura_ent": "B",
+    "municipio": "Tijuana",
+    "tipo_variante": "VSIN",
+    "variante_oms": "B.1.577",
+    "cantidad_muestras": 1
+  },
+  {
+    "cve_edo": "02",
+    "estado": "b",
+    "abreviatura_ent": "B",
+    "municipio": "Tijuana",
+    "tipo_variante": "VSIN",
+    "variante_oms": "B.1.595",
+    "cantidad_muestras": 1
+  },
+  {
+    "cve_edo": "02",
+    "estado": "b",
+    "abreviatura_ent": "B",
+    "municipio": "Tijuana",
+    "tipo_variante": "VSIN",
+    "variante_oms": "B.1.596",
+    "cantidad_muestras": 4
+  },
+  {
+    "cve_edo": "02",
+    "estado": "b",
+    "abreviatura_ent": "B",
+    "municipio": "Tijuana",
+    "tipo_variante": "VSIN",
+    "variante_oms": "B.1.599",
+    "cantidad_muestras": 2
+  },
+  {
+    "cve_edo": "02",
+    "estado": "b",
+    "abreviatura_ent": "B",
+    "municipio": "Tijuana",
+    "tipo_variante": "VSIN",
+    "variante_oms": "5.2",
+    "cantidad_muestras": 7
+  },
+  {
+    "cve_edo": "02",
+    "estado": "b",
+    "abreviatura_ent": "B",
+    "municipio": "Tijuana",
+    "tipo_variante": "VSIN",
+    "variante_oms": "B.1.612",
+    "cantidad_muestras": 1
+  },
+  {
+    "cve_edo": "02",
+    "estado": "b",
+    "abreviatura_ent": "B",
+    "municipio": "Tijuana",
+    "tipo_variante": "VSIN",
+    "variante_oms": "S.1",
+    "cantidad_muestras": 1
+  },
+  {
+    "cve_edo": "03",
+    "estado": "C",
+    "abreviatura_ent": "C",
+    "municipio": "La Paz",
+    "tipo_variante": "VIN",
+    "variante_oms": "3.1",
+    "cantidad_muestras": 4
+  },
+  {
+    "cve_edo": "03",
+    "estado": "C",
+    "abreviatura_ent": "C",
+    "municipio": "La Paz",
+    "tipo_variante": "VOC",
+    "variante_oms": "1.4",
+    "cantidad_muestras": 5
+  },
+  {
+    "cve_edo": "03",
+    "estado": "C",
+    "abreviatura_ent": "C",
+    "municipio": "La Paz",
+    "tipo_variante": "VOC",
+    "variante_oms": "1.1",
+    "cantidad_muestras": 45
+  },
+  {
+    "cve_edo": "03",
+    "estado": "C",
+    "abreviatura_ent": "C",
+    "municipio": "La Paz",
+    "tipo_variante": "VOC",
+    "variante_oms": "1.3",
+    "cantidad_muestras": 29
+  },
+  {
+    "cve_edo": "03",
+    "estado": "C",
+    "abreviatura_ent": "C",
+    "municipio": "La Paz",
+    "tipo_variante": "VOM",
+    "variante_oms": "4.5",
+    "cantidad_muestras": 74
+  },
+  {
+    "cve_edo": "03",
+    "estado": "C",
+    "abreviatura_ent": "C",
+    "municipio": "La Paz",
+    "tipo_variante": "VOM",
+    "variante_oms": "4.4",
+    "cantidad_muestras": 22
+  },
+  {
+    "cve_edo": "03",
+    "estado": "C",
+    "abreviatura_ent": "C",
+    "municipio": "La Paz",
+    "tipo_variante": "VSIN",
+    "variante_oms": "5.5",
+    "cantidad_muestras": 13
+  },
+  {
+    "cve_edo": "03",
+    "estado": "C",
+    "abreviatura_ent": "C",
+    "municipio": "La Paz",
+    "tipo_variante": "VSIN",
+    "variante_oms": "5.3",
+    "cantidad_muestras": 4
+  },
+  {
+    "cve_edo": "03",
+    "estado": "C",
+    "abreviatura_ent": "C",
+    "municipio": "La Paz",
+    "tipo_variante": "VSIN",
+    "variante_oms": "B.1.1.316",
+    "cantidad_muestras": 1
+  },
+  {
+    "cve_edo": "03",
+    "estado": "C",
+    "abreviatura_ent": "C",
+    "municipio": "La Paz",
+    "tipo_variante": "VSIN",
+    "variante_oms": "B.1.1.334",
+    "cantidad_muestras": 1
+  },
+  {
+    "cve_edo": "03",
+    "estado": "C",
+    "abreviatura_ent": "C",
+    "municipio": "La Paz",
+    "tipo_variante": "VSIN",
+    "variante_oms": "B.1.1.432",
+    "cantidad_muestras": 3
+  },
+  {
+    "cve_edo": "03",
+    "estado": "C",
+    "abreviatura_ent": "C",
+    "municipio": "La Paz",
+    "tipo_variante": "VSIN",
+    "variante_oms": "B.1.2",
+    "cantidad_muestras": 1
+  },
+  {
+    "cve_edo": "03",
+    "estado": "C",
+    "abreviatura_ent": "C",
+    "municipio": "La Paz",
+    "tipo_variante": "VSIN",
+    "variante_oms": "B.1.232",
+    "cantidad_muestras": 3
+  },
+  {
+    "cve_edo": "03",
+    "estado": "C",
+    "abreviatura_ent": "C",
+    "municipio": "La Paz",
+    "tipo_variante": "VSIN",
+    "variante_oms": "B.1.234",
+    "cantidad_muestras": 1
+  },
+  {
+    "cve_edo": "03",
+    "estado": "C",
+    "abreviatura_ent": "C",
+    "municipio": "La Paz",
+    "tipo_variante": "VSIN",
+    "variante_oms": "5.4",
+    "cantidad_muestras": 4
+  },
+  {
+    "cve_edo": "03",
+    "estado": "C",
+    "abreviatura_ent": "C",
+    "municipio": "La Paz",
+    "tipo_variante": "VSIN",
+    "variante_oms": "B.1.36.10",
+    "cantidad_muestras": 2
+  },
+  {
+    "cve_edo": "03",
+    "estado": "C",
+    "abreviatura_ent": "C",
+    "municipio": "La Paz",
+    "tipo_variante": "VSIN",
+    "variante_oms": "B.1.565",
+    "cantidad_muestras": 2
+  },
+  {
+    "cve_edo": "03",
+    "estado": "C",
+    "abreviatura_ent": "C",
+    "municipio": "La Paz",
+    "tipo_variante": "VSIN",
+    "variante_oms": "5.2",
+    "cantidad_muestras": 12
+  },
+  {
+    "cve_edo": "03",
+    "estado": "C",
+    "abreviatura_ent": "C",
+    "municipio": "La Paz",
+    "tipo_variante": "VSIN",
+    "variante_oms": "B.1.610",
+    "cantidad_muestras": 1
+  },
+  {
+    "cve_edo": "03",
+    "estado": "C",
+    "abreviatura_ent": "C",
+    "municipio": "La Paz",
+    "tipo_variante": "VSIN",
+    "variante_oms": "5.1",
+    "cantidad_muestras": 1
+  },
+  {
+    "cve_edo": "04",
+    "estado": "d",
+    "abreviatura_ent": "D",
+    "municipio": "Campeche",
+    "tipo_variante": "VIN",
+    "variante_oms": "3.1",
+    "cantidad_muestras": 4
+  },
+  {
+    "cve_edo": "04",
+    "estado": "d",
+    "abreviatura_ent": "D",
+    "municipio": "Campeche",
+    "tipo_variante": "VOC",
+    "variante_oms": "1.4",
+    "cantidad_muestras": 14
+  },
+  {
+    "cve_edo": "04",
+    "estado": "d",
+    "abreviatura_ent": "D",
+    "municipio": "Campeche",
+    "tipo_variante": "VOC",
+    "variante_oms": "1.2",
+    "cantidad_muestras": 12
+  },
+  {
+    "cve_edo": "04",
+    "estado": "d",
+    "abreviatura_ent": "D",
+    "municipio": "Campeche",
+    "tipo_variante": "VOC",
+    "variante_oms": "1.3",
+    "cantidad_muestras": 22
+  },
+  {
+    "cve_edo": "04",
+    "estado": "d",
+    "abreviatura_ent": "D",
+    "municipio": "Campeche",
+    "tipo_variante": "VOI",
+    "variante_oms": "2.3",
+    "cantidad_muestras": 4
+  },
+  {
+    "cve_edo": "04",
+    "estado": "d",
+    "abreviatura_ent": "D",
+    "municipio": "Campeche",
+    "tipo_variante": "VOM",
+    "variante_oms": "4.5",
+    "cantidad_muestras": 61
+  },
+  {
+    "cve_edo": "04",
+    "estado": "d",
+    "abreviatura_ent": "D",
+    "municipio": "Campeche",
+    "tipo_variante": "VOM",
+    "variante_oms": "4.4",
+    "cantidad_muestras": 6
+  },
+  {
+    "cve_edo": "04",
+    "estado": "d",
+    "abreviatura_ent": "D",
+    "municipio": "Campeche",
+    "tipo_variante": "VSIN",
+    "variante_oms": "A.2.5",
+    "cantidad_muestras": 2
+  },
+  {
+    "cve_edo": "04",
+    "estado": "d",
+    "abreviatura_ent": "D",
+    "municipio": "Campeche",
+    "tipo_variante": "VSIN",
+    "variante_oms": "5.5",
+    "cantidad_muestras": 7
+  },
+  {
+    "cve_edo": "04",
+    "estado": "d",
+    "abreviatura_ent": "D",
+    "municipio": "Campeche",
+    "tipo_variante": "VSIN",
+    "variante_oms": "5.3",
+    "cantidad_muestras": 1
+  },
+  {
+    "cve_edo": "04",
+    "estado": "d",
+    "abreviatura_ent": "D",
+    "municipio": "Campeche",
+    "tipo_variante": "VSIN",
+    "variante_oms": "B.1.2",
+    "cantidad_muestras": 1
+  },
+  {
+    "cve_edo": "04",
+    "estado": "d",
+    "abreviatura_ent": "D",
+    "municipio": "Campeche",
+    "tipo_variante": "VSIN",
+    "variante_oms": "B.1.578",
+    "cantidad_muestras": 1
+  },
+  {
+    "cve_edo": "04",
+    "estado": "d",
+    "abreviatura_ent": "D",
+    "municipio": "Campeche",
+    "tipo_variante": "VSIN",
+    "variante_oms": "C.23",
+    "cantidad_muestras": 1
+  },
+  {
+    "cve_edo": "04",
+    "estado": "d",
+    "abreviatura_ent": "D",
+    "municipio": "Campeche",
+    "tipo_variante": "VSIN",
+    "variante_oms": "5.1",
+    "cantidad_muestras": 5
+  },
+  {
+    "cve_edo": "07",
+    "estado": "e",
+    "abreviatura_ent": "E",
+    "municipio": "Tuxtla Guti\u00e9rrez",
+    "tipo_variante": "VIN",
+    "variante_oms": "3.1",
+    "cantidad_muestras": 1
+  },
+  {
+    "cve_edo": "07",
+    "estado": "e",
+    "abreviatura_ent": "E",
+    "municipio": "Tuxtla Guti\u00e9rrez",
+    "tipo_variante": "VOC",
+    "variante_oms": "1.4",
+    "cantidad_muestras": 1
+  },
+  {
+    "cve_edo": "07",
+    "estado": "e",
+    "abreviatura_ent": "E",
+    "municipio": "Tuxtla Guti\u00e9rrez",
+    "tipo_variante": "VOC",
+    "variante_oms": "1.3",
+    "cantidad_muestras": 4
+  },
+  {
+    "cve_edo": "07",
+    "estado": "e",
+    "abreviatura_ent": "E",
+    "municipio": "Tuxtla Guti\u00e9rrez",
+    "tipo_variante": "VOM",
+    "variante_oms": "4.5",
+    "cantidad_muestras": 24
+  },
+  {
+    "cve_edo": "07",
+    "estado": "e",
+    "abreviatura_ent": "E",
+    "municipio": "Tuxtla Guti\u00e9rrez",
+    "tipo_variante": "VOM",
+    "variante_oms": "4.4",
+    "cantidad_muestras": 1
+  },
+  {
+    "cve_edo": "07",
+    "estado": "e",
+    "abreviatura_ent": "E",
+    "municipio": "Tuxtla Guti\u00e9rrez",
+    "tipo_variante": "VSIN",
+    "variante_oms": "5.5",
+    "cantidad_muestras": 13
+  },
+  {
+    "cve_edo": "07",
+    "estado": "e",
+    "abreviatura_ent": "E",
+    "municipio": "Tuxtla Guti\u00e9rrez",
+    "tipo_variante": "VSIN",
+    "variante_oms": "5.3",
+    "cantidad_muestras": 2
+  },
+  {
+    "cve_edo": "07",
+    "estado": "e",
+    "abreviatura_ent": "E",
+    "municipio": "Tuxtla Guti\u00e9rrez",
+    "tipo_variante": "VSIN",
+    "variante_oms": "B.1.1.244",
+    "cantidad_muestras": 1
+  },
+  {
+    "cve_edo": "07",
+    "estado": "e",
+    "abreviatura_ent": "E",
+    "municipio": "Tuxtla Guti\u00e9rrez",
+    "tipo_variante": "VSIN",
+    "variante_oms": "B.1.241",
+    "cantidad_muestras": 1
+  },
+  {
+    "cve_edo": "07",
+    "estado": "e",
+    "abreviatura_ent": "E",
+    "municipio": "Tuxtla Guti\u00e9rrez",
+    "tipo_variante": "VSIN",
+    "variante_oms": "5.4",
+    "cantidad_muestras": 1
+  },
+  {
+    "cve_edo": "07",
+    "estado": "e",
+    "abreviatura_ent": "E",
+    "municipio": "Tuxtla Guti\u00e9rrez",
+    "tipo_variante": "VSIN",
+    "variante_oms": "B.1.36.10",
+    "cantidad_muestras": 1
+  },
+  {
+    "cve_edo": "07",
+    "estado": "e",
+    "abreviatura_ent": "E",
+    "municipio": "Tuxtla Guti\u00e9rrez",
+    "tipo_variante": "VSIN",
+    "variante_oms": "5.2",
+    "cantidad_muestras": 1
+  },
+  {
+    "cve_edo": "07",
+    "estado": "e",
+    "abreviatura_ent": "E",
+    "municipio": "Tuxtla Guti\u00e9rrez",
+    "tipo_variante": "VSIN",
+    "variante_oms": "5.1",
+    "cantidad_muestras": 1
+  },
+  {
+    "cve_edo": "08",
+    "estado": "f",
+    "abreviatura_ent": "F",
+    "municipio": "Chihuahua",
+    "tipo_variante": "VIN",
+    "variante_oms": "3.1",
+    "cantidad_muestras": 6
+  },
+  {
+    "cve_edo": "08",
+    "estado": "f",
+    "abreviatura_ent": "F",
+    "municipio": "Chihuahua",
+    "tipo_variante": "VOC",
+    "variante_oms": "1.4",
+    "cantidad_muestras": 123
+  },
+  {
+    "cve_edo": "08",
+    "estado": "f",
+    "abreviatura_ent": "F",
+    "municipio": "Chihuahua",
+    "tipo_variante": "VOC",
+    "variante_oms": "1.3",
+    "cantidad_muestras": 3
+  },
+  {
+    "cve_edo": "08",
+    "estado": "f",
+    "abreviatura_ent": "F",
+    "municipio": "Chihuahua",
+    "tipo_variante": "VOI",
+    "variante_oms": "2.2",
+    "cantidad_muestras": 2
+  },
+  {
+    "cve_edo": "08",
+    "estado": "f",
+    "abreviatura_ent": "F",
+    "municipio": "Chihuahua",
+    "tipo_variante": "VOI",
+    "variante_oms": "2.3",
+    "cantidad_muestras": 1
+  },
+  {
+    "cve_edo": "08",
+    "estado": "f",
+    "abreviatura_ent": "F",
+    "municipio": "Chihuahua",
+    "tipo_variante": "VOM",
+    "variante_oms": "4.5",
+    "cantidad_muestras": 153
+  },
+  {
+    "cve_edo": "08",
+    "estado": "f",
+    "abreviatura_ent": "F",
+    "municipio": "Chihuahua",
+    "tipo_variante": "VOM",
+    "variante_oms": "4.4",
+    "cantidad_muestras": 11
+  },
+  {
+    "cve_edo": "08",
+    "estado": "f",
+    "abreviatura_ent": "F",
+    "municipio": "Chihuahua",
+    "tipo_variante": "VSIN",
+    "variante_oms": "5.5",
+    "cantidad_muestras": 12
+  },
+  {
+    "cve_edo": "08",
+    "estado": "f",
+    "abreviatura_ent": "F",
+    "municipio": "Chihuahua",
+    "tipo_variante": "VSIN",
+    "variante_oms": "5.3",
+    "cantidad_muestras": 1
+  },
+  {
+    "cve_edo": "08",
+    "estado": "f",
+    "abreviatura_ent": "F",
+    "municipio": "Chihuahua",
+    "tipo_variante": "VSIN",
+    "variante_oms": "B.1.1.362",
+    "cantidad_muestras": 4
+  },
+  {
+    "cve_edo": "08",
+    "estado": "f",
+    "abreviatura_ent": "F",
+    "municipio": "Chihuahua",
+    "tipo_variante": "VSIN",
+    "variante_oms": "B.1.189",
+    "cantidad_muestras": 8
+  },
+  {
+    "cve_edo": "08",
+    "estado": "f",
+    "abreviatura_ent": "F",
+    "municipio": "Chihuahua",
+    "tipo_variante": "VSIN",
+    "variante_oms": "B.1.2",
+    "cantidad_muestras": 8
+  },
+  {
+    "cve_edo": "08",
+    "estado": "f",
+    "abreviatura_ent": "F",
+    "municipio": "Chihuahua",
+    "tipo_variante": "VSIN",
+    "variante_oms": "B.1.395",
+    "cantidad_muestras": 1
+  },
+  {
+    "cve_edo": "08",
+    "estado": "f",
+    "abreviatura_ent": "F",
+    "municipio": "Chihuahua",
+    "tipo_variante": "VSIN",
+    "variante_oms": "B.1.396",
+    "cantidad_muestras": 1
+  },
+  {
+    "cve_edo": "08",
+    "estado": "f",
+    "abreviatura_ent": "F",
+    "municipio": "Chihuahua",
+    "tipo_variante": "VSIN",
+    "variante_oms": "B.1.526.2",
+    "cantidad_muestras": 1
+  },
+  {
+    "cve_edo": "08",
+    "estado": "f",
+    "abreviatura_ent": "F",
+    "municipio": "Chihuahua",
+    "tipo_variante": "VSIN",
+    "variante_oms": "B.1.567",
+    "cantidad_muestras": 1
+  },
+  {
+    "cve_edo": "08",
+    "estado": "f",
+    "abreviatura_ent": "F",
+    "municipio": "Chihuahua",
+    "tipo_variante": "VSIN",
+    "variante_oms": "B.1.596",
+    "cantidad_muestras": 4
+  },
+  {
+    "cve_edo": "08",
+    "estado": "f",
+    "abreviatura_ent": "F",
+    "municipio": "Chihuahua",
+    "tipo_variante": "VSIN",
+    "variante_oms": "B.1.599",
+    "cantidad_muestras": 1
+  },
+  {
+    "cve_edo": "08",
+    "estado": "f",
+    "abreviatura_ent": "F",
+    "municipio": "Chihuahua",
+    "tipo_variante": "VSIN",
+    "variante_oms": "5.2",
+    "cantidad_muestras": 7
+  },
+  {
+    "cve_edo": "08",
+    "estado": "f",
+    "abreviatura_ent": "F",
+    "municipio": "Chihuahua",
+    "tipo_variante": "VSIN",
+    "variante_oms": "D.2",
+    "cantidad_muestras": 1
+  },
+  {
+    "cve_edo": "08",
+    "estado": "f",
+    "abreviatura_ent": "F",
+    "municipio": "Chihuahua",
+    "tipo_variante": "VSIN",
+    "variante_oms": "5.1",
+    "cantidad_muestras": 1
+  },
+  {
+    "cve_edo": "09",
+    "estado": "g",
+    "abreviatura_ent": "G",
+    "municipio": "Cuauht\u00e9moc",
+    "tipo_variante": "VIN",
+    "variante_oms": "3.1",
+    "cantidad_muestras": 257
+  },
+  {
+    "cve_edo": "09",
+    "estado": "g",
+    "abreviatura_ent": "G",
+    "municipio": "Cuauht\u00e9moc",
+    "tipo_variante": "VOC",
+    "variante_oms": "1.4",
+    "cantidad_muestras": 243
+  },
+  {
+    "cve_edo": "09",
+    "estado": "g",
+    "abreviatura_ent": "G",
+    "municipio": "Cuauht\u00e9moc",
+    "tipo_variante": "VOC",
+    "variante_oms": "1.1",
+    "cantidad_muestras": 246
+  },
+  {
+    "cve_edo": "09",
+    "estado": "g",
+    "abreviatura_ent": "G",
+    "municipio": "Cuauht\u00e9moc",
+    "tipo_variante": "VOC",
+    "variante_oms": "1.3",
+    "cantidad_muestras": 153
+  },
+  {
+    "cve_edo": "09",
+    "estado": "g",
+    "abreviatura_ent": "G",
+    "municipio": "Cuauht\u00e9moc",
+    "tipo_variante": "VOI",
+    "variante_oms": "2.2",
+    "cantidad_muestras": 16
+  },
+  {
+    "cve_edo": "09",
+    "estado": "g",
+    "abreviatura_ent": "G",
+    "municipio": "Cuauht\u00e9moc",
+    "tipo_variante": "VOI",
+    "variante_oms": "2.1",
+    "cantidad_muestras": 1
+  },
+  {
+    "cve_edo": "09",
+    "estado": "g",
+    "abreviatura_ent": "G",
+    "municipio": "Cuauht\u00e9moc",
+    "tipo_variante": "VOI",
+    "variante_oms": "2.3",
+    "cantidad_muestras": 12
+  },
+  {
+    "cve_edo": "09",
+    "estado": "g",
+    "abreviatura_ent": "G",
+    "municipio": "Cuauht\u00e9moc",
+    "tipo_variante": "VOM",
+    "variante_oms": "4.3",
+    "cantidad_muestras": 2
+  },
+  {
+    "cve_edo": "09",
+    "estado": "g",
+    "abreviatura_ent": "G",
+    "municipio": "Cuauht\u00e9moc",
+    "tipo_variante": "VOM",
+    "variante_oms": "4.5",
+    "cantidad_muestras": 2466
+  },
+  {
+    "cve_edo": "09",
+    "estado": "g",
+    "abreviatura_ent": "G",
+    "municipio": "Cuauht\u00e9moc",
+    "tipo_variante": "VOM",
+    "variante_oms": "4.2",
+    "cantidad_muestras": 49
+  },
+  {
+    "cve_edo": "09",
+    "estado": "g",
+    "abreviatura_ent": "G",
+    "municipio": "Cuauht\u00e9moc",
+    "tipo_variante": "VOM",
+    "variante_oms": "4.4",
+    "cantidad_muestras": 26
+  },
+  {
+    "cve_edo": "09",
+    "estado": "g",
+    "abreviatura_ent": "G",
+    "municipio": "Cuauht\u00e9moc",
+    "tipo_variante": "VSIN",
+    "variante_oms": "A",
+    "cantidad_muestras": 1
+  },
+  {
+    "cve_edo": "09",
+    "estado": "g",
+    "abreviatura_ent": "G",
+    "municipio": "Cuauht\u00e9moc",
+    "tipo_variante": "VSIN",
+    "variante_oms": "A.1",
+    "cantidad_muestras": 7
+  },
+  {
+    "cve_edo": "09",
+    "estado": "g",
+    "abreviatura_ent": "G",
+    "municipio": "Cuauht\u00e9moc",
+    "tipo_variante": "VSIN",
+    "variante_oms": "A.2",
+    "cantidad_muestras": 1
+  },
+  {
+    "cve_edo": "09",
+    "estado": "g",
+    "abreviatura_ent": "G",
+    "municipio": "Cuauht\u00e9moc",
+    "tipo_variante": "VSIN",
+    "variante_oms": "A.2.5",
+    "cantidad_muestras": 12
+  },
+  {
+    "cve_edo": "09",
+    "estado": "g",
+    "abreviatura_ent": "G",
+    "municipio": "Cuauht\u00e9moc",
+    "tipo_variante": "VSIN",
+    "variante_oms": "A.5",
+    "cantidad_muestras": 3
+  },
+  {
+    "cve_edo": "09",
+    "estado": "g",
+    "abreviatura_ent": "G",
+    "municipio": "Cuauht\u00e9moc",
+    "tipo_variante": "VSIN",
+    "variante_oms": "B",
+    "cantidad_muestras": 1
+  },
+  {
+    "cve_edo": "09",
+    "estado": "g",
+    "abreviatura_ent": "G",
+    "municipio": "Cuauht\u00e9moc",
+    "tipo_variante": "VSIN",
+    "variante_oms": "5.5",
+    "cantidad_muestras": 349
+  },
+  {
+    "cve_edo": "09",
+    "estado": "g",
+    "abreviatura_ent": "G",
+    "municipio": "Cuauht\u00e9moc",
+    "tipo_variante": "VSIN",
+    "variante_oms": "5.3",
+    "cantidad_muestras": 81
+  },
+  {
+    "cve_edo": "09",
+    "estado": "g",
+    "abreviatura_ent": "G",
+    "municipio": "Cuauht\u00e9moc",
+    "tipo_variante": "VSIN",
+    "variante_oms": "B.1.1.10",
+    "cantidad_muestras": 1
+  },
+  {
+    "cve_edo": "09",
+    "estado": "g",
+    "abreviatura_ent": "G",
+    "municipio": "Cuauht\u00e9moc",
+    "tipo_variante": "VSIN",
+    "variante_oms": "B.1.1.12",
+    "cantidad_muestras": 1
+  },
+  {
+    "cve_edo": "09",
+    "estado": "g",
+    "abreviatura_ent": "G",
+    "municipio": "Cuauht\u00e9moc",
+    "tipo_variante": "VSIN",
+    "variante_oms": "B.1.1.244",
+    "cantidad_muestras": 1
+  },
+  {
+    "cve_edo": "09",
+    "estado": "g",
+    "abreviatura_ent": "G",
+    "municipio": "Cuauht\u00e9moc",
+    "tipo_variante": "VSIN",
+    "variante_oms": "B.1.1.28",
+    "cantidad_muestras": 3
+  },
+  {
+    "cve_edo": "09",
+    "estado": "g",
+    "abreviatura_ent": "G",
+    "municipio": "Cuauht\u00e9moc",
+    "tipo_variante": "VSIN",
+    "variante_oms": "B.1.1.316",
+    "cantidad_muestras": 1
+  },
+  {
+    "cve_edo": "09",
+    "estado": "g",
+    "abreviatura_ent": "G",
+    "municipio": "Cuauht\u00e9moc",
+    "tipo_variante": "VSIN",
+    "variante_oms": "B.1.1.317",
+    "cantidad_muestras": 1
+  },
+  {
+    "cve_edo": "09",
+    "estado": "g",
+    "abreviatura_ent": "G",
+    "municipio": "Cuauht\u00e9moc",
+    "tipo_variante": "VSIN",
+    "variante_oms": "B.1.1.322",
+    "cantidad_muestras": 7
+  },
+  {
+    "cve_edo": "09",
+    "estado": "g",
+    "abreviatura_ent": "G",
+    "municipio": "Cuauht\u00e9moc",
+    "tipo_variante": "VSIN",
+    "variante_oms": "B.1.1.33",
+    "cantidad_muestras": 1
+  },
+  {
+    "cve_edo": "09",
+    "estado": "g",
+    "abreviatura_ent": "G",
+    "municipio": "Cuauht\u00e9moc",
+    "tipo_variante": "VSIN",
+    "variante_oms": "B.1.1.344",
+    "cantidad_muestras": 1
+  },
+  {
+    "cve_edo": "09",
+    "estado": "g",
+    "abreviatura_ent": "G",
+    "municipio": "Cuauht\u00e9moc",
+    "tipo_variante": "VSIN",
+    "variante_oms": "B.1.1.348",
+    "cantidad_muestras": 1
+  },
+  {
+    "cve_edo": "09",
+    "estado": "g",
+    "abreviatura_ent": "G",
+    "municipio": "Cuauht\u00e9moc",
+    "tipo_variante": "VSIN",
+    "variante_oms": "B.1.1.432",
+    "cantidad_muestras": 9
+  },
+  {
+    "cve_edo": "09",
+    "estado": "g",
+    "abreviatura_ent": "G",
+    "municipio": "Cuauht\u00e9moc",
+    "tipo_variante": "VSIN",
+    "variante_oms": "B.1.1.453",
+    "cantidad_muestras": 1
+  },
+  {
+    "cve_edo": "09",
+    "estado": "g",
+    "abreviatura_ent": "G",
+    "municipio": "Cuauht\u00e9moc",
+    "tipo_variante": "VSIN",
+    "variante_oms": "B.1.1.512",
+    "cantidad_muestras": 3
+  },
+  {
+    "cve_edo": "09",
+    "estado": "g",
+    "abreviatura_ent": "G",
+    "municipio": "Cuauht\u00e9moc",
+    "tipo_variante": "VSIN",
+    "variante_oms": "B.1.1.518",
+    "cantidad_muestras": 3
+  },
+  {
+    "cve_edo": "09",
+    "estado": "g",
+    "abreviatura_ent": "G",
+    "municipio": "Cuauht\u00e9moc",
+    "tipo_variante": "VSIN",
+    "variante_oms": "B.1.189",
+    "cantidad_muestras": 27
+  },
+  {
+    "cve_edo": "09",
+    "estado": "g",
+    "abreviatura_ent": "G",
+    "municipio": "Cuauht\u00e9moc",
+    "tipo_variante": "VSIN",
+    "variante_oms": "B.1.190",
+    "cantidad_muestras": 7
+  },
+  {
+    "cve_edo": "09",
+    "estado": "g",
+    "abreviatura_ent": "G",
+    "municipio": "Cuauht\u00e9moc",
+    "tipo_variante": "VSIN",
+    "variante_oms": "B.1.2",
+    "cantidad_muestras": 7
+  },
+  {
+    "cve_edo": "09",
+    "estado": "g",
+    "abreviatura_ent": "G",
+    "municipio": "Cuauht\u00e9moc",
+    "tipo_variante": "VSIN",
+    "variante_oms": "B.1.201",
+    "cantidad_muestras": 1
+  },
+  {
+    "cve_edo": "09",
+    "estado": "g",
+    "abreviatura_ent": "G",
+    "municipio": "Cuauht\u00e9moc",
+    "tipo_variante": "VSIN",
+    "variante_oms": "B.1.232",
+    "cantidad_muestras": 2
+  },
+  {
+    "cve_edo": "09",
+    "estado": "g",
+    "abreviatura_ent": "G",
+    "municipio": "Cuauht\u00e9moc",
+    "tipo_variante": "VSIN",
+    "variante_oms": "B.1.234",
+    "cantidad_muestras": 1
+  },
+  {
+    "cve_edo": "09",
+    "estado": "g",
+    "abreviatura_ent": "G",
+    "municipio": "Cuauht\u00e9moc",
+    "tipo_variante": "VSIN",
+    "variante_oms": "B.1.239",
+    "cantidad_muestras": 1
+  },
+  {
+    "cve_edo": "09",
+    "estado": "g",
+    "abreviatura_ent": "G",
+    "municipio": "Cuauht\u00e9moc",
+    "tipo_variante": "VSIN",
+    "variante_oms": "B.1.241",
+    "cantidad_muestras": 1
+  },
+  {
+    "cve_edo": "09",
+    "estado": "g",
+    "abreviatura_ent": "G",
+    "municipio": "Cuauht\u00e9moc",
+    "tipo_variante": "VSIN",
+    "variante_oms": "5.4",
+    "cantidad_muestras": 31
+  },
+  {
+    "cve_edo": "09",
+    "estado": "g",
+    "abreviatura_ent": "G",
+    "municipio": "Cuauht\u00e9moc",
+    "tipo_variante": "VSIN",
+    "variante_oms": "B.1.258.21",
+    "cantidad_muestras": 1
+  },
+  {
+    "cve_edo": "09",
+    "estado": "g",
+    "abreviatura_ent": "G",
+    "municipio": "Cuauht\u00e9moc",
+    "tipo_variante": "VSIN",
+    "variante_oms": "B.1.301",
+    "cantidad_muestras": 28
+  },
+  {
+    "cve_edo": "09",
+    "estado": "g",
+    "abreviatura_ent": "G",
+    "municipio": "Cuauht\u00e9moc",
+    "tipo_variante": "VSIN",
+    "variante_oms": "B.1.319",
+    "cantidad_muestras": 1
+  },
+  {
+    "cve_edo": "09",
+    "estado": "g",
+    "abreviatura_ent": "G",
+    "municipio": "Cuauht\u00e9moc",
+    "tipo_variante": "VSIN",
+    "variante_oms": "B.1.36.10",
+    "cantidad_muestras": 2
+  },
+  {
+    "cve_edo": "09",
+    "estado": "g",
+    "abreviatura_ent": "G",
+    "municipio": "Cuauht\u00e9moc",
+    "tipo_variante": "VSIN",
+    "variante_oms": "B.1.36.31",
+    "cantidad_muestras": 1
+  },
+  {
+    "cve_edo": "09",
+    "estado": "g",
+    "abreviatura_ent": "G",
+    "municipio": "Cuauht\u00e9moc",
+    "tipo_variante": "VSIN",
+    "variante_oms": "B.1.369",
+    "cantidad_muestras": 1
+  },
+  {
+    "cve_edo": "09",
+    "estado": "g",
+    "abreviatura_ent": "G",
+    "municipio": "Cuauht\u00e9moc",
+    "tipo_variante": "VSIN",
+    "variante_oms": "B.1.375",
+    "cantidad_muestras": 1
+  },
+  {
+    "cve_edo": "09",
+    "estado": "g",
+    "abreviatura_ent": "G",
+    "municipio": "Cuauht\u00e9moc",
+    "tipo_variante": "VSIN",
+    "variante_oms": "B.1.396",
+    "cantidad_muestras": 5
+  },
+  {
+    "cve_edo": "09",
+    "estado": "g",
+    "abreviatura_ent": "G",
+    "municipio": "Cuauht\u00e9moc",
+    "tipo_variante": "VSIN",
+    "variante_oms": "B.1.400",
+    "cantidad_muestras": 2
+  },
+  {
+    "cve_edo": "09",
+    "estado": "g",
+    "abreviatura_ent": "G",
+    "municipio": "Cuauht\u00e9moc",
+    "tipo_variante": "VSIN",
+    "variante_oms": "B.1.415",
+    "cantidad_muestras": 1
+  },
+  {
+    "cve_edo": "09",
+    "estado": "g",
+    "abreviatura_ent": "G",
+    "municipio": "Cuauht\u00e9moc",
+    "tipo_variante": "VSIN",
+    "variante_oms": "B.1.499",
+    "cantidad_muestras": 6
+  },
+  {
+    "cve_edo": "09",
+    "estado": "g",
+    "abreviatura_ent": "G",
+    "municipio": "Cuauht\u00e9moc",
+    "tipo_variante": "VSIN",
+    "variante_oms": "B.1.526.1",
+    "cantidad_muestras": 1
+  },
+  {
+    "cve_edo": "09",
+    "estado": "g",
+    "abreviatura_ent": "G",
+    "municipio": "Cuauht\u00e9moc",
+    "tipo_variante": "VSIN",
+    "variante_oms": "B.1.526.2",
+    "cantidad_muestras": 3
+  },
+  {
+    "cve_edo": "09",
+    "estado": "g",
+    "abreviatura_ent": "G",
+    "municipio": "Cuauht\u00e9moc",
+    "tipo_variante": "VSIN",
+    "variante_oms": "B.1.551",
+    "cantidad_muestras": 7
+  },
+  {
+    "cve_edo": "09",
+    "estado": "g",
+    "abreviatura_ent": "G",
+    "municipio": "Cuauht\u00e9moc",
+    "tipo_variante": "VSIN",
+    "variante_oms": "B.1.558",
+    "cantidad_muestras": 1
+  },
+  {
+    "cve_edo": "09",
+    "estado": "g",
+    "abreviatura_ent": "G",
+    "municipio": "Cuauht\u00e9moc",
+    "tipo_variante": "VSIN",
+    "variante_oms": "B.1.564",
+    "cantidad_muestras": 1
+  },
+  {
+    "cve_edo": "09",
+    "estado": "g",
+    "abreviatura_ent": "G",
+    "municipio": "Cuauht\u00e9moc",
+    "tipo_variante": "VSIN",
+    "variante_oms": "B.1.596",
+    "cantidad_muestras": 2
+  },
+  {
+    "cve_edo": "09",
+    "estado": "g",
+    "abreviatura_ent": "G",
+    "municipio": "Cuauht\u00e9moc",
+    "tipo_variante": "VSIN",
+    "variante_oms": "5.2",
+    "cantidad_muestras": 75
+  },
+  {
+    "cve_edo": "09",
+    "estado": "g",
+    "abreviatura_ent": "G",
+    "municipio": "Cuauht\u00e9moc",
+    "tipo_variante": "VSIN",
+    "variante_oms": "B.1.610",
+    "cantidad_muestras": 2
+  },
+  {
+    "cve_edo": "09",
+    "estado": "g",
+    "abreviatura_ent": "G",
+    "municipio": "Cuauht\u00e9moc",
+    "tipo_variante": "VSIN",
+    "variante_oms": "B.15",
+    "cantidad_muestras": 2
+  },
+  {
+    "cve_edo": "09",
+    "estado": "g",
+    "abreviatura_ent": "G",
+    "municipio": "Cuauht\u00e9moc",
+    "tipo_variante": "VSIN",
+    "variante_oms": "5.1",
+    "cantidad_muestras": 10
+  },
+  {
+    "cve_edo": "09",
+    "estado": "g",
+    "abreviatura_ent": "G",
+    "municipio": "Cuauht\u00e9moc",
+    "tipo_variante": "VSIN",
+    "variante_oms": "Sin informaci\u00f3n",
+    "cantidad_muestras": 11
+  },
+  {
+    "cve_edo": "06",
+    "estado": "h",
+    "abreviatura_ent": "H",
+    "municipio": "Colima",
+    "tipo_variante": "VIN",
+    "variante_oms": "3.1",
+    "cantidad_muestras": 1
+  },
+  {
+    "cve_edo": "06",
+    "estado": "h",
+    "abreviatura_ent": "H",
+    "municipio": "Colima",
+    "tipo_variante": "VOC",
+    "variante_oms": "1.4",
+    "cantidad_muestras": 11
+  },
+  {
+    "cve_edo": "06",
+    "estado": "h",
+    "abreviatura_ent": "H",
+    "municipio": "Colima",
+    "tipo_variante": "VOC",
+    "variante_oms": "1.3",
+    "cantidad_muestras": 2
+  },
+  {
+    "cve_edo": "06",
+    "estado": "h",
+    "abreviatura_ent": "H",
+    "municipio": "Colima",
+    "tipo_variante": "VOM",
+    "variante_oms": "4.3",
+    "cantidad_muestras": 1
+  },
+  {
+    "cve_edo": "06",
+    "estado": "h",
+    "abreviatura_ent": "H",
+    "municipio": "Colima",
+    "tipo_variante": "VOM",
+    "variante_oms": "4.5",
+    "cantidad_muestras": 21
+  },
+  {
+    "cve_edo": "06",
+    "estado": "h",
+    "abreviatura_ent": "H",
+    "municipio": "Colima",
+    "tipo_variante": "VOM",
+    "variante_oms": "4.4",
+    "cantidad_muestras": 4
+  },
+  {
+    "cve_edo": "06",
+    "estado": "h",
+    "abreviatura_ent": "H",
+    "municipio": "Colima",
+    "tipo_variante": "VSIN",
+    "variante_oms": "5.5",
+    "cantidad_muestras": 6
+  },
+  {
+    "cve_edo": "06",
+    "estado": "h",
+    "abreviatura_ent": "H",
+    "municipio": "Colima",
+    "tipo_variante": "VSIN",
+    "variante_oms": "5.3",
+    "cantidad_muestras": 1
+  },
+  {
+    "cve_edo": "06",
+    "estado": "h",
+    "abreviatura_ent": "H",
+    "municipio": "Colima",
+    "tipo_variante": "VSIN",
+    "variante_oms": "B.1.1.244",
+    "cantidad_muestras": 1
+  },
+  {
+    "cve_edo": "06",
+    "estado": "h",
+    "abreviatura_ent": "H",
+    "municipio": "Colima",
+    "tipo_variante": "VSIN",
+    "variante_oms": "B.1.1.316",
+    "cantidad_muestras": 1
+  },
+  {
+    "cve_edo": "06",
+    "estado": "h",
+    "abreviatura_ent": "H",
+    "municipio": "Colima",
+    "tipo_variante": "VSIN",
+    "variante_oms": "B.1.2",
+    "cantidad_muestras": 2
+  },
+  {
+    "cve_edo": "06",
+    "estado": "h",
+    "abreviatura_ent": "H",
+    "municipio": "Colima",
+    "tipo_variante": "VSIN",
+    "variante_oms": "5.4",
+    "cantidad_muestras": 1
+  },
+  {
+    "cve_edo": "06",
+    "estado": "h",
+    "abreviatura_ent": "H",
+    "municipio": "Colima",
+    "tipo_variante": "VSIN",
+    "variante_oms": "B.1.396",
+    "cantidad_muestras": 1
+  },
+  {
+    "cve_edo": "06",
+    "estado": "h",
+    "abreviatura_ent": "H",
+    "municipio": "Colima",
+    "tipo_variante": "VSIN",
+    "variante_oms": "B.1.558",
+    "cantidad_muestras": 1
+  },
+  {
+    "cve_edo": "06",
+    "estado": "h",
+    "abreviatura_ent": "H",
+    "municipio": "Colima",
+    "tipo_variante": "VSIN",
+    "variante_oms": "5.2",
+    "cantidad_muestras": 3
+  },
+  {
+    "cve_edo": "06",
+    "estado": "h",
+    "abreviatura_ent": "H",
+    "municipio": "Colima",
+    "tipo_variante": "VSIN",
+    "variante_oms": "5.1",
+    "cantidad_muestras": 3
+  },
+  {
+    "cve_edo": "10",
+    "estado": "i",
+    "abreviatura_ent": "I",
+    "municipio": "Durango",
+    "tipo_variante": "VIN",
+    "variante_oms": "3.1",
+    "cantidad_muestras": 5
+  },
+  {
+    "cve_edo": "10",
+    "estado": "i",
+    "abreviatura_ent": "I",
+    "municipio": "Durango",
+    "tipo_variante": "VOC",
+    "variante_oms": "1.4",
+    "cantidad_muestras": 9
+  },
+  {
+    "cve_edo": "10",
+    "estado": "i",
+    "abreviatura_ent": "I",
+    "municipio": "Durango",
+    "tipo_variante": "VOC",
+    "variante_oms": "1.3",
+    "cantidad_muestras": 2
+  },
+  {
+    "cve_edo": "10",
+    "estado": "i",
+    "abreviatura_ent": "I",
+    "municipio": "Durango",
+    "tipo_variante": "VOM",
+    "variante_oms": "4.5",
+    "cantidad_muestras": 28
+  },
+  {
+    "cve_edo": "10",
+    "estado": "i",
+    "abreviatura_ent": "I",
+    "municipio": "Durango",
+    "tipo_variante": "VOM",
+    "variante_oms": "4.4",
+    "cantidad_muestras": 2
+  },
+  {
+    "cve_edo": "10",
+    "estado": "i",
+    "abreviatura_ent": "I",
+    "municipio": "Durango",
+    "tipo_variante": "VSIN",
+    "variante_oms": "A.1",
+    "cantidad_muestras": 1
+  },
+  {
+    "cve_edo": "10",
+    "estado": "i",
+    "abreviatura_ent": "I",
+    "municipio": "Durango",
+    "tipo_variante": "VSIN",
+    "variante_oms": "5.5",
+    "cantidad_muestras": 3
+  },
+  {
+    "cve_edo": "10",
+    "estado": "i",
+    "abreviatura_ent": "I",
+    "municipio": "Durango",
+    "tipo_variante": "VSIN",
+    "variante_oms": "B.1.1.432",
+    "cantidad_muestras": 1
+  },
+  {
+    "cve_edo": "10",
+    "estado": "i",
+    "abreviatura_ent": "I",
+    "municipio": "Durango",
+    "tipo_variante": "VSIN",
+    "variante_oms": "B.1.2",
+    "cantidad_muestras": 2
+  },
+  {
+    "cve_edo": "10",
+    "estado": "i",
+    "abreviatura_ent": "I",
+    "municipio": "Durango",
+    "tipo_variante": "VSIN",
+    "variante_oms": "5.4",
+    "cantidad_muestras": 1
+  },
+  {
+    "cve_edo": "10",
+    "estado": "i",
+    "abreviatura_ent": "I",
+    "municipio": "Durango",
+    "tipo_variante": "VSIN",
+    "variante_oms": "B.1.366",
+    "cantidad_muestras": 1
+  },
+  {
+    "cve_edo": "10",
+    "estado": "i",
+    "abreviatura_ent": "I",
+    "municipio": "Durango",
+    "tipo_variante": "VSIN",
+    "variante_oms": "B.1.558",
+    "cantidad_muestras": 1
+  },
+  {
+    "cve_edo": "10",
+    "estado": "i",
+    "abreviatura_ent": "I",
+    "municipio": "Durango",
+    "tipo_variante": "VSIN",
+    "variante_oms": "B.1.596",
+    "cantidad_muestras": 1
+  },
+  {
+    "cve_edo": "10",
+    "estado": "i",
+    "abreviatura_ent": "I",
+    "municipio": "Durango",
+    "tipo_variante": "VSIN",
+    "variante_oms": "5.2",
+    "cantidad_muestras": 3
+  },
+  {
+    "cve_edo": "10",
+    "estado": "i",
+    "abreviatura_ent": "I",
+    "municipio": "Durango",
+    "tipo_variante": "VSIN",
+    "variante_oms": "D.2",
+    "cantidad_muestras": 1
+  },
+  {
+    "cve_edo": "11",
+    "estado": "j",
+    "abreviatura_ent": "J",
+    "municipio": "Guanajuato",
+    "tipo_variante": "VIN",
+    "variante_oms": "3.1",
+    "cantidad_muestras": 26
+  },
+  {
+    "cve_edo": "11",
+    "estado": "j",
+    "abreviatura_ent": "J",
+    "municipio": "Guanajuato",
+    "tipo_variante": "VOC",
+    "variante_oms": "1.4",
+    "cantidad_muestras": 33
+  },
+  {
+    "cve_edo": "11",
+    "estado": "j",
+    "abreviatura_ent": "J",
+    "municipio": "Guanajuato",
+    "tipo_variante": "VOC",
+    "variante_oms": "1.2",
+    "cantidad_muestras": 2
+  },
+  {
+    "cve_edo": "11",
+    "estado": "j",
+    "abreviatura_ent": "J",
+    "municipio": "Guanajuato",
+    "tipo_variante": "VOC",
+    "variante_oms": "1.1",
+    "cantidad_muestras": 1
+  },
+  {
+    "cve_edo": "11",
+    "estado": "j",
+    "abreviatura_ent": "J",
+    "municipio": "Guanajuato",
+    "tipo_variante": "VOC",
+    "variante_oms": "1.3",
+    "cantidad_muestras": 45
+  },
+  {
+    "cve_edo": "11",
+    "estado": "j",
+    "abreviatura_ent": "J",
+    "municipio": "Guanajuato",
+    "tipo_variante": "VOI",
+    "variante_oms": "2.2",
+    "cantidad_muestras": 1
+  },
+  {
+    "cve_edo": "11",
+    "estado": "j",
+    "abreviatura_ent": "J",
+    "municipio": "Guanajuato",
+    "tipo_variante": "VOM",
+    "variante_oms": "4.5",
+    "cantidad_muestras": 251
+  },
+  {
+    "cve_edo": "11",
+    "estado": "j",
+    "abreviatura_ent": "J",
+    "municipio": "Guanajuato",
+    "tipo_variante": "VOM",
+    "variante_oms": "4.2",
+    "cantidad_muestras": 5
+  },
+  {
+    "cve_edo": "11",
+    "estado": "j",
+    "abreviatura_ent": "J",
+    "municipio": "Guanajuato",
+    "tipo_variante": "VOM",
+    "variante_oms": "4.4",
+    "cantidad_muestras": 34
+  },
+  {
+    "cve_edo": "11",
+    "estado": "j",
+    "abreviatura_ent": "J",
+    "municipio": "Guanajuato",
+    "tipo_variante": "VSIN",
+    "variante_oms": "A.2.5",
+    "cantidad_muestras": 1
+  },
+  {
+    "cve_edo": "11",
+    "estado": "j",
+    "abreviatura_ent": "J",
+    "municipio": "Guanajuato",
+    "tipo_variante": "VSIN",
+    "variante_oms": "5.5",
+    "cantidad_muestras": 27
+  },
+  {
+    "cve_edo": "11",
+    "estado": "j",
+    "abreviatura_ent": "J",
+    "municipio": "Guanajuato",
+    "tipo_variante": "VSIN",
+    "variante_oms": "5.3",
+    "cantidad_muestras": 7
+  },
+  {
+    "cve_edo": "11",
+    "estado": "j",
+    "abreviatura_ent": "J",
+    "municipio": "Guanajuato",
+    "tipo_variante": "VSIN",
+    "variante_oms": "B.1.1.322",
+    "cantidad_muestras": 3
+  },
+  {
+    "cve_edo": "11",
+    "estado": "j",
+    "abreviatura_ent": "J",
+    "municipio": "Guanajuato",
+    "tipo_variante": "VSIN",
+    "variante_oms": "B.1.1.374",
+    "cantidad_muestras": 1
+  },
+  {
+    "cve_edo": "11",
+    "estado": "j",
+    "abreviatura_ent": "J",
+    "municipio": "Guanajuato",
+    "tipo_variante": "VSIN",
+    "variante_oms": "B.1.1.432",
+    "cantidad_muestras": 2
+  },
+  {
+    "cve_edo": "11",
+    "estado": "j",
+    "abreviatura_ent": "J",
+    "municipio": "Guanajuato",
+    "tipo_variante": "VSIN",
+    "variante_oms": "B.1.1.517",
+    "cantidad_muestras": 3
+  },
+  {
+    "cve_edo": "11",
+    "estado": "j",
+    "abreviatura_ent": "J",
+    "municipio": "Guanajuato",
+    "tipo_variante": "VSIN",
+    "variante_oms": "B.1.1.71",
+    "cantidad_muestras": 1
+  },
+  {
+    "cve_edo": "11",
+    "estado": "j",
+    "abreviatura_ent": "J",
+    "municipio": "Guanajuato",
+    "tipo_variante": "VSIN",
+    "variante_oms": "B.1.126",
+    "cantidad_muestras": 1
+  },
+  {
+    "cve_edo": "11",
+    "estado": "j",
+    "abreviatura_ent": "J",
+    "municipio": "Guanajuato",
+    "tipo_variante": "VSIN",
+    "variante_oms": "B.1.128",
+    "cantidad_muestras": 1
+  },
+  {
+    "cve_edo": "11",
+    "estado": "j",
+    "abreviatura_ent": "J",
+    "municipio": "Guanajuato",
+    "tipo_variante": "VSIN",
+    "variante_oms": "B.1.189",
+    "cantidad_muestras": 5
+  },
+  {
+    "cve_edo": "11",
+    "estado": "j",
+    "abreviatura_ent": "J",
+    "municipio": "Guanajuato",
+    "tipo_variante": "VSIN",
+    "variante_oms": "B.1.2",
+    "cantidad_muestras": 9
+  },
+  {
+    "cve_edo": "11",
+    "estado": "j",
+    "abreviatura_ent": "J",
+    "municipio": "Guanajuato",
+    "tipo_variante": "VSIN",
+    "variante_oms": "B.1.234",
+    "cantidad_muestras": 1
+  },
+  {
+    "cve_edo": "11",
+    "estado": "j",
+    "abreviatura_ent": "J",
+    "municipio": "Guanajuato",
+    "tipo_variante": "VSIN",
+    "variante_oms": "5.4",
+    "cantidad_muestras": 6
+  },
+  {
+    "cve_edo": "11",
+    "estado": "j",
+    "abreviatura_ent": "J",
+    "municipio": "Guanajuato",
+    "tipo_variante": "VSIN",
+    "variante_oms": "B.1.301",
+    "cantidad_muestras": 4
+  },
+  {
+    "cve_edo": "11",
+    "estado": "j",
+    "abreviatura_ent": "J",
+    "municipio": "Guanajuato",
+    "tipo_variante": "VSIN",
+    "variante_oms": "B.1.397",
+    "cantidad_muestras": 1
+  },
+  {
+    "cve_edo": "11",
+    "estado": "j",
+    "abreviatura_ent": "J",
+    "municipio": "Guanajuato",
+    "tipo_variante": "VSIN",
+    "variante_oms": "B.1.446",
+    "cantidad_muestras": 1
+  },
+  {
+    "cve_edo": "11",
+    "estado": "j",
+    "abreviatura_ent": "J",
+    "municipio": "Guanajuato",
+    "tipo_variante": "VSIN",
+    "variante_oms": "B.1.551",
+    "cantidad_muestras": 1
+  },
+  {
+    "cve_edo": "11",
+    "estado": "j",
+    "abreviatura_ent": "J",
+    "municipio": "Guanajuato",
+    "tipo_variante": "VSIN",
+    "variante_oms": "B.1.561",
+    "cantidad_muestras": 1
+  },
+  {
+    "cve_edo": "11",
+    "estado": "j",
+    "abreviatura_ent": "J",
+    "municipio": "Guanajuato",
+    "tipo_variante": "VSIN",
+    "variante_oms": "5.2",
+    "cantidad_muestras": 1
+  },
+  {
+    "cve_edo": "11",
+    "estado": "j",
+    "abreviatura_ent": "J",
+    "municipio": "Guanajuato",
+    "tipo_variante": "VSIN",
+    "variante_oms": "5.1",
+    "cantidad_muestras": 8
+  },
+  {
+    "cve_edo": "12",
+    "estado": "k",
+    "abreviatura_ent": "K",
+    "municipio": "Chilpancingo",
+    "tipo_variante": "VIN",
+    "variante_oms": "3.1",
+    "cantidad_muestras": 13
+  },
+  {
+    "cve_edo": "12",
+    "estado": "k",
+    "abreviatura_ent": "K",
+    "municipio": "Chilpancingo",
+    "tipo_variante": "VOC",
+    "variante_oms": "1.4",
+    "cantidad_muestras": 3
+  },
+  {
+    "cve_edo": "12",
+    "estado": "k",
+    "abreviatura_ent": "K",
+    "municipio": "Chilpancingo",
+    "tipo_variante": "VOC",
+    "variante_oms": "1.1",
+    "cantidad_muestras": 1
+  },
+  {
+    "cve_edo": "12",
+    "estado": "k",
+    "abreviatura_ent": "K",
+    "municipio": "Chilpancingo",
+    "tipo_variante": "VOC",
+    "variante_oms": "1.3",
+    "cantidad_muestras": 1
+  },
+  {
+    "cve_edo": "12",
+    "estado": "k",
+    "abreviatura_ent": "K",
+    "municipio": "Chilpancingo",
+    "tipo_variante": "VOM",
+    "variante_oms": "4.5",
+    "cantidad_muestras": 64
+  },
+  {
+    "cve_edo": "12",
+    "estado": "k",
+    "abreviatura_ent": "K",
+    "municipio": "Chilpancingo",
+    "tipo_variante": "VSIN",
+    "variante_oms": "5.5",
+    "cantidad_muestras": 9
+  },
+  {
+    "cve_edo": "12",
+    "estado": "k",
+    "abreviatura_ent": "K",
+    "municipio": "Chilpancingo",
+    "tipo_variante": "VSIN",
+    "variante_oms": "5.3",
+    "cantidad_muestras": 7
+  },
+  {
+    "cve_edo": "12",
+    "estado": "k",
+    "abreviatura_ent": "K",
+    "municipio": "Chilpancingo",
+    "tipo_variante": "VSIN",
+    "variante_oms": "B.1.1.244",
+    "cantidad_muestras": 1
+  },
+  {
+    "cve_edo": "12",
+    "estado": "k",
+    "abreviatura_ent": "K",
+    "municipio": "Chilpancingo",
+    "tipo_variante": "VSIN",
+    "variante_oms": "B.1.1.322",
+    "cantidad_muestras": 3
+  },
+  {
+    "cve_edo": "12",
+    "estado": "k",
+    "abreviatura_ent": "K",
+    "municipio": "Chilpancingo",
+    "tipo_variante": "VSIN",
+    "variante_oms": "B.1.1.33",
+    "cantidad_muestras": 1
+  },
+  {
+    "cve_edo": "12",
+    "estado": "k",
+    "abreviatura_ent": "K",
+    "municipio": "Chilpancingo",
+    "tipo_variante": "VSIN",
+    "variante_oms": "B.1.1.432",
+    "cantidad_muestras": 2
+  },
+  {
+    "cve_edo": "12",
+    "estado": "k",
+    "abreviatura_ent": "K",
+    "municipio": "Chilpancingo",
+    "tipo_variante": "VSIN",
+    "variante_oms": "B.1.2",
+    "cantidad_muestras": 2
+  },
+  {
+    "cve_edo": "12",
+    "estado": "k",
+    "abreviatura_ent": "K",
+    "municipio": "Chilpancingo",
+    "tipo_variante": "VSIN",
+    "variante_oms": "B.1.232",
+    "cantidad_muestras": 1
+  },
+  {
+    "cve_edo": "12",
+    "estado": "k",
+    "abreviatura_ent": "K",
+    "municipio": "Chilpancingo",
+    "tipo_variante": "VSIN",
+    "variante_oms": "B.1.397",
+    "cantidad_muestras": 1
+  },
+  {
+    "cve_edo": "12",
+    "estado": "k",
+    "abreviatura_ent": "K",
+    "municipio": "Chilpancingo",
+    "tipo_variante": "VSIN",
+    "variante_oms": "B.1.446",
+    "cantidad_muestras": 1
+  },
+  {
+    "cve_edo": "12",
+    "estado": "k",
+    "abreviatura_ent": "K",
+    "municipio": "Chilpancingo",
+    "tipo_variante": "VSIN",
+    "variante_oms": "5.2",
+    "cantidad_muestras": 5
+  },
+  {
+    "cve_edo": "12",
+    "estado": "k",
+    "abreviatura_ent": "K",
+    "municipio": "Chilpancingo",
+    "tipo_variante": "VSIN",
+    "variante_oms": "B.1.610",
+    "cantidad_muestras": 1
+  },
+  {
+    "cve_edo": "12",
+    "estado": "k",
+    "abreviatura_ent": "K",
+    "municipio": "Chilpancingo",
+    "tipo_variante": "VSIN",
+    "variante_oms": "5.1",
+    "cantidad_muestras": 2
+  },
+  {
+    "cve_edo": "13",
+    "estado": "l",
+    "abreviatura_ent": "L",
+    "municipio": "Pachuca",
+    "tipo_variante": "VIN",
+    "variante_oms": "3.1",
+    "cantidad_muestras": 9
+  },
+  {
+    "cve_edo": "13",
+    "estado": "l",
+    "abreviatura_ent": "L",
+    "municipio": "Pachuca",
+    "tipo_variante": "VOC",
+    "variante_oms": "1.4",
+    "cantidad_muestras": 49
+  },
+  {
+    "cve_edo": "13",
+    "estado": "l",
+    "abreviatura_ent": "L",
+    "municipio": "Pachuca",
+    "tipo_variante": "VOC",
+    "variante_oms": "1.1",
+    "cantidad_muestras": 4
+  },
+  {
+    "cve_edo": "13",
+    "estado": "l",
+    "abreviatura_ent": "L",
+    "municipio": "Pachuca",
+    "tipo_variante": "VOC",
+    "variante_oms": "1.3",
+    "cantidad_muestras": 21
+  },
+  {
+    "cve_edo": "13",
+    "estado": "l",
+    "abreviatura_ent": "L",
+    "municipio": "Pachuca",
+    "tipo_variante": "VOI",
+    "variante_oms": "2.3",
+    "cantidad_muestras": 1
+  },
+  {
+    "cve_edo": "13",
+    "estado": "l",
+    "abreviatura_ent": "L",
+    "municipio": "Pachuca",
+    "tipo_variante": "VOM",
+    "variante_oms": "4.5",
+    "cantidad_muestras": 112
+  },
+  {
+    "cve_edo": "13",
+    "estado": "l",
+    "abreviatura_ent": "L",
+    "municipio": "Pachuca",
+    "tipo_variante": "VOM",
+    "variante_oms": "4.2",
+    "cantidad_muestras": 1
+  },
+  {
+    "cve_edo": "13",
+    "estado": "l",
+    "abreviatura_ent": "L",
+    "municipio": "Pachuca",
+    "tipo_variante": "VOM",
+    "variante_oms": "4.4",
+    "cantidad_muestras": 2
+  },
+  {
+    "cve_edo": "13",
+    "estado": "l",
+    "abreviatura_ent": "L",
+    "municipio": "Pachuca",
+    "tipo_variante": "VOM",
+    "variante_oms": "4.1",
+    "cantidad_muestras": 1
+  },
+  {
+    "cve_edo": "13",
+    "estado": "l",
+    "abreviatura_ent": "L",
+    "municipio": "Pachuca",
+    "tipo_variante": "VSIN",
+    "variante_oms": "5.5",
+    "cantidad_muestras": 14
+  },
+  {
+    "cve_edo": "13",
+    "estado": "l",
+    "abreviatura_ent": "L",
+    "municipio": "Pachuca",
+    "tipo_variante": "VSIN",
+    "variante_oms": "5.3",
+    "cantidad_muestras": 9
+  },
+  {
+    "cve_edo": "13",
+    "estado": "l",
+    "abreviatura_ent": "L",
+    "municipio": "Pachuca",
+    "tipo_variante": "VSIN",
+    "variante_oms": "B.1.1.28",
+    "cantidad_muestras": 1
+  },
+  {
+    "cve_edo": "13",
+    "estado": "l",
+    "abreviatura_ent": "L",
+    "municipio": "Pachuca",
+    "tipo_variante": "VSIN",
+    "variante_oms": "B.1.1.432",
+    "cantidad_muestras": 1
+  },
+  {
+    "cve_edo": "13",
+    "estado": "l",
+    "abreviatura_ent": "L",
+    "municipio": "Pachuca",
+    "tipo_variante": "VSIN",
+    "variante_oms": "B.1.137",
+    "cantidad_muestras": 1
+  },
+  {
+    "cve_edo": "13",
+    "estado": "l",
+    "abreviatura_ent": "L",
+    "municipio": "Pachuca",
+    "tipo_variante": "VSIN",
+    "variante_oms": "B.1.189",
+    "cantidad_muestras": 4
+  },
+  {
+    "cve_edo": "13",
+    "estado": "l",
+    "abreviatura_ent": "L",
+    "municipio": "Pachuca",
+    "tipo_variante": "VSIN",
+    "variante_oms": "B.1.229",
+    "cantidad_muestras": 1
+  },
+  {
+    "cve_edo": "13",
+    "estado": "l",
+    "abreviatura_ent": "L",
+    "municipio": "Pachuca",
+    "tipo_variante": "VSIN",
+    "variante_oms": "5.4",
+    "cantidad_muestras": 2
+  },
+  {
+    "cve_edo": "13",
+    "estado": "l",
+    "abreviatura_ent": "L",
+    "municipio": "Pachuca",
+    "tipo_variante": "VSIN",
+    "variante_oms": "B.1.243.1",
+    "cantidad_muestras": 2
+  },
+  {
+    "cve_edo": "13",
+    "estado": "l",
+    "abreviatura_ent": "L",
+    "municipio": "Pachuca",
+    "tipo_variante": "VSIN",
+    "variante_oms": "B.1.301",
+    "cantidad_muestras": 1
+  },
+  {
+    "cve_edo": "13",
+    "estado": "l",
+    "abreviatura_ent": "L",
+    "municipio": "Pachuca",
+    "tipo_variante": "VSIN",
+    "variante_oms": "B.1.400",
+    "cantidad_muestras": 1
+  },
+  {
+    "cve_edo": "13",
+    "estado": "l",
+    "abreviatura_ent": "L",
+    "municipio": "Pachuca",
+    "tipo_variante": "VSIN",
+    "variante_oms": "B.1.526.1",
+    "cantidad_muestras": 1
+  },
+  {
+    "cve_edo": "13",
+    "estado": "l",
+    "abreviatura_ent": "L",
+    "municipio": "Pachuca",
+    "tipo_variante": "VSIN",
+    "variante_oms": "B.1.551",
+    "cantidad_muestras": 1
+  },
+  {
+    "cve_edo": "13",
+    "estado": "l",
+    "abreviatura_ent": "L",
+    "municipio": "Pachuca",
+    "tipo_variante": "VSIN",
+    "variante_oms": "B.1.582",
+    "cantidad_muestras": 1
+  },
+  {
+    "cve_edo": "13",
+    "estado": "l",
+    "abreviatura_ent": "L",
+    "municipio": "Pachuca",
+    "tipo_variante": "VSIN",
+    "variante_oms": "5.2",
+    "cantidad_muestras": 1
+  },
+  {
+    "cve_edo": "13",
+    "estado": "l",
+    "abreviatura_ent": "L",
+    "municipio": "Pachuca",
+    "tipo_variante": "VSIN",
+    "variante_oms": "B.1.610",
+    "cantidad_muestras": 1
+  },
+  {
+    "cve_edo": "13",
+    "estado": "l",
+    "abreviatura_ent": "L",
+    "municipio": "Pachuca",
+    "tipo_variante": "VSIN",
+    "variante_oms": "B.1.94",
+    "cantidad_muestras": 1
+  },
+  {
+    "cve_edo": "13",
+    "estado": "l",
+    "abreviatura_ent": "L",
+    "municipio": "Pachuca",
+    "tipo_variante": "VSIN",
+    "variante_oms": "5.1",
+    "cantidad_muestras": 16
+  },
+  {
+    "cve_edo": "14",
+    "estado": "m",
+    "abreviatura_ent": "M",
+    "municipio": "Guadalajara",
+    "tipo_variante": "VIN",
+    "variante_oms": "3.1",
+    "cantidad_muestras": 8
+  },
+  {
+    "cve_edo": "14",
+    "estado": "m",
+    "abreviatura_ent": "M",
+    "municipio": "Guadalajara",
+    "tipo_variante": "VOC",
+    "variante_oms": "1.4",
+    "cantidad_muestras": 20
+  },
+  {
+    "cve_edo": "14",
+    "estado": "m",
+    "abreviatura_ent": "M",
+    "municipio": "Guadalajara",
+    "tipo_variante": "VOC",
+    "variante_oms": "1.1",
+    "cantidad_muestras": 2
+  },
+  {
+    "cve_edo": "14",
+    "estado": "m",
+    "abreviatura_ent": "M",
+    "municipio": "Guadalajara",
+    "tipo_variante": "VOC",
+    "variante_oms": "1.3",
+    "cantidad_muestras": 30
+  },
+  {
+    "cve_edo": "14",
+    "estado": "m",
+    "abreviatura_ent": "M",
+    "municipio": "Guadalajara",
+    "tipo_variante": "VOI",
+    "variante_oms": "2.2",
+    "cantidad_muestras": 11
+  },
+  {
+    "cve_edo": "14",
+    "estado": "m",
+    "abreviatura_ent": "M",
+    "municipio": "Guadalajara",
+    "tipo_variante": "VOI",
+    "variante_oms": "2.3",
+    "cantidad_muestras": 1
+  },
+  {
+    "cve_edo": "14",
+    "estado": "m",
+    "abreviatura_ent": "M",
+    "municipio": "Guadalajara",
+    "tipo_variante": "VOM",
+    "variante_oms": "4.3",
+    "cantidad_muestras": 1
+  },
+  {
+    "cve_edo": "14",
+    "estado": "m",
+    "abreviatura_ent": "M",
+    "municipio": "Guadalajara",
+    "tipo_variante": "VOM",
+    "variante_oms": "4.5",
+    "cantidad_muestras": 170
+  },
+  {
+    "cve_edo": "14",
+    "estado": "m",
+    "abreviatura_ent": "M",
+    "municipio": "Guadalajara",
+    "tipo_variante": "VOM",
+    "variante_oms": "4.4",
+    "cantidad_muestras": 47
+  },
+  {
+    "cve_edo": "14",
+    "estado": "m",
+    "abreviatura_ent": "M",
+    "municipio": "Guadalajara",
+    "tipo_variante": "VOM",
+    "variante_oms": "4.1",
+    "cantidad_muestras": 35
+  },
+  {
+    "cve_edo": "14",
+    "estado": "m",
+    "abreviatura_ent": "M",
+    "municipio": "Guadalajara",
+    "tipo_variante": "VSIN",
+    "variante_oms": "B",
+    "cantidad_muestras": 2
+  },
+  {
+    "cve_edo": "14",
+    "estado": "m",
+    "abreviatura_ent": "M",
+    "municipio": "Guadalajara",
+    "tipo_variante": "VSIN",
+    "variante_oms": "5.5",
+    "cantidad_muestras": 13
+  },
+  {
+    "cve_edo": "14",
+    "estado": "m",
+    "abreviatura_ent": "M",
+    "municipio": "Guadalajara",
+    "tipo_variante": "VSIN",
+    "variante_oms": "5.3",
+    "cantidad_muestras": 3
+  },
+  {
+    "cve_edo": "14",
+    "estado": "m",
+    "abreviatura_ent": "M",
+    "municipio": "Guadalajara",
+    "tipo_variante": "VSIN",
+    "variante_oms": "B.1.1.244",
+    "cantidad_muestras": 1
+  },
+  {
+    "cve_edo": "14",
+    "estado": "m",
+    "abreviatura_ent": "M",
+    "municipio": "Guadalajara",
+    "tipo_variante": "VSIN",
+    "variante_oms": "B.1.1.316",
+    "cantidad_muestras": 1
+  },
+  {
+    "cve_edo": "14",
+    "estado": "m",
+    "abreviatura_ent": "M",
+    "municipio": "Guadalajara",
+    "tipo_variante": "VSIN",
+    "variante_oms": "B.1.1.322",
+    "cantidad_muestras": 1
+  },
+  {
+    "cve_edo": "14",
+    "estado": "m",
+    "abreviatura_ent": "M",
+    "municipio": "Guadalajara",
+    "tipo_variante": "VSIN",
+    "variante_oms": "B.1.1.348",
+    "cantidad_muestras": 1
+  },
+  {
+    "cve_edo": "14",
+    "estado": "m",
+    "abreviatura_ent": "M",
+    "municipio": "Guadalajara",
+    "tipo_variante": "VSIN",
+    "variante_oms": "B.1.1.517",
+    "cantidad_muestras": 2
+  },
+  {
+    "cve_edo": "14",
+    "estado": "m",
+    "abreviatura_ent": "M",
+    "municipio": "Guadalajara",
+    "tipo_variante": "VSIN",
+    "variante_oms": "B.1.1.518",
+    "cantidad_muestras": 1
+  },
+  {
+    "cve_edo": "14",
+    "estado": "m",
+    "abreviatura_ent": "M",
+    "municipio": "Guadalajara",
+    "tipo_variante": "VSIN",
+    "variante_oms": "B.1.189",
+    "cantidad_muestras": 1
+  },
+  {
+    "cve_edo": "14",
+    "estado": "m",
+    "abreviatura_ent": "M",
+    "municipio": "Guadalajara",
+    "tipo_variante": "VSIN",
+    "variante_oms": "B.1.2",
+    "cantidad_muestras": 4
+  },
+  {
+    "cve_edo": "14",
+    "estado": "m",
+    "abreviatura_ent": "M",
+    "municipio": "Guadalajara",
+    "tipo_variante": "VSIN",
+    "variante_oms": "B.1.239",
+    "cantidad_muestras": 5
+  },
+  {
+    "cve_edo": "14",
+    "estado": "m",
+    "abreviatura_ent": "M",
+    "municipio": "Guadalajara",
+    "tipo_variante": "VSIN",
+    "variante_oms": "5.4",
+    "cantidad_muestras": 28
+  },
+  {
+    "cve_edo": "14",
+    "estado": "m",
+    "abreviatura_ent": "M",
+    "municipio": "Guadalajara",
+    "tipo_variante": "VSIN",
+    "variante_oms": "B.1.301",
+    "cantidad_muestras": 1
+  },
+  {
+    "cve_edo": "14",
+    "estado": "m",
+    "abreviatura_ent": "M",
+    "municipio": "Guadalajara",
+    "tipo_variante": "VSIN",
+    "variante_oms": "B.1.438.1",
+    "cantidad_muestras": 1
+  },
+  {
+    "cve_edo": "14",
+    "estado": "m",
+    "abreviatura_ent": "M",
+    "municipio": "Guadalajara",
+    "tipo_variante": "VSIN",
+    "variante_oms": "B.1.558",
+    "cantidad_muestras": 1
+  },
+  {
+    "cve_edo": "14",
+    "estado": "m",
+    "abreviatura_ent": "M",
+    "municipio": "Guadalajara",
+    "tipo_variante": "VSIN",
+    "variante_oms": "5.2",
+    "cantidad_muestras": 1
+  },
+  {
+    "cve_edo": "14",
+    "estado": "m",
+    "abreviatura_ent": "M",
+    "municipio": "Guadalajara",
+    "tipo_variante": "VSIN",
+    "variante_oms": "5.1",
+    "cantidad_muestras": 4
+  },
+  {
+    "cve_edo": "14",
+    "estado": "m",
+    "abreviatura_ent": "M",
+    "municipio": "Puerto Vallarta",
+    "tipo_variante": "VOM",
+    "variante_oms": "4.1",
+    "cantidad_muestras": 5
+  },
+  {
+    "cve_edo": "14",
+    "estado": "m",
+    "abreviatura_ent": "M",
+    "municipio": "Zapopan",
+    "tipo_variante": "VOM",
+    "variante_oms": "4.1",
+    "cantidad_muestras": 1
+  },
+  {
+    "cve_edo": "17",
+    "estado": "n",
+    "abreviatura_ent": "N",
+    "municipio": "Cuernavaca",
+    "tipo_variante": "VIN",
+    "variante_oms": "3.1",
+    "cantidad_muestras": 20
+  },
+  {
+    "cve_edo": "17",
+    "estado": "n",
+    "abreviatura_ent": "N",
+    "municipio": "Cuernavaca",
+    "tipo_variante": "VOC",
+    "variante_oms": "1.4",
+    "cantidad_muestras": 4
+  },
+  {
+    "cve_edo": "17",
+    "estado": "n",
+    "abreviatura_ent": "N",
+    "municipio": "Cuernavaca",
+    "tipo_variante": "VOC",
+    "variante_oms": "1.3",
+    "cantidad_muestras": 2
+  },
+  {
+    "cve_edo": "17",
+    "estado": "n",
+    "abreviatura_ent": "N",
+    "municipio": "Cuernavaca",
+    "tipo_variante": "VOM",
+    "variante_oms": "4.5",
+    "cantidad_muestras": 217
+  },
+  {
+    "cve_edo": "17",
+    "estado": "n",
+    "abreviatura_ent": "N",
+    "municipio": "Cuernavaca",
+    "tipo_variante": "VOM",
+    "variante_oms": "4.4",
+    "cantidad_muestras": 4
+  },
+  {
+    "cve_edo": "17",
+    "estado": "n",
+    "abreviatura_ent": "N",
+    "municipio": "Cuernavaca",
+    "tipo_variante": "VSIN",
+    "variante_oms": "5.5",
+    "cantidad_muestras": 16
+  },
+  {
+    "cve_edo": "17",
+    "estado": "n",
+    "abreviatura_ent": "N",
+    "municipio": "Cuernavaca",
+    "tipo_variante": "VSIN",
+    "variante_oms": "5.3",
+    "cantidad_muestras": 15
+  },
+  {
+    "cve_edo": "17",
+    "estado": "n",
+    "abreviatura_ent": "N",
+    "municipio": "Cuernavaca",
+    "tipo_variante": "VSIN",
+    "variante_oms": "B.1.1.133",
+    "cantidad_muestras": 1
+  },
+  {
+    "cve_edo": "17",
+    "estado": "n",
+    "abreviatura_ent": "N",
+    "municipio": "Cuernavaca",
+    "tipo_variante": "VSIN",
+    "variante_oms": "B.1.1.322",
+    "cantidad_muestras": 1
+  },
+  {
+    "cve_edo": "17",
+    "estado": "n",
+    "abreviatura_ent": "N",
+    "municipio": "Cuernavaca",
+    "tipo_variante": "VSIN",
+    "variante_oms": "B.1.2",
+    "cantidad_muestras": 5
+  },
+  {
+    "cve_edo": "17",
+    "estado": "n",
+    "abreviatura_ent": "N",
+    "municipio": "Cuernavaca",
+    "tipo_variante": "VSIN",
+    "variante_oms": "5.4",
+    "cantidad_muestras": 2
+  },
+  {
+    "cve_edo": "17",
+    "estado": "n",
+    "abreviatura_ent": "N",
+    "municipio": "Cuernavaca",
+    "tipo_variante": "VSIN",
+    "variante_oms": "B.1.301",
+    "cantidad_muestras": 4
+  },
+  {
+    "cve_edo": "17",
+    "estado": "n",
+    "abreviatura_ent": "N",
+    "municipio": "Cuernavaca",
+    "tipo_variante": "VSIN",
+    "variante_oms": "B.1.551",
+    "cantidad_muestras": 1
+  },
+  {
+    "cve_edo": "17",
+    "estado": "n",
+    "abreviatura_ent": "N",
+    "municipio": "Cuernavaca",
+    "tipo_variante": "VSIN",
+    "variante_oms": "5.2",
+    "cantidad_muestras": 2
+  },
+  {
+    "cve_edo": "17",
+    "estado": "n",
+    "abreviatura_ent": "N",
+    "municipio": "Cuernavaca",
+    "tipo_variante": "VSIN",
+    "variante_oms": "B.1.610",
+    "cantidad_muestras": 2
+  },
+  {
+    "cve_edo": "18",
+    "estado": "o",
+    "abreviatura_ent": "O",
+    "municipio": "Tepic",
+    "tipo_variante": "VOC",
+    "variante_oms": "1.4",
+    "cantidad_muestras": 4
+  },
+  {
+    "cve_edo": "18",
+    "estado": "o",
+    "abreviatura_ent": "O",
+    "municipio": "Tepic",
+    "tipo_variante": "VOC",
+    "variante_oms": "1.3",
+    "cantidad_muestras": 1
+  },
+  {
+    "cve_edo": "18",
+    "estado": "o",
+    "abreviatura_ent": "O",
+    "municipio": "Tepic",
+    "tipo_variante": "VOM",
+    "variante_oms": "4.5",
+    "cantidad_muestras": 18
+  },
+  {
+    "cve_edo": "18",
+    "estado": "o",
+    "abreviatura_ent": "O",
+    "municipio": "Tepic",
+    "tipo_variante": "VSIN",
+    "variante_oms": "5.5",
+    "cantidad_muestras": 2
+  },
+  {
+    "cve_edo": "18",
+    "estado": "o",
+    "abreviatura_ent": "O",
+    "municipio": "Tepic",
+    "tipo_variante": "VSIN",
+    "variante_oms": "B.1.1.344",
+    "cantidad_muestras": 1
+  },
+  {
+    "cve_edo": "18",
+    "estado": "o",
+    "abreviatura_ent": "O",
+    "municipio": "Tepic",
+    "tipo_variante": "VSIN",
+    "variante_oms": "B.1.126",
+    "cantidad_muestras": 1
+  },
+  {
+    "cve_edo": "18",
+    "estado": "o",
+    "abreviatura_ent": "O",
+    "municipio": "Tepic",
+    "tipo_variante": "VSIN",
+    "variante_oms": "B.1.241",
+    "cantidad_muestras": 2
+  },
+  {
+    "cve_edo": "18",
+    "estado": "o",
+    "abreviatura_ent": "O",
+    "municipio": "Tepic",
+    "tipo_variante": "VSIN",
+    "variante_oms": "B.1.320",
+    "cantidad_muestras": 1
+  },
+  {
+    "cve_edo": "18",
+    "estado": "o",
+    "abreviatura_ent": "O",
+    "municipio": "Tepic",
+    "tipo_variante": "VSIN",
+    "variante_oms": "B.1.561",
+    "cantidad_muestras": 1
+  },
+  {
+    "cve_edo": "18",
+    "estado": "o",
+    "abreviatura_ent": "O",
+    "municipio": "Tepic",
+    "tipo_variante": "VSIN",
+    "variante_oms": "B.1.596",
+    "cantidad_muestras": 1
+  },
+  {
+    "cve_edo": "18",
+    "estado": "o",
+    "abreviatura_ent": "O",
+    "municipio": "Tepic",
+    "tipo_variante": "VSIN",
+    "variante_oms": "5.2",
+    "cantidad_muestras": 1
+  },
+  {
+    "cve_edo": "19",
+    "estado": "p",
+    "abreviatura_ent": "P",
+    "municipio": "Monterrey",
+    "tipo_variante": "VIN",
+    "variante_oms": "3.1",
+    "cantidad_muestras": 19
+  },
+  {
+    "cve_edo": "19",
+    "estado": "p",
+    "abreviatura_ent": "P",
+    "municipio": "Monterrey",
+    "tipo_variante": "VOC",
+    "variante_oms": "1.4",
+    "cantidad_muestras": 80
+  },
+  {
+    "cve_edo": "19",
+    "estado": "p",
+    "abreviatura_ent": "P",
+    "municipio": "Monterrey",
+    "tipo_variante": "VOC",
+    "variante_oms": "1.2",
+    "cantidad_muestras": 2
+  },
+  {
+    "cve_edo": "19",
+    "estado": "p",
+    "abreviatura_ent": "P",
+    "municipio": "Monterrey",
+    "tipo_variante": "VOC",
+    "variante_oms": "1.1",
+    "cantidad_muestras": 2
+  },
+  {
+    "cve_edo": "19",
+    "estado": "p",
+    "abreviatura_ent": "P",
+    "municipio": "Monterrey",
+    "tipo_variante": "VOC",
+    "variante_oms": "1.3",
+    "cantidad_muestras": 25
+  },
+  {
+    "cve_edo": "19",
+    "estado": "p",
+    "abreviatura_ent": "P",
+    "municipio": "Monterrey",
+    "tipo_variante": "VOI",
+    "variante_oms": "2.2",
+    "cantidad_muestras": 2
+  },
+  {
+    "cve_edo": "19",
+    "estado": "p",
+    "abreviatura_ent": "P",
+    "municipio": "Monterrey",
+    "tipo_variante": "VOI",
+    "variante_oms": "2.3",
+    "cantidad_muestras": 4
+  },
+  {
+    "cve_edo": "19",
+    "estado": "p",
+    "abreviatura_ent": "P",
+    "municipio": "Monterrey",
+    "tipo_variante": "VOM",
+    "variante_oms": "4.5",
+    "cantidad_muestras": 219
+  },
+  {
+    "cve_edo": "19",
+    "estado": "p",
+    "abreviatura_ent": "P",
+    "municipio": "Monterrey",
+    "tipo_variante": "VOM",
+    "variante_oms": "4.2",
+    "cantidad_muestras": 4
+  },
+  {
+    "cve_edo": "19",
+    "estado": "p",
+    "abreviatura_ent": "P",
+    "municipio": "Monterrey",
+    "tipo_variante": "VOM",
+    "variante_oms": "4.4",
+    "cantidad_muestras": 36
+  },
+  {
+    "cve_edo": "19",
+    "estado": "p",
+    "abreviatura_ent": "P",
+    "municipio": "Monterrey",
+    "tipo_variante": "VSIN",
+    "variante_oms": "A",
+    "cantidad_muestras": 5
+  },
+  {
+    "cve_edo": "19",
+    "estado": "p",
+    "abreviatura_ent": "P",
+    "municipio": "Monterrey",
+    "tipo_variante": "VSIN",
+    "variante_oms": "A.2",
+    "cantidad_muestras": 2
+  },
+  {
+    "cve_edo": "19",
+    "estado": "p",
+    "abreviatura_ent": "P",
+    "municipio": "Monterrey",
+    "tipo_variante": "VSIN",
+    "variante_oms": "A.2.5",
+    "cantidad_muestras": 4
+  },
+  {
+    "cve_edo": "19",
+    "estado": "p",
+    "abreviatura_ent": "P",
+    "municipio": "Monterrey",
+    "tipo_variante": "VSIN",
+    "variante_oms": "B",
+    "cantidad_muestras": 3
+  },
+  {
+    "cve_edo": "19",
+    "estado": "p",
+    "abreviatura_ent": "P",
+    "municipio": "Monterrey",
+    "tipo_variante": "VSIN",
+    "variante_oms": "5.5",
+    "cantidad_muestras": 71
+  },
+  {
+    "cve_edo": "19",
+    "estado": "p",
+    "abreviatura_ent": "P",
+    "municipio": "Monterrey",
+    "tipo_variante": "VSIN",
+    "variante_oms": "5.3",
+    "cantidad_muestras": 39
+  },
+  {
+    "cve_edo": "19",
+    "estado": "p",
+    "abreviatura_ent": "P",
+    "municipio": "Monterrey",
+    "tipo_variante": "VSIN",
+    "variante_oms": "B.1.1.161",
+    "cantidad_muestras": 11
+  },
+  {
+    "cve_edo": "19",
+    "estado": "p",
+    "abreviatura_ent": "P",
+    "municipio": "Monterrey",
+    "tipo_variante": "VSIN",
+    "variante_oms": "B.1.1.207",
+    "cantidad_muestras": 1
+  },
+  {
+    "cve_edo": "19",
+    "estado": "p",
+    "abreviatura_ent": "P",
+    "municipio": "Monterrey",
+    "tipo_variante": "VSIN",
+    "variante_oms": "B.1.1.274",
+    "cantidad_muestras": 1
+  },
+  {
+    "cve_edo": "19",
+    "estado": "p",
+    "abreviatura_ent": "P",
+    "municipio": "Monterrey",
+    "tipo_variante": "VSIN",
+    "variante_oms": "B.1.1.28",
+    "cantidad_muestras": 3
+  },
+  {
+    "cve_edo": "19",
+    "estado": "p",
+    "abreviatura_ent": "P",
+    "municipio": "Monterrey",
+    "tipo_variante": "VSIN",
+    "variante_oms": "B.1.1.316",
+    "cantidad_muestras": 4
+  },
+  {
+    "cve_edo": "19",
+    "estado": "p",
+    "abreviatura_ent": "P",
+    "municipio": "Monterrey",
+    "tipo_variante": "VSIN",
+    "variante_oms": "B.1.1.317",
+    "cantidad_muestras": 1
+  },
+  {
+    "cve_edo": "19",
+    "estado": "p",
+    "abreviatura_ent": "P",
+    "municipio": "Monterrey",
+    "tipo_variante": "VSIN",
+    "variante_oms": "B.1.1.322",
+    "cantidad_muestras": 1
+  },
+  {
+    "cve_edo": "19",
+    "estado": "p",
+    "abreviatura_ent": "P",
+    "municipio": "Monterrey",
+    "tipo_variante": "VSIN",
+    "variante_oms": "B.1.1.329",
+    "cantidad_muestras": 1
+  },
+  {
+    "cve_edo": "19",
+    "estado": "p",
+    "abreviatura_ent": "P",
+    "municipio": "Monterrey",
+    "tipo_variante": "VSIN",
+    "variante_oms": "B.1.1.34",
+    "cantidad_muestras": 1
+  },
+  {
+    "cve_edo": "19",
+    "estado": "p",
+    "abreviatura_ent": "P",
+    "municipio": "Monterrey",
+    "tipo_variante": "VSIN",
+    "variante_oms": "B.1.1.344",
+    "cantidad_muestras": 19
+  },
+  {
+    "cve_edo": "19",
+    "estado": "p",
+    "abreviatura_ent": "P",
+    "municipio": "Monterrey",
+    "tipo_variante": "VSIN",
+    "variante_oms": "B.1.1.432",
+    "cantidad_muestras": 13
+  },
+  {
+    "cve_edo": "19",
+    "estado": "p",
+    "abreviatura_ent": "P",
+    "municipio": "Monterrey",
+    "tipo_variante": "VSIN",
+    "variante_oms": "B.1.1.434",
+    "cantidad_muestras": 1
+  },
+  {
+    "cve_edo": "19",
+    "estado": "p",
+    "abreviatura_ent": "P",
+    "municipio": "Monterrey",
+    "tipo_variante": "VSIN",
+    "variante_oms": "B.1.1.518",
+    "cantidad_muestras": 1
+  },
+  {
+    "cve_edo": "19",
+    "estado": "p",
+    "abreviatura_ent": "P",
+    "municipio": "Monterrey",
+    "tipo_variante": "VSIN",
+    "variante_oms": "B.1.1.523",
+    "cantidad_muestras": 1
+  },
+  {
+    "cve_edo": "19",
+    "estado": "p",
+    "abreviatura_ent": "P",
+    "municipio": "Monterrey",
+    "tipo_variante": "VSIN",
+    "variante_oms": "B.1.153",
+    "cantidad_muestras": 1
+  },
+  {
+    "cve_edo": "19",
+    "estado": "p",
+    "abreviatura_ent": "P",
+    "municipio": "Monterrey",
+    "tipo_variante": "VSIN",
+    "variante_oms": "B.1.177",
+    "cantidad_muestras": 1
+  },
+  {
+    "cve_edo": "19",
+    "estado": "p",
+    "abreviatura_ent": "P",
+    "municipio": "Monterrey",
+    "tipo_variante": "VSIN",
+    "variante_oms": "B.1.2",
+    "cantidad_muestras": 24
+  },
+  {
+    "cve_edo": "19",
+    "estado": "p",
+    "abreviatura_ent": "P",
+    "municipio": "Monterrey",
+    "tipo_variante": "VSIN",
+    "variante_oms": "B.1.241",
+    "cantidad_muestras": 7
+  },
+  {
+    "cve_edo": "19",
+    "estado": "p",
+    "abreviatura_ent": "P",
+    "municipio": "Monterrey",
+    "tipo_variante": "VSIN",
+    "variante_oms": "5.4",
+    "cantidad_muestras": 39
+  },
+  {
+    "cve_edo": "19",
+    "estado": "p",
+    "abreviatura_ent": "P",
+    "municipio": "Monterrey",
+    "tipo_variante": "VSIN",
+    "variante_oms": "B.1.350",
+    "cantidad_muestras": 1
+  },
+  {
+    "cve_edo": "19",
+    "estado": "p",
+    "abreviatura_ent": "P",
+    "municipio": "Monterrey",
+    "tipo_variante": "VSIN",
+    "variante_oms": "B.1.366",
+    "cantidad_muestras": 2
+  },
+  {
+    "cve_edo": "19",
+    "estado": "p",
+    "abreviatura_ent": "P",
+    "municipio": "Monterrey",
+    "tipo_variante": "VSIN",
+    "variante_oms": "B.1.369",
+    "cantidad_muestras": 1
+  },
+  {
+    "cve_edo": "19",
+    "estado": "p",
+    "abreviatura_ent": "P",
+    "municipio": "Monterrey",
+    "tipo_variante": "VSIN",
+    "variante_oms": "B.1.396",
+    "cantidad_muestras": 13
+  },
+  {
+    "cve_edo": "19",
+    "estado": "p",
+    "abreviatura_ent": "P",
+    "municipio": "Monterrey",
+    "tipo_variante": "VSIN",
+    "variante_oms": "B.1.538",
+    "cantidad_muestras": 1
+  },
+  {
+    "cve_edo": "19",
+    "estado": "p",
+    "abreviatura_ent": "P",
+    "municipio": "Monterrey",
+    "tipo_variante": "VSIN",
+    "variante_oms": "B.1.551",
+    "cantidad_muestras": 1
+  },
+  {
+    "cve_edo": "19",
+    "estado": "p",
+    "abreviatura_ent": "P",
+    "municipio": "Monterrey",
+    "tipo_variante": "VSIN",
+    "variante_oms": "B.1.558",
+    "cantidad_muestras": 9
+  },
+  {
+    "cve_edo": "19",
+    "estado": "p",
+    "abreviatura_ent": "P",
+    "municipio": "Monterrey",
+    "tipo_variante": "VSIN",
+    "variante_oms": "B.1.564",
+    "cantidad_muestras": 1
+  },
+  {
+    "cve_edo": "19",
+    "estado": "p",
+    "abreviatura_ent": "P",
+    "municipio": "Monterrey",
+    "tipo_variante": "VSIN",
+    "variante_oms": "B.1.576",
+    "cantidad_muestras": 1
+  },
+  {
+    "cve_edo": "19",
+    "estado": "p",
+    "abreviatura_ent": "P",
+    "municipio": "Monterrey",
+    "tipo_variante": "VSIN",
+    "variante_oms": "B.1.588",
+    "cantidad_muestras": 1
+  },
+  {
+    "cve_edo": "19",
+    "estado": "p",
+    "abreviatura_ent": "P",
+    "municipio": "Monterrey",
+    "tipo_variante": "VSIN",
+    "variante_oms": "B.1.595",
+    "cantidad_muestras": 3
+  },
+  {
+    "cve_edo": "19",
+    "estado": "p",
+    "abreviatura_ent": "P",
+    "municipio": "Monterrey",
+    "tipo_variante": "VSIN",
+    "variante_oms": "B.1.596",
+    "cantidad_muestras": 1
+  },
+  {
+    "cve_edo": "19",
+    "estado": "p",
+    "abreviatura_ent": "P",
+    "municipio": "Monterrey",
+    "tipo_variante": "VSIN",
+    "variante_oms": "5.2",
+    "cantidad_muestras": 3
+  },
+  {
+    "cve_edo": "19",
+    "estado": "p",
+    "abreviatura_ent": "P",
+    "municipio": "Monterrey",
+    "tipo_variante": "VSIN",
+    "variante_oms": "C.23",
+    "cantidad_muestras": 1
+  },
+  {
+    "cve_edo": "19",
+    "estado": "p",
+    "abreviatura_ent": "P",
+    "municipio": "Monterrey",
+    "tipo_variante": "VSIN",
+    "variante_oms": "C.36",
+    "cantidad_muestras": 1
+  },
+  {
+    "cve_edo": "19",
+    "estado": "p",
+    "abreviatura_ent": "P",
+    "municipio": "Monterrey",
+    "tipo_variante": "VSIN",
+    "variante_oms": "5.1",
+    "cantidad_muestras": 11
+  },
+  {
+    "cve_edo": "19",
+    "estado": "p",
+    "abreviatura_ent": "P",
+    "municipio": "Monterrey",
+    "tipo_variante": "VSIN",
+    "variante_oms": "Sin informaci\u00f3n",
+    "cantidad_muestras": 18
+  },
+  {
+    "cve_edo": "20",
+    "estado": "q",
+    "abreviatura_ent": "Q",
+    "municipio": "Oaxaca",
+    "tipo_variante": "VIN",
+    "variante_oms": "3.1",
+    "cantidad_muestras": 9
+  },
+  {
+    "cve_edo": "20",
+    "estado": "q",
+    "abreviatura_ent": "Q",
+    "municipio": "Oaxaca",
+    "tipo_variante": "VOC",
+    "variante_oms": "1.4",
+    "cantidad_muestras": 18
+  },
+  {
+    "cve_edo": "20",
+    "estado": "q",
+    "abreviatura_ent": "Q",
+    "municipio": "Oaxaca",
+    "tipo_variante": "VOC",
+    "variante_oms": "1.3",
+    "cantidad_muestras": 2
+  },
+  {
+    "cve_edo": "20",
+    "estado": "q",
+    "abreviatura_ent": "Q",
+    "municipio": "Oaxaca",
+    "tipo_variante": "VOM",
+    "variante_oms": "4.5",
+    "cantidad_muestras": 47
+  },
+  {
+    "cve_edo": "20",
+    "estado": "q",
+    "abreviatura_ent": "Q",
+    "municipio": "Oaxaca",
+    "tipo_variante": "VOM",
+    "variante_oms": "4.4",
+    "cantidad_muestras": 6
+  },
+  {
+    "cve_edo": "20",
+    "estado": "q",
+    "abreviatura_ent": "Q",
+    "municipio": "Oaxaca",
+    "tipo_variante": "VSIN",
+    "variante_oms": "A.2.5",
+    "cantidad_muestras": 4
+  },
+  {
+    "cve_edo": "20",
+    "estado": "q",
+    "abreviatura_ent": "Q",
+    "municipio": "Oaxaca",
+    "tipo_variante": "VSIN",
+    "variante_oms": "5.5",
+    "cantidad_muestras": 6
+  },
+  {
+    "cve_edo": "20",
+    "estado": "q",
+    "abreviatura_ent": "Q",
+    "municipio": "Oaxaca",
+    "tipo_variante": "VSIN",
+    "variante_oms": "5.3",
+    "cantidad_muestras": 4
+  },
+  {
+    "cve_edo": "20",
+    "estado": "q",
+    "abreviatura_ent": "Q",
+    "municipio": "Oaxaca",
+    "tipo_variante": "VSIN",
+    "variante_oms": "B.1.1.198",
+    "cantidad_muestras": 1
+  },
+  {
+    "cve_edo": "20",
+    "estado": "q",
+    "abreviatura_ent": "Q",
+    "municipio": "Oaxaca",
+    "tipo_variante": "VSIN",
+    "variante_oms": "B.1.1.432",
+    "cantidad_muestras": 4
+  },
+  {
+    "cve_edo": "20",
+    "estado": "q",
+    "abreviatura_ent": "Q",
+    "municipio": "Oaxaca",
+    "tipo_variante": "VSIN",
+    "variante_oms": "B.1.189",
+    "cantidad_muestras": 1
+  },
+  {
+    "cve_edo": "20",
+    "estado": "q",
+    "abreviatura_ent": "Q",
+    "municipio": "Oaxaca",
+    "tipo_variante": "VSIN",
+    "variante_oms": "B.1.2",
+    "cantidad_muestras": 1
+  },
+  {
+    "cve_edo": "20",
+    "estado": "q",
+    "abreviatura_ent": "Q",
+    "municipio": "Oaxaca",
+    "tipo_variante": "VSIN",
+    "variante_oms": "5.4",
+    "cantidad_muestras": 1
+  },
+  {
+    "cve_edo": "20",
+    "estado": "q",
+    "abreviatura_ent": "Q",
+    "municipio": "Oaxaca",
+    "tipo_variante": "VSIN",
+    "variante_oms": "B.1.301",
+    "cantidad_muestras": 1
+  },
+  {
+    "cve_edo": "20",
+    "estado": "q",
+    "abreviatura_ent": "Q",
+    "municipio": "Oaxaca",
+    "tipo_variante": "VSIN",
+    "variante_oms": "B.1.36.10",
+    "cantidad_muestras": 2
+  },
+  {
+    "cve_edo": "20",
+    "estado": "q",
+    "abreviatura_ent": "Q",
+    "municipio": "Oaxaca",
+    "tipo_variante": "VSIN",
+    "variante_oms": "B.1.405",
+    "cantidad_muestras": 1
+  },
+  {
+    "cve_edo": "20",
+    "estado": "q",
+    "abreviatura_ent": "Q",
+    "municipio": "Oaxaca",
+    "tipo_variante": "VSIN",
+    "variante_oms": "5.2",
+    "cantidad_muestras": 4
+  },
+  {
+    "cve_edo": "20",
+    "estado": "q",
+    "abreviatura_ent": "Q",
+    "municipio": "Oaxaca",
+    "tipo_variante": "VSIN",
+    "variante_oms": "5.1",
+    "cantidad_muestras": 1
+  },
+  {
+    "cve_edo": "21",
+    "estado": "r",
+    "abreviatura_ent": "R",
+    "municipio": "Puebla",
+    "tipo_variante": "VIN",
+    "variante_oms": "3.1",
+    "cantidad_muestras": 37
+  },
+  {
+    "cve_edo": "21",
+    "estado": "r",
+    "abreviatura_ent": "R",
+    "municipio": "Puebla",
+    "tipo_variante": "VOC",
+    "variante_oms": "1.4",
+    "cantidad_muestras": 31
+  },
+  {
+    "cve_edo": "21",
+    "estado": "r",
+    "abreviatura_ent": "R",
+    "municipio": "Puebla",
+    "tipo_variante": "VOC",
+    "variante_oms": "1.1",
+    "cantidad_muestras": 2
+  },
+  {
+    "cve_edo": "21",
+    "estado": "r",
+    "abreviatura_ent": "R",
+    "municipio": "Puebla",
+    "tipo_variante": "VOC",
+    "variante_oms": "1.3",
+    "cantidad_muestras": 9
+  },
+  {
+    "cve_edo": "21",
+    "estado": "r",
+    "abreviatura_ent": "R",
+    "municipio": "Puebla",
+    "tipo_variante": "VOI",
+    "variante_oms": "2.2",
+    "cantidad_muestras": 1
+  },
+  {
+    "cve_edo": "21",
+    "estado": "r",
+    "abreviatura_ent": "R",
+    "municipio": "Puebla",
+    "tipo_variante": "VOM",
+    "variante_oms": "4.5",
+    "cantidad_muestras": 534
+  },
+  {
+    "cve_edo": "21",
+    "estado": "r",
+    "abreviatura_ent": "R",
+    "municipio": "Puebla",
+    "tipo_variante": "VOM",
+    "variante_oms": "4.4",
+    "cantidad_muestras": 7
+  },
+  {
+    "cve_edo": "21",
+    "estado": "r",
+    "abreviatura_ent": "R",
+    "municipio": "Puebla",
+    "tipo_variante": "VSIN",
+    "variante_oms": "A.2.5",
+    "cantidad_muestras": 1
+  },
+  {
+    "cve_edo": "21",
+    "estado": "r",
+    "abreviatura_ent": "R",
+    "municipio": "Puebla",
+    "tipo_variante": "VSIN",
+    "variante_oms": "5.5",
+    "cantidad_muestras": 20
+  },
+  {
+    "cve_edo": "21",
+    "estado": "r",
+    "abreviatura_ent": "R",
+    "municipio": "Puebla",
+    "tipo_variante": "VSIN",
+    "variante_oms": "5.3",
+    "cantidad_muestras": 4
+  },
+  {
+    "cve_edo": "21",
+    "estado": "r",
+    "abreviatura_ent": "R",
+    "municipio": "Puebla",
+    "tipo_variante": "VSIN",
+    "variante_oms": "B.1.1.244",
+    "cantidad_muestras": 1
+  },
+  {
+    "cve_edo": "21",
+    "estado": "r",
+    "abreviatura_ent": "R",
+    "municipio": "Puebla",
+    "tipo_variante": "VSIN",
+    "variante_oms": "B.1.1.311",
+    "cantidad_muestras": 1
+  },
+  {
+    "cve_edo": "21",
+    "estado": "r",
+    "abreviatura_ent": "R",
+    "municipio": "Puebla",
+    "tipo_variante": "VSIN",
+    "variante_oms": "B.1.1.432",
+    "cantidad_muestras": 2
+  },
+  {
+    "cve_edo": "21",
+    "estado": "r",
+    "abreviatura_ent": "R",
+    "municipio": "Puebla",
+    "tipo_variante": "VSIN",
+    "variante_oms": "B.1.189",
+    "cantidad_muestras": 1
+  },
+  {
+    "cve_edo": "21",
+    "estado": "r",
+    "abreviatura_ent": "R",
+    "municipio": "Puebla",
+    "tipo_variante": "VSIN",
+    "variante_oms": "5.4",
+    "cantidad_muestras": 4
+  },
+  {
+    "cve_edo": "21",
+    "estado": "r",
+    "abreviatura_ent": "R",
+    "municipio": "Puebla",
+    "tipo_variante": "VSIN",
+    "variante_oms": "B.1.397",
+    "cantidad_muestras": 4
+  },
+  {
+    "cve_edo": "21",
+    "estado": "r",
+    "abreviatura_ent": "R",
+    "municipio": "Puebla",
+    "tipo_variante": "VSIN",
+    "variante_oms": "B.1.400",
+    "cantidad_muestras": 1
+  },
+  {
+    "cve_edo": "21",
+    "estado": "r",
+    "abreviatura_ent": "R",
+    "municipio": "Puebla",
+    "tipo_variante": "VSIN",
+    "variante_oms": "B.1.503",
+    "cantidad_muestras": 1
+  },
+  {
+    "cve_edo": "21",
+    "estado": "r",
+    "abreviatura_ent": "R",
+    "municipio": "Puebla",
+    "tipo_variante": "VSIN",
+    "variante_oms": "B.1.551",
+    "cantidad_muestras": 2
+  },
+  {
+    "cve_edo": "21",
+    "estado": "r",
+    "abreviatura_ent": "R",
+    "municipio": "Puebla",
+    "tipo_variante": "VSIN",
+    "variante_oms": "B.1.596",
+    "cantidad_muestras": 2
+  },
+  {
+    "cve_edo": "21",
+    "estado": "r",
+    "abreviatura_ent": "R",
+    "municipio": "Puebla",
+    "tipo_variante": "VSIN",
+    "variante_oms": "5.2",
+    "cantidad_muestras": 1
+  },
+  {
+    "cve_edo": "21",
+    "estado": "r",
+    "abreviatura_ent": "R",
+    "municipio": "Puebla",
+    "tipo_variante": "VSIN",
+    "variante_oms": "5.1",
+    "cantidad_muestras": 3
+  },
+  {
+    "cve_edo": "22",
+    "estado": "s",
+    "abreviatura_ent": "S",
+    "municipio": "Quer\u00e9taro",
+    "tipo_variante": "VIN",
+    "variante_oms": "3.1",
+    "cantidad_muestras": 16
+  },
+  {
+    "cve_edo": "22",
+    "estado": "s",
+    "abreviatura_ent": "S",
+    "municipio": "Quer\u00e9taro",
+    "tipo_variante": "VOC",
+    "variante_oms": "1.4",
+    "cantidad_muestras": 43
+  },
+  {
+    "cve_edo": "22",
+    "estado": "s",
+    "abreviatura_ent": "S",
+    "municipio": "Quer\u00e9taro",
+    "tipo_variante": "VOC",
+    "variante_oms": "1.3",
+    "cantidad_muestras": 5
+  },
+  {
+    "cve_edo": "22",
+    "estado": "s",
+    "abreviatura_ent": "S",
+    "municipio": "Quer\u00e9taro",
+    "tipo_variante": "VOI",
+    "variante_oms": "2.3",
+    "cantidad_muestras": 33
+  },
+  {
+    "cve_edo": "22",
+    "estado": "s",
+    "abreviatura_ent": "S",
+    "municipio": "Quer\u00e9taro",
+    "tipo_variante": "VOM",
+    "variante_oms": "4.5",
+    "cantidad_muestras": 292
+  },
+  {
+    "cve_edo": "22",
+    "estado": "s",
+    "abreviatura_ent": "S",
+    "municipio": "Quer\u00e9taro",
+    "tipo_variante": "VOM",
+    "variante_oms": "4.4",
+    "cantidad_muestras": 9
+  },
+  {
+    "cve_edo": "22",
+    "estado": "s",
+    "abreviatura_ent": "S",
+    "municipio": "Quer\u00e9taro",
+    "tipo_variante": "VSIN",
+    "variante_oms": "A.2.5",
+    "cantidad_muestras": 2
+  },
+  {
+    "cve_edo": "22",
+    "estado": "s",
+    "abreviatura_ent": "S",
+    "municipio": "Quer\u00e9taro",
+    "tipo_variante": "VSIN",
+    "variante_oms": "A.5",
+    "cantidad_muestras": 2
+  },
+  {
+    "cve_edo": "22",
+    "estado": "s",
+    "abreviatura_ent": "S",
+    "municipio": "Quer\u00e9taro",
+    "tipo_variante": "VSIN",
+    "variante_oms": "5.5",
+    "cantidad_muestras": 23
+  },
+  {
+    "cve_edo": "22",
+    "estado": "s",
+    "abreviatura_ent": "S",
+    "municipio": "Quer\u00e9taro",
+    "tipo_variante": "VSIN",
+    "variante_oms": "5.3",
+    "cantidad_muestras": 3
+  },
+  {
+    "cve_edo": "22",
+    "estado": "s",
+    "abreviatura_ent": "S",
+    "municipio": "Quer\u00e9taro",
+    "tipo_variante": "VSIN",
+    "variante_oms": "B.1.1.316",
+    "cantidad_muestras": 2
+  },
+  {
+    "cve_edo": "22",
+    "estado": "s",
+    "abreviatura_ent": "S",
+    "municipio": "Quer\u00e9taro",
+    "tipo_variante": "VSIN",
+    "variante_oms": "B.1.1.322",
+    "cantidad_muestras": 1
+  },
+  {
+    "cve_edo": "22",
+    "estado": "s",
+    "abreviatura_ent": "S",
+    "municipio": "Quer\u00e9taro",
+    "tipo_variante": "VSIN",
+    "variante_oms": "B.1.1.33",
+    "cantidad_muestras": 4
+  },
+  {
+    "cve_edo": "22",
+    "estado": "s",
+    "abreviatura_ent": "S",
+    "municipio": "Quer\u00e9taro",
+    "tipo_variante": "VSIN",
+    "variante_oms": "B.1.1.393",
+    "cantidad_muestras": 1
+  },
+  {
+    "cve_edo": "22",
+    "estado": "s",
+    "abreviatura_ent": "S",
+    "municipio": "Quer\u00e9taro",
+    "tipo_variante": "VSIN",
+    "variante_oms": "B.1.111",
+    "cantidad_muestras": 2
+  },
+  {
+    "cve_edo": "22",
+    "estado": "s",
+    "abreviatura_ent": "S",
+    "municipio": "Quer\u00e9taro",
+    "tipo_variante": "VSIN",
+    "variante_oms": "B.1.2",
+    "cantidad_muestras": 2
+  },
+  {
+    "cve_edo": "22",
+    "estado": "s",
+    "abreviatura_ent": "S",
+    "municipio": "Quer\u00e9taro",
+    "tipo_variante": "VSIN",
+    "variante_oms": "B.1.241",
+    "cantidad_muestras": 4
+  },
+  {
+    "cve_edo": "22",
+    "estado": "s",
+    "abreviatura_ent": "S",
+    "municipio": "Quer\u00e9taro",
+    "tipo_variante": "VSIN",
+    "variante_oms": "5.4",
+    "cantidad_muestras": 3
+  },
+  {
+    "cve_edo": "22",
+    "estado": "s",
+    "abreviatura_ent": "S",
+    "municipio": "Quer\u00e9taro",
+    "tipo_variante": "VSIN",
+    "variante_oms": "B.1.301",
+    "cantidad_muestras": 3
+  },
+  {
+    "cve_edo": "22",
+    "estado": "s",
+    "abreviatura_ent": "S",
+    "municipio": "Quer\u00e9taro",
+    "tipo_variante": "VSIN",
+    "variante_oms": "B.1.369",
+    "cantidad_muestras": 1
+  },
+  {
+    "cve_edo": "22",
+    "estado": "s",
+    "abreviatura_ent": "S",
+    "municipio": "Quer\u00e9taro",
+    "tipo_variante": "VSIN",
+    "variante_oms": "B.1.396",
+    "cantidad_muestras": 1
+  },
+  {
+    "cve_edo": "22",
+    "estado": "s",
+    "abreviatura_ent": "S",
+    "municipio": "Quer\u00e9taro",
+    "tipo_variante": "VSIN",
+    "variante_oms": "B.1.551",
+    "cantidad_muestras": 1
+  },
+  {
+    "cve_edo": "22",
+    "estado": "s",
+    "abreviatura_ent": "S",
+    "municipio": "Quer\u00e9taro",
+    "tipo_variante": "VSIN",
+    "variante_oms": "B.1.596",
+    "cantidad_muestras": 2
+  },
+  {
+    "cve_edo": "22",
+    "estado": "s",
+    "abreviatura_ent": "S",
+    "municipio": "Quer\u00e9taro",
+    "tipo_variante": "VSIN",
+    "variante_oms": "5.2",
+    "cantidad_muestras": 1
+  },
+  {
+    "cve_edo": "22",
+    "estado": "s",
+    "abreviatura_ent": "S",
+    "municipio": "Quer\u00e9taro",
+    "tipo_variante": "VSIN",
+    "variante_oms": "5.1",
+    "cantidad_muestras": 1
+  },
+  {
+    "cve_edo": "23",
+    "estado": "t",
+    "abreviatura_ent": "T",
+    "municipio": "Cozumel",
+    "tipo_variante": "VSIN",
+    "variante_oms": "5.5",
+    "cantidad_muestras": 1
+  },
+  {
+    "cve_edo": "23",
+    "estado": "t",
+    "abreviatura_ent": "T",
+    "municipio": "Oth\u00f3n P. Blanco",
+    "tipo_variante": "VIN",
+    "variante_oms": "3.1",
+    "cantidad_muestras": 2
+  },
+  {
+    "cve_edo": "23",
+    "estado": "t",
+    "abreviatura_ent": "T",
+    "municipio": "Oth\u00f3n P. Blanco",
+    "tipo_variante": "VOC",
+    "variante_oms": "1.4",
+    "cantidad_muestras": 75
+  },
+  {
+    "cve_edo": "23",
+    "estado": "t",
+    "abreviatura_ent": "T",
+    "municipio": "Oth\u00f3n P. Blanco",
+    "tipo_variante": "VOC",
+    "variante_oms": "1.1",
+    "cantidad_muestras": 10
+  },
+  {
+    "cve_edo": "23",
+    "estado": "t",
+    "abreviatura_ent": "T",
+    "municipio": "Oth\u00f3n P. Blanco",
+    "tipo_variante": "VOC",
+    "variante_oms": "1.3",
+    "cantidad_muestras": 122
+  },
+  {
+    "cve_edo": "23",
+    "estado": "t",
+    "abreviatura_ent": "T",
+    "municipio": "Oth\u00f3n P. Blanco",
+    "tipo_variante": "VOI",
+    "variante_oms": "2.2",
+    "cantidad_muestras": 2
+  },
+  {
+    "cve_edo": "23",
+    "estado": "t",
+    "abreviatura_ent": "T",
+    "municipio": "Oth\u00f3n P. Blanco",
+    "tipo_variante": "VOI",
+    "variante_oms": "2.3",
+    "cantidad_muestras": 1
+  },
+  {
+    "cve_edo": "23",
+    "estado": "t",
+    "abreviatura_ent": "T",
+    "municipio": "Oth\u00f3n P. Blanco",
+    "tipo_variante": "VOM",
+    "variante_oms": "4.5",
+    "cantidad_muestras": 36
+  },
+  {
+    "cve_edo": "23",
+    "estado": "t",
+    "abreviatura_ent": "T",
+    "municipio": "Oth\u00f3n P. Blanco",
+    "tipo_variante": "VOM",
+    "variante_oms": "4.2",
+    "cantidad_muestras": 3
+  },
+  {
+    "cve_edo": "23",
+    "estado": "t",
+    "abreviatura_ent": "T",
+    "municipio": "Oth\u00f3n P. Blanco",
+    "tipo_variante": "VOM",
+    "variante_oms": "4.4",
+    "cantidad_muestras": 6
+  },
+  {
+    "cve_edo": "23",
+    "estado": "t",
+    "abreviatura_ent": "T",
+    "municipio": "Oth\u00f3n P. Blanco",
+    "tipo_variante": "VSIN",
+    "variante_oms": "5.5",
+    "cantidad_muestras": 87
+  },
+  {
+    "cve_edo": "23",
+    "estado": "t",
+    "abreviatura_ent": "T",
+    "municipio": "Oth\u00f3n P. Blanco",
+    "tipo_variante": "VSIN",
+    "variante_oms": "5.3",
+    "cantidad_muestras": 6
+  },
+  {
+    "cve_edo": "23",
+    "estado": "t",
+    "abreviatura_ent": "T",
+    "municipio": "Oth\u00f3n P. Blanco",
+    "tipo_variante": "VSIN",
+    "variante_oms": "B.1.1.329",
+    "cantidad_muestras": 1
+  },
+  {
+    "cve_edo": "23",
+    "estado": "t",
+    "abreviatura_ent": "T",
+    "municipio": "Oth\u00f3n P. Blanco",
+    "tipo_variante": "VSIN",
+    "variante_oms": "B.1.160",
+    "cantidad_muestras": 1
+  },
+  {
+    "cve_edo": "23",
+    "estado": "t",
+    "abreviatura_ent": "T",
+    "municipio": "Oth\u00f3n P. Blanco",
+    "tipo_variante": "VSIN",
+    "variante_oms": "B.1.177",
+    "cantidad_muestras": 1
+  },
+  {
+    "cve_edo": "23",
+    "estado": "t",
+    "abreviatura_ent": "T",
+    "municipio": "Oth\u00f3n P. Blanco",
+    "tipo_variante": "VSIN",
+    "variante_oms": "B.1.189",
+    "cantidad_muestras": 1
+  },
+  {
+    "cve_edo": "23",
+    "estado": "t",
+    "abreviatura_ent": "T",
+    "municipio": "Oth\u00f3n P. Blanco",
+    "tipo_variante": "VSIN",
+    "variante_oms": "5.4",
+    "cantidad_muestras": 1
+  },
+  {
+    "cve_edo": "23",
+    "estado": "t",
+    "abreviatura_ent": "T",
+    "municipio": "Oth\u00f3n P. Blanco",
+    "tipo_variante": "VSIN",
+    "variante_oms": "B.1.415",
+    "cantidad_muestras": 1
+  },
+  {
+    "cve_edo": "23",
+    "estado": "t",
+    "abreviatura_ent": "T",
+    "municipio": "Oth\u00f3n P. Blanco",
+    "tipo_variante": "VSIN",
+    "variante_oms": "B.1.428",
+    "cantidad_muestras": 1
+  },
+  {
+    "cve_edo": "23",
+    "estado": "t",
+    "abreviatura_ent": "T",
+    "municipio": "Oth\u00f3n P. Blanco",
+    "tipo_variante": "VSIN",
+    "variante_oms": "B.1.526.2",
+    "cantidad_muestras": 1
+  },
+  {
+    "cve_edo": "23",
+    "estado": "t",
+    "abreviatura_ent": "T",
+    "municipio": "Oth\u00f3n P. Blanco",
+    "tipo_variante": "VSIN",
+    "variante_oms": "5.1",
+    "cantidad_muestras": 17
+  },
+  {
+    "cve_edo": "24",
+    "estado": "u",
+    "abreviatura_ent": "U",
+    "municipio": "San Luis Potos\u00ed",
+    "tipo_variante": "VIN",
+    "variante_oms": "3.1",
+    "cantidad_muestras": 7
+  },
+  {
+    "cve_edo": "24",
+    "estado": "u",
+    "abreviatura_ent": "U",
+    "municipio": "San Luis Potos\u00ed",
+    "tipo_variante": "VOC",
+    "variante_oms": "1.4",
+    "cantidad_muestras": 7
+  },
+  {
+    "cve_edo": "24",
+    "estado": "u",
+    "abreviatura_ent": "U",
+    "municipio": "San Luis Potos\u00ed",
+    "tipo_variante": "VOC",
+    "variante_oms": "1.3",
+    "cantidad_muestras": 7
+  },
+  {
+    "cve_edo": "24",
+    "estado": "u",
+    "abreviatura_ent": "U",
+    "municipio": "San Luis Potos\u00ed",
+    "tipo_variante": "VOI",
+    "variante_oms": "2.2",
+    "cantidad_muestras": 1
+  },
+  {
+    "cve_edo": "24",
+    "estado": "u",
+    "abreviatura_ent": "U",
+    "municipio": "San Luis Potos\u00ed",
+    "tipo_variante": "VOI",
+    "variante_oms": "2.1",
+    "cantidad_muestras": 4
+  },
+  {
+    "cve_edo": "24",
+    "estado": "u",
+    "abreviatura_ent": "U",
+    "municipio": "San Luis Potos\u00ed",
+    "tipo_variante": "VOI",
+    "variante_oms": "2.3",
+    "cantidad_muestras": 1
+  },
+  {
+    "cve_edo": "24",
+    "estado": "u",
+    "abreviatura_ent": "U",
+    "municipio": "San Luis Potos\u00ed",
+    "tipo_variante": "VOM",
+    "variante_oms": "4.5",
+    "cantidad_muestras": 100
+  },
+  {
+    "cve_edo": "24",
+    "estado": "u",
+    "abreviatura_ent": "U",
+    "municipio": "San Luis Potos\u00ed",
+    "tipo_variante": "VOM",
+    "variante_oms": "4.4",
+    "cantidad_muestras": 5
+  },
+  {
+    "cve_edo": "24",
+    "estado": "u",
+    "abreviatura_ent": "U",
+    "municipio": "San Luis Potos\u00ed",
+    "tipo_variante": "VSIN",
+    "variante_oms": "5.5",
+    "cantidad_muestras": 15
+  },
+  {
+    "cve_edo": "24",
+    "estado": "u",
+    "abreviatura_ent": "U",
+    "municipio": "San Luis Potos\u00ed",
+    "tipo_variante": "VSIN",
+    "variante_oms": "B.1.1.317",
+    "cantidad_muestras": 1
+  },
+  {
+    "cve_edo": "24",
+    "estado": "u",
+    "abreviatura_ent": "U",
+    "municipio": "San Luis Potos\u00ed",
+    "tipo_variante": "VSIN",
+    "variante_oms": "B.1.1.322",
+    "cantidad_muestras": 1
+  },
+  {
+    "cve_edo": "24",
+    "estado": "u",
+    "abreviatura_ent": "U",
+    "municipio": "San Luis Potos\u00ed",
+    "tipo_variante": "VSIN",
+    "variante_oms": "B.1.1.344",
+    "cantidad_muestras": 1
+  },
+  {
+    "cve_edo": "24",
+    "estado": "u",
+    "abreviatura_ent": "U",
+    "municipio": "San Luis Potos\u00ed",
+    "tipo_variante": "VSIN",
+    "variante_oms": "B.1.1.512",
+    "cantidad_muestras": 1
+  },
+  {
+    "cve_edo": "24",
+    "estado": "u",
+    "abreviatura_ent": "U",
+    "municipio": "San Luis Potos\u00ed",
+    "tipo_variante": "VSIN",
+    "variante_oms": "B.1.1.517",
+    "cantidad_muestras": 1
+  },
+  {
+    "cve_edo": "24",
+    "estado": "u",
+    "abreviatura_ent": "U",
+    "municipio": "San Luis Potos\u00ed",
+    "tipo_variante": "VSIN",
+    "variante_oms": "B.1.189",
+    "cantidad_muestras": 6
+  },
+  {
+    "cve_edo": "24",
+    "estado": "u",
+    "abreviatura_ent": "U",
+    "municipio": "San Luis Potos\u00ed",
+    "tipo_variante": "VSIN",
+    "variante_oms": "B.1.2",
+    "cantidad_muestras": 1
+  },
+  {
+    "cve_edo": "24",
+    "estado": "u",
+    "abreviatura_ent": "U",
+    "municipio": "San Luis Potos\u00ed",
+    "tipo_variante": "VSIN",
+    "variante_oms": "B.1.239",
+    "cantidad_muestras": 1
+  },
+  {
+    "cve_edo": "24",
+    "estado": "u",
+    "abreviatura_ent": "U",
+    "municipio": "San Luis Potos\u00ed",
+    "tipo_variante": "VSIN",
+    "variante_oms": "B.1.241",
+    "cantidad_muestras": 5
+  },
+  {
+    "cve_edo": "24",
+    "estado": "u",
+    "abreviatura_ent": "U",
+    "municipio": "San Luis Potos\u00ed",
+    "tipo_variante": "VSIN",
+    "variante_oms": "B.1.301",
+    "cantidad_muestras": 1
+  },
+  {
+    "cve_edo": "24",
+    "estado": "u",
+    "abreviatura_ent": "U",
+    "municipio": "San Luis Potos\u00ed",
+    "tipo_variante": "VSIN",
+    "variante_oms": "B.1.396",
+    "cantidad_muestras": 5
+  },
+  {
+    "cve_edo": "24",
+    "estado": "u",
+    "abreviatura_ent": "U",
+    "municipio": "San Luis Potos\u00ed",
+    "tipo_variante": "VSIN",
+    "variante_oms": "B.1.397",
+    "cantidad_muestras": 1
+  },
+  {
+    "cve_edo": "24",
+    "estado": "u",
+    "abreviatura_ent": "U",
+    "municipio": "San Luis Potos\u00ed",
+    "tipo_variante": "VSIN",
+    "variante_oms": "B.1.551",
+    "cantidad_muestras": 3
+  },
+  {
+    "cve_edo": "24",
+    "estado": "u",
+    "abreviatura_ent": "U",
+    "municipio": "San Luis Potos\u00ed",
+    "tipo_variante": "VSIN",
+    "variante_oms": "B.1.558",
+    "cantidad_muestras": 1
+  },
+  {
+    "cve_edo": "24",
+    "estado": "u",
+    "abreviatura_ent": "U",
+    "municipio": "San Luis Potos\u00ed",
+    "tipo_variante": "VSIN",
+    "variante_oms": "B.1.561",
+    "cantidad_muestras": 1
+  },
+  {
+    "cve_edo": "24",
+    "estado": "u",
+    "abreviatura_ent": "U",
+    "municipio": "San Luis Potos\u00ed",
+    "tipo_variante": "VSIN",
+    "variante_oms": "5.2",
+    "cantidad_muestras": 3
+  },
+  {
+    "cve_edo": "24",
+    "estado": "u",
+    "abreviatura_ent": "U",
+    "municipio": "San Luis Potos\u00ed",
+    "tipo_variante": "VSIN",
+    "variante_oms": "5.1",
+    "cantidad_muestras": 1
+  },
+  {
+    "cve_edo": "25",
+    "estado": "v",
+    "abreviatura_ent": "V",
+    "municipio": "Ahome",
+    "tipo_variante": "VOC",
+    "variante_oms": "1.4",
+    "cantidad_muestras": 2
+  },
+  {
+    "cve_edo": "25",
+    "estado": "v",
+    "abreviatura_ent": "V",
+    "municipio": "Ahome",
+    "tipo_variante": "VOC",
+    "variante_oms": "1.1",
+    "cantidad_muestras": 1
+  },
+  {
+    "cve_edo": "25",
+    "estado": "v",
+    "abreviatura_ent": "V",
+    "municipio": "Culiac\u00e1n",
+    "tipo_variante": "VIN",
+    "variante_oms": "3.1",
+    "cantidad_muestras": 5
+  },
+  {
+    "cve_edo": "25",
+    "estado": "v",
+    "abreviatura_ent": "V",
+    "municipio": "Culiac\u00e1n",
+    "tipo_variante": "VOC",
+    "variante_oms": "1.4",
+    "cantidad_muestras": 30
+  },
+  {
+    "cve_edo": "25",
+    "estado": "v",
+    "abreviatura_ent": "V",
+    "municipio": "Culiac\u00e1n",
+    "tipo_variante": "VOC",
+    "variante_oms": "1.1",
+    "cantidad_muestras": 18
+  },
+  {
+    "cve_edo": "25",
+    "estado": "v",
+    "abreviatura_ent": "V",
+    "municipio": "Culiac\u00e1n",
+    "tipo_variante": "VOC",
+    "variante_oms": "1.3",
+    "cantidad_muestras": 13
+  },
+  {
+    "cve_edo": "25",
+    "estado": "v",
+    "abreviatura_ent": "V",
+    "municipio": "Culiac\u00e1n",
+    "tipo_variante": "VOI",
+    "variante_oms": "2.3",
+    "cantidad_muestras": 3
+  },
+  {
+    "cve_edo": "25",
+    "estado": "v",
+    "abreviatura_ent": "V",
+    "municipio": "Culiac\u00e1n",
+    "tipo_variante": "VOM",
+    "variante_oms": "4.5",
+    "cantidad_muestras": 87
+  },
+  {
+    "cve_edo": "25",
+    "estado": "v",
+    "abreviatura_ent": "V",
+    "municipio": "Culiac\u00e1n",
+    "tipo_variante": "VOM",
+    "variante_oms": "4.4",
+    "cantidad_muestras": 33
+  },
+  {
+    "cve_edo": "25",
+    "estado": "v",
+    "abreviatura_ent": "V",
+    "municipio": "Culiac\u00e1n",
+    "tipo_variante": "VSIN",
+    "variante_oms": "A.2.5.2",
+    "cantidad_muestras": 2
+  },
+  {
+    "cve_edo": "25",
+    "estado": "v",
+    "abreviatura_ent": "V",
+    "municipio": "Culiac\u00e1n",
+    "tipo_variante": "VSIN",
+    "variante_oms": "5.5",
+    "cantidad_muestras": 8
+  },
+  {
+    "cve_edo": "25",
+    "estado": "v",
+    "abreviatura_ent": "V",
+    "municipio": "Culiac\u00e1n",
+    "tipo_variante": "VSIN",
+    "variante_oms": "5.3",
+    "cantidad_muestras": 2
+  },
+  {
+    "cve_edo": "25",
+    "estado": "v",
+    "abreviatura_ent": "V",
+    "municipio": "Culiac\u00e1n",
+    "tipo_variante": "VSIN",
+    "variante_oms": "B.1.1.344",
+    "cantidad_muestras": 1
+  },
+  {
+    "cve_edo": "25",
+    "estado": "v",
+    "abreviatura_ent": "V",
+    "municipio": "Culiac\u00e1n",
+    "tipo_variante": "VSIN",
+    "variante_oms": "B.1.160.32",
+    "cantidad_muestras": 2
+  },
+  {
+    "cve_edo": "25",
+    "estado": "v",
+    "abreviatura_ent": "V",
+    "municipio": "Culiac\u00e1n",
+    "tipo_variante": "VSIN",
+    "variante_oms": "B.1.2",
+    "cantidad_muestras": 1
+  },
+  {
+    "cve_edo": "25",
+    "estado": "v",
+    "abreviatura_ent": "V",
+    "municipio": "Culiac\u00e1n",
+    "tipo_variante": "VSIN",
+    "variante_oms": "5.4",
+    "cantidad_muestras": 1
+  },
+  {
+    "cve_edo": "25",
+    "estado": "v",
+    "abreviatura_ent": "V",
+    "municipio": "Culiac\u00e1n",
+    "tipo_variante": "VSIN",
+    "variante_oms": "B.1.301",
+    "cantidad_muestras": 1
+  },
+  {
+    "cve_edo": "25",
+    "estado": "v",
+    "abreviatura_ent": "V",
+    "municipio": "Culiac\u00e1n",
+    "tipo_variante": "VSIN",
+    "variante_oms": "B.1.526.2",
+    "cantidad_muestras": 1
+  },
+  {
+    "cve_edo": "25",
+    "estado": "v",
+    "abreviatura_ent": "V",
+    "municipio": "Culiac\u00e1n",
+    "tipo_variante": "VSIN",
+    "variante_oms": "B.1.551",
+    "cantidad_muestras": 1
+  },
+  {
+    "cve_edo": "25",
+    "estado": "v",
+    "abreviatura_ent": "V",
+    "municipio": "Culiac\u00e1n",
+    "tipo_variante": "VSIN",
+    "variante_oms": "B.1.561",
+    "cantidad_muestras": 1
+  },
+  {
+    "cve_edo": "25",
+    "estado": "v",
+    "abreviatura_ent": "V",
+    "municipio": "Culiac\u00e1n",
+    "tipo_variante": "VSIN",
+    "variante_oms": "5.2",
+    "cantidad_muestras": 5
+  },
+  {
+    "cve_edo": "25",
+    "estado": "v",
+    "abreviatura_ent": "V",
+    "municipio": "Culiac\u00e1n",
+    "tipo_variante": "VSIN",
+    "variante_oms": "5.1",
+    "cantidad_muestras": 2
+  },
+  {
+    "cve_edo": "25",
+    "estado": "v",
+    "abreviatura_ent": "V",
+    "municipio": "Mazatl\u00e1n",
+    "tipo_variante": "VIN",
+    "variante_oms": "3.1",
+    "cantidad_muestras": 1
+  },
+  {
+    "cve_edo": "25",
+    "estado": "v",
+    "abreviatura_ent": "V",
+    "municipio": "Mazatl\u00e1n",
+    "tipo_variante": "VOC",
+    "variante_oms": "1.4",
+    "cantidad_muestras": 23
+  },
+  {
+    "cve_edo": "25",
+    "estado": "v",
+    "abreviatura_ent": "V",
+    "municipio": "Mazatl\u00e1n",
+    "tipo_variante": "VOC",
+    "variante_oms": "1.1",
+    "cantidad_muestras": 10
+  },
+  {
+    "cve_edo": "25",
+    "estado": "v",
+    "abreviatura_ent": "V",
+    "municipio": "Mazatl\u00e1n",
+    "tipo_variante": "VOC",
+    "variante_oms": "1.3",
+    "cantidad_muestras": 2
+  },
+  {
+    "cve_edo": "25",
+    "estado": "v",
+    "abreviatura_ent": "V",
+    "municipio": "Mazatl\u00e1n",
+    "tipo_variante": "VOI",
+    "variante_oms": "2.3",
+    "cantidad_muestras": 1
+  },
+  {
+    "cve_edo": "25",
+    "estado": "v",
+    "abreviatura_ent": "V",
+    "municipio": "Mazatl\u00e1n",
+    "tipo_variante": "VOM",
+    "variante_oms": "4.5",
+    "cantidad_muestras": 32
+  },
+  {
+    "cve_edo": "25",
+    "estado": "v",
+    "abreviatura_ent": "V",
+    "municipio": "Mazatl\u00e1n",
+    "tipo_variante": "VOM",
+    "variante_oms": "4.4",
+    "cantidad_muestras": 10
+  },
+  {
+    "cve_edo": "25",
+    "estado": "v",
+    "abreviatura_ent": "V",
+    "municipio": "Mazatl\u00e1n",
+    "tipo_variante": "VSIN",
+    "variante_oms": "5.5",
+    "cantidad_muestras": 1
+  },
+  {
+    "cve_edo": "25",
+    "estado": "v",
+    "abreviatura_ent": "V",
+    "municipio": "Mazatl\u00e1n",
+    "tipo_variante": "VSIN",
+    "variante_oms": "5.3",
+    "cantidad_muestras": 2
+  },
+  {
+    "cve_edo": "25",
+    "estado": "v",
+    "abreviatura_ent": "V",
+    "municipio": "Mazatl\u00e1n",
+    "tipo_variante": "VSIN",
+    "variante_oms": "B.1.1.205",
+    "cantidad_muestras": 1
+  },
+  {
+    "cve_edo": "25",
+    "estado": "v",
+    "abreviatura_ent": "V",
+    "municipio": "Mazatl\u00e1n",
+    "tipo_variante": "VSIN",
+    "variante_oms": "B.1.2",
+    "cantidad_muestras": 2
+  },
+  {
+    "cve_edo": "25",
+    "estado": "v",
+    "abreviatura_ent": "V",
+    "municipio": "Mazatl\u00e1n",
+    "tipo_variante": "VSIN",
+    "variante_oms": "B.1.234",
+    "cantidad_muestras": 1
+  },
+  {
+    "cve_edo": "25",
+    "estado": "v",
+    "abreviatura_ent": "V",
+    "municipio": "Mazatl\u00e1n",
+    "tipo_variante": "VSIN",
+    "variante_oms": "B.1.241",
+    "cantidad_muestras": 1
+  },
+  {
+    "cve_edo": "25",
+    "estado": "v",
+    "abreviatura_ent": "V",
+    "municipio": "Mazatl\u00e1n",
+    "tipo_variante": "VSIN",
+    "variante_oms": "B.1.596",
+    "cantidad_muestras": 1
+  },
+  {
+    "cve_edo": "25",
+    "estado": "v",
+    "abreviatura_ent": "V",
+    "municipio": "Navolato",
+    "tipo_variante": "VOM",
+    "variante_oms": "4.5",
+    "cantidad_muestras": 1
+  },
+  {
+    "cve_edo": "26",
+    "estado": "w",
+    "abreviatura_ent": "W",
+    "municipio": "Caborca",
+    "tipo_variante": "VSIN",
+    "variante_oms": "B.1.320",
+    "cantidad_muestras": 1
+  },
+  {
+    "cve_edo": "26",
+    "estado": "w",
+    "abreviatura_ent": "W",
+    "municipio": "Hermosillo",
+    "tipo_variante": "VIN",
+    "variante_oms": "3.1",
+    "cantidad_muestras": 4
+  },
+  {
+    "cve_edo": "26",
+    "estado": "w",
+    "abreviatura_ent": "W",
+    "municipio": "Hermosillo",
+    "tipo_variante": "VOC",
+    "variante_oms": "1.4",
+    "cantidad_muestras": 8
+  },
+  {
+    "cve_edo": "26",
+    "estado": "w",
+    "abreviatura_ent": "W",
+    "municipio": "Hermosillo",
+    "tipo_variante": "VOC",
+    "variante_oms": "1.3",
+    "cantidad_muestras": 10
+  },
+  {
+    "cve_edo": "26",
+    "estado": "w",
+    "abreviatura_ent": "W",
+    "municipio": "Hermosillo",
+    "tipo_variante": "VOM",
+    "variante_oms": "4.5",
+    "cantidad_muestras": 22
+  },
+  {
+    "cve_edo": "26",
+    "estado": "w",
+    "abreviatura_ent": "W",
+    "municipio": "Hermosillo",
+    "tipo_variante": "VOM",
+    "variante_oms": "4.4",
+    "cantidad_muestras": 7
+  },
+  {
+    "cve_edo": "26",
+    "estado": "w",
+    "abreviatura_ent": "W",
+    "municipio": "Hermosillo",
+    "tipo_variante": "VSIN",
+    "variante_oms": "A.2.5",
+    "cantidad_muestras": 3
+  },
+  {
+    "cve_edo": "26",
+    "estado": "w",
+    "abreviatura_ent": "W",
+    "municipio": "Hermosillo",
+    "tipo_variante": "VSIN",
+    "variante_oms": "5.5",
+    "cantidad_muestras": 10
+  },
+  {
+    "cve_edo": "26",
+    "estado": "w",
+    "abreviatura_ent": "W",
+    "municipio": "Hermosillo",
+    "tipo_variante": "VSIN",
+    "variante_oms": "B.1.1.316",
+    "cantidad_muestras": 2
+  },
+  {
+    "cve_edo": "26",
+    "estado": "w",
+    "abreviatura_ent": "W",
+    "municipio": "Hermosillo",
+    "tipo_variante": "VSIN",
+    "variante_oms": "B.1.105",
+    "cantidad_muestras": 1
+  },
+  {
+    "cve_edo": "26",
+    "estado": "w",
+    "abreviatura_ent": "W",
+    "municipio": "Hermosillo",
+    "tipo_variante": "VSIN",
+    "variante_oms": "B.1.2",
+    "cantidad_muestras": 1
+  },
+  {
+    "cve_edo": "26",
+    "estado": "w",
+    "abreviatura_ent": "W",
+    "municipio": "Hermosillo",
+    "tipo_variante": "VSIN",
+    "variante_oms": "B.1.232",
+    "cantidad_muestras": 4
+  },
+  {
+    "cve_edo": "26",
+    "estado": "w",
+    "abreviatura_ent": "W",
+    "municipio": "Hermosillo",
+    "tipo_variante": "VSIN",
+    "variante_oms": "B.1.241",
+    "cantidad_muestras": 1
+  },
+  {
+    "cve_edo": "26",
+    "estado": "w",
+    "abreviatura_ent": "W",
+    "municipio": "Hermosillo",
+    "tipo_variante": "VSIN",
+    "variante_oms": "5.4",
+    "cantidad_muestras": 2
+  },
+  {
+    "cve_edo": "26",
+    "estado": "w",
+    "abreviatura_ent": "W",
+    "municipio": "Hermosillo",
+    "tipo_variante": "VSIN",
+    "variante_oms": "B.1.301",
+    "cantidad_muestras": 1
+  },
+  {
+    "cve_edo": "26",
+    "estado": "w",
+    "abreviatura_ent": "W",
+    "municipio": "Hermosillo",
+    "tipo_variante": "VSIN",
+    "variante_oms": "B.1.36.10",
+    "cantidad_muestras": 1
+  },
+  {
+    "cve_edo": "26",
+    "estado": "w",
+    "abreviatura_ent": "W",
+    "municipio": "Hermosillo",
+    "tipo_variante": "VSIN",
+    "variante_oms": "B.1.402",
+    "cantidad_muestras": 1
+  },
+  {
+    "cve_edo": "26",
+    "estado": "w",
+    "abreviatura_ent": "W",
+    "municipio": "Hermosillo",
+    "tipo_variante": "VSIN",
+    "variante_oms": "B.1.478",
+    "cantidad_muestras": 1
+  },
+  {
+    "cve_edo": "26",
+    "estado": "w",
+    "abreviatura_ent": "W",
+    "municipio": "Hermosillo",
+    "tipo_variante": "VSIN",
+    "variante_oms": "B.1.551",
+    "cantidad_muestras": 1
+  },
+  {
+    "cve_edo": "26",
+    "estado": "w",
+    "abreviatura_ent": "W",
+    "municipio": "Hermosillo",
+    "tipo_variante": "VSIN",
+    "variante_oms": "B.1.558",
+    "cantidad_muestras": 2
+  },
+  {
+    "cve_edo": "26",
+    "estado": "w",
+    "abreviatura_ent": "W",
+    "municipio": "Hermosillo",
+    "tipo_variante": "VSIN",
+    "variante_oms": "B.1.561",
+    "cantidad_muestras": 2
+  },
+  {
+    "cve_edo": "26",
+    "estado": "w",
+    "abreviatura_ent": "W",
+    "municipio": "Hermosillo",
+    "tipo_variante": "VSIN",
+    "variante_oms": "5.2",
+    "cantidad_muestras": 3
+  },
+  {
+    "cve_edo": "26",
+    "estado": "w",
+    "abreviatura_ent": "W",
+    "municipio": "Hermosillo",
+    "tipo_variante": "VSIN",
+    "variante_oms": "5.1",
+    "cantidad_muestras": 8
+  },
+  {
+    "cve_edo": "26",
+    "estado": "w",
+    "abreviatura_ent": "W",
+    "municipio": "San Luis R\u00edo Colorado",
+    "tipo_variante": "VSIN",
+    "variante_oms": "5.5",
+    "cantidad_muestras": 17
+  },
+  {
+    "cve_edo": "26",
+    "estado": "w",
+    "abreviatura_ent": "W",
+    "municipio": "San Luis R\u00edo Colorado",
+    "tipo_variante": "VSIN",
+    "variante_oms": "5.3",
+    "cantidad_muestras": 1
+  },
+  {
+    "cve_edo": "26",
+    "estado": "w",
+    "abreviatura_ent": "W",
+    "municipio": "San Luis R\u00edo Colorado",
+    "tipo_variante": "VSIN",
+    "variante_oms": "B.1.1.71",
+    "cantidad_muestras": 1
+  },
+  {
+    "cve_edo": "26",
+    "estado": "w",
+    "abreviatura_ent": "W",
+    "municipio": "San Luis R\u00edo Colorado",
+    "tipo_variante": "VSIN",
+    "variante_oms": "5.4",
+    "cantidad_muestras": 4
+  },
+  {
+    "cve_edo": "26",
+    "estado": "w",
+    "abreviatura_ent": "W",
+    "municipio": "San Luis R\u00edo Colorado",
+    "tipo_variante": "VSIN",
+    "variante_oms": "5.2",
+    "cantidad_muestras": 1
+  },
+  {
+    "cve_edo": "27",
+    "estado": "y",
+    "abreviatura_ent": "Y",
+    "municipio": "Centla",
+    "tipo_variante": "VSIN",
+    "variante_oms": "5.5",
+    "cantidad_muestras": 1
+  },
+  {
+    "cve_edo": "27",
+    "estado": "y",
+    "abreviatura_ent": "Y",
+    "municipio": "Centro",
+    "tipo_variante": "VIN",
+    "variante_oms": "3.1",
+    "cantidad_muestras": 3
+  },
+  {
+    "cve_edo": "27",
+    "estado": "y",
+    "abreviatura_ent": "Y",
+    "municipio": "Centro",
+    "tipo_variante": "VOC",
+    "variante_oms": "1.4",
+    "cantidad_muestras": 52
+  },
+  {
+    "cve_edo": "27",
+    "estado": "y",
+    "abreviatura_ent": "Y",
+    "municipio": "Centro",
+    "tipo_variante": "VOC",
+    "variante_oms": "1.2",
+    "cantidad_muestras": 1
+  },
+  {
+    "cve_edo": "27",
+    "estado": "y",
+    "abreviatura_ent": "Y",
+    "municipio": "Centro",
+    "tipo_variante": "VOC",
+    "variante_oms": "1.3",
+    "cantidad_muestras": 22
+  },
+  {
+    "cve_edo": "27",
+    "estado": "y",
+    "abreviatura_ent": "Y",
+    "municipio": "Centro",
+    "tipo_variante": "VOI",
+    "variante_oms": "2.2",
+    "cantidad_muestras": 1
+  },
+  {
+    "cve_edo": "27",
+    "estado": "y",
+    "abreviatura_ent": "Y",
+    "municipio": "Centro",
+    "tipo_variante": "VOI",
+    "variante_oms": "2.3",
+    "cantidad_muestras": 25
+  },
+  {
+    "cve_edo": "27",
+    "estado": "y",
+    "abreviatura_ent": "Y",
+    "municipio": "Centro",
+    "tipo_variante": "VOM",
+    "variante_oms": "4.5",
+    "cantidad_muestras": 130
+  },
+  {
+    "cve_edo": "27",
+    "estado": "y",
+    "abreviatura_ent": "Y",
+    "municipio": "Centro",
+    "tipo_variante": "VOM",
+    "variante_oms": "4.2",
+    "cantidad_muestras": 2
+  },
+  {
+    "cve_edo": "27",
+    "estado": "y",
+    "abreviatura_ent": "Y",
+    "municipio": "Centro",
+    "tipo_variante": "VOM",
+    "variante_oms": "4.4",
+    "cantidad_muestras": 2
+  },
+  {
+    "cve_edo": "27",
+    "estado": "y",
+    "abreviatura_ent": "Y",
+    "municipio": "Centro",
+    "tipo_variante": "VSIN",
+    "variante_oms": "A.2.5",
+    "cantidad_muestras": 4
+  },
+  {
+    "cve_edo": "27",
+    "estado": "y",
+    "abreviatura_ent": "Y",
+    "municipio": "Centro",
+    "tipo_variante": "VSIN",
+    "variante_oms": "5.5",
+    "cantidad_muestras": 20
+  },
+  {
+    "cve_edo": "27",
+    "estado": "y",
+    "abreviatura_ent": "Y",
+    "municipio": "Centro",
+    "tipo_variante": "VSIN",
+    "variante_oms": "5.3",
+    "cantidad_muestras": 4
+  },
+  {
+    "cve_edo": "27",
+    "estado": "y",
+    "abreviatura_ent": "Y",
+    "municipio": "Centro",
+    "tipo_variante": "VSIN",
+    "variante_oms": "B.1.239",
+    "cantidad_muestras": 1
+  },
+  {
+    "cve_edo": "27",
+    "estado": "y",
+    "abreviatura_ent": "Y",
+    "municipio": "Centro",
+    "tipo_variante": "VSIN",
+    "variante_oms": "B.1.241",
+    "cantidad_muestras": 3
+  },
+  {
+    "cve_edo": "27",
+    "estado": "y",
+    "abreviatura_ent": "Y",
+    "municipio": "Centro",
+    "tipo_variante": "VSIN",
+    "variante_oms": "5.4",
+    "cantidad_muestras": 1
+  },
+  {
+    "cve_edo": "27",
+    "estado": "y",
+    "abreviatura_ent": "Y",
+    "municipio": "Centro",
+    "tipo_variante": "VSIN",
+    "variante_oms": "B.1.446",
+    "cantidad_muestras": 1
+  },
+  {
+    "cve_edo": "27",
+    "estado": "y",
+    "abreviatura_ent": "Y",
+    "municipio": "Centro",
+    "tipo_variante": "VSIN",
+    "variante_oms": "B.1.526.2",
+    "cantidad_muestras": 1
+  },
+  {
+    "cve_edo": "27",
+    "estado": "y",
+    "abreviatura_ent": "Y",
+    "municipio": "Centro",
+    "tipo_variante": "VSIN",
+    "variante_oms": "5.1",
+    "cantidad_muestras": 13
+  },
+  {
+    "cve_edo": "27",
+    "estado": "y",
+    "abreviatura_ent": "Y",
+    "municipio": "Huimanguillo",
+    "tipo_variante": "VSIN",
+    "variante_oms": "5.5",
+    "cantidad_muestras": 1
+  },
+  {
+    "cve_edo": "28",
+    "estado": "x",
+    "abreviatura_ent": "X",
+    "municipio": "Victoria",
+    "tipo_variante": "VIN",
+    "variante_oms": "3.1",
+    "cantidad_muestras": 13
+  },
+  {
+    "cve_edo": "28",
+    "estado": "x",
+    "abreviatura_ent": "X",
+    "municipio": "Victoria",
+    "tipo_variante": "VOC",
+    "variante_oms": "1.4",
+    "cantidad_muestras": 66
+  },
+  {
+    "cve_edo": "28",
+    "estado": "x",
+    "abreviatura_ent": "X",
+    "municipio": "Victoria",
+    "tipo_variante": "VOC",
+    "variante_oms": "1.2",
+    "cantidad_muestras": 1
+  },
+  {
+    "cve_edo": "28",
+    "estado": "x",
+    "abreviatura_ent": "X",
+    "municipio": "Victoria",
+    "tipo_variante": "VOC",
+    "variante_oms": "1.3",
+    "cantidad_muestras": 39
+  },
+  {
+    "cve_edo": "28",
+    "estado": "x",
+    "abreviatura_ent": "X",
+    "municipio": "Victoria",
+    "tipo_variante": "VOI",
+    "variante_oms": "2.1",
+    "cantidad_muestras": 1
+  },
+  {
+    "cve_edo": "28",
+    "estado": "x",
+    "abreviatura_ent": "X",
+    "municipio": "Victoria",
+    "tipo_variante": "VOM",
+    "variante_oms": "4.5",
+    "cantidad_muestras": 50
+  },
+  {
+    "cve_edo": "28",
+    "estado": "x",
+    "abreviatura_ent": "X",
+    "municipio": "Victoria",
+    "tipo_variante": "VOM",
+    "variante_oms": "4.4",
+    "cantidad_muestras": 5
+  },
+  {
+    "cve_edo": "28",
+    "estado": "x",
+    "abreviatura_ent": "X",
+    "municipio": "Victoria",
+    "tipo_variante": "VSIN",
+    "variante_oms": "5.5",
+    "cantidad_muestras": 23
+  },
+  {
+    "cve_edo": "28",
+    "estado": "x",
+    "abreviatura_ent": "X",
+    "municipio": "Victoria",
+    "tipo_variante": "VSIN",
+    "variante_oms": "5.3",
+    "cantidad_muestras": 6
+  },
+  {
+    "cve_edo": "28",
+    "estado": "x",
+    "abreviatura_ent": "X",
+    "municipio": "Victoria",
+    "tipo_variante": "VSIN",
+    "variante_oms": "B.1.1.231",
+    "cantidad_muestras": 1
+  },
+  {
+    "cve_edo": "28",
+    "estado": "x",
+    "abreviatura_ent": "X",
+    "municipio": "Victoria",
+    "tipo_variante": "VSIN",
+    "variante_oms": "B.1.1.28",
+    "cantidad_muestras": 1
+  },
+  {
+    "cve_edo": "28",
+    "estado": "x",
+    "abreviatura_ent": "X",
+    "municipio": "Victoria",
+    "tipo_variante": "VSIN",
+    "variante_oms": "B.1.1.432",
+    "cantidad_muestras": 6
+  },
+  {
+    "cve_edo": "28",
+    "estado": "x",
+    "abreviatura_ent": "X",
+    "municipio": "Victoria",
+    "tipo_variante": "VSIN",
+    "variante_oms": "B.1.1.517",
+    "cantidad_muestras": 1
+  },
+  {
+    "cve_edo": "28",
+    "estado": "x",
+    "abreviatura_ent": "X",
+    "municipio": "Victoria",
+    "tipo_variante": "VSIN",
+    "variante_oms": "B.1.2",
+    "cantidad_muestras": 7
+  },
+  {
+    "cve_edo": "28",
+    "estado": "x",
+    "abreviatura_ent": "X",
+    "municipio": "Victoria",
+    "tipo_variante": "VSIN",
+    "variante_oms": "5.4",
+    "cantidad_muestras": 4
+  },
+  {
+    "cve_edo": "28",
+    "estado": "x",
+    "abreviatura_ent": "X",
+    "municipio": "Victoria",
+    "tipo_variante": "VSIN",
+    "variante_oms": "B.1.366",
+    "cantidad_muestras": 1
+  },
+  {
+    "cve_edo": "28",
+    "estado": "x",
+    "abreviatura_ent": "X",
+    "municipio": "Victoria",
+    "tipo_variante": "VSIN",
+    "variante_oms": "B.1.546",
+    "cantidad_muestras": 1
+  },
+  {
+    "cve_edo": "28",
+    "estado": "x",
+    "abreviatura_ent": "X",
+    "municipio": "Victoria",
+    "tipo_variante": "VSIN",
+    "variante_oms": "B.1.558",
+    "cantidad_muestras": 5
+  },
+  {
+    "cve_edo": "28",
+    "estado": "x",
+    "abreviatura_ent": "X",
+    "municipio": "Victoria",
+    "tipo_variante": "VSIN",
+    "variante_oms": "B.1.596",
+    "cantidad_muestras": 2
+  },
+  {
+    "cve_edo": "28",
+    "estado": "x",
+    "abreviatura_ent": "X",
+    "municipio": "Victoria",
+    "tipo_variante": "VSIN",
+    "variante_oms": "5.2",
+    "cantidad_muestras": 3
+  },
+  {
+    "cve_edo": "28",
+    "estado": "x",
+    "abreviatura_ent": "X",
+    "municipio": "Victoria",
+    "tipo_variante": "VSIN",
+    "variante_oms": "B.1.610",
+    "cantidad_muestras": 1
+  },
+  {
+    "cve_edo": "28",
+    "estado": "x",
+    "abreviatura_ent": "X",
+    "municipio": "Victoria",
+    "tipo_variante": "VSIN",
+    "variante_oms": "5.1",
+    "cantidad_muestras": 4
+  },
+  {
+    "cve_edo": "29",
+    "estado": "z",
+    "abreviatura_ent": "Z",
+    "municipio": "Calpulalpan",
+    "tipo_variante": "VSIN",
+    "variante_oms": "5.2",
+    "cantidad_muestras": 1
+  },
+  {
+    "cve_edo": "29",
+    "estado": "z",
+    "abreviatura_ent": "Z",
+    "municipio": "Tlaxcala",
+    "tipo_variante": "VIN",
+    "variante_oms": "3.1",
+    "cantidad_muestras": 5
+  },
+  {
+    "cve_edo": "29",
+    "estado": "z",
+    "abreviatura_ent": "Z",
+    "municipio": "Tlaxcala",
+    "tipo_variante": "VOC",
+    "variante_oms": "1.4",
+    "cantidad_muestras": 1
+  },
+  {
+    "cve_edo": "29",
+    "estado": "z",
+    "abreviatura_ent": "Z",
+    "municipio": "Tlaxcala",
+    "tipo_variante": "VOC",
+    "variante_oms": "1.3",
+    "cantidad_muestras": 1
+  },
+  {
+    "cve_edo": "29",
+    "estado": "z",
+    "abreviatura_ent": "Z",
+    "municipio": "Tlaxcala",
+    "tipo_variante": "VOM",
+    "variante_oms": "4.5",
+    "cantidad_muestras": 43
+  },
+  {
+    "cve_edo": "29",
+    "estado": "z",
+    "abreviatura_ent": "Z",
+    "municipio": "Tlaxcala",
+    "tipo_variante": "VOM",
+    "variante_oms": "4.4",
+    "cantidad_muestras": 1
+  },
+  {
+    "cve_edo": "29",
+    "estado": "z",
+    "abreviatura_ent": "Z",
+    "municipio": "Tlaxcala",
+    "tipo_variante": "VSIN",
+    "variante_oms": "5.5",
+    "cantidad_muestras": 8
+  },
+  {
+    "cve_edo": "29",
+    "estado": "z",
+    "abreviatura_ent": "Z",
+    "municipio": "Tlaxcala",
+    "tipo_variante": "VSIN",
+    "variante_oms": "5.3",
+    "cantidad_muestras": 3
+  },
+  {
+    "cve_edo": "29",
+    "estado": "z",
+    "abreviatura_ent": "Z",
+    "municipio": "Tlaxcala",
+    "tipo_variante": "VSIN",
+    "variante_oms": "B.1.1.317",
+    "cantidad_muestras": 1
+  },
+  {
+    "cve_edo": "29",
+    "estado": "z",
+    "abreviatura_ent": "Z",
+    "municipio": "Tlaxcala",
+    "tipo_variante": "VSIN",
+    "variante_oms": "B.1.1.322",
+    "cantidad_muestras": 1
+  },
+  {
+    "cve_edo": "29",
+    "estado": "z",
+    "abreviatura_ent": "Z",
+    "municipio": "Tlaxcala",
+    "tipo_variante": "VSIN",
+    "variante_oms": "B.1.1.432",
+    "cantidad_muestras": 2
+  },
+  {
+    "cve_edo": "29",
+    "estado": "z",
+    "abreviatura_ent": "Z",
+    "municipio": "Tlaxcala",
+    "tipo_variante": "VSIN",
+    "variante_oms": "B.1.189",
+    "cantidad_muestras": 1
+  },
+  {
+    "cve_edo": "29",
+    "estado": "z",
+    "abreviatura_ent": "Z",
+    "municipio": "Tlaxcala",
+    "tipo_variante": "VSIN",
+    "variante_oms": "5.4",
+    "cantidad_muestras": 2
+  },
+  {
+    "cve_edo": "29",
+    "estado": "z",
+    "abreviatura_ent": "Z",
+    "municipio": "Tlaxcala",
+    "tipo_variante": "VSIN",
+    "variante_oms": "5.2",
+    "cantidad_muestras": 6
+  },
+  {
+    "cve_edo": "29",
+    "estado": "z",
+    "abreviatura_ent": "Z",
+    "municipio": "Tlaxcala",
+    "tipo_variante": "VSIN",
+    "variante_oms": "B.1.610",
+    "cantidad_muestras": 1
+  }
+]

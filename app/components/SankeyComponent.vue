@@ -18,21 +18,12 @@ const props = defineProps({
         { id: 'node_2', name: 'Node 2', color: '#dc2626' },
       ],
       links: [
-        {
-          source: 'node_0',
-          target: 'node_2',
-          value: 1,
-          color: '#93c5fd',
-        },
-        {
-          source: 'node_1',
-          target: 'node_2',
-          value: 1,
-          color: '#86efac',
-        },
+        { source: 'node_0', target: 'node_2', value: 1, color: '#93c5fd' },
+        { source: 'node_1', target: 'node_2', value: 1, color: '#86efac' },
       ],
     }),
   },
+
   titulo: {
     type: String,
     default: 'Diagrama Sankey de flujos',

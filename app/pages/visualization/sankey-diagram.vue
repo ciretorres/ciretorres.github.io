@@ -1,12 +1,17 @@
 <script setup>
-import { onBeforeUnmount, onMounted, ref } from 'vue'
-import sankeyData from '@/assets/data/sankey.json'
+import { defineAsyncComponent, onBeforeUnmount, onMounted, ref } from 'vue'
+// import sankeyData from '@/assets/data/sankey.json'
+
+const SankeyComponent = defineAsyncComponent(
+  () => import('@/components/SankeyComponent.vue')
+)
+
+const sankeyData = ref(null)
+
+let formattedData
 
 function isPrimitive(value) {
-  return (
-    value === null ||
-    typeof value !== 'object'
-  )
+  return value === null || typeof value !== 'object'
 }
 function isSimpleObject(value) {
   return (
@@ -57,22 +62,37 @@ function formatJson(value, level = 0) {
     })
     .join(',\n')
 
-  return [
-    '{',
-    entries,
-    `${indent}}`,
-  ].join('\n')
+  return ['{', entries, `${indent}}`].join('\n')
 }
-// formateando el json con filas completas
-const formattedData = formatJson(sankeyData)
+
+async function fetchJSON() {
+  try {
+    // const respuesta = await fetch('/consorcio_variantes_heatmap_todas.json')
+    // centroides - crateres
+    const config = useRuntimeConfig()
+    const respuesta = await fetch(`${config.app.baseURL}data/sankey.json`)
+    // const respuesta = await fetch(`/data/centroides-crateres.json`)
+    console.log('respuesta Cargada')
+    if (!respuesta.ok) {
+      throw new Error(`HTTP ${respuesta.status}`)
+    }
+    sankeyData.value = await respuesta.json()
+
+    console.log('sankeyData Cargado')
+  } catch (error) {
+    console.error('No se pudo cargar el JSON:', error)
+  }
+}
 
 const downloadUrl = ref('')
 
-onMounted(() => {
-  const blob = new Blob(
-    [formattedData],
-    { type: 'application/json' },
-  )
+onMounted(async () => {
+  // cargando json
+  await fetchJSON()
+
+  // formateando el json con filas completas
+  formattedData = formatJson(sankeyData.value)
+  const blob = new Blob([formattedData], { type: 'application/json' })
 
   downloadUrl.value = URL.createObjectURL(blob)
 })
@@ -92,20 +112,17 @@ onBeforeUnmount(() => {
       class="sankey"
       aria-labelledby="sankey-title"
     >
-      <figcaption id="sankey-title">
-        Diagrama de flujo de datos
-      </figcaption>
+      <figcaption id="sankey-title">Diagrama de flujo de datos</figcaption>
 
       <ClientOnly>
         <SankeyComponent
+          v-if="sankeyData"
           :datos="sankeyData"
           titulo="Diagrama de flujo de datos"
         />
 
         <template #fallback>
-          <p class="sankey__loading">
-            Cargando diagrama…
-          </p>
+          <p class="sankey__loading">Cargando diagrama…</p>
         </template>
       </ClientOnly>
     </figure>
