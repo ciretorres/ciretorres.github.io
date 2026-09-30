@@ -6,8 +6,8 @@ export default withNuxt({
     'no-console': [
       'warn',
       {
-        allow: ['warn', 'error']
-      }
+        allow: ['warn', 'error'],
+      },
     ],
 
     'vue/multi-word-component-names': 'off',
@@ -18,11 +18,11 @@ export default withNuxt({
       {
         argsIgnorePattern: '^_',
         varsIgnorePattern: '^_',
-        caughtErrorsIgnorePattern: '^_'
-      }
+        caughtErrorsIgnorePattern: '^_',
+      },
     ],
 
     'vue/no-mutating-props': 'error',
-    'vue/no-v-html': 'error'
-  }
+    'vue/no-v-html': 'error',
+  },
 })
