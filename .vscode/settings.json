@@ -1,47 +1,129 @@
 {
-  "[css]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode",
-    "editor.formatOnSave": true
-  },
-  "[scss]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode",
-    "editor.formatOnSave": true
-  },
-  "[javascript]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode",
-    "editor.formatOnSave": true
-  },
-  "[typescript]": {
-    "editor.defaultFormatter": "vscode.typescript-language-features",
-    "editor.formatOnSave": true
-  },
-  "[vue]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode",
-    "editor.formatOnSave": true
-  },
-  "[html]": {
-    "editor.defaultFormatter": "vscode.html-language-features",
-    "editor.formatOnSave": true
-  },
   "[markdown]": {
-    "editor.unicodeHighlight.ambiguousCharacters": false,
-    "editor.unicodeHighlight.invisibleCharacters": false,
     "diffEditor.ignoreTrimWhitespace": false,
-    "editor.wordWrap": "on",
     "editor.quickSuggestions": {
       "comments": "off",
       "strings": "off",
       "other": "off"
+    },
+    "editor.unicodeHighlight.ambiguousCharacters": false,
+    "editor.unicodeHighlight.invisibleCharacters": false,
+    "editor.wordWrap": "on"
+  },
+
+  "editor.formatOnSave": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.tabSize": 2,
+  "editor.insertSpaces": true,
+  "editor.autoClosingBrackets": "always",
+  "editor.autoClosingQuotes": "always",
+  "editor.autoIndent": "advanced",
+  "editor.comments.insertSpace": true,
+  "editor.codeLens": false,
+  "editor.rulers": [],
+  "editor.trimAutoWhitespace": true,
+
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": "explicit"
+  },
+
+  "[typescript]": {
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.codeActionsOnSave": {
+      "source.fixAll.eslint": "explicit",
+      "source.organizeImports": "explicit"
     }
   },
-  "eslint.validate": ["javascript", "javascriptreact", "vue"],
-  "editor.codeActionsOnSave": {
-    "source.organizeImports": "explicit",
-    "source.fixAll": "explicit",
-    "source.fixAll.eslint": "explicit",
-    "source.fixAll.stylelint": "explicit"
+
+  "[javascript]": {
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  "editor.tabSize": 2,
-  "editor.formatOnSave": true,
-  "editor.defaultFormatter": "esbenp.prettier-vscode"
+
+  "[vue]": {
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+
+  "[css]": {
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[scss]": {
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+
+  "[html]": {
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+
+  "[json]": {
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+
+  "[yaml]": {
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+
+  "eslint.useFlatConfig": true,
+  "eslint.validate": [
+    "css",
+    "javascript",
+    "typescript",
+    "javascriptreact",
+    "sass",
+    "vue"
+  ],
+  "eslint.run": "onSave",
+
+  "files.insertFinalNewline": true,
+  "files.trimTrailingWhitespace": true,
+
+  "files.exclude": {
+    "**/.nuxt": true,
+    "**/.output": true,
+    "**/node_modules": true
+  },
+
+  "search.exclude": {
+    "**/.nuxt": true,
+    "**/.output": true,
+    "**/node_modules": true
+  },
+
+  "scss.validate": true,
+
+  // "prettier.configPath": "${workspaceFolder}/.prettierrc.cjs",
+  // "prettier.ignorePath": "${workspaceFolder}/.prettierignore",
+
+  // Detectar automáticamente tu .prettierrc.cjs y .prettierignore desde la raíz del proyecto.
+  "prettier.requireConfig": true,
+  "prettier.useEditorConfig": true,
+
+  // configuraciones duplicadas de Prettier
+  // "prettier.endOfLine": "lf",
+  // "prettier.singleQuote": true,
+  // "prettier.semi": false,
+  // "prettier.printWidth": 80,
+  // "prettier.tabWidth": 2,
+  // "prettier.useTabs": false,
+  // "prettier.trailingComma": "es5",
+  // "prettier.bracketSpacing": true,
+  // "prettier.arrowParens": "avoid",
+  // "prettier.htmlWhitespaceSensitivity": "ignore",
+  // "prettier.singleAttributePerLine": true,
+  // "prettier.vueIndentScriptAndStyle": false,
+
+  "explorer.fileNesting.enabled": true,
+  "explorer.fileNesting.patterns": {
+    "linter.md": ".eslint*, eslint*, .prettier*, prettier*, .editorconfig",
+    "package.json": "package-lock.json, pnpm*, .yarnrc*, yarn*, lint-staged.config.js",
+    "README.md": "LICENSE, CHANGELOG.*",
+    "vite.config.*": "jsconfig*, vitest.config.*, cypress.config.*, playwright.config.*, TEST.md"
+  }
 }

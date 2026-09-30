@@ -2,6 +2,10 @@
   "recommendations": [
     "Vue.volar",
     "dbaeumer.vscode-eslint",
+    "stylelint.vscode-stylelint",
+    "vitest.explorer",
+    "streetsidesoftware.code-spell-checker",
+    "EditorConfig.EditorConfig",
     "esbenp.prettier-vscode"
   ]
 }
