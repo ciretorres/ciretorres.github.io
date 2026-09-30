@@ -17,7 +17,7 @@ export function useConsorcioEvolucionVariantes() {
       const url = `${config.app.baseURL}data/consorcio_evolucion_variantes.json`
 
       datos.value = await fetchJson(url)
-      console.log('muestras Cargadas')
+      console.warn('muestras Cargadas')
 
       return datos.value
     } catch (err) {

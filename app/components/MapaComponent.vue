@@ -68,7 +68,7 @@ onMounted(async () => {
   const config = useRuntimeConfig()
   const apiKey = config.public.cartoApiKey
 
-  console.log('API key disponible:', Boolean(apiKey))
+  console.warn('API key disponible:', Boolean(apiKey))
 
   if (!apiKey) {
     console.error('La API key de CARTO está vacía o no fue configurada')

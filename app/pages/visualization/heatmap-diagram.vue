@@ -31,7 +31,6 @@ onMounted(async () => {
           v-model="store.filtros.tipoVariante"
           :opciones="store.tiposVariantes"
         />
-        <br />
 
         <button
           type="button"

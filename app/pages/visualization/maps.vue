@@ -74,15 +74,14 @@ onMounted(async () => {
         JSON.stringify(centroidesJSON, null, 2)
       }}</code></pre>
 
-      <br />
-      <br />
-
-      <a
-        href="https://raw.githubusercontent.com/ciretorres/ciretorres.github.io/refs/heads/develop/src/assets/data/centroides-crateres.json"
-        download="centroides-crateres.json"
-      >
-        Descargar json
-      </a>
+      <p>
+        <a
+          href="https://raw.githubusercontent.com/ciretorres/ciretorres.github.io/refs/heads/develop/src/assets/data/centroides-crateres.json"
+          download="centroides-crateres.json"
+        >
+          Descargar json
+        </a>
+      </p>
     </section>
 
     <section aria-label="Fuentes bibliográficas">

@@ -32,7 +32,7 @@ export function useDatosApi(endPoint) {
       const url = `${config.app.baseURL}${endPoint}`
 
       datos.value = await fetchJson(url)
-      console.log('datos Cargados')
+      console.warn('datos Cargados')
 
       return datos.value
     } catch (err) {

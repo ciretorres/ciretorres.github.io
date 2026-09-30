@@ -1,4 +1,4 @@
-<script setup>
+<!-- <script setup>
 // const props = defineProps(['modelValue', 'color'])
 const props = defineProps({
   modelValue: Boolean,
@@ -161,3 +161,4 @@ export default {
   }
 }
 </style> -->
+-->

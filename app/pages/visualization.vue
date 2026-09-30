@@ -19,7 +19,6 @@
       </section>
     </div>
 
-    <br />
     <nuxt-link to="/">[Go back]</nuxt-link>
   </div>
 </template>
